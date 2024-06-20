@@ -35,8 +35,8 @@ static void startWifiScan(void *arg)
 {
     while (1)
     {
-        uint8_t ssid[] = "WIFI TANG 3.01 2.4G";
-        uint8_t password[] = "888888883";
+        uint8_t ssid[] = "PIF_CLUB";
+        uint8_t password[] = "chinsochin";
         char networks[100];
         uint8_t numNetworks = WIFI_Scan(networks);
         ESP_LOGI(TAG, "So luong Wifi:  %d\n",numNetworks);
