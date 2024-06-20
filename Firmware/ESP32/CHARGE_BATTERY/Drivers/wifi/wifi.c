@@ -42,19 +42,11 @@
  *  STATIC VARIABLES
  **********************/
 
-static WIFI_Status_t state_connected_wifi = CONNECT_FAIL;
+static WIFI_Status_t state_connected_wifi = CONNECT_FAIL;////??????????????????????????????????
 static uint8_t s_retry_num = 0;
 static uint8_t volatile num_wifi = 0;
 static EventGroupHandle_t s_wifi_event_group;
 static char ssid_name[1024];
-
-/**********************
- *  EXTERN VARIABLES
- **********************/
-
-extern char ip_ssid_connected[20];
-extern EventGroupHandle_t event_uart_tx_heading;
-extern char buffer_uart_tx[1024 + 1];
 
 /**********************
  *   STATIC FUNCTIONS
@@ -78,11 +70,8 @@ static void event_handler(void *arg, esp_event_base_t event_base,
         else
         {
             state_connected_wifi = CONNECT_FAIL;
-            xEventGroupSetBits(s_wifi_event_group, WIFI_FAIL_BIT);
-            strcpy(buffer_uart_tx, "FAILED");
-            xEventGroupSetBits(event_uart_tx_heading,
-                                SEND_CONNECT_WIFI_UNSUCCESSFUL_BIT);
-        }
+            xEventGroupSetBits(s_wifi_event_group, WIFI_FAIL_BIT);        
+        } 
         ESP_LOGE(TAG, "connect to the AP fail");
     }
     else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP)
@@ -90,10 +79,6 @@ static void event_handler(void *arg, esp_event_base_t event_base,
         state_connected_wifi = CONNECT_OK;
         ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
         ESP_LOGI(TAG, "got ip:" IPSTR, IP2STR(&event->ip_info.ip));
-
-        sprintf(ip_ssid_connected, IPSTR, IP2STR(&event->ip_info.ip));
-        printf("ip : %s\n", ip_ssid_connected);
-
         xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
     }
 }
@@ -561,6 +546,28 @@ void WIFI_StoreNVS(uint8_t *ssid, uint8_t *password)
     WIFI_SetSSID(ssid, num_wifi);
     WIFI_SetPass(password, num_wifi);
 }
+
+
+WIFI_Status_t wifi_reset_password(uint8_t *ssid, uint8_t *password)
+{
+    WIFI_Status_t reconnection = WIFI_Connect(ssid, password);
+    if (reconnection != CONNECT_OK)
+    {
+        reconnection = WIFI_Connect(ssid, password);
+        if (reconnection == CONNECT_OK)
+        {
+            WIFI_StoreNVS(ssid, password);
+            return CONNECT_OK;
+        }
+        else
+        {
+            ESP_LOGI(TAG, "\tNHAP LAI MAT KHAU MOI");
+            return CONNECT_FAIL;              
+        }
+    }
+    return UNEXPECTED_EVENT;
+}
+
 
 WIFI_Status_t WIFI_state_connect(void)
 {
