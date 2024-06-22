@@ -116,12 +116,26 @@ static esp_err_t WIFI_ScanSSID(uint8_t *ssid, uint8_t id, uint8_t len)
                           (char *)ssid, 32);
 }
 
+static esp_err_t WIFI_DeleteSSID(uint8_t id)/*mới*/
+{
+    char ssid_key[32];
+    sprintf(ssid_key, "%d ssid", id);
+    return NVS_DeleteString(SSID_NVS, (const char *)ssid_key);
+}
+
 static esp_err_t WIFI_ScanPass(uint8_t *pass, uint8_t id, uint8_t len)
 {
     char pass_key[32];
     sprintf(pass_key, "%d pass", id);
     return NVS_ReadString(PASS_NVS, (const char *)pass_key,
                           (char *)pass, 32);
+}
+
+static esp_err_t WIFI_DeletePass(uint8_t id)/*mới*/
+{
+    char pass_key[32];
+    sprintf(pass_key, "%d pass", id);
+    return NVS_DeleteString(PASS_NVS, (const char *)pass_key);
 }
 
 static esp_err_t WIFI_SetSSID(uint8_t *ssid, uint8_t id)
@@ -548,24 +562,28 @@ void WIFI_StoreNVS(uint8_t *ssid, uint8_t *password)
 }
 
 
-WIFI_Status_t wifi_reset_password(uint8_t *ssid, uint8_t *password)
+int8_t WIFI_DeleteNVS (uint8_t *ssid)  
 {
-    WIFI_Status_t reconnection = WIFI_Connect(ssid, password);
-    if (reconnection != CONNECT_OK)
+    int8_t i;
+    uint8_t ssid_temp[32];
+
+    num_wifi = WIFI_GetNumSSID();
+    if (num_wifi == 0)
     {
-        reconnection = WIFI_Connect(ssid, password);
-        if (reconnection == CONNECT_OK)
+        return -1;
+    }
+
+    for (i = 1; i <= num_wifi; i++)
+    {
+        WIFI_ScanSSID(ssid_temp, i, 32);
+        if (memcmp(ssid_temp, ssid, strlen((char *)ssid)) == 0)
         {
-            WIFI_StoreNVS(ssid, password);
-            return CONNECT_OK;
-        }
-        else
-        {
-            ESP_LOGI(TAG, "\tNHAP LAI MAT KHAU MOI");
-            return CONNECT_FAIL;              
+            WIFI_DeleteSSID(i);
+            WIFI_DeletePass(i);
+            return i;
         }
     }
-    return UNEXPECTED_EVENT;
+    return -1;
 }
 
 

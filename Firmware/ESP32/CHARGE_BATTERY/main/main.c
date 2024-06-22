@@ -26,69 +26,54 @@
 static const char *TAG = "main";
 
 static TaskHandle_t wifiScan_task;
-// static TaskHandle_t wifiConnect_task;
-// static TaskHandle_t wifiScanNVS_task;
-// static TaskHandle_t wifi_ConfirmConnect_task;
-
+#define EXAMPLE_ESP_WIFI_SSID      "WIFI TANG 3.01 2.4G"
+#define EXAMPLE_ESP_WIFI_PASS      "888888883"
 
 static void startWifiScan(void *arg)
 {
     while (1)
     {
-        uint8_t ssid[] = "PIF_CLUB";
-        uint8_t password[] = "chinsochin";
-        char networks[100];
-        uint8_t numNetworks = WIFI_Scan(networks);
-        ESP_LOGI(TAG, "So luong Wifi:  %d\n",numNetworks);
-        WIFI_Status_t connectionStatus = WIFI_Connect(ssid, password);
+        uint8_t ssid[] = "tran hoang kien";
+        uint8_t password[] = "888888883";
+        // char networks[100];
+        // uint8_t numNetworks = WIFI_Scan(networks);
+        // ESP_LOGI(TAG, "So luong Wifi:  %d\n",numNetworks);
         // vTaskDelay(100 / portTICK_PERIOD_MS);
-           
-           while (connectionStatus == CONNECT_FAIL)
-           {
-                WIFI_Connect(ssid, password);
-           }
+        // WIFI_Status_t connectionStatus = WIFI_Connect(ssid, password);
         // if (connectionStatus == CONNECT_OK) {
         //     ESP_LOGI(TAG, "\tConnected\n");
         // }
-        // vTaskDelay(100 / portTICK_PERIOD_MS);
 
-//         // strcpy((char*)password, "888888884");
-//         WIFI_StoreNVS(ssid, password);
-//         vTaskDelay(500 / portTICK_PERIOD_MS);
+        NVS_Init();
+        vTaskDelay(100 / portTICK_PERIOD_MS);
 
 
-//         int8_t networkIndex = WIFI_ScanNVS(ssid, password);
-//         if (networkIndex != -1) {
-//             ESP_LOGI(TAG, "\ttim thay roi nha:)))\n");
-//         } else {
-//             ESP_LOGI(TAG, "\tNOT FOUND\n");
-//         }
-//         vTaskDelay(500 / portTICK_PERIOD_MS);
+        strcpy((char*)password, "888888884");
+        WIFI_StoreNVS(ssid, password);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+
+        
+        int8_t networkIndex = WIFI_ScanNVS(ssid, password);
+        if (networkIndex != -1) {
+            ESP_LOGI(TAG, "\ttim mk thay roi nha:))) %s\n", password);
+            ESP_LOGI(TAG, "So luong Wifi duoc luu vao NVS:  %d\n",networkIndex);
+        } else {
+            ESP_LOGI(TAG, "\tNOT FOUND\n");
+        }
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
 
 
-//         WIFI_Status_t reset_Status = wifi_reset_password(ssid, password);
-//         if(reset_Status  == CONNECT_OK)
-//         {
-//             ESP_LOGI(TAG, "\tRESET SUCCESS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
-//         }
-//         else
-//         {
-//             ESP_LOGI(TAG, "\tNGU HOC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
-//         }
-//         vTaskDelay(500 / portTICK_PERIOD_MS);
 
-//         strcpy((char*)password, "888888883");
-//          reset_Status = wifi_reset_password(ssid, password);
-//         if(reset_Status  == CONNECT_OK)
-//         {
-//             ESP_LOGI(TAG, "\tRESET SUCCESS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
-//         }
-//         else
-//         {
-//             ESP_LOGI(TAG, "\VO TRI HOC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
-//         }
-//         vTaskDelay(500 / portTICK_PERIOD_MS);
-
+        int8_t status_dele = WIFI_DeleteNVS (ssid);
+           if (status_dele != -1) {
+            ESP_LOGI(TAG, "Taof lao aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:  %d\n",networkIndex);
+        } else {
+            ESP_LOGI(TAG, "\tNOT FOUND\n");
+        }
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        WIFI_ScanNVS(ssid, password);
+        ESP_LOGI(TAG, "\tDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA XONGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR\n");
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
 
 
 //         //  connectionStatus = WIFI_state_connect();
@@ -104,33 +89,6 @@ static void startWifiScan(void *arg)
 }
 
 
-
-
-
-// static void startwifiScanNVS(void *arg)
-// {
-//     while (1)
-//     {
-//         char networks[100];
-//         uint8_t numNetworks = WIFI_Scan(networks);
-//         ESP_LOGI(TAG, "So luong Wifi:  %d\n",numNetworks);
-//         vTaskDelay(500 / portTICK_PERIOD_MS);
-//     }
-// }
-
-
-// static void startWifiScan(void *arg)
-// {
-//     while (1)
-//     {
-//         char networks[100];
-//         uint8_t numNetworks = WIFI_Scan(networks);
-//         ESP_LOGI(TAG, "So luong Wifi:  %d\n",numNetworks);
-//         vTaskDelay(500 / portTICK_PERIOD_MS);
-//     }
-// }
-
-
 void app_main(void)
 {
     NVS_Init();
@@ -143,26 +101,6 @@ void app_main(void)
                 3,
                 &wifiScan_task);
 
-    // xTaskCreate(startwifiConnect,
-    //             "Wifi connect",
-    //             1024 * 4,
-    //             NULL,
-    //             3,
-    //             &wifiConnect_task);
-    
-    // xTaskCreate(startwifiScanNVS,
-    //             "Wifi scanNVS",
-    //             1024 * 4,
-    //             NULL,
-    //             3,
-    //             &wifiScan_task);
-    
-    // xTaskCreate(startWifiScan,
-    //             "Wifi scan",
-    //             1024 * 20,
-    //             NULL,
-    //             3,
-    //             &wifiScan_task);
 
 //    uint8_t ssid[] = "WIFI TANG 3.01 2.4G";
 //     uint8_t password[] = "888888883";

@@ -36,6 +36,7 @@ WIFI_Status_t WIFI_Connect(uint8_t *ssid, uint8_t *password);
 int8_t WIFI_ScanNVS(uint8_t * ssid, uint8_t * pass);
 void WIFI_StoreNVS(uint8_t * ssid, uint8_t *password);
 WIFI_Status_t wifi_reset_password(uint8_t *ssid, uint8_t *password);
+int8_t WIFI_DeleteNVS (uint8_t *ssid);
 WIFI_Status_t WIFI_state_connect(void);
 
 #endif
