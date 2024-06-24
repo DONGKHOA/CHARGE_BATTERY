@@ -585,6 +585,12 @@ void WIFI_StoreNVS(uint8_t *ssid, uint8_t *password)
 }
 
 
+/**
+ * The function WIFI_DeleteNVS deletes a WiFi SSID and password in non-volatile storage.
+ *
+ * @param ssid The `ssid` parameter is a pointer to an array of characters that represents the name of
+ * the Wi-Fi network (Service Set Identifier).
+ */
 int8_t WIFI_DeleteNVS (uint8_t *ssid)  
 {
     int8_t i;
@@ -608,6 +614,29 @@ int8_t WIFI_DeleteNVS (uint8_t *ssid)
         }
     }
     return -1;
+}
+
+
+/**
+ * The function WIFI_AutoUpdatePassword stores a WiFi SSID and NEW password in non-volatile storage.
+ *
+ * @param ssid The `ssid` parameter is a pointer to an array of characters that represents the name of
+ * the Wi-Fi network (Service Set Identifier).
+ * @param password The `password` parameter in the `WIFI_StoreNVS` function is a pointer to an array of
+ * `uint8_t` data type, which is typically used to store a NEW password for a Wi-Fi network.
+ */
+void WIFI_AutoUpdatePassword(uint8_t *ssid, uint8_t *pass)
+{
+    WIFI_Status_t reconnection = WIFI_Connect(ssid, pass);
+    if (reconnection != CONNECT_OK)
+    {
+        WIFI_DeleteNVS(ssid);
+    }
+    else
+    {
+        WIFI_DeleteNVS(ssid);
+        WIFI_StoreNVS(ssid, pass);
+    }
 }
 
 

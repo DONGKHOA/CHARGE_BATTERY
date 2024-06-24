@@ -38,11 +38,11 @@ static void startWifiScan(void *arg)
     {
 
         uint8_t ssid1[] = "tran hoang kien";
-        uint8_t password1[] = "888888883";
-        uint8_t ssid2[] = "kien2211736";
-        uint8_t password2[] = "123456";
-        uint8_t ssid3[] = "hell0 world";
-        uint8_t password3[] = "20040502";
+        uint8_t password1[] = "123583";
+        uint8_t ssid3[] = "WIFI TANG 3.01 2.4G";
+        uint8_t password3[] = "888888883";
+        uint8_t ssid2[] = "hell0 world";
+        uint8_t password2[] = "20040502";
          uint8_t ssid4[] = "wifi thay the";
         uint8_t password4[] = "11111111";
         // char networks[100];
@@ -82,6 +82,8 @@ static void startWifiScan(void *arg)
         vTaskDelay(1000 / portTICK_PERIOD_MS);
         WIFI_StoreNVS(ssid4, password4);
         WIFI_ScanNVS(ssid4, password4);
+        WIFI_AutoUpdatePassword(ssid3, password3);
+        WIFI_ScanNVS(ssid3 ,password3);
         ESP_LOGI(TAG, "\tDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA XONGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR\n");
         vTaskDelay(1000 / portTICK_PERIOD_MS);
 
