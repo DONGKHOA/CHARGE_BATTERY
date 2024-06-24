@@ -15,6 +15,7 @@
 #include "esp_netif_ip_addr.h"
 #include "nvs_flash.h"
 #include "nvs.h"
+#include "freertos/queue.h"
 
 #include "lwip/err.h"
 #include "lwip/sockets.h"
@@ -42,11 +43,12 @@
  *  STATIC VARIABLES
  **********************/
 
-static WIFI_Status_t state_connected_wifi = CONNECT_FAIL;////??????????????????????????????????
+static WIFI_Status_t state_connected_wifi = CONNECT_FAIL;
 static uint8_t s_retry_num = 0;
 static uint8_t volatile num_wifi = 0;
 static EventGroupHandle_t s_wifi_event_group;
 static char ssid_name[1024];
+static QueueHandle_t WIFI_Queue_VacantPosition;
 
 /**********************
  *   STATIC FUNCTIONS
@@ -83,6 +85,13 @@ static void event_handler(void *arg, esp_event_base_t event_base,
     }
 }
 
+static void WIFI_ResetNumSSID(void)
+{
+    nvs_handle_t nvsHandle;
+    nvs_open(NUM_WIFI_NVS, NVS_READWRITE, &nvsHandle);
+    nvs_set_u8(nvsHandle, NUM_WIFI_KEY, 0);
+}
+
 static uint8_t WIFI_GetNumSSID(void)
 {
     uint8_t num;
@@ -100,6 +109,7 @@ static uint8_t WIFI_GetNumSSID(void)
         return 0;
     }
 }
+
 
 static void WIFI_SetNumSSID(uint8_t num)
 {
@@ -330,6 +340,9 @@ void WIFI_StaInit(void)
     ESP_ERROR_CHECK(esp_wifi_start());
 
     esp_wifi_stop();
+
+    WIFI_ResetNumSSID();/// erase NumSSID in Flash(NVS) 
+    WIFI_Queue_VacantPosition = xQueueCreate(NUM_WIFI_VACANT_POSITON, sizeof(uint8_t)); // init Queue to push vacant position when deleting SSID and password
 }
 
 /**
@@ -554,11 +567,21 @@ int8_t WIFI_ScanNVS(uint8_t *ssid, uint8_t *pass)
  */
 void WIFI_StoreNVS(uint8_t *ssid, uint8_t *password)
 {
-    num_wifi = WIFI_GetNumSSID();
-    num_wifi++;
-    WIFI_SetNumSSID(num_wifi);
-    WIFI_SetSSID(ssid, num_wifi);
-    WIFI_SetPass(password, num_wifi);
+    if(uxQueueMessagesWaiting(WIFI_Queue_VacantPosition) > 0)
+    {
+        uint8_t position = 0;
+        xQueueReceive( WIFI_Queue_VacantPosition, &position, ( TickType_t ) 10 );
+        WIFI_SetSSID(ssid, position);
+        WIFI_SetPass(password, position);
+    }
+    else
+    {
+        num_wifi = WIFI_GetNumSSID();
+        num_wifi++;
+        WIFI_SetNumSSID(num_wifi);
+        WIFI_SetSSID(ssid, num_wifi);
+        WIFI_SetPass(password, num_wifi);
+    }
 }
 
 
@@ -578,6 +601,7 @@ int8_t WIFI_DeleteNVS (uint8_t *ssid)
         WIFI_ScanSSID(ssid_temp, i, 32);
         if (memcmp(ssid_temp, ssid, strlen((char *)ssid)) == 0)
         {
+            xQueueSend( WIFI_Queue_VacantPosition, &i, ( TickType_t ) 0 );
             WIFI_DeleteSSID(i);
             WIFI_DeletePass(i);
             return i;

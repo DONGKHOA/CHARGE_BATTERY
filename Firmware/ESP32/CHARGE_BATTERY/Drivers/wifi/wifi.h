@@ -13,6 +13,7 @@
 
 #define SCAN_LIST_SIZE      50
 #define LIMIT_STORE_WIFI    10
+#define NUM_WIFI_VACANT_POSITON 50
 
 /**********************
  *      TYPEDEFS
@@ -29,13 +30,11 @@ typedef enum
 /**********************
  *   GLOBAL FUNCTIONS
  **********************/
-
 void WIFI_StaInit(void);
 uint8_t WIFI_Scan(char * data_name);
 WIFI_Status_t WIFI_Connect(uint8_t *ssid, uint8_t *password);
 int8_t WIFI_ScanNVS(uint8_t * ssid, uint8_t * pass);
 void WIFI_StoreNVS(uint8_t * ssid, uint8_t *password);
-WIFI_Status_t wifi_reset_password(uint8_t *ssid, uint8_t *password);
 int8_t WIFI_DeleteNVS (uint8_t *ssid);
 WIFI_Status_t WIFI_state_connect(void);
 
