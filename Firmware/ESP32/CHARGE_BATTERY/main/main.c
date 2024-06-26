@@ -49,10 +49,10 @@ static void startWifiScan(void *arg)
         // uint8_t numNetworks = WIFI_Scan(networks);
         // ESP_LOGI(TAG, "So luong Wifi:  %d\n",numNetworks);
         // vTaskDelay(100 / portTICK_PERIOD_MS);
-        // WIFI_Status_t connectionStatus = WIFI_Connect(ssid, password);
-        // if (connectionStatus == CONNECT_OK) {
-        //     ESP_LOGI(TAG, "\tConnected\n");
-        // }
+        WIFI_Status_t connectionStatus = WIFI_Connect(ssid3, password3);
+        if (connectionStatus == CONNECT_OK) {
+            ESP_LOGI(TAG, "\tConnected\n");
+        }
 
         WIFI_StoreNVS(ssid1, password1);
         WIFI_StoreNVS(ssid2, password2);
