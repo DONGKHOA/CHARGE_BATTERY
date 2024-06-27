@@ -26,10 +26,11 @@
  *      DEFINES
  *********************/
 
-#define WEB_SERVER  "api.openweathermap.org"
-#define WEB_PORT    "80"
+#define WEB_SERVER  "api.thingspeak.com"                                 /*"api.openweathermap.org"*/
+#define WEB_PORT    "rhnr36ad0v00djzbc9ya"                               /*"80"*/
 
 static char REQUEST[512];
+static char SUBREQUEST[100];
 static const char *TAG = "http request";
 char *data_http;
 
@@ -76,7 +77,11 @@ static uint8_t http_request()
 
     ESP_LOGI(TAG, "... connected");
     freeaddrinfo(res);
-    sprintf(REQUEST, "GET http://api.openweathermap.org/data_http/2.5/weather?q=Thanh%%20pho%%20Ho%%20Chi%%20Minh&appid=a5b16100ee019b826c6a7e22902d14e5\n\n");
+   
+    //  sprintf(REQUEST, "GET http://api.thingspeak.com/channels/2581578/feeds.json?api_key=2LLAX33SVS75QHGX&results=3\n\n");
+    // sprintf(REQUEST, "GET http://api.openweathermap.org/data_http/2.5/weather?q=Thanh%%20pho%%20Ho%%20Chi%%20Minh&appid=a5b16100ee019b826c6a7e22902d14e5\n\n");
+     sprintf(REQUEST, "POST http://thingsboard.cloud/api/v1/rhnr36ad0v00djzbc9ya/telemetry\n\n");
+
     if (write(s, REQUEST, strlen(REQUEST)) < 0) 
     {
         ESP_LOGE(TAG, "... socket send failed");

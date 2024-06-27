@@ -25,123 +25,49 @@
 
 static const char *TAG = "main";
 
-static TaskHandle_t wifiScan_task;
-uint8_t rec;
-#define EXAMPLE_ESP_WIFI_SSID      "WIFI TANG 3.01 2.4G"
-#define EXAMPLE_ESP_WIFI_PASS      "888888883"
-
-
-
-static void startWifiScan(void *arg)
+void http_task( void * pvParameters )
 {
-    while (1)
+
+    for( ;; )
     {
+        char *http_data = WIFI_HTTP_Request();
+        if (http_data != NULL) 
+        {
+            // Yêu cầu HTTP thành công, có dữ liệu trả về
+            // Bạn có thể sử dụng dữ liệu HTTP ở đây
+            printf("Dữ liệu HTTP: %s\n", http_data);
+            // Sau khi sử dụng dữ liệu HTTP, hãy giải phóng bộ nhớ đã được cấp phát
+            free(http_data);
+        } 
+        else 
+        {
+            // Yêu cầu HTTP không thành công hoặc có lỗi
+            printf("Yêu cầu HTTP không thành công hoặc có lỗi.\n");
 
-        uint8_t ssid1[] = "tran hoang kien";
-        uint8_t password1[] = "123583";
-        uint8_t ssid3[] = "WIFI TANG 3.01 2.4G";
-        uint8_t password3[] = "888888883";
-        uint8_t ssid2[] = "hell0 world";
-        uint8_t password2[] = "20040502";
-         uint8_t ssid4[] = "wifi thay the";
-        uint8_t password4[] = "11111111";
-        // char networks[100];
-        // uint8_t numNetworks = WIFI_Scan(networks);
-        // ESP_LOGI(TAG, "So luong Wifi:  %d\n",numNetworks);
-        // vTaskDelay(100 / portTICK_PERIOD_MS);
-        WIFI_Status_t connectionStatus = WIFI_Connect(ssid3, password3);
-        if (connectionStatus == CONNECT_OK) {
-            ESP_LOGI(TAG, "\tConnected\n");
         }
-
-        WIFI_StoreNVS(ssid1, password1);
-        WIFI_StoreNVS(ssid2, password2);
-        WIFI_StoreNVS(ssid3, password3);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-
-        
-        int8_t networkIndex = WIFI_ScanNVS(ssid3, password3);
-        if (networkIndex != -1) {
-            ESP_LOGI(TAG, "\ttim mk thay roi nha:))) \n");
-            ESP_LOGI(TAG, "So luong Wifi duoc luu vao NVS:  %d\n",networkIndex);
-        } else {
-            ESP_LOGI(TAG, "\tNOT FOUND\n");
-        }
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-
-
-
-        int8_t status_dele = WIFI_DeleteNVS (ssid2);
-           if (status_dele != -1) {
-            ESP_LOGI(TAG, "Taof lao aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:  %d\n",networkIndex);
-        } else {
-            ESP_LOGI(TAG, "\tNOT FOUND\n");
-        }
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-        WIFI_ScanNVS(ssid3, password3);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-        WIFI_StoreNVS(ssid4, password4);
-        WIFI_ScanNVS(ssid4, password4);
-        WIFI_AutoUpdatePassword(ssid3, password3);
-        WIFI_ScanNVS(ssid3 ,password3);
-        ESP_LOGI(TAG, "\tDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA XONGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR\n");
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-
-
-//         //  connectionStatus = WIFI_state_connect();
-//         // if (connectionStatus == CONNECT_OK) {
-//         //     ESP_LOGI(TAG, "\tDANG KET NOI\n");
-//         // } else {
-//         //     ESP_LOGI(TAG, "\tNGAT KET NOI\n");
-//         // }
-//         vTaskDelay(500 / portTICK_PERIOD_MS);
-//         ESP_LOGI(TAG, "\tDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA XONGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR\n");
-//         vTaskDelay(500 / portTICK_PERIOD_MS);
     }
 }
+
+
+
 
 
 void app_main(void)
 {
     NVS_Init();
     WIFI_StaInit();
+    uint8_t ssid3[] = "WIFI TANG 3.02 2.4G";
+    uint8_t password3[] = "888888883";
+    WIFI_Status_t connectionStatus = WIFI_Connect(ssid3, password3);
+    if (connectionStatus == CONNECT_OK) {
+        ESP_LOGI(TAG, "\tConnected\n");
+    }
 
-    xTaskCreate(startWifiScan,
-                "Wifi scan",
-                1024 * 40,
+    xTaskCreate(http_task,
+                "http",
+                1024 * 20,
                 NULL,
                 3,
-                &wifiScan_task);
-
-
-
-//    uint8_t ssid[] = "WIFI TANG 3.01 2.4G";
-//     uint8_t password[] = "888888883";
-//     WIFI_Status_t connectionStatus = WIFI_Connect(ssid, password);
-//     if (connectionStatus == CONNECT_OK) {
-//         ESP_LOGI(TAG, "\tConnected\n");
-//     } else {
-//         ESP_LOGI(TAG, "\tDisconnected\n");
-//     }
-//     vTaskDelay(500 / portTICK_PERIOD_MS);
-    
-   
-    //     uint8_t ssid[] = "WIFI TANG 3.01 2.4G";
-    // uint8_t password[32];
-    // int8_t networkIndex = WIFI_ScanNVS(ssid, password);
-    // if (networkIndex != -1) {
-    //     ESP_LOGI(TAG, "\ttim thay roi nha:)))\n");
-    // } else {
-    //     ESP_LOGI(TAG, "\tNOT FOUND\n");
-    // }
-
-
-
-    // WIFI_Status_t connectionStatus = WIFI_state_connect();
-    // if (connectionStatus == WIFI_CONNECTED) {
-    //     ESP_LOGI(TAG, "\tDANG KET NOI\n");
-    // } else {
-    //     ESP_LOGI(TAG, "\tNGAT KET NOI\n");
-    // }
+                NULL);
 
 }
