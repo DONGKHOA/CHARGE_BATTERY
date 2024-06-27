@@ -15,6 +15,7 @@
 #include "esp_netif_ip_addr.h"
 #include "nvs_flash.h"
 #include "nvs.h"
+#include "freertos/queue.h"
 
 #include "lwip/err.h"
 #include "lwip/sockets.h"
@@ -47,14 +48,7 @@ static uint8_t s_retry_num = 0;
 static uint8_t volatile num_wifi = 0;
 static EventGroupHandle_t s_wifi_event_group;
 static char ssid_name[1024];
-
-/**********************
- *  EXTERN VARIABLES
- **********************/
-
-extern char ip_ssid_connected[20];
-extern EventGroupHandle_t event_uart_tx_heading;
-extern char buffer_uart_tx[1024 + 1];
+static QueueHandle_t WIFI_Queue_VacantPosition;
 
 /**********************
  *   STATIC FUNCTIONS
@@ -78,11 +72,8 @@ static void event_handler(void *arg, esp_event_base_t event_base,
         else
         {
             state_connected_wifi = CONNECT_FAIL;
-            xEventGroupSetBits(s_wifi_event_group, WIFI_FAIL_BIT);
-            strcpy(buffer_uart_tx, "FAILED");
-            xEventGroupSetBits(event_uart_tx_heading,
-                                SEND_CONNECT_WIFI_UNSUCCESSFUL_BIT);
-        }
+            xEventGroupSetBits(s_wifi_event_group, WIFI_FAIL_BIT);        
+        } 
         ESP_LOGE(TAG, "connect to the AP fail");
     }
     else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP)
@@ -90,12 +81,15 @@ static void event_handler(void *arg, esp_event_base_t event_base,
         state_connected_wifi = CONNECT_OK;
         ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
         ESP_LOGI(TAG, "got ip:" IPSTR, IP2STR(&event->ip_info.ip));
-
-        sprintf(ip_ssid_connected, IPSTR, IP2STR(&event->ip_info.ip));
-        printf("ip : %s\n", ip_ssid_connected);
-
         xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
     }
+}
+
+static void WIFI_ResetNumSSID(void)
+{
+    nvs_handle_t nvsHandle;
+    nvs_open(NUM_WIFI_NVS, NVS_READWRITE, &nvsHandle);
+    nvs_set_u8(nvsHandle, NUM_WIFI_KEY, 0);
 }
 
 static uint8_t WIFI_GetNumSSID(void)
@@ -116,6 +110,7 @@ static uint8_t WIFI_GetNumSSID(void)
     }
 }
 
+
 static void WIFI_SetNumSSID(uint8_t num)
 {
     nvs_handle_t nvsHandle;
@@ -131,12 +126,26 @@ static esp_err_t WIFI_ScanSSID(uint8_t *ssid, uint8_t id, uint8_t len)
                           (char *)ssid, 32);
 }
 
+static esp_err_t WIFI_DeleteSSID(uint8_t id)/*mới*/
+{
+    char ssid_key[32];
+    sprintf(ssid_key, "%d ssid", id);
+    return NVS_DeleteString(SSID_NVS, (const char *)ssid_key);
+}
+
 static esp_err_t WIFI_ScanPass(uint8_t *pass, uint8_t id, uint8_t len)
 {
     char pass_key[32];
     sprintf(pass_key, "%d pass", id);
     return NVS_ReadString(PASS_NVS, (const char *)pass_key,
                           (char *)pass, 32);
+}
+
+static esp_err_t WIFI_DeletePass(uint8_t id)/*mới*/
+{
+    char pass_key[32];
+    sprintf(pass_key, "%d pass", id);
+    return NVS_DeleteString(PASS_NVS, (const char *)pass_key);
 }
 
 static esp_err_t WIFI_SetSSID(uint8_t *ssid, uint8_t id)
@@ -331,6 +340,9 @@ void WIFI_StaInit(void)
     ESP_ERROR_CHECK(esp_wifi_start());
 
     esp_wifi_stop();
+
+    WIFI_ResetNumSSID();/// erase NumSSID in Flash(NVS) 
+    WIFI_Queue_VacantPosition = xQueueCreate(NUM_WIFI_VACANT_POSITON, sizeof(uint8_t)); // init Queue to push vacant position when deleting SSID and password
 }
 
 /**
@@ -555,12 +567,78 @@ int8_t WIFI_ScanNVS(uint8_t *ssid, uint8_t *pass)
  */
 void WIFI_StoreNVS(uint8_t *ssid, uint8_t *password)
 {
-    num_wifi = WIFI_GetNumSSID();
-    num_wifi++;
-    WIFI_SetNumSSID(num_wifi);
-    WIFI_SetSSID(ssid, num_wifi);
-    WIFI_SetPass(password, num_wifi);
+    if(uxQueueMessagesWaiting(WIFI_Queue_VacantPosition) > 0)
+    {
+        uint8_t position = 0;
+        xQueueReceive( WIFI_Queue_VacantPosition, &position, ( TickType_t ) 10 );
+        WIFI_SetSSID(ssid, position);
+        WIFI_SetPass(password, position);
+    }
+    else
+    {
+        num_wifi = WIFI_GetNumSSID();
+        num_wifi++;
+        WIFI_SetNumSSID(num_wifi);
+        WIFI_SetSSID(ssid, num_wifi);
+        WIFI_SetPass(password, num_wifi);
+    }
 }
+
+
+/**
+ * The function WIFI_DeleteNVS deletes a WiFi SSID and password in non-volatile storage.
+ *
+ * @param ssid The `ssid` parameter is a pointer to an array of characters that represents the name of
+ * the Wi-Fi network (Service Set Identifier).
+ */
+int8_t WIFI_DeleteNVS (uint8_t *ssid)  
+{
+    int8_t i;
+    uint8_t ssid_temp[32];
+
+    num_wifi = WIFI_GetNumSSID();
+    if (num_wifi == 0)
+    {
+        return -1;
+    }
+
+    for (i = 1; i <= num_wifi; i++)
+    {
+        WIFI_ScanSSID(ssid_temp, i, 32);
+        if (memcmp(ssid_temp, ssid, strlen((char *)ssid)) == 0)
+        {
+            xQueueSend( WIFI_Queue_VacantPosition, &i, ( TickType_t ) 0 );
+            WIFI_DeleteSSID(i);
+            WIFI_DeletePass(i);
+            return i;
+        }
+    }
+    return -1;
+}
+
+
+/**
+ * The function WIFI_AutoUpdatePassword stores a WiFi SSID and NEW password in non-volatile storage.
+ *
+ * @param ssid The `ssid` parameter is a pointer to an array of characters that represents the name of
+ * the Wi-Fi network (Service Set Identifier).
+ * @param password The `password` parameter in the `WIFI_StoreNVS` function is a pointer to an array of
+ * `uint8_t` data type, which is typically used to store a NEW password for a Wi-Fi network.
+ */
+void WIFI_AutoUpdatePassword(uint8_t *ssid, uint8_t *pass)
+{
+    WIFI_Status_t reconnection = WIFI_Connect(ssid, pass);
+    if (reconnection != CONNECT_OK)
+    {
+        WIFI_DeleteNVS(ssid);
+    }
+    else
+    {
+        WIFI_DeleteNVS(ssid);
+        WIFI_StoreNVS(ssid, pass);
+    }
+}
+
 
 WIFI_Status_t WIFI_state_connect(void)
 {
