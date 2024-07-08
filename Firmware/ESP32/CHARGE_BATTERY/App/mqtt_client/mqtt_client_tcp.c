@@ -16,6 +16,9 @@
 #include "esp_log.h"
 
 #include "mqtt_client_tcp.h"
+// #include "tbc_mqtt_helper.h"
+// #include "tbc_transport_config.h"
+
 
 /*********************
  *      DEFINES
@@ -91,11 +94,10 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
  */
 void MQTT_app_start(MQTT_Client_Data_t *MQTT_Client, char *url)
 {
-    
     esp_mqtt_client_config_t mqtt_cfg = {
         .broker.address.uri = url,
     };
-    
+
     MQTT_Client->client = esp_mqtt_client_init(&mqtt_cfg);
     /* The last argument may be used to pass data to the event handler, in this example mqtt_event_handler */
     esp_mqtt_client_register_event(MQTT_Client->client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
