@@ -24,7 +24,7 @@
 #include "tbc_mqtt_helper.h"
 
 
-uint32_t te_lux = 10;
+// uint32_t te_lux = 10;
 tbcmh_handle_t client;
 tbc_transport_config_esay_t config = 
 {
@@ -43,17 +43,17 @@ static void tb_on_disconnected(tbcmh_handle_t client, void *context)
     printf("DISCONNECTED\n");
 }
 
-tbcmh_value_t* te_get_lux(void)
+tbcmh_value_t* te_get_lux(int32_t te_lux)
 {
     cJSON* lux = cJSON_CreateNumber(te_lux);
     return lux;
 }
 
-static void tb_telemetry_send(tbcmh_handle_t client)
+static void tb_telemetry_send(tbcmh_handle_t client, MQTT_Telemetry_Data_t *Post_Data)
 {
 
     cJSON *object = cJSON_CreateObject();
-    cJSON_AddItemToObject(object, TELEMETRY_LUX, te_get_lux());
+    cJSON_AddItemToObject(object, Post_Data->telemetry, te_get_lux(Post_Data->data_telemetry));
     tbcmh_telemetry_upload_ex(client, object, 1/*qos*/, 0/*retain*/);
     cJSON_Delete(object);
 }
@@ -64,9 +64,9 @@ void MQTT_init(void)
     tbcmh_connect_using_url(client, &config, NULL, tb_on_connected, tb_on_disconnected);
 }
 
-void PostData_Thingsboard(void)
+void PostData_Thingsboard(MQTT_Telemetry_Data_t *Post_Data)
 {
     if (tbcmh_has_events(client)) tbcmh_run(client);
-    if (tbcmh_is_connected(client)) tb_telemetry_send(client);  
+    if (tbcmh_is_connected(client)) tb_telemetry_send(client, Post_Data);  
 }
 

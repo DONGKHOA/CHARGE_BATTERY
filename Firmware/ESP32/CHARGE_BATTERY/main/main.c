@@ -25,14 +25,18 @@
 
 uint8_t ssid3[] = "WIFI TANG 3.01 2.4G";
 uint8_t password3[] = "888888883";
-
+MQTT_Telemetry_Data_t post_data =
+{
+    "trankien12345",
+    35.2
+};
 
 static void mqtt_main(void *arg)
 {
     MQTT_init();   
     while(1) 
     {
-        PostData_Thingsboard();
+        PostData_Thingsboard(&post_data);
     }
 }
 
