@@ -4,27 +4,17 @@
 
 #include "thingsboard_mqtt.h"
 
-// #include "freertos/FreeRTOS.h"
-// #include "freertos/task.h"
-// #include "freertos/timers.h"
-// #include "freertos/queue.h"
-
-// #include "esp_system.h"
-// #include "esp_event.h"
 #include "esp_log.h"
 #include "esp_err.h"
 #include "esp_wifi.h"
 #include "rom/ets_sys.h"
 
 #include "wifi.h"
-// #include "gpio.h"
 #include "nvs_rw.h" 
-// #include "uart_driver.h"
 #include "mqtt_client_tcp.h"
 #include "tbc_mqtt_helper.h"
 
 
-// uint32_t te_lux = 10;
 tbcmh_handle_t client;
 tbc_transport_config_esay_t config = 
 {
