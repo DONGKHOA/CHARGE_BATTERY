@@ -23,27 +23,27 @@ tbc_transport_config_esay_t config =
     .log_rxtx_package = true                /*!< print Rx/Tx MQTT package */
 };
 
-static void tb_on_connected(tbcmh_handle_t client, void *context)
+static void MQTT_Connected_Handle(tbcmh_handle_t client, void *context)
 {
     printf("CONNECTED\n");
 }
 
-static void tb_on_disconnected(tbcmh_handle_t client, void *context)
+static void MQTT_Disconnected_Handle(tbcmh_handle_t client, void *context)
 {
     printf("DISCONNECTED\n");
 }
 
-tbcmh_value_t* te_get_lux(int32_t te_lux)
+tbcmh_value_t *MQTT_getData_lux(int32_t te_lux)
 {
-    cJSON* lux = cJSON_CreateNumber(te_lux);
+    cJSON *lux = cJSON_CreateNumber(te_lux);
     return lux;
 }
 
-static void tb_telemetry_send(tbcmh_handle_t client, MQTT_Telemetry_Data_t *Post_Data)
+static void MQTT_sendTelemetry(tbcmh_handle_t client, MQTT_Telemetry_Data_t *Post_Data)
 {
 
     cJSON *object = cJSON_CreateObject();
-    cJSON_AddItemToObject(object, Post_Data->telemetry, te_get_lux(Post_Data->data_telemetry));
+    cJSON_AddItemToObject(object, Post_Data->title_Telemetry, MQTT_getData_lux(Post_Data->data_Telemetry));
     tbcmh_telemetry_upload_ex(client, object, 1/*qos*/, 0/*retain*/);
     cJSON_Delete(object);
 }
@@ -51,12 +51,12 @@ static void tb_telemetry_send(tbcmh_handle_t client, MQTT_Telemetry_Data_t *Post
 void MQTT_init(void)
 {
     client = tbcmh_init();
-    tbcmh_connect_using_url(client, &config, NULL, tb_on_connected, tb_on_disconnected);
+    MQTT_Connect_URL(client, &config, NULL, MQTT_Connected_Handle, MQTT_Disconnected_Handle);
 }
 
-void PostData_Thingsboard(MQTT_Telemetry_Data_t *Post_Data)
+void MQTT_post(MQTT_Telemetry_Data_t *Post_Data)
 {
-    if (tbcmh_has_events(client)) tbcmh_run(client);
-    if (tbcmh_is_connected(client)) tb_telemetry_send(client, Post_Data);  
+    if (MQTT_Events(client)) MQTT_Continue(client);
+    if (MQTT_Connected(client)) MQTT_sendTelemetry(client, Post_Data);  
 }
 

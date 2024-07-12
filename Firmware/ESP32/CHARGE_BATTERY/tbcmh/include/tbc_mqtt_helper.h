@@ -391,7 +391,7 @@ void tbcmh_destroy(tbcmh_handle_t client);
  *
  * @return true on successful, faiure on failure
  */
-bool tbcmh_connect_using_url(tbcmh_handle_t client,
+bool MQTT_Connect_URL(tbcmh_handle_t client,
                                 const tbc_transport_config_esay_t *config,
                                 void *context,
                                 tbcmh_on_connected_t on_connected,
@@ -429,7 +429,7 @@ void tbcmh_disconnect(tbcmh_handle_t client);
  *
  * @return true on connected, false on otherwise
  */
-bool tbcmh_is_connected(tbcmh_handle_t client);
+bool MQTT_Connected(tbcmh_handle_t client);
 
 /**
  * @brief Has it events in event queue?
@@ -438,7 +438,7 @@ bool tbcmh_is_connected(tbcmh_handle_t client);
  *
  * @return true or false
  */
-bool tbcmh_has_events(tbcmh_handle_t client);
+bool MQTT_Events(tbcmh_handle_t client);
 
 /**
  * @brief Has it events in event queue?
@@ -449,7 +449,7 @@ bool tbcmh_has_events(tbcmh_handle_t client);
  * - receive events from queue, then parse and deal.
  *
  */
-void tbcmh_run(tbcmh_handle_t client);
+void MQTT_Continue(tbcmh_handle_t client);
 
 //==== Publish Telemetry time-series data =====================================
 /**
