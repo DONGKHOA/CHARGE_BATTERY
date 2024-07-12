@@ -12,14 +12,32 @@
  *      INCLUDES
  *********************/
 
-#include <stdio.h>
+#include "stm32f1xx.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
 
+/**********************
+ *    PUBLIC TYPEDEFS
+ **********************/
 
+/**
+ * @brief Structure to hold frequency conversion data for a timer.
+ */
+typedef struct _FCP_data_t
+{
+    uint32_t frequency;               /**< @brief Desired frequency to be achieved. */
+    uint16_t prescaler_timer;         /**< @brief Prescaler value for the timer. */
+    uint16_t auto_reload_reg_timer;   /**< @brief Auto-reload register value for the timer. */
+} FCP_data_t;
+
+/**********************
+ *    PUBLIC FUNCTIONS
+ **********************/
+
+void FSC_Process(uint32_t frequency);
 
 #ifdef __cplusplus
 }
