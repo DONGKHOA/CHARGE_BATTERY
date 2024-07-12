@@ -208,7 +208,7 @@ int tbcmh_attributes_subscribe(tbcmh_handle_t client,
     }
 
     // Subscript topic <===  empty->non-empty
-    if (tbcmh_is_connected(client) && isEmptyBefore && !LIST_EMPTY(&client->attributessubscribe_list))
+    if (MQTT_Connected(client) && isEmptyBefore && !LIST_EMPTY(&client->attributessubscribe_list))
     {
         int msg_id = tbcm_subscribe(client->tbmqttclient, TB_MQTT_TOPIC_SERVERRPC_REQUEST_SUBSCRIBE, 0);
         // TBC_LOGI("sent subscribe successful, msg_id=%d, topic=%s",
@@ -268,7 +268,7 @@ int tbcmh_attributes_subscribe_of_array(tbcmh_handle_t client, //int qos /*=0*/,
     }
 
     // Subscript topic <===  empty->non-empty
-    if (tbcmh_is_connected(client) && isEmptyBefore && !LIST_EMPTY(&client->attributessubscribe_list))
+    if (MQTT_Connected(client) && isEmptyBefore && !LIST_EMPTY(&client->attributessubscribe_list))
     {
         int msg_id = tbcm_subscribe(client->tbmqttclient, TB_MQTT_TOPIC_SERVERRPC_REQUEST_SUBSCRIBE, 0);
         // TBC_LOGI("sent subscribe successful, msg_id=%d, topic=%s",
@@ -322,7 +322,7 @@ tbc_err_t tbcmh_attributes_unsubscribe(tbcmh_handle_t client, int attributes_sub
     }
     
     // Unsubscript topic <===  non-empty->empty
-    if (tbcmh_is_connected(client) && !isEmptyBefore && LIST_EMPTY(&client->attributessubscribe_list)) {
+    if (MQTT_Connected(client) && !isEmptyBefore && LIST_EMPTY(&client->attributessubscribe_list)) {
         int msg_id = tbcm_unsubscribe(client->tbmqttclient, TB_MQTT_TOPIC_SERVERRPC_REQUEST_SUBSCRIBE);
         // TBC_LOGI("sent unsubscribe successful, msg_id=%d, topic=%s",
                //  msg_id, TB_MQTT_TOPIC_SERVERRPC_REQUEST_SUBSCRIBE);
@@ -338,7 +338,7 @@ void _tbcmh_attributessubscribe_on_connected(tbcmh_handle_t client)
     // This function is in semaphore/client->_lock!!!
     TBC_CHECK_PTR(client);
 
-    if (tbcmh_is_connected(client) && !LIST_EMPTY(&client->attributessubscribe_list)) {
+    if (MQTT_Connected(client) && !LIST_EMPTY(&client->attributessubscribe_list)) {
         int msg_id = tbcm_subscribe(client->tbmqttclient, TB_MQTT_TOPIC_SERVERRPC_REQUEST_SUBSCRIBE, 0);
         // TBC_LOGI("sent subscribe successful, msg_id=%d, topic=%s",
                //  msg_id, TB_MQTT_TOPIC_SERVERRPC_REQUEST_SUBSCRIBE);

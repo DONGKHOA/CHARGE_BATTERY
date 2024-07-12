@@ -28,7 +28,7 @@ uint8_t password3[] = "888888883";
 MQTT_Telemetry_Data_t post_data =
 {
     "trankien12345",
-    35.2
+    40
 };
 
 static void mqtt_main(void *arg)
@@ -36,7 +36,7 @@ static void mqtt_main(void *arg)
     MQTT_init();   
     while(1) 
     {
-        PostData_Thingsboard(&post_data);
+        MQTT_post(&post_data);
     }
 }
 

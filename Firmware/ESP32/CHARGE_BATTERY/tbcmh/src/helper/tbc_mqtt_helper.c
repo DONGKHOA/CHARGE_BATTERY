@@ -257,7 +257,7 @@ static esp_err_t _parse_uri(tbc_transport_address_storage_t *address,
     return ESP_OK;
 }
 
-bool tbcmh_connect_using_url(tbcmh_handle_t client,
+bool MQTT_Connect_URL(tbcmh_handle_t client,
                                 const tbc_transport_config_esay_t *config,
                                 void *context,
                                 tbcmh_on_connected_t on_connected,
@@ -336,13 +336,13 @@ void tbcmh_disconnect(tbcmh_handle_t client)
      // TBC_LOGI("disconnecting from %s://%s:%d ...", client->config.address.schema,
                //  client->config.address.host, client->config.address.port);
      // empty msg queue
-     while (tbcmh_has_events(client)) {
-          tbcmh_run(client);
+     while (MQTT_Events(client)) {
+          MQTT_Continue(client);
      }
      // disconnect
      tbcm_disconnect(client->tbmqttclient);
-     while (tbcmh_has_events(client)) {
-          tbcmh_run(client);
+     while (MQTT_Events(client)) {
+          MQTT_Continue(client);
      }
 
      // clear config & callback
@@ -366,7 +366,7 @@ void tbcmh_disconnect(tbcmh_handle_t client)
      // uint64_t last_check_timestamp;
 }
 
-bool tbcmh_is_connected(tbcmh_handle_t client)
+bool MQTT_Connected(tbcmh_handle_t client)
 {
      if (client && client->tbmqttclient && tbcm_is_connected(client->tbmqttclient)) {
           return true;
@@ -638,13 +638,13 @@ static void _on_tbcm_event_bridge_receive(tbcmh_handle_t client)
 }
 
 // call in user task, NOT mqtt task!
-void tbcmh_run(tbcmh_handle_t client)
+void MQTT_Continue(tbcmh_handle_t client)
 {
     _on_tbcm_event_bridge_receive(client);
 }
 
 // call in user task, NOT mqtt task!
-bool tbcmh_has_events(tbcmh_handle_t client)
+bool MQTT_Events(tbcmh_handle_t client)
 {
      if (!client) {
           // TBC_LOGE("client is NULL! %s()", __FUNCTION__);

@@ -7,12 +7,12 @@
 
 typedef struct 
 {
-    char *telemetry;
-    int32_t data_telemetry;
+    char *title_Telemetry;
+    int32_t data_Telemetry;
 }MQTT_Telemetry_Data_t;
 
 void MQTT_init(void);
 
-void PostData_Thingsboard(MQTT_Telemetry_Data_t *Post_Data);
+void MQTT_post(MQTT_Telemetry_Data_t *Post_Data);
 
 #endif
