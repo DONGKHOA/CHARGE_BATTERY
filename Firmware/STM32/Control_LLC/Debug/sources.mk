@@ -34,5 +34,6 @@ Core/Startup \
 Drivers/STM32F1xx_HAL_Driver/Src \
 Middleware/Frequency_convert_pulse \
 Middleware/PI_Control \
+Middleware/Voltage_convert_frequency \
 Scheduler \
 

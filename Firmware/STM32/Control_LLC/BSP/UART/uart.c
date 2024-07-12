@@ -24,6 +24,7 @@
  *  PRIVATE PROTOTYPE FUNCTION
  ******************************/
 
+// API for Queue
 static inline void QUEUE_Init(ring_buffer_t *rb);
 static bool QUEUE_Is_Empty(ring_buffer_t *rb);
 static bool QUEUE_Is_Full(ring_buffer_t *rb);
@@ -35,25 +36,39 @@ static inline uint8_t QUEUE_Peek_Data(ring_buffer_t *rb);
  *  STATIC VARIABLES
  **********************/
 
+/**
+ * @brief Timeout value for waiting for the buffer to empty.
+ */
 static volatile uint32_t timeout = 0;
 
 /*********************
  *   PUBLIC FUNCTION
  *********************/
 
-void UARTConfig(uart_cfg_t *uartstdio_device, USART_TypeDef * uart, IRQn_Type uart_irqn)
+/**
+ * @brief Configures the UART and initializes its buffers.
+ *
+ * @param uartstdio_device Pointer to the UART configuration structure.
+ * @param uart             Pointer to the UART peripheral.
+ * @param uart_irqn        UART interrupt number.
+ */
+void UARTConfig(uart_cfg_t *uartstdio_device, USART_TypeDef *uart, 
+                IRQn_Type uart_irqn)
 {
-	uartstdio_device->uart = uart;
-	uartstdio_device->uart_irqn = uart_irqn;
+    uartstdio_device->uart = uart;
+    uartstdio_device->uart_irqn = uart_irqn;
 
-	QUEUE_Init((ring_buffer_t *)&uartstdio_device->tx_buffer);
+    QUEUE_Init((ring_buffer_t *)&uartstdio_device->tx_buffer);
     QUEUE_Init((ring_buffer_t *)&uartstdio_device->rx_buffer);
 
-	/* Enable the UART Error Interrupt: (Frame error, noise error, overrun error) */
-	LL_USART_EnableIT_ERROR(uart);
+    /**
+     * Enable the UART Error Interrupt:
+     * (Frame error, noise error, overrun error)
+     */
+    LL_USART_EnableIT_ERROR(uart);
 
-	/* Enable the UART Data Register not empty Interrupt */
-	LL_USART_EnableIT_RXNE(uart);
+    /* Enable the UART Data Register not empty Interrupt */
+    LL_USART_EnableIT_RXNE(uart);
 }
 
 /**

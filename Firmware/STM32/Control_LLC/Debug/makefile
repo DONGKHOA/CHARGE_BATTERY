@@ -10,6 +10,7 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include Scheduler/subdir.mk
+-include Middleware/Voltage_convert_frequency/subdir.mk
 -include Middleware/PI_Control/subdir.mk
 -include Middleware/Frequency_convert_pulse/subdir.mk
 -include Drivers/STM32F1xx_HAL_Driver/Src/subdir.mk
@@ -70,8 +71,8 @@ all: main-build
 main-build: Control_LLC.elf secondary-outputs
 
 # Tool invocations
-Control_LLC.elf Control_LLC.map: $(OBJS) $(USER_OBJS) /media/dongkhoa/New\ Volume/CHARGE_BATTERY/Firmware/STM32/Control_LLC/STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Control_LLC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/media/dongkhoa/New Volume/CHARGE_BATTERY/Firmware/STM32/Control_LLC/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Control_LLC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Control_LLC.elf Control_LLC.map: $(OBJS) $(USER_OBJS) D:\CHARGE_BATTERY\Firmware\STM32\Control_LLC\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Control_LLC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\CHARGE_BATTERY\Firmware\STM32\Control_LLC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Control_LLC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
