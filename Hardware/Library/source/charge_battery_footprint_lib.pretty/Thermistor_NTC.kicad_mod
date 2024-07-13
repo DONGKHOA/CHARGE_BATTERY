@@ -1,0 +1,139 @@
+(footprint "Thermistor_NTC"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Resistor, Axial_DIN0204 series, Axial, Vertical, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
+	(tags "Resistor Axial_DIN0204 series Axial Vertical pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
+	(property "Reference" "REF**"
+		(at 11.65 -1.08 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "7aa71e7c-91fa-4ffc-ae11-22905f025984")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Thermistor_NTC"
+		(at 7.98 7.88 0)
+		(layer "F.Fab")
+		(uuid "4364fa1b-48a6-42e4-b313-9a00a4eabc9b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "05c18561-0422-4913-9f79-b65957641a44")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0e807d32-04fb-4442-b7cb-64abbb44f267")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "996d3378-8789-4857-b30e-eb60249c32ab")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start 0 0)
+		(end 16.5 7)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "451a944a-8cf8-4012-a36e-61a2cdabcc70")
+	)
+	(fp_rect
+		(start 0.1 0.1)
+		(end 16.6 7.1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "28f6bc87-b5ae-4672-abd2-cbcd245fd26f")
+	)
+	(fp_rect
+		(start 0.21 0.19)
+		(end 16.4 6.9)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "2d12bc69-31de-4a4b-9860-495bb8d56433")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 8.07 3.43 0)
+		(layer "F.Fab")
+		(uuid "40464429-afb3-4863-a49d-33e5a6a155d7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 4.3 3.5)
+		(size 1.7 1.7)
+		(drill 1.05)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "61c91eed-47ff-4c19-a062-ad91a8d89765")
+	)
+	(pad "2" thru_hole circle
+		(at 11.8 3.5)
+		(size 1.7 1.7)
+		(drill 1.05)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ac9b8a8c-3c3f-4b51-83a4-5c876e551f52")
+	)
+	(model "C:/Users/ACER/OneDrive/Máy tính/NCKH/CHARGE_BATTERY/Hardware/Library/3d_model/NXRT15XM202EA5B045.STEP"
+		(offset
+			(xyz 8 -3.5 6)
+		)
+		(scale
+			(xyz 2.8 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+)
