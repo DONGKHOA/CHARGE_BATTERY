@@ -1608,6 +1608,7 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(hide yes)
 				)
 			)
 			(property "Supply part name" "DSEI60-06A Diode Chỉnh Lưu 60A 600V"
@@ -1616,6 +1617,7 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(hide yes)
 				)
 			)
 			(property "Supply name" "Thegioiic"
@@ -1624,6 +1626,7 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(hide yes)
 				)
 			)
 			(property "ki_keywords" "Diode_FRED_DSEI60"
@@ -1660,6 +1663,8 @@
 						(type none)
 					)
 				)
+			)
+			(symbol "Diode_DSEI60-06A_FRED_TO247_1_1"
 				(polyline
 					(pts
 						(xy -1.27 1.27) (xy -1.27 -1.27) (xy 1.27 0) (xy -1.27 1.27)
@@ -1669,22 +1674,9 @@
 						(type default)
 					)
 					(fill
-						(type none)
+						(type outline)
 					)
 				)
-				(circle
-					(center 0 0)
-					(radius 2.3418)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Diode_DSEI60-06A_FRED_TO247_1_1"
 				(pin unspecified line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -6442,12 +6434,6 @@
 		(uuid "0073a1d0-f1db-4c97-bcdd-badcce5c36d1")
 	)
 	(junction
-		(at 211.582 18.542)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "073075b8-1700-4b84-bb37-84692c1cff17")
-	)
-	(junction
 		(at 117.602 57.658)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6718,12 +6704,6 @@
 		(uuid "f444814c-c7b9-412d-bbcf-52b9f138ecb5")
 	)
 	(junction
-		(at 221.742 18.542)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f7033f3d-e3d0-4087-8ea6-743eabda7ba7")
-	)
-	(junction
 		(at 175.006 24.892)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6887,7 +6867,7 @@
 	)
 	(wire
 		(pts
-			(xy 202.184 18.542) (xy 211.582 18.542)
+			(xy 202.184 18.542) (xy 210.312 18.542)
 		)
 		(stroke
 			(width 0)
@@ -6934,16 +6914,6 @@
 			(type default)
 		)
 		(uuid "1dcbbd85-a195-439f-9af1-80a989475ccd")
-	)
-	(wire
-		(pts
-			(xy 211.582 18.542) (xy 213.36 18.542)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f22e15f-d4fb-40a4-ba2e-02811997e400")
 	)
 	(wire
 		(pts
@@ -7364,6 +7334,16 @@
 			(type default)
 		)
 		(uuid "6c6aafc1-a8f2-479e-9a23-da443dfcd49b")
+	)
+	(wire
+		(pts
+			(xy 220.472 18.542) (xy 232.41 18.542)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d06b03f-a8d3-4d0c-82d5-b4c8c3a45158")
 	)
 	(wire
 		(pts
@@ -8144,26 +8124,6 @@
 			(type default)
 		)
 		(uuid "f9febaf2-332e-47b5-b0e4-e92c224bbce8")
-	)
-	(wire
-		(pts
-			(xy 220.472 18.542) (xy 221.742 18.542)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fc936032-e8f8-40a6-aa22-2579005d9810")
-	)
-	(wire
-		(pts
-			(xy 221.742 18.542) (xy 232.41 18.542)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fd8acfd9-0a7b-4296-a2ce-00f4e8f92e49")
 	)
 	(text "Neutral"
 		(exclude_from_sim no)
@@ -9210,103 +9170,6 @@
 			(project "CHARGE_BATTERY"
 				(path "/52eaef32-c16d-4834-ac94-ac67b58aa1d2/8ed7224f-e87e-4b5a-90e5-5ed551abe146"
 					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:Diode_DSEI60-06A_FRED_TO247")
-		(at 216.662 18.542 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "532cffff-906f-416d-b61f-01a40a716cfe")
-		(property "Reference" "D2"
-			(at 216.408 14.986 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "60A, 600V"
-			(at 217.17 15.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Diode_FRED_TO247"
-			(at 208.026 12.446 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_Littelfuse-IXYS-DSEI60-06A_C426674.pdf"
-			(at 208.026 12.446 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "60A, 600V, Diode Fred, TO-247AD"
-			(at 208.026 12.446 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dsei60-06a-diode-chinh-luu-60a-600v"
-			(at 216.662 8.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part name" "DSEI60-06A Diode Chỉnh Lưu 60A 600V"
-			(at 216.662 11.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 216.662 13.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1a812075-c51c-4ecc-8262-b9d21a231fd4")
-		)
-		(pin "2"
-			(uuid "b7ce8e52-b0f0-40e6-aef9-77e3ebdf508a")
-		)
-		(instances
-			(project "CHARGE_BATTERY"
-				(path "/52eaef32-c16d-4834-ac94-ac67b58aa1d2/8ed7224f-e87e-4b5a-90e5-5ed551abe146"
-					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -11236,6 +11099,103 @@
 			(project "CHARGE_BATTERY"
 				(path "/52eaef32-c16d-4834-ac94-ac67b58aa1d2/8ed7224f-e87e-4b5a-90e5-5ed551abe146"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Diode_DSEI60-06A_FRED_TO247")
+		(at 215.392 18.542 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d0f69de4-17d2-4e0e-a3e8-a2e5434766e3")
+		(property "Reference" "D2"
+			(at 215.392 12.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "60A, 600V"
+			(at 215.392 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Diode_FRED_TO247"
+			(at 206.756 12.446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_Littelfuse-IXYS-DSEI60-06A_C426674.pdf"
+			(at 206.756 12.446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "60A, 600V, Diode Fred, TO-247AD"
+			(at 206.756 12.446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/dsei60-06a-diode-chinh-luu-60a-600v"
+			(at 198.882 12.192 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part name" "DSEI60-06A Diode Chỉnh Lưu 60A 600V"
+			(at 193.294 12.192 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 195.326 12.446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d977a7a1-a417-4f93-8dfd-78c7e0e17d87")
+		)
+		(pin "2"
+			(uuid "54869e5b-be29-4d3e-a4a0-5ae79e926c3e")
+		)
+		(instances
+			(project "CHARGE_BATTERY"
+				(path "/52eaef32-c16d-4834-ac94-ac67b58aa1d2/8ed7224f-e87e-4b5a-90e5-5ed551abe146"
+					(reference "D2")
 					(unit 1)
 				)
 			)

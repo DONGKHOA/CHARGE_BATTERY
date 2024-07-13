@@ -9662,7 +9662,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "R"
-			(at -2.159 3.81 0)
+			(at -1.27 1.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9670,7 +9670,7 @@
 			)
 		)
 		(property "Value" "R_Shunt_10mR"
-			(at -2.159 1.905 0)
+			(at -1.27 -3.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9750,11 +9750,12 @@
 			)
 		)
 		(symbol "R_Shunt_10mR_0_1"
-			(rectangle
-				(start -4.699 0.381)
-				(end 0.381 -1.651)
+			(polyline
+				(pts
+					(xy -3.556 -1.27) (xy -3.81 -1.27)
+				)
 				(stroke
-					(width 0.254)
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -9763,7 +9764,43 @@
 			)
 			(polyline
 				(pts
-					(xy -4.699 -0.635) (xy -4.699 -1.905)
+					(xy 1.016 -1.27) (xy 1.27 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -3.556 -1.27) (xy -3.175 -0.254) (xy -2.794 -1.27) (xy -2.413 -2.286) (xy -2.032 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -1.27) (xy -1.651 -0.254) (xy -1.27 -1.27) (xy -0.889 -2.286) (xy -0.508 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.508 -1.27) (xy -0.127 -0.254) (xy 0.254 -1.27) (xy 0.635 -2.286) (xy 1.016 -1.27)
 				)
 				(stroke
 					(width 0)
@@ -9776,9 +9813,9 @@
 		)
 		(symbol "R_Shunt_10mR_1_1"
 			(pin passive line
-				(at -7.366 -0.508 0)
-				(length 2.54)
-				(name "1"
+				(at -5.08 -1.27 0)
+				(length 1.27)
+				(name "~"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -9794,9 +9831,9 @@
 				)
 			)
 			(pin passive line
-				(at 3.048 -0.508 180)
-				(length 2.54)
-				(name "2"
+				(at 2.54 -1.27 180)
+				(length 1.27)
+				(name "~"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -9818,7 +9855,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "R"
-			(at -0.508 2.286 0)
+			(at 1.27 10.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9826,7 +9863,7 @@
 			)
 		)
 		(property "Value" "10K/1%/1_10W"
-			(at 40.64 9.144 90)
+			(at 2.54 3.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9897,11 +9934,60 @@
 			)
 		)
 		(symbol "Res_10K_0603_1%_0_1"
-			(rectangle
-				(start -1.016 -0.254)
-				(end 4.064 -2.286)
+			(polyline
+				(pts
+					(xy 0 6.35) (xy -0.254 6.35)
+				)
 				(stroke
-					(width 0.254)
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 4.572 6.35) (xy 4.826 6.35)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 6.35) (xy 0.381 7.366) (xy 0.762 6.35) (xy 1.143 5.334) (xy 1.524 6.35)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.524 6.35) (xy 1.905 7.366) (xy 2.286 6.35) (xy 2.667 5.334) (xy 3.048 6.35)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.048 6.35) (xy 3.429 7.366) (xy 3.81 6.35) (xy 4.191 5.334) (xy 4.572 6.35)
+				)
+				(stroke
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -9911,7 +9997,7 @@
 		)
 		(symbol "Res_10K_0603_1%_1_1"
 			(pin passive line
-				(at -2.286 -1.27 0)
+				(at -1.524 6.35 0)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -9920,7 +10006,7 @@
 						)
 					)
 				)
-				(number "1"
+				(number ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -9929,7 +10015,7 @@
 				)
 			)
 			(pin passive line
-				(at 5.334 -1.27 180)
+				(at 6.096 6.35 180)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -9938,7 +10024,7 @@
 						)
 					)
 				)
-				(number "2"
+				(number ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -9953,7 +10039,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "R"
-			(at -0.508 2.286 0)
+			(at 0 -3.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9961,7 +10047,7 @@
 			)
 		)
 		(property "Value" "10K/1%/1_10W"
-			(at 40.64 9.144 90)
+			(at 1.27 -8.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10032,11 +10118,60 @@
 			)
 		)
 		(symbol "Res_13K_0603_1%_0_1"
-			(rectangle
-				(start -1.016 -0.254)
-				(end 4.064 -2.286)
+			(polyline
+				(pts
+					(xy -1.016 -6.35) (xy -1.27 -6.35)
+				)
 				(stroke
-					(width 0.254)
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.556 -6.35) (xy 3.81 -6.35)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.016 -6.35) (xy -0.635 -5.334) (xy -0.254 -6.35) (xy 0.127 -7.366) (xy 0.508 -6.35)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.508 -6.35) (xy 0.889 -5.334) (xy 1.27 -6.35) (xy 1.651 -7.366) (xy 2.032 -6.35)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.032 -6.35) (xy 2.413 -5.334) (xy 2.794 -6.35) (xy 3.175 -7.366) (xy 3.556 -6.35)
+				)
+				(stroke
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -10046,7 +10181,7 @@
 		)
 		(symbol "Res_13K_0603_1%_1_1"
 			(pin passive line
-				(at -2.286 -1.27 0)
+				(at -2.54 -6.35 0)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -10055,7 +10190,7 @@
 						)
 					)
 				)
-				(number "1"
+				(number ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -10064,7 +10199,7 @@
 				)
 			)
 			(pin passive line
-				(at 5.334 -1.27 180)
+				(at 5.08 -6.35 180)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -10073,7 +10208,7 @@
 						)
 					)
 				)
-				(number "2"
+				(number ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -10096,7 +10231,7 @@
 			)
 		)
 		(property "Value" "20R/1%/1_10W"
-			(at 40.64 9.144 90)
+			(at 0 -3.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10167,11 +10302,60 @@
 			)
 		)
 		(symbol "Res_20R_0603_1%_0_1"
-			(rectangle
-				(start -1.016 -0.254)
-				(end 4.064 -2.286)
+			(polyline
+				(pts
+					(xy -2.286 -1.27) (xy -2.54 -1.27)
+				)
 				(stroke
-					(width 0.254)
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.286 -1.27) (xy 2.54 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.286 -1.27) (xy -1.905 -0.254) (xy -1.524 -1.27) (xy -1.143 -2.286) (xy -0.762 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -0.762 -1.27) (xy -0.381 -0.254) (xy 0 -1.27) (xy 0.381 -2.286) (xy 0.762 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 -1.27) (xy 1.143 -0.254) (xy 1.524 -1.27) (xy 1.905 -2.286) (xy 2.286 -1.27)
+				)
+				(stroke
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -10181,7 +10365,7 @@
 		)
 		(symbol "Res_20R_0603_1%_1_1"
 			(pin passive line
-				(at -2.286 -1.27 0)
+				(at -3.81 -1.27 0)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -10190,7 +10374,7 @@
 						)
 					)
 				)
-				(number "1"
+				(number ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -10199,7 +10383,7 @@
 				)
 			)
 			(pin passive line
-				(at 5.334 -1.27 180)
+				(at 3.81 -1.27 180)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -10208,7 +10392,7 @@
 						)
 					)
 				)
-				(number "2"
+				(number ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -10296,7 +10480,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_keywords" "R res resistor"
+		(property "ki_keywords" "10K_1/4W_1%"
 			(at 0 0 0)
 			(effects
 				(font
@@ -10315,11 +10499,60 @@
 			)
 		)
 		(symbol "Res_hole_10K_1/4W_1%_0_1"
-			(rectangle
-				(start 3.556 -2.032)
-				(end -1.524 0)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -1.27 -1.27)
+				)
 				(stroke
-					(width 0.254)
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.556 -1.27) (xy 3.81 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -0.635 -0.254) (xy -0.254 -1.27) (xy 0.127 -2.286) (xy 0.508 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.508 -1.27) (xy 0.889 -0.254) (xy 1.27 -1.27) (xy 1.651 -2.286) (xy 2.032 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.032 -1.27) (xy 2.413 -0.254) (xy 2.794 -1.27) (xy 3.175 -2.286) (xy 3.556 -1.27)
+				)
+				(stroke
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -10329,7 +10562,7 @@
 		)
 		(symbol "Res_hole_10K_1/4W_1%_1_1"
 			(pin passive line
-				(at -2.794 -1.016 0)
+				(at -2.54 -1.27 0)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -10347,7 +10580,7 @@
 				)
 			)
 			(pin passive line
-				(at 4.826 -1.016 180)
+				(at 5.08 -1.27 180)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -10444,7 +10677,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_keywords" "R res resistor"
+		(property "ki_keywords" "13K_1/4W_1%"
 			(at 0 0 0)
 			(effects
 				(font
@@ -10463,11 +10696,60 @@
 			)
 		)
 		(symbol "Res_hole_13K_1/4W_1%_0_1"
-			(rectangle
-				(start 3.556 -2.032)
-				(end -1.524 0)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -1.27 -1.27)
+				)
 				(stroke
-					(width 0.254)
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.556 -1.27) (xy 3.81 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -0.635 -0.254) (xy -0.254 -1.27) (xy 0.127 -2.286) (xy 0.508 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.508 -1.27) (xy 0.889 -0.254) (xy 1.27 -1.27) (xy 1.651 -2.286) (xy 2.032 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.032 -1.27) (xy 2.413 -0.254) (xy 2.794 -1.27) (xy 3.175 -2.286) (xy 3.556 -1.27)
+				)
+				(stroke
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -10477,7 +10759,7 @@
 		)
 		(symbol "Res_hole_13K_1/4W_1%_1_1"
 			(pin passive line
-				(at -2.794 -1.016 0)
+				(at -2.54 -1.27 0)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -10495,7 +10777,7 @@
 				)
 			)
 			(pin passive line
-				(at 4.826 -1.016 180)
+				(at 5.08 -1.27 180)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -10530,7 +10812,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "18K_1/4W_1%"
 			(at 1.27 -3.81 0)
 			(effects
 				(font
@@ -10538,7 +10820,7 @@
 				)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_220R_1_4W_1%"
+		(property "Footprint" "charge_battery_footprint_lib:Res_18K_1_4W_1"
 			(at -19.812 28.194 0)
 			(effects
 				(font
@@ -10592,7 +10874,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_keywords" "R res resistor"
+		(property "ki_keywords" "18K_1/4W_1%"
 			(at 0 0 0)
 			(effects
 				(font
@@ -10611,11 +10893,60 @@
 			)
 		)
 		(symbol "Res_hole_18K_1/4W_1%_0_1"
-			(rectangle
-				(start 3.556 -2.032)
-				(end -1.524 0)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -1.27 -1.27)
+				)
 				(stroke
-					(width 0.254)
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.556 -1.27) (xy 3.81 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -0.635 -0.254) (xy -0.254 -1.27) (xy 0.127 -2.286) (xy 0.508 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.508 -1.27) (xy 0.889 -0.254) (xy 1.27 -1.27) (xy 1.651 -2.286) (xy 2.032 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.032 -1.27) (xy 2.413 -0.254) (xy 2.794 -1.27) (xy 3.175 -2.286) (xy 3.556 -1.27)
+				)
+				(stroke
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -10625,7 +10956,7 @@
 		)
 		(symbol "Res_hole_18K_1/4W_1%_1_1"
 			(pin passive line
-				(at -2.794 -1.016 0)
+				(at -2.54 -1.27 0)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -10643,7 +10974,7 @@
 				)
 			)
 			(pin passive line
-				(at 4.826 -1.016 180)
+				(at 5.08 -1.27 180)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -10678,7 +11009,7 @@
 				)
 			)
 		)
-		(property "Value" "Res_hole_1M_1W_1%"
+		(property "Value" "1M_1W_1%"
 			(at 1.27 -3.81 0)
 			(effects
 				(font
@@ -10740,7 +11071,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_keywords" "R res resistor"
+		(property "ki_keywords" "1M_1W_1%"
 			(at 0 0 0)
 			(effects
 				(font
@@ -10759,11 +11090,60 @@
 			)
 		)
 		(symbol "Res_hole_1M_1W_1%_0_1"
-			(rectangle
-				(start 3.556 -2.032)
-				(end -1.524 0)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -1.27 -1.27)
+				)
 				(stroke
-					(width 0.254)
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.556 -1.27) (xy 3.81 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -0.635 -0.254) (xy -0.254 -1.27) (xy 0.127 -2.286) (xy 0.508 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.508 -1.27) (xy 0.889 -0.254) (xy 1.27 -1.27) (xy 1.651 -2.286) (xy 2.032 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.032 -1.27) (xy 2.413 -0.254) (xy 2.794 -1.27) (xy 3.175 -2.286) (xy 3.556 -1.27)
+				)
+				(stroke
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -10773,7 +11153,7 @@
 		)
 		(symbol "Res_hole_1M_1W_1%_1_1"
 			(pin passive line
-				(at -2.794 -1.016 0)
+				(at -2.54 -1.27 0)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -10791,7 +11171,7 @@
 				)
 			)
 			(pin passive line
-				(at 4.826 -1.016 180)
+				(at 5.08 -1.27 180)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -10826,7 +11206,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "220R_1/4W_1%"
 			(at 1.27 -3.81 0)
 			(effects
 				(font
@@ -10835,7 +11215,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_220R_1_4W_1%"
-			(at -19.812 28.194 0)
+			(at -20.32 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10844,7 +11224,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at -17.272 27.686 90)
+			(at -19.05 22.86 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10853,7 +11233,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at -17.018 28.702 0)
+			(at -19.05 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10871,7 +11251,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 220 Ohm 1/4W 1% 5 Vòng Màu"
-			(at -10.414 28.448 0)
+			(at -12.192 23.622 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10880,7 +11260,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-220-ohm-1-4w-1-5-vong-mau"
-			(at -10.414 28.448 0)
+			(at -15.24 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10888,7 +11268,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_keywords" "R res resistor"
+		(property "ki_keywords" "220R_1/4W_1%"
 			(at 0 0 0)
 			(effects
 				(font
@@ -10907,11 +11287,60 @@
 			)
 		)
 		(symbol "Res_hole_220R_1/4W_1%_0_1"
-			(rectangle
-				(start 3.556 -2.032)
-				(end -1.524 0)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -1.27 -1.27)
+				)
 				(stroke
-					(width 0.254)
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.556 -1.27) (xy 3.81 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -0.635 -0.254) (xy -0.254 -1.27) (xy 0.127 -2.286) (xy 0.508 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.508 -1.27) (xy 0.889 -0.254) (xy 1.27 -1.27) (xy 1.651 -2.286) (xy 2.032 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.032 -1.27) (xy 2.413 -0.254) (xy 2.794 -1.27) (xy 3.175 -2.286) (xy 3.556 -1.27)
+				)
+				(stroke
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -10921,7 +11350,7 @@
 		)
 		(symbol "Res_hole_220R_1/4W_1%_1_1"
 			(pin passive line
-				(at -2.794 -1.016 0)
+				(at -2.54 -1.27 0)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -10939,7 +11368,7 @@
 				)
 			)
 			(pin passive line
-				(at 4.826 -1.016 180)
+				(at 5.08 -1.27 180)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -11036,7 +11465,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_keywords" "R res resistor"
+		(property "ki_keywords" "27K_1/4W_1%"
 			(at 0 0 0)
 			(effects
 				(font
@@ -11055,11 +11484,60 @@
 			)
 		)
 		(symbol "Res_hole_27K_1/4W_1%_0_1"
-			(rectangle
-				(start 3.556 -2.032)
-				(end -1.524 0)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -1.27 -1.27)
+				)
 				(stroke
-					(width 0.254)
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.556 -1.27) (xy 3.81 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -0.635 -0.254) (xy -0.254 -1.27) (xy 0.127 -2.286) (xy 0.508 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.508 -1.27) (xy 0.889 -0.254) (xy 1.27 -1.27) (xy 1.651 -2.286) (xy 2.032 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.032 -1.27) (xy 2.413 -0.254) (xy 2.794 -1.27) (xy 3.175 -2.286) (xy 3.556 -1.27)
+				)
+				(stroke
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -11069,7 +11547,7 @@
 		)
 		(symbol "Res_hole_27K_1/4W_1%_1_1"
 			(pin passive line
-				(at -2.794 -1.016 0)
+				(at -2.54 -1.27 0)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -11087,7 +11565,7 @@
 				)
 			)
 			(pin passive line
-				(at 4.826 -1.016 180)
+				(at 5.08 -1.27 180)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -11184,7 +11662,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_keywords" "R res resistor"
+		(property "ki_keywords" "3,3K_1/4W_1%"
 			(at 0 0 0)
 			(effects
 				(font
@@ -11203,11 +11681,60 @@
 			)
 		)
 		(symbol "Res_hole_3,3K_1/4W_1%_0_1"
-			(rectangle
-				(start 3.556 -2.032)
-				(end -1.524 0)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -1.27 -1.27)
+				)
 				(stroke
-					(width 0.254)
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.556 -1.27) (xy 3.81 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.016 -1.27) (xy -0.635 -0.254) (xy -0.254 -1.27) (xy 0.127 -2.286) (xy 0.508 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.508 -1.27) (xy 0.889 -0.254) (xy 1.27 -1.27) (xy 1.651 -2.286) (xy 2.032 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.032 -1.27) (xy 2.413 -0.254) (xy 2.794 -1.27) (xy 3.175 -2.286) (xy 3.556 -1.27)
+				)
+				(stroke
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -11217,7 +11744,7 @@
 		)
 		(symbol "Res_hole_3,3K_1/4W_1%_1_1"
 			(pin passive line
-				(at -2.794 -1.016 0)
+				(at -2.54 -1.27 0)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -11235,7 +11762,7 @@
 				)
 			)
 			(pin passive line
-				(at 4.826 -1.016 180)
+				(at 5.08 -1.27 180)
 				(length 1.27)
 				(name "~"
 					(effects
@@ -12519,8 +13046,8 @@
 		)
 		(symbol "SS54_1_1"
 			(pin unspecified line
-				(at -4.826 -0.508 0)
-				(length 6.35)
+				(at -2.794 -0.508 0)
+				(length 4)
 				(name "A"
 					(effects
 						(font
@@ -12537,7 +13064,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 11.938 -0.508 180)
+				(at 12.192 -0.508 180)
 				(length 2.54)
 				(name "K"
 					(effects
@@ -16272,7 +16799,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -5.08 6.35 0)
+				(at -4.826 6.35 0)
 				(length 5.08)
 				(name "1"
 					(effects
@@ -16290,7 +16817,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -5.08 3.81 0)
+				(at -4.826 3.81 0)
 				(length 5.08)
 				(name "2"
 					(effects
