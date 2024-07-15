@@ -90,7 +90,7 @@ void FCP_ProcessPhase (uint32_t frequency)
         PWM_Process(PRE_START_THRESHOLD, REG_START_THRESHOLD, 50);
 
     int32_t delta = 0;
-    int32_t sub_delta = \
+    int32_t sub_delta =
                 abs_32((int32_t)(frequency - table_data_process[0].frequency));
     for (uint_fast32_t i = 0;
          i < (sizeof(table_data_process) / sizeof(FCP_data_t)); i++)

@@ -58,12 +58,16 @@ typedef struct uart_cfg
  *   PUBLIC FUNCTION
  *********************/
 
-extern void UARTConfig(uart_cfg_t *uartstdio_device, USART_TypeDef * uart, 
+extern void UART_Config(uart_cfg_t *uartstdio_device, USART_TypeDef * uart,
                         IRQn_Type uart_irqn);
-extern void UARTSendChar(uart_cfg_t *uartstdio_device, char c);
-extern void UARTSendString(uart_cfg_t *uartstdio_device, const char *s);
-extern char UARTReadChar(uart_cfg_t *uartstdio_device);
-extern void UARTTimeOut(void);
+extern void UART_SendChar(uart_cfg_t *uartstdio_device, char c);
+extern void UART_SendString(uart_cfg_t *uartstdio_device, const char *s);
+extern char UART_ReadChar(uart_cfg_t *uartstdio_device);
+
+// Call Function "UART_TimeOut" in ISR SysTick
+extern void UART_TimeOut(void);
+
+// Call Function "UART_ISR" in ISR UART
 extern void UART_ISR (uart_cfg_t *uartstdio_device);
 
 

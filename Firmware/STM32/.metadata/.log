@@ -1693,3 +1693,940 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-07-13 15:50:03.427
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-13 20:51:17.684
+!MESSAGE Indexed 'Control_LLC' (23 sources, 114 headers) in 1.61 sec: 8,439 declarations; 29,134 references; 2 unresolved inclusions; 36 syntax errors; 188 unresolved names (0.5%)
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.660
+!MESSAGE Orphaned CDT build configuration [com.atollic.truestudio.exe.debug.1518366166]: parent extension cfg [com.atollic.truestudio.exe.debug] not found
+!STACK 0
+java.lang.Exception
+	at org.eclipse.cdt.managedbuilder.core.ManagedBuilderCorePlugin.error(ManagedBuilderCorePlugin.java:246)
+	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.loadFromProject(Configuration.java:879)
+	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.<init>(Configuration.java:419)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider.load(ConfigurationDataProvider.java:405)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider.loadConfiguration(ConfigurationDataProvider.java:573)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:139)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:199)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:509)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:239)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:426)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:408)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:402)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:395)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager.loadSettings(RefreshScopeManager.java:474)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager$1$1.visit(RefreshScopeManager.java:154)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:61)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager$1.resourceChanged(RefreshScopeManager.java:142)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:321)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:311)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:174)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:458)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1586)
+	at org.eclipse.core.internal.resources.Project.open(Project.java:1149)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.toExistingOrNewProject(SmartImportJob.java:555)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.run(SmartImportJob.java:204)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.661
+!MESSAGE Missing superclass "com.atollic.truestudio.general.runtimelib" for "com.atollic.truestudio.general.runtimelib.978665796"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.661
+!MESSAGE Missing superclass "com.atollic.truestudio.toolchain_options.mcu" for "com.atollic.truestudio.toolchain_options.mcu.316365244"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.661
+!MESSAGE Missing superclass "com.atollic.truestudio.toolchain_options.vendor" for "com.atollic.truestudio.toolchain_options.vendor.784948661"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.662
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.1608144567"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.662
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.286463162"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.662
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.2033833414"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.662
+!MESSAGE Missing superclass "com.atollic.truestudio.as.general.incpath" for "com.atollic.truestudio.as.general.incpath.770237934"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.663
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.symbols.defined" for "com.atollic.truestudio.gcc.symbols.defined.1670122205"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.663
+!MESSAGE Missing superclass "com.atollic.truestudio.as.general.otherflags" for "com.atollic.truestudio.as.general.otherflags.51384659"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.663
+!MESSAGE Missing superclass "com.atollic.truestudio.as.general.warnings" for "com.atollic.truestudio.as.general.warnings.1324541152"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.663
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.663
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.664
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.directories.select" for "com.atollic.truestudio.gcc.directories.select.330946435"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.664
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.symbols.defined" for "com.atollic.truestudio.gcc.symbols.defined.1670122205"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.664
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.1854274048"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.664
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.191909026"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.664
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.1503159865"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.664
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.optimization.prep_garbage" for "com.atollic.truestudio.gcc.optimization.prep_garbage.586275206"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.664
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.optimization.prep_data" for "com.atollic.truestudio.gcc.optimization.prep_data.1044766448"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.664
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.misc.otherflags" for "com.atollic.truestudio.gcc.misc.otherflags.895097519"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.665
+!MESSAGE Missing superclass "com.atollic.truestudio.exe.debug.toolchain.gcc.optimization.level" for "com.atollic.truestudio.exe.debug.toolchain.gcc.optimization.level.1763412676"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.665
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.665
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.665
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.interwork" for "com.atollic.truestudio.common_options.target.interwork.1173495076"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.665
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.662778612"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.665
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.35700531"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.665
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.566688004"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.666
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.general.scriptfile" for "com.atollic.truestudio.ld.general.scriptfile.1350476438"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.666
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.optimization.do_garbage" for "com.atollic.truestudio.ld.optimization.do_garbage.1816004776"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.666
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.libraries.list" for "com.atollic.truestudio.ld.libraries.list.848669414"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.667
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.libraries.searchpath" for "com.atollic.truestudio.ld.libraries.searchpath.1273009461"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.667
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.misc.linkerflags" for "com.atollic.truestudio.ld.misc.linkerflags.1948405714"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.667
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.667
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.668
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.symbols.defined" for "com.atollic.truestudio.gpp.symbols.defined.1619552487"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.668
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.176262651"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.668
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.630487808"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.669
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.227324580"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.669
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.optimization.prep_garbage" for "com.atollic.truestudio.gpp.optimization.prep_garbage.26464025"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.669
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.optimization.fno_rtti" for "com.atollic.truestudio.gpp.optimization.fno_rtti.1009504734"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.669
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.optimization.fno_exceptions" for "com.atollic.truestudio.gpp.optimization.fno_exceptions.342217745"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.670
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.670
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.670
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.2051741049"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.670
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.1701726850"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.670
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.1600237525"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.672
+!MESSAGE Missing superclass "com.atollic.truestudio.ldcc.optimization.do_garbage" for "com.atollic.truestudio.ldcc.optimization.do_garbage.956844137"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.672
+!MESSAGE Missing superclass "com.atollic.truestudio.ldcc.general.scriptfile" for "com.atollic.truestudio.ldcc.general.scriptfile.561304432"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.672
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.673
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.732
+!MESSAGE Missing superclass "com.atollic.truestudio.general.runtimelib" for "com.atollic.truestudio.general.runtimelib.1594131391"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.733
+!MESSAGE Missing superclass "com.atollic.truestudio.toolchain_options.mcu" for "com.atollic.truestudio.toolchain_options.mcu.779180429"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.734
+!MESSAGE Missing superclass "com.atollic.truestudio.toolchain_options.vendor" for "com.atollic.truestudio.toolchain_options.vendor.228072001"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.734
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.1608144567"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.735
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.286463162"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.736
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.2033833414"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.736
+!MESSAGE Missing superclass "com.atollic.truestudio.as.general.incpath" for "com.atollic.truestudio.as.general.incpath.770237934"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.736
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.symbols.defined" for "com.atollic.truestudio.gcc.symbols.defined.1670122205"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.736
+!MESSAGE Missing superclass "com.atollic.truestudio.as.general.otherflags" for "com.atollic.truestudio.as.general.otherflags.51384659"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.737
+!MESSAGE Missing superclass "com.atollic.truestudio.as.general.warnings" for "com.atollic.truestudio.as.general.warnings.1324541152"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.739
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.740
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.740
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.directories.select" for "com.atollic.truestudio.gcc.directories.select.330946435"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.740
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.symbols.defined" for "com.atollic.truestudio.gcc.symbols.defined.1670122205"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.740
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.1854274048"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.740
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.191909026"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.741
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.1503159865"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.741
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.optimization.prep_garbage" for "com.atollic.truestudio.gcc.optimization.prep_garbage.586275206"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.741
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.optimization.prep_data" for "com.atollic.truestudio.gcc.optimization.prep_data.1044766448"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.741
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.misc.otherflags" for "com.atollic.truestudio.gcc.misc.otherflags.895097519"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.741
+!MESSAGE Missing superclass "com.atollic.truestudio.exe.release.toolchain.gcc.optimization.level" for "com.atollic.truestudio.exe.release.toolchain.gcc.optimization.level.1763412676"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.741
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.741
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.742
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.interwork" for "com.atollic.truestudio.common_options.target.interwork.1173495076"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.742
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.662778612"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.743
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.35700531"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.743
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.566688004"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.743
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.general.scriptfile" for "com.atollic.truestudio.ld.general.scriptfile.1350476438"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.743
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.optimization.do_garbage" for "com.atollic.truestudio.ld.optimization.do_garbage.1816004776"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.743
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.libraries.list" for "com.atollic.truestudio.ld.libraries.list.848669414"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.743
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.libraries.searchpath" for "com.atollic.truestudio.ld.libraries.searchpath.1273009461"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.743
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.misc.linkerflags" for "com.atollic.truestudio.ld.misc.linkerflags.1948405714"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.743
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.745
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.745
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.symbols.defined" for "com.atollic.truestudio.gpp.symbols.defined.1619552487"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.745
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.176262651"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.745
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.630487808"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.745
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.227324580"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.745
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.optimization.prep_garbage" for "com.atollic.truestudio.gpp.optimization.prep_garbage.26464025"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.745
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.optimization.fno_rtti" for "com.atollic.truestudio.gpp.optimization.fno_rtti.1009504734"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.746
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.optimization.fno_exceptions" for "com.atollic.truestudio.gpp.optimization.fno_exceptions.342217745"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.746
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.746
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.746
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.2051741049"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.746
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.1701726850"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.746
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.1600237525"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.746
+!MESSAGE Missing superclass "com.atollic.truestudio.ldcc.optimization.do_garbage" for "com.atollic.truestudio.ldcc.optimization.do_garbage.956844137"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.747
+!MESSAGE Missing superclass "com.atollic.truestudio.ldcc.general.scriptfile" for "com.atollic.truestudio.ldcc.general.scriptfile.561304432"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.747
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.747
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.808
+!MESSAGE Orphaned CDT build configuration [com.atollic.truestudio.exe.debug.1518366166]: parent extension cfg [com.atollic.truestudio.exe.debug] not found
+!STACK 0
+java.lang.Exception
+	at org.eclipse.cdt.managedbuilder.core.ManagedBuilderCorePlugin.error(ManagedBuilderCorePlugin.java:246)
+	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.loadFromProject(Configuration.java:879)
+	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.<init>(Configuration.java:419)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider.load(ConfigurationDataProvider.java:405)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider.loadConfiguration(ConfigurationDataProvider.java:573)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:139)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:199)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:509)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:239)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:426)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:408)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:402)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:395)
+	at org.eclipse.cdt.make.ui.MakeContentProvider.getSourceEntries(MakeContentProvider.java:411)
+	at org.eclipse.cdt.make.ui.MakeContentProvider.getChildren(MakeContentProvider.java:106)
+	at org.eclipse.cdt.make.ui.MakeContentProvider.hasChildren(MakeContentProvider.java:174)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2238)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:557)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2268)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updatePlus(AbstractTreeViewer.java:2996)
+	at org.eclipse.jface.viewers.TreeViewer.updatePlus(TreeViewer.java:805)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2884)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1995)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:688)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1964)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1921)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1907)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$2(StructuredViewer.java:1468)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1397)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:366)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1358)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1468)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:526)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1422)
+	at org.eclipse.cdt.make.ui.MakeContentProvider.lambda$0(MakeContentProvider.java:242)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.809
+!MESSAGE Missing superclass "com.atollic.truestudio.general.runtimelib" for "com.atollic.truestudio.general.runtimelib.978665796"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.809
+!MESSAGE Missing superclass "com.atollic.truestudio.toolchain_options.mcu" for "com.atollic.truestudio.toolchain_options.mcu.316365244"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.810
+!MESSAGE Missing superclass "com.atollic.truestudio.toolchain_options.vendor" for "com.atollic.truestudio.toolchain_options.vendor.784948661"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.810
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.1608144567"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.810
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.286463162"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.810
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.2033833414"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.810
+!MESSAGE Missing superclass "com.atollic.truestudio.as.general.incpath" for "com.atollic.truestudio.as.general.incpath.770237934"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.811
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.symbols.defined" for "com.atollic.truestudio.gcc.symbols.defined.1670122205"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.811
+!MESSAGE Missing superclass "com.atollic.truestudio.as.general.otherflags" for "com.atollic.truestudio.as.general.otherflags.51384659"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.812
+!MESSAGE Missing superclass "com.atollic.truestudio.as.general.warnings" for "com.atollic.truestudio.as.general.warnings.1324541152"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.812
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.812
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.812
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.directories.select" for "com.atollic.truestudio.gcc.directories.select.330946435"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.812
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.symbols.defined" for "com.atollic.truestudio.gcc.symbols.defined.1670122205"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.816
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.1854274048"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.816
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.191909026"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.816
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.1503159865"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.816
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.optimization.prep_garbage" for "com.atollic.truestudio.gcc.optimization.prep_garbage.586275206"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.816
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.optimization.prep_data" for "com.atollic.truestudio.gcc.optimization.prep_data.1044766448"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.816
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.misc.otherflags" for "com.atollic.truestudio.gcc.misc.otherflags.895097519"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.817
+!MESSAGE Missing superclass "com.atollic.truestudio.exe.debug.toolchain.gcc.optimization.level" for "com.atollic.truestudio.exe.debug.toolchain.gcc.optimization.level.1763412676"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.817
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.817
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.817
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.interwork" for "com.atollic.truestudio.common_options.target.interwork.1173495076"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.817
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.662778612"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.817
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.35700531"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.818
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.566688004"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.818
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.general.scriptfile" for "com.atollic.truestudio.ld.general.scriptfile.1350476438"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.819
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.optimization.do_garbage" for "com.atollic.truestudio.ld.optimization.do_garbage.1816004776"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.820
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.libraries.list" for "com.atollic.truestudio.ld.libraries.list.848669414"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.820
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.libraries.searchpath" for "com.atollic.truestudio.ld.libraries.searchpath.1273009461"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.820
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.misc.linkerflags" for "com.atollic.truestudio.ld.misc.linkerflags.1948405714"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.821
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.821
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.821
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.symbols.defined" for "com.atollic.truestudio.gpp.symbols.defined.1619552487"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.821
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.176262651"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.821
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.630487808"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.821
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.227324580"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.821
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.optimization.prep_garbage" for "com.atollic.truestudio.gpp.optimization.prep_garbage.26464025"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.821
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.optimization.fno_rtti" for "com.atollic.truestudio.gpp.optimization.fno_rtti.1009504734"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.822
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.optimization.fno_exceptions" for "com.atollic.truestudio.gpp.optimization.fno_exceptions.342217745"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.822
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.822
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.822
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.2051741049"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.822
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.1701726850"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.822
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.1600237525"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.822
+!MESSAGE Missing superclass "com.atollic.truestudio.ldcc.optimization.do_garbage" for "com.atollic.truestudio.ldcc.optimization.do_garbage.956844137"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.822
+!MESSAGE Missing superclass "com.atollic.truestudio.ldcc.general.scriptfile" for "com.atollic.truestudio.ldcc.general.scriptfile.561304432"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.823
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.823
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.835
+!MESSAGE Missing superclass "com.atollic.truestudio.general.runtimelib" for "com.atollic.truestudio.general.runtimelib.1594131391"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.835
+!MESSAGE Missing superclass "com.atollic.truestudio.toolchain_options.mcu" for "com.atollic.truestudio.toolchain_options.mcu.779180429"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.835
+!MESSAGE Missing superclass "com.atollic.truestudio.toolchain_options.vendor" for "com.atollic.truestudio.toolchain_options.vendor.228072001"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.836
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.1608144567"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.836
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.286463162"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.836
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.2033833414"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.836
+!MESSAGE Missing superclass "com.atollic.truestudio.as.general.incpath" for "com.atollic.truestudio.as.general.incpath.770237934"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.836
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.symbols.defined" for "com.atollic.truestudio.gcc.symbols.defined.1670122205"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.836
+!MESSAGE Missing superclass "com.atollic.truestudio.as.general.otherflags" for "com.atollic.truestudio.as.general.otherflags.51384659"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.837
+!MESSAGE Missing superclass "com.atollic.truestudio.as.general.warnings" for "com.atollic.truestudio.as.general.warnings.1324541152"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.837
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.837
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.838
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.directories.select" for "com.atollic.truestudio.gcc.directories.select.330946435"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.838
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.symbols.defined" for "com.atollic.truestudio.gcc.symbols.defined.1670122205"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.839
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.1854274048"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.842
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.191909026"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.844
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.1503159865"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.848
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.optimization.prep_garbage" for "com.atollic.truestudio.gcc.optimization.prep_garbage.586275206"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.849
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.optimization.prep_data" for "com.atollic.truestudio.gcc.optimization.prep_data.1044766448"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.849
+!MESSAGE Missing superclass "com.atollic.truestudio.gcc.misc.otherflags" for "com.atollic.truestudio.gcc.misc.otherflags.895097519"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.849
+!MESSAGE Missing superclass "com.atollic.truestudio.exe.release.toolchain.gcc.optimization.level" for "com.atollic.truestudio.exe.release.toolchain.gcc.optimization.level.1763412676"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.851
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.852
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.852
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.interwork" for "com.atollic.truestudio.common_options.target.interwork.1173495076"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.852
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.662778612"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.852
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.35700531"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.853
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.566688004"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.853
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.general.scriptfile" for "com.atollic.truestudio.ld.general.scriptfile.1350476438"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.853
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.optimization.do_garbage" for "com.atollic.truestudio.ld.optimization.do_garbage.1816004776"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.853
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.libraries.list" for "com.atollic.truestudio.ld.libraries.list.848669414"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.854
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.libraries.searchpath" for "com.atollic.truestudio.ld.libraries.searchpath.1273009461"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.854
+!MESSAGE Missing superclass "com.atollic.truestudio.ld.misc.linkerflags" for "com.atollic.truestudio.ld.misc.linkerflags.1948405714"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.854
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.854
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.854
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.symbols.defined" for "com.atollic.truestudio.gpp.symbols.defined.1619552487"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.854
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.176262651"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.855
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.630487808"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.855
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.227324580"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.855
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.optimization.prep_garbage" for "com.atollic.truestudio.gpp.optimization.prep_garbage.26464025"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.856
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.optimization.fno_rtti" for "com.atollic.truestudio.gpp.optimization.fno_rtti.1009504734"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.856
+!MESSAGE Missing superclass "com.atollic.truestudio.gpp.optimization.fno_exceptions" for "com.atollic.truestudio.gpp.optimization.fno_exceptions.342217745"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.856
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.856
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.857
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.endianess" for "com.atollic.truestudio.common_options.target.endianess.2051741049"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.857
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.mcpu" for "com.atollic.truestudio.common_options.target.mcpu.1701726850"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.857
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.instr_set" for "com.atollic.truestudio.common_options.target.instr_set.1600237525"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.857
+!MESSAGE Missing superclass "com.atollic.truestudio.ldcc.optimization.do_garbage" for "com.atollic.truestudio.ldcc.optimization.do_garbage.956844137"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.857
+!MESSAGE Missing superclass "com.atollic.truestudio.ldcc.general.scriptfile" for "com.atollic.truestudio.ldcc.general.scriptfile.561304432"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.857
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpu" for "com.atollic.truestudio.common_options.target.fpu.829683864"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-07-13 21:04:46.857
+!MESSAGE Missing superclass "com.atollic.truestudio.common_options.target.fpucore" for "com.atollic.truestudio.common_options.target.fpucore.1297069055"
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 2 0 2024-07-13 21:04:50.173
+!MESSAGE Unknown value type "" for id com.atollic.truestudio.as.general.incpath on tool com.atollic.truestudio.exe.debug.toolchain.as
+!STACK 0
+org.eclipse.cdt.managedbuilder.core.BuildException: Unknown serialized value type 
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.deserializeValueType(AbstractCubeIDEProjectConfigurator.java:535)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertTool(AbstractCubeIDEProjectConfigurator.java:567)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertBuildConfiguration(AbstractCubeIDEProjectConfigurator.java:453)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.configure(AbstractCubeIDEProjectConfigurator.java:190)
+	at com.st.stm32cube.ide.mcu.converters.truestudio.TrueSTUDIOToCubeIDEProjectConfigurator.configure(TrueSTUDIOToCubeIDEProjectConfigurator.java:545)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:461)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:228)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 2 0 2024-07-13 21:04:50.173
+!MESSAGE Unknown value type "" for id com.atollic.truestudio.gcc.symbols.defined on tool com.atollic.truestudio.exe.debug.toolchain.as
+!STACK 0
+org.eclipse.cdt.managedbuilder.core.BuildException: Unknown serialized value type 
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.deserializeValueType(AbstractCubeIDEProjectConfigurator.java:535)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertTool(AbstractCubeIDEProjectConfigurator.java:567)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertBuildConfiguration(AbstractCubeIDEProjectConfigurator.java:453)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.configure(AbstractCubeIDEProjectConfigurator.java:190)
+	at com.st.stm32cube.ide.mcu.converters.truestudio.TrueSTUDIOToCubeIDEProjectConfigurator.configure(TrueSTUDIOToCubeIDEProjectConfigurator.java:545)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:461)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:228)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 4 0 2024-07-13 21:04:50.173
+!MESSAGE Option com.atollic.truestudio.common_options.target.endianess is no longer supported
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 4 0 2024-07-13 21:04:50.173
+!MESSAGE Option com.atollic.truestudio.common_options.target.instr_set is no longer supported
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 2 0 2024-07-13 21:04:50.187
+!MESSAGE Unknown value type "" for id com.atollic.truestudio.common_options.target.interwork on tool com.atollic.truestudio.exe.debug.toolchain.gcc
+!STACK 0
+org.eclipse.cdt.managedbuilder.core.BuildException: Unknown serialized value type 
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.deserializeValueType(AbstractCubeIDEProjectConfigurator.java:535)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertTool(AbstractCubeIDEProjectConfigurator.java:567)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertBuildConfiguration(AbstractCubeIDEProjectConfigurator.java:453)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.configure(AbstractCubeIDEProjectConfigurator.java:190)
+	at com.st.stm32cube.ide.mcu.converters.truestudio.TrueSTUDIOToCubeIDEProjectConfigurator.configure(TrueSTUDIOToCubeIDEProjectConfigurator.java:545)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:461)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:228)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 4 0 2024-07-13 21:04:50.188
+!MESSAGE Option com.atollic.truestudio.common_options.target.endianess is no longer supported
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 4 0 2024-07-13 21:04:50.188
+!MESSAGE Option com.atollic.truestudio.common_options.target.instr_set is no longer supported
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 2 0 2024-07-13 21:04:50.188
+!MESSAGE Unknown value type "" for id com.atollic.truestudio.ld.libraries.list on tool com.atollic.truestudio.exe.debug.toolchain.ld
+!STACK 0
+org.eclipse.cdt.managedbuilder.core.BuildException: Unknown serialized value type 
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.deserializeValueType(AbstractCubeIDEProjectConfigurator.java:535)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertTool(AbstractCubeIDEProjectConfigurator.java:567)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertBuildConfiguration(AbstractCubeIDEProjectConfigurator.java:453)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.configure(AbstractCubeIDEProjectConfigurator.java:190)
+	at com.st.stm32cube.ide.mcu.converters.truestudio.TrueSTUDIOToCubeIDEProjectConfigurator.configure(TrueSTUDIOToCubeIDEProjectConfigurator.java:545)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:461)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:228)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 2 0 2024-07-13 21:04:50.188
+!MESSAGE Unknown value type "" for id com.atollic.truestudio.ld.libraries.searchpath on tool com.atollic.truestudio.exe.debug.toolchain.ld
+!STACK 0
+org.eclipse.cdt.managedbuilder.core.BuildException: Unknown serialized value type 
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.deserializeValueType(AbstractCubeIDEProjectConfigurator.java:535)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertTool(AbstractCubeIDEProjectConfigurator.java:567)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertBuildConfiguration(AbstractCubeIDEProjectConfigurator.java:453)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.configure(AbstractCubeIDEProjectConfigurator.java:190)
+	at com.st.stm32cube.ide.mcu.converters.truestudio.TrueSTUDIOToCubeIDEProjectConfigurator.configure(TrueSTUDIOToCubeIDEProjectConfigurator.java:545)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:461)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:228)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 4 0 2024-07-13 21:04:50.188
+!MESSAGE Option com.atollic.truestudio.common_options.target.endianess is no longer supported
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 4 0 2024-07-13 21:04:50.189
+!MESSAGE Option com.atollic.truestudio.common_options.target.instr_set is no longer supported
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 2 0 2024-07-13 21:04:50.189
+!MESSAGE Unknown value type "" for id com.atollic.truestudio.gpp.optimization.fno_rtti on tool com.atollic.truestudio.exe.debug.toolchain.gpp
+!STACK 0
+org.eclipse.cdt.managedbuilder.core.BuildException: Unknown serialized value type 
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.deserializeValueType(AbstractCubeIDEProjectConfigurator.java:535)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertTool(AbstractCubeIDEProjectConfigurator.java:567)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertBuildConfiguration(AbstractCubeIDEProjectConfigurator.java:453)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.configure(AbstractCubeIDEProjectConfigurator.java:190)
+	at com.st.stm32cube.ide.mcu.converters.truestudio.TrueSTUDIOToCubeIDEProjectConfigurator.configure(TrueSTUDIOToCubeIDEProjectConfigurator.java:545)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:461)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:228)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 2 0 2024-07-13 21:04:50.189
+!MESSAGE Unknown value type "" for id com.atollic.truestudio.gpp.optimization.fno_exceptions on tool com.atollic.truestudio.exe.debug.toolchain.gpp
+!STACK 0
+org.eclipse.cdt.managedbuilder.core.BuildException: Unknown serialized value type 
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.deserializeValueType(AbstractCubeIDEProjectConfigurator.java:535)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertTool(AbstractCubeIDEProjectConfigurator.java:567)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.convertBuildConfiguration(AbstractCubeIDEProjectConfigurator.java:453)
+	at com.st.stm32cube.ide.mcu.converters.AbstractCubeIDEProjectConfigurator.configure(AbstractCubeIDEProjectConfigurator.java:190)
+	at com.st.stm32cube.ide.mcu.converters.truestudio.TrueSTUDIOToCubeIDEProjectConfigurator.configure(TrueSTUDIOToCubeIDEProjectConfigurator.java:545)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.importProjectAndChildrenRecursively(SmartImportJob.java:461)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob$1.run(SmartImportJob.java:228)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 4 0 2024-07-13 21:04:50.189
+!MESSAGE Option com.atollic.truestudio.common_options.target.endianess is no longer supported
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 4 0 2024-07-13 21:04:50.191
+!MESSAGE Option com.atollic.truestudio.common_options.target.instr_set is no longer supported
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 4 0 2024-07-13 21:04:50.191
+!MESSAGE Option com.atollic.truestudio.common_options.target.endianess is no longer supported
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 4 0 2024-07-13 21:04:50.191
+!MESSAGE Option com.atollic.truestudio.common_options.target.instr_set is no longer supported
+
+!ENTRY com.st.stm32cube.ide.mcu.converters 2 0 2024-07-13 21:04:50.192
+!MESSAGE No map found for id: com.atollic.truestudio.exe.release
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-13 21:04:53.882
+!MESSAGE Indexed 'adc-multi-new' (20 sources, 76 headers) in 0.803 sec: 7,894 declarations; 29,724 references; 0 unresolved inclusions; 89 syntax errors; 54 unresolved names (0.14%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-13 21:05:15.953
+!MESSAGE Indexed 'stm32-usb-msc' (44 sources, 169 headers) in 4.58 sec: 14,640 declarations; 66,209 references; 2 unresolved inclusions; 42 syntax errors; 813 unresolved names (1%)
+!SESSION 2024-07-14 00:22:13.252 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-07-14 00:22:49.373
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-07-14 00:22:49.378
+!MESSAGE Log4j2 initialized with config file D:\CHARGE_BATTERY\Firmware\STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-07-14 00:22:58.486
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-07-14 14:08:40.174 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-07-14 14:09:09.010
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-07-14 14:09:09.021
+!MESSAGE Log4j2 initialized with config file D:\CHARGE_BATTERY\Firmware\STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-07-14 14:09:17.858
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-07-14 22:49:09.813 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-07-14 22:49:19.728
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-07-14 22:49:19.735
+!MESSAGE Log4j2 initialized with config file D:\CHARGE_BATTERY\Firmware\STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-07-14 22:49:26.094
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-07-15 18:01:45.419 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-07-15 18:02:20.470
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-07-15 18:02:20.478
+!MESSAGE Log4j2 initialized with config file D:\CHARGE_BATTERY\Firmware\STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-07-15 18:02:32.522
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-07-15 20:07:18.834 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-07-15 20:07:51.044
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-07-15 20:07:51.052
+!MESSAGE Log4j2 initialized with config file D:\CHARGE_BATTERY\Firmware\STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-07-15 20:07:58.176
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-07-15 20:58:23.035 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-07-15 20:58:53.529
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-07-15 20:58:53.536
+!MESSAGE Log4j2 initialized with config file D:\CHARGE_BATTERY\Firmware\STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-07-15 20:59:03.819
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-07-15 21:40:36.098 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-07-15 21:40:44.642
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-07-15 21:40:44.643
+!MESSAGE Log4j2 initialized with config file D:\CHARGE_BATTERY\Firmware\STM32\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-07-15 21:40:49.520
+!MESSAGE Started RMI Server, listening on port 41337

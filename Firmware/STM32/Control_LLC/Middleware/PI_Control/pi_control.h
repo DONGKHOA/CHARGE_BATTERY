@@ -43,8 +43,8 @@ typedef struct _pi_control_t
  *   PUBLIC FUNCTIONS
  **********************/
 
-void PIControl_Reset(pi_control_t * p_pi);
-void PIControl_Process(float f_new_value, pi_control_t * p_pi);
+extern void PIControl_Reset(pi_control_t * p_pi);
+extern void PIControl_Process(float f_new_value, pi_control_t * p_pi);
 
 #ifdef __cplusplus
 }

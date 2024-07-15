@@ -29,6 +29,7 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f1xx_ll_adc.h"
 #include "stm32f1xx_ll_dma.h"
+#include "stm32f1xx_ll_i2c.h"
 #include "stm32f1xx_ll_rcc.h"
 #include "stm32f1xx_ll_bus.h"
 #include "stm32f1xx_ll_system.h"
@@ -72,12 +73,6 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED_1_Pin LL_GPIO_PIN_0
-#define LED_1_GPIO_Port GPIOB
-#define LED_2_Pin LL_GPIO_PIN_1
-#define LED_2_GPIO_Port GPIOB
-#define LED_3_Pin LL_GPIO_PIN_2
-#define LED_3_GPIO_Port GPIOB
 #ifndef NVIC_PRIORITYGROUP_0
 #define NVIC_PRIORITYGROUP_0         ((uint32_t)0x00000007) /*!< 0 bit  for pre-emption priority,
                                                                  4 bits for subpriority */

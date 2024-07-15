@@ -8,6 +8,7 @@ Core/Src/stm32f1xx_it.o: ../Core/Src/stm32f1xx_it.c ../Core/Inc/main.h \
  ../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_i2c.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rcc.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_bus.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_system.h \
@@ -29,6 +30,7 @@ Core/Src/stm32f1xx_it.o: ../Core/Src/stm32f1xx_it.c ../Core/Inc/main.h \
 ../Drivers/CMSIS/Include/cmsis_gcc.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_i2c.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rcc.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_bus.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_system.h:

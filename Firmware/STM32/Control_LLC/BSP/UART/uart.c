@@ -30,7 +30,6 @@ static bool QUEUE_Is_Empty(ring_buffer_t *rb);
 static bool QUEUE_Is_Full(ring_buffer_t *rb);
 static void QUEUE_Push_Data(ring_buffer_t *rb, char element);
 static uint8_t QUEUE_Pull_Data(ring_buffer_t *rb);
-static inline uint8_t QUEUE_Peek_Data(ring_buffer_t *rb);
 
 /**********************
  *  STATIC VARIABLES
@@ -52,7 +51,7 @@ static volatile uint32_t timeout = 0;
  * @param uart             Pointer to the UART peripheral.
  * @param uart_irqn        UART interrupt number.
  */
-void UARTConfig(uart_cfg_t *uartstdio_device, USART_TypeDef *uart, 
+void UART_Config(uart_cfg_t *uartstdio_device, USART_TypeDef *uart,
                 IRQn_Type uart_irqn)
 {
     uartstdio_device->uart = uart;
@@ -72,51 +71,59 @@ void UARTConfig(uart_cfg_t *uartstdio_device, USART_TypeDef *uart,
 }
 
 /**
- * The function `UARTSendChar` sends a character over UART with error handling for a full transmit
+ * @brief Sends a character over UART with error handling for a full transmit 
  * buffer.
- * 
- * @param uartstdio_device The `uartstdio_device` parameter is a pointer to a structure of type
- * `uart_cfg_t`. This structure likely contains configuration settings and buffers related to a UART
- * (Universal Asynchronous Receiver-Transmitter) communication interface.
- * @param c The parameter `c` in the `UARTSendChar` function is the character that you want to send via
- * UART communication.
- * 
- * @return If the timeout reaches 0, the function will return without sending the character.
+ *
+ * This function attempts to send a character via UART. If the transmit buffer 
+ * is full,
+ * it waits until space is available or a timeout occurs.
+ *
+ * @param uartstdio_device Pointer to the UART configuration data structure.
+ * @param c The character to be sent via UART communication.
+ *
+ * @return If the timeout reaches 0, the function will return without sending 
+ * the character.
  */
-void UARTSendChar(uart_cfg_t *uartstdio_device, char c)
+void UART_SendChar(uart_cfg_t *uartstdio_device, char c)
 {
-	timeout = LIMIT_WAIT_BUFFER;
-	while (QUEUE_Is_Full((ring_buffer_t *)&uartstdio_device->tx_buffer))
-	{
-		if (timeout == 0) return;
-	}
+    uint32_t timeout = LIMIT_WAIT_BUFFER;
 
+    // Wait until there is space in the transmit buffer or timeout occurs
+    while (QUEUE_Is_Full((ring_buffer_t *)&uartstdio_device->tx_buffer))
+    {
+        if (timeout == 0) return;
+        timeout--;
+    }
+
+    // Critical section to ensure atomic access to the buffer
     ATOMIC_BLOCK_START(uartstdio_device->uart);
-	QUEUE_Push_Data((ring_buffer_t *)&uartstdio_device->tx_buffer, c);
+    QUEUE_Push_Data((ring_buffer_t *)&uartstdio_device->tx_buffer, c);
     ATOMIC_BLOCK_END(uartstdio_device->uart);
+
+    // Enable Transmit Data Register Empty interrupt
+    LL_USART_EnableIT_TXE(uartstdio_device->uart);
 }
 
+
 /**
- * The function UARTSendString sends a string over UART one character at a time.
- * 
- * @param uartstdio_device The `uartstdio_device` parameter is a pointer to a structure of type
- * `uart_cfg_t`, which likely contains configuration settings for a UART (Universal Asynchronous
- * Receiver-Transmitter) device. This structure may include information such as baud rate, data bits,
- * stop bits, parity settings, and other
- * @param s The parameter `s` in the `UARTSendString` function is a pointer to a constant character
- * array (string) that you want to send via UART. The function iterates over each character in the
- * string and sends it using the `UARTSendChar` function.
+ * @brief Sends a string over UART one character at a time.
+ *
+ * This function iterates over each character in the given string and sends it 
+ * via UART using the `UART_SendChar` function.
+ *
+ * @param uartstdio_device Pointer to the UART configuration data structure.
+ * @param s Pointer to the constant character array (string) to be sent via UART.
  */
-void UARTSendString(uart_cfg_t *uartstdio_device, const char *s)
+void UART_SendString(uart_cfg_t *uartstdio_device, const char *s)
 {
-	while (*s)
-	{
-		UARTSendChar (uartstdio_device, *s++);
-	}
+    while (*s)
+    {
+        UART_SendChar(uartstdio_device, *s++);
+    }
 }
 
 /**
- * The function `UARTReadChar` reads a character from a UART device's receive buffer if it is not
+ * The function `UART_ReadChar` reads a character from a UART device's receive buffer if it is not
  * empty.
  * 
  * @param uartstdio_device The `uartstdio_device` parameter is a pointer to a structure of type
@@ -128,7 +135,7 @@ void UARTSendString(uart_cfg_t *uartstdio_device, const char *s)
  * If the receive buffer is not empty, it pulls a character from the buffer and returns it. If the
  * buffer is empty, it returns the null character '\0'.
  */
-char UARTReadChar(uart_cfg_t *uartstdio_device)
+char UART_ReadChar(uart_cfg_t *uartstdio_device)
 {
 	register char c = '\0';
 	if (!QUEUE_Is_Empty ((ring_buffer_t *)&uartstdio_device->rx_buffer))
@@ -142,9 +149,9 @@ char UARTReadChar(uart_cfg_t *uartstdio_device)
 }
 
 /**
- * The function `UARTTimeOut` decrements the variable `timeout` if it is not equal to 0.
+ * The function `UART_TimeOut` decrements the variable `timeout` if it is not equal to 0.
  */
-void UARTTimeOut(void)
+void UART_TimeOut(void)
 {
 	if (timeout != 0) timeout--;
 }
@@ -232,63 +239,57 @@ static uint8_t QUEUE_Pull_Data(ring_buffer_t *rb)
 	return data;
 }
 
-/**
- * The function `QUEUE_Peek_Data` returns the data at the current output position of a ring buffer.
- * 
- * @param rb The parameter `rb` is a pointer to a `ring_buffer_t` structure, which likely represents a
- * ring buffer data structure.
- * 
- * @return The function `QUEUE_Peek_Data` is returning the data at the current output position in the
- * ring buffer `rb`.
- */
-static inline uint8_t QUEUE_Peek_Data(ring_buffer_t *rb)
-{
-	return rb->buffer[rb->out];
-}
-
 /*********************
  * INTERRUPT FUNCTION
  *********************/
 
+/**
+ * @brief UART interrupt service routine.
+ *
+ * This function handles UART interrupts for receiving and transmitting data.
+ * It processes received data and stores it in a ring buffer or transmits data
+ * from a ring buffer when the transmit data register is empty.
+ *
+ * @param uartstdio_device Pointer to the UART configuration data structure.
+ */
 void UART_ISR (uart_cfg_t *uartstdio_device)
 {
-    /* if DR is not empty and the Rx Int is enabled */
+    // If DR is not empty and the Rx Int is enabled
     if ((LL_USART_IsActiveFlag_RXNE(uartstdio_device->uart) != RESET) &&
-    			(LL_USART_IsEnabledIT_RXNE(uartstdio_device->uart) != RESET))
+        (LL_USART_IsEnabledIT_RXNE(uartstdio_device->uart) != RESET))
     {
-        LL_USART_ReceiveData8(uartstdio_device->uart);
         uint8_t c = LL_USART_ReceiveData8(uartstdio_device->uart);
 
+        // If there are errors, clear the flags
         if ((LL_USART_IsActiveFlag_ORE(uartstdio_device->uart) != RESET) ||
             (LL_USART_IsActiveFlag_FE(uartstdio_device->uart) != RESET) ||
             (LL_USART_IsActiveFlag_NE(uartstdio_device->uart) != RESET))
         {
-          // if error, delete flag
-          LL_USART_ClearFlag_ORE(uartstdio_device->uart);
-          LL_USART_ClearFlag_FE(uartstdio_device->uart);
-          LL_USART_ClearFlag_NE(uartstdio_device->uart);
+            LL_USART_ClearFlag_ORE(uartstdio_device->uart);
+            LL_USART_ClearFlag_FE(uartstdio_device->uart);
+            LL_USART_ClearFlag_NE(uartstdio_device->uart);
         }
         else
         {
-        	QUEUE_Push_Data ((ring_buffer_t *)&uartstdio_device->rx_buffer, c);
+            QUEUE_Push_Data((ring_buffer_t *)&uartstdio_device->rx_buffer, c);
         }
-
         return;
     }
 
-    /*If interrupt is caused due to Transmit Data Register Empty */
+    // If interrupt is caused due to Transmit Data Register Empty
     if ((LL_USART_IsActiveFlag_TXE(uartstdio_device->uart) != RESET) &&
-    			(LL_USART_IsEnabledIT_TXE(uartstdio_device->uart) != RESET))
+        (LL_USART_IsEnabledIT_TXE(uartstdio_device->uart) != RESET))
     {
-    	if (QUEUE_Is_Empty ((ring_buffer_t *)&uartstdio_device->tx_buffer))
-    	{
-    		LL_USART_DisableIT_TXE(uartstdio_device->uart);
-    	}
-    	else
-    	{
-    		uint8_t c = QUEUE_Pull_Data((ring_buffer_t *)&uartstdio_device->tx_buffer);
-    		LL_USART_TransmitData8(uartstdio_device->uart, c);
-    	}
+        if (QUEUE_Is_Empty((ring_buffer_t *)&uartstdio_device->tx_buffer))
+        {
+            LL_USART_DisableIT_TXE(uartstdio_device->uart);
+        }
+        else
+        {
+            uint8_t c = QUEUE_Pull_Data((ring_buffer_t *)&uartstdio_device->tx_buffer);
+            LL_USART_TransmitData8(uartstdio_device->uart, c);
+        }
         return;
     }
 }
+

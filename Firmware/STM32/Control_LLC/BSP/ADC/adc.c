@@ -17,7 +17,15 @@
  *   PRIVATE DEFINES
  **********************/
 
-#define TIMEOUT_WAIT_CONVERTION	1000
+/**
+ * @brief Timeout for ADC conversion wait in milliseconds.
+ */
+#define TIMEOUT_WAIT_CONVERTION  1000    /**< Timeout duration in ms. */
+
+/**
+ * @brief Reference analog voltage in millivolts.
+ */
+#define VREFANALOG               3300    /**< Reference voltage in mV. */
 
 /**********************
  *   PRIVATE DATA
@@ -64,34 +72,95 @@ adc_status_t ADC_Config(adc_data_t *p_data, uint32_t _num_channel,
 		if(timer_wait_converstion == 0)
 		{
 			p_data->status = ADC_TIMEOUT;
-			return ADC_TIMEOUT;
+			return p_data->status;
 		}
 	}
 
     LL_ADC_Enable(p_data->ADCx);
-    return ADC_OK;
+    p_data->status = ADC_OK;
+    return p_data->status;
 }
 
+/**
+ * @brief Starts the ADC conversion process.
+ *
+ * This function initiates the ADC conversion using software start and updates
+ * the status of the ADC operation to indicate that conversion has started.
+ *
+ * @param p_data Pointer to the ADC configuration data structure.
+ * @return The status of the ADC operation after starting the conversion.
+ */
+adc_status_t ADC_StartConvert(adc_data_t *p_data)
+{
+    LL_ADC_REG_StartConversionSWStart(p_data->ADCx);
+    p_data->status = ADC_START_CONVERT;
+    return p_data->status;
+}
+
+/**
+ * @brief Reads the ADC conversion data and calculates the corresponding voltages.
+ *
+ * This function checks if ADC data reading is enabled. If enabled, it reads the
+ * ADC data from the specified channels and calculates the corresponding voltages.
+ * The status is then updated to indicate a successful read operation. If reading
+ * is not enabled, the status is updated to indicate that the ADC is waiting for
+ * conversion.
+ *
+ * @param p_data Pointer to the ADC configuration data structure.
+ * @return The status of the ADC operation after attempting to read the data.
+ */
 adc_status_t ADC_Read(adc_data_t * p_data)
 {
-	timer_wait_converstion = TIMEOUT_WAIT_CONVERTION;
-	LL_ADC_REG_StartConversionSWStart(p_data->ADCx);
-
-
-//	while(LL_ADC_IsActiveFlag_EOS(p_data->ADCx) != SET)
-//	{
-//		// Clear the End of Conversion flag
-//		LL_ADC_ClearFlag_EOS(ADC1);
-//	}
-
+    if (enable_read_data == 1)
+    {
+    	__disable_irq();
+        for (uint8_t i = 0; i < p_data->num_channel; i++)
+        {
+            p_data->adc_voltage_data[i] =
+                __LL_ADC_CALC_DATA_TO_VOLTAGE(VREFANALOG,
+                                              p_data->channel_table[i],
+                                              LL_ADC_RESOLUTION_12B);
+        }
+        enable_read_data = 0;
+        p_data->status = ADC_OK;
+        __enable_irq();
+        return p_data->status;
+    }
+    p_data->status = ADC_WAIT_CONVERT;
+    return p_data->status;
 }
 
-adc_status_t ADC_TimeOut(void)
+/**
+ * @brief Decrements the ADC conversion timeout timer.
+ *
+ * This function decrements the timer used for ADC conversion timeout
+ * if the timer value is greater than or equal to zero.
+ */
+void ADC_TimeOut(void)
 {
-	if(timer_wait_converstion >= 0) timer_wait_converstion--;
+    if (timer_wait_converstion >= 0)
+    {
+        timer_wait_converstion--;
+    }
 }
 
-void ADC_DMA_Function(void)
+/**
+ * @brief DMA completion callback function for ADC data transfer.
+ *
+ * This function checks if the DMA transfer complete flag is set for ADC DMA channel 1.
+ * If the flag is set, it clears the flag and sets a flag (`enable_read_data`) to indicate
+ * that ADC data is ready to be processed.
+ *
+ * @param p_data Pointer to the ADC configuration data structure.
+ */
+void ADC_DMA_Function(adc_data_t *p_data)
 {
-	enable_read_data = 1;
+    if (LL_DMA_IsActiveFlag_TC1(DMA1) != RESET)
+    {
+        /* Clear DMA transfer complete flag */
+        LL_DMA_ClearFlag_TC1(DMA1);
+
+        /* Set flag to indicate data ready for processing */
+        enable_read_data = 1;
+    }
 }

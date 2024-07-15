@@ -19,6 +19,8 @@ RM := rm -rf
 -include BSP/UART/subdir.mk
 -include BSP/SysTick/subdir.mk
 -include BSP/PWM/subdir.mk
+-include BSP/I2C/subdir.mk
+-include BSP/ADC_ex/subdir.mk
 -include BSP/ADC/subdir.mk
 -include App/LED/subdir.mk
 -include App/Control/subdir.mk

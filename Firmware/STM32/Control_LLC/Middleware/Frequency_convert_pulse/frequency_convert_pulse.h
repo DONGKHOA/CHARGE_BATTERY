@@ -37,8 +37,8 @@ typedef struct _FCP_data_t
  *    PUBLIC FUNCTIONS
  **********************/
 
-void FCP_StartPhase (uint8_t time);
-void FCP_ProcessPhase (uint32_t frequency);
+extern void FCP_StartPhase (uint8_t time);
+extern void FCP_ProcessPhase (uint32_t frequency);
 
 #ifdef __cplusplus
 }

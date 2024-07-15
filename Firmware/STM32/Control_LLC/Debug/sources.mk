@@ -26,6 +26,8 @@ App/CMDLine \
 App/Control \
 App/LED \
 BSP/ADC \
+BSP/ADC_ex \
+BSP/I2C \
 BSP/PWM \
 BSP/SysTick \
 BSP/UART \
