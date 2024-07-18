@@ -4160,10 +4160,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "49825fd6-b3fc-4a1a-91e8-33ce5c2a4fac")
 		(property "Reference" "D2"
-			(at 146.8882 114.3 0)
+			(at 146.558 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4171,7 +4170,7 @@
 			)
 		)
 		(property "Value" "16 A,  1.25 V"
-			(at 146.8882 116.84 0)
+			(at 146.558 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4215,12 +4214,11 @@
 			)
 		)
 		(property "Supply part number" "726-IDH06G65C6XKSA1"
-			(at 139.954 108.204 0)
+			(at 148.0058 116.586 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Infineon-Technologies/IDH06G65C6XKSA1?qs=HXFqYaX1Q2y0Eo%2FTJueHsw%3D%3D"
@@ -4242,6 +4240,12 @@
 			(uuid "5a0fd6b4-36d7-4593-a501-e8a649901d85")
 		)
 		(instances
+			(project "LLC"
+				(path "/1533c2b1-3008-4776-aff4-45247d8a1449"
+					(reference "D2")
+					(unit 1)
+				)
+			)
 			(project ""
 				(path "/52eaef32-c16d-4834-ac94-ac67b58aa1d2/54ec4804-2ebd-4f2b-a686-f12eb8459952"
 					(reference "D2")
@@ -4327,6 +4331,14 @@
 		(fields_autoplaced yes)
 		(uuid "540915a2-d389-4f76-8c5c-0f26012f57f8")
 		(property "Reference" "D1"
+			(at 81.28 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MUR1100E"
 			(at 81.28 57.15 0)
 			(effects
 				(font
@@ -4334,15 +4346,7 @@
 				)
 			)
 		)
-		(property "Value" "UF5401"
-			(at 81.28 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-201AD_P15.24mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
 			(at 81.28 59.055 0)
 			(effects
 				(font
@@ -4351,7 +4355,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.vishay.com/docs/88756/uf5400.pdf"
+		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/mur180e-d.pdf"
 			(at 81.28 63.5 0)
 			(effects
 				(font
@@ -4360,13 +4364,12 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "100V 3A Soft Recovery Ultrafast Rectifier Diode, DO-201AD"
-			(at 81.28 63.5 0)
+		(property "Description" "1000V_1A_DO41"
+			(at 81.28 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Sim.Device" "D"
@@ -4379,6 +4382,15 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 81.28 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field7" ""
 			(at 81.28 63.5 0)
 			(effects
 				(font
@@ -5340,7 +5352,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "eaaa4635-5320-4525-ac91-70a217b80a92")
 		(property "Reference" "D3"
 			(at 146.8882 129.54 0)
@@ -5351,7 +5362,7 @@
 			)
 		)
 		(property "Value" "16 A,  1.25 V"
-			(at 146.8882 132.08 0)
+			(at 146.05 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5395,12 +5406,11 @@
 			)
 		)
 		(property "Supply part number" "726-IDH06G65C6XKSA1"
-			(at 139.954 123.444 0)
+			(at 147.066 145.034 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Infineon-Technologies/IDH06G65C6XKSA1?qs=HXFqYaX1Q2y0Eo%2FTJueHsw%3D%3D"
@@ -5422,6 +5432,12 @@
 			(uuid "60a81891-8d0d-448c-aea9-f3090996a323")
 		)
 		(instances
+			(project "LLC"
+				(path "/1533c2b1-3008-4776-aff4-45247d8a1449"
+					(reference "D3")
+					(unit 1)
+				)
+			)
 			(project "CHARGE_BATTERY"
 				(path "/52eaef32-c16d-4834-ac94-ac67b58aa1d2/54ec4804-2ebd-4f2b-a686-f12eb8459952"
 					(reference "D3")
