@@ -4798,6 +4798,190 @@
 				)
 			)
 		)
+		(symbol "charge_battery_sym_lib:Res_10K_0603_1%"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 1.27 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "10K/1%/1_10W"
+				(at 2.54 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:Res_10K_0603"
+				(at 39.878 11.43 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
+				(at 39.624 0.762 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Res 10 KOhm 0603 1%"
+				(at 40.386 6.858 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply name" "Thegioiic"
+				(at 40.132 12.446 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
+				(at 39.878 13.462 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
+				(at 41.148 20.574 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Res_10K_0603_1%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Res_10K_0603_1%_0_1"
+				(polyline
+					(pts
+						(xy 0 6.35) (xy -0.254 6.35)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.572 6.35) (xy 4.826 6.35)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 6.35) (xy 0.381 7.366) (xy 0.762 6.35) (xy 1.143 5.334) (xy 1.524 6.35)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 6.35) (xy 1.905 7.366) (xy 2.286 6.35) (xy 2.667 5.334) (xy 3.048 6.35)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.048 6.35) (xy 3.429 7.366) (xy 3.81 6.35) (xy 4.191 5.334) (xy 4.572 6.35)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Res_10K_0603_1%_1_1"
+				(pin passive line
+					(at -1.524 6.35 0)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 6.096 6.35 180)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "charge_battery_sym_lib:Res_hole_10K_1/4W_1%"
 			(pin_numbers hide)
 			(pin_names
@@ -5154,203 +5338,6 @@
 				)
 			)
 			(symbol "Res_hole_18K_1/4W_1%_1_1"
-				(pin passive line
-					(at -2.54 -1.27 0)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -1.27 180)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "charge_battery_sym_lib:Res_hole_18K_1/4W_5%"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 1.016 1.016 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "18K_1/4W_5%"
-				(at 1.27 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "charge_battery_footprint_lib:Res_18K_1_4W_1"
-				(at -19.812 28.194 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at -17.272 27.686 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Resistor"
-				(at -17.018 28.702 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply name " "Thegioiic"
-				(at -9.906 28.702 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply part number" "Điện Trở 18 KOhm 1/4W 5% 4 Vòng Màu"
-				(at -10.414 28.448 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply URL" "https://www.thegioiic.com/dien-tro-18-kohm-1-4w-5-4-vong-mau"
-				(at -10.414 28.448 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Res_hole_18K_1/4W_5%_0_1"
-				(polyline
-					(pts
-						(xy -1.016 -1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.556 -1.27) (xy 3.81 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 -1.27) (xy -0.635 -0.254) (xy -0.254 -1.27) (xy 0.127 -2.286) (xy 0.508 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.508 -1.27) (xy 0.889 -0.254) (xy 1.27 -1.27) (xy 1.651 -2.286) (xy 2.032 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.032 -1.27) (xy 2.413 -0.254) (xy 2.794 -1.27) (xy 3.175 -2.286) (xy 3.556 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Res_hole_18K_1/4W_5%_1_1"
 				(pin passive line
 					(at -2.54 -1.27 0)
 					(length 1.27)
@@ -7653,6 +7640,16 @@
 	)
 	(wire
 		(pts
+			(xy 139.7 146.05) (xy 139.7 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "474ccbf8-c079-4fe2-b9e9-9ec7c5228859")
+	)
+	(wire
+		(pts
 			(xy 127 121.92) (xy 127 74.93)
 		)
 		(stroke
@@ -7910,16 +7907,6 @@
 			(type default)
 		)
 		(uuid "7d288d7a-50d0-4eec-86ed-abc33b1e2c22")
-	)
-	(wire
-		(pts
-			(xy 139.7 146.05) (xy 139.7 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7dc1cd76-04ed-4679-a384-d7cffa8d7379")
 	)
 	(wire
 		(pts
@@ -8269,7 +8256,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c89f5fa8-d1bf-4c7e-ab28-ec1fd354a3c5")
+		(uuid "c9e2d313-e481-4149-b4e0-060274f2c254")
 	)
 	(wire
 		(pts
@@ -9659,7 +9646,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10uF 16V"
+		(property "Value" "680nF 50V 1206"
 			(at 151.892 151.1299 90)
 			(effects
 				(font
@@ -9668,7 +9655,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_10uF_16V"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 141.478 150.114 0)
 			(effects
 				(font
@@ -9677,7 +9664,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
+		(property "Datasheet" ""
 			(at 141.478 149.606 0)
 			(effects
 				(font
@@ -9686,7 +9673,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "10%, 0603 (1608 Metric)"
+		(property "Description" "10%, 1206 (3216 Metric)"
 			(at 140.97 148.844 0)
 			(effects
 				(font
@@ -9704,7 +9691,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Tụ Gốm 0603 10uF 16V"
+		(property "Supply part number" "Tụ Gốm 1206 680nF 50V"
 			(at 140.97 148.59 0)
 			(effects
 				(font
@@ -9713,7 +9700,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-10uf-16v"
+		(property "Supply URL" "https://www.thegioiic.com/tu-gom-1206-680nf-50v"
 			(at 141.478 149.86 0)
 			(effects
 				(font
@@ -10887,6 +10874,103 @@
 		)
 	)
 	(symbol
+		(lib_id "charge_battery_sym_lib:Res_10K_0603_1%")
+		(at 146.05 144.526 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "863be888-628d-4e21-aa09-f870c524f9dc")
+		(property "Reference" "R11"
+			(at 142.24 140.9699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "16.9K/1%/1_8W"
+			(at 142.24 143.5099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 134.62 104.648 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 145.288 104.902 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Code 1692, 1/8W"
+			(at 139.192 104.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 133.604 104.394 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Điện Trở 16.9 KOhm 0805 1%"
+			(at 132.588 104.648 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/dien-tro-16-9-kohm-0805-1-"
+			(at 125.476 103.378 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "35d917a0-e598-4175-a28d-2d4b2f3f5977")
+		)
+		(pin "2"
+			(uuid "825ff528-1edd-4b12-a57e-46c75e0e4491")
+		)
+		(instances
+			(project "PFC"
+				(path "/3b17fecf-a6c4-4ae7-a684-61da545cc8d4"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "R_Shunt_10mR_1")
 		(lib_id "charge_battery_sym_lib:R_Shunt_10mR")
 		(at 171.45 54.61 90)
@@ -12010,7 +12094,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1uF 50V"
+		(property "Value" "4.7uF 50V"
 			(at 202.438 113.0299 90)
 			(effects
 				(font
@@ -12019,7 +12103,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_Hole_1uF_50V"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 192.278 112.014 0)
 			(effects
 				(font
@@ -12037,7 +12121,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "1uF ±10%, code 105"
+		(property "Description" "10%, 1206 (3216 Metric)"
 			(at 191.77 110.744 0)
 			(effects
 				(font
@@ -12055,7 +12139,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Tụ Gốm Multilayer 1uF 50V"
+		(property "Supply part number" "Tụ Gốm 1206 4.7uF 50V"
 			(at 191.77 110.49 0)
 			(effects
 				(font
@@ -12064,7 +12148,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-gom-multilayer-1uf-50v"
+		(property "Supply URL" "https://www.thegioiic.com/tu-gom-1206-4-7uf-50v"
 			(at 192.278 111.76 0)
 			(effects
 				(font
@@ -12185,103 +12269,6 @@
 			(project "PFC"
 				(path "/3b17fecf-a6c4-4ae7-a684-61da545cc8d4"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:Res_hole_18K_1/4W_5%")
-		(at 138.43 143.51 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "eda222d7-0cb6-4be7-a4d3-6260334ffc94")
-		(property "Reference" "R10"
-			(at 141.478 140.9699 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "18K_1/4W_5%"
-			(at 141.478 143.5099 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_18K_1_4W_1"
-			(at 110.236 163.322 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 110.744 160.782 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 109.728 160.528 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name " "Thegioiic"
-			(at 109.728 153.416 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 18 KOhm 1/4W 5% 4 Vòng Màu"
-			(at 109.982 153.924 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-18-kohm-1-4w-5-4-vong-mau"
-			(at 109.982 153.924 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c73b2d61-8fb8-4a16-8077-199678051488")
-		)
-		(pin "2"
-			(uuid "095cc050-1f66-4873-aec4-0b3573b86885")
-		)
-		(instances
-			(project "PFC"
-				(path "/3b17fecf-a6c4-4ae7-a684-61da545cc8d4"
-					(reference "R10")
 					(unit 1)
 				)
 			)
