@@ -21,10 +21,11 @@
  *
  * This function enables the SysTick timer.
  */
-void systick_timer_start(void)
+void
+systick_timer_start (void)
 {
 
-    SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
+  SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
 }
 
 /**
@@ -32,18 +33,21 @@ void systick_timer_start(void)
  *
  * This function disables the SysTick timer.
  */
-void systick_timer_stop(void)
+void
+systick_timer_stop (void)
 {
-     SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
+  SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
 }
 
 /**
- * @brief Initialize the SysTick timer to trigger interrupts every 1 millisecond.
+ * @brief Initialize the SysTick timer to trigger interrupts every 1
+ * millisecond.
  *
  * This function configures the SysTick timer to generate interrupts at a rate
  * of 1 millisecond, based on the system core clock.
  */
-void systick_timer_init(void)
+void
+systick_timer_init (void)
 {
-    SysTick_Config(SystemCoreClock / 1000);
+  SysTick_Config(SystemCoreClock / 1000);
 }
