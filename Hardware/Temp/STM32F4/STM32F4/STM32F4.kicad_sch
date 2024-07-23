@@ -247,6 +247,165 @@
 				)
 			)
 		)
+		(symbol "Device:L_Small"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "L"
+				(at 0.762 1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "L_Small"
+				(at 0.762 -1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Inductor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "inductor choke coil reactor magnetic"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "L_Small_0_1"
+				(arc
+					(start 0 -2.032)
+					(mid 0.5058 -1.524)
+					(end 0 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.016)
+					(mid 0.5058 -0.508)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.5058 0.508)
+					(end 0 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 1.016)
+					(mid 0.5058 1.524)
+					(end 0 2.032)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "L_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.508)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.508)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Jumper:Jumper_2_Small_Bridged"
 			(pin_numbers hide)
 			(pin_names
@@ -4861,12 +5020,6 @@
 		(uuid "880e269e-7a18-46a5-8279-afbcaf6e4057")
 	)
 	(junction
-		(at 191.77 31.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8943d2d1-ca9d-4a50-86ab-aca1b6147c18")
-	)
-	(junction
 		(at 95.25 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4895,6 +5048,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9a1802b4-3eef-4a4c-8fa5-db9ebc9ab760")
+	)
+	(junction
+		(at 191.77 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a07873f5-6784-4aef-912a-6821c86df16a")
 	)
 	(junction
 		(at 247.65 62.23)
@@ -5084,6 +5243,16 @@
 	)
 	(wire
 		(pts
+			(xy 203.2 31.75) (xy 209.55 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17c532a4-6541-4f5d-a892-9de392b51cc6")
+	)
+	(wire
+		(pts
 			(xy 209.55 114.3) (xy 209.55 115.57)
 		)
 		(stroke
@@ -5261,6 +5430,16 @@
 			(type default)
 		)
 		(uuid "338a8dac-a7e3-4ac4-922d-5d9c89b484bd")
+	)
+	(wire
+		(pts
+			(xy 191.77 31.75) (xy 198.12 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35404bfe-381f-4dbe-a381-702fe16ef09a")
 	)
 	(wire
 		(pts
@@ -5644,16 +5823,6 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 31.75) (xy 209.55 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8d446ecd-a3c8-4a8d-864b-c60847ef12e5")
-	)
-	(wire
-		(pts
 			(xy 87.63 36.83) (xy 90.17 36.83)
 		)
 		(stroke
@@ -5661,16 +5830,6 @@
 			(type default)
 		)
 		(uuid "90578833-99b7-4208-9549-6c01dbafe830")
-	)
-	(wire
-		(pts
-			(xy 191.77 31.75) (xy 191.77 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "90892e2f-4840-41bc-8d37-d1e49b712236")
 	)
 	(wire
 		(pts
@@ -6121,6 +6280,16 @@
 			(type default)
 		)
 		(uuid "ee17885f-6a12-4eb4-a727-400adf8b09ba")
+	)
+	(wire
+		(pts
+			(xy 191.77 31.75) (xy 191.77 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f29620c2-083b-4ba3-9191-0cae3b5c9b5b")
 	)
 	(wire
 		(pts
@@ -7089,6 +7258,74 @@
 			(project "STM32F4"
 				(path "/4e64f425-032a-49d1-94e6-b9bc44cc8a4c"
 					(reference "JP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L_Small")
+		(at 200.66 31.75 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2d5ddae4-339c-4e2d-a432-e16cd3edbccb")
+		(property "Reference" "L1"
+			(at 200.66 26.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100 uH"
+			(at 200.66 29.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 200.66 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Inductor, small symbol"
+			(at 200.66 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9e374cfe-1cf2-452c-9b12-59b7a52bb900")
+		)
+		(pin "2"
+			(uuid "0064e719-bbf2-4417-bc15-a3396439dd20")
+		)
+		(instances
+			(project ""
+				(path "/4e64f425-032a-49d1-94e6-b9bc44cc8a4c"
+					(reference "L1")
 					(unit 1)
 				)
 			)
