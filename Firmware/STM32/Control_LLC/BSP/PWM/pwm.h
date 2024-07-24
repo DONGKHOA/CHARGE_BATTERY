@@ -14,6 +14,10 @@
 
 #include "stm32f1xx.h"
 
+/*********************
+ *      DEFINES
+ *********************/
+
 #ifdef __cplusplus
 extern "C"
 {

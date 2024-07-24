@@ -19,7 +19,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h \
- D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h
+ D:/Local_BATTERY_CHARGE/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_adc.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
@@ -41,4 +41,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h:
-D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h:
+D:/Local_BATTERY_CHARGE/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h:

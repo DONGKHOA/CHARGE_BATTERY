@@ -126,7 +126,7 @@ static esp_err_t WIFI_ScanSSID(uint8_t *ssid, uint8_t id, uint8_t len)
                           (char *)ssid, 32);
 }
 
-static esp_err_t WIFI_DeleteSSID(uint8_t id)/*mới*/
+static esp_err_t WIFI_DeleteSSID(uint8_t id)
 {
     char ssid_key[32];
     sprintf(ssid_key, "%d ssid", id);
@@ -607,9 +607,9 @@ int8_t WIFI_DeleteNVS (uint8_t *ssid)
         WIFI_ScanSSID(ssid_temp, i, 32);
         if (memcmp(ssid_temp, ssid, strlen((char *)ssid)) == 0)
         {
-            xQueueSend( WIFI_Queue_VacantPosition, &i, ( TickType_t ) 0 );
-            WIFI_DeleteSSID(i);
-            WIFI_DeletePass(i);
+            xQueueSend( WIFI_Queue_VacantPosition, &i, ( TickType_t ) 0 ); // send to Queue the positon of SSID and Password in NVS
+            WIFI_DeleteSSID(i); // Delete SSID at the positon of SSID in NVS
+            WIFI_DeletePass(i); // Delete Password at the positon of Password in NVS
             return i;
         }
     }
@@ -630,13 +630,13 @@ void WIFI_AutoUpdatePassword(uint8_t *ssid, uint8_t *pass)
     WIFI_Status_t reconnection = WIFI_Connect(ssid, pass);
     if (reconnection != CONNECT_OK)
     {
-        WIFI_DeleteNVS(ssid);
+        WIFI_DeleteNVS(ssid); //if NEW password also disconnect, delete OLD password and NOT save NEW password
     }
     else
     {
         WIFI_DeleteNVS(ssid);
-        WIFI_StoreNVS(ssid, pass);
-    }
+        WIFI_StoreNVS(ssid, pass); 
+    } // if NEW password connect, delete OLD password and SAVE NEW password
 }
 
 
