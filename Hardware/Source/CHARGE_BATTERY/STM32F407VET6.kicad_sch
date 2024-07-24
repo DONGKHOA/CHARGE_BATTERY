@@ -5343,16 +5343,6 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 24.13) (xy 190.5 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "303dde7f-3ffa-4bbb-80f5-87d24080ae6d")
-	)
-	(wire
-		(pts
 			(xy 50.8 157.48) (xy 50.8 154.94)
 		)
 		(stroke
@@ -5470,16 +5460,6 @@
 			(type default)
 		)
 		(uuid "48112da5-dd6e-48ea-a36b-7a40ce40a363")
-	)
-	(wire
-		(pts
-			(xy 93.98 30.48) (xy 91.44 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4845bbfe-182f-4d04-804e-942d0e4e303e")
 	)
 	(wire
 		(pts
@@ -6043,16 +6023,6 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 106.68) (xy 261.62 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c798ec6f-7714-4519-99d8-2df7e6c99fe6")
-	)
-	(wire
-		(pts
 			(xy 58.42 157.48) (xy 66.04 157.48)
 		)
 		(stroke
@@ -6113,7 +6083,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 24.13) (xy 190.5 33.02)
+			(xy 190.5 26.67) (xy 190.5 33.02)
 		)
 		(stroke
 			(width 0)
@@ -6263,7 +6233,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 106.68) (xy 261.62 110.49)
+			(xy 261.62 107.95) (xy 261.62 110.49)
 		)
 		(stroke
 			(width 0)
@@ -6526,28 +6496,6 @@
 			)
 		)
 	)
-	(global_label "3V3"
-		(shape input)
-		(at 186.69 24.13 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "4bd90095-4269-483f-90aa-08783a7855eb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.1972 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "VREF+"
 		(shape output)
 		(at 257.81 33.02 0)
@@ -6561,50 +6509,6 @@
 		(uuid "520288d2-5e1c-4469-96b9-7e7179521355")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 266.9638 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "3V3"
-		(shape input)
-		(at 264.16 106.68 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5e12ceed-f9d3-4799-8795-1000231ab28c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 270.6528 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "3V3_FlyBack"
-		(shape input)
-		(at 93.98 30.48 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "60558aed-f444-4a3d-9c34-18ef5ee4d278")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 108.6975 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7921,6 +7825,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 190.5 26.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "29770649-ec1c-4f68-a7f5-4dae551b9361")
+		(property "Reference" "#PWR058"
+			(at 190.5 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 190.5 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 190.5 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 190.5 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0cdcbe3b-c8ec-4b65-a11f-61eef5717012")
+		)
+		(instances
+			(project "CHARGE_BATTERY"
+				(path "/52eaef32-c16d-4834-ac94-ac67b58aa1d2/e14e8644-1ffb-4f6b-8c96-343794878f82"
+					(reference "#PWR058")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_16V")
 		(at 220.218 67.31 90)
 		(unit 1)
@@ -8213,6 +8183,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 91.44 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "38bbc391-f6b2-4912-8319-35cb5355d12e")
+		(property "Reference" "#PWR056"
+			(at 91.44 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 91.44 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 91.44 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c00ac94f-3579-426f-a464-4883562f9d73")
+		)
+		(instances
+			(project ""
+				(path "/52eaef32-c16d-4834-ac94-ac67b58aa1d2/e14e8644-1ffb-4f6b-8c96-343794878f82"
+					(reference "#PWR056")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "charge_battery_sym_lib:Res_10K_0603_1%")
 		(at 209.804 39.37 0)
 		(unit 1)
@@ -8399,6 +8435,72 @@
 			(project "CHARGE_BATTERY"
 				(path "/52eaef32-c16d-4834-ac94-ac67b58aa1d2/e14e8644-1ffb-4f6b-8c96-343794878f82"
 					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 261.62 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "496a1af4-32e1-4cd0-ae94-eb919956e7f1")
+		(property "Reference" "#PWR057"
+			(at 261.62 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 261.62 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 261.62 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.62 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 261.62 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5f39afb9-ec64-4bbb-ad67-03ce789a997b")
+		)
+		(instances
+			(project "CHARGE_BATTERY"
+				(path "/52eaef32-c16d-4834-ac94-ac67b58aa1d2/e14e8644-1ffb-4f6b-8c96-343794878f82"
+					(reference "#PWR057")
 					(unit 1)
 				)
 			)
