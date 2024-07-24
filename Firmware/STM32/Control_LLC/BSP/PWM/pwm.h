@@ -60,22 +60,19 @@ typedef struct _pwm_cfg_t
      */
     volatile TIM_TypeDef *p_tim;
 
-    struct 
-    {
-        /**
-         * @brief Auto-Reload Register value.
-         *
-         * This value determines the period of the PWM signal.
-         */
-        volatile uint16_t reg_auto_reload;
+    /**
+     * @brief Auto-Reload Register value.
+     *
+     * This value determines the period of the PWM signal.
+     */
+    volatile uint16_t reg_auto_reload;
 
-        /**
-         * @brief Compare Register value.
-         *
-         * This value determines the duty cycle of the PWM signal.
-         */
-        volatile uint16_t reg_compare;
-    };
+    /**
+     * @brief Compare Register value.
+     *
+     * This value determines the duty cycle of the PWM signal.
+     */
+    volatile uint16_t reg_compare;
 
     /**
      * @brief Prescaler value.
@@ -84,40 +81,26 @@ typedef struct _pwm_cfg_t
      */
     volatile uint16_t prescaler;
 
-    /**
-     * @brief Union for channel and output mode configuration.
-     */
-    union
-    {
-        struct
-        {
-            /**
-             * @brief PWM channel.
-             *
-             * Specifies which PWM channel to use:
-             * - PWM_CHANNEL_1
-             * - PWM_CHANNEL_2
-             * - PWM_CHANNEL_3
-             * - PWM_CHANNEL_4
-             */
-            volatile uint8_t channel : 2;
+	/**
+	 * @brief PWM channel.
+	 *
+	 * Specifies which PWM channel to use:
+	 * - PWM_CHANNEL_1
+	 * - PWM_CHANNEL_2
+	 * - PWM_CHANNEL_3
+	 * - PWM_CHANNEL_4
+	 */
+	volatile uint32_t channel;
 
-            /**
-             * @brief PWM output mode.
-             *
-             * Specifies the output mode:
-             * - PWM_POSITIVE
-             * - PWM_POSITIVE_NEGATIVE
-             * - PWM_NO_OUTPUT
-             */
-            volatile uint8_t output : 2;
-        };
-
-        /**
-         * @brief Size of the union.
-         */
-        uint8_t size;
-    };
+	/**
+	 * @brief PWM output mode.
+	 *
+	 * Specifies the output mode:
+	 * - PWM_POSITIVE
+	 * - PWM_POSITIVE_NEGATIVE
+	 * - PWM_NO_OUTPUT
+	 */
+	volatile uint8_t output : 2;
 
 } pwm_cfg_t;
 

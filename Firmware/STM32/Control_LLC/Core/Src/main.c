@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "board.h"
+#include "frequency_convert_pulse.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -42,13 +43,23 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-pwm_cfg_t pwm1 =
+//pwm_cfg_t pwm1 =
+//{
+//		.channel = PWM_CHANNEL_1,
+//		.output = PWM_POSITIVE_NEGATIVE,
+//		.p_tim = TIM1,
+//		.prescaler = 59,
+//		.reg_auto_reload = 9,
+//		.reg_compare = 5
+//};
+pwm_cfg_t pwm_control_1 =
 {
-		.channel = 1,
+		.channel = PWM_CHANNEL_1,
+		.output = PWM_POSITIVE_NEGATIVE,
 		.p_tim = TIM1,
-		.prescaler = 60,
-		.reg_auto_reload = 999,
-		.reg_compare = 499
+//		.prescaler = 59,
+//		.reg_auto_reload = 9,
+//		.reg_compare = 5
 };
 /* USER CODE END PV */
 
@@ -117,8 +128,9 @@ int main(void)
   MX_TIM1_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  PWM_EnableTimer(&pwm1);
-  PWM_SetParameterProcess(&pwm1);
+  PWM_EnableTimer(&pwm_control_1);
+//  PWM_SetParameterProcess(&pwm1);
+  FCP_PhaseProcess(110000);
   /* USER CODE END 2 */
 
   /* Infinite loop */

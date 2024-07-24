@@ -20,7 +20,7 @@ PWM_EnableTimer (pwm_cfg_t *pwm_cfg)
 {
   uint32_t u32_mode;
 
-  if (pwm_cfg->output == PWM_POSITIVE)
+  if ((pwm_cfg->output == PWM_POSITIVE) || (pwm_cfg->output == PWM_POSITIVE_NEGATIVE))
   {
     if (pwm_cfg->channel == PWM_CHANNEL_1)
     {

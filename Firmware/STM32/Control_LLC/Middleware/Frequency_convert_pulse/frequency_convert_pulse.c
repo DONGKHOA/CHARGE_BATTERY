@@ -13,6 +13,8 @@
 #include "Private/data_private.h"
 #include "pwm.h"
 
+#include <stdio.h>
+
 /**********************
  *    PRIVATE DEFINE
  **********************/
@@ -42,8 +44,8 @@
   table_data_process[0]     \
       .prescaler_timer /**< Starting threshold prescaler value. */
 
-#define PRE_END_THRESHOLD                                                   \
-  table_data_process[(sizeof(table_data_process) / sizeof(FCP_data_t) - 1)] \
+#define PRE_END_THRESHOLD                           \
+  table_data_process[(SIZE_TABLE_DATA_PROCESS - 1)] \
       .prescaler_timer /**< Ending threshold prescaler value. */
 
 /**
@@ -57,16 +59,16 @@
       .auto_reload_reg_timer /**< Starting threshold auto-reload \
                                 register value. */
 
-#define REG_END_THRESHOLD                                                   \
-  table_data_process[(sizeof(table_data_process) / sizeof(FCP_data_t) - 1)] \
-      .auto_reload_reg_timer /**< Ending threshold auto-reload register     \
+#define REG_END_THRESHOLD                                               \
+  table_data_process[(SIZE_TABLE_DATA_PROCESS - 1)]                     \
+      .auto_reload_reg_timer /**< Ending threshold auto-reload register \
                                 value. */
 
 /**********************
  *    DATA
  **********************/
 
-pwm_cfg_t pwm_control_1;
+extern pwm_cfg_t pwm_control_1;
 
 /******************************
  *  PRIVATE PROTOTYPE FUNCTION
@@ -141,15 +143,16 @@ FCP_PhaseProcess (uint32_t frequency)
   }
   else
   {
-    int32_t delta = 0;
-    int32_t sub_delta
-        = abs_32((int32_t)(frequency - table_data_process[0].frequency));
-    for (uint_fast32_t i = 0;
-         i < (sizeof(table_data_process) / sizeof(FCP_data_t));
-         i++)
+    uint32_t i;
+    int32_t  delta_1 = 0;
+    int32_t  delta_2 = 0;
+    for (i = 0; i < SIZE_TABLE_DATA_PROCESS - 1; i++)
     {
-      delta = abs_32((int32_t)(frequency - table_data_process[i].frequency));
-      if (delta > sub_delta)
+      delta_1 = abs_32((int32_t)(frequency - table_data_process[i].frequency));
+      delta_2
+          = abs_32((int32_t)(frequency - table_data_process[i + 1].frequency));
+
+      if (delta_1 <= delta_2)
       {
         // Set the prescaler value
         pwm_control_1.prescaler = table_data_process[i - 1].prescaler_timer - 1;
@@ -161,10 +164,6 @@ FCP_PhaseProcess (uint32_t frequency)
             = table_data_process[i - 1].auto_reload_reg_timer * DUTY_CYCLE
               / 100;
         break;
-      }
-      else
-      {
-        sub_delta = delta;
       }
     }
   }
