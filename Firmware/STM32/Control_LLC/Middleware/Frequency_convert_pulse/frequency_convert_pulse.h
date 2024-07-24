@@ -19,26 +19,27 @@ extern "C"
 {
 #endif
 
-/**********************
- *    PUBLIC TYPEDEFS
- **********************/
+  /**********************
+   *    PUBLIC TYPEDEFS
+   **********************/
 
-/**
- * @brief Structure to hold frequency conversion data for a timer.
- */
-typedef struct _FCP_data_t
-{
-    uint32_t frequency;               /**< @brief Desired frequency to be achieved. */
-    uint16_t prescaler_timer;         /**< @brief Prescaler value for the timer. */
-    uint16_t auto_reload_reg_timer;   /**< @brief Auto-reload register value for the timer. */
-} FCP_data_t;
+  /**
+   * @brief Structure to hold frequency conversion data for a timer.
+   */
+  typedef struct _FCP_data_t
+  {
+    uint32_t frequency;       /**< @brief Desired frequency to be achieved. */
+    uint16_t prescaler_timer; /**< @brief Prescaler value for the timer. */
+    uint16_t auto_reload_reg_timer; /**< @brief Auto-reload register value for
+                                       the timer. */
+  } FCP_data_t;
 
-/**********************
- *    PUBLIC FUNCTIONS
- **********************/
+  /**********************
+   *    PUBLIC FUNCTIONS
+   **********************/
 
-extern void FCP_StartPhase (uint8_t time);
-extern void FCP_ProcessPhase (uint32_t frequency);
+  void FCP_PhaseStart(uint8_t time);
+  void FCP_PhaseProcess(uint32_t frequency);
 
 #ifdef __cplusplus
 }

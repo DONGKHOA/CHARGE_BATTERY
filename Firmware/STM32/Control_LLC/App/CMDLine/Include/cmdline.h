@@ -83,9 +83,12 @@ typedef struct
  **********************/
 
 /**
- * This is the command table that must be provided by the application. The
- * last element of the array must be a structure whose pcCmd field contains
+ * @brief Command table provided by the application.
+ *
+ * The last element of the array must be a structure whose pcCmd field contains
  * a NULL pointer.
+ *
+ * @note This is an external variable from file @file command.c
  */
 extern tCmdLineEntry g_psCmdTable[];
 

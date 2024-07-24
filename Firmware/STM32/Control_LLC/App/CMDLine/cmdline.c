@@ -9,11 +9,11 @@
  *      INCLUDES
  *********************/
 
-#include <stdint.h>
-#include <stdbool.h>
-#include <string.h>
 #include "cmdline.h"
 #include "uart.h"
+#include <stdbool.h>
+#include <stdint.h>
+#include <string.h>
 
 /*********************
  *    PRIVATE DEFINES
@@ -21,12 +21,12 @@
 
 /**
  * @brief Defines the maximum number of arguments that can be parsed.
- * 
+ *
  * If not defined previously, this macro sets the maximum number of arguments
  * that can be parsed to 8.
  */
 #ifndef CMDLINE_MAX_ARGS
-#define CMDLINE_MAX_ARGS        8
+#define CMDLINE_MAX_ARGS 8
 #endif
 
 /**********************
@@ -35,7 +35,7 @@
 
 /**
  * @brief An array to hold the pointers to the command line arguments.
- * 
+ *
  * This array is used to store pointers to command line arguments.
  * The size is defined by CMDLINE_MAX_ARGS + 1.
  */
@@ -56,11 +56,12 @@ static char *g_ppcArgv[CMDLINE_MAX_ARGS + 1];
  * @return Returns CMDLINE_OK if successful, or an error code if an issue
  *         occurs (e.g., command not found, too many arguments).
  */
-uint8_t CmdLineProcess(char *pcCmdLine)
+uint8_t
+CmdLineProcess (char *pcCmdLine)
 {
-    char *pcChar;
-    uint_fast8_t ui8Argc;
-    bool bFindArg = true;
+    char          *pcChar;
+    uint_fast8_t   ui8Argc;
+    bool           bFindArg = true;
     tCmdLineEntry *psCmdEntry;
 
     /**
@@ -68,7 +69,7 @@ uint8_t CmdLineProcess(char *pcCmdLine)
      * command line string.
      */
     ui8Argc = 0;
-    pcChar = pcCmdLine;
+    pcChar  = pcCmdLine;
 
     /**
      * Advance through the command line until a zero character is found.
@@ -81,7 +82,7 @@ uint8_t CmdLineProcess(char *pcCmdLine)
          */
         if (*pcChar == ' ')
         {
-            *pcChar = 0;
+            *pcChar  = 0;
             bFindArg = true;
         }
         /**

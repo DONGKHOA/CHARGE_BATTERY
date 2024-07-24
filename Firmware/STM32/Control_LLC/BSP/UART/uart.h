@@ -12,64 +12,47 @@
  *      INCLUDES
  *********************/
 
-#include <stdint.h>
-#include "stm32f1xx_ll_usart.h"
+#include "stm32f1xx.h"
+#include "ring_buffer.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
 
-/*********************
- *    PUBLIC DEFINES
- *********************/
+  /**********************
+   *    PUBLIC TYPEDEFS
+   **********************/
 
-#define UART_BUFFER_SIZE     128
-
-/**********************
- *      TYPEDEFS
- **********************/
-
-/**
- * @brief Structure to hold ring buffer data.
- */
-typedef struct ring_buffer
-{
-    volatile uint8_t  buffer[UART_BUFFER_SIZE]; /**< @brief Buffer array. */
-    volatile uint32_t in;                       /**< @brief Input index. */
-    volatile uint32_t out;                      /**< @brief Output index. */
-    volatile uint32_t count;                    /**< @brief Count of items 
-                                                      in buffer. */
-} ring_buffer_t;
-
-/**
- * @brief Structure to hold UART configuration data.
- */
-typedef struct uart_cfg
-{
+  /**
+   * @brief Structure to hold UART configuration data.
+   */
+  typedef struct uart_cfg
+  {
     volatile ring_buffer_t rx_buffer; /**< @brief Receive ring buffer. */
     volatile ring_buffer_t tx_buffer; /**< @brief Transmit ring buffer. */
-    USART_TypeDef *        uart;      /**< @brief Pointer to UART 
+    USART_TypeDef         *uart;      /**< @brief Pointer to UART
                                            peripheral. */
-    IRQn_Type              uart_irqn; /**< @brief UART interrupt number. */
-} uart_cfg_t;
+    IRQn_Type uart_irqn;              /**< @brief UART interrupt number. */
+  } uart_cfg_t;
 
-/*********************
- *   PUBLIC FUNCTION
- *********************/
+  /*********************
+   *   PUBLIC FUNCTION
+   *********************/
 
-extern void UART_Config(uart_cfg_t *uartstdio_device, USART_TypeDef * uart,
-                        IRQn_Type uart_irqn);
-extern void UART_SendChar(uart_cfg_t *uartstdio_device, char c);
-extern void UART_SendString(uart_cfg_t *uartstdio_device, const char *s);
-extern char UART_ReadChar(uart_cfg_t *uartstdio_device);
+  void    UART_Config(uart_cfg_t    *uartstdio_device,
+                      USART_TypeDef *uart,
+                      IRQn_Type      uart_irqn);
+  uint8_t UART_IsAvailableDataReceive(uart_cfg_t *uartstdio_device);
+  void    UART_SendChar(uart_cfg_t *uartstdio_device, char c);
+  void    UART_SendString(uart_cfg_t *uartstdio_device, const char *s);
+  char    UART_ReadChar(uart_cfg_t *uartstdio_device);
 
-// Call Function "UART_TimeOut" in ISR SysTick
-extern void UART_TimeOut(void);
+  // Call Function "UART_TimeOut" in ISR SysTick
+  void UART_TimeOut(void);
 
-// Call Function "UART_ISR" in ISR UART
-extern void UART_ISR (uart_cfg_t *uartstdio_device);
-
+  // Call Function "UART_ISR" in ISR UART
+  void UART_ISR(uart_cfg_t *uartstdio_device);
 
 #ifdef __cplusplus
 }

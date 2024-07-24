@@ -13,27 +13,62 @@
 #include "Private/data_private.h"
 #include "pwm.h"
 
+#include <stdio.h>
+
 /**********************
  *    PRIVATE DEFINE
  **********************/
 
-// Threshold for frequency
-#define FRE_START_THRESHOLD     80000	/**< @brief Starting threshold frequency (80 KHz). */
-#define FRE_END_THRESHOLD       110000 	/**< @brief Ending threshold frequency (110 KHz). */
+/**
+ * @brief Duty cycle for PWM.
+ *
+ * Specifies the duty cycle percentage for the PWM signal.
+ */
+#define DUTY_CYCLE 50 /**< Duty cycle percentage (50%). */
 
-// Threshold for pre-scaler
-#define PRE_START_THRESHOLD	\
-	table_data_process[0].prescaler_timer
-#define PRE_END_THRESHOLD	\
-	table_data_process[(sizeof(table_data_process) / sizeof(FCP_data_t) - 1)].\
-	prescaler_timer
+/**
+ * @brief Thresholds for frequency.
+ */
+#define FRE_START_THRESHOLD                                                  \
+  80000                          /**< Starting threshold frequency (80 KHz). \
+                                  */
+#define FRE_END_THRESHOLD 110000 /**< Ending threshold frequency (110 KHz). */
 
-// Threshold for register auto-reload
-#define REG_START_THRESHOLD	\
-	table_data_process[0].auto_reload_reg_timer
-#define REG_END_THRESHOLD	\
-	table_data_process[(sizeof(table_data_process) / sizeof(FCP_data_t) - 1)].\
-	auto_reload_reg_timer
+/**
+ * @brief Thresholds for pre-scaler.
+ *
+ * These thresholds are defined using values from the `table_data_process`
+ * array.
+ */
+#define PRE_START_THRESHOLD \
+  table_data_process[0]     \
+      .prescaler_timer /**< Starting threshold prescaler value. */
+
+#define PRE_END_THRESHOLD                           \
+  table_data_process[(SIZE_TABLE_DATA_PROCESS - 1)] \
+      .prescaler_timer /**< Ending threshold prescaler value. */
+
+/**
+ * @brief Thresholds for register auto-reload.
+ *
+ * These thresholds are defined using values from the `table_data_process`
+ * array.
+ */
+#define REG_START_THRESHOLD                                      \
+  table_data_process[0]                                          \
+      .auto_reload_reg_timer /**< Starting threshold auto-reload \
+                                register value. */
+
+#define REG_END_THRESHOLD                                               \
+  table_data_process[(SIZE_TABLE_DATA_PROCESS - 1)]                     \
+      .auto_reload_reg_timer /**< Ending threshold auto-reload register \
+                                value. */
+
+/**********************
+ *    DATA
+ **********************/
+
+extern pwm_cfg_t pwm_control_1;
 
 /******************************
  *  PRIVATE PROTOTYPE FUNCTION
@@ -48,25 +83,29 @@ static int32_t abs_32(int32_t num);
 /**
  * @brief Starts the phase of the FCP process based on the provided time.
  *
- * This function sets the PWM parameters using the table_data_start array
+ * This function sets the PWM parameters using the `table_data_start` array
  * based on the given time. If the time is less than or equal to 20, it uses
  * the first entry of the table. If the time is greater than 20, it uses the
  * entry at the index (time - 20) of the table.
  *
  * @param time The time value used to determine the PWM parameters.
  */
-void FCP_StartPhase (uint8_t time)
+void
+FCP_PhaseStart (uint8_t time)
 {
-    if (time <= 20)
-    {
-        PWM_Process(table_data_start[0].prescaler_timer,
-                    table_data_start[0].auto_reload_reg_timer, 50);
-    }
-    else if (time > 20)
-    {
-        PWM_Process(table_data_start[time - 20].prescaler_timer,
-                    table_data_start[time - 20].auto_reload_reg_timer, 50);
-    }
+  time = time > 20 ? (time - 20) : 0;
+
+  // Set the prescaler value
+  pwm_control_1.prescaler = table_data_start[time].prescaler_timer - 1;
+  // Set the auto-reload register value
+  pwm_control_1.reg_auto_reload
+      = table_data_start[time].auto_reload_reg_timer - 1;
+  // Set the compare register value
+  pwm_control_1.reg_compare
+      = table_data_start[time].auto_reload_reg_timer * DUTY_CYCLE / 100;
+
+  // Apply the PWM parameters
+  PWM_SetParameterProcess(&pwm_control_1);
 }
 
 /**
@@ -76,37 +115,60 @@ void FCP_StartPhase (uint8_t time)
  * If the frequency exceeds the end threshold or is below the start threshold,
  * it sets the PWM parameters to predefined values. It then calculates the
  * absolute difference between the frequency and the frequencies in the
- * table_data_process array to find the closest match and adjust the PWM
+ * `table_data_process` array to find the closest match and adjust the PWM
  * parameters accordingly.
  *
  * @param frequency The frequency value used to determine the PWM parameters.
  */
-void FCP_ProcessPhase (uint32_t frequency)
+void
+FCP_PhaseProcess (uint32_t frequency)
 {
-    if (frequency > FRE_END_THRESHOLD)
-        PWM_Process(PRE_END_THRESHOLD, REG_END_THRESHOLD, 50);
-
-    if (frequency < FRE_START_THRESHOLD)
-        PWM_Process(PRE_START_THRESHOLD, REG_START_THRESHOLD, 50);
-
-    int32_t delta = 0;
-    int32_t sub_delta =
-                abs_32((int32_t)(frequency - table_data_process[0].frequency));
-    for (uint_fast32_t i = 0;
-         i < (sizeof(table_data_process) / sizeof(FCP_data_t)); i++)
+  if (frequency > FRE_END_THRESHOLD)
+  {
+    // Set the prescaler value
+    pwm_control_1.prescaler = PRE_END_THRESHOLD - 1;
+    // Set the auto-reload register value
+    pwm_control_1.reg_auto_reload = REG_END_THRESHOLD - 1;
+    // Set the compare register value
+    pwm_control_1.reg_compare = REG_END_THRESHOLD * DUTY_CYCLE / 100;
+  }
+  else if (frequency < FRE_START_THRESHOLD)
+  {
+    // Set the prescaler value
+    pwm_control_1.prescaler = PRE_START_THRESHOLD - 1;
+    // Set the auto-reload register value
+    pwm_control_1.reg_auto_reload = REG_START_THRESHOLD - 1;
+    // Set the compare register value
+    pwm_control_1.reg_compare = REG_START_THRESHOLD * DUTY_CYCLE / 100;
+  }
+  else
+  {
+    uint32_t i;
+    int32_t  delta_1 = 0;
+    int32_t  delta_2 = 0;
+    for (i = 0; i < SIZE_TABLE_DATA_PROCESS - 1; i++)
     {
-        delta = abs_32((int32_t)(frequency - table_data_process[i].frequency));
-        if (delta > sub_delta)
-        {
-            PWM_Process(table_data_process[i - 1].prescaler_timer,
-                        table_data_process[i - 1].auto_reload_reg_timer, 50);
-            return;
-        }
-        else
-        {
-            sub_delta = delta;
-        }
+      delta_1 = abs_32((int32_t)(frequency - table_data_process[i].frequency));
+      delta_2
+          = abs_32((int32_t)(frequency - table_data_process[i + 1].frequency));
+
+      if (delta_1 <= delta_2)
+      {
+        // Set the prescaler value
+        pwm_control_1.prescaler = table_data_process[i - 1].prescaler_timer - 1;
+        // Set the auto-reload register value
+        pwm_control_1.reg_auto_reload
+            = table_data_process[i - 1].auto_reload_reg_timer - 1;
+        // Set the compare register value
+        pwm_control_1.reg_compare
+            = table_data_process[i - 1].auto_reload_reg_timer * DUTY_CYCLE
+              / 100;
+        break;
+      }
     }
+  }
+
+  PWM_SetParameterProcess(&pwm_control_1);
 }
 
 /**********************
@@ -123,8 +185,15 @@ void FCP_ProcessPhase (uint32_t frequency)
  * @param num The 32-bit integer for which the absolute value is to be computed.
  * @return The absolute value of the input 32-bit integer.
  */
-static int32_t abs_32(int32_t num)
+static int32_t
+abs_32 (int32_t num)
 {
-    if (num >= 0) return num;
-    else          return -num;
+  if (num >= 0)
+  {
+    return num;
+  }
+  else
+  {
+    return -num;
+  }
 }
