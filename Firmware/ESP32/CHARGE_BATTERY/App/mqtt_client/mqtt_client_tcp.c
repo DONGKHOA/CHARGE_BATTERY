@@ -16,22 +16,16 @@
 #include "esp_log.h"
 
 #include "mqtt_client_tcp.h"
+// #include "tbc_mqtt_helper.h"
+// #include "tbc_transport_config.h"
+
 
 /*********************
  *      DEFINES
  *********************/
 
 #define TAG  "MQTT"
-#define SEND_CONNECT_MQTT_SUCCESSFUL_BIT        (1 << 4)
 
-/**********************
- *  EXTERN VARIABLES
- **********************/
-extern QueueHandle_t mqtt_topic_queue;
-extern EventGroupHandle_t event_uart_tx_heading;
-
-extern char state_led[10];
-extern char state_auto_nodered[10];
 
 /**********************
  *     VARIABLES
@@ -60,8 +54,6 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
     {
         case MQTT_EVENT_CONNECTED:
             ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
-            xEventGroupSetBits(event_uart_tx_heading,
-                    SEND_CONNECT_MQTT_SUCCESSFUL_BIT);
             state_connect_mqtt = 1;
             break;
         case MQTT_EVENT_SUBSCRIBED:
@@ -73,30 +65,8 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
             break;
         case MQTT_EVENT_DATA:
             ESP_LOGI(TAG, "MQTT_EVENT_DATA");
-            char topic[20];
-            // printf("TOPIC=%.*s\r\n", event->topic_len, event->topic);
-            // printf("DATA=%.*s\r\n", event->data_len, event->data);
-
-            sprintf(data_mqtt, "%.*s", event->data_len, event->data);
-            sprintf(topic, "%.*s", event->topic_len, event->topic);
-            printf("%s\n",topic);
-            if (memcmp(topic, "led", strlen(topic) + 1) == 0)
-            {
-                printf("%s\n",data_mqtt);
-                MQTT_Topic_t mqtt_topic_command = TOPIC_LED;
-                strcpy(state_led, data_mqtt);
-                xQueueSend(mqtt_topic_queue, &mqtt_topic_command, 0);
-                memset((void *)data_mqtt, '\0', sizeof(data_mqtt));
-            }
-            
-            if (memcmp(topic, "state_auto_nodered", strlen(topic) + 1) == 0)
-            {
-                printf("%s\n",data_mqtt);
-                MQTT_Topic_t mqtt_topic_command = TOPIC_AUTO;
-                strcpy(state_auto_nodered, data_mqtt);
-                xQueueSend(mqtt_topic_queue, &mqtt_topic_command, 0);
-                memset((void *)data_mqtt, '\0', sizeof(data_mqtt));
-            }
+            printf("TOPIC=%.*s\r\n", event->topic_len, event->topic);
+            printf("DATA=%.*s\r\n", event->data_len, event->data);
 
             break;
         case MQTT_EVENT_DISCONNECTED:
@@ -124,11 +94,10 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
  */
 void MQTT_app_start(MQTT_Client_Data_t *MQTT_Client, char *url)
 {
-    
     esp_mqtt_client_config_t mqtt_cfg = {
         .broker.address.uri = url,
     };
-    
+
     MQTT_Client->client = esp_mqtt_client_init(&mqtt_cfg);
     /* The last argument may be used to pass data to the event handler, in this example mqtt_event_handler */
     esp_mqtt_client_register_event(MQTT_Client->client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);

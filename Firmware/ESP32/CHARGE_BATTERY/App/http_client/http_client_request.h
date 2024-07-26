@@ -17,6 +17,4 @@ typedef enum
     HTTP_REQUEST_FAIL,
 }http_client_request_t;
 
-char *WIFI_HTTP_Request();
-
 #endif

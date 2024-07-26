@@ -153,3 +153,50 @@ esp_err_t NVS_ReadString(const char* name, const char* key,
     nvs_close(nvsHandle);
     return retVal;
 }
+
+
+
+esp_err_t NVS_DeleteString(const char* name, const char* key) 
+{
+    nvs_handle_t nvsHandle;
+    esp_err_t retVal;
+
+    // Mở không gian lưu trữ NVS
+    retVal = nvs_open(name, NVS_READWRITE, &nvsHandle);
+    if (retVal != ESP_OK) {
+        ESP_LOGE("NVS", "Error (%s) opening NVS handle for Deleting", esp_err_to_name(retVal));
+    }
+    else
+    {
+        retVal = nvs_erase_key(nvsHandle, key);
+        if (retVal != ESP_OK) 
+        {
+            ESP_LOGE("NVS", "Error (%s) deleting NVS handle for Deleting", esp_err_to_name(retVal));
+        } 
+        else 
+        {
+            ESP_LOGI("NVS", "Deleted Data!");
+        }
+        
+        
+        retVal = nvs_commit(nvsHandle);
+        if(retVal != ESP_OK)
+        {
+            ESP_LOGE("NVS", "Error (%s) Can not commit - delete", esp_err_to_name(retVal));
+        }
+        else
+        {
+            ESP_LOGI("NVS", "Delete Commit Done!");
+        }
+    }
+
+    // Xóa chuỗi lưu trữ với khóa (key) cụ thể
+
+    
+    // Đóng không gian lưu trữ NVS
+    nvs_close(nvsHandle);
+    return retVal;
+}
+
+
+
