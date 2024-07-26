@@ -94,7 +94,7 @@ CONTROL_Init (void)
   PWM_EnableTimer(&pwm_control_1);
   state = CGT_WAIT_INPUT_VOLTAGE;
   times_change_fre = 0;
-  PIControl_Reset(&control_power_pi);
+  PIControl_Reset((pi_control_t *)&control_power_pi);
 }
 
 void
@@ -150,7 +150,7 @@ CONTROL_TaskUpdate (void)
       voltage = CONTROL_ConvertVoltageOutput (temp_voltage);
 
       // PI control
-      PIControl_Process(voltage, &control_power_pi);
+      PIControl_Process(voltage, (pi_control_t *)&control_power_pi);
 
       // Voltage convert frequency
       frequency_operation = VCF_Process(control_power_pi.f_out);
