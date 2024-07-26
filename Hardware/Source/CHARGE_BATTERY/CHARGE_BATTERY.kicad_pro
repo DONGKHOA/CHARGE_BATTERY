@@ -444,7 +444,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",
@@ -456,7 +456,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "charge_battery_sym_lib"
+    ]
   },
   "meta": {
     "filename": "CHARGE_BATTERY.kicad_pro",
@@ -505,6 +507,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "bom_export_filename": "",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -574,7 +577,7 @@
       "intersheets_ref_short": false,
       "intersheets_ref_show": false,
       "intersheets_ref_suffix": "",
-      "junction_size_choice": 3,
+      "junction_size_choice": 2,
       "label_size_ratio": 0.375,
       "operating_point_overlay_i_precision": 3,
       "operating_point_overlay_i_range": "~A",
@@ -617,6 +620,18 @@
     [
       "8a14cc0b-4192-4284-9a4a-146deadfd271",
       "Fly Back"
+    ],
+    [
+      "e14e8644-1ffb-4f6b-8c96-343794878f82",
+      "STM32F407VET6"
+    ],
+    [
+      "a693586d-1325-4b07-9bd4-27b815e2a395",
+      "STM32F103C8T6"
+    ],
+    [
+      "2d69dcbc-a12b-413a-b509-645b7ac34282",
+      "ESP32"
     ]
   ],
   "text_variables": {}

@@ -1,0 +1,162 @@
+(footprint "SW_SMD"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "https://www.ckswitches.com/media/1465/kxt3.pdf")
+	(tags "Switch SPST KXT3")
+	(property "Reference" "REF**"
+		(at -0.59 -2.83 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "8a1bb2aa-f4f0-4b0c-b7eb-4b6b4c97b1b0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SW_SMD"
+		(at 0.29 4.98 0)
+		(layer "F.Fab")
+		(uuid "d5d5451d-988d-47c8-a38b-0dacacd101b8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 1.99 1.61 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2f66c4df-5649-4902-a41f-b8bf8601d2d6")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 1.99 1.61 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4d33cf9e-1438-40d6-bb47-cff3cae8e062")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 1.99 1.61 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d259e6d5-eb30-46f0-a771-81ed7c58eaa8")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 0 2.81)
+		(end 0 2.91)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b65b2b7f-1bcd-4ceb-bc2e-a1867d6c8a2d")
+	)
+	(fp_line
+		(start 0 2.93)
+		(end 3.9 2.93)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a85f3bb8-08dd-47dd-8fd2-bd4d92a86a21")
+	)
+	(fp_line
+		(start 0.01 -0.005)
+		(end 0.01 0.15)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "52087b84-2fe1-445e-8d29-35da085a23a2")
+	)
+	(fp_line
+		(start 0.02 0)
+		(end 3.89 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0030f7a0-b516-4c6e-bd63-e7372cf4791a")
+	)
+	(fp_line
+		(start 3.89 0)
+		(end 3.89 0.15)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "65bee1f1-1013-4248-bab9-6002e2493ac0")
+	)
+	(fp_line
+		(start 3.9 2.82)
+		(end 3.9 2.92)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a0e8e816-c620-4b52-aa2d-5422c810840e")
+	)
+	(fp_rect
+		(start 0 0)
+		(end 3.9 2.93)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "e32c2b03-d161-4e04-a843-4f3cae60f12f")
+	)
+	(pad "1" smd rect
+		(at -0.21 1.37)
+		(size 1.05 2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "42642b66-ad96-43ab-9a21-f1f8882b917d")
+	)
+	(pad "2" smd rect
+		(at 4.11 1.38)
+		(size 1.05 2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "cc341416-8bf6-4ea9-959e-b44c8eec944f")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPST_CK_KXT3.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
