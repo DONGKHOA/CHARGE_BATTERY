@@ -145,7 +145,7 @@ COMMAND_ReadVoltageLLC (int argc, char *argv[])
   }
 
   uint8_t channel = atoi(argv[1]);
-  if (channel > CHANNEL_3)
+  if (channel > PWM_CHANNEL_3)
   {
     return CMDLINE_INVALID_ARG;
   }

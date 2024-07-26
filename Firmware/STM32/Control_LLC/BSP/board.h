@@ -50,8 +50,9 @@ extern "C"
 #define COMMAND_LINE_IRQ  USART1_IRQn
 
 // Port - Pin - Timer for gate driver
-#define GATE_DRIVER_TIM TIM1
-#define GATE_DRIVER_TIM_CHANNEL
+#define GATE_DRIVER_TIM         TIM1
+#define GATE_DRIVER_TIM_CHANNEL PWM_CHANNEL_1
+#define GATE_DRIVER_TIM_MODE    PWM_POSITIVE_NEGATIVE
 
   /*********************
    *   PUBLIC FUNCTION

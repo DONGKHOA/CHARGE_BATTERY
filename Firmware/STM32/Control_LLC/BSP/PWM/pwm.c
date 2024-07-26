@@ -93,5 +93,5 @@ PWM_SetParameterProcess (pwm_cfg_t *pwm_cfg)
 
   // Set value for CRR (Compare Register)
   LL_TIM_OC_SetCompareCH1((TIM_TypeDef *)pwm_cfg->p_tim, pwm_cfg->reg_compare);
-}
 
+}

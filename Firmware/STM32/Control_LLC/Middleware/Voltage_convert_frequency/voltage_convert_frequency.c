@@ -17,4 +17,6 @@
 uint32_t
 VCF_Process (float voltage)
 {
+	float temp = -0.172233513 * voltage + 115.5723622;
+	return (uint32_t) temp;
 }

@@ -14,17 +14,26 @@
 
 #include "stm32f1xx.h"
 
-/**********************
- *   PUBLIC FUNCTIONS
- **********************/
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
-void COMMAND_Init(void);
-void COMMAND_CreateTask(void);
+  /**********************
+   *   PUBLIC FUNCTIONS
+   **********************/
 
-/**
- * @brief List of command
- */
-int COMMAND_help(int argc, char *argv[]);
-int COMMAND_ReadVoltageLLC(int argc, char *argv[]);
+  void COMMAND_Init(void);
+  void COMMAND_CreateTask(void);
+
+  /**
+   * @brief List of command
+   */
+  int COMMAND_help(int argc, char *argv[]);
+  int COMMAND_ReadVoltageLLC(int argc, char *argv[]);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* CMDLINE_COMMAND_H_ */

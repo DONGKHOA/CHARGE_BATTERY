@@ -2,7 +2,7 @@
  * device.h
  *
  *  Created on: Jul 18, 2024
- *      Author: ASUS
+ *      Author: dongkhoa
  */
 
 #ifndef DEVICE_H_
