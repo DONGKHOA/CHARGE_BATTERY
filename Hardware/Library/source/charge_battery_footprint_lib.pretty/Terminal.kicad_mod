@@ -1,0 +1,140 @@
+(footprint "Terminal"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(tags "HB9500M-9.5-3P ")
+	(property "Reference" "REF**"
+		(at 15.99 -7.8 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "62d22991-3d1b-464b-bb3c-23288b6d3960")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Terminal"
+		(at 8.93 -9.09 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "1e5957a0-6283-4db5-8922-ada7fcb0c46a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 7.780002 5.51 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8bd54921-2a18-4bd1-a288-1e2ad4aebbe3")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 7.780002 5.51 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "05b7d875-f811-4d1a-a60e-77a00df65d68")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 7.780002 5.51 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1e08b862-8093-472e-ba35-e4f2c5dfeb11")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start 0 0)
+		(end 13 16.1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "56e712af-5170-4de1-8ceb-eae3432327db")
+	)
+	(fp_rect
+		(start 0.05 0.08)
+		(end 12.93 16.02)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "42d927a3-f5cb-4fbf-a9b7-4423c0b55eab")
+	)
+	(fp_rect
+		(start 0.09 0.12)
+		(end 12.89 15.99)
+		(stroke
+			(width 0.02)
+			(type default)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "aa8d55a8-d934-4144-90d8-edcf600d3d81")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 9.68 -7.41 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "386985fd-3db9-4790-aa03-551c6d4c5b09")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 1.75 3.75)
+		(size 3 3)
+		(drill 1.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "bf413a47-179d-49cf-b4a9-ac213af8df2a")
+	)
+	(pad "2" thru_hole circle
+		(at 11.25 3.75)
+		(size 3 3)
+		(drill 1.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9f9f8667-a0f3-4fc9-b223-e84d43dfa3cc")
+	)
+	(model "D:/CHARGE_BATTERY/Hardware/Library/3d_model/HB9500_01x03_P9.50mm.step"
+		(offset
+			(xyz 0 -6 0.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
