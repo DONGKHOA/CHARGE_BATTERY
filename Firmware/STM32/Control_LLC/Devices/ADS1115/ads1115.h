@@ -19,9 +19,15 @@ extern "C"
 {
 #endif
 
-  /**********************
-   *    PUBLIC TYPEDEFS
-   **********************/
+/**********************
+ *    PRIVATE DEFINE
+ **********************/
+
+#define ADS1115_VREF       4096 // mV
+
+/**********************
+ *    PUBLIC TYPEDEFS
+ **********************/
 
   typedef enum _ads1115_channel_t
   {

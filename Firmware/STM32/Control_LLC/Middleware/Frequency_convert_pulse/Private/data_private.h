@@ -18,7 +18,7 @@
  *    PRIVATE DATA
  **********************/
 
-#define SIZE_TABLE_DATA_PROCESS 10
+#define SIZE_TABLE_DATA_PROCESS 170
 
 extern const FCP_data_t table_data_process[];
 extern const FCP_data_t table_data_start[];

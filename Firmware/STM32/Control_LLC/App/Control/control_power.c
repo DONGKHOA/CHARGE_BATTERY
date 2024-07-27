@@ -24,7 +24,7 @@
  *    PRIVATE DEFINES
  *********************/
 
-#define TIME_LIMIT_PHASE_START 60 // ms
+#define TIME_LIMIT_PHASE_START 60 // 60ms=[Soft-start](55s)+[Operation-PI](5s)
 #define KI                     0.1
 #define KP                     0.1
 #define VOLTAGE_OUTPUT         48 // V
@@ -181,8 +181,9 @@ static float
 APP_CONTROL_ConvertVoltageOutput (float voltage)
 {
   float temp_voltage;
+  float max_voltage = 54; //Range 0V -> 54V
   // Convert
-
+  temp_voltage = (voltage * max_voltage) / ADS1115_VREF;
   // Done
   return temp_voltage;
 }

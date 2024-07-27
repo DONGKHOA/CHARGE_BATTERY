@@ -19,17 +19,17 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h \
- D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/board.h \
- D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/ADC/adc.h \
- D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/I2C/i2c.h \
- D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/PWM/pwm.h \
- D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/SysTick/systick.h \
- D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h \
- D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/ring_buffer.h \
- D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.h \
- D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Common/Include/basetypedef.h \
- D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/control_power.h \
- D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CMDLine/Include/command.h
+ D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/board.h \
+ D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/ADC/adc.h \
+ D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/I2C/i2c.h \
+ D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/PWM/pwm.h \
+ D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/SysTick/systick.h \
+ D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h \
+ D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/ring_buffer.h \
+ D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.h \
+ D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Common/Include/basetypedef.h \
+ D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/control_power.h \
+ D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CMDLine/Include/command.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_adc.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
@@ -51,14 +51,14 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h:
-D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/board.h:
-D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/ADC/adc.h:
-D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/I2C/i2c.h:
-D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/PWM/pwm.h:
-D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/SysTick/systick.h:
-D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h:
-D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/ring_buffer.h:
-D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.h:
-D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Common/Include/basetypedef.h:
-D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/control_power.h:
-D:/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CMDLine/Include/command.h:
+D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/board.h:
+D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/ADC/adc.h:
+D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/I2C/i2c.h:
+D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/PWM/pwm.h:
+D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/SysTick/systick.h:
+D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h:
+D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/ring_buffer.h:
+D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.h:
+D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Common/Include/basetypedef.h:
+D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/control_power.h:
+D:/Github/Project/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CMDLine/Include/command.h:

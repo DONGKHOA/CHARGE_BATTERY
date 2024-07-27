@@ -20,7 +20,6 @@
 #define ADS1115_ADDRESS     0x48
 #define ADS1115_MAX_CHANNEL 4
 
-#define ADS1115_VREF       4096 // mV
 #define ADS1115_RESOLUTION 16   // bit
 #define ADS1115_STEP       (1 << ADS1115_RESOLUTION)
 

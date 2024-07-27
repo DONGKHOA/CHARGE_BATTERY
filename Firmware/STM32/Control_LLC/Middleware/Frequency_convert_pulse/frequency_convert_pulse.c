@@ -29,9 +29,9 @@
 #define DUTY_CYCLE 50 /**< Duty cycle percentage (50%). */
 
 #define FRE_START_THRESHOLD                                                  \
-  80000                          /**< Starting threshold frequency (80 KHz). \
+  76000                          /**< Starting threshold frequency (80 KHz). \
                                   */
-#define FRE_END_THRESHOLD 110000 /**< Ending threshold frequency (110 KHz). */
+#define FRE_END_THRESHOLD 133000 /**< Ending threshold frequency (110 KHz). */
 
 /**
  * @brief Thresholds for pre-scaler.
