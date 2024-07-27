@@ -20,7 +20,7 @@ extern "C"
 #endif
 
 /**********************
- *    PRIVATE DEFINE
+ *    PUBLIC DEFINE
  **********************/
 
 #define ADS1115_VREF       4096 // mV
