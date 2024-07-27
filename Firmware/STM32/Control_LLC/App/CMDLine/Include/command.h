@@ -23,14 +23,15 @@ extern "C"
    *   PUBLIC FUNCTIONS
    **********************/
 
-  void COMMAND_Init(void);
-  void COMMAND_CreateTask(void);
+  void APP_COMMAND_Init(void);
+  void APP_COMMAND_CreateTask(void);
 
   /**
    * @brief List of command
    */
-  int COMMAND_help(int argc, char *argv[]);
-  int COMMAND_ReadVoltageLLC(int argc, char *argv[]);
+  int APP_COMMAND_Help(int argc, char *argv[]);
+  int APP_COMMAND_ReadVoltageLLC(int argc, char *argv[]);
+  int APP_COMMAND_SetParameterPiControl(int argc, char *argv[]);
 
 #ifdef __cplusplus
 }

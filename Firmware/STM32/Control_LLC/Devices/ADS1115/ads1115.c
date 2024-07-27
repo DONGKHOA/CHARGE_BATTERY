@@ -98,7 +98,7 @@ ADS1115_GetData (ads1115_channel_t channel)
 
   i2c_1.buffer[0]   = 0x83;
   i2c_1.size_buffer = 3;
-  I2C_MasterTransmit7B((i2c_data_t *)&i2c_1);
+  BSP_I2C_MasterTransmit7B((i2c_data_t *)&i2c_1);
   if (i2c_1.status == I2C_TIMEOUT)
   {
     return 0;
@@ -106,7 +106,7 @@ ADS1115_GetData (ads1115_channel_t channel)
 
   i2c_1.buffer[0]   = 0x00;
   i2c_1.size_buffer = 1;
-  I2C_MasterTransmit7B((i2c_data_t *)&i2c_1);
+  BSP_I2C_MasterTransmit7B((i2c_data_t *)&i2c_1);
   if (i2c_1.status == I2C_TIMEOUT)
   {
     return 0;
@@ -114,7 +114,7 @@ ADS1115_GetData (ads1115_channel_t channel)
 
   LL_mDelay(20);
   i2c_1.size_buffer = 2;
-  I2C_MasterReceive7B((i2c_data_t *)&i2c_1);
+  BSP_I2C_MasterReceive7B((i2c_data_t *)&i2c_1);
 
   data[channel].data_reading = (i2c_1.buffer[0] << 8 | i2c_1.buffer[1]);
   if (data[channel].data_reading < 0)

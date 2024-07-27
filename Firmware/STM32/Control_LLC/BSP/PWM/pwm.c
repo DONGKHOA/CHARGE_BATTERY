@@ -16,11 +16,12 @@
  **********************/
 
 void
-PWM_EnableTimer (pwm_cfg_t *pwm_cfg)
+BSP_PWM_EnableTimer (pwm_cfg_t *pwm_cfg)
 {
   uint32_t u32_mode;
 
-  if ((pwm_cfg->output == PWM_POSITIVE) || (pwm_cfg->output == PWM_POSITIVE_NEGATIVE))
+  if ((pwm_cfg->output == PWM_POSITIVE)
+      || (pwm_cfg->output == PWM_POSITIVE_NEGATIVE))
   {
     if (pwm_cfg->channel == PWM_CHANNEL_1)
     {
@@ -43,7 +44,7 @@ PWM_EnableTimer (pwm_cfg_t *pwm_cfg)
   {
     if (pwm_cfg->channel == PWM_CHANNEL_1)
     {
-      u32_mode|= TIM_CCER_CC1NE;
+      u32_mode |= TIM_CCER_CC1NE;
     }
     else if (pwm_cfg->channel == PWM_CHANNEL_2)
     {
@@ -83,7 +84,7 @@ PWM_EnableTimer (pwm_cfg_t *pwm_cfg)
  * calling this function.
  */
 void
-PWM_SetParameterProcess (pwm_cfg_t *pwm_cfg)
+BSP_PWM_SetParameterProcess (pwm_cfg_t *pwm_cfg)
 {
   // Set value for PSC (Prescaler)
   LL_TIM_SetPrescaler((TIM_TypeDef *)pwm_cfg->p_tim, pwm_cfg->prescaler);
@@ -93,5 +94,4 @@ PWM_SetParameterProcess (pwm_cfg_t *pwm_cfg)
 
   // Set value for CRR (Compare Register)
   LL_TIM_OC_SetCompareCH1((TIM_TypeDef *)pwm_cfg->p_tim, pwm_cfg->reg_compare);
-
 }

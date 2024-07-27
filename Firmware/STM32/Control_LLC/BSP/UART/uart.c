@@ -41,9 +41,9 @@ static volatile uint32_t timeout = 0;
  * @param uart_irqn        UART interrupt number.
  */
 void
-UART_Config (uart_cfg_t    *uartstdio_device,
-             USART_TypeDef *uart,
-             IRQn_Type      uart_irqn)
+BSP_UART_Config (uart_cfg_t    *uartstdio_device,
+                 USART_TypeDef *uart,
+                 IRQn_Type      uart_irqn)
 {
   uartstdio_device->uart      = uart;
   uartstdio_device->uart_irqn = uart_irqn;
@@ -62,7 +62,7 @@ UART_Config (uart_cfg_t    *uartstdio_device,
 }
 
 uint8_t
-UART_IsAvailableDataReceive (uart_cfg_t *uartstdio_device)
+BSP_UART_IsAvailableDataReceive (uart_cfg_t *uartstdio_device)
 {
   if (QUEUE_Is_Empty((ring_buffer_t *)&uartstdio_device->rx_buffer))
   {
@@ -86,7 +86,7 @@ UART_IsAvailableDataReceive (uart_cfg_t *uartstdio_device)
  * the character.
  */
 void
-UART_SendChar (uart_cfg_t *uartstdio_device, char c)
+BSP_UART_SendChar (uart_cfg_t *uartstdio_device, char c)
 {
   uint32_t timeout = LIMIT_WAIT_BUFFER;
 
@@ -120,11 +120,11 @@ UART_SendChar (uart_cfg_t *uartstdio_device, char c)
  * UART.
  */
 void
-UART_SendString (uart_cfg_t *uartstdio_device, const char *s)
+BSP_UART_SendString (uart_cfg_t *uartstdio_device, const char *s)
 {
   while (*s)
   {
-    UART_SendChar(uartstdio_device, *s++);
+    BSP_UART_SendChar(uartstdio_device, *s++);
   }
 }
 
@@ -144,7 +144,7 @@ UART_SendString (uart_cfg_t *uartstdio_device, const char *s)
  * character '\0'.
  */
 char
-UART_ReadChar (uart_cfg_t *uartstdio_device)
+BSP_UART_ReadChar (uart_cfg_t *uartstdio_device)
 {
   register char c = '\0';
   if (!QUEUE_Is_Empty((ring_buffer_t *)&uartstdio_device->rx_buffer))
@@ -162,7 +162,7 @@ UART_ReadChar (uart_cfg_t *uartstdio_device)
  * equal to 0.
  */
 void
-UART_TimeOut (void)
+BSP_UART_TimeOut (void)
 {
   if (timeout != 0)
   {
@@ -188,7 +188,7 @@ UART_TimeOut (void)
  * @param uartstdio_device Pointer to the UART configuration data structure.
  */
 void
-UART_ISR (uart_cfg_t *uartstdio_device)
+BSP_UART_ISR (uart_cfg_t *uartstdio_device)
 {
   // If DR is not empty and the Rx Int is enabled
   if ((LL_USART_IsActiveFlag_RXNE(uartstdio_device->uart) != RESET)

@@ -47,16 +47,16 @@ extern "C"
    *    PUBLIC TYPEDEFS
    **********************/
 
-/**
- * @brief Configuration structure for PWM.
- *
- * This structure holds the parameters necessary for configuring a PWM
- * signal on a specified timer. It includes settings for the timer,
- * auto-reload register, compare register, prescaler, and a union for
- * channel and output mode.
- */
-typedef struct _pwm_cfg_t
-{
+  /**
+   * @brief Configuration structure for PWM.
+   *
+   * This structure holds the parameters necessary for configuring a PWM
+   * signal on a specified timer. It includes settings for the timer,
+   * auto-reload register, compare register, prescaler, and a union for
+   * channel and output mode.
+   */
+  typedef struct _pwm_cfg_t
+  {
     /**
      * @brief Pointer to the TIM peripheral used for PWM.
      *
@@ -85,36 +85,35 @@ typedef struct _pwm_cfg_t
      */
     volatile uint16_t prescaler;
 
-	/**
-	 * @brief PWM channel.
-	 *
-	 * Specifies which PWM channel to use:
-	 * - PWM_CHANNEL_1
-	 * - PWM_CHANNEL_2
-	 * - PWM_CHANNEL_3
-	 * - PWM_CHANNEL_4
-	 */
-	volatile uint32_t channel;
+    /**
+     * @brief PWM channel.
+     *
+     * Specifies which PWM channel to use:
+     * - PWM_CHANNEL_1
+     * - PWM_CHANNEL_2
+     * - PWM_CHANNEL_3
+     * - PWM_CHANNEL_4
+     */
+    volatile uint32_t channel;
 
-	/**
-	 * @brief PWM output mode.
-	 *
-	 * Specifies the output mode:
-	 * - PWM_POSITIVE
-	 * - PWM_POSITIVE_NEGATIVE
-	 * - PWM_NO_OUTPUT
-	 */
-	volatile uint8_t output : 2;
+    /**
+     * @brief PWM output mode.
+     *
+     * Specifies the output mode:
+     * - PWM_POSITIVE
+     * - PWM_POSITIVE_NEGATIVE
+     * - PWM_NO_OUTPUT
+     */
+    volatile uint8_t output : 2;
 
-} pwm_cfg_t;
-
+  } pwm_cfg_t;
 
   /**********************
    *    PUBLIC FUNCTIONS
    **********************/
 
-  void PWM_SetParameterProcess(pwm_cfg_t *pwm_cfg);
-  void PWM_EnableTimer(pwm_cfg_t *pwm_cfg);
+  void BSP_PWM_SetParameterProcess(pwm_cfg_t *pwm_cfg);
+  void BSP_PWM_EnableTimer(pwm_cfg_t *pwm_cfg);
   /**
    * @brief Resets PWM parameters in the configuration structure to default
    * values.
@@ -124,7 +123,7 @@ typedef struct _pwm_cfg_t
    *
    * @param pwm_cfg Pointer to a `pwm_cfg_t` structure to reset.
    */
-  static inline void PWM_ResetParameter (pwm_cfg_t *pwm_cfg)
+  static inline void BSP_PWM_ResetParameter (pwm_cfg_t *pwm_cfg)
   {
     pwm_cfg->reg_auto_reload = 0;
     pwm_cfg->reg_compare     = 0;

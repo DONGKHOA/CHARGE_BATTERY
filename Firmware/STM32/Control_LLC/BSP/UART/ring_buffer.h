@@ -39,7 +39,7 @@ extern "C"
    *********************/
 
   void    QUEUE_Init(ring_buffer_t *rb);
-  void 		QUEUE_Reset(ring_buffer_t *rb);
+  void    QUEUE_Reset(ring_buffer_t *rb);
   bool    QUEUE_Is_Empty(ring_buffer_t *rb);
   bool    QUEUE_Is_Full(ring_buffer_t *rb);
   void    QUEUE_Push_Data(ring_buffer_t *rb, char element);

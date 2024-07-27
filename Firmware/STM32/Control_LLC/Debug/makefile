@@ -24,6 +24,7 @@ RM := rm -rf
 -include BSP/I2C/subdir.mk
 -include BSP/ADC/subdir.mk
 -include App/LED/subdir.mk
+-include App/Data/subdir.mk
 -include App/Control/subdir.mk
 -include App/CMDLine/subdir.mk
 -include objects.mk

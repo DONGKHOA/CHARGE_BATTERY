@@ -61,8 +61,8 @@ typedef struct SCH_TimerContextTypedef
  *********************/
 
 // START STOP SYS_TICK?
-#define SCH_START systick_timer_start()
-#define SCH_STOP  systick_timer_stop()
+#define SCH_START BSP_SYSTICK_TimerStart()
+#define SCH_STOP  BSP_SYSTICK_TimerStop()
 
 static SCH_TaskContextTypedef  s_TaskContext[MAX_TASK];
 static uint8_t                 s_NumOfTaskScheduled;
@@ -106,7 +106,7 @@ SCH_Initialize (void)
   memset((uint8_t *)&s_SoftTimers[0], RESET, (sizeof(uint32_t) * SCH_TIM_LAST));
 
   /**< @brief Initialize SysTick timer. */
-  systick_timer_init();
+  BSP_SYSTICK_TimerInit();
 }
 
 /**

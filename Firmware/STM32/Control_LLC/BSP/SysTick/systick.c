@@ -22,7 +22,7 @@
  * This function enables the SysTick timer.
  */
 void
-systick_timer_start (void)
+BSP_SYSTICK_TimerStart (void)
 {
 
   SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
@@ -34,7 +34,7 @@ systick_timer_start (void)
  * This function disables the SysTick timer.
  */
 void
-systick_timer_stop (void)
+BSP_SYSTICK_TimerStop (void)
 {
   SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
 }
@@ -47,7 +47,7 @@ systick_timer_stop (void)
  * of 1 millisecond, based on the system core clock.
  */
 void
-systick_timer_init (void)
+BSP_SYSTICK_TimerInit (void)
 {
   SysTick_Config(SystemCoreClock / 1000);
 }

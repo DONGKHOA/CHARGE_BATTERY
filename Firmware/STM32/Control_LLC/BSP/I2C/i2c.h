@@ -55,11 +55,11 @@ extern "C"
    *   PUBLIC FUNCTIONS
    **********************/
 
-  extern i2c_status_t I2C_MasterTransmit7B(i2c_data_t *p_i2c);
-  extern i2c_status_t I2C_MasterReceive7B(i2c_data_t *p_i2c);
+  i2c_status_t BSP_I2C_MasterTransmit7B(i2c_data_t *p_i2c);
+  i2c_status_t BSP_I2C_MasterReceive7B(i2c_data_t *p_i2c);
 
   // Call Function "I2C_TimeOut" in ISR SysTick
-  extern void I2C_TimeOut(void);
+  void BSP_I2C_TimeOut(void);
 
 #ifdef __cplusplus
 }

@@ -58,7 +58,7 @@ static i2c_status_t I2C_WaitBitRXNE(I2C_TypeDef *_i2c_reg);
  * @return Status of the I2C operation.
  */
 i2c_status_t
-I2C_MasterTransmit7B (i2c_data_t *p_i2c)
+BSP_I2C_MasterTransmit7B (i2c_data_t *p_i2c)
 {
   // Start Condition
   p_i2c->status = I2C_MasterStart((I2C_TypeDef *)p_i2c->i2c_reg);
@@ -127,7 +127,7 @@ I2C_MasterTransmit7B (i2c_data_t *p_i2c)
  * @return Status of the I2C operation.
  */
 i2c_status_t
-I2C_MasterReceive7B (i2c_data_t *p_i2c)
+BSP_I2C_MasterReceive7B (i2c_data_t *p_i2c)
 {
   uint32_t remaining = p_i2c->size_buffer;
   // Start Condition
@@ -208,7 +208,7 @@ last_byte:
  * timeouts.
  */
 void
-I2C_TimeOut (void)
+BSP_I2C_TimeOut (void)
 {
   if (timer_wait_set >= 0)
   {

@@ -40,19 +40,19 @@ extern "C"
    *   PUBLIC FUNCTION
    *********************/
 
-  void    UART_Config(uart_cfg_t    *uartstdio_device,
-                      USART_TypeDef *uart,
-                      IRQn_Type      uart_irqn);
-  uint8_t UART_IsAvailableDataReceive(uart_cfg_t *uartstdio_device);
-  void    UART_SendChar(uart_cfg_t *uartstdio_device, char c);
-  void    UART_SendString(uart_cfg_t *uartstdio_device, const char *s);
-  char    UART_ReadChar(uart_cfg_t *uartstdio_device);
+  void    BSP_UART_Config(uart_cfg_t    *uartstdio_device,
+                          USART_TypeDef *uart,
+                          IRQn_Type      uart_irqn);
+  uint8_t BSP_UART_IsAvailableDataReceive(uart_cfg_t *uartstdio_device);
+  void    BSP_UART_SendChar(uart_cfg_t *uartstdio_device, char c);
+  void    BSP_UART_SendString(uart_cfg_t *uartstdio_device, const char *s);
+  char    BSP_UART_ReadChar(uart_cfg_t *uartstdio_device);
 
   // Call Function "UART_TimeOut" in ISR SysTick
-  void UART_TimeOut(void);
+  void BSP_UART_TimeOut(void);
 
   // Call Function "UART_ISR" in ISR UART
-  void UART_ISR(uart_cfg_t *uartstdio_device);
+  void BSP_UART_ISR(uart_cfg_t *uartstdio_device);
 
 #ifdef __cplusplus
 }

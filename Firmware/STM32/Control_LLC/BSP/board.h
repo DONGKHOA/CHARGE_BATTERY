@@ -61,9 +61,9 @@ extern "C"
   // Call Function in "SysTick ISR"
   static inline void BOARD_TimeOut (void)
   {
-    UART_TimeOut();
-    ADC_TimeOut();
-    I2C_TimeOut();
+    BSP_UART_TimeOut();
+    BSP_ADC_TimeOut();
+    BSP_I2C_TimeOut();
   }
 
 #ifdef __cplusplus

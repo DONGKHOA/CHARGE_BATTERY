@@ -115,12 +115,12 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   // Initialization Application
-  COMMAND_Init();
-  CONTROL_Init();
+  APP_COMMAND_Init();
+  APP_CONTROL_Init();
 
   // Create Task
-  COMMAND_CreateTask();
-  CONTROL_CreateTask();
+  APP_COMMAND_CreateTask();
+  APP_CONTROL_CreateTask();
 
   SCH_StartSchedular();
   /* USER CODE END 2 */

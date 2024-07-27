@@ -13,6 +13,8 @@
 #include "Private/data_private.h"
 #include "pwm.h"
 
+#include "data_struct.h"
+
 #include <stdio.h>
 
 /**********************
@@ -26,9 +28,6 @@
  */
 #define DUTY_CYCLE 50 /**< Duty cycle percentage (50%). */
 
-/**
- * @brief Thresholds for frequency.
- */
 #define FRE_START_THRESHOLD                                                  \
   80000                          /**< Starting threshold frequency (80 KHz). \
                                   */
@@ -65,10 +64,10 @@
                                 value. */
 
 /**********************
- *    DATA
+ *   PRIVATE DATA
  **********************/
 
-extern pwm_cfg_t pwm_control_1;
+static pwm_cfg_t *pwm_control_1 = &control_llc_data.control_gate;
 
 /******************************
  *  PRIVATE PROTOTYPE FUNCTION
@@ -96,16 +95,16 @@ FCP_PhaseStart (uint8_t time)
   time = time > 20 ? (time - 20) : 0;
 
   // Set the prescaler value
-  pwm_control_1.prescaler = table_data_start[time].prescaler_timer - 1;
+  pwm_control_1->prescaler = table_data_start[time].prescaler_timer - 1;
   // Set the auto-reload register value
-  pwm_control_1.reg_auto_reload
+  pwm_control_1->reg_auto_reload
       = table_data_start[time].auto_reload_reg_timer - 1;
   // Set the compare register value
-  pwm_control_1.reg_compare
+  pwm_control_1->reg_compare
       = table_data_start[time].auto_reload_reg_timer * DUTY_CYCLE / 100;
 
   // Apply the PWM parameters
-  PWM_SetParameterProcess(&pwm_control_1);
+  BSP_PWM_SetParameterProcess(pwm_control_1);
 }
 
 /**
@@ -126,20 +125,20 @@ FCP_PhaseProcess (uint32_t frequency)
   if (frequency > FRE_END_THRESHOLD)
   {
     // Set the prescaler value
-    pwm_control_1.prescaler = PRE_END_THRESHOLD - 1;
+    pwm_control_1->prescaler = PRE_END_THRESHOLD - 1;
     // Set the auto-reload register value
-    pwm_control_1.reg_auto_reload = REG_END_THRESHOLD - 1;
+    pwm_control_1->reg_auto_reload = REG_END_THRESHOLD - 1;
     // Set the compare register value
-    pwm_control_1.reg_compare = REG_END_THRESHOLD * DUTY_CYCLE / 100;
+    pwm_control_1->reg_compare = REG_END_THRESHOLD * DUTY_CYCLE / 100;
   }
   else if (frequency < FRE_START_THRESHOLD)
   {
     // Set the prescaler value
-    pwm_control_1.prescaler = PRE_START_THRESHOLD - 1;
+    pwm_control_1->prescaler = PRE_START_THRESHOLD - 1;
     // Set the auto-reload register value
-    pwm_control_1.reg_auto_reload = REG_START_THRESHOLD - 1;
+    pwm_control_1->reg_auto_reload = REG_START_THRESHOLD - 1;
     // Set the compare register value
-    pwm_control_1.reg_compare = REG_START_THRESHOLD * DUTY_CYCLE / 100;
+    pwm_control_1->reg_compare = REG_START_THRESHOLD * DUTY_CYCLE / 100;
   }
   else
   {
@@ -155,12 +154,13 @@ FCP_PhaseProcess (uint32_t frequency)
       if (delta_1 <= delta_2)
       {
         // Set the prescaler value
-        pwm_control_1.prescaler = table_data_process[i - 1].prescaler_timer - 1;
+        pwm_control_1->prescaler
+            = table_data_process[i - 1].prescaler_timer - 1;
         // Set the auto-reload register value
-        pwm_control_1.reg_auto_reload
+        pwm_control_1->reg_auto_reload
             = table_data_process[i - 1].auto_reload_reg_timer - 1;
         // Set the compare register value
-        pwm_control_1.reg_compare
+        pwm_control_1->reg_compare
             = table_data_process[i - 1].auto_reload_reg_timer * DUTY_CYCLE
               / 100;
         break;
@@ -168,7 +168,7 @@ FCP_PhaseProcess (uint32_t frequency)
     }
   }
 
-  PWM_SetParameterProcess(&pwm_control_1);
+  BSP_PWM_SetParameterProcess(pwm_control_1);
 }
 
 /**********************

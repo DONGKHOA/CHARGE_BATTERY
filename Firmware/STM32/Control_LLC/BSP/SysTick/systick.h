@@ -16,9 +16,9 @@ extern "C"
   /**********************
    *   PUBLIC FUNCTIONS
    **********************/
-  void systick_timer_start(void);
-  void systick_timer_stop(void);
-  void systick_timer_init(void);
+  void BSP_SYSTICK_TimerStart(void);
+  void BSP_SYSTICK_TimerStop(void);
+  void BSP_SYSTICK_TimerInit(void);
 
 #ifdef __cplusplus
 }

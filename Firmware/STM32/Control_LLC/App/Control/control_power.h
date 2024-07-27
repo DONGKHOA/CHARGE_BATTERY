@@ -23,8 +23,8 @@ extern "C"
    *   PUBLIC FUNCTIONS
    **********************/
 
-  void CONTROL_Init(void);
-  void CONTROL_CreateTask(void);
+  void APP_CONTROL_Init(void);
+  void APP_CONTROL_CreateTask(void);
 
 #ifdef __cplusplus
 }
