@@ -2861,48 +2861,67 @@
 				)
 			)
 		)
-		(symbol "charge_battery_sym_lib:Diode_DSEI60-06A_FRED_TO247"
+		(symbol "charge_battery_sym_lib:DSEI60-06A"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "D"
-				(at -8.636 6.096 0)
+				(at 0 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "60A, 600V"
-				(at -8.636 6.096 0)
+			(property "Value" "600V 60A"
+				(at 0 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" "charge_battery_footprint_lib:Diode_FRED_TO247"
-				(at -8.636 6.096 0)
+			(property "Footprint" "Package_TO_SOT_THT:TO-247-2_Vertical"
+				(at -1.27 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
-						(italic yes)
 					)
 					(hide yes)
 				)
 			)
 			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_Littelfuse-IXYS-DSEI60-06A_C426674.pdf"
-				(at -8.636 6.096 0)
+				(at -1.27 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
-						(italic yes)
 					)
 					(hide yes)
 				)
 			)
 			(property "Description" "60A, 600V, Diode Fred, TO-247AD"
-				(at -8.636 6.096 0)
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply name " " Thegioiic"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply part number" "DSEI60-06A Diode Chỉnh Lưu 60A 600V"
+				(at -1.27 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2911,7 +2930,7 @@
 				)
 			)
 			(property "Supply URL" "https://www.thegioiic.com/dsei60-06a-diode-chinh-luu-60a-600v"
-				(at -16.51 6.35 0)
+				(at -1.27 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2919,25 +2938,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply part name" "DSEI60-06A Diode Chỉnh Lưu 60A 600V"
-				(at -22.098 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply name" "Thegioiic"
-				(at -20.066 6.096 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Diode_FRED_DSEI60"
+			(property "ki_keywords" "diode"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2946,49 +2947,58 @@
 					(hide yes)
 				)
 			)
-			(symbol "Diode_DSEI60-06A_FRED_TO247_0_1"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy 2.54 0)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
+					(hide yes)
 				)
 			)
-			(symbol "Diode_DSEI60-06A_FRED_TO247_1_1"
+			(symbol "DSEI60-06A_0_1"
 				(polyline
 					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27) (xy 1.27 0) (xy -1.27 1.27)
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
 						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
 						(type default)
 					)
 					(fill
 						(type outline)
 					)
 				)
-				(pin unspecified line
-					(at -5.08 0 0)
+			)
+			(symbol "DSEI60-06A_1_1"
+				(pin passive line
+					(at -3.81 0 0)
 					(length 2.54)
-					(name ""
+					(name "K"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3003,10 +3013,10 @@
 						)
 					)
 				)
-				(pin unspecified line
-					(at 5.08 0 180)
+				(pin passive line
+					(at 3.81 0 180)
 					(length 2.54)
-					(name ""
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3029,16 +3039,16 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
+			(property "Reference" "D4"
+				(at 0.254 5.842 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Diode_Shottky_SR5100"
-				(at -3.556 15.24 0)
+			(property "Value" "650V, 20A"
+				(at 0.254 3.302 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3099,14 +3109,6 @@
 					(hide yes)
 				)
 			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
 			(property "ki_keywords" "diode"
 				(at 0 0 0)
 				(effects
@@ -3154,7 +3156,7 @@
 					)
 				)
 				(pin passive line
-					(at 3.81 0 180)
+					(at -3.81 0 0)
 					(length 2.54)
 					(name "A"
 						(effects
@@ -3174,26 +3176,6 @@
 			)
 			(symbol "Diode_Shottky_DBoost_1_1"
 				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "Diode_Shottky_DBoost_2_1"
-				(pin passive line
 					(at 3.81 0 180)
 					(length 2.54)
 					(name "K"
@@ -3203,7 +3185,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3227,7 +3209,7 @@
 					)
 				)
 			)
-			(property "Value" "Diode_Shottky_SR5100"
+			(property "Value" "100V 5A"
 				(at -3.556 15.24 0)
 				(effects
 					(font
@@ -3235,7 +3217,7 @@
 					)
 				)
 			)
-			(property "Footprint" "charge_battery_footprint_lib:Diode_Schottky_SR5100"
+			(property "Footprint" "Diode_THT:D_DO-27_P12.70mm_Horizontal"
 				(at -12.446 14.986 0)
 				(effects
 					(font
@@ -3289,14 +3271,6 @@
 					(hide yes)
 				)
 			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
 			(property "ki_keywords" "diode"
 				(at 0 0 0)
 				(effects
@@ -3344,7 +3318,7 @@
 					)
 				)
 				(pin passive line
-					(at 3.81 0 180)
+					(at -3.81 0 0)
 					(length 2.54)
 					(name "A"
 						(effects
@@ -3364,26 +3338,6 @@
 			)
 			(symbol "Diode_Shottky_SR5100_1_1"
 				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "Diode_Shottky_SR5100_2_1"
-				(pin passive line
 					(at 3.81 0 180)
 					(length 2.54)
 					(name "K"
@@ -3393,7 +3347,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7385,22 +7339,16 @@
 		(uuid "2c73fccf-6a46-4c62-a6e1-651a02494469")
 	)
 	(junction
-		(at 265.43 54.61)
+		(at 236.22 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "30baa839-5e95-482e-aee7-e992b4a4bdae")
+		(uuid "3678e27b-c3e6-49f3-8e96-a27a2fad1260")
 	)
 	(junction
 		(at 149.86 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "376a9dc6-287d-4291-8779-c39333451a89")
-	)
-	(junction
-		(at 242.57 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "39055b87-15e8-4efc-a009-826ce72f3cd0")
 	)
 	(junction
 		(at 283.21 54.61)
@@ -7445,10 +7393,10 @@
 		(uuid "51eabd3b-5d57-4a57-9be3-ed865818e461")
 	)
 	(junction
-		(at 242.57 93.98)
+		(at 236.22 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "54b2922c-82df-4102-8f4b-9841d567a4d5")
+		(uuid "51f0d5c8-eed6-40a2-89fa-ef318984d00f")
 	)
 	(junction
 		(at 149.86 149.86)
@@ -7457,16 +7405,16 @@
 		(uuid "5bd4507d-a81e-4adc-8a5b-62b44725890c")
 	)
 	(junction
-		(at 208.28 54.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5cf38606-20a0-40f3-83a2-991fc7e847a2")
-	)
-	(junction
 		(at 67.31 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "619e624b-ddac-4121-8667-2a58aaaa143b")
+	)
+	(junction
+		(at 168.91 189.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "63e95df9-23cb-4343-89a4-9212a238aad9")
 	)
 	(junction
 		(at 252.73 54.61)
@@ -7517,12 +7465,6 @@
 		(uuid "858b446b-8a75-4eea-8c7b-6eeb2327751b")
 	)
 	(junction
-		(at 208.28 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "86de886f-f178-4a9c-8fab-408114ee310d")
-	)
-	(junction
 		(at 325.12 180.34)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7539,6 +7481,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8f024f5a-2e4b-4a97-b791-416409c40549")
+	)
+	(junction
+		(at 204.47 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a48b433c-b9d3-4d16-94a0-7842fad340b1")
 	)
 	(junction
 		(at 99.06 87.63)
@@ -7563,6 +7511,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bbc6204f-5d93-48c6-8ae4-e29fc0b6d4ce")
+	)
+	(junction
+		(at 204.47 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c1d2ddbd-368f-4599-bf73-c31b88ef9f04")
 	)
 	(junction
 		(at 234.95 189.23)
@@ -7601,12 +7555,6 @@
 		(uuid "f3561320-c3db-40d2-99c4-fe26eb4497b0")
 	)
 	(junction
-		(at 172.72 189.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f674dbd3-776c-497e-bce8-0f0597c5a449")
-	)
-	(junction
 		(at 149.86 189.23)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7630,7 +7578,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 87.63) (xy 208.28 93.98)
+			(xy 204.47 87.63) (xy 204.47 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7650,7 +7598,7 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 54.61) (xy 261.62 54.61)
+			(xy 261.62 54.61) (xy 266.7 54.61)
 		)
 		(stroke
 			(width 0)
@@ -7740,7 +7688,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 76.2) (xy 208.28 80.01)
+			(xy 204.47 76.2) (xy 204.47 80.01)
 		)
 		(stroke
 			(width 0)
@@ -7757,16 +7705,6 @@
 			(type default)
 		)
 		(uuid "10a7253c-8e45-4642-bfc9-62024989c240")
-	)
-	(wire
-		(pts
-			(xy 208.28 76.2) (xy 208.28 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "10f5f8d1-7456-45e8-a412-306496de7fbf")
 	)
 	(wire
 		(pts
@@ -7810,7 +7748,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 76.2) (xy 242.57 76.2)
+			(xy 236.22 76.2) (xy 245.11 76.2)
 		)
 		(stroke
 			(width 0)
@@ -7920,7 +7858,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 48.26) (xy 242.57 48.26)
+			(xy 234.95 48.26) (xy 243.84 48.26)
 		)
 		(stroke
 			(width 0)
@@ -7950,16 +7888,6 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 90.17) (xy 242.57 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2813b3c9-4037-4f1c-86f0-a13052554fb4")
-	)
-	(wire
-		(pts
 			(xy 63.5 59.69) (xy 67.31 59.69)
 		)
 		(stroke
@@ -7980,16 +7908,6 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 60.96) (xy 208.28 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "35109bea-f7e2-4eca-81ca-e74e2768c0d7")
-	)
-	(wire
-		(pts
 			(xy 149.86 102.87) (xy 184.15 102.87)
 		)
 		(stroke
@@ -7997,6 +7915,16 @@
 			(type default)
 		)
 		(uuid "358e7628-f6af-4042-b432-db1ce615a4af")
+	)
+	(wire
+		(pts
+			(xy 168.91 189.23) (xy 184.15 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37cefaaa-7e19-4aee-9c06-43fddfd02b57")
 	)
 	(wire
 		(pts
@@ -8110,7 +8038,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 173.99) (xy 172.72 177.8)
+			(xy 168.91 173.99) (xy 168.91 177.8)
 		)
 		(stroke
 			(width 0)
@@ -8130,23 +8058,13 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 93.98) (xy 252.73 93.98)
+			(xy 204.47 93.98) (xy 236.22 93.98)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "491fb9eb-78e3-49ad-a288-bc91b375bd77")
-	)
-	(wire
-		(pts
-			(xy 242.57 82.55) (xy 242.57 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4a4a39e6-bf82-48ec-b1e8-f1786db5ca40")
 	)
 	(wire
 		(pts
@@ -8300,6 +8218,16 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 93.98) (xy 252.73 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63f40a6e-a376-494e-b30b-f356d871bc88")
+	)
+	(wire
+		(pts
 			(xy 283.21 54.61) (xy 297.18 54.61)
 		)
 		(stroke
@@ -8310,6 +8238,26 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 154.94) (xy 184.15 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6877b004-650f-49e6-8bbf-62a3b47aef07")
+	)
+	(wire
+		(pts
+			(xy 204.47 60.96) (xy 204.47 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b07a0f5-68a6-4d5d-bb74-d7dba902dd74")
+	)
+	(wire
+		(pts
 			(xy 134.62 99.06) (xy 134.62 97.79)
 		)
 		(stroke
@@ -8317,6 +8265,16 @@
 			(type default)
 		)
 		(uuid "6cb719a8-f4bc-4efb-96d5-9a763bc8f131")
+	)
+	(wire
+		(pts
+			(xy 236.22 83.82) (xy 236.22 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "702ba4fd-5e96-4369-9c2f-f1f568cacc8e")
 	)
 	(wire
 		(pts
@@ -8380,16 +8338,6 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 54.61) (xy 266.7 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "804467d7-9cb4-4d7e-9f3c-12baaf33a01c")
-	)
-	(wire
-		(pts
 			(xy 67.31 59.69) (xy 67.31 99.06)
 		)
 		(stroke
@@ -8420,6 +8368,16 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 91.44) (xy 236.22 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d4d16fe-eedf-4914-8d32-78b6ade92637")
+	)
+	(wire
+		(pts
 			(xy 256.54 135.89) (xy 256.54 143.51)
 		)
 		(stroke
@@ -8437,26 +8395,6 @@
 			(type default)
 		)
 		(uuid "9178474f-9fcc-4650-a8e1-46f7b4c363da")
-	)
-	(wire
-		(pts
-			(xy 242.57 76.2) (xy 245.11 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "94260f84-cb31-421c-83f9-34e625048a25")
-	)
-	(wire
-		(pts
-			(xy 252.73 48.26) (xy 265.43 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "94a40910-48fa-4103-960a-233db14c8856")
 	)
 	(wire
 		(pts
@@ -8510,6 +8448,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 166.37) (xy 168.91 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d5c7809-7ba9-4c06-ba00-b4336d842d67")
+	)
+	(wire
+		(pts
 			(xy 67.31 99.06) (xy 67.31 101.6)
 		)
 		(stroke
@@ -8560,13 +8508,23 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 93.98) (xy 242.57 93.98)
+			(xy 204.47 68.58) (xy 204.47 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a84d4ed8-a6f1-4745-816c-bebb3a7b7c98")
+		(uuid "a857817c-0aca-4182-b464-697808b0cc97")
+	)
+	(wire
+		(pts
+			(xy 204.47 54.61) (xy 234.95 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a85e71bc-5d05-4c1b-bf58-46218bd1bdd1")
 	)
 	(wire
 		(pts
@@ -8577,6 +8535,16 @@
 			(type default)
 		)
 		(uuid "a99d8a73-607f-48fc-ab76-dfc4215d4750")
+	)
+	(wire
+		(pts
+			(xy 168.91 185.42) (xy 168.91 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a99e15cc-749b-4f0a-9e95-c8bbc75325cc")
 	)
 	(wire
 		(pts
@@ -8670,7 +8638,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 76.2) (xy 208.28 76.2)
+			(xy 184.15 76.2) (xy 204.47 76.2)
 		)
 		(stroke
 			(width 0)
@@ -8740,16 +8708,6 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 166.37) (xy 172.72 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c1c61e7c-3a79-4677-8cb3-9f15f1341490")
-	)
-	(wire
-		(pts
 			(xy 223.52 189.23) (xy 234.95 189.23)
 		)
 		(stroke
@@ -8780,7 +8738,7 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 48.26) (xy 265.43 54.61)
+			(xy 266.7 48.26) (xy 266.7 54.61)
 		)
 		(stroke
 			(width 0)
@@ -8930,6 +8888,16 @@
 	)
 	(wire
 		(pts
+			(xy 251.46 48.26) (xy 266.7 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dee434a3-5f6b-4099-a602-c381900d8bdf")
+	)
+	(wire
+		(pts
 			(xy 223.52 165.1) (xy 223.52 189.23)
 		)
 		(stroke
@@ -9020,16 +8988,6 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 54.61) (xy 234.95 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ee43103c-a459-4ab2-837f-6d296f98ab00")
-	)
-	(wire
-		(pts
 			(xy 87.63 54.61) (xy 99.06 54.61)
 		)
 		(stroke
@@ -9040,33 +8998,13 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 54.61) (xy 208.28 54.61)
+			(xy 184.15 54.61) (xy 204.47 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f122056d-014b-4938-a340-39a85839b2d9")
-	)
-	(wire
-		(pts
-			(xy 184.15 189.23) (xy 172.72 189.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5c6fafe-4c95-4fc1-ad95-bdead07b49de")
-	)
-	(wire
-		(pts
-			(xy 172.72 154.94) (xy 184.15 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f729dcd0-dbf1-4157-a403-962ebebf61ce")
 	)
 	(wire
 		(pts
@@ -9100,23 +9038,13 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 189.23) (xy 149.86 189.23)
+			(xy 149.86 189.23) (xy 168.91 189.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "fcb4a0c0-3810-4fed-869b-1daf39129653")
-	)
-	(wire
-		(pts
-			(xy 172.72 185.42) (xy 172.72 189.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe4f7673-2096-4a7f-8df1-928d25c1e85b")
 	)
 	(text "Earth"
 		(exclude_from_sim no)
@@ -9238,7 +9166,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "100nF_50V_3216"
+		(property "Value" "100nF_50V_1206"
 			(at 307.34 186.6899 90)
 			(effects
 				(font
@@ -9413,6 +9341,104 @@
 		)
 	)
 	(symbol
+		(lib_id "charge_battery_sym_lib:Film Cap")
+		(at 149.86 73.66 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0f0e48e5-a4c2-46c5-b7fe-45ee6e5d362e")
+		(property "Reference" "C6"
+			(at 153.67 68.5799 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100nF, 275VAC"
+			(at 151.638 71.12 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Candy_Cap_hole_100nF_275V"
+			(at 158.496 73.914 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 158.75 62.992 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.1uF 275VAC, size: 10x13mm, pitch: 15mm"
+			(at 158.75 73.406 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 158.496 73.406 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Tụ Kẹo Vàng X2 100nF (0.1uF) 104K 275VAC"
+			(at 158.496 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/tu-keo-vang-x2-100nf-0-1uf-104k-275vac"
+			(at 158.496 67.564 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7c8e19a7-fdd9-4195-a6f3-68f88cdeae5a")
+		)
+		(pin "2"
+			(uuid "61a70489-02bd-4c4d-8b0d-9bfc27a2aebf")
+		)
+		(instances
+			(project "PFC"
+				(path "/3b17fecf-a6c4-4ae7-a684-61da545cc8d4"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Transistor_BJT:MMBT3904")
 		(at 288.29 180.34 0)
 		(mirror y)
@@ -9490,7 +9516,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Res_hole_10K_1/4W_1%")
-		(at 241.3 87.63 90)
+		(at 234.95 88.9 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9499,7 +9525,7 @@
 		(fields_autoplaced yes)
 		(uuid "1c426c10-136d-4be4-91d6-ab08b1429685")
 		(property "Reference" "R5"
-			(at 244.348 85.0899 90)
+			(at 237.998 86.3599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9508,7 +9534,7 @@
 			)
 		)
 		(property "Value" "10K_1/4W_1%"
-			(at 244.348 87.6299 90)
+			(at 237.998 88.8999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9517,7 +9543,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_10K_1_4W_1%"
-			(at 213.106 107.442 0)
+			(at 206.756 108.712 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9526,7 +9552,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 213.614 104.902 90)
+			(at 207.264 106.172 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9535,7 +9561,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 212.598 104.648 0)
+			(at 206.248 105.918 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9544,7 +9570,7 @@
 			)
 		)
 		(property "Supply name " "Thegioiic"
-			(at 212.598 97.536 0)
+			(at 206.248 98.806 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9553,7 +9579,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 10 KOhm 1/4W 1% 5 Vòng Màu"
-			(at 212.852 98.044 0)
+			(at 206.502 99.314 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9562,7 +9588,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-1-4w-1-5-vong-mau"
-			(at 212.852 98.044 0)
+			(at 206.502 99.314 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9996,7 +10022,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10K/1%/1_4W"
+		(property "Value" "10K_1/4W_1%_1206"
 			(at 327.66 186.6899 90)
 			(effects
 				(font
@@ -10075,201 +10101,6 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:Diode_DSEI60-06A_FRED_TO247")
-		(at 247.65 48.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4826e70c-0975-4507-95a6-dedd306e1f13")
-		(property "Reference" "D3"
-			(at 247.65 42.418 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "60A, 600V"
-			(at 247.65 44.958 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Diode_FRED_TO247"
-			(at 239.014 42.164 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_Littelfuse-IXYS-DSEI60-06A_C426674.pdf"
-			(at 239.014 42.164 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "60A, 600V, Diode Fred, TO-247AD"
-			(at 239.014 42.164 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dsei60-06a-diode-chinh-luu-60a-600v"
-			(at 231.14 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part name" "DSEI60-06A Diode Chỉnh Lưu 60A 600V"
-			(at 225.552 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 227.584 42.164 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bf79adb6-c05b-4fc5-90b9-ac2ee3d9f6ff")
-		)
-		(pin "2"
-			(uuid "f558c484-e5ad-4357-a1a7-ae8fb6e4af23")
-		)
-		(instances
-			(project "PFC"
-				(path "/3b17fecf-a6c4-4ae7-a684-61da545cc8d4"
-					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:Diode_Shottky_SR5100")
-		(at 228.6 68.58 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4ea8d73b-0224-454d-a457-59440a272b80")
-		(property "Reference" "D2"
-			(at 228.346 61.722 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100V 5A"
-			(at 228.346 64.262 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Diode_Schottky_SR5100"
-			(at 241.046 83.566 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.farnell.com/datasheets/2175829.pdf?_ga=2.84777433.1112515608.1530949777-1793405792.1522642447"
-			(at 236.474 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "5A 100V Schottky Rectifier Diode"
-			(at 231.648 84.074 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 232.918 83.312 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "SR5100 Schottky Diode 5A 100V"
-			(at 234.696 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/sr5100-schottky-diode-5a-100v"
-			(at 234.696 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "320baa29-edc9-4566-ab4e-7ff2c3d4566e")
-		)
-		(pin "3"
-			(uuid "fc54eb67-1446-4cc7-96cc-f2a3f4b2d0b1")
-		)
-		(pin "1"
-			(uuid "d17fc611-19c4-4720-a13e-fb5996221d31")
-		)
-		(instances
-			(project "PFC"
-				(path "/3b17fecf-a6c4-4ae7-a684-61da545cc8d4"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "charge_battery_sym_lib:Res_hole_18K_1/4W_1%")
 		(at 255.27 118.11 90)
 		(unit 1)
@@ -10288,7 +10119,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "330K_1/4W_1%_3216"
+		(property "Value" "330K_1/4W_1%_1206"
 			(at 259.08 118.1099 90)
 			(effects
 				(font
@@ -10385,7 +10216,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "6.8uF_25V_0805"
+		(property "Value" "330nF_50V_1206"
 			(at 187.452 179.0699 90)
 			(effects
 				(font
@@ -10394,7 +10225,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Inductor_SMD:L_1206_3216Metric"
 			(at 177.038 178.054 0)
 			(effects
 				(font
@@ -10412,7 +10243,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "10%, 0805"
+		(property "Description" "10%, 1206 (3216 Metric)"
 			(at 176.53 176.784 0)
 			(effects
 				(font
@@ -10421,7 +10252,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name" "CXT"
+		(property "Supply name" "Thegioiic"
 			(at 177.038 176.53 0)
 			(effects
 				(font
@@ -10430,7 +10261,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Tụ 6.8uF 0805 25v 10% (10c)"
+		(property "Supply part number" "Tụ Gốm 1206 330nF 50V"
 			(at 176.53 176.53 0)
 			(effects
 				(font
@@ -10439,7 +10270,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://linhkien.cxt.vn/3500-tu-khong-phan-cuc-0805.html"
+		(property "Supply URL" "https://www.thegioiic.com/tu-gom-1206-330nf-50v"
 			(at 177.038 177.8 0)
 			(effects
 				(font
@@ -10725,7 +10556,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_Hole_10uF_50V")
-		(at 170.688 181.61 90)
+		(at 166.878 181.61 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10734,7 +10565,7 @@
 		(fields_autoplaced yes)
 		(uuid "6ae56ec8-3abd-495a-bb38-4e429127dcd8")
 		(property "Reference" "C8"
-			(at 176.53 180.3399 90)
+			(at 172.72 180.3399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10742,8 +10573,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "8.2uF_50V_0805"
-			(at 176.53 182.8799 90)
+		(property "Value" "4.7uF_50V_0805"
+			(at 172.72 182.8799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10752,7 +10583,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 165.608 181.864 0)
+			(at 161.798 181.864 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10761,7 +10592,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.608 181.356 0)
+			(at 161.798 181.356 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10770,7 +10601,7 @@
 			)
 		)
 		(property "Description" "10%, 0805 (2012 Metric)"
-			(at 165.1 180.594 0)
+			(at 161.29 180.594 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10779,7 +10610,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 165.608 180.34 0)
+			(at 161.798 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10787,8 +10618,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Tụ Gốm 0805 8.2uF 50V"
-			(at 165.1 180.34 0)
+		(property "Supply part number" "Tụ Gốm 0805 4.7uF 50V"
+			(at 161.29 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10796,8 +10627,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://linhkien.cxt.vn/7871-tu-khong-phan-cuc-0805.html"
-			(at 165.608 181.61 0)
+		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0805-4-7uf-50v"
+			(at 161.798 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10815,6 +10646,104 @@
 			(project "PFC"
 				(path "/3b17fecf-a6c4-4ae7-a684-61da545cc8d4"
 					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Film Cap")
+		(at 204.47 68.58 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6bb68deb-227c-4685-ab95-9a78d247cafa")
+		(property "Reference" "C10"
+			(at 208.28 63.4999 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100nF, 275VAC"
+			(at 206.248 66.04 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Candy_Cap_hole_100nF_275V"
+			(at 213.106 68.834 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 57.912 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.1uF 275VAC, size: 10x13mm, pitch: 15mm"
+			(at 213.36 68.326 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 213.106 68.326 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Tụ Kẹo Vàng X2 100nF (0.1uF) 104K 275VAC"
+			(at 213.106 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/tu-keo-vang-x2-100nf-0-1uf-104k-275vac"
+			(at 213.106 62.484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "82107636-9200-44ff-a0e5-1b54d17a63e4")
+		)
+		(pin "2"
+			(uuid "5062706e-6a0e-44a7-a5b3-507a59930838")
+		)
+		(instances
+			(project "PFC"
+				(path "/3b17fecf-a6c4-4ae7-a684-61da545cc8d4"
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -10936,7 +10865,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "330K_1/4W_1%_3216"
+		(property "Value" "330K_1/4W_1%_1206"
 			(at 259.08 148.5899 90)
 			(effects
 				(font
@@ -11123,6 +11052,101 @@
 			(project "PFC"
 				(path "/3b17fecf-a6c4-4ae7-a684-61da545cc8d4"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:DSEI60-06A")
+		(at 247.65 48.26 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "77ead0f7-0a6b-45e1-af61-da2d18960894")
+		(property "Reference" "D1"
+			(at 247.65 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "600V 60A"
+			(at 247.65 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-247-2_Vertical"
+			(at 248.92 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_1912111437_Littelfuse-IXYS-DSEI60-06A_C426674.pdf"
+			(at 248.92 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "60A, 600V, Diode Fred, TO-247AD"
+			(at 247.65 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name " " Thegioiic"
+			(at 247.65 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "DSEI60-06A Diode Chỉnh Lưu 60A 600V"
+			(at 248.92 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/dsei60-06a-diode-chinh-luu-60a-600v"
+			(at 248.92 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6d764b28-1975-4769-ae81-06390f5b6721")
+		)
+		(pin "1"
+			(uuid "43e5c11e-6639-491e-85f9-36b70ffa3cf9")
+		)
+		(instances
+			(project "PFC"
+				(path "/3b17fecf-a6c4-4ae7-a684-61da545cc8d4"
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -11323,7 +11347,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Res_10K_0603_1%")
-		(at 179.07 172.466 90)
+		(at 175.26 172.466 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11332,7 +11356,7 @@
 		(fields_autoplaced yes)
 		(uuid "863be888-628d-4e21-aa09-f870c524f9dc")
 		(property "Reference" "R11"
-			(at 175.26 168.9099 90)
+			(at 171.45 168.9099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11340,8 +11364,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "16.9K/1%/1_8W"
-			(at 175.26 171.4499 90)
+		(property "Value" "24K_1/8W_5%_0805"
+			(at 171.45 171.4499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11350,7 +11374,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 167.64 132.588 90)
+			(at 163.83 132.588 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11359,7 +11383,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 178.308 132.842 90)
+			(at 174.498 132.842 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11368,7 +11392,7 @@
 			)
 		)
 		(property "Description" "Code 1692, 1/8W"
-			(at 172.212 132.08 90)
+			(at 168.402 132.08 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11377,7 +11401,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 166.624 132.334 90)
+			(at 162.814 132.334 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11385,8 +11409,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Điện Trở 16.9 KOhm 0805 1%"
-			(at 165.608 132.588 90)
+		(property "Supply part number" "Điện Trở 24 KOhm 0805 5%"
+			(at 161.798 132.588 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11394,8 +11418,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-16-9-kohm-0805-1-"
-			(at 158.496 131.318 90)
+		(property "Supply URL" "https://www.thegioiic.com/dien-tro-24-kohm-0805-5-"
+			(at 154.686 131.318 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11568,7 +11592,7 @@
 	(symbol
 		(lib_name "R_Shunt_10mR_1")
 		(lib_id "charge_battery_sym_lib:R_Shunt_10mR")
-		(at 207.01 82.55 90)
+		(at 203.2 82.55 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11577,7 +11601,7 @@
 		(fields_autoplaced yes)
 		(uuid "8ccdd3f5-eaa2-4001-901b-e9292696a69f")
 		(property "Reference" "R3"
-			(at 211.074 82.5499 90)
+			(at 207.264 82.5499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11586,7 +11610,7 @@
 			)
 		)
 		(property "Value" "R_Shunt_10mR"
-			(at 211.074 85.0899 90)
+			(at 207.264 85.0899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11595,7 +11619,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:R_Shunt"
-			(at 190.5 100.33 0)
+			(at 186.69 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11604,7 +11628,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 191.262 89.916 90)
+			(at 187.452 89.916 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11613,7 +11637,7 @@
 			)
 		)
 		(property "Description" "Shunt resistor"
-			(at 191.516 93.726 0)
+			(at 187.706 93.726 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11622,7 +11646,7 @@
 			)
 		)
 		(property "Supply name" "https://banlinhkien.com/tro-shunt-10mr-1.2x10x7mm-p6647074.html"
-			(at 191.643 98.171 0)
+			(at 187.833 98.171 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11631,7 +11655,7 @@
 			)
 		)
 		(property "Supply part number" "Trở Shunt 10mR 1.2x10x7MM"
-			(at 191.643 98.171 0)
+			(at 187.833 98.171 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11640,7 +11664,7 @@
 			)
 		)
 		(property "Supply URL" "https://banlinhkien.com/tro-shunt-10mr-1.2x10x7mm-p6647074.html"
-			(at 191.643 98.171 0)
+			(at 187.833 98.171 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11724,104 +11748,6 @@
 			(project "PFC"
 				(path "/3b17fecf-a6c4-4ae7-a684-61da545cc8d4"
 					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:Film Cap")
-		(at 208.28 68.58 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9b1582ae-9b1e-4f49-ba0e-7ee0788ca215")
-		(property "Reference" "C10"
-			(at 212.09 63.4999 90)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "220nF, 275VAC"
-			(at 210.058 66.04 90)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Candy_Cap_hole_100nF_275V"
-			(at 216.916 68.834 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 217.17 57.912 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.22uF 275VAC, size: 12x18mm, pitch: 15mm"
-			(at 217.17 68.326 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 216.916 68.326 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Tụ Kẹo Vàng X2 220nF 224K 275VAC"
-			(at 216.916 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-keo-vang-x2-220nf-224k-275vac"
-			(at 216.916 62.484 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bb1102e1-8e56-4d60-a20f-a1268ded1c6c")
-		)
-		(pin "2"
-			(uuid "312567f2-18bb-4c0f-82d7-6cded28d1402")
-		)
-		(instances
-			(project "PFC"
-				(path "/3b17fecf-a6c4-4ae7-a684-61da545cc8d4"
-					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -11941,7 +11867,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "330K_1/4W_1%_3216"
+		(property "Value" "330K_1/4W_1%_1206"
 			(at 259.08 133.3499 90)
 			(effects
 				(font
@@ -12038,7 +11964,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "600V 21A"
+		(property "Value" "600V 12A"
 			(at 255.778 77.4699 0)
 			(effects
 				(font
@@ -12056,7 +11982,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/91642/siha22n60el.pdf"
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/149/FQPF12N60C-1009595.pdf"
 			(at 234.696 60.452 0)
 			(effects
 				(font
@@ -12083,7 +12009,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "MOSFETs TO220 600V 21A N-CH MOSFET"
+		(property "Supply part number" "MOSFET 600V N-Ch Q-FET advance C-Series"
 			(at 237.49 60.452 0)
 			(effects
 				(font
@@ -12092,7 +12018,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Vishay-Siliconix/SIHA22N60EL-GE3?qs=MLItCLRbWsw4c0tKHfhyCg%3D%3D"
+		(property "Supply URL" "https://www.thegioiic.com/fqpf12n60c-mosfet-kenh-600v-12a-to-220-3"
 			(at 241.3 60.706 0)
 			(effects
 				(font
@@ -12139,7 +12065,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "18K_1/4W_5%_3216"
+		(property "Value" "18K_1/4W_5%_1206"
 			(at 118.364 146.0499 90)
 			(effects
 				(font
@@ -12301,7 +12227,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1nF_50V_3216"
+		(property "Value" "2.2nF_50V_0805"
 			(at 132.08 172.72 90)
 			(effects
 				(font
@@ -12310,7 +12236,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 122.428 171.704 0)
 			(effects
 				(font
@@ -12328,7 +12254,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "10%, 1206 (3216 Metric)"
+		(property "Description" "10%, 0805 (2012 Metric)"
 			(at 121.92 170.434 0)
 			(effects
 				(font
@@ -12346,7 +12272,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Tụ Gốm 1206 1nF 50V"
+		(property "Supply part number" "Tụ Gốm 0805 2.2nF 50V"
 			(at 121.92 170.18 0)
 			(effects
 				(font
@@ -12355,7 +12281,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-gom-1206-1nf-50v"
+		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0805-2-2nf-50v"
 			(at 122.428 171.45 0)
 			(effects
 				(font
@@ -12495,7 +12421,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "220nF, 275VAC"
+		(property "Value" "100nF, 275VAC"
 			(at 100.838 72.39 90)
 			(effects
 				(font
@@ -12524,7 +12450,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "0.22uF 275VAC, size: 12x18mm, pitch: 15mm"
+		(property "Description" "0.1uF 275VAC, size: 10x13mm, pitch: 15mm"
 			(at 107.95 74.676 0)
 			(effects
 				(font
@@ -12542,7 +12468,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Tụ Kẹo Vàng X2 220nF 224K 275VAC"
+		(property "Supply part number" "Tụ Kẹo Vàng X2 100nF (0.1uF) 104K 275VAC"
 			(at 107.696 74.93 0)
 			(effects
 				(font
@@ -12551,7 +12477,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-keo-vang-x2-220nf-224k-275vac"
+		(property "Supply URL" "https://www.thegioiic.com/tu-keo-vang-x2-100nf-0-1uf-104k-275vac"
 			(at 107.696 68.834 0)
 			(effects
 				(font
@@ -12592,7 +12518,7 @@
 				)
 			)
 		)
-		(property "Value" "1.3R"
+		(property "Value" "3R"
 			(at 158.496 52.578 90)
 			(effects
 				(font
@@ -12636,7 +12562,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "1.3D-15 Điện Trở Nhiệt NTC 1.3 Ohm 16.5 x 7mm "
+		(property "Supply part number" "3D-15 Điện Trở Nhiệt NTC 3 Ohm 16.5 x 7mm"
 			(at 145.542 53.848 0)
 			(effects
 				(font
@@ -12645,7 +12571,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/1-3d-15-dien-tro-nhiet-ntc-1-3-ohm-16-5-x-7mm"
+		(property "Supply URL" "https://thegioiic.com/3d-15-dien-tro-nhiet-ntc-3-ohm-16-5-x-7mm"
 			(at 145.542 56.388 0)
 			(effects
 				(font
@@ -12680,7 +12606,7 @@
 		(fields_autoplaced yes)
 		(uuid "d6b159f8-1b78-4b06-9b6c-d8cc8b51a29d")
 		(property "Reference" "C11"
-			(at 226.568 146.0499 90)
+			(at 227.33 146.0499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12688,8 +12614,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.7uF_50V_3216"
-			(at 226.568 148.5899 90)
+		(property "Value" "4.7uF_50V_1206"
+			(at 227.33 148.5899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12981,7 +12907,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "820pF_50V_0805"
+		(property "Value" "1nF_100V_1206"
 			(at 152.4 168.91 90)
 			(effects
 				(font
@@ -12990,7 +12916,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 142.748 167.894 0)
 			(effects
 				(font
@@ -13008,7 +12934,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "10%, 0805 (2012 Metric)"
+		(property "Description" "SMD-1206"
 			(at 142.24 166.624 0)
 			(effects
 				(font
@@ -13017,7 +12943,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name" "Thegioiic"
+		(property "Supply name" "CXT"
 			(at 142.748 166.37 0)
 			(effects
 				(font
@@ -13026,7 +12952,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" " Tụ Gốm 0805 820pF 50V Tụ Gốm 0805 820pF 50V"
+		(property "Supply part number" " Tụ Gốm 1206 100V 1nF "
 			(at 142.24 166.37 0)
 			(effects
 				(font
@@ -13035,7 +12961,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0805-820pf-50v"
+		(property "Supply URL" "https://linhkien.cxt.vn/6931-tu-1nf-1206-100v-10c.html"
 			(at 142.748 167.64 0)
 			(effects
 				(font
@@ -13078,7 +13004,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Cap_Polarized_1000uF_450V"
+		(property "Value" "Cap_Polarized_270uF_450V"
 			(at 286.258 66.8781 90)
 			(effects
 				(font
@@ -13114,7 +13040,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name " "linhkienchatluong"
+		(property "Supply name " "linhkienthanhcong"
 			(at 296.926 62.23 0)
 			(effects
 				(font
@@ -13123,7 +13049,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" " Tụ hóa 450V 1000uF 35x60mm chân cứng"
+		(property "Supply part number" "TỤ 270UF 450V CHÂN CỨNG (25X50MM)"
 			(at 296.926 59.944 0)
 			(effects
 				(font
@@ -13132,7 +13058,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://linhkienchatluong.vn/tu-hoa-co-phan-cuc/tu-hoa-450v-1000uf-35x60mm-chan-cung_sp454_ct2593.aspx"
+		(property "Supply URL" "https://linhkienthanhcong.com/tu-270uf-450v-chan-cung-25x50mm"
 			(at 296.926 52.578 0)
 			(effects
 				(font
@@ -13157,54 +13083,51 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:Film Cap")
-		(at 149.86 73.66 90)
+		(lib_id "charge_battery_sym_lib:Diode_Shottky_SR5100")
+		(at 228.6 68.58 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e9f6ac0d-4b9a-4103-9702-c665d43ee46b")
-		(property "Reference" "C6"
-			(at 153.67 68.5799 90)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "220nF, 275VAC"
-			(at 151.638 71.12 90)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Candy_Cap_hole_100nF_275V"
-			(at 158.496 73.914 0)
+		(fields_autoplaced yes)
+		(uuid "e908326b-ae78-4250-a514-5ecd570a2bff")
+		(property "Reference" "D2"
+			(at 228.346 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
-					(italic yes)
+				)
+			)
+		)
+		(property "Value" "100V 5A"
+			(at 228.346 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-27_P12.70mm_Horizontal"
+			(at 241.046 83.566 0)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 158.75 62.992 0)
+		(property "Datasheet" "https://www.farnell.com/datasheets/2175829.pdf?_ga=2.84777433.1112515608.1530949777-1793405792.1522642447"
+			(at 236.474 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
-					(italic yes)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" "0.22uF 275VAC, size: 12x18mm, pitch: 15mm"
-			(at 158.75 73.406 0)
+		(property "Description" "5A 100V Schottky Rectifier Diode"
+			(at 231.648 84.074 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13213,7 +13136,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 158.496 73.406 0)
+			(at 232.918 83.312 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13221,8 +13144,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Tụ Kẹo Vàng X2 220nF 224K 275VAC"
-			(at 158.496 73.66 0)
+		(property "Supply part number" "SR5100 Schottky Diode 5A 100V"
+			(at 234.696 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13230,8 +13153,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-keo-vang-x2-220nf-224k-275vac"
-			(at 158.496 67.564 0)
+		(property "Supply URL" "https://www.thegioiic.com/sr5100-schottky-diode-5a-100v"
+			(at 234.696 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13240,15 +13163,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "628ad557-20eb-42a7-8b09-93657be9f4db")
+			(uuid "148f20d9-a7f1-4e70-a96b-99d4f60a7d00")
 		)
 		(pin "2"
-			(uuid "3d29665d-8057-4ba1-9e0e-647846327497")
+			(uuid "94742c91-6556-4cad-9afd-b0667f93ef99")
 		)
 		(instances
 			(project "PFC"
 				(path "/3b17fecf-a6c4-4ae7-a684-61da545cc8d4"
-					(reference "C6")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -13272,7 +13195,7 @@
 				)
 			)
 		)
-		(property "Value" "600V, 20A"
+		(property "Value" "650V, 20A"
 			(at 258.064 51.308 0)
 			(effects
 				(font
@@ -13280,7 +13203,7 @@
 				)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:DBoost"
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-2_Vertical"
 			(at 245.364 39.624 0)
 			(effects
 				(font
@@ -13289,7 +13212,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.vn/datasheet/2/268/00003878A_MSC010SDA070B_SiC_SBD_Datasheet-3444160.pdf"
+		(property "Datasheet" "https://www.mouser.vn/datasheet/2/412/UJ3D06520TS_Data_Sheet-3177203.pdf"
 			(at 249.936 39.37 0)
 			(effects
 				(font
@@ -13298,7 +13221,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Schottky Diodes & Rectifiers 700 V, 10 A SiC SBD"
+		(property "Description" "SiC Schottky Diodes 650V/20A,SIC,DIODE,G3,TO220-2"
 			(at 254.762 39.116 0)
 			(effects
 				(font
@@ -13316,7 +13239,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "MSC010SDA070K "
+		(property "Supply part number" "UJ3D06520TS"
 			(at 251.714 39.37 0)
 			(effects
 				(font
@@ -13325,7 +13248,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Microchip-Technology/MSC010SDA070K?qs=0lQeLiL1qyaG1FYk0%2FJgdA%3D%3D"
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Qorvo/UJ3D06520TS?qs=P19jvy6W2mchZnx0gpyJ5A%3D%3D"
 			(at 251.714 39.37 0)
 			(effects
 				(font
@@ -13333,9 +13256,6 @@
 				)
 				(hide yes)
 			)
-		)
-		(pin "3"
-			(uuid "c64b9cbb-138d-4193-bc56-4521f3dd62ab")
 		)
 		(pin "1"
 			(uuid "29e8c514-cba0-44c1-a359-a9417de3adb6")
@@ -13370,7 +13290,7 @@
 				)
 			)
 		)
-		(property "Value" "800V, 8A"
+		(property "Value" "1kV, 10A"
 			(at 194.31 66.1668 90)
 			(effects
 				(font
@@ -13397,7 +13317,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "1 pha, 8A, 800V, KBU"
+		(property "Description" "1 pha, 1KV, 10A, KBU"
 			(at 167.64 66.04 0)
 			(effects
 				(font
@@ -13415,7 +13335,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "KBU808 Cầu Chỉnh Lưu 800V 8A"
+		(property "Supply part number" "KBU1010 Cầu Chỉnh Lưu 1KV 10A"
 			(at 167.64 66.04 0)
 			(effects
 				(font
@@ -13424,7 +13344,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/kbu808-cau-chinh-luu-800v-8a"
+		(property "Supply URL" "https://www.thegioiic.com/kbu1010-cau-chinh-luu-1kv-10a"
 			(at 167.64 67.31 0)
 			(effects
 				(font
