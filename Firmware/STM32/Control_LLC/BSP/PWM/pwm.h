@@ -69,21 +69,21 @@ extern "C"
      *
      * This value determines the period of the PWM signal.
      */
-    volatile uint16_t reg_auto_reload;
+    volatile uint16_t u16_reg_auto_reload;
 
     /**
      * @brief Compare Register value.
      *
      * This value determines the duty cycle of the PWM signal.
      */
-    volatile uint16_t reg_compare;
+    volatile uint16_t u16_reg_compare;
 
     /**
      * @brief Prescaler value.
      *
      * This value is used to divide the timer clock frequency.
      */
-    volatile uint16_t prescaler;
+    volatile uint16_t u16_prescaler;
 
     /**
      * @brief PWM channel.
@@ -125,8 +125,8 @@ extern "C"
    */
   static inline void BSP_PWM_ResetParameter (pwm_cfg_t *pwm_cfg)
   {
-    pwm_cfg->reg_auto_reload = 0;
-    pwm_cfg->reg_compare     = 0;
+    pwm_cfg->u16_reg_auto_reload = 0;
+    pwm_cfg->u16_reg_compare     = 0;
   }
 
 #ifdef __cplusplus

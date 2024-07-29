@@ -12,12 +12,21 @@
  *      INCLUDES
  *********************/
 
-#include <stdint.h>
+#include "stm32f1xx.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+/*********************
+ *    PUBLIC DEFINE
+ *********************/
+
+/**
+ * @brief Time sample for Proportional-Integral (PI) controller,
+ * set to 10 milliseconds.
+ */
+#define CONTROL_PI_TIME_SAMPLE 10
 
   /**********************
    *    PUBLIC TYPEDEFS

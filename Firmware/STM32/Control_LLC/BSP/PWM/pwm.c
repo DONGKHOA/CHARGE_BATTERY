@@ -87,11 +87,11 @@ void
 BSP_PWM_SetParameterProcess (pwm_cfg_t *pwm_cfg)
 {
   // Set value for PSC (Prescaler)
-  LL_TIM_SetPrescaler((TIM_TypeDef *)pwm_cfg->p_tim, pwm_cfg->prescaler);
+  LL_TIM_SetPrescaler((TIM_TypeDef *)pwm_cfg->p_tim, pwm_cfg->u16_prescaler);
 
   // Set value for ARR (Auto-Reload Register)
-  LL_TIM_SetAutoReload((TIM_TypeDef *)pwm_cfg->p_tim, pwm_cfg->reg_auto_reload);
+  LL_TIM_SetAutoReload((TIM_TypeDef *)pwm_cfg->p_tim, pwm_cfg->u16_reg_auto_reload);
 
   // Set value for CRR (Compare Register)
-  LL_TIM_OC_SetCompareCH1((TIM_TypeDef *)pwm_cfg->p_tim, pwm_cfg->reg_compare);
+  LL_TIM_OC_SetCompareCH1((TIM_TypeDef *)pwm_cfg->p_tim, pwm_cfg->u16_reg_compare);
 }

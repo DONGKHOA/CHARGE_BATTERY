@@ -29,11 +29,11 @@ extern "C"
    */
   typedef struct uart_cfg
   {
-    volatile ring_buffer_t rx_buffer; /**< @brief Receive ring buffer. */
-    volatile ring_buffer_t tx_buffer; /**< @brief Transmit ring buffer. */
-    USART_TypeDef         *uart;      /**< @brief Pointer to UART
+    volatile ring_buffer_t s_rx_buffer; /**< @brief Receive ring buffer. */
+    volatile ring_buffer_t s_tx_buffer; /**< @brief Transmit ring buffer. */
+    USART_TypeDef         *p_uart;      /**< @brief Pointer to UART
                                            peripheral. */
-    IRQn_Type uart_irqn;              /**< @brief UART interrupt number. */
+    IRQn_Type e_uart_irqn;              /**< @brief UART interrupt number. */
   } uart_cfg_t;
 
   /*********************

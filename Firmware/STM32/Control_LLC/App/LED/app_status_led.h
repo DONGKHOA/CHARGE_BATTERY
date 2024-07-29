@@ -1,12 +1,12 @@
 /*
- * control_gate_driver.h
+ * app_status_led.h
  *
  *  Created on: Jul 9, 2024
  *      Author: dongkhoa
  */
 
-#ifndef CONTROL_CONTROL_GATE_DRIVER_H_
-#define CONTROL_CONTROL_GATE_DRIVER_H_
+#ifndef LED_STATUS_LED_H_
+#define LED_STATUS_LED_H_
 
 /*********************
  *      INCLUDES
@@ -23,11 +23,11 @@ extern "C"
    *   PUBLIC FUNCTIONS
    **********************/
 
-  void APP_CONTROL_Init(void);
-  void APP_CONTROL_CreateTask(void);
+  void APP_STATUS_LED_Init(void);
+  void APP_STATUS_LED_CreateTask(void);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* CONTROL_CONTROL_GATE_DRIVER_H_ */
+#endif /* LED_STATUS_LED_H_ */

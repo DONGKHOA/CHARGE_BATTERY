@@ -28,7 +28,7 @@
  *   PRIVATE DATA
  **********************/
 
-static volatile uint_fast32_t timer_wait_set = 0;
+static volatile uint_fast32_t u32_timer_wait_set = 0;
 
 /******************************
  *  PRIVATE PROTOTYPE FUNCTION
@@ -202,17 +202,17 @@ last_byte:
 }
 
 /**
- * @brief Decrements the timer_wait_set variable for I2C timeout handling.
+ * @brief Decrements the u32_timer_wait_set variable for I2C timeout handling.
  *
- * This function decrements the timer_wait_set variable used for handling I2C
+ * This function decrements the u32_timer_wait_set variable used for handling I2C
  * timeouts.
  */
 void
 BSP_I2C_TimeOut (void)
 {
-  if (timer_wait_set >= 0)
+  if (u32_timer_wait_set >= 0)
   {
-    timer_wait_set--;
+    u32_timer_wait_set--;
   }
 }
 
@@ -236,10 +236,10 @@ I2C_MasterStart (I2C_TypeDef *_i2c_reg)
   _i2c_reg->CR1 |= I2C_CR1_START_Msk; // Generate START
 
   // Wait for PE bit to set
-  timer_wait_set = TIMEOUT_WAIT_SET;
+  u32_timer_wait_set = TIMEOUT_WAIT_SET;
   while (LL_I2C_IsEnabled(_i2c_reg))
   {
-    if (timer_wait_set == 0)
+    if (u32_timer_wait_set == 0)
     {
       return I2C_TIMEOUT;
     }
@@ -285,10 +285,10 @@ I2C_SetAddress7B (I2C_TypeDef *_i2c_reg, uint8_t _address)
   I2C1->DR = _address;
 
   // Wait for ADDR bit to set
-  timer_wait_set = TIMEOUT_WAIT_SET;
+  u32_timer_wait_set = TIMEOUT_WAIT_SET;
   while (!LL_I2C_IsActiveFlag_ADDR(_i2c_reg))
   {
-    if (timer_wait_set == 0)
+    if (u32_timer_wait_set == 0)
     {
       return I2C_TIMEOUT;
     }
@@ -324,10 +324,10 @@ static i2c_status_t
 I2C_TransmitData7B (I2C_TypeDef *_i2c_reg, uint32_t _size, uint8_t *_buffer)
 {
   // Wait for TXE bit to set
-  timer_wait_set = TIMEOUT_WAIT_SET;
+  u32_timer_wait_set = TIMEOUT_WAIT_SET;
   while (!LL_I2C_IsActiveFlag_TXE(_i2c_reg))
   {
-    if (timer_wait_set == 0)
+    if (u32_timer_wait_set == 0)
     {
       return I2C_TIMEOUT;
     }
@@ -336,10 +336,10 @@ I2C_TransmitData7B (I2C_TypeDef *_i2c_reg, uint32_t _size, uint8_t *_buffer)
   while (_size > 0)
   {
     // Wait for TXE bit to set
-    timer_wait_set = TIMEOUT_WAIT_SET;
+    u32_timer_wait_set = TIMEOUT_WAIT_SET;
     while (!LL_I2C_IsActiveFlag_TXE(_i2c_reg))
     {
-      if (timer_wait_set == 0)
+      if (u32_timer_wait_set == 0)
       {
         return I2C_TIMEOUT;
       }
@@ -351,10 +351,10 @@ I2C_TransmitData7B (I2C_TypeDef *_i2c_reg, uint32_t _size, uint8_t *_buffer)
   }
 
   // Wait for BTF to set
-  timer_wait_set = TIMEOUT_WAIT_SET;
+  u32_timer_wait_set = TIMEOUT_WAIT_SET;
   while (!LL_I2C_IsActiveFlag_BTF(_i2c_reg))
   {
-    if (timer_wait_set == 0)
+    if (u32_timer_wait_set == 0)
     {
       return I2C_TIMEOUT;
     }
@@ -375,10 +375,10 @@ I2C_TransmitData7B (I2C_TypeDef *_i2c_reg, uint32_t _size, uint8_t *_buffer)
 static i2c_status_t
 I2C_WaitBitRXNE (I2C_TypeDef *_i2c_reg)
 {
-  timer_wait_set = TIMEOUT_WAIT_SET;
+  u32_timer_wait_set = TIMEOUT_WAIT_SET;
   while (!LL_I2C_IsActiveFlag_RXNE(_i2c_reg))
   {
-    if (timer_wait_set == 0)
+    if (u32_timer_wait_set == 0)
     {
       return I2C_TIMEOUT;
     }

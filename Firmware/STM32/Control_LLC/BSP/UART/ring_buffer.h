@@ -28,10 +28,10 @@ extern "C"
    */
   typedef struct ring_buffer
   {
-    volatile uint8_t *buffer; /**< @brief Buffer array. */
-    volatile uint32_t in;     /**< @brief Input index. */
-    volatile uint32_t out;    /**< @brief Output index. */
-    volatile uint32_t count;  /**< @brief Count of items in buffer. */
+    volatile uint8_t *u8_buffer; /**< @brief Buffer array. */
+    volatile uint32_t u32_in;     /**< @brief Input index. */
+    volatile uint32_t u32_out;    /**< @brief Output index. */
+    volatile uint32_t u32_count;  /**< @brief Count of items in buffer. */
   } ring_buffer_t;
 
   /*********************

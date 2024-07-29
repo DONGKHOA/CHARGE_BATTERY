@@ -1,5 +1,5 @@
 /*
- * command.h
+ * app_command.h
  *
  *  Created on: Jul 8, 2024
  *      Author: dongkhoa

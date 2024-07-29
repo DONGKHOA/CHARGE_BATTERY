@@ -8,19 +8,28 @@
 #ifndef FREQUENCY_CONVERT_PULSE_PRIVATE_DATA_PRIVATE_H_
 #define FREQUENCY_CONVERT_PULSE_PRIVATE_DATA_PRIVATE_H_
 
-/*********************
- *      INCLUDES
- *********************/
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+  /*********************
+   *      INCLUDES
+   *********************/
 
 #include "frequency_convert_pulse.h"
 
-/**********************
- *    PRIVATE DATA
- **********************/
+  /**********************
+   *    PRIVATE DATA
+   **********************/
 
 #define SIZE_TABLE_DATA_PROCESS 170
 
-extern const FCP_data_t table_data_process[];
-extern const FCP_data_t table_data_start[];
+  extern const FCP_data_t table_data_process[];
+  extern const FCP_data_t table_data_start[];
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* FREQUENCY_CONVERT_PULSE_PRIVATE_DATA_PRIVATE_H_ */

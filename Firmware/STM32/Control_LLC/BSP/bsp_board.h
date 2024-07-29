@@ -1,12 +1,12 @@
 /*
- * board.h
+ * bsp_board.h
  *
  *  Created on: Jul 17, 2024
  *      Author: dongkhoa
  */
 
-#ifndef BOARD_H_
-#define BOARD_H_
+#ifndef BSP_BOARD_H_
+#define BSP_BOARD_H_
 
 /*********************
  *      INCLUDES
@@ -54,12 +54,15 @@ extern "C"
 #define GATE_DRIVER_TIM_CHANNEL PWM_CHANNEL_1
 #define GATE_DRIVER_TIM_MODE    PWM_POSITIVE_NEGATIVE
 
+// ADC for input voltage
+#define INPUT_VOTAGE_ADC	ADC1
+
   /*********************
    *   PUBLIC FUNCTION
    *********************/
 
   // Call Function in "SysTick ISR"
-  static inline void BOARD_TimeOut (void)
+  static inline void BSP_BOARD_TimeOut (void)
   {
     BSP_UART_TimeOut();
     BSP_ADC_TimeOut();
@@ -70,4 +73,4 @@ extern "C"
 }
 #endif
 
-#endif /* BOARD_H_ */
+#endif /* BSP_BOARD_H_ */

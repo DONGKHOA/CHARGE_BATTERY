@@ -1,5 +1,5 @@
 /*
- * cmdline.c
+ * app_cmdline.c
  *
  *  Created on: Jul 8, 2024
  *      Author: dongkhoa
@@ -9,7 +9,7 @@
  *      INCLUDES
  *********************/
 
-#include "cmdline.h"
+#include "app_cmdline.h"
 #include "uart.h"
 #include <stdbool.h>
 #include <stdint.h>

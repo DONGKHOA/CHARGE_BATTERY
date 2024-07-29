@@ -32,10 +32,10 @@
 void
 QUEUE_Init (ring_buffer_t *rb)
 {
-  rb->buffer = (uint8_t *)malloc(RING_BUFFER_SIZE);
-  rb->in     = 0;
-  rb->out    = 0;
-  rb->count  = 0;
+  rb->u8_buffer = (uint8_t *)malloc(RING_BUFFER_SIZE);
+  rb->u32_in     = 0;
+  rb->u32_out    = 0;
+  rb->u32_count  = 0;
 }
 
 /**
@@ -49,9 +49,9 @@ QUEUE_Init (ring_buffer_t *rb)
 void
 QUEUE_Reset (ring_buffer_t *rb)
 {
-  rb->in    = 0;
-  rb->out   = 0;
-  rb->count = 0;
+  rb->u32_in    = 0;
+  rb->u32_out   = 0;
+  rb->u32_count = 0;
 }
 
 /**
@@ -67,7 +67,7 @@ QUEUE_Reset (ring_buffer_t *rb)
 bool
 QUEUE_Is_Empty (ring_buffer_t *rb)
 {
-  return (rb->count == 0);
+  return (rb->u32_count == 0);
 }
 
 /**
@@ -84,7 +84,7 @@ QUEUE_Is_Empty (ring_buffer_t *rb)
 bool
 QUEUE_Is_Full (ring_buffer_t *rb)
 {
-  return (rb->count == (uint32_t)RING_BUFFER_SIZE);
+  return (rb->u32_count == (uint32_t)RING_BUFFER_SIZE);
 }
 
 /**
@@ -104,10 +104,10 @@ QUEUE_Push_Data (ring_buffer_t *rb, char element)
   {
     QUEUE_Reset(rb);
   }
-  *(rb->buffer + rb->in) = element;
+  *(rb->u8_buffer + rb->u32_in) = element;
 
-  rb->in = (rb->in + 1) & ((uint32_t)RING_BUFFER_SIZE - 1);
-  rb->count++;
+  rb->u32_in = (rb->u32_in + 1) & ((uint32_t)RING_BUFFER_SIZE - 1);
+  rb->u32_count++;
 }
 
 /**
@@ -127,10 +127,10 @@ QUEUE_Pull_Data (ring_buffer_t *rb)
   {
     return 0xFF;
   }
-  register uint8_t data = *(rb->buffer + rb->out);
+  register uint8_t data = *(rb->u8_buffer + rb->u32_out);
 
-  rb->out = (rb->out + 1) & ((uint32_t)RING_BUFFER_SIZE - 1);
-  rb->count--;
+  rb->u32_out = (rb->u32_out + 1) & ((uint32_t)RING_BUFFER_SIZE - 1);
+  rb->u32_count--;
 
   return data;
 }

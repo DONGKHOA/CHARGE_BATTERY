@@ -32,10 +32,10 @@ extern "C"
    */
   typedef enum _adc_status_t
   {
-    ADC_OK = 0,        /**< @brief ADC operation successful. */
-    ADC_START_CONVERT, /**< @brief ADC is starting conversion. */
-    ADC_WAIT_CONVERT,  /**< @brief ADC is waiting for conversion. */
-    ADC_TIMEOUT,       /**< @brief ADC operation timed out. */
+    BSP_ADC_OK = 0,        /**< @brief ADC operation successful. */
+    BSP_ADC_START_CONVERT, /**< @brief ADC is starting conversion. */
+    BSP_ADC_WAIT_CONVERT,  /**< @brief ADC is waiting for conversion. */
+    BSP_ADC_TIMEOUT,       /**< @brief ADC operation timed out. */
   } adc_status_t;
 
   /**
@@ -43,26 +43,22 @@ extern "C"
    */
   typedef struct _adc_data_t
   {
-    ADC_TypeDef *ADCx;   /**< @brief Pointer to the ADC peripheral. */
-    adc_status_t status; /**< @brief Status of the ADC operation. */
-    volatile uint32_t
-        num_channel; /**< @brief Number of channels in the ADC sequence. */
-    volatile uint32_t
-        *channel_table; /**< @brief Pointer to the channel table array. */
-    volatile uint32_t *adc_data; /**< @brief Pointer to the ADC data buffer. */
-    volatile float *
-        adc_voltage_data; /**< @brief Pointer to the ADC voltage data buffer. */
+    ADC_TypeDef *p_ADCx;   /**< @brief Pointer to the ADC peripheral. */
+    adc_status_t e_status; /**< @brief Status of the ADC operation. */
+    uint32_t *p_adc_data; /**< @brief Pointer to the ADC data buffer. */
+    float    *p_adc_voltage_data; /**< @brief Pointer to the ADC voltage data
+                                     buffer. */
+    uint32_t
+        u32_num_channel; /**< @brief Number of channels in the ADC sequence. */
   } adc_data_t;
 
   /**********************
    *   PUBLIC FUNCTIONS
    **********************/
 
-  adc_status_t BSP_ADC_Config(adc_data_t *p_data,
-                              uint32_t    _num_channel,
-                              uint32_t   *_channel_table,
-                              uint32_t   *_adc_data);
+  adc_status_t BSP_ADC_Config(adc_data_t *p_data);
   adc_status_t BSP_ADC_StartConvert(adc_data_t *p_data);
+  adc_status_t BSP_ADC_WaitConversion(adc_data_t *p_data);
   adc_status_t BSP_ADC_Read(adc_data_t *p_data);
 
   // Call Function "ADC_TimeOut" in ISR SysTick

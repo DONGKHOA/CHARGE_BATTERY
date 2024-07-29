@@ -20,7 +20,7 @@
 /**
  * @brief Timeout for ADC conversion wait in milliseconds.
  */
-#define TIMEOUT_WAIT_CONVERTION 1000 /**< Timeout duration in ms. */
+#define TIMEOUT_WAIT_CONVERTION 2000 /**< Timeout duration in ms. */
 
 /**
  * @brief Reference analog voltage in millivolts.
@@ -31,8 +31,8 @@
  *   PRIVATE DATA
  **********************/
 
-static volatile uint_fast32_t timer_wait_converstion = 0;
-static volatile bool          enable_read_data;
+static volatile uint_fast32_t u32_timer_wait_converstion = 0;
+static volatile bool          b_enable_read_data;
 
 /**********************
  *   PUBLIC FUNCTIONS
@@ -42,48 +42,41 @@ static volatile bool          enable_read_data;
  * @brief Configure ADC parameters in the provided structure.
  *
  * @param p_data Pointer to adc_data_t structure to be configured.
- * @param _num_channel Number of channels in the ADC sequence.
- * @param _channel_table Pointer to the channel table array.
- * @param _adc_data Pointer to the ADC data buffer.
  */
 adc_status_t
-BSP_ADC_Config (adc_data_t *p_data,
-                uint32_t    _num_channel,
-                uint32_t   *_channel_table,
-                uint32_t   *_adc_data)
+BSP_ADC_Config (adc_data_t *p_data)
 {
-  p_data->num_channel   = _num_channel;
-  p_data->channel_table = _channel_table;
-  p_data->adc_data      = _adc_data;
-  p_data->status        = ADC_OK;
+  p_data->e_status = BSP_ADC_OK;
 
-  if (p_data->num_channel > 1)
+  if (p_data->u32_num_channel > 1)
   {
-    LL_ADC_REG_SetDMATransfer(p_data->ADCx, LL_ADC_REG_DMA_TRANSFER_UNLIMITED);
+    LL_ADC_REG_SetDMATransfer(p_data->p_ADCx,
+                              LL_ADC_REG_DMA_TRANSFER_UNLIMITED);
     LL_DMA_ConfigAddresses(
         DMA1,
         LL_DMA_CHANNEL_1,
-        LL_ADC_DMA_GetRegAddr(p_data->ADCx, LL_ADC_DMA_REG_REGULAR_DATA),
-        (uint32_t)&p_data->adc_data,
+        LL_ADC_DMA_GetRegAddr(p_data->p_ADCx, LL_ADC_DMA_REG_REGULAR_DATA),
+        (uint32_t)&p_data->p_adc_data,
         LL_DMA_DIRECTION_PERIPH_TO_MEMORY);
-    LL_DMA_SetDataLength(DMA1, LL_DMA_CHANNEL_1, p_data->num_channel);
+    LL_DMA_SetDataLength(DMA1, LL_DMA_CHANNEL_1, p_data->u32_num_channel);
     LL_DMA_EnableIT_TC(DMA1, LL_DMA_CHANNEL_1);
     LL_DMA_EnableChannel(DMA1, LL_DMA_CHANNEL_1);
   }
 
-  LL_ADC_StartCalibration(p_data->ADCx);
-  while (LL_ADC_IsCalibrationOnGoing(p_data->ADCx))
+  LL_ADC_StartCalibration(p_data->p_ADCx);
+  u32_timer_wait_converstion = TIMEOUT_WAIT_CONVERTION;
+  while (LL_ADC_IsCalibrationOnGoing(p_data->p_ADCx))
   {
-    if (timer_wait_converstion == 0)
+    if (u32_timer_wait_converstion == 0)
     {
-      p_data->status = ADC_TIMEOUT;
-      return p_data->status;
+      p_data->e_status = BSP_ADC_TIMEOUT;
+      return p_data->e_status;
     }
   }
 
-  LL_ADC_Enable(p_data->ADCx);
-  p_data->status = ADC_OK;
-  return p_data->status;
+  LL_ADC_Enable(p_data->p_ADCx);
+  p_data->e_status = BSP_ADC_OK;
+  return p_data->e_status;
 }
 
 /**
@@ -98,9 +91,45 @@ BSP_ADC_Config (adc_data_t *p_data,
 adc_status_t
 BSP_ADC_StartConvert (adc_data_t *p_data)
 {
-  LL_ADC_REG_StartConversionSWStart(p_data->ADCx);
-  p_data->status = ADC_START_CONVERT;
-  return p_data->status;
+  LL_ADC_REG_StartConversionSWStart(p_data->p_ADCx);
+  p_data->e_status = BSP_ADC_START_CONVERT;
+  return p_data->e_status;
+}
+
+/**
+ * @brief Waits for ADC conversion to complete.
+ *
+ * This function waits for the ADC conversion to complete by monitoring the
+ * End of Conversion (EOS) flag. If the conversion does not complete within
+ * a specified timeout period, it sets the status to `BSP_ADC_TIMEOUT`. If the
+ * conversion completes successfully, it clears the EOS flag and sets the
+ * status to `BSP_ADC_OK`.
+ *
+ * @param p_data Pointer to the ADC data structure.
+ * @return The status of the ADC conversion.
+ */
+adc_status_t
+BSP_ADC_WaitConversion (adc_data_t *p_data)
+{
+  u32_timer_wait_converstion = TIMEOUT_WAIT_CONVERTION;
+
+  while (!LL_ADC_IsActiveFlag_EOS(p_data->p_ADCx))
+  {
+    if (u32_timer_wait_converstion == 0)
+    {
+      p_data->e_status = BSP_ADC_TIMEOUT;
+      return p_data->e_status;
+    }
+  }
+
+  // Clear the End of Conversion flag
+  LL_ADC_ClearFlag_EOS(p_data->p_ADCx);
+
+  // Set flag to indicate data ready for processing
+  b_enable_read_data = 1;
+
+  p_data->e_status = BSP_ADC_OK;
+  return p_data->e_status;
 }
 
 /**
@@ -116,24 +145,35 @@ BSP_ADC_StartConvert (adc_data_t *p_data)
  * @param p_data Pointer to the ADC configuration data structure.
  * @return The status of the ADC operation after attempting to read the data.
  */
-adc_status_t
-BSP_ADC_Read (adc_data_t *p_data)
+adc_status_t BSP_ADC_Read(adc_data_t *p_data)
 {
-  if (enable_read_data == 1)
-  {
-    __disable_irq();
-    for (uint8_t i = 0; i < p_data->num_channel; i++)
+    if (b_enable_read_data == 1)
     {
-      p_data->adc_voltage_data[i] = __LL_ADC_CALC_DATA_TO_VOLTAGE(
-          VREFANALOG, p_data->channel_table[i], LL_ADC_RESOLUTION_12B);
+        if (p_data->u32_num_channel == 1)
+        {
+            // Read ADC conversion data for a single channel
+            p_data->p_adc_data[0] = LL_ADC_REG_ReadConversionData12(p_data->p_ADCx);
+            // Calculate the voltage for the single channel
+            p_data->p_adc_voltage_data[0] = __LL_ADC_CALC_DATA_TO_VOLTAGE(
+                VREFANALOG, p_data->p_adc_data[0], LL_ADC_RESOLUTION_12B);
+        }
+        else
+        {
+            // Calculate voltages for multiple channels
+            for (uint8_t i = 0; i < p_data->u32_num_channel; i++)
+            {
+                p_data->p_adc_voltage_data[i] = __LL_ADC_CALC_DATA_TO_VOLTAGE(
+                    VREFANALOG, p_data->p_adc_data[i], LL_ADC_RESOLUTION_12B);
+            }
+        }
+        // Disable further reading until enabled again
+        b_enable_read_data = 0;
+        p_data->e_status = BSP_ADC_OK;
+        return p_data->e_status;
     }
-    enable_read_data = 0;
-    p_data->status   = ADC_OK;
-    __enable_irq();
-    return p_data->status;
-  }
-  p_data->status = ADC_WAIT_CONVERT;
-  return p_data->status;
+    // If reading is not enabled, set status to indicate waiting for conversion
+    p_data->e_status = BSP_ADC_WAIT_CONVERT;
+    return p_data->e_status;
 }
 
 /**
@@ -145,9 +185,9 @@ BSP_ADC_Read (adc_data_t *p_data)
 void
 BSP_ADC_TimeOut (void)
 {
-  if (timer_wait_converstion >= 0)
+  if (u32_timer_wait_converstion >= 0)
   {
-    timer_wait_converstion--;
+    u32_timer_wait_converstion--;
   }
 }
 
@@ -156,7 +196,7 @@ BSP_ADC_TimeOut (void)
  *
  * This function checks if the DMA transfer complete flag is set for ADC DMA
  * channel 1. If the flag is set, it clears the flag and sets a flag
- * (`enable_read_data`) to indicate that ADC data is ready to be processed.
+ * (`b_enable_read_data`) to indicate that ADC data is ready to be processed.
  *
  * @param p_data Pointer to the ADC configuration data structure.
  */
@@ -165,10 +205,10 @@ BSP_ADC_DMA_Function (adc_data_t *p_data)
 {
   if (LL_DMA_IsActiveFlag_TC1(DMA1) != RESET)
   {
-    /* Clear DMA transfer complete flag */
+    // Clear DMA transfer complete flag
     LL_DMA_ClearFlag_TC1(DMA1);
 
-    /* Set flag to indicate data ready for processing */
-    enable_read_data = 1;
+    // Set flag to indicate data ready for processing
+    b_enable_read_data = 1;
   }
 }

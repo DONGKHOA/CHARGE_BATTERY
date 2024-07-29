@@ -1,5 +1,5 @@
 /*
- * data_struct.c
+ * app_data_struct.c
  *
  *  Created on: Jul 27, 2024
  *      Author: dongkhoa
@@ -9,10 +9,10 @@
  *      INCLUDES
  *********************/
 
-#include "data_struct.h"
+#include "app_data_struct.h"
 
 /**********************
  *   PUBLIC DATA
  **********************/
 
-CONTROL_LLC_DataTypedef control_llc_data;
+volatile CONTROL_LLC_DataTypedef s_control_llc_data;

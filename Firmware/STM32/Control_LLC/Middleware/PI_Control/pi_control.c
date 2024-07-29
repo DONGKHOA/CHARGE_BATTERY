@@ -11,16 +11,6 @@
 
 #include "pi_control.h"
 
-/*********************
- *    PRIVATE DEFINE
- *********************/
-
-/**
- * @brief Time sample for Proportional-Integral (PI) controller,
- * set to 10 milliseconds.
- */
-#define TIME_SAMPLE 10
-
 /**********************
  *   PUBLIC FUNCTIONS
  **********************/
@@ -64,8 +54,8 @@ PIControl_Process (float f_new_value, pi_control_t *p_pi)
   p_pi->f_p_part = p_pi->f_Kp * (p_pi->f_error - p_pi->f_pre_error);
 
   /**< @brief Calculate integral part. */
-  p_pi->f_i_part
-      = 0.5 * p_pi->f_Ki * TIME_SAMPLE * (p_pi->f_error + p_pi->f_pre_error);
+  p_pi->f_i_part = 0.5 * p_pi->f_Ki * CONTROL_PI_TIME_SAMPLE
+                   * (p_pi->f_error + p_pi->f_pre_error);
 
   /**< @brief Calculate current output. */
   p_pi->f_out = p_pi->f_pre_out + p_pi->f_p_part + p_pi->f_i_part;

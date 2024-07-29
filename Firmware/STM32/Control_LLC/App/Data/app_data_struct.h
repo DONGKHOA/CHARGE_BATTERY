@@ -1,5 +1,5 @@
 /*
- * data_struct.h
+ * app_data_struct.h
  *
  *  Created on: Jul 27, 2024
  *      Author: dongkhoa
@@ -12,8 +12,8 @@
  *      INCLUDES
  *********************/
 
+#include "bsp_board.h"
 #include "stm32f1xx.h"
-#include "board.h"
 #include "device.h"
 #include "pi_control.h"
 
@@ -35,12 +35,14 @@ extern "C"
 
   typedef struct _CONTROL_LLC_DataTypedef
   {
-    CONTROL_STATE_t state_data;
-    pi_control_t    control_system;
-    pwm_cfg_t       control_gate;
+    CONTROL_STATE_t s_state_data;
+    pi_control_t    s_control_system;
+    pwm_cfg_t       s_control_gate;
+    uart_cfg_t      s_uart_cmd;
+    float f_output_voltage;
   } CONTROL_LLC_DataTypedef;
 
-  extern CONTROL_LLC_DataTypedef control_llc_data;
+  extern volatile CONTROL_LLC_DataTypedef s_control_llc_data;
 
 #ifdef __cplusplus
 }
