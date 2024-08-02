@@ -153,8 +153,8 @@ extern "C"
   status_t SCH_TASK_CreateTask(SCH_TASK_HANDLE         *pHandle,
                                SCH_TaskPropertyTypedef *pTaskProperty);
   void     SCH_RunSystemTickTimer(void);
-  void     SCH_StartSchedular(void);
-  void     SCH_StopSchedular(void);
+  void     SCH_StartScheduler(void);
+  void     SCH_StopScheduler(void);
   void     SCH_HandleScheduledTask(void);
   uint32_t SCH_SystemTick(void);
   status_t SCH_TIM_CreateTimer(SCH_TIMER_HANDLE         *pHandle,

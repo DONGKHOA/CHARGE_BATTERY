@@ -125,7 +125,7 @@ int main(void)
   APP_CONTROL_CreateTask();
   APP_STATUS_LED_CreateTask();
 
-  SCH_StartSchedular();
+  SCH_StartScheduler();
   /* USER CODE END 2 */
 
   /* Infinite loop */

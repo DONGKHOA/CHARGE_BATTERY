@@ -32,7 +32,7 @@ extern "C"
     uint16_t prescaler_timer; /**< @brief Prescaler value for the timer. */
     uint16_t auto_reload_reg_timer; /**< @brief Auto-reload register value for
                                        the timer. */
-  } FCP_data_t;
+  } __attribute__((packed))FCP_data_t;
 
   /**********************
    *    PUBLIC FUNCTIONS

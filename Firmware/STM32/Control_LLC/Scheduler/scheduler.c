@@ -449,7 +449,7 @@ SCH_RunSystemTickTimer (void)
  * scheduling of tasks and timers.
  */
 void
-SCH_StartSchedular (void)
+SCH_StartScheduler (void)
 {
   /**< @brief Scheduler by initiating the system tick timer */
   SCH_START;
@@ -464,7 +464,7 @@ SCH_StartSchedular (void)
  * resetting all task contexts, timer contexts, and software timers.
  */
 void
-SCH_StopSchedular (void)
+SCH_StopScheduler (void)
 {
   /**< @brief Stop Scheduler by stopping the system tick timer */
   SCH_STOP;

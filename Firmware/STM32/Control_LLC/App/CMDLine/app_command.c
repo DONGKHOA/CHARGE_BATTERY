@@ -17,6 +17,7 @@
 #include "scheduler.h"
 #include "device.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /*********************
  *    PRIVATE TYPEDEFS
@@ -140,8 +141,8 @@ APP_COMMAND_Help (int argc, char *argv[])
 int
 APP_COMMAND_ReadVoltageLLC (int argc, char *argv[])
 {
-	if (argc < 2) return CMDLINE_TOO_FEW_ARGS;
-	if (argc > 2) return CMDLINE_TOO_MANY_ARGS;
+	if (argc < 1) return CMDLINE_TOO_FEW_ARGS;
+	if (argc > 1) return CMDLINE_TOO_MANY_ARGS;
 
 	char voltage[10];
 	sprintf(voltage, "%.2f", s_control_llc_data.f_output_voltage);
