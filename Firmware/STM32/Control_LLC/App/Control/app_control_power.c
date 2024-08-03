@@ -304,7 +304,7 @@ static float
 APP_CONTROL_ConvertVoltageOutput (float voltage)
 {
   float temp_voltage;
-  float max_voltage = 54; // Range 0V -> 54V
+  float max_voltage = 54; // Range 43.2V -> 52.8V
   // Convert
   temp_voltage = (voltage * max_voltage) / ADS1115_VREF;
   // Done
