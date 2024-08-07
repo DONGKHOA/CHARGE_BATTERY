@@ -1,0 +1,121 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "85c53e8c-0403-413d-b6c5-0718d4365b1f")
+	(paper "A4")
+	(lib_symbols)
+	(bus
+		(pts
+			(xy 101.6 86.36) (xy 128.27 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22202d40-87ed-4b2e-9539-2a70537e713b")
+	)
+	(text "MCU \nControl System"
+		(exclude_from_sim no)
+		(at 165.1 85.09 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+				(bold yes)
+			)
+		)
+		(uuid "193661c8-a395-468b-94eb-c91c96f79ee6")
+	)
+	(text "Wifi Applications"
+		(exclude_from_sim no)
+		(at 82.042 86.614 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(bold yes)
+			)
+		)
+		(uuid "c0b296a5-f9b4-4063-9af5-9100bb9d6ba1")
+	)
+	(sheet
+		(at 128.27 66.04)
+		(size 72.39 41.91)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0a857592-d3f3-4fe3-a9dc-bbc3518d8956")
+		(property "Sheetname" "STM32F407VET6"
+			(at 128.27 65.3284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "STM32F407VET6.kicad_sch"
+			(at 128.27 109.5506 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 63.5 67.31)
+		(size 38.1 41.91)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "bc09c168-950d-49ef-aa8a-d95b0b1387ca")
+		(property "Sheetname" "ESP32"
+			(at 63.5 66.5984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ESP32.kicad_sch"
+			(at 63.5 109.2966 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
