@@ -1060,7 +1060,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Cap_Polarized_330uF_450V"
+		(property "Value" "Cap_Polarized_1000uF_450V"
 			(at -12.192 12.446 0)
 			(effects
 				(font
@@ -1096,7 +1096,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name " "CHIPN24"
+		(property "Supply name " "linhkienchatluong"
 			(at -2.794 14.478 0)
 			(effects
 				(font
@@ -1105,7 +1105,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Tụ hóa 330uF 450V Đen Nichicon "
+		(property "Supply part number" " Tụ hóa 450V 1000uF 35x60mm chân cứng"
 			(at -5.08 14.478 0)
 			(effects
 				(font
@@ -1114,7 +1114,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://chipn24.com/h83-tu-hoa-330uf-450v-den-nichicon-30x40mm-id3746.html"
+		(property "Supply URL" "https://linhkienchatluong.vn/tu-hoa-co-phan-cuc/tu-hoa-450v-1000uf-35x60mm-chan-cung_sp454_ct2593.aspx"
 			(at -12.446 14.478 0)
 			(effects
 				(font
@@ -4794,7 +4794,7 @@
 				)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Diode_FRED_TO247"
+		(property "Footprint" "Package_TO_SOT_THT:TO-247-2_Vertical"
 			(at -8.636 6.096 0)
 			(effects
 				(font
@@ -4893,21 +4893,10 @@
 					(type none)
 				)
 			)
-			(circle
-				(center 0 0)
-				(radius 2.3418)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
 		)
 		(symbol "Diode_DSEI60-06A_FRED_TO247_1_1"
 			(pin unspecified line
-				(at -5.08 0 0)
+				(at 5.08 0 180)
 				(length 2.54)
 				(name ""
 					(effects
@@ -4925,7 +4914,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 5.08 0 180)
+				(at -5.08 0 0)
 				(length 2.54)
 				(name ""
 					(effects
@@ -4964,7 +4953,7 @@
 				)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Diode_Schottky_IDH06G65C6"
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-2_Vertical"
 			(at -11.43 17.272 0)
 			(effects
 				(font
@@ -5076,30 +5065,12 @@
 					(type none)
 				)
 			)
-			(pin passive line
-				(at 5.08 0 180)
-				(length 2.54)
-				(name "A"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 		)
 		(symbol "Diode_Schottky_IDH06G65C6_1_1"
 			(pin passive line
-				(at -5.08 0 0)
+				(at 5.08 0 180)
 				(length 2.54)
-				(name "K"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5107,6 +5078,24 @@
 					)
 				)
 				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5138,7 +5127,7 @@
 				)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:DBoost"
+		(property "Footprint" "Package_TO_SOT_THT:TO-247-2_Vertical"
 			(at -12.446 14.986 0)
 			(effects
 				(font
@@ -5239,7 +5228,7 @@
 				)
 			)
 			(pin passive line
-				(at 3.81 0 180)
+				(at -3.81 0 0)
 				(length 2.54)
 				(name "A"
 					(effects
@@ -5259,7 +5248,7 @@
 		)
 		(symbol "Diode_Shottky_DBoost_1_1"
 			(pin passive line
-				(at -3.81 0 0)
+				(at 3.81 0 180)
 				(length 2.54)
 				(name "K"
 					(effects
@@ -5300,7 +5289,7 @@
 				)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Diode_Schottky_SR5100"
+		(property "Footprint" "Diode_THT:D_DO-27_P15.24mm_Horizontal"
 			(at -12.446 14.986 0)
 			(effects
 				(font
@@ -5401,7 +5390,7 @@
 				)
 			)
 			(pin passive line
-				(at 3.81 0 180)
+				(at -3.81 0 0)
 				(length 2.54)
 				(name "A"
 					(effects
@@ -5421,7 +5410,7 @@
 		)
 		(symbol "Diode_Shottky_SR5100_1_1"
 			(pin passive line
-				(at -3.81 0 0)
+				(at 3.81 0 180)
 				(length 2.54)
 				(name "K"
 					(effects
