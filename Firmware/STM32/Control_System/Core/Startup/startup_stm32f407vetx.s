@@ -31,6 +31,9 @@
 
 .global  g_pfnVectors
 .global  Default_Handler
+.extern xPortPendSVHandler
+.extern xPortSysTickHandler
+.extern vPortSVCHandler
 
 /* start address for the initialization values of the .data section. 
 defined in linker script */
@@ -136,11 +139,11 @@ g_pfnVectors:
   .word  0
   .word  0
   .word  0
-  .word  SVC_Handler
+  .word  vPortSVCHandler
   .word  DebugMon_Handler
   .word  0
-  .word  PendSV_Handler
-  .word  SysTick_Handler
+  .word  xPortPendSVHandler
+  .word  xPortSysTickHandler
   
   /* External Interrupts */
   .word     WWDG_IRQHandler                   /* Window WatchDog              */                                        
