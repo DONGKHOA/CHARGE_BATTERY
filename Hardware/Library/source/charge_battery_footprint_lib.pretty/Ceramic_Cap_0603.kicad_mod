@@ -1,4 +1,4 @@
-(footprint "Ceramic_Cap_10nF_50V"
+(footprint "Ceramic_Cap_0603"
 	(version 20240108)
 	(generator "pcbnew")
 	(generator_version "8.0")
@@ -6,7 +6,7 @@
 	(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 	(tags "capacitor")
 	(property "Reference" "REF**"
-		(at 0 -1.43 0)
+		(at 0 -1.9558 0)
 		(layer "F.SilkS")
 		(uuid "d8b50c90-0233-4120-8eb7-fd37553c1dae")
 		(effects
@@ -16,7 +16,7 @@
 			)
 		)
 	)
-	(property "Value" "Ceramic_Cap_10nF_50V"
+	(property "Value" "Ceramic_Cap_0603"
 		(at 0 1.43 0)
 		(layer "F.Fab")
 		(uuid "4e5feb93-e33a-49c0-b9c5-ae5884f54838")
@@ -88,8 +88,8 @@
 		(uuid "8759eb8b-d5d2-4193-bb44-b0d3205730c7")
 	)
 	(fp_line
-		(start -1.48 -0.73)
-		(end 1.48 -0.73)
+		(start -1.27 -0.508)
+		(end 1.27 -0.508)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -98,8 +98,8 @@
 		(uuid "bc329fd9-c699-40fd-809e-176f9fd0c1d5")
 	)
 	(fp_line
-		(start -1.48 0.73)
-		(end -1.48 -0.73)
+		(start -1.27 0.51)
+		(end -1.27 -0.508)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -108,8 +108,8 @@
 		(uuid "40f7c129-7117-4932-921f-63d9649a8e3c")
 	)
 	(fp_line
-		(start 1.48 -0.73)
-		(end 1.48 0.73)
+		(start 1.27 -0.508)
+		(end 1.27 0.508)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -118,8 +118,8 @@
 		(uuid "4cdf0691-68d0-4b9c-a08d-e458d11a6264")
 	)
 	(fp_line
-		(start 1.48 0.73)
-		(end -1.48 0.73)
+		(start 1.27 0.508)
+		(end -1.27 0.51)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -166,17 +166,6 @@
 		)
 		(layer "F.Fab")
 		(uuid "3fe6a869-68b8-4f26-8354-3cc1c9697594")
-	)
-	(fp_text user "${REFERENCE}"
-		(at 0 0 0)
-		(layer "F.Fab")
-		(uuid "579d7eba-875c-4a83-94cf-9a0ffb7d4ec6")
-		(effects
-			(font
-				(size 0.4 0.4)
-				(thickness 0.06)
-			)
-		)
 	)
 	(pad "1" smd roundrect
 		(at -0.775 0)
