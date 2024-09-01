@@ -6,6 +6,8 @@
 	(paper "A4")
 	(lib_symbols
 		(symbol "Ceramic_Cap_SMD_100nF_16V_1"
+			(pin_numbers hide)
+			(pin_names hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -167,6 +169,8 @@
 			)
 		)
 		(symbol "Ceramic_Cap_SMD_100nF_16V_2"
+			(pin_numbers hide)
+			(pin_names hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1403,18 +1407,20 @@
 			)
 		)
 		(symbol "charge_battery_sym_lib:Ceramic_Cap_Hole_1uF_50V_"
+			(pin_numbers hide)
+			(pin_names hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "C"
-				(at -1.524 0.762 0)
+				(at 2.286 2.794 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "1uF "
+			(property "Value" "1uF /50V"
 				(at 0.254 5.334 0)
 				(effects
 					(font
@@ -1488,7 +1494,7 @@
 			(symbol "Ceramic_Cap_Hole_1uF_50V__1_1"
 				(polyline
 					(pts
-						(xy -1.27 -2.032) (xy -0.3302 -2.032)
+						(xy 2.54 0) (xy 3.4798 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -1500,7 +1506,7 @@
 				)
 				(polyline
 					(pts
-						(xy -0.3302 -3.937) (xy -0.3302 -0.127)
+						(xy 3.4798 -1.905) (xy 3.4798 1.905)
 					)
 					(stroke
 						(width 0.2032)
@@ -1512,7 +1518,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.3048 -3.937) (xy 0.3048 -0.127)
+						(xy 4.1148 -1.905) (xy 4.1148 1.905)
 					)
 					(stroke
 						(width 0.2032)
@@ -1524,7 +1530,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.3048 -2.032) (xy 1.27 -2.032)
+						(xy 4.1148 0) (xy 5.08 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -1535,7 +1541,7 @@
 					)
 				)
 				(pin unspecified line
-					(at -3.81 -2.032 0)
+					(at 0 0 0)
 					(length 2.54)
 					(name ""
 						(effects
@@ -1553,7 +1559,7 @@
 					)
 				)
 				(pin unspecified line
-					(at 3.81 -2.032 180)
+					(at 7.62 0 180)
 					(length 2.54)
 					(name ""
 						(effects
@@ -1734,6 +1740,8 @@
 			)
 		)
 		(symbol "charge_battery_sym_lib:Ceramic_Cap_SMD_10uF_16V"
+			(pin_numbers hide)
+			(pin_names hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -6013,7 +6021,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 60.96) (xy 264.16 72.39)
+			(xy 264.16 60.96) (xy 264.16 71.12)
 		)
 		(stroke
 			(width 0)
@@ -6220,6 +6228,16 @@
 			(type default)
 		)
 		(uuid "3ed4c7b8-96f3-4ab0-a4c9-5f3aa4250885")
+	)
+	(wire
+		(pts
+			(xy 264.16 80.01) (xy 264.16 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fc883f3-ad2f-4683-8948-94820abd356a")
 	)
 	(wire
 		(pts
@@ -7053,6 +7071,16 @@
 	)
 	(wire
 		(pts
+			(xy 247.65 80.01) (xy 264.16 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a81e1637-cd5f-4546-a582-09af95b531eb")
+	)
+	(wire
+		(pts
 			(xy 50.8 62.23) (xy 50.8 72.39)
 		)
 		(stroke
@@ -7070,16 +7098,6 @@
 			(type default)
 		)
 		(uuid "aa2d1c58-7bce-40df-aa84-644a0ed3e3fb")
-	)
-	(wire
-		(pts
-			(xy 247.65 80.01) (xy 264.16 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af9e290d-cce3-4134-8899-ba968567ead0")
 	)
 	(wire
 		(pts
@@ -11747,7 +11765,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_Hole_1uF_50V_")
-		(at 262.128 76.2 90)
+		(at 264.16 78.74 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11756,7 +11774,7 @@
 		(fields_autoplaced yes)
 		(uuid "94452bf9-3d3a-4619-a7d9-657c406987df")
 		(property "Reference" "C27"
-			(at 267.208 74.9299 90)
+			(at 269.24 77.4699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11765,7 +11783,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 267.208 77.4699 90)
+			(at 269.24 80.0099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11774,7 +11792,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_Hole_1uF_50V"
-			(at 257.048 76.454 0)
+			(at 259.08 78.994 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11783,7 +11801,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 257.048 75.946 0)
+			(at 259.08 78.486 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11792,7 +11810,7 @@
 			)
 		)
 		(property "Description" "1uF ±10%, code 105"
-			(at 256.54 75.184 0)
+			(at 258.572 77.724 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11801,7 +11819,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 257.048 74.93 0)
+			(at 259.08 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11810,7 +11828,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Gốm Multilayer 1uF 50V"
-			(at 256.54 74.93 0)
+			(at 258.572 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11819,7 +11837,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-gom-multilayer-1uf-50v"
-			(at 257.048 76.2 0)
+			(at 259.08 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
