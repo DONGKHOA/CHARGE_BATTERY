@@ -5,7 +5,7 @@
 	(uuid "e41e3bd3-7c89-482f-8985-3c3698325fd5")
 	(paper "A4")
 	(lib_symbols
-		(symbol "charge_battery_sym_lib:CD74HC4067SM96"
+		(symbol "charge_battery_sym_lib:MAX485CSA"
 			(pin_names
 				(offset 0.254)
 			)
@@ -13,23 +13,23 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at 8.89 69.85 0)
+				(at 6.35 16.51 0)
 				(effects
 					(font
 						(size 1.524 1.524)
 					)
 				)
 			)
-			(property "Value" "CD74HC4067SM96"
-				(at 10.16 67.31 0)
+			(property "Value" "MAX485CSA"
+				(at 6.35 13.97 0)
 				(effects
 					(font
 						(size 1.524 1.524)
 					)
 				)
 			)
-			(property "Footprint" "charge_battery_footprint_lib:SOIC-24"
-				(at 57.15 -12.7 0)
+			(property "Footprint" "charge_battery_footprint_lib:SOIC-8"
+				(at 43.18 -17.78 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -38,8 +38,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cd74hc4067.pdf?ts=1724894821576&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FCD74HC4067%253Futm_source%253Dgoogle%2526utm_medium%253Dcpc%2526utm_campaign%253Dti-null-null-xref-cpc-pf-google-roa_cons%2526utm_content%253Dxref%2526ds_k%253D74HC4067%2526dcm%253Dyes%2526gad_source%253D1%2526gclid%253DCjwKCAjwlbu2BhA3EiwA3yXyu-xEUJYPaLRDyqjdtr3n6-dIT5wcjfPxRARtzfyDoTJpBaoVaAt_ORoCJK4QAvD_BwE%2526gclsrc%253Daw.ds"
-				(at 60.96 -8.89 0)
+			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/MAX1487-MAX491.pdf"
+				(at 20.32 -19.05 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -48,8 +48,8 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Multiplexer Switch ICs Hi-Spd CMOS 16Ch Anl Mltplxr/Demltplxr"
-				(at 57.15 -12.7 0)
+			(property "Description" "The MAX485 are low-power transceivers for RS-485 and RS-422 communication"
+				(at 16.51 -22.86 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -57,7 +57,34 @@
 					(hide yes)
 				)
 			)
-			(property "Supply Name" "mouser"
+			(property "Supply Name" "TME"
+				(at 36.83 -20.32 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "http://www.tme.vn/Product.aspx?id=482#page=pro_info"
+				(at 16.51 -22.86 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply Part Number" "MAX485CSA"
+				(at 34.29 -20.32 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "MAX485CSA"
 				(at 0 0 0)
 				(effects
 					(font
@@ -66,25 +93,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply URL" "https://www.mouser.vn/ProductDetail/Texas-Instruments/CD74HC4067M96?qs=xFfolx0DHx0XT7d9xTTZBA%3D%3D"
-				(at 1.27 -12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply Part Number" "595-CD74HC4067M96"
-				(at 17.78 -8.89 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "CD74HC4067SM96"
+			(property "ki_fp_filters" "21-0041B_8_MXM 21-0041B_8_MXM-M 21-0041B_8_MXM-L"
 				(at 0 0 0)
 				(effects
 					(font
@@ -93,20 +102,11 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "DB0024A_N DB0024A_M DB0024A_L"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CD74HC4067SM96_0_1"
-				(pin bidirectional line
-					(at 24.13 63.5 180)
+			(symbol "MAX485CSA_0_1"
+				(pin output line
+					(at -3.81 10.16 0)
 					(length 3.81)
-					(name "COMMON_I_O"
+					(name "RO"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -122,189 +122,9 @@
 					)
 				)
 				(pin input line
-					(at -3.81 15.24 0)
-					(length 3.81)
-					(name "S0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 12.7 0)
-					(length 3.81)
-					(name "S1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 24.13 2.54 180)
-					(length 3.81)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at -3.81 7.62 0)
 					(length 3.81)
-					(name "S3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 10.16 0)
-					(length 3.81)
-					(name "S2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 2.54 0)
-					(length 3.81)
-					(name "E_N"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 20.32 0)
-					(length 3.81)
-					(name "I15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 22.86 0)
-					(length 3.81)
-					(name "I14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 25.4 0)
-					(length 3.81)
-					(name "I13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 27.94 0)
-					(length 3.81)
-					(name "I12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 40.64 0)
-					(length 3.81)
-					(name "I7"
+					(name "*RE"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -320,99 +140,9 @@
 					)
 				)
 				(pin input line
-					(at -3.81 30.48 0)
+					(at -3.81 5.08 0)
 					(length 3.81)
-					(name "I11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 33.02 0)
-					(length 3.81)
-					(name "I10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 35.56 0)
-					(length 3.81)
-					(name "I9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 38.1 0)
-					(length 3.81)
-					(name "I8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -3.81 63.5 0)
-					(length 3.81)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 43.18 0)
-					(length 3.81)
-					(name "I6"
+					(name "DE"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -428,9 +158,9 @@
 					)
 				)
 				(pin input line
-					(at -3.81 45.72 0)
+					(at -3.81 2.54 0)
 					(length 3.81)
-					(name "I5"
+					(name "DI"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -445,10 +175,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -3.81 48.26 0)
+				(pin power_in line
+					(at 17.78 2.54 180)
 					(length 3.81)
-					(name "I4"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -463,10 +193,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -3.81 50.8 0)
+				(pin bidirectional line
+					(at 17.78 5.08 180)
 					(length 3.81)
-					(name "I3"
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -481,10 +211,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -3.81 53.34 0)
+				(pin bidirectional line
+					(at 17.78 7.62 180)
 					(length 3.81)
-					(name "I2"
+					(name "B"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -499,10 +229,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -3.81 55.88 0)
+				(pin power_in line
+					(at 17.78 10.16 180)
 					(length 3.81)
-					(name "I1"
+					(name "VCC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -517,29 +247,11 @@
 						)
 					)
 				)
-				(pin input line
-					(at -3.81 58.42 0)
-					(length 3.81)
-					(name "I0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
-			(symbol "CD74HC4067SM96_1_1"
+			(symbol "MAX485CSA_1_1"
 				(rectangle
-					(start 0 66.04)
-					(end 20.32 0)
+					(start 0 12.7)
+					(end 13.97 0)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -552,33 +264,33 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:CD74HC4067SM96")
-		(at 124.46 172.72 0)
+		(lib_id "charge_battery_sym_lib:MAX485CSA")
+		(at 156.21 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "15c0cd4a-b162-4ff4-9aa6-878b8c668b12")
-		(property "Reference" "U6"
-			(at 134.62 101.6 0)
+		(uuid "b7167e8c-7ce4-4d00-a86f-bd09b307b715")
+		(property "Reference" "U23"
+			(at 163.195 76.2 0)
 			(effects
 				(font
 					(size 1.524 1.524)
 				)
 			)
 		)
-		(property "Value" "CD74HC4067SM96"
-			(at 134.62 104.14 0)
+		(property "Value" "MAX485CSA"
+			(at 163.195 78.74 0)
 			(effects
 				(font
 					(size 1.524 1.524)
 				)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:SOIC-24"
-			(at 181.61 185.42 0)
+		(property "Footprint" "charge_battery_footprint_lib:SOIC-8"
+			(at 199.39 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -587,8 +299,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cd74hc4067.pdf?ts=1724894821576&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FCD74HC4067%253Futm_source%253Dgoogle%2526utm_medium%253Dcpc%2526utm_campaign%253Dti-null-null-xref-cpc-pf-google-roa_cons%2526utm_content%253Dxref%2526ds_k%253D74HC4067%2526dcm%253Dyes%2526gad_source%253D1%2526gclid%253DCjwKCAjwlbu2BhA3EiwA3yXyu-xEUJYPaLRDyqjdtr3n6-dIT5wcjfPxRARtzfyDoTJpBaoVaAt_ORoCJK4QAvD_BwE%2526gclsrc%253Daw.ds"
-			(at 185.42 181.61 0)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/MAX1487-MAX491.pdf"
+			(at 176.53 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -597,8 +309,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Multiplexer Switch ICs Hi-Spd CMOS 16Ch Anl Mltplxr/Demltplxr"
-			(at 181.61 185.42 0)
+		(property "Description" "The MAX485 are low-power transceivers for RS-485 and RS-422 communication"
+			(at 172.72 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -606,8 +318,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply Name" "mouser"
-			(at 124.46 172.72 0)
+		(property "Supply Name" "TME"
+			(at 193.04 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -615,8 +327,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Texas-Instruments/CD74HC4067M96?qs=xFfolx0DHx0XT7d9xTTZBA%3D%3D"
-			(at 125.73 185.42 0)
+		(property "Supply URL" "http://www.tme.vn/Product.aspx?id=482#page=pro_info"
+			(at 172.72 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -624,254 +336,43 @@
 				(hide yes)
 			)
 		)
-		(property "Supply Part Number" "595-CD74HC4067M96"
-			(at 142.24 181.61 0)
+		(property "Supply Part Number" "MAX485CSA"
+			(at 190.5 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "e2d2ca3d-0604-421a-8512-638df587c5ef")
-		)
-		(pin "18"
-			(uuid "8a994ee5-38a1-4137-ad14-6c3735ae7d51")
-		)
-		(pin "13"
-			(uuid "91058c78-e2b4-425e-95a0-67f7d794995d")
-		)
-		(pin "4"
-			(uuid "ebdb8dca-d3f6-403b-bd39-6e53f4f0bacc")
-		)
-		(pin "12"
-			(uuid "a9d5dbc9-0abb-4ce4-9ce4-02526348c4c8")
-		)
-		(pin "15"
-			(uuid "f246f674-9dcd-41a8-a0aa-58d00ae20a28")
-		)
-		(pin "17"
-			(uuid "275d038b-23a2-4390-8632-8a6e8b0d4883")
-		)
-		(pin "23"
-			(uuid "ac3caf28-9dca-40e7-b5e6-5667eebefc4d")
-		)
-		(pin "7"
-			(uuid "82ef9cc4-0940-45fa-b93f-808060f353c5")
-		)
-		(pin "22"
-			(uuid "5d0b0e56-5016-4bf9-82d5-022135c7dd46")
-		)
-		(pin "1"
-			(uuid "f74bf118-c34c-4e43-aed5-15ca9c6dec7b")
-		)
-		(pin "19"
-			(uuid "774474dc-881b-472f-94fa-7e64e5d8f2bc")
-		)
-		(pin "11"
-			(uuid "8e7e75d3-7a02-4a25-b59f-61be45b82f71")
-		)
-		(pin "20"
-			(uuid "dc0906de-95f9-4085-9dfb-5d51ee09a750")
-		)
-		(pin "9"
-			(uuid "95f448b1-a386-4561-9ce7-3e95d60ed8ce")
-		)
-		(pin "5"
-			(uuid "efac966c-73b9-4b05-9d00-3365ce5408bf")
-		)
-		(pin "21"
-			(uuid "8af9269b-4013-468c-afaf-eca035fa4a6b")
 		)
 		(pin "3"
-			(uuid "db76b7ec-ca01-4820-8378-db4b985b57db")
-		)
-		(pin "10"
-			(uuid "e766cb02-9a92-4ae0-81d0-e4fdaf80110a")
-		)
-		(pin "24"
-			(uuid "37aeb450-f772-4879-835c-b469ca20e550")
-		)
-		(pin "16"
-			(uuid "accf2f4e-69cb-4893-9fc7-0b74a19314fe")
-		)
-		(pin "14"
-			(uuid "13367e1a-0d79-418b-9fd3-42ec845b1c5f")
-		)
-		(pin "8"
-			(uuid "3ee68ab2-e7f7-4d63-b839-02d3056acd96")
-		)
-		(pin "6"
-			(uuid "b3cb8e6b-c3f7-46a3-b72c-48f29489e636")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/eadc6d73-e2ad-4643-bc1f-3abdfd5d95f1"
-					(reference "U6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:CD74HC4067SM96")
-		(at 124.46 93.98 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "88aadd72-ea9d-4f9f-a19e-db02b966746d")
-		(property "Reference" "U5"
-			(at 134.62 22.86 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "CD74HC4067SM96"
-			(at 134.62 25.4 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:SOIC-24"
-			(at 181.61 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cd74hc4067.pdf?ts=1724894821576&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FCD74HC4067%253Futm_source%253Dgoogle%2526utm_medium%253Dcpc%2526utm_campaign%253Dti-null-null-xref-cpc-pf-google-roa_cons%2526utm_content%253Dxref%2526ds_k%253D74HC4067%2526dcm%253Dyes%2526gad_source%253D1%2526gclid%253DCjwKCAjwlbu2BhA3EiwA3yXyu-xEUJYPaLRDyqjdtr3n6-dIT5wcjfPxRARtzfyDoTJpBaoVaAt_ORoCJK4QAvD_BwE%2526gclsrc%253Daw.ds"
-			(at 185.42 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Multiplexer Switch ICs Hi-Spd CMOS 16Ch Anl Mltplxr/Demltplxr"
-			(at 181.61 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply Name" "mouser"
-			(at 124.46 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Texas-Instruments/CD74HC4067M96?qs=xFfolx0DHx0XT7d9xTTZBA%3D%3D"
-			(at 125.73 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply Part Number" "595-CD74HC4067M96"
-			(at 142.24 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "71295e84-835f-424d-a3e9-65d69cc7dc41")
-		)
-		(pin "18"
-			(uuid "393976d7-7f2b-4e01-89c1-d351b0599f35")
-		)
-		(pin "13"
-			(uuid "70f06939-9ec8-4f0f-9fed-ecc6e228d7eb")
-		)
-		(pin "4"
-			(uuid "073b9aac-4df9-4216-959f-e954516a4bfa")
-		)
-		(pin "12"
-			(uuid "6202fc85-289d-42df-b29c-fabb184c3ace")
-		)
-		(pin "15"
-			(uuid "99b54ddf-9c23-46f8-819e-41ce605569f7")
-		)
-		(pin "17"
-			(uuid "183da03d-13a3-4f49-9a37-428eb8a595a2")
-		)
-		(pin "23"
-			(uuid "c729afc0-bb41-4f67-a742-80ca116fdea3")
-		)
-		(pin "7"
-			(uuid "8d3d0c52-22ab-4a84-879e-1595e60db9f5")
-		)
-		(pin "22"
-			(uuid "a02bb1ce-d8d0-492a-9477-6146fe10d086")
+			(uuid "1ad7deca-6a8d-4ac6-a76e-9424000cd9f4")
 		)
 		(pin "1"
-			(uuid "e64c81a0-b066-4405-b430-6c427749340c")
-		)
-		(pin "19"
-			(uuid "956359da-7b61-46d6-b616-10a13103709d")
-		)
-		(pin "11"
-			(uuid "622aac8f-390b-4df7-82e6-6fcde261ddf3")
-		)
-		(pin "20"
-			(uuid "83c18e19-7366-4a3b-8ecc-fd1ccc0ae81a")
-		)
-		(pin "9"
-			(uuid "5223cd56-76fd-4c22-a420-e1ff0c387236")
+			(uuid "dd76f6f1-3c03-4354-bc36-0d1a7d87026d")
 		)
 		(pin "5"
-			(uuid "767c121b-3adb-449d-ba64-a92853b97e5a")
+			(uuid "3b9c7d04-40da-4bb2-a270-e70468911409")
 		)
-		(pin "21"
-			(uuid "b49eab6b-6cff-48a0-b345-fce385a66a6a")
-		)
-		(pin "3"
-			(uuid "df833a7f-d023-4933-af0a-6a8fcac03b6e")
-		)
-		(pin "10"
-			(uuid "e0a10ab2-4e2a-4a6d-b152-bd3ac46ada3c")
-		)
-		(pin "24"
-			(uuid "e48ae028-930c-483e-9229-d8d4428941e1")
-		)
-		(pin "16"
-			(uuid "ea77a897-7fc7-41e3-ac44-5b3bc82d2ae1")
-		)
-		(pin "14"
-			(uuid "4f4ff2c7-2a16-4f93-aa8f-e6c96232b05a")
+		(pin "2"
+			(uuid "b2536014-1cd2-4ff1-986f-3e8fa368b3d3")
 		)
 		(pin "8"
-			(uuid "4b6cb2fe-f8ff-4bb1-aad3-abe84646a9a7")
+			(uuid "e3893940-47f9-4439-a62e-62a188179f0e")
 		)
 		(pin "6"
-			(uuid "ea0e81a8-383f-42f0-a990-e2513dc3fc4f")
+			(uuid "c3e7da13-5eb5-4243-bbc2-b2f57cf5ab18")
+		)
+		(pin "4"
+			(uuid "ee0480b1-ee43-4145-9f8b-194460b8c7ad")
+		)
+		(pin "7"
+			(uuid "208d0555-e9df-4b24-a549-7b9bee46bffe")
 		)
 		(instances
 			(project ""
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/eadc6d73-e2ad-4643-bc1f-3abdfd5d95f1"
-					(reference "U5")
+					(reference "U23")
 					(unit 1)
 				)
 			)

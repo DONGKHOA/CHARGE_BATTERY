@@ -377,6 +377,108 @@
 				)
 			)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "charge_battery_sym_lib:Cap_Tantalum_10uF_16V"
 			(pin_numbers hide)
 			(pin_names
@@ -2023,7 +2125,7 @@
 				)
 			)
 		)
-		(symbol "power:GND"
+		(symbol "power:GNDD"
 			(power)
 			(pin_numbers hide)
 			(pin_names
@@ -2040,8 +2142,8 @@
 					(hide yes)
 				)
 			)
-			(property "Value" "GND"
-				(at 0 -3.81 0)
+			(property "Value" "GNDD"
+				(at 0 -3.175 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2066,7 +2168,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2084,10 +2186,21 @@
 					(hide yes)
 				)
 			)
-			(symbol "GND_0_1"
+			(symbol "GNDD_0_1"
+				(rectangle
+					(start -1.27 -1.524)
+					(end 1.27 -2.032)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+						(xy 0 0) (xy 0 -1.524)
 					)
 					(stroke
 						(width 0)
@@ -2098,7 +2211,175 @@
 					)
 				)
 			)
-			(symbol "GND_1_1"
+			(symbol "GNDD_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:GNDPWR"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GNDPWR"
+				(at 0 -3.302 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GNDPWR_0_1"
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 -1.27) (xy -1.27 -2.032) (xy -1.27 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 -1.27) (xy -0.762 -2.032) (xy -0.762 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy -0.254 -2.032) (xy -0.254 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -1.27) (xy 0.254 -2.032) (xy 0.254 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -1.27) (xy -1.016 -1.27) (xy -1.016 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -1.27) (xy 0.762 -2.032) (xy 0.762 -2.032) (xy 0.762 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GNDPWR_1_1"
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
@@ -2127,7 +2408,7 @@
 		(uuid "07cd9af5-bf63-4a82-9aa3-71392d322ebf")
 	)
 	(junction
-		(at 165.1 121.92)
+		(at 99.06 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0a96d161-3098-433b-a046-b2dad777d2eb")
@@ -2151,7 +2432,7 @@
 		(uuid "3112f9d1-4a06-4a3f-a817-c2d7e9f29b69")
 	)
 	(junction
-		(at 165.1 118.11)
+		(at 99.06 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "558901ad-7020-4c2d-a195-39d7419ed76e")
@@ -2169,7 +2450,7 @@
 		(uuid "5e4e11cb-f629-41ac-bede-cdfb159e90c7")
 	)
 	(junction
-		(at 165.1 114.3)
+		(at 99.06 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "88233b7d-bfaf-446f-a920-7e8b43725017")
@@ -2193,10 +2474,16 @@
 		(uuid "a8366cb4-e358-4f37-b269-f251dbc1edcb")
 	)
 	(junction
-		(at 165.1 129.54)
+		(at 99.06 127)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "abffacc9-0b90-43c2-8975-f96bc5ba8f37")
+	)
+	(junction
+		(at 171.45 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bfe0c1bc-ea51-4009-8289-81d162f37455")
 	)
 	(junction
 		(at 182.88 68.58)
@@ -2205,7 +2492,7 @@
 		(uuid "c59f3967-e256-4296-9d8e-adb0a1b5b1aa")
 	)
 	(junction
-		(at 165.1 106.68)
+		(at 99.06 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c9d9c4b7-6a2e-454b-bb4f-39d598c40908")
@@ -2254,7 +2541,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 137.16) (xy 142.24 137.16)
+			(xy 72.39 134.62) (xy 76.2 134.62)
 		)
 		(stroke
 			(width 0)
@@ -2284,7 +2571,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 129.54) (xy 142.24 129.54)
+			(xy 72.39 127) (xy 76.2 127)
 		)
 		(stroke
 			(width 0)
@@ -2344,7 +2631,17 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 129.54) (xy 165.1 129.54)
+			(xy 171.45 95.25) (xy 180.34 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "257cc8b9-b22d-4cd0-ba74-6a9d70d5d53b")
+	)
+	(wire
+		(pts
+			(xy 96.52 127) (xy 99.06 127)
 		)
 		(stroke
 			(width 0)
@@ -2354,7 +2651,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 137.16) (xy 154.94 137.16)
+			(xy 83.82 134.62) (xy 88.9 134.62)
 		)
 		(stroke
 			(width 0)
@@ -2474,7 +2771,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 121.92) (xy 142.24 121.92)
+			(xy 72.39 119.38) (xy 76.2 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2494,7 +2791,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 99.06) (xy 165.1 106.68)
+			(xy 99.06 96.52) (xy 99.06 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2514,7 +2811,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 121.92) (xy 154.94 121.92)
+			(xy 83.82 119.38) (xy 88.9 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2584,7 +2881,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 137.16) (xy 162.56 137.16)
+			(xy 99.06 134.62) (xy 96.52 134.62)
 		)
 		(stroke
 			(width 0)
@@ -2654,7 +2951,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 121.92) (xy 165.1 129.54)
+			(xy 99.06 119.38) (xy 99.06 127)
 		)
 		(stroke
 			(width 0)
@@ -2714,7 +3011,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 106.68) (xy 142.24 106.68)
+			(xy 72.39 104.14) (xy 76.2 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2734,7 +3031,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 129.54) (xy 165.1 137.16)
+			(xy 99.06 127) (xy 99.06 134.62)
 		)
 		(stroke
 			(width 0)
@@ -2744,7 +3041,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 118.11) (xy 165.1 121.92)
+			(xy 99.06 115.57) (xy 99.06 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2764,7 +3061,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 106.68) (xy 165.1 114.3)
+			(xy 99.06 104.14) (xy 99.06 111.76)
 		)
 		(stroke
 			(width 0)
@@ -2774,13 +3071,23 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 114.3) (xy 165.1 118.11)
+			(xy 99.06 111.76) (xy 99.06 115.57)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a0eb1f77-bb2c-4000-b9cb-e275d7c21631")
+	)
+	(wire
+		(pts
+			(xy 171.45 95.25) (xy 171.45 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5fd74c8-edfd-418f-b8ed-9b10da5e407b")
 	)
 	(wire
 		(pts
@@ -2791,6 +3098,16 @@
 			(type default)
 		)
 		(uuid "a6775a46-bdc7-420f-a10f-8e6bee4ceaed")
+	)
+	(wire
+		(pts
+			(xy 180.34 95.25) (xy 180.34 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a94d71b1-9eb2-4b2a-969c-cf748574cf76")
 	)
 	(wire
 		(pts
@@ -2824,7 +3141,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 99.06) (xy 142.24 99.06)
+			(xy 72.39 96.52) (xy 76.2 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2834,7 +3151,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 99.06) (xy 154.94 99.06)
+			(xy 83.82 96.52) (xy 88.9 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2864,7 +3181,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 129.54) (xy 154.94 129.54)
+			(xy 83.82 127) (xy 88.9 127)
 		)
 		(stroke
 			(width 0)
@@ -2874,13 +3191,23 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 114.3) (xy 142.24 114.3)
+			(xy 72.39 111.76) (xy 76.2 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c0650032-aa1c-4220-ae0b-17fe7879c4cc")
+	)
+	(wire
+		(pts
+			(xy 162.56 95.25) (xy 171.45 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1b46eba-09a0-4322-a90d-6f86cda54d37")
 	)
 	(wire
 		(pts
@@ -2904,7 +3231,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 121.92) (xy 165.1 121.92)
+			(xy 96.52 119.38) (xy 99.06 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2934,13 +3261,23 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 114.3) (xy 154.94 114.3)
+			(xy 83.82 111.76) (xy 88.9 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "cfbbfb5d-e056-4b1b-b7aa-76a3b0147e91")
+	)
+	(wire
+		(pts
+			(xy 162.56 96.52) (xy 162.56 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d270d697-ba3c-4dc7-98ae-0e444d4da1ac")
 	)
 	(wire
 		(pts
@@ -2954,7 +3291,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 99.06) (xy 165.1 99.06)
+			(xy 96.52 96.52) (xy 99.06 96.52)
 		)
 		(stroke
 			(width 0)
@@ -2974,7 +3311,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 114.3) (xy 165.1 114.3)
+			(xy 96.52 111.76) (xy 99.06 111.76)
 		)
 		(stroke
 			(width 0)
@@ -2984,7 +3321,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 106.68) (xy 165.1 106.68)
+			(xy 96.52 104.14) (xy 99.06 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2994,7 +3331,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 118.11) (xy 166.37 118.11)
+			(xy 99.06 115.57) (xy 100.33 115.57)
 		)
 		(stroke
 			(width 0)
@@ -3074,7 +3411,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 106.68) (xy 154.94 106.68)
+			(xy 83.82 104.14) (xy 88.9 104.14)
 		)
 		(stroke
 			(width 0)
@@ -3177,8 +3514,8 @@
 		(uuid 7b65aad8-60a3-49bc-ac70-61b04c019954)
 	)
 	(rectangle
-		(start 115.57 87.63)
-		(end 183.2356 147.5486)
+		(start 49.53 85.09)
+		(end 117.1956 145.0086)
 		(stroke
 			(width 0)
 			(type default)
@@ -3201,7 +3538,7 @@
 	)
 	(text "LED POWER"
 		(exclude_from_sim no)
-		(at 149.352 91.948 0)
+		(at 83.312 89.408 0)
 		(effects
 			(font
 				(size 3.81 3.81)
@@ -3220,72 +3557,6 @@
 			)
 		)
 		(uuid "ee81fe6c-93f5-4965-873e-9077fddcd67e")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 182.88 46.99 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "044d6299-1516-4d4e-a5db-bd241398e7df")
-		(property "Reference" "#PWR05"
-			(at 182.88 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 182.88 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 182.88 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 182.88 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 182.88 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c0cb7bae-7dc0-4874-963a-ea44b7330589")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
-					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x07_Socket")
@@ -3371,17 +3642,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 166.37 118.11 90)
+		(lib_id "power:GNDPWR")
+		(at 208.28 69.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "0ac37890-af6e-4ebe-a660-8f1c69a1e1c8")
-		(property "Reference" "#PWR023"
-			(at 172.72 118.11 0)
+		(uuid "0bc24499-16d4-4f36-9cab-91ae8f14a417")
+		(property "Reference" "#PWR018"
+			(at 208.28 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3389,17 +3660,16 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 170.18 118.1099 90)
+		(property "Value" "GNDPWR"
+			(at 208.153 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 166.37 118.11 0)
+			(at 208.28 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3408,7 +3678,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 166.37 118.11 0)
+			(at 208.28 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3416,8 +3686,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 166.37 118.11 0)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 208.28 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3426,12 +3696,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "2b9677f9-4eeb-407d-b361-c0b7aaedc0c3")
+			(uuid "72517639-0e51-438e-aac0-55a5943d7aaa")
 		)
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
-					(reference "#PWR023")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -3667,138 +3937,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 232.41 69.85 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1281ed9d-f71f-45cb-ab7c-8d1a302d16a5")
-		(property "Reference" "#PWR019"
-			(at 232.41 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 232.41 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 232.41 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 232.41 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 232.41 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c8b4d38f-9a08-42f5-a302-7e31062449d2")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
-					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 86.36 62.23 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1338b1c4-f177-418f-a504-ea1202d303f8")
-		(property "Reference" "#PWR016"
-			(at 86.36 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 86.36 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 86.36 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 86.36 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 86.36 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f7519af6-53c0-4a0e-a08f-f5dfde369715")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
-					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+12V")
 		(at 86.36 45.72 0)
 		(unit 1)
@@ -3866,7 +4004,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:LED_0805")
-		(at 158.75 137.16 0)
+		(at 92.71 134.62 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3874,7 +4012,7 @@
 		(dnp no)
 		(uuid "1ac726e4-b734-44e8-8a90-bc7f735effad")
 		(property "Reference" "D6"
-			(at 159.004 134.874 0)
+			(at 92.964 132.334 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3882,7 +4020,7 @@
 			)
 		)
 		(property "Value" "LED_0805"
-			(at 159.004 139.446 0)
+			(at 92.964 136.906 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3890,7 +4028,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:LED_0805"
-			(at 154.94 132.08 0)
+			(at 88.9 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3899,7 +4037,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 148.844 132.08 0)
+			(at 82.804 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3908,7 +4046,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 159.004 132.334 0)
+			(at 92.964 129.794 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3917,7 +4055,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 157.988 131.826 0)
+			(at 91.948 129.286 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3926,7 +4064,7 @@
 			)
 		)
 		(property "Supply part number" "LED Xanh Lá 0805 Dán SMD Trong Suốt"
-			(at 159.258 132.334 0)
+			(at 93.218 129.794 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3935,7 +4073,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/led-xanh-la-0805-dan-smd-trong-suot"
-			(at 157.988 131.826 0)
+			(at 91.948 129.286 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3953,6 +4091,72 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
 					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDD")
+		(at 162.56 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "23f53420-7316-47b4-999b-8438ea5041cf")
+		(property "Reference" "#PWR067"
+			(at 162.56 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDD"
+			(at 162.56 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
+			(at 162.56 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cf8c39fc-bf79-4ff8-ada7-ee01153727a5")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
+					(reference "#PWR067")
 					(unit 1)
 				)
 			)
@@ -4057,7 +4261,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 138.43 129.54 90)
+		(at 72.39 127 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4065,7 +4269,7 @@
 		(dnp no)
 		(uuid "2847291f-9a4f-4df2-bb5c-f20d53be1c97")
 		(property "Reference" "#PWR025"
-			(at 142.24 129.54 0)
+			(at 76.2 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4074,7 +4278,7 @@
 			)
 		)
 		(property "Value" "+3V3_D"
-			(at 131.572 129.54 90)
+			(at 65.532 127 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4082,7 +4286,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 129.54 0)
+			(at 72.39 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4091,7 +4295,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 129.54 0)
+			(at 72.39 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4100,7 +4304,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 138.43 129.54 0)
+			(at 72.39 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4115,6 +4319,139 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
 					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 232.41 36.83 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "29f9c703-fbd6-4ce6-ba57-a2e72ca5a2c7")
+		(property "Reference" "#PWR03"
+			(at 232.41 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 232.537 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 232.41 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 232.41 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 232.41 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "26cad0bd-4bb8-4835-a325-8dd3f8096ea2")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 148.59 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2ad417a9-4d86-474f-823b-f4a75c52ed30")
+		(property "Reference" "TP1"
+			(at 151.13 110.9979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 151.13 113.5379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 153.67 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 153.67 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 148.59 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d7b6cca1-cb05-4680-9cd5-5503b52a6033")
+		)
+		(instances
+			(project ""
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -4381,7 +4718,7 @@
 	)
 	(symbol
 		(lib_id "power:-9V")
-		(at 138.43 137.16 90)
+		(at 72.39 134.62 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4390,7 +4727,7 @@
 		(fields_autoplaced yes)
 		(uuid "39fe84d3-f39b-4451-9778-851a40be4955")
 		(property "Reference" "#PWR026"
-			(at 142.24 137.16 0)
+			(at 76.2 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4399,7 +4736,7 @@
 			)
 		)
 		(property "Value" "-9V"
-			(at 134.62 137.1599 90)
+			(at 68.58 134.6199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4408,7 +4745,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 137.16 0)
+			(at 72.39 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4417,7 +4754,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 137.16 0)
+			(at 72.39 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4426,7 +4763,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"-9V\""
-			(at 138.43 137.16 0)
+			(at 72.39 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4447,8 +4784,74 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDPWR")
+		(at 232.41 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "40cf83c4-082f-406d-966e-036a42a96b69")
+		(property "Reference" "#PWR019"
+			(at 232.41 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 232.283 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 232.41 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 232.41 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 232.41 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b8b11d86-c601-48e0-9ace-33e7abd363ab")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "charge_battery_sym_lib:Res_1K_0603_1%")
-		(at 142.24 121.92 0)
+		(at 76.2 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4456,7 +4859,7 @@
 		(dnp no)
 		(uuid "42005812-5d10-4d5c-9424-bbad9bb3ce61")
 		(property "Reference" "R4"
-			(at 145.796 119.38 0)
+			(at 79.756 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4464,7 +4867,7 @@
 			)
 		)
 		(property "Value" "1K/1%/1_10W"
-			(at 145.796 124.206 0)
+			(at 79.756 121.666 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4472,7 +4875,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 160.528 137.414 0)
+			(at 94.488 134.874 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4481,7 +4884,7 @@
 			)
 		)
 		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
-			(at 149.86 137.16 0)
+			(at 83.82 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4490,7 +4893,7 @@
 			)
 		)
 		(property "Description" "Res 1 KOhm 0603 1%"
-			(at 155.956 137.922 0)
+			(at 89.916 135.382 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4499,7 +4902,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 161.544 137.668 0)
+			(at 95.504 135.128 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4508,7 +4911,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
-			(at 162.56 137.414 0)
+			(at 96.52 134.874 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4517,7 +4920,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
-			(at 169.672 138.684 0)
+			(at 103.632 136.144 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4541,140 +4944,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 232.41 36.83 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "42093155-07aa-42da-8516-e9f81079a2e4")
-		(property "Reference" "#PWR03"
-			(at 232.41 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 232.41 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 232.41 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 232.41 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 232.41 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1b7a0878-c25b-4e67-9661-81466e35c08d")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
-					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 182.88 69.85 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4306919a-059b-427b-834d-02bd2e2d4f2a")
-		(property "Reference" "#PWR017"
-			(at 182.88 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 182.88 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 182.88 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 182.88 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 182.88 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a424382e-f943-4bd7-ad85-c1e949ff2d7f")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
-					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "charge_battery_sym_lib:Res_1K_0603_1%")
-		(at 142.24 99.06 0)
+		(at 76.2 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4682,7 +4953,7 @@
 		(dnp no)
 		(uuid "4869d0a7-b558-4f43-8fff-6ede4bfed83d")
 		(property "Reference" "R1"
-			(at 145.796 96.52 0)
+			(at 79.756 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4690,7 +4961,7 @@
 			)
 		)
 		(property "Value" "1K/1%/1_10W"
-			(at 145.796 101.346 0)
+			(at 79.756 98.806 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4698,7 +4969,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 160.528 114.554 0)
+			(at 94.488 112.014 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4707,7 +4978,7 @@
 			)
 		)
 		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
-			(at 149.86 114.3 0)
+			(at 83.82 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4716,7 +4987,7 @@
 			)
 		)
 		(property "Description" "Res 1 KOhm 0603 1%"
-			(at 155.956 115.062 0)
+			(at 89.916 112.522 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4725,7 +4996,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 161.544 114.808 0)
+			(at 95.504 112.268 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4734,7 +5005,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
-			(at 162.56 114.554 0)
+			(at 96.52 112.014 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4743,7 +5014,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
-			(at 169.672 115.824 0)
+			(at 103.632 113.284 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4768,7 +5039,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Res_1K_0603_1%")
-		(at 142.24 114.3 0)
+		(at 76.2 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4776,7 +5047,7 @@
 		(dnp no)
 		(uuid "510d50a1-8622-49df-be12-6e83372a1bd9")
 		(property "Reference" "R3"
-			(at 145.796 111.76 0)
+			(at 79.756 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4784,7 +5055,7 @@
 			)
 		)
 		(property "Value" "1K/1%/1_10W"
-			(at 145.796 116.586 0)
+			(at 79.756 114.046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4792,7 +5063,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 160.528 129.794 0)
+			(at 94.488 127.254 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4801,7 +5072,7 @@
 			)
 		)
 		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
-			(at 149.86 129.54 0)
+			(at 83.82 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4810,7 +5081,7 @@
 			)
 		)
 		(property "Description" "Res 1 KOhm 0603 1%"
-			(at 155.956 130.302 0)
+			(at 89.916 127.762 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4819,7 +5090,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 161.544 130.048 0)
+			(at 95.504 127.508 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4828,7 +5099,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
-			(at 162.56 129.794 0)
+			(at 96.52 127.254 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4837,7 +5108,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
-			(at 169.672 131.064 0)
+			(at 103.632 128.524 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4861,17 +5132,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+9V")
-		(at 138.43 106.68 90)
+		(lib_id "power:GNDPWR")
+		(at 182.88 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5fb37846-25cc-4cb9-aa97-fd426cf65e75")
-		(property "Reference" "#PWR021"
-			(at 142.24 106.68 0)
+		(uuid "56a7da7b-755f-4cef-aab1-8fa504d080ed")
+		(property "Reference" "#PWR05"
+			(at 182.88 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4879,17 +5150,16 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+9V"
-			(at 134.62 106.6799 90)
+		(property "Value" "GNDPWR"
+			(at 182.753 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 106.68 0)
+			(at 182.88 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4898,7 +5168,140 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 106.68 0)
+			(at 182.88 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 182.88 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f4ce09e9-2be3-487b-87fa-a9b638090fbd")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 86.36 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5fac3c91-06f0-47d5-85a8-d6f4ebca56c3")
+		(property "Reference" "#PWR094"
+			(at 86.36 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 86.233 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 86.36 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b83dc4cf-8d1b-4119-b90e-7531475f886e")
+		)
+		(instances
+			(project ""
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
+					(reference "#PWR094")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+9V")
+		(at 72.39 104.14 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5fb37846-25cc-4cb9-aa97-fd426cf65e75")
+		(property "Reference" "#PWR021"
+			(at 76.2 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+9V"
+			(at 68.58 104.1399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 72.39 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 72.39 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4907,7 +5310,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+9V\""
-			(at 138.43 106.68 0)
+			(at 72.39 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4928,8 +5331,74 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDPWR")
+		(at 171.45 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "60a6b94c-1f3e-41a8-ba7c-481980118732")
+		(property "Reference" "#PWR06"
+			(at 171.45 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 171.323 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 171.45 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 171.45 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "840ed8b0-8af6-4704-b38b-c610d835956c")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "charge_battery_sym_lib:Res_1K_0603_1%")
-		(at 142.24 129.54 0)
+		(at 76.2 127 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4937,7 +5406,7 @@
 		(dnp no)
 		(uuid "63c6d744-677f-4df0-9793-c03f9c370e8d")
 		(property "Reference" "R5"
-			(at 145.796 127 0)
+			(at 79.756 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4945,7 +5414,7 @@
 			)
 		)
 		(property "Value" "1K/1%/1_10W"
-			(at 145.796 131.826 0)
+			(at 79.756 129.286 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4953,7 +5422,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 160.528 145.034 0)
+			(at 94.488 142.494 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4962,7 +5431,7 @@
 			)
 		)
 		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
-			(at 149.86 144.78 0)
+			(at 83.82 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4971,7 +5440,7 @@
 			)
 		)
 		(property "Description" "Res 1 KOhm 0603 1%"
-			(at 155.956 145.542 0)
+			(at 89.916 143.002 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4980,7 +5449,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 161.544 145.288 0)
+			(at 95.504 142.748 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4989,7 +5458,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
-			(at 162.56 145.034 0)
+			(at 96.52 142.494 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4998,7 +5467,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
-			(at 169.672 146.304 0)
+			(at 103.632 143.764 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5023,7 +5492,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:LED_0805")
-		(at 158.75 114.3 180)
+		(at 92.71 111.76 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5031,7 +5500,7 @@
 		(dnp no)
 		(uuid "641fbfb6-583b-4801-9039-41b5d56d77c3")
 		(property "Reference" "D3"
-			(at 158.75 111.76 0)
+			(at 92.71 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5039,7 +5508,7 @@
 			)
 		)
 		(property "Value" "LED_0805"
-			(at 158.75 116.586 0)
+			(at 92.71 114.046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5047,7 +5516,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:LED_0805"
-			(at 162.56 119.38 0)
+			(at 96.52 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5056,7 +5525,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 168.656 119.38 0)
+			(at 102.616 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5065,7 +5534,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 158.496 119.126 0)
+			(at 92.456 116.586 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5074,7 +5543,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 159.512 119.634 0)
+			(at 93.472 117.094 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5083,7 +5552,7 @@
 			)
 		)
 		(property "Supply part number" "LED Xanh Lá 0805 Dán SMD Trong Suốt"
-			(at 158.242 119.126 0)
+			(at 92.202 116.586 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5092,7 +5561,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/led-xanh-la-0805-dan-smd-trong-suot"
-			(at 159.512 119.634 0)
+			(at 93.472 117.094 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5117,7 +5586,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 138.43 114.3 90)
+		(at 72.39 111.76 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5127,7 +5596,7 @@
 		(fields_autoplaced yes)
 		(uuid "64aaaa55-4ad1-40c2-8f3c-dd948902017d")
 		(property "Reference" "#PWR022"
-			(at 142.24 114.3 0)
+			(at 76.2 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5136,7 +5605,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 134.62 114.2999 90)
+			(at 68.58 111.7599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5145,7 +5614,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 114.3 0)
+			(at 72.39 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5154,7 +5623,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 114.3 0)
+			(at 72.39 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5163,7 +5632,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 138.43 114.3 0)
+			(at 72.39 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5178,6 +5647,72 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
 					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 208.28 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "69859feb-a2d9-4a54-bd21-9213b9774b6e")
+		(property "Reference" "#PWR017"
+			(at 208.28 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 208.153 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 208.28 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 208.28 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a7f70958-791c-4b74-a31c-a35d2d479629")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -5379,7 +5914,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 138.43 99.06 90)
+		(at 72.39 96.52 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5388,7 +5923,7 @@
 		(fields_autoplaced yes)
 		(uuid "6fcd772f-705f-4489-8ad9-044fe3664e12")
 		(property "Reference" "#PWR020"
-			(at 142.24 99.06 0)
+			(at 76.2 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5397,7 +5932,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 134.62 99.0599 90)
+			(at 68.58 96.5199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5406,7 +5941,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 99.06 0)
+			(at 72.39 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5415,7 +5950,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 99.06 0)
+			(at 72.39 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5424,7 +5959,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 138.43 99.06 0)
+			(at 72.39 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5512,7 +6047,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:LED_0805")
-		(at 158.75 129.54 180)
+		(at 92.71 127 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5520,7 +6055,7 @@
 		(dnp no)
 		(uuid "7742adff-99b8-44a3-a48c-106a0acf802e")
 		(property "Reference" "D5"
-			(at 158.75 127 0)
+			(at 92.71 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5528,7 +6063,7 @@
 			)
 		)
 		(property "Value" "LED_0805"
-			(at 158.75 131.826 0)
+			(at 92.71 129.286 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5536,7 +6071,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:LED_0805"
-			(at 162.56 134.62 0)
+			(at 96.52 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5545,7 +6080,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 168.656 134.62 0)
+			(at 102.616 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5554,7 +6089,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 158.496 134.366 0)
+			(at 92.456 131.826 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5563,7 +6098,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 159.512 134.874 0)
+			(at 93.472 132.334 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5572,7 +6107,7 @@
 			)
 		)
 		(property "Supply part number" "LED Xanh Lá 0805 Dán SMD Trong Suốt"
-			(at 158.242 134.366 0)
+			(at 92.202 131.826 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5581,7 +6116,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/led-xanh-la-0805-dan-smd-trong-suot"
-			(at 159.512 134.874 0)
+			(at 93.472 132.334 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5671,7 +6206,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:LED_0805")
-		(at 158.75 99.06 180)
+		(at 92.71 96.52 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5679,7 +6214,7 @@
 		(dnp no)
 		(uuid "801a7bc9-1d86-466a-9539-8d400d31ee05")
 		(property "Reference" "D1"
-			(at 158.75 96.52 0)
+			(at 92.71 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5687,7 +6222,7 @@
 			)
 		)
 		(property "Value" "LED_0805"
-			(at 158.75 101.346 0)
+			(at 92.71 98.806 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5695,7 +6230,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:LED_0805"
-			(at 162.56 104.14 0)
+			(at 96.52 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5704,7 +6239,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 168.656 104.14 0)
+			(at 102.616 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5713,7 +6248,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 158.496 103.886 0)
+			(at 92.456 101.346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5722,7 +6257,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 159.512 104.394 0)
+			(at 93.472 101.854 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5731,7 +6266,7 @@
 			)
 		)
 		(property "Supply part number" "LED Xanh Lá 0805 Dán SMD Trong Suốt"
-			(at 158.242 103.886 0)
+			(at 92.202 101.346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5740,7 +6275,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/led-xanh-la-0805-dan-smd-trong-suot"
-			(at 159.512 104.394 0)
+			(at 93.472 101.854 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5959,7 +6494,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Res_1K_0603_1%")
-		(at 142.24 137.16 0)
+		(at 76.2 134.62 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5967,7 +6502,7 @@
 		(dnp no)
 		(uuid "96f889eb-2de6-417c-b3c4-15cb5a8acfff")
 		(property "Reference" "R6"
-			(at 145.796 134.62 0)
+			(at 79.756 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5975,7 +6510,7 @@
 			)
 		)
 		(property "Value" "1K/1%/1_10W"
-			(at 145.796 139.446 0)
+			(at 79.756 136.906 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5983,7 +6518,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 160.528 152.654 0)
+			(at 94.488 150.114 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5992,7 +6527,7 @@
 			)
 		)
 		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
-			(at 149.86 152.4 0)
+			(at 83.82 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6001,7 +6536,7 @@
 			)
 		)
 		(property "Description" "Res 1 KOhm 0603 1%"
-			(at 155.956 153.162 0)
+			(at 89.916 150.622 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6010,7 +6545,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 161.544 152.908 0)
+			(at 95.504 150.368 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6019,7 +6554,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
-			(at 162.56 152.654 0)
+			(at 96.52 150.114 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6028,7 +6563,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
-			(at 169.672 153.924 0)
+			(at 103.632 151.384 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6119,7 +6654,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Res_1K_0603_1%")
-		(at 142.24 106.68 0)
+		(at 76.2 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6127,7 +6662,7 @@
 		(dnp no)
 		(uuid "a4b24740-7f8f-457e-a25d-4eb7c8a4e55d")
 		(property "Reference" "R2"
-			(at 145.796 104.14 0)
+			(at 79.756 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6135,7 +6670,7 @@
 			)
 		)
 		(property "Value" "1K/1%/1_10W"
-			(at 145.796 108.966 0)
+			(at 79.756 106.426 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6143,7 +6678,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 160.528 122.174 0)
+			(at 94.488 119.634 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6152,7 +6687,7 @@
 			)
 		)
 		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
-			(at 149.86 121.92 0)
+			(at 83.82 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6161,7 +6696,7 @@
 			)
 		)
 		(property "Description" "Res 1 KOhm 0603 1%"
-			(at 155.956 122.682 0)
+			(at 89.916 120.142 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6170,7 +6705,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 161.544 122.428 0)
+			(at 95.504 119.888 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6179,7 +6714,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
-			(at 162.56 122.174 0)
+			(at 96.52 119.634 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6188,7 +6723,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
-			(at 169.672 123.444 0)
+			(at 103.632 120.904 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6406,72 +6941,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 208.28 69.85 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b0ddaa19-b43a-4c4a-b9f4-e1aa6682d341")
-		(property "Reference" "#PWR018"
-			(at 208.28 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 208.28 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 208.28 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 208.28 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 208.28 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ad271486-d7b7-4078-a55a-8080ce0decb6")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
-					(reference "#PWR018")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 232.41 59.69 0)
 		(unit 1)
@@ -6531,72 +7000,6 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
 					(reference "#PWR015")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 208.28 46.99 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "be6f4f8f-135d-4ff2-b82c-0159cfd802fb")
-		(property "Reference" "#PWR06"
-			(at 208.28 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 208.28 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 208.28 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 208.28 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 208.28 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "986c8fe8-eea2-4c74-9ec8-d73eff25200e")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
-					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -6701,7 +7104,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 138.43 121.92 90)
+		(at 72.39 119.38 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6709,7 +7112,7 @@
 		(dnp no)
 		(uuid "c2c344f8-05ea-4c93-a013-3592f4bc64bf")
 		(property "Reference" "#PWR024"
-			(at 142.24 121.92 0)
+			(at 76.2 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6718,7 +7121,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 132.842 121.92 90)
+			(at 66.802 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6726,7 +7129,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 121.92 0)
+			(at 72.39 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6735,7 +7138,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 121.92 0)
+			(at 72.39 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6744,7 +7147,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 138.43 121.92 0)
+			(at 72.39 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6766,7 +7169,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:LED_0805")
-		(at 158.75 106.68 180)
+		(at 92.71 104.14 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6774,7 +7177,7 @@
 		(dnp no)
 		(uuid "ce226d9e-cd74-4d02-9374-53d5a994a168")
 		(property "Reference" "D2"
-			(at 158.75 104.14 0)
+			(at 92.71 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6782,7 +7185,7 @@
 			)
 		)
 		(property "Value" "LED_0805"
-			(at 158.75 108.966 0)
+			(at 92.71 106.426 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6790,7 +7193,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:LED_0805"
-			(at 162.56 111.76 0)
+			(at 96.52 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6799,7 +7202,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 168.656 111.76 0)
+			(at 102.616 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6808,7 +7211,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 158.496 111.506 0)
+			(at 92.456 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6817,7 +7220,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 159.512 112.014 0)
+			(at 93.472 109.474 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6826,7 +7229,7 @@
 			)
 		)
 		(property "Supply part number" "LED Xanh Lá 0805 Dán SMD Trong Suốt"
-			(at 158.242 111.506 0)
+			(at 92.202 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6835,7 +7238,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/led-xanh-la-0805-dan-smd-trong-suot"
-			(at 159.512 112.014 0)
+			(at 93.472 109.474 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6853,6 +7256,73 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
 					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 100.33 115.57 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d03bbbd4-cd88-454d-8bec-e25b4455f679")
+		(property "Reference" "#PWR016"
+			(at 105.41 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 104.14 115.6969 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 100.33 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "23a876fe-cb95-4991-99de-31896ca4ba2d")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -6984,6 +7454,72 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 182.88 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e3b34c9f-acea-4af2-987c-3e9774f878e1")
+		(property "Reference" "#PWR023"
+			(at 182.88 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 182.753 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 182.88 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "183c6bcc-e59e-4fb8-aaab-c93d55a1ad88")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -7155,7 +7691,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:LED_0805")
-		(at 158.75 121.92 180)
+		(at 92.71 119.38 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7163,7 +7699,7 @@
 		(dnp no)
 		(uuid "f8c4346e-3f3f-45e9-b270-8da43fd560d8")
 		(property "Reference" "D4"
-			(at 158.75 119.38 0)
+			(at 92.71 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7171,7 +7707,7 @@
 			)
 		)
 		(property "Value" "LED_0805"
-			(at 158.75 124.206 0)
+			(at 92.71 121.666 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7179,7 +7715,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:LED_0805"
-			(at 162.56 127 0)
+			(at 96.52 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7188,7 +7724,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 168.656 127 0)
+			(at 102.616 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7197,7 +7733,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 158.496 126.746 0)
+			(at 92.456 124.206 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7206,7 +7742,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 159.512 127.254 0)
+			(at 93.472 124.714 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7215,7 +7751,7 @@
 			)
 		)
 		(property "Supply part number" "LED Xanh Lá 0805 Dán SMD Trong Suốt"
-			(at 158.242 126.746 0)
+			(at 92.202 124.206 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7224,7 +7760,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/led-xanh-la-0805-dan-smd-trong-suot"
-			(at 159.512 127.254 0)
+			(at 93.472 124.714 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7309,6 +7845,72 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDD")
+		(at 180.34 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd142e1a-6817-4eb0-a353-15329d14eadc")
+		(property "Reference" "#PWR084"
+			(at 180.34 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDD"
+			(at 180.34 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 180.34 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 180.34 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
+			(at 180.34 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e415144c-96e2-49b8-b6bd-2728f9833ac4")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/45dd1ac8-7264-49a5-bc83-e13c57ba0467"
+					(reference "#PWR084")
 					(unit 1)
 				)
 			)
