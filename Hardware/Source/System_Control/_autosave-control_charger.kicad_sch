@@ -1714,6 +1714,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 77.47) (xy 181.61 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "200739ac-314b-4294-a492-0f178ac981dc")
+	)
+	(wire
+		(pts
 			(xy 133.35 77.47) (xy 133.35 78.74)
 		)
 		(stroke
@@ -2478,7 +2488,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 181.61 78.74 0)
+		(at 181.61 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2487,7 +2497,7 @@
 		(fields_autoplaced yes)
 		(uuid "2783d46d-ed1f-46c3-a6da-a0f8ba65dbf9")
 		(property "Reference" "#PWR0107"
-			(at 181.61 82.55 0)
+			(at 181.61 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2496,7 +2506,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 181.61 73.66 0)
+			(at 181.61 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2504,7 +2514,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 78.74 0)
+			(at 181.61 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2513,7 +2523,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 78.74 0)
+			(at 181.61 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2522,7 +2532,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 181.61 78.74 0)
+			(at 181.61 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4032,6 +4042,72 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
 					(reference "R100")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 199.39 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d68298c9-6f0d-4cc5-9f5d-3c3ebbcdb8ba")
+		(property "Reference" "#PWR0113"
+			(at 199.39 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 199.39 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 199.39 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 199.39 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f3ab7cfe-3956-4097-9b64-973be482f032")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
+					(reference "#PWR0113")
 					(unit 1)
 				)
 			)
