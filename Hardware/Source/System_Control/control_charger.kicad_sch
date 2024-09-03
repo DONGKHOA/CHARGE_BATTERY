@@ -1714,6 +1714,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 77.47) (xy 181.61 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "200739ac-314b-4294-a492-0f178ac981dc")
+	)
+	(wire
+		(pts
 			(xy 133.35 77.47) (xy 133.35 78.74)
 		)
 		(stroke
@@ -2223,7 +2233,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0160b4ad-eb92-40e2-8282-509a54dc6c3a")
-		(property "Reference" "U24"
+		(property "Reference" "U22"
 			(at 90.932 84.074 0)
 			(effects
 				(font
@@ -2308,7 +2318,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "U24")
+					(reference "U22")
 					(unit 1)
 				)
 			)
@@ -2325,7 +2335,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0b3c65c5-e715-4d4d-b35f-822831732ac5")
-		(property "Reference" "#PWR0109"
+		(property "Reference" "#PWR0103"
 			(at 114.3 113.03 0)
 			(effects
 				(font
@@ -2375,7 +2385,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "#PWR0109")
+					(reference "#PWR0103")
 					(unit 1)
 				)
 			)
@@ -2478,7 +2488,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 181.61 78.74 0)
+		(at 181.61 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2486,8 +2496,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2783d46d-ed1f-46c3-a6da-a0f8ba65dbf9")
-		(property "Reference" "#PWR0107"
-			(at 181.61 82.55 0)
+		(property "Reference" "#PWR098"
+			(at 181.61 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2496,7 +2506,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 181.61 73.66 0)
+			(at 181.61 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2504,7 +2514,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 78.74 0)
+			(at 181.61 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2513,7 +2523,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 78.74 0)
+			(at 181.61 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2522,7 +2532,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 181.61 78.74 0)
+			(at 181.61 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2536,7 +2546,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "#PWR0107")
+					(reference "#PWR098")
 					(unit 1)
 				)
 			)
@@ -2551,7 +2561,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2b0fb0b7-5a08-404d-8848-f748ed67d3f5")
-		(property "Reference" "R99"
+		(property "Reference" "R102"
 			(at 115.062 83.566 90)
 			(effects
 				(font
@@ -2630,7 +2640,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "R99")
+					(reference "R102")
 					(unit 1)
 				)
 			)
@@ -2646,7 +2656,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2eba8029-0943-4c22-824c-7453428ecb3b")
-		(property "Reference" "R104"
+		(property "Reference" "R105"
 			(at 173.482 92.202 0)
 			(effects
 				(font
@@ -2725,7 +2735,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "R104")
+					(reference "R105")
 					(unit 1)
 				)
 			)
@@ -2741,7 +2751,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "320242b9-74e4-4731-a974-1be758da679f")
-		(property "Reference" "Q23"
+		(property "Reference" "Q24"
 			(at 165.354 89.662 0)
 			(effects
 				(font
@@ -2828,7 +2838,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "Q23")
+					(reference "Q24")
 					(unit 1)
 				)
 			)
@@ -2845,7 +2855,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "48d25a17-14a7-4617-b0ca-fb5c14fc5fd8")
-		(property "Reference" "#PWR0111"
+		(property "Reference" "#PWR0102"
 			(at 170.18 110.49 0)
 			(effects
 				(font
@@ -2895,7 +2905,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "#PWR0111")
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -3009,7 +3019,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4cb34228-4729-45fc-8d9c-2909fa50139c")
-		(property "Reference" "U25"
+		(property "Reference" "U23"
 			(at 212.598 84.074 0)
 			(effects
 				(font
@@ -3094,7 +3104,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "U25")
+					(reference "U23")
 					(unit 1)
 				)
 			)
@@ -3110,7 +3120,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6557675f-ebfd-4c49-88d4-3202fecc93c2")
-		(property "Reference" "C57"
+		(property "Reference" "C51"
 			(at 170.18 111.252 90)
 			(effects
 				(font
@@ -3191,7 +3201,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "C57")
+					(reference "C51")
 					(unit 1)
 				)
 			)
@@ -3206,7 +3216,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6fa3036e-9122-4c43-8a20-d82e8eec1ae7")
-		(property "Reference" "R97"
+		(property "Reference" "R98"
 			(at 133.35 70.612 90)
 			(effects
 				(font
@@ -3287,7 +3297,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "R97")
+					(reference "R98")
 					(unit 1)
 				)
 			)
@@ -3303,7 +3313,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "76baf68b-486b-467c-83bf-757da73a0a3b")
-		(property "Reference" "#PWR0110"
+		(property "Reference" "#PWR0105"
 			(at 114.3 128.27 0)
 			(effects
 				(font
@@ -3353,7 +3363,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "#PWR0110")
+					(reference "#PWR0105")
 					(unit 1)
 				)
 			)
@@ -3369,7 +3379,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "794b3923-c244-4ff1-a3c8-389881ab78f0")
-		(property "Reference" "#PWR0112"
+		(property "Reference" "#PWR0104"
 			(at 170.18 125.73 0)
 			(effects
 				(font
@@ -3419,7 +3429,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "#PWR0112")
+					(reference "#PWR0104")
 					(unit 1)
 				)
 			)
@@ -3435,7 +3445,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "84c33d37-b6a8-46c2-a0dc-5bf18df744eb")
-		(property "Reference" "C55"
+		(property "Reference" "C53"
 			(at 114.3 113.792 90)
 			(effects
 				(font
@@ -3516,7 +3526,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "C55")
+					(reference "C53")
 					(unit 1)
 				)
 			)
@@ -3531,7 +3541,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ac6a4807-27b1-48ae-a4c4-1eb470adc95c")
-		(property "Reference" "#PWR0108"
+		(property "Reference" "#PWR0101"
 			(at 161.29 106.68 0)
 			(effects
 				(font
@@ -3581,7 +3591,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "#PWR0108")
+					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -3598,7 +3608,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aed62fc2-ee40-4d82-9777-31ecb2d59669")
-		(property "Reference" "#PWR0105"
+		(property "Reference" "#PWR097"
 			(at 113.03 81.28 0)
 			(effects
 				(font
@@ -3648,7 +3658,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "#PWR0105")
+					(reference "#PWR097")
 					(unit 1)
 				)
 			)
@@ -3664,7 +3674,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b9ac6f6a-b231-4677-9a6b-88c028ebbf80")
-		(property "Reference" "C54"
+		(property "Reference" "C52"
 			(at 124.46 113.792 90)
 			(effects
 				(font
@@ -3745,7 +3755,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "C54")
+					(reference "C52")
 					(unit 1)
 				)
 			)
@@ -3760,7 +3770,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bef10270-f117-46df-addb-e01f80ff979c")
-		(property "Reference" "R101"
+		(property "Reference" "R99"
 			(at 161.29 70.612 90)
 			(effects
 				(font
@@ -3841,7 +3851,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "R101")
+					(reference "R99")
 					(unit 1)
 				)
 			)
@@ -3952,7 +3962,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c2f022e7-a680-4549-9375-9554cdc72dab")
-		(property "Reference" "R100"
+		(property "Reference" "R104"
 			(at 120.904 91.948 0)
 			(effects
 				(font
@@ -4031,7 +4041,73 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "R100")
+					(reference "R104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 199.39 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d68298c9-6f0d-4cc5-9f5d-3c3ebbcdb8ba")
+		(property "Reference" "#PWR099"
+			(at 199.39 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 199.39 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 199.39 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 199.39 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f3ab7cfe-3956-4097-9b64-973be482f032")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
+					(reference "#PWR099")
 					(unit 1)
 				)
 			)
@@ -4047,7 +4123,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "df5f4944-1a9f-4b97-86aa-c7888f50365e")
-		(property "Reference" "R102"
+		(property "Reference" "R101"
 			(at 170.434 80.772 0)
 			(effects
 				(font
@@ -4126,7 +4202,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "R102")
+					(reference "R101")
 					(unit 1)
 				)
 			)
@@ -4239,7 +4315,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ece0bcc2-842e-40b8-ba88-2ad9a39b05fa")
-		(property "Reference" "C56"
+		(property "Reference" "C50"
 			(at 180.34 111.252 90)
 			(effects
 				(font
@@ -4320,7 +4396,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "C56")
+					(reference "C50")
 					(unit 1)
 				)
 			)
@@ -4335,7 +4411,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ee775d19-087d-4fb2-b06e-661395ea5431")
-		(property "Reference" "R105"
+		(property "Reference" "R97"
 			(at 172.72 60.452 90)
 			(effects
 				(font
@@ -4416,7 +4492,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "R105")
+					(reference "R97")
 					(unit 1)
 				)
 			)
@@ -4431,7 +4507,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f3052560-d454-49bd-a089-1e17357caf2a")
-		(property "Reference" "R98"
+		(property "Reference" "R100"
 			(at 122.174 76.708 0)
 			(effects
 				(font
@@ -4510,7 +4586,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "R98")
+					(reference "R100")
 					(unit 1)
 				)
 			)
@@ -4525,7 +4601,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f8b33b1b-f7e5-4a6d-8fd1-5e177ab32b1f")
-		(property "Reference" "#PWR0106"
+		(property "Reference" "#PWR0100"
 			(at 133.35 106.68 0)
 			(effects
 				(font
@@ -4575,7 +4651,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "#PWR0106")
+					(reference "#PWR0100")
 					(unit 1)
 				)
 			)
@@ -4590,7 +4666,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ff1b1a65-203c-4275-a2c6-b0ba094f0dbe")
-		(property "Reference" "Q24"
+		(property "Reference" "Q23"
 			(at 133.35 90.17 0)
 			(effects
 				(font
@@ -4677,7 +4753,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/dcdba039-ea40-479a-8e78-13cd4769be17"
-					(reference "Q24")
+					(reference "Q23")
 					(unit 1)
 				)
 			)
