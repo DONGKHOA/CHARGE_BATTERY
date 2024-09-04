@@ -4349,16 +4349,8 @@
 		(uuid "1ac663e9-ece9-4025-91c2-e5b225ef4434")
 	)
 	(no_connect
-		(at 111.76 134.62)
-		(uuid "1c43f395-b738-4e6a-b6ab-6d75a78a0d65")
-	)
-	(no_connect
 		(at 81.28 111.76)
 		(uuid "1d35b847-c5b6-4a89-841f-3ff90a446dd1")
-	)
-	(no_connect
-		(at 111.76 137.16)
-		(uuid "22b7bb10-9ebd-46d7-9bb1-15f4f4110c9f")
 	)
 	(no_connect
 		(at 124.46 34.29)
@@ -4399,10 +4391,6 @@
 	(no_connect
 		(at 73.66 34.29)
 		(uuid "75117f03-9bba-4ae5-b680-f8c6e46845e1")
-	)
-	(no_connect
-		(at 111.76 127)
-		(uuid "820bc054-9b80-4eb7-8225-a97bf6eed821")
 	)
 	(no_connect
 		(at 111.76 154.94)
@@ -4589,16 +4577,6 @@
 			(type default)
 		)
 		(uuid "10495b82-285a-49b0-bdea-b8271a62de98")
-	)
-	(wire
-		(pts
-			(xy 111.76 129.54) (xy 115.57 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1244ad9b-5784-4b88-ba9b-f01ea8d8752b")
 	)
 	(wire
 		(pts
@@ -4952,6 +4930,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 129.54) (xy 130.81 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c20ceab-98f9-44d0-a81e-4e66ba57211d")
+	)
+	(wire
+		(pts
 			(xy 205.74 93.98) (xy 205.74 96.52)
 		)
 		(stroke
@@ -5009,6 +4997,16 @@
 			(type default)
 		)
 		(uuid "7d1c4f1f-0972-4bf1-8615-ddf5410db4a0")
+	)
+	(wire
+		(pts
+			(xy 111.76 137.16) (xy 115.57 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ddbd216-edba-402e-a86b-a4c6a3a4cf3a")
 	)
 	(wire
 		(pts
@@ -5162,6 +5160,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 127) (xy 115.57 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a21e628a-3f5c-423d-b842-3964a15c9b2e")
+	)
+	(wire
+		(pts
 			(xy 39.37 52.07) (xy 39.37 53.34)
 		)
 		(stroke
@@ -5289,6 +5297,16 @@
 			(type default)
 		)
 		(uuid "bcfe8105-920e-466d-b0d3-f1d256aac635")
+	)
+	(wire
+		(pts
+			(xy 140.97 128.27) (xy 140.97 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd30e9a3-9874-41b8-aa5d-d98a53badd4d")
 	)
 	(wire
 		(pts
@@ -5432,6 +5450,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 134.62) (xy 115.57 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e78b8346-4cc1-4cd4-af22-79dc01a5105e")
+	)
+	(wire
+		(pts
 			(xy 205.74 143.51) (xy 205.74 144.78)
 		)
 		(stroke
@@ -5469,6 +5497,16 @@
 			(type default)
 		)
 		(uuid "f54b6515-b551-457c-84f1-788a2baf402a")
+	)
+	(wire
+		(pts
+			(xy 138.43 129.54) (xy 140.97 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa5d9731-77e6-406a-a974-df1f91378942")
 	)
 	(wire
 		(pts
@@ -5702,9 +5740,9 @@
 			)
 		)
 	)
-	(global_label "ESP_RX"
-		(shape input)
-		(at 115.57 129.54 0)
+	(global_label "CONTROL_BOOT0"
+		(shape output)
+		(at 115.57 134.62 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5712,9 +5750,9 @@
 			)
 			(justify left)
 		)
-		(uuid "301bbc93-0257-46ef-b4de-7a1e957b4213")
+		(uuid "3ce9d803-6e5a-4b95-8ca5-d2f2a924927b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.6308 129.54 0)
+			(at 134.1581 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5737,6 +5775,50 @@
 		(uuid "3e20e2b1-a2dd-4c1c-b1a8-6fc7b7a1b4c2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 72.3514 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "CONTROL_BOOT1"
+		(shape output)
+		(at 115.57 137.16 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5bc0b310-1b33-4f96-933a-ece78ac2df4c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 134.1581 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "ESP_RX"
+		(shape input)
+		(at 115.57 127 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5fd4f7f2-73e8-436a-8a8e-f79600744ad9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 125.6308 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5831,6 +5913,101 @@
 				)
 				(justify left)
 				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_name "Res_10K_0603_1%_1")
+		(lib_id "charge_battery_sym_lib:Res_10K_0603_1%")
+		(at 138.43 129.54 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "07ab0edd-163f-48f7-885b-ea5af18867f4")
+		(property "Reference" "R16"
+			(at 134.366 127.508 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K/1%/1_10W"
+			(at 134.366 131.826 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
+			(at 98.552 140.97 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
+			(at 98.806 130.302 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Res 10 KOhm 0603 1%"
+			(at 98.044 136.398 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 98.298 141.986 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
+			(at 98.552 143.002 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
+			(at 97.282 150.114 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b2fe72aa-71c7-4c9a-bb90-40af3d9f9c6c")
+		)
+		(pin "1"
+			(uuid "f9a5870f-1a8a-405b-aa11-f3ddfe19cb8b")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
+					(reference "R16")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -6195,7 +6372,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1f912c96-9d77-4b5b-8737-6bda1a968c18")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR045"
 			(at 218.44 153.67 0)
 			(effects
 				(font
@@ -6245,7 +6422,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "#PWR044")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -6357,7 +6534,7 @@
 		(dnp no)
 		(uuid "2ac05efd-68ba-4514-b696-475de8827973")
 		(property "Reference" "U2"
-			(at 83.566 100.838 0)
+			(at 83.312 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8422,104 +8599,6 @@
 		)
 	)
 	(symbol
-		(lib_name "Res_10K_0603_1%_1")
-		(lib_id "charge_battery_sym_lib:Res_10K_0603_1%")
-		(at 218.44 132.08 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "afed622b-b403-4b3f-b0bd-13e167bd9cbd")
-		(property "Reference" "R16"
-			(at 220.98 126.9999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10K/1%/1_10W"
-			(at 220.98 129.5399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 207.01 92.202 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
-			(at 217.678 92.456 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Res 10 KOhm 0603 1%"
-			(at 211.582 91.694 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 205.994 91.948 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
-			(at 204.978 92.202 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
-			(at 197.866 90.932 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "7f697dc8-2965-42ee-af8b-a60520e6c835")
-		)
-		(pin "1"
-			(uuid "c7f3764e-6590-43c8-b4e1-286ce1d32fce")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "R16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_name "Res_20R_0603_1%_1")
 		(lib_id "charge_battery_sym_lib:Res_20R_0603_1%")
 		(at 124.46 110.49 0)
@@ -8805,6 +8884,103 @@
 		)
 	)
 	(symbol
+		(lib_name "Res_10K_0603_1%_1")
+		(lib_id "charge_battery_sym_lib:Res_10K_0603_1%")
+		(at 218.44 132.08 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b7095aff-9f17-4e07-af43-9e10664f5e73")
+		(property "Reference" "R17"
+			(at 218.44 125.222 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K/1%/1_10W"
+			(at 218.44 131.064 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
+			(at 207.01 92.202 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
+			(at 217.678 92.456 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Res 10 KOhm 0603 1%"
+			(at 211.582 91.694 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 205.994 91.948 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
+			(at 204.978 92.202 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
+			(at 197.866 90.932 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a5fc557f-e44a-4e50-bf08-340073a8f9e9")
+		)
+		(pin "1"
+			(uuid "9938f560-1501-4262-a2c4-befad9e021bd")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "Ceramic_Cap_SMD_100nF_16V_3")
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_16V")
 		(at 49.53 59.69 90)
@@ -8896,6 +9072,73 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
 					(reference "C14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 140.97 128.27 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c709d918-682c-411b-88a0-69bd87d202e3")
+		(property "Reference" "#PWR044"
+			(at 140.97 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 140.97 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 140.97 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6242f790-110b-4786-a754-05d4a888b69e")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -9331,10 +9574,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "da18b52e-7347-486f-90bf-fcbeb64f2c7b")
 		(property "Reference" "R13"
-			(at 220.98 87.6299 90)
+			(at 218.44 85.852 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9343,7 +9585,7 @@
 			)
 		)
 		(property "Value" "10K/1%/1_10W"
-			(at 220.98 90.1699 90)
+			(at 218.44 91.694 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9430,7 +9672,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dfeabdb4-ee1c-4899-b7ec-754544be129d")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR046"
 			(at 96.52 177.8 0)
 			(effects
 				(font
@@ -9480,7 +9722,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "#PWR045")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
