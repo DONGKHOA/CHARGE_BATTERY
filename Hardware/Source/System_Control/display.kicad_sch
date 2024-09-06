@@ -4,6 +4,10 @@
 	(generator_version "8.0")
 	(uuid "e61a884f-0497-4718-ba5f-db2040aba651")
 	(paper "A4")
+	(title_block
+		(title "DISPLAY INFORMATION")
+		(date "2024-09-04")
+	)
 	(lib_symbols
 		(symbol "Ceramic_Cap_SMD_100nF_16V_3"
 			(pin_numbers hide)
@@ -2563,6 +2567,174 @@
 				)
 			)
 		)
+		(symbol "power:GNDPWR"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GNDPWR"
+				(at 0 -3.302 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GNDPWR_0_1"
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 -1.27) (xy -1.27 -2.032) (xy -1.27 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 -1.27) (xy -0.762 -2.032) (xy -0.762 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy -0.254 -2.032) (xy -0.254 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -1.27) (xy 0.254 -2.032) (xy 0.254 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -1.27) (xy -1.016 -1.27) (xy -1.016 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -1.27) (xy 0.762 -2.032) (xy 0.762 -2.032) (xy 0.762 -2.032)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GNDPWR_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 	)
 	(junction
 		(at 227.33 115.57)
@@ -5039,6 +5211,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDPWR")
+		(at 147.32 100.33 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "06dc582e-7404-49b8-ac1f-c10eb4e7d4ec")
+		(property "Reference" "#PWR062"
+			(at 152.4 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 151.13 100.4569 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 147.32 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d43397b6-ec8e-4215-865a-be1a0609b627")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
+					(reference "#PWR062")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "charge_battery_sym_lib:MMBT2222A")
 		(at 105.41 152.4 0)
 		(unit 1)
@@ -5150,7 +5389,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "18eb0eba-c00e-4d51-83cf-ba75a27c7764")
-		(property "Reference" "#PWR071"
+		(property "Reference" "#PWR070"
 			(at 107.95 166.37 0)
 			(effects
 				(font
@@ -5200,7 +5439,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "#PWR071")
+					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -5215,7 +5454,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "23202e74-e31a-4b97-a1a6-5e9a0ac2abb0")
-		(property "Reference" "D8"
+		(property "Reference" "D11"
 			(at 210.566 51.308 0)
 			(effects
 				(font
@@ -5301,7 +5540,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D8")
+					(reference "D11")
 					(unit 1)
 				)
 			)
@@ -5316,7 +5555,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2a525db2-03b6-4974-8353-217da4539ccd")
-		(property "Reference" "D20"
+		(property "Reference" "D23"
 			(at 210.566 112.268 0)
 			(effects
 				(font
@@ -5402,7 +5641,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D20")
+					(reference "D23")
 					(unit 1)
 				)
 			)
@@ -5418,7 +5657,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2f22728b-a85e-4ca5-a41d-974d097f82d9")
-		(property "Reference" "#PWR064"
+		(property "Reference" "#PWR063"
 			(at 52.07 116.84 0)
 			(effects
 				(font
@@ -5468,7 +5707,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "#PWR064")
+					(reference "#PWR063")
 					(unit 1)
 				)
 			)
@@ -5483,7 +5722,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "598e721a-381c-4f62-91d3-caeaedf8c07c")
-		(property "Reference" "D16"
+		(property "Reference" "D19"
 			(at 210.566 91.948 0)
 			(effects
 				(font
@@ -5569,7 +5808,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D16")
+					(reference "D19")
 					(unit 1)
 				)
 			)
@@ -5584,7 +5823,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5bf2acd6-5c82-4e8a-b35e-70823cc5bd5e")
-		(property "Reference" "D10"
+		(property "Reference" "D13"
 			(at 210.566 61.468 0)
 			(effects
 				(font
@@ -5670,7 +5909,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D10")
+					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -5685,7 +5924,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5e55e144-812a-4d19-a23e-d53ef1e05f5a")
-		(property "Reference" "D21"
+		(property "Reference" "D24"
 			(at 248.666 112.268 0)
 			(effects
 				(font
@@ -5771,7 +6010,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D21")
+					(reference "D24")
 					(unit 1)
 				)
 			)
@@ -5786,7 +6025,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "70c1072c-7fa8-4aad-9d35-2e7911e665f9")
-		(property "Reference" "#PWR068"
+		(property "Reference" "#PWR067"
 			(at 107.95 139.7 0)
 			(effects
 				(font
@@ -5836,7 +6075,73 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "#PWR068")
+					(reference "#PWR067")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 52.07 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7539068c-ec64-4071-8368-81da06a0b41c")
+		(property "Reference" "#PWR066"
+			(at 52.07 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 51.943 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.07 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 52.07 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8065d955-9943-43a4-968b-19ea55b85a11")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
+					(reference "#PWR066")
 					(unit 1)
 				)
 			)
@@ -5851,7 +6156,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7897c1c2-0b86-450f-8ea8-838ec26ce13a")
-		(property "Reference" "D12"
+		(property "Reference" "D15"
 			(at 210.566 71.628 0)
 			(effects
 				(font
@@ -5937,7 +6242,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D12")
+					(reference "D15")
 					(unit 1)
 				)
 			)
@@ -5954,7 +6259,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7c77b6dc-d654-417e-b5af-dc2e81caf823")
-		(property "Reference" "#PWR062"
+		(property "Reference" "#PWR061"
 			(at 49.53 100.33 0)
 			(effects
 				(font
@@ -6005,7 +6310,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "#PWR062")
+					(reference "#PWR061")
 					(unit 1)
 				)
 			)
@@ -6020,7 +6325,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7f50be43-2105-4052-a292-a979519aa1b9")
-		(property "Reference" "D17"
+		(property "Reference" "D20"
 			(at 248.666 91.948 0)
 			(effects
 				(font
@@ -6106,7 +6411,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D17")
+					(reference "D20")
 					(unit 1)
 				)
 			)
@@ -6121,7 +6426,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "800333e1-a9c4-4158-83f1-073c74f1a775")
-		(property "Reference" "#PWR069"
+		(property "Reference" "#PWR068"
 			(at 144.78 149.86 0)
 			(effects
 				(font
@@ -6171,7 +6476,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "#PWR069")
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
@@ -6186,7 +6491,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "80975604-d65d-4fe2-a36e-638b395cea42")
-		(property "Reference" "D11"
+		(property "Reference" "D14"
 			(at 248.666 61.468 0)
 			(effects
 				(font
@@ -6272,7 +6577,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D11")
+					(reference "D14")
 					(unit 1)
 				)
 			)
@@ -6287,7 +6592,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8354e39d-45f2-4405-be21-d5a927cc4305")
-		(property "Reference" "D19"
+		(property "Reference" "D22"
 			(at 248.666 102.108 0)
 			(effects
 				(font
@@ -6373,7 +6678,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D19")
+					(reference "D22")
 					(unit 1)
 				)
 			)
@@ -6389,7 +6694,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "87fda362-e3c0-4dba-a8d5-e0ec34f15d34")
-		(property "Reference" "#PWR066"
+		(property "Reference" "#PWR065"
 			(at 265.43 125.73 0)
 			(effects
 				(font
@@ -6439,7 +6744,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "#PWR066")
+					(reference "#PWR065")
 					(unit 1)
 				)
 			)
@@ -6454,7 +6759,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "88458026-cd25-4b35-9fa6-a79f3ae99963")
-		(property "Reference" "D15"
+		(property "Reference" "D18"
 			(at 248.666 81.788 0)
 			(effects
 				(font
@@ -6540,7 +6845,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D15")
+					(reference "D18")
 					(unit 1)
 				)
 			)
@@ -6555,7 +6860,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "90d6385f-065e-4d31-9751-645a938bde7c")
-		(property "Reference" "D9"
+		(property "Reference" "D12"
 			(at 248.666 51.308 0)
 			(effects
 				(font
@@ -6641,7 +6946,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D9")
+					(reference "D12")
 					(unit 1)
 				)
 			)
@@ -6657,7 +6962,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "91e55197-19c5-431c-990b-0779321d8674")
-		(property "Reference" "C44"
+		(property "Reference" "C40"
 			(at 154.94 150.622 90)
 			(effects
 				(font
@@ -6738,24 +7043,24 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "C44")
+					(reference "C40")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GNDD")
-		(at 147.32 100.33 90)
+		(lib_id "power:GNDPWR")
+		(at 144.78 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9d386ee6-36ab-47e2-bc0c-e52fb8070d99")
-		(property "Reference" "#PWR063"
-			(at 153.67 100.33 0)
+		(uuid "95d7a54e-d068-4107-b21e-4a408aebc1e4")
+		(property "Reference" "#PWR069"
+			(at 144.78 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6763,17 +7068,16 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GNDD"
-			(at 151.13 100.3299 90)
+		(property "Value" "GNDPWR"
+			(at 144.653 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 100.33 0)
+			(at 144.78 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6782,7 +7086,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 100.33 0)
+			(at 144.78 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6790,8 +7094,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 147.32 100.33 0)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 144.78 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6800,12 +7104,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "d8f8e5f4-e760-4446-922c-8a206309288d")
+			(uuid "7767ccd8-59ec-4b18-a410-d3eee634b481")
 		)
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "#PWR063")
+					(reference "#PWR069")
 					(unit 1)
 				)
 			)
@@ -6821,7 +7125,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a0bbe977-e964-4b75-8ca8-b11cd928d148")
-		(property "Reference" "C45"
+		(property "Reference" "C41"
 			(at 144.78 150.622 90)
 			(effects
 				(font
@@ -6902,14 +7206,14 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "C45")
+					(reference "C41")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GNDD")
+		(lib_id "power:GNDPWR")
 		(at 46.99 52.07 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6917,9 +7221,9 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a1a639a0-bae1-490f-8675-5cdc3ac67fb7")
-		(property "Reference" "#PWR061"
-			(at 40.64 52.07 0)
+		(uuid "a5e174cd-0386-46f0-a08e-5571661992a8")
+		(property "Reference" "#PWR060"
+			(at 41.91 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6927,8 +7231,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GNDD"
-			(at 43.18 52.0699 90)
+		(property "Value" "GNDPWR"
+			(at 43.18 51.9429 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6937,7 +7241,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 46.99 52.07 0)
+			(at 45.72 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6946,7 +7250,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 46.99 52.07 0)
+			(at 45.72 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6954,7 +7258,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
 			(at 46.99 52.07 0)
 			(effects
 				(font
@@ -6964,78 +7268,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "b8d6408f-0b92-4d94-9f32-9d5dcd503852")
+			(uuid "1c7dc862-2bf3-4482-9501-86a55920f200")
 		)
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "#PWR061")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDD")
-		(at 144.78 158.75 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a753cf65-f4f0-4b6d-99a4-ada7819f515d")
-		(property "Reference" "#PWR070"
-			(at 144.78 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDD"
-			(at 144.78 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 144.78 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 144.78 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 144.78 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "79ebd8c7-7a9d-496e-93d5-6c268d5dc30f")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "#PWR070")
+					(reference "#PWR060")
 					(unit 1)
 				)
 			)
@@ -7051,7 +7289,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ad31ebe9-6b49-4b04-afd4-ce6b4b2bc378")
-		(property "Reference" "#PWR065"
+		(property "Reference" "#PWR064"
 			(at 227.33 125.73 0)
 			(effects
 				(font
@@ -7101,7 +7339,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "#PWR065")
+					(reference "#PWR064")
 					(unit 1)
 				)
 			)
@@ -7117,7 +7355,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bb0d3bf9-7699-48b0-9a6a-ca4ef5d116f6")
-		(property "Reference" "R28"
+		(property "Reference" "R31"
 			(at 93.726 150.114 0)
 			(effects
 				(font
@@ -7196,7 +7434,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "R28")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -7211,7 +7449,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c3816f95-01d0-4764-ab19-f22e771b86e8")
-		(property "Reference" "R27"
+		(property "Reference" "R30"
 			(at 107.95 137.668 90)
 			(effects
 				(font
@@ -7292,7 +7530,7 @@
 		(instances
 			(project ""
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "R27")
+					(reference "R30")
 					(unit 1)
 				)
 			)
@@ -7513,7 +7751,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cdd27ed5-ff5e-4ce5-a871-d7efa9e5ba96")
-		(property "Reference" "C42"
+		(property "Reference" "C38"
 			(at 62.23 117.602 90)
 			(effects
 				(font
@@ -7594,7 +7832,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "C42")
+					(reference "C38")
 					(unit 1)
 				)
 			)
@@ -7610,7 +7848,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d248a960-395b-471d-bf9c-d980364981b3")
-		(property "Reference" "C43"
+		(property "Reference" "C39"
 			(at 52.07 117.602 90)
 			(effects
 				(font
@@ -7691,7 +7929,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "C43")
+					(reference "C39")
 					(unit 1)
 				)
 			)
@@ -7706,7 +7944,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f379d233-cd3c-40ce-b38d-28e2654c03de")
-		(property "Reference" "D18"
+		(property "Reference" "D21"
 			(at 210.566 102.108 0)
 			(effects
 				(font
@@ -7792,7 +8030,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D18")
+					(reference "D21")
 					(unit 1)
 				)
 			)
@@ -7807,7 +8045,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "faab0401-a3d2-4b72-8496-96d3bcc5fb62")
-		(property "Reference" "D13"
+		(property "Reference" "D16"
 			(at 248.666 71.628 0)
 			(effects
 				(font
@@ -7893,7 +8131,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D13")
+					(reference "D16")
 					(unit 1)
 				)
 			)
@@ -7908,7 +8146,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fbfa61f6-f5c8-4198-abba-2541fcc12c92")
-		(property "Reference" "D14"
+		(property "Reference" "D17"
 			(at 210.566 81.788 0)
 			(effects
 				(font
@@ -7994,73 +8232,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "D14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDD")
-		(at 52.07 125.73 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ffcaec5b-106e-4b66-ba13-3a35781feb6f")
-		(property "Reference" "#PWR067"
-			(at 52.07 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDD"
-			(at 52.07 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 52.07 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 52.07 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 52.07 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6e30e796-7f91-44d0-a97a-125e1a220f73")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/acaf0f73-9448-4a46-8e0c-1a18f2f42e7d"
-					(reference "#PWR067")
+					(reference "D17")
 					(unit 1)
 				)
 			)
