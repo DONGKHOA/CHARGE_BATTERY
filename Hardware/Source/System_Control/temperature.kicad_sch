@@ -1545,6 +1545,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 31.75) (xy 58.42 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a2fa395-a346-447d-8496-9d0637233d68")
+	)
+	(wire
+		(pts
 			(xy 17.78 46.99) (xy 27.94 46.99)
 		)
 		(stroke
@@ -1612,6 +1622,16 @@
 			(type default)
 		)
 		(uuid "dc3fa729-25f4-4849-9a06-2c272072dab6")
+	)
+	(wire
+		(pts
+			(xy 45.72 36.83) (xy 45.72 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea62298a-342f-4d83-93f3-c54a1f7d5a22")
 	)
 	(wire
 		(pts
@@ -2627,6 +2647,103 @@
 	(symbol
 		(lib_name "Ceramic_Cap_SMD_100nF_16V_3")
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_16V")
+		(at 45.72 43.18 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "77c669ae-8f0d-4363-9fc3-124cd1a3ba97")
+		(property "Reference" "C78"
+			(at 45.72 38.862 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100nF/16V"
+			(at 45.974 42.672 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
+			(at 40.64 43.434 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
+			(at 40.64 42.926 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "10%, 0603 (1608 Metric)"
+			(at 40.132 42.164 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 40.64 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Tụ Gốm 0603 100nF (0.1uF) 16V"
+			(at 40.132 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-100nf-0-1uf-16v"
+			(at 40.64 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "dc6579ad-f6c1-4993-864b-ab674deeca94")
+		)
+		(pin "1"
+			(uuid "9791e5f7-9bdb-46d7-8cc0-1f6ddcf46018")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/a7fbc236-a11a-4ede-996a-8f1a8af98c5f"
+					(reference "C78")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "Ceramic_Cap_SMD_100nF_16V_3")
+		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_16V")
 		(at 27.94 29.21 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3291,28 +3408,28 @@
 			)
 		)
 		(pin "5"
-			(uuid "b3e4c3b0-4abd-4923-bf32-c0a8b871eeb7")
+			(uuid "b3e4c3b0-4abd-4923-bf32-c0a8b871eeb8")
 		)
 		(pin "3"
-			(uuid "d97e6b4a-c4c5-449d-8326-3626c63d02ba")
+			(uuid "d97e6b4a-c4c5-449d-8326-3626c63d02bb")
 		)
 		(pin "2"
-			(uuid "a147996c-deb4-4b82-83d0-9b89db61b7e2")
+			(uuid "a147996c-deb4-4b82-83d0-9b89db61b7e3")
 		)
 		(pin "8"
-			(uuid "2df98fa8-7468-4cc8-930c-8fddd3a57597")
+			(uuid "2df98fa8-7468-4cc8-930c-8fddd3a57598")
 		)
 		(pin "4"
-			(uuid "be915639-3ee6-4cb0-8efa-76ac623a03b1")
+			(uuid "be915639-3ee6-4cb0-8efa-76ac623a03b2")
 		)
 		(pin "1"
-			(uuid "32ab4cd2-ec45-481a-8cb0-b060b370d552")
+			(uuid "32ab4cd2-ec45-481a-8cb0-b060b370d553")
 		)
 		(pin "6"
-			(uuid "ff414db4-8d4e-4963-9ba0-de93b2fa6bda")
+			(uuid "ff414db4-8d4e-4963-9ba0-de93b2fa6bdb")
 		)
 		(pin "7"
-			(uuid "56cf22bb-a4a1-4155-be82-1a0c7116f1e9")
+			(uuid "56cf22bb-a4a1-4155-be82-1a0c7116f1ea")
 		)
 		(instances
 			(project ""
