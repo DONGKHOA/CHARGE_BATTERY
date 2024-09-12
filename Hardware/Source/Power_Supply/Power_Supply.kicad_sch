@@ -4,7 +4,200 @@
 	(generator_version "8.0")
 	(uuid "5c8a7907-026b-4416-b231-5ef9f93b99e1")
 	(paper "A4")
-	(lib_symbols)
+	(lib_symbols
+		(symbol "power:GND1"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND1"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND1_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND1_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:GND2"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND2"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND2_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND2_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
 	(bus
 		(pts
 			(xy 116.84 62.23) (xy 116.84 73.66)
@@ -14,6 +207,16 @@
 			(type default)
 		)
 		(uuid "1c897433-f830-41e6-b09d-0261d9bad986")
+	)
+	(text "GND1: TRƯỚC BIẾN ÁP\nGND2: SAU BIẾN ÁP"
+		(exclude_from_sim no)
+		(at 229.616 121.412 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3c88c095-22f0-44fa-97c5-83b9d56e909b")
 	)
 	(text "Power Supply \nMCU & Sensors\n\n"
 		(exclude_from_sim no)
@@ -38,6 +241,214 @@
 		)
 		(uuid "b9e32f80-70f8-4e30-b366-496776d39791")
 	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 248.92 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2f8172c7-72f8-4a32-89b1-0a120e0d01d1")
+		(property "Reference" "#PWR03"
+			(at 248.92 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND1"
+			(at 248.92 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 248.92 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 248.92 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 248.92 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7df0151d-8337-4fc3-ab59-a464018d9493")
+		)
+		(instances
+			(project "Power_Supply"
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND2")
+		(at 266.7 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e265f8f4-11bb-41ff-8084-33f204951a8c")
+		(property "Reference" "#PWR04"
+			(at 266.7 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND2"
+			(at 266.7 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 266.7 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.7 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+			(at 266.7 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f41ce320-a73a-4ad1-8789-93542c5c8a3c")
+		)
+		(instances
+			(project "Power_Supply"
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 176.53 73.66)
+		(size 30.48 26.67)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "409c1703-669f-4885-84ed-c53b20e63f53")
+		(property "Sheetname" "Linear Voltage 9V"
+			(at 176.53 72.9484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Linear_Voltage_9V.kicad_sch"
+			(at 176.53 100.9146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Power_Supply"
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 140.97 73.66)
+		(size 31.75 26.67)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4f4f57c5-ff92-4f7f-a6cb-2a192931708c")
+		(property "Sheetname" "Buck Converter 12V"
+			(at 140.97 72.9484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Buck_12V.kicad_sch"
+			(at 140.97 100.9146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Power_Supply"
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1"
+					(page "3")
+				)
+			)
+		)
+	)
 	(sheet
 		(at 99.06 73.66)
 		(size 38.1 26.67)
@@ -50,7 +461,7 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "5a1d07e8-1900-453e-ab71-30ad5bc9dcd9")
-		(property "Sheetname" "Fly Back"
+		(property "Sheetname" "Flyback Converter"
 			(at 99.06 72.9484 0)
 			(effects
 				(font
@@ -72,6 +483,120 @@
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1"
 					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 140.97 110.49)
+		(size 31.75 25.4)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "810061e0-77df-407e-a763-7d91437d6cce")
+		(property "Sheetname" "Buck Converter 5V"
+			(at 140.97 109.7784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Buck_5V.kicad_sch"
+			(at 140.97 136.4746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Power_Supply"
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 177.8 110.49)
+		(size 27.94 25.4)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c6a0f914-555a-4b7f-9d8a-3cfb2cc1f7af")
+		(property "Sheetname" "LDO 3V3"
+			(at 177.8 109.7784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "LDO_3V3.kicad_sch"
+			(at 177.8 136.4746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Power_Supply"
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 215.9 73.66)
+		(size 27.94 26.67)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fc81c86a-849a-473b-a705-41432f1eafdf")
+		(property "Sheetname" "Charge Pump"
+			(at 215.9 72.9484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Charge_Pump.kicad_sch"
+			(at 215.9 100.9146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Power_Supply"
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1"
+					(page "5")
 				)
 			)
 		)
