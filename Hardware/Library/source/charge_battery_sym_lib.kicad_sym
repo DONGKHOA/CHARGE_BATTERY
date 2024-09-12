@@ -16971,7 +16971,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at 20.32 10.16 0)
+			(at 12.7 20.32 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -16979,7 +16979,7 @@
 			)
 		)
 		(property "Value" "L7809CV"
-			(at 20.32 7.62 0)
+			(at 12.7 17.78 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -16987,7 +16987,7 @@
 			)
 		)
 		(property "Footprint" "L7809CV"
-			(at 20.32 -13.462 0)
+			(at 12.7 -3.302 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16997,7 +16997,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.st.com/resource/en/datasheet/l78.pdf"
-			(at 20.574 -13.208 0)
+			(at 12.446 -3.302 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17007,7 +17007,7 @@
 			)
 		)
 		(property "Description" "Linear Regulators - Standard"
-			(at 19.812 -13.462 0)
+			(at 12.192 -3.302 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17016,7 +17016,7 @@
 			)
 		)
 		(property "Supply Name" "TME"
-			(at 21.336 -13.462 0)
+			(at 13.716 -3.302 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17024,7 +17024,7 @@
 			)
 		)
 		(property "Supply Number" "L7809CV"
-			(at 21.336 -13.462 0)
+			(at 13.716 -3.302 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17052,7 +17052,7 @@
 		(symbol "L7809CV_0_1"
 			(polyline
 				(pts
-					(xy 7.62 -10.16) (xy 33.02 -10.16)
+					(xy 0 0) (xy 12.7 0)
 				)
 				(stroke
 					(width 0.127)
@@ -17064,7 +17064,7 @@
 			)
 			(polyline
 				(pts
-					(xy 7.62 5.08) (xy 7.62 -10.16)
+					(xy 0 8.89) (xy 0 0)
 				)
 				(stroke
 					(width 0.127)
@@ -17076,7 +17076,7 @@
 			)
 			(polyline
 				(pts
-					(xy 33.02 -10.16) (xy 33.02 5.08)
+					(xy 12.7 0) (xy 12.7 8.89)
 				)
 				(stroke
 					(width 0.127)
@@ -17088,7 +17088,7 @@
 			)
 			(polyline
 				(pts
-					(xy 33.02 5.08) (xy 7.62 5.08)
+					(xy 12.7 8.89) (xy 0 8.89)
 				)
 				(stroke
 					(width 0.127)
@@ -17099,7 +17099,7 @@
 				)
 			)
 			(pin power_in line
-				(at 0 0 0)
+				(at -7.62 6.35 0)
 				(length 7.62)
 				(name "IN"
 					(effects
@@ -17117,7 +17117,7 @@
 				)
 			)
 			(pin power_in line
-				(at 0 -5.08 0)
+				(at 20.32 6.35 180)
 				(length 7.62)
 				(name "OUT"
 					(effects
@@ -17135,7 +17135,7 @@
 				)
 			)
 			(pin power_in line
-				(at 40.64 -5.08 180)
+				(at 20.32 2.54 180)
 				(length 7.62)
 				(name "GND"
 					(effects
@@ -18096,7 +18096,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at 1.27 8.255 0)
+			(at 1.524 9.906 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18104,7 +18104,7 @@
 			)
 		)
 		(property "Value" "LD1117S33CTR_SOT223"
-			(at 25.654 2.032 0)
+			(at 10.16 -1.778 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18184,10 +18184,10 @@
 				(hide yes)
 			)
 		)
-		(symbol "LD1117S33CTR_SOT223_0_1"
+		(symbol "LD1117S33CTR_SOT223_1_1"
 			(rectangle
-				(start 0 6.985)
-				(end 10.16 0)
+				(start 0 8.89)
+				(end 15.24 0)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -18196,11 +18196,9 @@
 					(type background)
 				)
 			)
-		)
-		(symbol "LD1117S33CTR_SOT223_1_1"
 			(pin power_in line
-				(at 5.08 -2.54 90)
-				(length 2.54)
+				(at 7.62 -3.81 90)
+				(length 3.81)
 				(name "GND"
 					(effects
 						(font
@@ -18216,10 +18214,10 @@
 					)
 				)
 			)
-			(pin power_out line
-				(at 12.7 5.08 180)
-				(length 2.54)
-				(name "VO"
+			(pin power_in line
+				(at 19.05 3.81 180)
+				(length 3.81)
+				(name "OUT"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -18235,9 +18233,9 @@
 				)
 			)
 			(pin power_in line
-				(at -2.54 5.08 0)
-				(length 2.54)
-				(name "VI"
+				(at -3.81 6.35 0)
+				(length 3.81)
+				(name "INPUT"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -18245,6 +18243,24 @@
 					)
 				)
 				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 19.05 6.35 180)
+				(length 3.81)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
 					(effects
 						(font
 							(size 1.27 1.27)
