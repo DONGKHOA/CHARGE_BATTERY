@@ -3347,6 +3347,182 @@
 				)
 			)
 		)
+		(symbol "charge_battery_sym_lib:Res_7.15M_0603_1%"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "7.15M_0603_1%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:Res_0603"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Res 7.15M 0603 1%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply Name" "Mouser"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply Part Number" "CRCW06037M15FKEA"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.mouser.vn/ProductDetail/Vishay-Dale/CRCW06037M15FKEA?qs=BgLWnqjd5YJnUG8ro2Jwlw%3D%3D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Res_7.15M_0603_1%_0_1"
+				(polyline
+					(pts
+						(xy -2.286 -2.54) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 -2.54) (xy -1.905 -1.524) (xy -1.524 -2.54) (xy -1.143 -3.556) (xy -0.762 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -2.54) (xy 1.143 -1.524) (xy 1.524 -2.54) (xy 1.905 -3.556) (xy 2.286 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Res_7.15M_0603_1%_1_1"
+				(polyline
+					(pts
+						(xy -0.762 -2.54) (xy -0.381 -1.524) (xy 0 -2.54) (xy 0.381 -3.556) (xy 0.762 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -3.81 -2.54 0)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 -2.54 180)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "charge_battery_sym_lib:SS11VL-R05350"
 			(pin_names
 				(offset 0.254)
@@ -5519,6 +5695,12 @@
 		(uuid "3dcccc71-5a9d-496a-9591-a9efc9443db4")
 	)
 	(junction
+		(at 144.78 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "48340f64-643b-4034-81db-3c4e1f4c142c")
+	)
+	(junction
 		(at 95.25 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5549,16 +5731,16 @@
 		(uuid "9a0b7eae-7ae8-4d43-8641-ca99ebaa4db5")
 	)
 	(junction
-		(at 130.81 50.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a05f45df-88bf-4946-aa12-cbaf17506e18")
-	)
-	(junction
 		(at 81.28 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a102d34c-132e-4746-b9f1-8c96ddab1ff2")
+	)
+	(junction
+		(at 130.81 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bf11653c-16bd-4a89-96b0-b9775bc118bd")
 	)
 	(junction
 		(at 62.23 83.82)
@@ -5644,6 +5826,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 59.69) (xy 144.78 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0992f7ec-a706-42fb-82d3-64fbd60ebc1c")
+	)
+	(wire
+		(pts
 			(xy 81.28 95.25) (xy 89.662 95.25)
 		)
 		(stroke
@@ -5674,16 +5866,6 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 50.8) (xy 130.81 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "103c80fe-0e4f-40d2-8555-08add60c391b")
-	)
-	(wire
-		(pts
 			(xy 62.23 83.82) (xy 71.12 83.82)
 		)
 		(stroke
@@ -5711,6 +5893,26 @@
 			(type default)
 		)
 		(uuid "208c4f9f-810e-452a-becd-fe433329fb03")
+	)
+	(wire
+		(pts
+			(xy 130.81 40.64) (xy 130.81 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "212890d4-491c-4290-8f41-9617e53f1b2b")
+	)
+	(wire
+		(pts
+			(xy 144.78 100.33) (xy 179.07 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2251ae56-4449-47e7-90c7-765ce3b66a16")
 	)
 	(wire
 		(pts
@@ -5754,13 +5956,23 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 50.8) (xy 130.81 71.12)
+			(xy 189.23 40.64) (xy 144.78 40.64)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "376012d2-5a85-46cf-affa-1dc3077addab")
+		(uuid "40385156-fe4b-449c-b2b0-f2adaaefc807")
+	)
+	(wire
+		(pts
+			(xy 179.07 100.33) (xy 179.07 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42ea1101-0cbf-4e8d-bc65-30afc4a8a515")
 	)
 	(wire
 		(pts
@@ -5884,7 +6096,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 76.2) (xy 130.81 95.25)
+			(xy 130.81 80.01) (xy 130.81 95.25)
 		)
 		(stroke
 			(width 0)
@@ -5954,7 +6166,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 62.23) (xy 116.84 50.8)
+			(xy 116.84 62.23) (xy 116.84 40.64)
 		)
 		(stroke
 			(width 0)
@@ -6104,7 +6316,17 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 50.8) (xy 130.81 50.8)
+			(xy 144.78 40.64) (xy 130.81 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "beb3c76f-6264-4708-bed7-cc188af1fd35")
+	)
+	(wire
+		(pts
+			(xy 116.84 40.64) (xy 130.81 40.64)
 		)
 		(stroke
 			(width 0)
@@ -6161,6 +6383,26 @@
 			(type default)
 		)
 		(uuid "deaf7658-ebec-4a4a-841d-6b6ffe650d8a")
+	)
+	(wire
+		(pts
+			(xy 144.78 40.64) (xy 144.78 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5e8304f-5112-4508-9ac9-924f685362f8")
+	)
+	(wire
+		(pts
+			(xy 144.78 71.12) (xy 144.78 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e78ecb4a-51c2-4afd-85ea-65d3f6d8be0a")
 	)
 	(wire
 		(pts
@@ -6406,6 +6648,103 @@
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_7.15M_0603_1%")
+		(at 147.32 55.88 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1613d0c1-0b9d-4575-9be2-4f8783a605a7")
+		(property "Reference" "R37"
+			(at 147.32 55.8799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "7.15M_0603_1%"
+			(at 147.32 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
+			(at 147.32 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Res 7.15M 0603 1%"
+			(at 147.32 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 147.32 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "CRCW06037M15FKEA"
+			(at 147.32 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Vishay-Dale/CRCW06037M15FKEA?qs=BgLWnqjd5YJnUG8ro2Jwlw%3D%3D"
+			(at 147.32 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2cf92b87-f1cc-437b-b565-a5305dec4928")
+		)
+		(pin "1"
+			(uuid "88a465fe-6eaa-4540-9183-4d8f233360cb")
+		)
+		(instances
+			(project ""
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
+					(reference "R37")
 					(unit 1)
 				)
 			)
@@ -8091,7 +8430,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Cap_Polarized_330uF_450V")
-		(at 130.81 71.12 270)
+		(at 130.81 74.93 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8100,7 +8439,7 @@
 		(fields_autoplaced yes)
 		(uuid "e15fe839-fe2a-4739-92ee-3f51f6a12175")
 		(property "Reference" "C13"
-			(at 133.35 71.9581 90)
+			(at 133.35 75.7681 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8109,7 +8448,7 @@
 			)
 		)
 		(property "Value" "330uF/450V"
-			(at 133.35 74.4981 90)
+			(at 133.35 78.3081 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8118,7 +8457,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Big_Cap_330uF_450V"
-			(at 145.288 65.532 0)
+			(at 145.288 69.342 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8127,7 +8466,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.allaboutcircuits.com/electronic-components/datasheet/LLS2W331MELB--Nichicon/"
-			(at 145.288 58.674 0)
+			(at 145.288 62.484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8136,7 +8475,7 @@
 			)
 		)
 		(property "Description" "Tụ hóa"
-			(at 144.78 65.532 0)
+			(at 144.78 69.342 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8145,7 +8484,7 @@
 			)
 		)
 		(property "Supply name " "CHIPN24"
-			(at 145.288 68.326 0)
+			(at 145.288 72.136 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8154,7 +8493,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ hóa 330uF 450V Đen Nichicon "
-			(at 145.288 66.04 0)
+			(at 145.288 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8163,7 +8502,7 @@
 			)
 		)
 		(property "Supply URL" "https://chipn24.com/h83-tu-hoa-330uf-450v-den-nichicon-30x40mm-id3746.html"
-			(at 145.288 58.674 0)
+			(at 145.288 62.484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8279,6 +8618,103 @@
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
 					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_7.15M_0603_1%")
+		(at 147.32 67.31 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f840cbee-847f-4b56-b110-8fed29dbc9f1")
+		(property "Reference" "R38"
+			(at 147.32 67.3099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "7.15M_0603_1%"
+			(at 147.32 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
+			(at 147.32 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Res 7.15M 0603 1%"
+			(at 147.32 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 147.32 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "CRCW06037M15FKEA"
+			(at 147.32 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Vishay-Dale/CRCW06037M15FKEA?qs=BgLWnqjd5YJnUG8ro2Jwlw%3D%3D"
+			(at 147.32 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ec53b1ac-0387-4364-b4c9-142308cf35c5")
+		)
+		(pin "1"
+			(uuid "ee862897-7606-4f08-a685-dc6ded6859a2")
+		)
+		(instances
+			(project "Power_Supply"
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
+					(reference "R38")
 					(unit 1)
 				)
 			)
