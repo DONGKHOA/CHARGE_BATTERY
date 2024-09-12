@@ -118,17 +118,6 @@
 		(layer "F.SilkS")
 		(uuid "9ff40304-2eb9-4cfc-b9bf-0f369057a16a")
 	)
-	(fp_circle
-		(center -1.524 0.7874)
-		(end -1.424 0.7874)
-		(stroke
-			(width 0.3)
-			(type solid)
-		)
-		(fill none)
-		(layer "F.SilkS")
-		(uuid "b329865e-18b9-4b83-a387-30bfc09e0c34")
-	)
 	(fp_line
 		(start -2.8829 -3.0734)
 		(end -2.8829 1.9812)
@@ -219,17 +208,6 @@
 		(layer "F.Fab")
 		(uuid "6244a5ff-6ba6-4db8-ae86-a09340c251a8")
 	)
-	(fp_circle
-		(center -2.3749 1.4732)
-		(end -2.1717 1.4732)
-		(stroke
-			(width 0.0254)
-			(type solid)
-		)
-		(fill none)
-		(layer "F.Fab")
-		(uuid "842b9cf6-a773-4b4d-b933-acf700c498dd")
-	)
 	(fp_text user "${REFERENCE}"
 		(at 2.54 -0.5461 0)
 		(unlocked yes)
@@ -284,6 +262,17 @@
 	(model "${CHARGEBATTERY}/TO-220-2_MCH.step"
 		(offset
 			(xyz 0 0 0.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/TO-220-2_MCH.step"
+		(offset
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)
