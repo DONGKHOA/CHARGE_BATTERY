@@ -214,7 +214,7 @@
 				)
 			)
 		)
-		(property "Footprint" "AFL-W2C8.9D"
+		(property "Footprint" "charge_battery_footprint_lib:DO-204AH"
 			(at 5.334 -6.604 0)
 			(effects
 				(font
@@ -1907,7 +1907,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
+		(property "Reference" "D"
 			(at 25.4 7.62 0)
 			(effects
 				(font
@@ -3494,12 +3494,13 @@
 		)
 	)
 	(symbol "CDRH8D43NP-100NC"
+		(pin_numbers hide)
 		(pin_names hide)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "L"
-			(at 16.51 6.35 0)
+			(at 6.858 5.588 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3508,7 +3509,7 @@
 			)
 		)
 		(property "Value" "CDRH8D43NP-100NC"
-			(at 16.51 3.81 0)
+			(at -1.778 3.302 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3597,9 +3598,9 @@
 		)
 		(symbol "CDRH8D43NP-100NC_1_1"
 			(arc
-				(start 7.62 0)
-				(mid 6.35 1.219)
-				(end 5.08 0)
+				(start 5.08 0.0521)
+				(mid 3.81 1.2711)
+				(end 2.54 0.0521)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -3609,9 +3610,9 @@
 				)
 			)
 			(arc
-				(start 10.16 0)
-				(mid 8.89 1.219)
-				(end 7.62 0)
+				(start 7.62 0.0521)
+				(mid 6.35 1.2711)
+				(end 5.08 0.0521)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -3621,9 +3622,9 @@
 				)
 			)
 			(arc
-				(start 12.7 0)
-				(mid 11.43 1.219)
-				(end 10.16 0)
+				(start 10.16 0.0521)
+				(mid 8.89 1.2711)
+				(end 7.62 0.0521)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -3633,9 +3634,9 @@
 				)
 			)
 			(arc
-				(start 15.24 0)
-				(mid 13.97 1.219)
-				(end 12.7 0)
+				(start 12.7 0.0521)
+				(mid 11.43 1.2711)
+				(end 10.16 0.0521)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -3646,7 +3647,7 @@
 			)
 			(pin passive line
 				(at 0 0 0)
-				(length 5.08)
+				(length 2.54)
 				(name "1"
 					(effects
 						(font
@@ -3663,8 +3664,8 @@
 				)
 			)
 			(pin passive line
-				(at 20.32 0 180)
-				(length 5.08)
+				(at 15.24 0 180)
+				(length 2.54)
 				(name "2"
 					(effects
 						(font
@@ -4254,6 +4255,7 @@
 		)
 	)
 	(symbol "Candy_Cap_hole_22nF_630VDC"
+		(pin_numbers hide)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -17661,7 +17663,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at 12.7 20.32 0)
+			(at 6.096 13.462 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -17669,14 +17671,14 @@
 			)
 		)
 		(property "Value" "L7809CV"
-			(at 12.7 17.78 0)
+			(at 6.096 10.922 0)
 			(effects
 				(font
 					(size 1.524 1.524)
 				)
 			)
 		)
-		(property "Footprint" "L7809CV"
+		(property "Footprint" "charge_battery_footprint_lib:TO-220-3"
 			(at 12.7 -3.302 0)
 			(effects
 				(font
@@ -17705,20 +17707,31 @@
 				(hide yes)
 			)
 		)
-		(property "Supply Name" "TME"
+		(property "Supply name" "TME"
 			(at 13.716 -3.302 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Supply Number" "L7809CV"
+		(property "Supply part number" "L7809CV"
 			(at 13.716 -3.302 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "http://www.tme.vn/Product.aspx?id=2484#page=pro_info"
+			(at -0.508 -3.048 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(property "ki_keywords" "L7809CV"
@@ -17752,8 +17765,8 @@
 				)
 			)
 			(pin power_in line
-				(at -7.62 6.35 0)
-				(length 7.62)
+				(at -3.81 6.35 0)
+				(length 3.81)
 				(name "IN"
 					(effects
 						(font
@@ -17770,9 +17783,9 @@
 				)
 			)
 			(pin power_in line
-				(at 20.32 6.35 180)
-				(length 7.62)
-				(name "OUT"
+				(at 16.51 2.54 180)
+				(length 3.81)
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -17788,9 +17801,9 @@
 				)
 			)
 			(pin power_in line
-				(at 20.32 2.54 180)
-				(length 7.62)
-				(name "GND"
+				(at 16.51 6.35 180)
+				(length 3.81)
+				(name "OUT"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -31817,6 +31830,7 @@
 		)
 	)
 	(symbol "Res_7.15M_0603_1%"
+		(pin_numbers hide)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -44675,6 +44689,7 @@
 		)
 	)
 	(symbol "Toroidal Inductor"
+		(pin_numbers hide)
 		(pin_names
 			(offset 1.016)
 		)
