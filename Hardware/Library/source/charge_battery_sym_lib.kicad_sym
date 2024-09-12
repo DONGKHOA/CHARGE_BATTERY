@@ -18096,7 +18096,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at 1.27 8.255 0)
+			(at 1.524 9.906 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18104,7 +18104,7 @@
 			)
 		)
 		(property "Value" "LD1117S33CTR_SOT223"
-			(at 25.654 2.032 0)
+			(at 10.16 -1.778 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18184,10 +18184,10 @@
 				(hide yes)
 			)
 		)
-		(symbol "LD1117S33CTR_SOT223_0_1"
+		(symbol "LD1117S33CTR_SOT223_1_1"
 			(rectangle
-				(start 0 6.985)
-				(end 10.16 0)
+				(start 0 8.89)
+				(end 15.24 0)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -18196,11 +18196,9 @@
 					(type background)
 				)
 			)
-		)
-		(symbol "LD1117S33CTR_SOT223_1_1"
 			(pin power_in line
-				(at 5.08 -2.54 90)
-				(length 2.54)
+				(at 7.62 -3.81 90)
+				(length 3.81)
 				(name "GND"
 					(effects
 						(font
@@ -18216,10 +18214,10 @@
 					)
 				)
 			)
-			(pin power_out line
-				(at 12.7 5.08 180)
-				(length 2.54)
-				(name "VO"
+			(pin power_in line
+				(at 19.05 3.81 180)
+				(length 3.81)
+				(name "OUT"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -18235,9 +18233,9 @@
 				)
 			)
 			(pin power_in line
-				(at -2.54 5.08 0)
-				(length 2.54)
-				(name "VI"
+				(at -3.81 6.35 0)
+				(length 3.81)
+				(name "INPUT"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -18245,6 +18243,24 @@
 					)
 				)
 				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 19.05 6.35 180)
+				(length 3.81)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
 					(effects
 						(font
 							(size 1.27 1.27)
