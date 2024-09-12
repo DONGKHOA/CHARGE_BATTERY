@@ -3160,12 +3160,6 @@
 		(uuid "6b7092ae-3e52-4f42-9376-62fdc6c2549b")
 	)
 	(junction
-		(at 121.92 53.34)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "77fbe6b0-358f-46ff-9a4f-185e5173dd59")
-	)
-	(junction
 		(at 137.16 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3176,6 +3170,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8644edce-74bc-472c-89ff-0ec2c7a1eb30")
+	)
+	(junction
+		(at 120.65 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9c430372-c6e7-43f4-a24d-3448977bd5c6")
 	)
 	(junction
 		(at 69.85 115.57)
@@ -3443,7 +3443,17 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 106.68) (xy 115.57 109.22)
+			(xy 120.65 53.34) (xy 124.46 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4de775c2-8723-4908-a799-e8280e6bc490")
+	)
+	(wire
+		(pts
+			(xy 116.84 106.68) (xy 116.84 109.22)
 		)
 		(stroke
 			(width 0)
@@ -3503,7 +3513,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 53.34) (xy 121.92 55.88)
+			(xy 120.65 53.34) (xy 120.65 57.15)
 		)
 		(stroke
 			(width 0)
@@ -3743,16 +3753,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 53.34) (xy 124.46 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92d3dd3d-a625-4b2c-977e-a6807733ec7f")
-	)
-	(wire
-		(pts
 			(xy 64.77 115.57) (xy 69.85 115.57)
 		)
 		(stroke
@@ -3830,6 +3830,16 @@
 			(type default)
 		)
 		(uuid "af69d89f-e469-434e-9bf1-089511f66b2d")
+	)
+	(wire
+		(pts
+			(xy 116.84 109.22) (xy 115.57 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af9dc316-edc8-412f-bd72-1d66896f332d")
 	)
 	(wire
 		(pts
@@ -3963,7 +3973,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 53.34) (xy 121.92 53.34)
+			(xy 88.9 53.34) (xy 120.65 53.34)
 		)
 		(stroke
 			(width 0)
@@ -3993,7 +4003,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 106.68) (xy 137.16 106.68)
+			(xy 116.84 106.68) (xy 137.16 106.68)
 		)
 		(stroke
 			(width 0)
@@ -5622,7 +5632,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0e7e732d-2de9-4dfc-9666-4169eaa2fb9a")
-		(property "Reference" "#PWR0262"
+		(property "Reference" "#PWR0267"
 			(at 149.86 109.22 0)
 			(effects
 				(font
@@ -5672,7 +5682,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/3a5f6f4d-7ae8-4d5e-869b-e74be22e0b12"
-					(reference "#PWR0262")
+					(reference "#PWR0267")
 					(unit 1)
 				)
 			)
@@ -5688,7 +5698,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "111fee7c-7f32-4e50-a3ec-6b18c0db5a10")
-		(property "Reference" "#PWR0265"
+		(property "Reference" "#PWR0270"
 			(at 63.5 135.89 0)
 			(effects
 				(font
@@ -5738,7 +5748,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/3a5f6f4d-7ae8-4d5e-869b-e74be22e0b12"
-					(reference "#PWR0265")
+					(reference "#PWR0270")
 					(unit 1)
 				)
 			)
@@ -5754,7 +5764,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "20f7013e-3ce2-4322-8e25-84e997bd22f7")
-		(property "Reference" "#PWR0263"
+		(property "Reference" "#PWR0268"
 			(at 149.86 123.19 0)
 			(effects
 				(font
@@ -5804,7 +5814,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/3a5f6f4d-7ae8-4d5e-869b-e74be22e0b12"
-					(reference "#PWR0263")
+					(reference "#PWR0268")
 					(unit 1)
 				)
 			)
@@ -6013,7 +6023,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4d50277f-4eca-4eea-ab0d-0b2735b1e0d8")
-		(property "Reference" "C166"
+		(property "Reference" "C168"
 			(at 137.16 109.982 90)
 			(effects
 				(font
@@ -6094,7 +6104,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/3a5f6f4d-7ae8-4d5e-869b-e74be22e0b12"
-					(reference "C166")
+					(reference "C168")
 					(unit 1)
 				)
 			)
@@ -6303,7 +6313,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "53225503-1a35-480e-a3f9-341da4f470a9")
-		(property "Reference" "#PWR0261"
+		(property "Reference" "#PWR0266"
 			(at 67.31 97.79 0)
 			(effects
 				(font
@@ -6353,7 +6363,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/3a5f6f4d-7ae8-4d5e-869b-e74be22e0b12"
-					(reference "#PWR0261")
+					(reference "#PWR0266")
 					(unit 1)
 				)
 			)
@@ -6368,7 +6378,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5a623d2e-209f-4bfa-8775-2fe05f102c22")
-		(property "Reference" "R200"
+		(property "Reference" "R205"
 			(at 71.882 100.076 90)
 			(effects
 				(font
@@ -6378,7 +6388,7 @@
 			)
 		)
 		(property "Value" "10K/1%/1_10W"
-			(at 71.12 102.362 90)
+			(at 71.882 102.108 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6449,7 +6459,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/3a5f6f4d-7ae8-4d5e-869b-e74be22e0b12"
-					(reference "R200")
+					(reference "R205")
 					(unit 1)
 				)
 			)
@@ -6928,7 +6938,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c03aaef-0871-41da-941b-835258c85dd2")
-		(property "Reference" "#PWR0264"
+		(property "Reference" "#PWR0269"
 			(at 69.85 125.73 0)
 			(effects
 				(font
@@ -6978,7 +6988,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/3a5f6f4d-7ae8-4d5e-869b-e74be22e0b12"
-					(reference "#PWR0264")
+					(reference "#PWR0269")
 					(unit 1)
 				)
 			)
@@ -6994,7 +7004,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a53ca1bb-0490-4066-b31d-75696d4ae2bb")
-		(property "Reference" "#PWR0266"
+		(property "Reference" "#PWR0271"
 			(at 121.92 135.89 0)
 			(effects
 				(font
@@ -7044,7 +7054,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/3a5f6f4d-7ae8-4d5e-869b-e74be22e0b12"
-					(reference "#PWR0266")
+					(reference "#PWR0271")
 					(unit 1)
 				)
 			)
@@ -7738,8 +7748,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "becb1d55-2d0c-48de-b129-c4490648ff1c")
-		(property "Reference" "R199"
-			(at 61.468 100.076 90)
+		(property "Reference" "R204"
+			(at 60.452 100.076 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7748,7 +7758,7 @@
 			)
 		)
 		(property "Value" "10K/1%/1_10W"
-			(at 50.292 102.362 90)
+			(at 50.038 102.362 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7819,7 +7829,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/3a5f6f4d-7ae8-4d5e-869b-e74be22e0b12"
-					(reference "R199")
+					(reference "R204")
 					(unit 1)
 				)
 			)
@@ -8231,7 +8241,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "dca5a589-2bbc-4939-96dd-afe6210cfc73")
-		(property "Reference" "C167"
+		(property "Reference" "C169"
 			(at 149.86 109.982 90)
 			(effects
 				(font
@@ -8312,7 +8322,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/3a5f6f4d-7ae8-4d5e-869b-e74be22e0b12"
-					(reference "C167")
+					(reference "C169")
 					(unit 1)
 				)
 			)
@@ -8320,7 +8330,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 121.92 55.88 0)
+		(at 120.65 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8328,8 +8338,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e77a573f-0fa0-42c2-b8d6-b81fcd17a4d8")
-		(property "Reference" "#PWR0260"
-			(at 121.92 60.96 0)
+		(property "Reference" "#PWR0265"
+			(at 120.65 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8338,7 +8348,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 121.793 59.69 0)
+			(at 120.523 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8346,7 +8356,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 121.92 57.15 0)
+			(at 120.65 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8355,7 +8365,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 57.15 0)
+			(at 120.65 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8364,7 +8374,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 121.92 55.88 0)
+			(at 120.65 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8378,7 +8388,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/3a5f6f4d-7ae8-4d5e-869b-e74be22e0b12"
-					(reference "#PWR0260")
+					(reference "#PWR0265")
 					(unit 1)
 				)
 			)
