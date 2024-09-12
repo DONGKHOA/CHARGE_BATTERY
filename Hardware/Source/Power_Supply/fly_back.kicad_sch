@@ -7995,6 +7995,126 @@
 				)
 			)
 		)
+		(symbol "power:+24V"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+24V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+24V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+24V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+24V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:GND1"
 			(power)
 			(pin_numbers hide)
@@ -8091,6 +8211,102 @@
 				)
 			)
 		)
+		(symbol "power:GND2"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND2"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND2_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND2_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 	)
 	(junction
 		(at 226.06 166.37)
@@ -8139,6 +8355,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "15ea386b-f528-4e93-92d6-dd938e6d3e7a")
+	)
+	(junction
+		(at 344.17 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1660ccad-babc-42a4-9ae7-c42e88bc8160")
 	)
 	(junction
 		(at 199.39 119.38)
@@ -8357,6 +8579,12 @@
 		(uuid "d5cfc4ea-18b0-471b-9a9a-273c3c43b83a")
 	)
 	(junction
+		(at 344.17 166.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e76777b2-1770-4bf8-bc2a-e98f4af6fa52")
+	)
+	(junction
 		(at 199.39 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8386,6 +8614,10 @@
 		(color 0 0 0 0)
 		(uuid "fd4636db-ddaa-4ff1-96a3-e27fad5db0c3")
 	)
+	(no_connect
+		(at 228.6 100.33)
+		(uuid "aa265131-4e2d-482a-9141-8eaf6a0b6935")
+	)
 	(wire
 		(pts
 			(xy 264.16 127) (xy 281.94 127)
@@ -8408,23 +8640,13 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 95.25) (xy 181.61 121.92)
+			(xy 181.61 95.25) (xy 181.61 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "04a42222-da9d-49da-b8e6-3f7731db9d96")
-	)
-	(wire
-		(pts
-			(xy 325.12 163.83) (xy 325.12 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "04de3c83-0519-4962-9267-946b413ef8a1")
 	)
 	(wire
 		(pts
@@ -8598,7 +8820,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 95.25) (xy 148.59 104.14)
+			(xy 148.59 95.25) (xy 148.59 116.84)
 		)
 		(stroke
 			(width 0)
@@ -8628,7 +8850,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 147.32) (xy 180.34 172.72)
+			(xy 185.42 147.32) (xy 185.42 172.72)
 		)
 		(stroke
 			(width 0)
@@ -8698,7 +8920,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 95.25) (xy 220.98 107.95)
+			(xy 220.98 95.25) (xy 220.98 105.41)
 		)
 		(stroke
 			(width 0)
@@ -8768,7 +8990,7 @@
 	)
 	(wire
 		(pts
-			(xy 325.12 156.21) (xy 325.12 154.94)
+			(xy 325.12 157.48) (xy 325.12 154.94)
 		)
 		(stroke
 			(width 0)
@@ -8785,6 +9007,16 @@
 			(type default)
 		)
 		(uuid "37d869ae-4735-46ea-a20e-c66f6095e1d7")
+	)
+	(wire
+		(pts
+			(xy 344.17 166.37) (xy 365.76 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38ad2672-2f54-4b7d-a573-d20c739db046")
 	)
 	(wire
 		(pts
@@ -8818,16 +9050,6 @@
 	)
 	(wire
 		(pts
-			(xy 344.17 97.79) (xy 344.17 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4555b541-65ff-497c-aefb-67bdcf389729")
-	)
-	(wire
-		(pts
 			(xy 212.09 166.37) (xy 212.09 165.1)
 		)
 		(stroke
@@ -8855,6 +9077,16 @@
 			(type default)
 		)
 		(uuid "480beda2-5d1b-42f0-83f9-4c748e63377b")
+	)
+	(wire
+		(pts
+			(xy 365.76 166.37) (xy 365.76 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "486dbbf4-614b-4077-927f-d744d02a7db1")
 	)
 	(wire
 		(pts
@@ -9098,7 +9330,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 147.32) (xy 180.34 147.32)
+			(xy 162.56 147.32) (xy 185.42 147.32)
 		)
 		(stroke
 			(width 0)
@@ -9135,6 +9367,26 @@
 			(type default)
 		)
 		(uuid "6c7f6974-d21d-4e87-bb36-958d6abe40da")
+	)
+	(wire
+		(pts
+			(xy 365.76 87.63) (xy 344.17 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d4f2cac-dc77-4d9f-9307-332f2068534e")
+	)
+	(wire
+		(pts
+			(xy 365.76 87.63) (xy 365.76 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e718de6-3348-4612-944e-e429a365499e")
 	)
 	(wire
 		(pts
@@ -9178,7 +9430,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 133.35) (xy 118.11 138.43)
+			(xy 118.11 130.81) (xy 118.11 138.43)
 		)
 		(stroke
 			(width 0)
@@ -9248,7 +9500,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 109.22) (xy 148.59 166.37)
+			(xy 148.59 121.92) (xy 148.59 166.37)
 		)
 		(stroke
 			(width 0)
@@ -9608,7 +9860,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 172.72) (xy 219.71 172.72)
+			(xy 185.42 172.72) (xy 219.71 172.72)
 		)
 		(stroke
 			(width 0)
@@ -9618,7 +9870,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 105.41) (xy 118.11 125.73)
+			(xy 118.11 105.41) (xy 118.11 123.19)
 		)
 		(stroke
 			(width 0)
@@ -9708,7 +9960,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 119.38) (xy 220.98 118.11)
+			(xy 220.98 119.38) (xy 220.98 115.57)
 		)
 		(stroke
 			(width 0)
@@ -9735,6 +9987,16 @@
 			(type default)
 		)
 		(uuid "c64332c8-f594-4166-b5e8-f010f4c40734")
+	)
+	(wire
+		(pts
+			(xy 344.17 97.79) (xy 344.17 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6931a23-1103-4ed6-a319-a6f1b9d75b65")
 	)
 	(wire
 		(pts
@@ -9768,7 +10030,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 129.54) (xy 181.61 132.08)
+			(xy 181.61 127) (xy 181.61 132.08)
 		)
 		(stroke
 			(width 0)
@@ -9825,6 +10087,16 @@
 			(type default)
 		)
 		(uuid "dd4083ef-d51a-4fd8-8617-e36f122ad52f")
+	)
+	(wire
+		(pts
+			(xy 325.12 165.1) (xy 325.12 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddfea361-d972-4378-8daa-32fd2e76b75f")
 	)
 	(wire
 		(pts
@@ -10068,8 +10340,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0816cb8a-ad74-40c0-ae31-af36ee012eb7")
-		(property "Reference" "R10"
-			(at 181.864 132.842 90)
+		(property "Reference" "R5"
+			(at 182.88 134.62 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10078,7 +10350,7 @@
 			)
 		)
 		(property "Value" "2M/1%/1_10W"
-			(at 188.976 139.192 90)
+			(at 189.992 136.906 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10148,7 +10420,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R10")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -10163,7 +10435,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0c6bdc1e-3f00-4d66-9ebf-ac5608e6a9c5")
-		(property "Reference" "C9"
+		(property "Reference" "C2"
 			(at 101.854 142.24 90)
 			(effects
 				(font
@@ -10244,7 +10516,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C9")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -10260,8 +10532,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0de9fade-f18a-4fdc-8180-322d32df55c4")
-		(property "Reference" "R5"
-			(at 162.814 112.522 90)
+		(property "Reference" "R3"
+			(at 163.83 114.3 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10270,7 +10542,7 @@
 			)
 		)
 		(property "Value" "7.15M/1%/1_10W"
-			(at 171.196 118.618 90)
+			(at 172.466 116.586 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10340,7 +10612,73 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R5")
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+24V")
+		(at 365.76 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0e21def0-6282-4964-bdf8-16dbe507b889")
+		(property "Reference" "#PWR02"
+			(at 365.76 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+24V"
+			(at 365.76 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 365.76 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 365.76 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+24V\""
+			(at 365.76 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "67f98a43-74d6-4e82-853f-d443359629d6")
+		)
+		(instances
+			(project ""
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -10422,8 +10760,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1613d0c1-0b9d-4575-9be2-4f8783a605a7")
-		(property "Reference" "R1"
-			(at 162.814 97.282 90)
+		(property "Reference" "R2"
+			(at 163.576 99.314 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10432,7 +10770,7 @@
 			)
 		)
 		(property "Value" "7.15M/1%/1_10W"
-			(at 171.196 103.378 90)
+			(at 172.212 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10502,7 +10840,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R1")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -10613,7 +10951,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "24e0528a-f001-4ec2-8991-2d2954d09c27")
-		(property "Reference" "R3"
+		(property "Reference" "R11"
 			(at 284.226 105.664 0)
 			(effects
 				(font
@@ -10694,7 +11032,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R3")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -10709,7 +11047,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "25fe3061-80fa-4b3c-aea3-ead81d98d3ef")
-		(property "Reference" "R2"
+		(property "Reference" "R6"
 			(at 194.31 98.298 90)
 			(effects
 				(font
@@ -10790,7 +11128,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R2")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -10805,7 +11143,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "278ab726-a9a9-4e25-bed2-3e740346164c")
-		(property "Reference" "C7"
+		(property "Reference" "C1"
 			(at 76.708 119.38 90)
 			(effects
 				(font
@@ -10886,7 +11224,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C7")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -10901,7 +11239,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2929cd1f-8964-4b78-8bdc-274fcf701bf4")
-		(property "Reference" "R11"
+		(property "Reference" "R9"
 			(at 240.284 148.082 90)
 			(effects
 				(font
@@ -10982,7 +11320,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R11")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -10997,7 +11335,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "29a2799d-6c61-404f-8b17-0b8a367b222f")
-		(property "Reference" "U2"
+		(property "Reference" "U4"
 			(at 285.75 124.714 0)
 			(effects
 				(font
@@ -11082,7 +11420,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "U2")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -11098,7 +11436,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2b3e24cd-0998-4781-9877-f33b4d449814")
-		(property "Reference" "U1"
+		(property "Reference" "U2"
 			(at 238.76 86.36 0)
 			(effects
 				(font
@@ -11165,7 +11503,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "U1")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -11364,6 +11702,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND2")
+		(at 365.76 170.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4668abc5-3dec-4371-ab5c-b6e1d55b43f4")
+		(property "Reference" "#PWR03"
+			(at 365.76 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND2"
+			(at 365.76 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 365.76 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 365.76 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+			(at 365.76 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "62df5d0e-9ccc-4eb8-90eb-5dd8750ee2b2")
+		)
+		(instances
+			(project ""
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "charge_battery_sym_lib:Cap_Polarized_SMD_100uF_35V")
 		(at 344.17 90.17 270)
 		(unit 1)
@@ -11372,7 +11776,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4f5225d2-6e97-4b3a-bc75-c9c524c266bd")
-		(property "Reference" "C4"
+		(property "Reference" "C13"
 			(at 344.424 90.678 90)
 			(effects
 				(font
@@ -11453,7 +11857,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C4")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -11469,7 +11873,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5196f91b-117b-4ce0-8512-8b0902187f2d")
-		(property "Reference" "R9"
+		(property "Reference" "R12"
 			(at 327.66 129.5399 90)
 			(effects
 				(font
@@ -11550,7 +11954,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R9")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -11558,15 +11962,15 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:P6KE160A-E3_54")
-		(at 220.98 107.95 270)
+		(at 220.98 105.41 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "51e88a5c-6289-4c63-beb4-30490651adee")
-		(property "Reference" "CR1"
-			(at 220.98 109.982 90)
+		(property "Reference" "CR2"
+			(at 220.98 107.442 90)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -11575,7 +11979,7 @@
 			)
 		)
 		(property "Value" "P6KE160A-E3/54"
-			(at 221.234 116.332 90)
+			(at 221.234 113.792 90)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -11584,7 +11988,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:DO-204AC-2"
-			(at 213.614 106.934 0)
+			(at 213.614 104.394 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11594,7 +11998,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/88369/p6ke.pdf"
-			(at 213.868 110.49 0)
+			(at 213.868 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11604,7 +12008,7 @@
 			)
 		)
 		(property "Description" "P6KE160A-E3_54"
-			(at 213.614 107.696 0)
+			(at 213.614 105.156 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11613,7 +12017,7 @@
 			)
 		)
 		(property "Supply Name" "Mouser"
-			(at 213.868 112.014 0)
+			(at 213.868 109.474 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11622,7 +12026,7 @@
 			)
 		)
 		(property "Supply part numer" "P6KE160A-E3/54"
-			(at 213.614 107.95 0)
+			(at 213.614 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11631,7 +12035,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Vishay-General-Semiconductor/P6KE160A-E3-54?qs=E3OxquYwg8FWNmfptTQK9w%3D%3D"
-			(at 213.868 110.49 0)
+			(at 213.868 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11648,7 +12052,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "CR1")
+					(reference "CR2")
 					(unit 1)
 				)
 			)
@@ -11663,7 +12067,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "52783f35-1fb5-475a-b92e-b8d6644ca2a3")
-		(property "Reference" "U3"
+		(property "Reference" "U1"
 			(at 196.342 151.384 90)
 			(effects
 				(font
@@ -11773,7 +12177,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "U3")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -11788,7 +12192,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5376b6e1-767e-4510-b825-50f30c64b9ef")
-		(property "Reference" "C13"
+		(property "Reference" "C7"
 			(at 226.314 155.194 90)
 			(effects
 				(font
@@ -11869,7 +12273,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C13")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -11877,15 +12281,15 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Res_2M_0603_1%")
-		(at 177.8 125.73 90)
+		(at 177.8 123.19 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "597961cf-2c42-441e-b0df-6e5579f3fc8d")
-		(property "Reference" "R6"
-			(at 181.864 122.682 90)
+		(property "Reference" "R4"
+			(at 182.88 121.92 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11894,7 +12298,7 @@
 			)
 		)
 		(property "Value" "2M/1%/1_10W"
-			(at 188.976 129.032 90)
+			(at 189.992 124.206 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11902,7 +12306,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 177.8 125.73 0)
+			(at 177.8 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11911,7 +12315,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 125.73 0)
+			(at 177.8 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11920,7 +12324,7 @@
 			)
 		)
 		(property "Description" "Res 2M 0603 1%"
-			(at 177.8 125.73 0)
+			(at 177.8 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11929,7 +12333,7 @@
 			)
 		)
 		(property "Supply Name" "thegioiic"
-			(at 177.8 125.73 0)
+			(at 177.8 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11938,7 +12342,7 @@
 			)
 		)
 		(property "Supply Part Number" "Điện Trở 2 MOhm 0603 1%"
-			(at 177.8 125.73 0)
+			(at 177.8 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11947,7 +12351,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-2-mohm-0603-1-"
-			(at 177.8 125.73 0)
+			(at 177.8 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11964,7 +12368,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R6")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -11979,7 +12383,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5bfe4401-8ceb-4f29-9d43-9345590b2449")
-		(property "Reference" "L1"
+		(property "Reference" "L2"
 			(at 315.468 82.804 0)
 			(effects
 				(font
@@ -12083,7 +12487,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "L1")
+					(reference "L2")
 					(unit 1)
 				)
 			)
@@ -12098,7 +12502,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7c3911e9-76a7-4dd0-92cf-6c906051b2d8")
-		(property "Reference" "L2"
+		(property "Reference" "L1"
 			(at 95.25 113.03 90)
 			(effects
 				(font
@@ -12187,7 +12591,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "L2")
+					(reference "L1")
 					(unit 1)
 				)
 			)
@@ -12202,7 +12606,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7f8eac08-d204-4e76-a213-fe2fe12a4b09")
-		(property "Reference" "D1"
+		(property "Reference" "D2"
 			(at 256.286 81.534 0)
 			(effects
 				(font
@@ -12286,7 +12690,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "D1")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -12301,7 +12705,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "842f2316-e454-4cf8-9c6d-8cde7db647d2")
-		(property "Reference" "R4"
+		(property "Reference" "R7"
 			(at 194.31 108.458 90)
 			(effects
 				(font
@@ -12382,7 +12786,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R4")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -12390,7 +12794,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Res_15K_0805_1%")
-		(at 325.12 163.83 90)
+		(at 325.12 165.1 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12399,7 +12803,7 @@
 		(fields_autoplaced yes)
 		(uuid "8b30a2de-1b88-4a20-bb83-211c4b610ad0")
 		(property "Reference" "R13"
-			(at 327.66 158.7499 90)
+			(at 327.66 160.0199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12408,7 +12812,7 @@
 			)
 		)
 		(property "Value" "15K/1%/1_8W"
-			(at 327.66 161.2899 90)
+			(at 327.66 162.5599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12417,7 +12821,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0805"
-			(at 313.69 123.952 90)
+			(at 313.69 125.222 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12426,7 +12830,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 324.358 124.206 90)
+			(at 324.358 125.476 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12435,7 +12839,7 @@
 			)
 		)
 		(property "Description" "Res 15 KOhm 0805 1%"
-			(at 318.262 123.444 90)
+			(at 318.262 124.714 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12444,7 +12848,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 312.674 123.698 90)
+			(at 312.674 124.968 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12453,7 +12857,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 15 KOhm 0805 1%"
-			(at 311.658 123.952 90)
+			(at 311.658 125.222 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12462,7 +12866,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-15-kohm-0805-1-"
-			(at 304.546 122.682 90)
+			(at 304.546 123.952 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12494,8 +12898,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8dd48dfd-795f-469a-a640-589293b9a8e9")
-		(property "Reference" "R7"
-			(at 199.39 122.428 90)
+		(property "Reference" "R8"
+			(at 201.168 124.968 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12504,7 +12908,7 @@
 			)
 		)
 		(property "Value" "10R/1%/1_10W"
-			(at 199.644 128.524 90)
+			(at 201.168 127 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12575,7 +12979,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R7")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -12590,7 +12994,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8ed17047-6d2e-41cb-a3d0-2abf73d87af9")
-		(property "Reference" "D2"
+		(property "Reference" "D3"
 			(at 256.54 99.568 0)
 			(effects
 				(font
@@ -12662,7 +13066,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "D2")
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -12772,15 +13176,15 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Candy_Cap_hole_100nF_275V")
-		(at 118.11 133.35 90)
+		(at 118.11 130.81 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "8fe526de-8653-486d-ae8d-91acf2a9056a")
-		(property "Reference" "C8"
-			(at 118.364 127.508 90)
+		(property "Reference" "C4"
+			(at 118.364 124.968 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12789,7 +13193,7 @@
 			)
 		)
 		(property "Value" "100nF 275V"
-			(at 118.364 131.826 90)
+			(at 118.364 129.286 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12798,7 +13202,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Candy_Cap_hole_100nF_275V"
-			(at 113.03 133.604 0)
+			(at 113.03 131.064 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12807,7 +13211,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 113.03 133.096 0)
+			(at 113.03 130.556 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12816,7 +13220,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 112.522 132.334 0)
+			(at 112.522 129.794 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12825,7 +13229,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 113.03 132.08 0)
+			(at 113.03 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12834,7 +13238,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Kẹo Vàng X2 100nF (0.1uF) 104K 275VAC"
-			(at 112.522 132.08 0)
+			(at 112.522 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12843,7 +13247,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-keo-vang-x2-100nf-0-1uf-104k-275vac"
-			(at 113.03 133.35 0)
+			(at 113.03 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12860,7 +13264,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C8")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -12875,8 +13279,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9cc152ae-19c6-4386-a165-91f09fdf4c82")
-		(property "Reference" "CR2"
-			(at 199.39 133.096 90)
+		(property "Reference" "CR1"
+			(at 201.676 135.128 90)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -12885,7 +13289,7 @@
 			)
 		)
 		(property "Value" "RGP25M-E3/54"
-			(at 199.39 139.446 90)
+			(at 201.676 137.668 90)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -12958,7 +13362,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "CR2")
+					(reference "CR1")
 					(unit 1)
 				)
 			)
@@ -12973,7 +13377,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a195d9dc-92e8-444d-b2db-f4676aa3bb58")
-		(property "Reference" "D3"
+		(property "Reference" "D1"
 			(at 134.366 119.126 0)
 			(effects
 				(font
@@ -13059,7 +13463,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "D3")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -13168,8 +13572,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b80eec17-b039-4944-86ba-c797d9d6b4aa")
-		(property "Reference" "R12"
-			(at 164.846 152.908 90)
+		(property "Reference" "R1"
+			(at 165.862 155.448 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13177,7 +13581,7 @@
 			)
 		)
 		(property "Value" "6.98K/1%/1_4W"
-			(at 170.942 159.512 90)
+			(at 171.958 157.48 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13247,7 +13651,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R12")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -13262,7 +13666,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c320701f-8876-4788-8947-2f6c7007d899")
-		(property "Reference" "C12"
+		(property "Reference" "C8"
 			(at 240.538 158.242 90)
 			(effects
 				(font
@@ -13343,7 +13747,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C12")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -13358,7 +13762,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c4176bb8-34ac-43ab-a014-0737e5c215da")
-		(property "Reference" "C10"
+		(property "Reference" "C3"
 			(at 114.554 142.24 90)
 			(effects
 				(font
@@ -13439,7 +13843,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C10")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -13454,7 +13858,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c41d75f1-548f-44d8-baa0-c078320285ad")
-		(property "Reference" "C11"
+		(property "Reference" "C12"
 			(at 308.61 145.288 0)
 			(effects
 				(font
@@ -13533,7 +13937,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C11")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -13548,7 +13952,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d48a62da-db29-41ac-8cb0-aa1b913049ee")
-		(property "Reference" "C1"
+		(property "Reference" "C9"
 			(at 265.684 90.932 90)
 			(effects
 				(font
@@ -13629,7 +14033,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C1")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -13644,7 +14048,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "da2a5692-96a5-4b12-9f3e-86a991ec0ca2")
-		(property "Reference" "U4"
+		(property "Reference" "U3"
 			(at 267.462 152.146 90)
 			(effects
 				(font
@@ -13730,7 +14134,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "U4")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -13738,7 +14142,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Cap_Polarized_330uF_450V")
-		(at 148.59 104.14 270)
+		(at 148.59 116.84 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13746,7 +14150,7 @@
 		(dnp no)
 		(uuid "e15fe839-fe2a-4739-92ee-3f51f6a12175")
 		(property "Reference" "C5"
-			(at 148.844 105.156 90)
+			(at 148.844 117.856 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13755,7 +14159,7 @@
 			)
 		)
 		(property "Value" "330uF/450V"
-			(at 149.098 108.712 90)
+			(at 149.098 121.412 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13764,7 +14168,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Big_Cap_330uF_450V"
-			(at 163.068 98.552 0)
+			(at 163.068 111.252 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13773,7 +14177,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.allaboutcircuits.com/electronic-components/datasheet/LLS2W331MELB--Nichicon/"
-			(at 163.068 91.694 0)
+			(at 163.068 104.394 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13782,7 +14186,7 @@
 			)
 		)
 		(property "Description" "Tụ hóa"
-			(at 162.56 98.552 0)
+			(at 162.56 111.252 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13791,7 +14195,7 @@
 			)
 		)
 		(property "Supply name " "CHIPN24"
-			(at 163.068 101.346 0)
+			(at 163.068 114.046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13800,7 +14204,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ hóa 330uF 450V Đen Nichicon "
-			(at 163.068 99.06 0)
+			(at 163.068 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13809,7 +14213,7 @@
 			)
 		)
 		(property "Supply URL" "https://chipn24.com/h83-tu-hoa-330uf-450v-den-nichicon-30x40mm-id3746.html"
-			(at 163.068 91.694 0)
+			(at 163.068 104.394 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13841,7 +14245,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ea2fcc1a-73cf-47c6-8993-97d2eed4f0bd")
-		(property "Reference" "C3"
+		(property "Reference" "C11"
 			(at 296.164 91.186 90)
 			(effects
 				(font
@@ -13922,7 +14326,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C3")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -13937,7 +14341,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ea6edbc2-af73-49bf-a7c4-d2165d63b0a1")
-		(property "Reference" "R8"
+		(property "Reference" "R10"
 			(at 264.16 131.572 90)
 			(effects
 				(font
@@ -14018,7 +14422,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R8")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -14033,7 +14437,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f089e199-31d8-4914-8428-a247745f157c")
-		(property "Reference" "C2"
+		(property "Reference" "C10"
 			(at 280.924 91.186 90)
 			(effects
 				(font
@@ -14114,7 +14518,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C2")
+					(reference "C10")
 					(unit 1)
 				)
 			)
