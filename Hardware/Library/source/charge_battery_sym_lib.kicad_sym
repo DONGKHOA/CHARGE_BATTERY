@@ -1906,7 +1906,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at 25.4 10.16 0)
+			(at 25.4 7.62 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -1914,7 +1914,7 @@
 			)
 		)
 		(property "Value" "BYV32-200G"
-			(at 25.4 7.62 0)
+			(at 25.4 5.08 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -1987,10 +1987,24 @@
 		(symbol "BYV32-200G_0_1"
 			(polyline
 				(pts
-					(xy 7.62 -7.62) (xy 43.18 -7.62)
+					(xy 26.67 0) (xy 30.48 0) (xy 30.48 -5.08) (xy 26.67 -5.08)
 				)
 				(stroke
-					(width 0.127)
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "BYV32-200G_1_1"
+			(polyline
+				(pts
+					(xy 21.59 -5.08) (xy 22.5298 -5.08)
+				)
+				(stroke
+					(width 0.2032)
 					(type default)
 				)
 				(fill
@@ -1999,10 +2013,10 @@
 			)
 			(polyline
 				(pts
-					(xy 7.62 5.08) (xy 7.62 -7.62)
+					(xy 21.59 0) (xy 22.5298 0)
 				)
 				(stroke
-					(width 0.127)
+					(width 0.2032)
 					(type default)
 				)
 				(fill
@@ -2011,10 +2025,10 @@
 			)
 			(polyline
 				(pts
-					(xy 43.18 -7.62) (xy 43.18 5.08)
+					(xy 22.225 -5.08) (xy 22.86 -5.08)
 				)
 				(stroke
-					(width 0.127)
+					(width 0.2032)
 					(type default)
 				)
 				(fill
@@ -2023,10 +2037,130 @@
 			)
 			(polyline
 				(pts
-					(xy 43.18 5.08) (xy 7.62 5.08)
+					(xy 22.225 0) (xy 22.86 0)
 				)
 				(stroke
-					(width 0.127)
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 22.86 -6.985) (xy 25.4 -5.08)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 22.86 -3.175) (xy 22.86 -6.985)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 22.86 -1.905) (xy 25.4 0)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 22.86 1.905) (xy 22.86 -1.905)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 25.4 -6.985) (xy 25.4 -3.175)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 25.4 -5.08) (xy 22.86 -3.175)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 25.4 -5.08) (xy 26.67 -5.08)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 25.4 -1.905) (xy 25.4 1.905)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 25.4 0) (xy 22.86 1.905)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 25.4 0) (xy 26.67 0)
+				)
+				(stroke
+					(width 0.2032)
 					(type default)
 				)
 				(fill
@@ -2034,9 +2168,9 @@
 				)
 			)
 			(pin unspecified line
-				(at 0 0 0)
-				(length 7.62)
-				(name "ANODE"
+				(at 19.05 0 0)
+				(length 2.54)
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2052,9 +2186,9 @@
 				)
 			)
 			(pin unspecified line
-				(at 0 -2.54 0)
-				(length 7.62)
-				(name "CATHODE"
+				(at 33.02 -1.27 180)
+				(length 2.54)
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2070,9 +2204,9 @@
 				)
 			)
 			(pin unspecified line
-				(at 50.8 -2.54 180)
-				(length 7.62)
-				(name "ANODE"
+				(at 19.05 -5.08 0)
+				(length 2.54)
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2088,9 +2222,9 @@
 				)
 			)
 			(pin unspecified line
-				(at 50.8 0 180)
-				(length 7.62)
-				(name "CATHODE"
+				(at 33.02 -3.81 180)
+				(length 2.54)
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -37271,7 +37405,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at 35.56 10.16 0)
+			(at 35.56 17.78 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -37279,7 +37413,7 @@
 			)
 		)
 		(property "Value" "TL431CLPM"
-			(at 35.56 7.62 0)
+			(at 35.56 15.24 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -37306,7 +37440,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "TL431CLPM"
+		(property "Description" "Voltage References Adjustable Precision Shunt Regulator"
 			(at 26.416 -9.652 0)
 			(effects
 				(font
@@ -37323,8 +37457,16 @@
 				)
 			)
 		)
-		(property "Supply Number" "TL431CLPM"
+		(property "Supply Part Number" "TL431CLPM"
 			(at 30.988 -9.398 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Texas-Instruments/TL431CLPM?qs=odmYgEirbwzbYi2SmH09kA%3D%3D"
+			(at 15.748 -9.906 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -37352,10 +37494,10 @@
 		(symbol "TL431CLPM_0_1"
 			(polyline
 				(pts
-					(xy 7.62 -7.62) (xy 63.5 -7.62)
+					(xy 36.83 5.715) (xy 37.465 5.08)
 				)
 				(stroke
-					(width 0.127)
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -37364,10 +37506,24 @@
 			)
 			(polyline
 				(pts
-					(xy 7.62 5.08) (xy 7.62 -7.62)
+					(xy 36.83 9.525) (xy 36.195 10.16)
 				)
 				(stroke
-					(width 0.127)
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "TL431CLPM_1_1"
+			(polyline
+				(pts
+					(xy 33.02 7.62) (xy 33.9598 7.62)
+				)
+				(stroke
+					(width 0.2032)
 					(type default)
 				)
 				(fill
@@ -37376,10 +37532,10 @@
 			)
 			(polyline
 				(pts
-					(xy 63.5 -7.62) (xy 63.5 5.08)
+					(xy 33.655 7.62) (xy 34.29 7.62)
 				)
 				(stroke
-					(width 0.127)
+					(width 0.2032)
 					(type default)
 				)
 				(fill
@@ -37388,10 +37544,70 @@
 			)
 			(polyline
 				(pts
-					(xy 63.5 5.08) (xy 7.62 5.08)
+					(xy 34.29 5.715) (xy 36.83 7.62)
 				)
 				(stroke
-					(width 0.127)
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 34.29 9.525) (xy 34.29 5.715)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 35.56 6.604) (xy 35.56 4.572)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 36.83 5.715) (xy 36.83 9.525)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 36.83 7.62) (xy 34.29 9.525)
+				)
+				(stroke
+					(width 0.2032)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 36.83 7.62) (xy 38.1 7.62)
+				)
+				(stroke
+					(width 0.2032)
 					(type default)
 				)
 				(fill
@@ -37399,9 +37615,9 @@
 				)
 			)
 			(pin unspecified line
-				(at 0 0 0)
-				(length 7.62)
-				(name "CATHODE"
+				(at 30.48 7.62 0)
+				(length 2.54)
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -37416,10 +37632,10 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at 71.12 -2.54 180)
-				(length 7.62)
-				(name "REF"
+			(pin unspecified line
+				(at 35.56 2.54 90)
+				(length 2.54)
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -37435,9 +37651,9 @@
 				)
 			)
 			(pin unspecified line
-				(at 71.12 0 180)
-				(length 7.62)
-				(name "ANODE"
+				(at 40.64 7.62 180)
+				(length 2.54)
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
