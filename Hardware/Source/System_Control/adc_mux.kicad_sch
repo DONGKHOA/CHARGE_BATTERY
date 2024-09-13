@@ -344,6 +344,108 @@
 				)
 			)
 		)
+		(symbol "Connector:TestPoint_Small"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint_Small"
+				(at 0 2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_Small_0_1"
+				(circle
+					(center 0 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_Small_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "charge_battery_sym_lib:BZT52H-C3V3"
 			(pin_numbers hide)
 			(pin_names hide)
@@ -1981,10 +2083,22 @@
 		)
 	)
 	(junction
+		(at 238.76 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "17f2c9be-38eb-493d-9f2d-6e71c91297a8")
+	)
+	(junction
 		(at 115.57 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2f432af5-9b29-46ba-ae7f-fe4a1a1018bd")
+	)
+	(junction
+		(at 129.54 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "43e66705-dc33-4107-bbca-2bab3ec45e2a")
 	)
 	(junction
 		(at 224.79 90.17)
@@ -2332,7 +2446,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 50.8) (xy 127 50.8)
+			(xy 133.35 50.8) (xy 129.54 50.8)
 		)
 		(stroke
 			(width 0)
@@ -2592,7 +2706,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 52.07) (xy 241.3 52.07)
+			(xy 236.22 52.07) (xy 238.76 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2619,6 +2733,16 @@
 			(type default)
 		)
 		(uuid "b16941e9-5762-4c9a-8855-6b02707cb81d")
+	)
+	(wire
+		(pts
+			(xy 238.76 52.07) (xy 243.84 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2f41e8a-56dd-46dc-b6e2-f567bd3a3be7")
 	)
 	(wire
 		(pts
@@ -2902,6 +3026,16 @@
 	)
 	(wire
 		(pts
+			(xy 129.54 50.8) (xy 127 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6311eff-28bb-4e33-9bab-6ebbce3f46f7")
+	)
+	(wire
+		(pts
 			(xy 115.57 77.47) (xy 115.57 78.74)
 		)
 		(stroke
@@ -3156,7 +3290,7 @@
 	)
 	(global_label "ADC1_IN2"
 		(shape output)
-		(at 241.3 52.07 0)
+		(at 243.84 52.07 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3166,7 +3300,7 @@
 		)
 		(uuid "2e402da3-b71b-4366-a6cd-712ffa9badae")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 253.2357 52.07 0)
+			(at 255.7757 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3904,7 +4038,7 @@
 	)
 	(global_label "ADC1_IN1"
 		(shape output)
-		(at 132.08 50.8 0)
+		(at 133.35 50.8 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3914,7 +4048,7 @@
 		)
 		(uuid "f099ad46-f162-484d-9c93-be668c0b7bcf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.0157 50.8 0)
+			(at 145.2857 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5438,6 +5572,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 238.76 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "748ccd0e-d1ca-4744-a6c6-668cfddae322")
+		(property "Reference" "TP9"
+			(at 236.982 50.546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 240.03 53.3399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 243.84 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 243.84 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 238.76 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "441661c9-6e50-4428-8026-38e0c267b462")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8a28eaba-921a-4d69-a485-b69da0a1756d"
+					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_1nF_50V")
 		(at 224.79 60.96 90)
 		(unit 1)
@@ -6405,6 +6606,73 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8a28eaba-921a-4d69-a485-b69da0a1756d"
 					(reference "#PWR0250")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 129.54 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d7823e8e-efe3-41b5-89b0-137f910f952a")
+		(property "Reference" "TP8"
+			(at 127.762 49.276 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 130.81 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 134.62 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 134.62 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 129.54 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "51c51155-14e4-47d9-a2d1-483986439691")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8a28eaba-921a-4d69-a485-b69da0a1756d"
+					(reference "TP8")
 					(unit 1)
 				)
 			)
