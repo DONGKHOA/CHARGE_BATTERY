@@ -16,7 +16,6 @@ extern "C" {
  *      INCLUDES
  *********************/
 
-#include "lv_conf.h"
 #include "../lcd/lv_lcd_generic_mipi.h"
 
 #if LV_USE_ILI9341

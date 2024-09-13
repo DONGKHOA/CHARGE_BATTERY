@@ -70,6 +70,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define TOUCH_DETECT_Pin LL_GPIO_PIN_2
+#define TOUCH_DETECT_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 
