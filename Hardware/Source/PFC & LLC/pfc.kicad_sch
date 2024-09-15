@@ -3235,22 +3235,21 @@
 				)
 			)
 		)
-		(symbol "charge_battery_sym_lib:IDH06SG60CXKSA2"
+		(symbol "charge_battery_sym_lib:IDH06G65C6"
 			(pin_numbers hide)
-			(pin_names
-				(offset 0.762) hide)
+			(pin_names hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "D"
-				(at 0 2.54 0)
+				(at 1.524 8.382 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "IDH06SG60CXKSA2"
+			(property "Value" "IDH06G65C6"
 				(at 0 -2.54 0)
 				(effects
 					(font
@@ -3259,7 +3258,7 @@
 				)
 			)
 			(property "Footprint" "charge_battery_footprint_lib:TO-220-2_MCH"
-				(at -12.446 14.986 0)
+				(at -11.43 17.272 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3267,8 +3266,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.mouser.vn/datasheet/2/196/Infineon_IDH06SG60C_DS_v02_04_en-1131036.pdf"
-				(at -7.874 15.24 0)
+			(property "Datasheet" "https://www.mouser.vn/datasheet/2/196/Infineon_IDH06G65C6_DS_v02_00_EN-1131100.pdf"
+				(at -4.064 17.526 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3276,8 +3275,8 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Schottky Diodes & Rectifiers 600 V, 6 A SiC"
-				(at -3.81 15.24 0)
+			(property "Description" "Schottky Diodes & Rectifiers SIC DIODES"
+				(at -2.794 17.78 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3285,8 +3284,8 @@
 					(hide yes)
 				)
 			)
-			(property "Supply name" "Mouser "
-				(at -4.318 14.732 0)
+			(property "Supply name" "Mouser"
+				(at -3.81 16.764 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3294,8 +3293,8 @@
 					(hide yes)
 				)
 			)
-			(property "Supply part number" "726-IDH06SG60CXKSA2"
-				(at -6.096 15.24 0)
+			(property "Supply part number" "726-IDH06G65C6XKSA1"
+				(at -6.096 17.526 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3303,8 +3302,8 @@
 					(hide yes)
 				)
 			)
-			(property "Supply URL" "https://www.mouser.vn/ProductDetail/Infineon-Technologies/IDH06SG60CXKSA2?qs=HXFqYaX1Q2y4HUNTBAL%252BkA%3D%3D"
-				(at -7.62 15.24 0)
+			(property "Supply URL" "https://www.mouser.vn/ProductDetail/Infineon-Technologies/IDH06G65C6XKSA1?qs=HXFqYaX1Q2y0Eo%2FTJueHsw%3D%3D"
+				(at -4.064 17.526 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3312,10 +3311,22 @@
 					(hide yes)
 				)
 			)
-			(symbol "IDH06SG60CXKSA2_0_1"
+			(symbol "IDH06G65C6_0_1"
 				(polyline
 					(pts
 						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -1.27 0) (xy 2.54 0)
 					)
 					(stroke
 						(width 0)
@@ -3349,28 +3360,10 @@
 						(type none)
 					)
 				)
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
-			(symbol "IDH06SG60CXKSA2_1_1"
+			(symbol "IDH06G65C6_1_1"
 				(pin passive line
-					(at 3.81 0 180)
+					(at 5.08 0 180)
 					(length 2.54)
 					(name "K"
 						(effects
@@ -3380,6 +3373,24 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -11537,6 +11548,12 @@
 		(uuid "50fe11ba-01d6-4a6a-8152-148b6edbcf48")
 	)
 	(junction
+		(at 372.11 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "51d2bd2b-74c6-4f7c-8ac6-1d830254ea40")
+	)
+	(junction
 		(at 176.53 270.51)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11906,6 +11923,16 @@
 	)
 	(wire
 		(pts
+			(xy 364.49 78.74) (xy 372.11 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04c345cc-0e6f-43ee-83cc-22d8936432dd")
+	)
+	(wire
+		(pts
 			(xy 224.79 78.74) (xy 224.79 90.17)
 		)
 		(stroke
@@ -12126,7 +12153,7 @@
 	)
 	(wire
 		(pts
-			(xy 350.52 78.74) (xy 355.6 78.74)
+			(xy 350.52 78.74) (xy 354.33 78.74)
 		)
 		(stroke
 			(width 0)
@@ -12976,6 +13003,16 @@
 	)
 	(wire
 		(pts
+			(xy 372.11 78.74) (xy 374.65 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e62c353-2f9e-4a5c-b2ec-032bdbf23a00")
+	)
+	(wire
+		(pts
 			(xy 133.35 78.74) (xy 138.43 78.74)
 		)
 		(stroke
@@ -13476,16 +13513,6 @@
 	)
 	(wire
 		(pts
-			(xy 363.22 78.74) (xy 374.65 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9dc5e848-7409-432c-ae55-ba7839a6c804")
-	)
-	(wire
-		(pts
 			(xy 391.16 87.63) (xy 391.16 78.74)
 		)
 		(stroke
@@ -13646,7 +13673,7 @@
 	)
 	(wire
 		(pts
-			(xy 374.65 69.85) (xy 374.65 78.74)
+			(xy 372.11 69.85) (xy 372.11 78.74)
 		)
 		(stroke
 			(width 0)
@@ -14306,7 +14333,7 @@
 	)
 	(wire
 		(pts
-			(xy 356.87 69.85) (xy 374.65 69.85)
+			(xy 356.87 69.85) (xy 372.11 69.85)
 		)
 		(stroke
 			(width 0)
@@ -15314,145 +15341,6 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:IDH06SG60CXKSA2")
-		(at 359.41 78.74 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1478675d-c082-42fc-9263-ad3eef80b2b9")
-		(property "Reference" "D5"
-			(at 362.966 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "IDH06SG60CXKSA2"
-			(at 364.744 82.296 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:TO-220-2_MCH"
-			(at 346.964 63.754 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.vn/datasheet/2/196/Infineon_IDH06SG60C_DS_v02_04_en-1131036.pdf"
-			(at 351.536 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Schottky Diodes & Rectifiers 600 V, 6 A SiC"
-			(at 355.6 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Mouser "
-			(at 355.092 64.008 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "726-IDH06SG60CXKSA2"
-			(at 353.314 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Infineon-Technologies/IDH06SG60CXKSA2?qs=HXFqYaX1Q2y4HUNTBAL%252BkA%3D%3D"
-			(at 351.79 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property " Supply part number" ""
-			(at 359.41 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Field7" ""
-			(at 359.41 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" ""
-			(at 359.41 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 359.41 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part name" ""
-			(at 359.41 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9b82beb5-ca4f-4615-8a23-9e229c5da119")
-		)
-		(pin "1"
-			(uuid "d1110ff4-67b6-45e1-92e8-5e5ae6436b67")
-		)
-		(instances
-			(project ""
-				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "D5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "charge_battery_sym_lib:Res_100mR_1206_1%")
 		(at 285.75 111.76 90)
 		(unit 1)
@@ -16296,51 +16184,6 @@
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Infineon-Technologies/IPA60R170CFD7XKSA1?qs=xhbEVWpZdWctgSWyuwre3A%3D%3D"
 			(at 345.44 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property " Supply part number" ""
-			(at 342.9 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Field7" ""
-			(at 342.9 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" ""
-			(at 342.9 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 342.9 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part name" ""
-			(at 342.9 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17980,6 +17823,101 @@
 		)
 	)
 	(symbol
+		(lib_id "charge_battery_sym_lib:IDH06G65C6")
+		(at 359.41 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5504d5ac-21c3-45b0-a3da-6639b64a3e43")
+		(property "Reference" "D5"
+			(at 359.41 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IDH06G65C6"
+			(at 359.41 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:TO-220-2_MCH"
+			(at 347.98 61.468 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.vn/datasheet/2/196/Infineon_IDH06G65C6_DS_v02_00_EN-1131100.pdf"
+			(at 355.346 61.214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Schottky Diodes & Rectifiers SIC DIODES"
+			(at 356.616 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Mouser"
+			(at 355.6 61.976 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "726-IDH06G65C6XKSA1"
+			(at 353.314 61.214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Infineon-Technologies/IDH06G65C6XKSA1?qs=HXFqYaX1Q2y0Eo%2FTJueHsw%3D%3D"
+			(at 355.346 61.214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "844c9594-b37b-495f-88eb-2898e22c18dd")
+		)
+		(pin "1"
+			(uuid "93790a61-238c-4943-b419-cb5031f00177")
+		)
+		(instances
+			(project ""
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "charge_battery_sym_lib:Res_100mR_1206_1%")
 		(at 278.13 111.76 90)
 		(unit 1)
@@ -18979,7 +18917,7 @@
 		(dnp no)
 		(uuid "7144dc46-c911-4ae6-b3b9-4ab7d9dadefd")
 		(property "Reference" "L2"
-			(at 337.82 75.946 0)
+			(at 337.82 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18987,7 +18925,7 @@
 			)
 		)
 		(property "Value" "520uH"
-			(at 337.82 80.518 0)
+			(at 338.074 75.692 0)
 			(effects
 				(font
 					(size 1.27 1.27)
