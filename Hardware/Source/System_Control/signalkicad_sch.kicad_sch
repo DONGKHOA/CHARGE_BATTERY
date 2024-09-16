@@ -2934,7 +2934,29 @@
 		)
 		(uuid "f9860c80-09b4-44fb-8601-d04d3e4651d2")
 	)
-	(global_label "RS485_B"
+	(label "RS485_N"
+		(at 191.77 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "60d396a3-89aa-45d0-9ca9-ab9cc830f57d")
+	)
+	(label "RS485_P"
+		(at 191.77 86.36 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "69873823-dd8f-4c64-936d-f4cbb2508bd1")
+	)
+	(global_label "RS485_N"
 		(shape bidirectional)
 		(at 215.9 73.66 0)
 		(fields_autoplaced yes)
@@ -2946,7 +2968,7 @@
 		)
 		(uuid "0e3270a8-852b-4c54-ba40-a1392549dbe2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 228.3421 73.66 0)
+			(at 228.4026 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2956,7 +2978,7 @@
 			)
 		)
 	)
-	(global_label "RS485_A"
+	(global_label "RS485_P"
 		(shape bidirectional)
 		(at 215.9 86.36 0)
 		(fields_autoplaced yes)
@@ -2968,7 +2990,7 @@
 		)
 		(uuid "212cbc05-b12f-4358-8081-64d2d6fd546b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 228.1607 86.36 0)
+			(at 228.3421 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4526,7 +4548,8 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:PESD2USB3UXT-QR")
-		(at 208.28 82.55 0)
+		(at 208.28 77.47 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4534,7 +4557,7 @@
 		(dnp no)
 		(uuid "baf510e7-b138-46a6-8973-f0b6c89ac3ab")
 		(property "Reference" "D24"
-			(at 208.026 76.708 0)
+			(at 208.026 76.454 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -4543,7 +4566,7 @@
 			)
 		)
 		(property "Value" "PESD2USB3UXT-QR"
-			(at 212.344 82.804 0)
+			(at 212.344 82.55 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -4552,7 +4575,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:SOT23"
-			(at 212.852 94.742 0)
+			(at 212.852 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4562,7 +4585,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/916/PESD2USB3UXT_Q-3435971.pdf"
-			(at 213.868 94.742 0)
+			(at 213.868 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4572,7 +4595,7 @@
 			)
 		)
 		(property "Description" "ESD Protection Diodes / TVS Diodes SOT23 3.3V 4A AUTO ESD PROT"
-			(at 209.042 94.742 0)
+			(at 209.042 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4581,7 +4604,7 @@
 			)
 		)
 		(property "Supply name" "Mouser"
-			(at 209.55 94.742 0)
+			(at 209.55 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4590,7 +4613,7 @@
 			)
 		)
 		(property "Supply part number" "771-PESD2USB3UXT-QR"
-			(at 209.804 94.742 0)
+			(at 209.804 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4599,7 +4622,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Nexperia/PESD2USB3UXT-QR?qs=3Rah4i%252BhyCErbBl4ep9%252BDw%3D%3D"
-			(at 209.804 94.742 0)
+			(at 209.804 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
