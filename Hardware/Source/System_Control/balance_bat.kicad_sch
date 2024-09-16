@@ -9,203 +9,6 @@
 		(date "2024-09-02")
 	)
 	(lib_symbols
-		(symbol "Res_hole_100_1W_1%_2"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 3.556 2.286 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "100/1W/1%"
-				(at 3.81 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-				(at -19.812 28.194 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at -17.272 27.686 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Resistor"
-				(at -17.018 28.702 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply name " "Thegioiic"
-				(at -9.906 28.702 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-				(at -10.414 28.448 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-				(at -10.414 28.448 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Res_hole_100_1W_1%"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Res_hole_100_1W_1%_2_0_1"
-				(polyline
-					(pts
-						(xy 1.524 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.096 0) (xy 6.35 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 0) (xy 1.905 1.016) (xy 2.286 0) (xy 2.667 -1.016) (xy 3.048 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.048 0) (xy 3.429 1.016) (xy 3.81 0) (xy 4.191 -1.016) (xy 4.572 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.572 0) (xy 4.953 1.016) (xy 5.334 0) (xy 5.715 -1.016) (xy 6.096 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Res_hole_100_1W_1%_2_1_1"
-				(pin passive line
-					(at 0 0 0)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "charge_battery_sym_lib:1N4007-M7"
 			(pin_numbers hide)
 			(pin_names hide)
@@ -1041,6 +844,183 @@
 					)
 					(fill
 						(type outline)
+					)
+				)
+			)
+		)
+		(symbol "charge_battery_sym_lib:Res_100_2512_5%"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "100/2512/5%"
+				(at 0.508 -6.096 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+				(at 0 -5.588 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply Name" "Mouser"
+				(at 0.254 -5.842 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply Part Number" "652-CR2512-JW-101ELF"
+				(at 0.508 -5.842 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+				(at 0 -6.096 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Res_100_2512_5%_0_1"
+				(polyline
+					(pts
+						(xy -2.286 -2.54) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 -2.54) (xy -1.905 -1.524) (xy -1.524 -2.54) (xy -1.143 -3.556) (xy -0.762 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -2.54) (xy 1.143 -1.524) (xy 1.524 -2.54) (xy 1.905 -3.556) (xy 2.286 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Res_100_2512_5%_1_1"
+				(polyline
+					(pts
+						(xy -0.762 -2.54) (xy -0.381 -1.524) (xy 0 -2.54) (xy 0.381 -3.556) (xy 0.762 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -3.81 -2.54 0)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 -2.54 180)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
 			)
@@ -9196,110 +9176,6 @@
 		)
 	)
 	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 163.83 33.02 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "019b574f-ff61-46f2-902d-1346fa545149")
-		(property "Reference" "R152"
-			(at 161.544 28.956 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100/1W/1%"
-			(at 166.116 28.956 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 135.636 52.832 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 136.144 50.292 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 135.128 50.038 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name " "Thegioiic"
-			(at 135.128 42.926 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 135.382 43.434 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 135.382 43.434 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 163.83 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b3dc1c70-7fd0-4932-a88f-f2caf0259c38")
-		)
-		(pin "1"
-			(uuid "efb65e2f-2df5-4b20-bc53-04720a90491b")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R152")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "charge_battery_sym_lib:Res_10K_0603_1%")
 		(at 323.85 66.04 0)
 		(unit 1)
@@ -9584,6 +9460,103 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
 					(reference "D71")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 134.62 157.48 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0ae87411-eee8-499b-9f67-0d538e5df22d")
+		(property "Reference" "R147"
+			(at 139.7 156.2099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100/2512/5%"
+			(at 139.7 158.7499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 140.208 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 134.62 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 140.462 157.226 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 140.462 156.972 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 140.716 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4c35e7aa-3b85-431c-99d2-bcb635df79ea")
+		)
+		(pin "1"
+			(uuid "4b9945e2-ef82-4df9-9794-ea9647c9db4a")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
+					(reference "R147")
 					(unit 1)
 				)
 			)
@@ -10035,6 +10008,103 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
 					(reference "#PWR0234")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 278.13 67.31 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "130cdde0-6351-4556-be72-0ca9f5d51fe4")
+		(property "Reference" "R166"
+			(at 283.21 66.0399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100/2512/5%"
+			(at 283.21 68.5799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 283.718 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 278.13 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 278.13 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 283.972 67.056 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 283.972 66.802 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 284.226 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f1e614e9-296c-4836-b920-0056f9f62336")
+		)
+		(pin "1"
+			(uuid "8abd830c-9334-4697-90a5-96741fb55924")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
+					(reference "R166")
 					(unit 1)
 				)
 			)
@@ -11638,110 +11708,6 @@
 		)
 	)
 	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 307.34 58.42 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "29f0178e-22e6-4777-865f-a922fc3e4faf")
-		(property "Reference" "R172"
-			(at 305.054 54.356 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100/1W/1%"
-			(at 309.626 54.356 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 279.146 78.232 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 279.654 75.692 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 278.638 75.438 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name " "Thegioiic"
-			(at 278.638 68.326 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 278.892 68.834 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 278.892 68.834 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 307.34 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d7a6904a-d066-4d61-ac6e-43a08b18dacd")
-		)
-		(pin "1"
-			(uuid "0e202ade-bc77-4938-8659-66ed11208e61")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R172")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "charge_battery_sym_lib:LED_0603")
 		(at 240.03 30.48 0)
 		(unit 1)
@@ -12624,6 +12590,103 @@
 		)
 	)
 	(symbol
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 107.95 54.61 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3cfc3528-98fe-49c5-90b4-4264a8f155aa")
+		(property "Reference" "R140"
+			(at 113.03 53.3399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100/2512/5%"
+			(at 113.03 55.8799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 113.538 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 107.95 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 107.95 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 113.792 54.356 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 113.792 54.102 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 114.046 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f581179f-6fc6-4dc8-8ba9-92068fddbd9e")
+		)
+		(pin "1"
+			(uuid "e3333d38-f2f9-49d0-9398-70291ae04f86")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
+					(reference "R140")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "charge_battery_sym_lib:1N4007-M7")
 		(at 307.34 201.93 270)
 		(unit 1)
@@ -13077,42 +13140,35 @@
 		)
 	)
 	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 334.01 45.72 90)
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 304.8 170.18 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "441fe14c-1531-4b3c-ae24-71bbd1dab2a4")
-		(property "Reference" "R178"
-			(at 331.724 41.656 0)
+		(fields_autoplaced yes)
+		(uuid "44f50578-4e02-47ca-bb2f-20293a8759a2")
+		(property "Reference" "R173"
+			(at 309.88 168.9099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "100/1W/1%"
-			(at 336.296 41.656 0)
+		(property "Value" "100/2512/5%"
+			(at 309.88 171.4499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 305.816 65.532 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 306.324 62.992 90)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 310.388 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13120,8 +13176,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 305.308 62.738 0)
+		(property "Datasheet" ""
+			(at 304.8 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13129,8 +13185,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name " "Thegioiic"
-			(at 305.308 55.626 0)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 304.8 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13138,8 +13194,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 305.562 56.134 0)
+		(property "Supply Name" "Mouser"
+			(at 310.642 169.926 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13147,8 +13203,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 305.562 56.134 0)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 310.642 169.672 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13156,8 +13212,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name" "Thegioiic"
-			(at 334.01 45.72 0)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 310.896 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13166,15 +13222,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "31b9320b-51ad-411c-b448-623c6a432383")
+			(uuid "8b0e0c7e-6ff3-4e35-abf8-77403b3e5aec")
 		)
 		(pin "1"
-			(uuid "186ca7b1-d67c-426b-bd9a-4fbe81a215f8")
+			(uuid "d84cfe52-1c36-487b-ae38-7b681d7f30fc")
 		)
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R178")
+					(reference "R173")
 					(unit 1)
 				)
 			)
@@ -13654,6 +13710,103 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
 					(reference "D45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 358.14 144.78 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "549e7a69-2b55-409e-93b1-152f189ae126")
+		(property "Reference" "R185"
+			(at 363.22 143.5099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100/2512/5%"
+			(at 363.22 146.0499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 363.728 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 358.14 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 358.14 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 363.982 144.526 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 363.982 144.272 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 364.236 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "de6c0be5-9ee5-4245-a374-ed7d3a7a6774")
+		)
+		(pin "1"
+			(uuid "dc334803-7ebe-4fb7-9009-c0862dbce989")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
+					(reference "R185")
 					(unit 1)
 				)
 			)
@@ -14293,214 +14446,6 @@
 		)
 	)
 	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 280.67 186.69 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "61c2d4cb-c1d4-471b-b2ac-757ed2ef19e4")
-		(property "Reference" "R167"
-			(at 278.384 182.626 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100/1W/1%"
-			(at 282.956 182.626 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 252.476 206.502 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 252.984 203.962 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 251.968 203.708 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name " "Thegioiic"
-			(at 251.968 196.596 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 252.222 197.104 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 252.222 197.104 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 280.67 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "efc6ccbd-0f6f-4b34-862f-3e7f4eb73c8e")
-		)
-		(pin "1"
-			(uuid "e6449ee3-b364-427d-b892-2dca03d82d19")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R167")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 137.16 161.29 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "62392fef-1a3a-40a8-9d40-d3d0288925d3")
-		(property "Reference" "R147"
-			(at 134.874 157.226 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100/1W/1%"
-			(at 139.446 157.226 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 108.966 181.102 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 109.474 178.562 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 108.458 178.308 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name " "Thegioiic"
-			(at 108.458 171.196 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 108.712 171.704 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 108.712 171.704 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 137.16 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "14e57ffa-b580-416e-a8d3-d867d7b9cf17")
-		)
-		(pin "1"
-			(uuid "33857cac-89bb-46bb-a3bd-9fc5d8a9a132")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R147")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GNDPWR")
 		(at 233.68 68.58 270)
 		(unit 1)
@@ -15016,42 +14961,35 @@
 		)
 	)
 	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 360.68 148.59 90)
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 304.8 54.61 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6bd21d3e-adad-44ba-8f67-f27a15d8e82e")
-		(property "Reference" "R185"
-			(at 358.394 144.526 0)
+		(fields_autoplaced yes)
+		(uuid "69452ca0-e107-4a15-84ef-d6fcdb855913")
+		(property "Reference" "R172"
+			(at 309.88 53.3399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "100/1W/1%"
-			(at 362.966 144.526 0)
+		(property "Value" "100/2512/5%"
+			(at 309.88 55.8799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 332.486 168.402 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 332.994 165.862 90)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 310.388 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15059,8 +14997,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 331.978 165.608 0)
+		(property "Datasheet" ""
+			(at 304.8 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15068,8 +15006,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name " "Thegioiic"
-			(at 331.978 158.496 0)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 304.8 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15077,8 +15015,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 332.232 159.004 0)
+		(property "Supply Name" "Mouser"
+			(at 310.642 54.356 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15086,8 +15024,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 332.232 159.004 0)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 310.642 54.102 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15095,8 +15033,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name" "Thegioiic"
-			(at 360.68 148.59 0)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 310.896 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15105,15 +15043,112 @@
 			)
 		)
 		(pin "2"
-			(uuid "76543247-da80-4fe5-bba4-e29c1cd23817")
+			(uuid "fe7e0005-ca0d-4c9e-9bff-68891b951349")
 		)
 		(pin "1"
-			(uuid "20f4d154-4ebe-4930-bdc9-876dab9c8c09")
+			(uuid "6f1fd276-fa8a-4bf7-8b4b-2284a9cd124d")
 		)
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R185")
+					(reference "R172")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 134.62 41.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6c60cea3-f0d7-41dd-b535-c24bb7df5334")
+		(property "Reference" "R146"
+			(at 139.7 40.6399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100/2512/5%"
+			(at 139.7 43.1799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 140.208 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 134.62 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 140.462 41.656 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 140.462 41.402 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 140.716 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2650db1c-7883-417a-ba8b-1451c4ce8803")
+		)
+		(pin "1"
+			(uuid "9b6cd135-ae0f-482b-87d9-43e83b5e4db1")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
+					(reference "R146")
 					(unit 1)
 				)
 			)
@@ -15208,6 +15243,103 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
 					(reference "R175")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 331.47 157.48 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "71132ae8-a75d-427c-8f42-20af1653cc02")
+		(property "Reference" "R179"
+			(at 336.55 156.2099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100/2512/5%"
+			(at 336.55 158.7499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 337.058 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 331.47 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 331.47 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 337.312 157.226 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 337.312 156.972 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 337.566 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2cf9eac9-59be-4f6b-b402-f323761df5a5")
+		)
+		(pin "1"
+			(uuid "7ce41603-774c-4413-9454-4718524cf46b")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
+					(reference "R179")
 					(unit 1)
 				)
 			)
@@ -16769,214 +16901,6 @@
 		)
 	)
 	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 334.01 161.29 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8dc98c93-d309-4c91-93f1-7f36f00c075f")
-		(property "Reference" "R179"
-			(at 331.724 157.226 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100/1W/1%"
-			(at 336.296 157.226 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 305.816 181.102 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 306.324 178.562 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 305.308 178.308 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name " "Thegioiic"
-			(at 305.308 171.196 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 305.562 171.704 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 305.562 171.704 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 334.01 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "e193f4d6-4020-43e7-b518-8558075ad901")
-		)
-		(pin "1"
-			(uuid "953c38f0-0487-4244-b3f0-510a52c40c27")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R179")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 307.34 173.99 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "919a12b1-51e0-47b6-a472-be1b2454f35e")
-		(property "Reference" "R173"
-			(at 305.054 169.926 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100/1W/1%"
-			(at 309.626 169.926 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 279.146 193.802 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 279.654 191.262 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 278.638 191.008 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name " "Thegioiic"
-			(at 278.638 183.896 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 278.892 184.404 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 278.892 184.404 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 307.34 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "42503e98-d375-44a8-9a0a-59fa452562a3")
-		)
-		(pin "1"
-			(uuid "5fd8ef43-9f7e-46bd-bf2b-36eac44e4e02")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R173")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "charge_battery_sym_lib:LED_0603")
 		(at 240.03 171.45 0)
 		(unit 1)
@@ -18349,6 +18273,103 @@
 		)
 	)
 	(symbol
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 107.95 170.18 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aae09548-fbaf-41c7-a96f-0f9380ab8a99")
+		(property "Reference" "R141"
+			(at 113.03 168.9099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100/2512/5%"
+			(at 113.03 171.4499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 113.538 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 107.95 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 107.95 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 113.792 169.926 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 113.792 169.672 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 114.046 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6ea6b655-86f6-4460-88f7-4b28efcc15b1")
+		)
+		(pin "1"
+			(uuid "72fe8780-1f02-4d3b-a0b1-f123837b8ec7")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
+					(reference "R141")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "charge_battery_sym_lib:AO3400A ")
 		(at 326.39 167.64 0)
 		(unit 1)
@@ -18442,110 +18463,6 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
 					(reference "Q18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 163.83 148.59 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ab3a2846-c50b-4cf4-8c5a-b12c0c5d3574")
-		(property "Reference" "R153"
-			(at 161.544 144.526 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100/1W/1%"
-			(at 166.116 144.526 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 135.636 168.402 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 136.144 165.862 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 135.128 165.608 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name " "Thegioiic"
-			(at 135.128 158.496 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 135.382 159.004 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 135.382 159.004 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 163.83 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f371c8a6-be84-41eb-ae67-771d5fb5f731")
-		)
-		(pin "1"
-			(uuid "b15cdd52-64fc-4c1c-b3a7-e50fd7721993")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R153")
 					(unit 1)
 				)
 			)
@@ -18646,110 +18563,6 @@
 		)
 	)
 	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 137.16 45.72 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ad904e62-d915-4915-80d1-f263dc0f36f4")
-		(property "Reference" "R146"
-			(at 134.874 41.656 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100/1W/1%"
-			(at 139.446 41.656 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 108.966 65.532 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 109.474 62.992 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 108.458 62.738 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name " "Thegioiic"
-			(at 108.458 55.626 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 108.712 56.134 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 108.712 56.134 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 137.16 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "784043fe-ceb1-467f-bafb-161a215b92bc")
-		)
-		(pin "1"
-			(uuid "611df755-c2b4-4921-9ac9-21cdfc167ae7")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R146")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GNDPWR")
 		(at 36.83 30.48 270)
 		(unit 1)
@@ -18810,6 +18623,200 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
 					(reference "#PWR0226")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 278.13 182.88 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b0c5106b-97c6-45ee-9652-ca4a1f3931bb")
+		(property "Reference" "R167"
+			(at 283.21 181.6099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100/2512/5%"
+			(at 283.21 184.1499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 283.718 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 278.13 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 278.13 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 283.972 182.626 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 283.972 182.372 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 284.226 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "df7a1c04-aead-4fe5-9c1c-93ceb185f20f")
+		)
+		(pin "1"
+			(uuid "5e161486-6617-452f-874a-6de75aaec0f4")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
+					(reference "R167")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 331.47 41.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b0f9ee1c-d856-4cca-bc3b-505b6dae672a")
+		(property "Reference" "R178"
+			(at 336.55 40.6399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100/2512/5%"
+			(at 336.55 43.1799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 337.058 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 331.47 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 331.47 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 337.312 41.656 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 337.312 41.402 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 337.566 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "bd9d9a1b-7991-4a87-b66d-135b6ddc1ef1")
+		)
+		(pin "1"
+			(uuid "97992578-78e0-40c5-8730-b91477fcb15e")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
+					(reference "R178")
 					(unit 1)
 				)
 			)
@@ -19299,110 +19306,6 @@
 		)
 	)
 	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 110.49 173.99 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b8b17168-965d-4c24-ac30-72897ec1704a")
-		(property "Reference" "R141"
-			(at 108.204 169.926 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100/1W/1%"
-			(at 112.776 169.926 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 82.296 193.802 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 82.804 191.262 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 81.788 191.008 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name " "Thegioiic"
-			(at 81.788 183.896 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 82.042 184.404 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 82.042 184.404 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 110.49 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "aa4995e7-0e6d-42d0-9217-04286ac67ae9")
-		)
-		(pin "1"
-			(uuid "31c98d1c-0d48-473c-953c-c2651ebc72cc")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R141")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "charge_battery_sym_lib:PSD12-LF-T7")
 		(at 326.39 173.99 0)
 		(unit 1)
@@ -19493,110 +19396,6 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
 					(reference "D66")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 280.67 71.12 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ba8c75b4-eee8-48fa-b7b0-5d6838acdce8")
-		(property "Reference" "R166"
-			(at 278.384 67.056 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100/1W/1%"
-			(at 282.956 67.056 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 252.476 90.932 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 252.984 88.392 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 251.968 88.138 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name " "Thegioiic"
-			(at 251.968 81.026 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 252.222 81.534 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 252.222 81.534 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 280.67 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9a1cd8b4-5a40-4eb5-9490-6884167a6fce")
-		)
-		(pin "1"
-			(uuid "db1ddc02-fd94-4fbc-9fba-bf6fa0f147ed")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R166")
 					(unit 1)
 				)
 			)
@@ -19700,42 +19499,35 @@
 		)
 	)
 	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 83.82 71.12 90)
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 161.29 29.21 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "bab44f01-4b5c-40a3-9df3-3046ba0c99ca")
-		(property "Reference" "R134"
-			(at 81.534 67.056 0)
+		(fields_autoplaced yes)
+		(uuid "bc8a150c-9b7a-4230-81bb-114f3d95e7b4")
+		(property "Reference" "R152"
+			(at 166.37 27.9399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "100/1W/1%"
-			(at 86.106 67.056 0)
+		(property "Value" "100/2512/5%"
+			(at 166.37 30.4799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 55.626 90.932 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 56.134 88.392 90)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 166.878 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19743,8 +19535,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 55.118 88.138 0)
+		(property "Datasheet" ""
+			(at 161.29 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19752,8 +19544,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name " "Thegioiic"
-			(at 55.118 81.026 0)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 161.29 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19761,8 +19553,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 55.372 81.534 0)
+		(property "Supply Name" "Mouser"
+			(at 167.132 28.956 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19770,8 +19562,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 55.372 81.534 0)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 167.132 28.702 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19779,8 +19571,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name" "Thegioiic"
-			(at 83.82 71.12 0)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 167.386 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19789,15 +19581,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "f842a97c-d188-42af-b1ca-1ef9b6f8791b")
+			(uuid "06784a2e-5af0-47f8-adb8-59c6ae5f22ce")
 		)
 		(pin "1"
-			(uuid "13701fee-79a7-4908-88c5-33efbdf3b740")
+			(uuid "2101888f-6a1f-495e-869b-805904255194")
 		)
 		(instances
-			(project "System_Control"
+			(project ""
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R134")
+					(reference "R152")
 					(unit 1)
 				)
 			)
@@ -20660,42 +20452,35 @@
 		)
 	)
 	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 110.49 58.42 90)
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 358.14 29.21 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d22ecdfd-da08-4443-a155-50c441607cfa")
-		(property "Reference" "R140"
-			(at 108.204 54.356 0)
+		(fields_autoplaced yes)
+		(uuid "d0165e62-bb39-4188-bda4-4f2a8f3bb1ad")
+		(property "Reference" "R184"
+			(at 363.22 27.9399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "100/1W/1%"
-			(at 112.776 54.356 0)
+		(property "Value" "100/2512/5%"
+			(at 363.22 30.4799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 82.296 78.232 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 82.804 75.692 90)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 363.728 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20703,8 +20488,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 81.788 75.438 0)
+		(property "Datasheet" ""
+			(at 358.14 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20712,8 +20497,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name " "Thegioiic"
-			(at 81.788 68.326 0)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 358.14 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20721,8 +20506,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 82.042 68.834 0)
+		(property "Supply Name" "Mouser"
+			(at 363.982 28.956 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20730,8 +20515,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 82.042 68.834 0)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 363.982 28.702 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20739,8 +20524,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name" "Thegioiic"
-			(at 110.49 58.42 0)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 364.236 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20749,15 +20534,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "709379a9-1533-4a38-806b-1193422a4329")
+			(uuid "a80ed862-0fac-47db-ab35-87d8b0a576f7")
 		)
 		(pin "1"
-			(uuid "cd41d5e3-b420-4a24-b1b0-03505e8e6f1b")
+			(uuid "ec158326-7307-46d9-a5df-cc273026ba98")
 		)
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R140")
+					(reference "R184")
 					(unit 1)
 				)
 			)
@@ -21825,42 +21610,35 @@
 		)
 	)
 	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 83.82 186.69 90)
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 81.28 182.88 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e68b4175-a34b-4532-abc8-8607d7b57466")
+		(fields_autoplaced yes)
+		(uuid "e5a53cbd-77e0-45b9-a4a3-6fac4d70f23c")
 		(property "Reference" "R135"
-			(at 81.534 182.626 0)
+			(at 86.36 181.6099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "100/1W/1%"
-			(at 86.106 182.626 0)
+		(property "Value" "100/2512/5%"
+			(at 86.36 184.1499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 55.626 206.502 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 56.134 203.962 90)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 86.868 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21868,8 +21646,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 55.118 203.708 0)
+		(property "Datasheet" ""
+			(at 81.28 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21877,8 +21655,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name " "Thegioiic"
-			(at 55.118 196.596 0)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 81.28 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21886,8 +21664,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 55.372 197.104 0)
+		(property "Supply Name" "Mouser"
+			(at 87.122 182.626 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21895,8 +21673,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 55.372 197.104 0)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 87.122 182.372 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21904,8 +21682,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name" "Thegioiic"
-			(at 83.82 186.69 0)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 87.376 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21914,10 +21692,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "167c67a5-c9c4-415d-94f6-0c7e26ede5fc")
+			(uuid "5e0b91d3-c4c5-467e-9b7a-0dee7508151d")
 		)
 		(pin "1"
-			(uuid "10c3c69e-b755-4a4d-80cd-14748117a7c8")
+			(uuid "67f21b0d-286f-46ff-9f64-d434dc0e5f21")
 		)
 		(instances
 			(project "System_Control"
@@ -22022,6 +21800,103 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
 					(reference "Q15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 161.29 144.78 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e9f44f05-5fb9-49b2-b4a6-f244da370c45")
+		(property "Reference" "R153"
+			(at 166.37 143.5099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100/2512/5%"
+			(at 166.37 146.0499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 166.878 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 161.29 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 161.29 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 167.132 144.526 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 167.132 144.272 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 167.386 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ba3def00-7f32-483c-b89e-0c72b1a4597f")
+		)
+		(pin "1"
+			(uuid "e2c28c95-b254-4647-a15f-fe18bd3231b6")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
+					(reference "R153")
 					(unit 1)
 				)
 			)
@@ -22706,110 +22581,6 @@
 		)
 	)
 	(symbol
-		(lib_name "Res_hole_100_1W_1%_2")
-		(lib_id "charge_battery_sym_lib:Res_hole_100_1W_1%")
-		(at 360.68 33.02 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f8b014b2-240b-47c9-a02e-6efe1c322f6d")
-		(property "Reference" "R184"
-			(at 358.394 28.956 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100/1W/1%"
-			(at 362.966 28.956 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_Hole_1W"
-			(at 332.486 52.832 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 332.994 50.292 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 331.978 50.038 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name " "Thegioiic"
-			(at 331.978 42.926 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 100 Ohm 1W 1% 5 Vòng Màu"
-			(at 332.232 43.434 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-100-ohm-1w-1-5-vong-mau"
-			(at 332.232 43.434 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 360.68 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "39c71fa7-d78f-43d1-90a5-e41825a2190f")
-		)
-		(pin "1"
-			(uuid "2899823f-1dc3-4c5a-86f7-4fdabb5bd57b")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
-					(reference "R184")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GNDPWR")
 		(at 233.68 55.88 270)
 		(unit 1)
@@ -23032,6 +22803,103 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
 					(reference "#PWR0230")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_100_2512_5%")
+		(at 81.28 67.31 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ffb73697-e424-4927-afa6-e7166cf72c4d")
+		(property "Reference" "R134"
+			(at 86.36 66.0399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100/2512/5%"
+			(at 86.36 68.5799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 86.868 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thick Film Resistors 100OHM 1WATT 5%"
+			(at 81.28 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 87.122 67.056 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "652-CR2512-JW-101ELF"
+			(at 87.122 66.802 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Bourns/CR2512-JW-101ELF?qs=sGAEpiMZZMvdGkrng054t%252BRNGJdg958RdBnRrNVwGXo%3D"
+			(at 87.376 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "df686d4c-d116-418f-b12a-95336f79484f")
+		)
+		(pin "1"
+			(uuid "ec4dff00-eafb-440d-8b9d-b7633ffb1665")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/8435baf4-7045-40d5-b408-3e2d8f47cc57"
+					(reference "R134")
 					(unit 1)
 				)
 			)
