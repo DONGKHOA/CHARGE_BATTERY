@@ -85,7 +85,7 @@
 	(net 3 "GND1")
 	(net 4 "Net-(D1-+)")
 	(net 5 "Net-(C3-Pad1)")
-	(net 6 "Net-(U1-F)")
+	(net 6 "Earth")
 	(net 7 "Net-(U1-C)")
 	(net 8 "GND2")
 	(net 9 "Net-(D2-K)")
@@ -94,7 +94,7 @@
 	(net 12 "Net-(D5-K)")
 	(net 13 "Net-(D2-A)")
 	(net 14 "Net-(D6-K)")
-	(net 15 "+9_1V")
+	(net 15 "+9")
 	(net 16 "-9_1V")
 	(net 17 "-9_2V")
 	(net 18 "Net-(D9-K)")
@@ -139,6 +139,9 @@
 	(net 57 "unconnected-(U6-OSC-Pad7)")
 	(net 58 "unconnected-(U7-OSC-Pad7)")
 	(net 59 "unconnected-(U7-TEST-Pad1)")
+	(net 60 "+9V")
+	(net 61 "unconnected-(L3-Pad1)")
+	(net 62 "unconnected-(L3-Pad2)")
 	(footprint "charge_battery_footprint_lib:LED_0805"
 		(layer "F.Cu")
 		(uuid "0051efed-7e6a-44c5-8f54-33d7a5d2662d")
@@ -630,7 +633,7 @@
 	(footprint "charge_battery_footprint_lib:Candy_Cap_hole_100nF_275V"
 		(layer "F.Cu")
 		(uuid "07a39f2d-38ed-4f98-9c9b-598dd1d494a4")
-		(at 213.67 83.5636)
+		(at 42.69264 56.2473)
 		(property "Reference" "C6"
 			(at 7.62 -8.7122 0)
 			(unlocked yes)
@@ -1650,7 +1653,6 @@
 			)
 		)
 		(property ki_fp_filters "TI*SO*PowerPAD*ThermalVias*")
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/14d43920-be0c-4dc7-83f7-77a7d2fcba60")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -2708,7 +2710,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/2a869da0-ab91-4a73-9830-6774afc53dde")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -3544,7 +3545,7 @@
 	(footprint "charge_battery_footprint_lib:Ceramic_Cap_Hole_5mm"
 		(layer "F.Cu")
 		(uuid "167cddd4-3779-4d90-a051-c51bcc719b07")
-		(at 251.855 38.64)
+		(at 75 110.5 180)
 		(descr "C, Disc series, Radial, pin pitch=5.00mm, , diameter*width=6*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf")
 		(tags "C Disc series Radial pin pitch 5.00mm  diameter 6mm width 2.5mm Capacitor")
 		(property "Reference" "C3"
@@ -3570,7 +3571,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_Hole_5mm"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -3583,7 +3584,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -3596,7 +3597,7 @@
 			)
 		)
 		(property "Description" "Code 102, 10%"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -3609,7 +3610,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -3622,7 +3623,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Gốm Xanh 1nF 2000V"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -3635,7 +3636,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-gom-xanh-1nf-2000v"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -3652,44 +3653,14 @@
 		(sheetfile "fly_back.kicad_sch")
 		(attr through_hole)
 		(fp_line
-			(start -0.62 -1.37)
-			(end -0.62 -0.925)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "d34af137-e5c9-45c2-bc27-541476be512e")
-		)
-		(fp_line
-			(start -0.62 -1.37)
-			(end 5.62 -1.37)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "a553c114-56ab-4334-9678-2fcf731ac334")
-		)
-		(fp_line
-			(start -0.62 0.925)
-			(end -0.62 1.37)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "17eaeda3-e59f-4ab4-918e-72bf1b509b55")
-		)
-		(fp_line
-			(start -0.62 1.37)
+			(start 5.62 0.925)
 			(end 5.62 1.37)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "681caf8e-b797-4519-82f5-1822d2f244c5")
+			(uuid "e293795d-2cfa-415c-b206-40b6b9e86422")
 		)
 		(fp_line
 			(start 5.62 -1.37)
@@ -3702,44 +3673,44 @@
 			(uuid "d394c4f8-b2a4-4fc3-96a6-c9c7a7a09df5")
 		)
 		(fp_line
-			(start 5.62 0.925)
+			(start -0.62 1.37)
 			(end 5.62 1.37)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "e293795d-2cfa-415c-b206-40b6b9e86422")
+			(uuid "681caf8e-b797-4519-82f5-1822d2f244c5")
 		)
 		(fp_line
-			(start -1.05 -1.5)
-			(end -1.05 1.5)
+			(start -0.62 0.925)
+			(end -0.62 1.37)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "03d48579-64d4-4dec-9648-a252964f2429")
+			(layer "F.SilkS")
+			(uuid "17eaeda3-e59f-4ab4-918e-72bf1b509b55")
 		)
 		(fp_line
-			(start -1.05 1.5)
-			(end 6.05 1.5)
+			(start -0.62 -1.37)
+			(end 5.62 -1.37)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "5c52b976-d052-4484-92e8-aefcbf99600d")
+			(layer "F.SilkS")
+			(uuid "a553c114-56ab-4334-9678-2fcf731ac334")
 		)
 		(fp_line
-			(start 6.05 -1.5)
-			(end -1.05 -1.5)
+			(start -0.62 -1.37)
+			(end -0.62 -0.925)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "6930627e-8e00-4974-89c4-f33a3c6ce736")
+			(layer "F.SilkS")
+			(uuid "d34af137-e5c9-45c2-bc27-541476be512e")
 		)
 		(fp_line
 			(start 6.05 1.5)
@@ -3752,24 +3723,44 @@
 			(uuid "0d2f6725-a5d5-49ab-afb3-9973f9cfd57d")
 		)
 		(fp_line
-			(start -0.5 -1.25)
-			(end -0.5 1.25)
+			(start 6.05 -1.5)
+			(end -1.05 -1.5)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "70bb7b32-dd27-4768-83b5-dd33b6bea001")
+			(layer "F.CrtYd")
+			(uuid "6930627e-8e00-4974-89c4-f33a3c6ce736")
 		)
 		(fp_line
-			(start -0.5 1.25)
-			(end 5.5 1.25)
+			(start -1.05 1.5)
+			(end 6.05 1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "5c52b976-d052-4484-92e8-aefcbf99600d")
+		)
+		(fp_line
+			(start -1.05 -1.5)
+			(end -1.05 1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "03d48579-64d4-4dec-9648-a252964f2429")
+		)
+		(fp_line
+			(start 5.5 1.25)
+			(end 5.5 -1.25)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "559307e4-9cf7-4e2f-87a4-470048c3b06a")
+			(uuid "0604327f-da2a-41ae-88eb-992441493aae")
 		)
 		(fp_line
 			(start 5.5 -1.25)
@@ -3782,14 +3773,24 @@
 			(uuid "cc4b992f-f6e7-48b5-a5ba-5df8281f1bcc")
 		)
 		(fp_line
-			(start 5.5 1.25)
-			(end 5.5 -1.25)
+			(start -0.5 1.25)
+			(end 5.5 1.25)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "0604327f-da2a-41ae-88eb-992441493aae")
+			(uuid "559307e4-9cf7-4e2f-87a4-470048c3b06a")
+		)
+		(fp_line
+			(start -0.5 -1.25)
+			(end -0.5 1.25)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "70bb7b32-dd27-4768-83b5-dd33b6bea001")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 2.5 0 0)
@@ -3803,7 +3804,7 @@
 			)
 		)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at 0 0 180)
 			(size 1.6 1.6)
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
@@ -3813,12 +3814,12 @@
 			(uuid "5f17ac46-304a-4f8f-8dbc-498319eca99c")
 		)
 		(pad "2" thru_hole circle
-			(at 5 0)
+			(at 5 0 180)
 			(size 1.6 1.6)
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 3 "GND1")
+			(net 6 "Earth")
 			(pintype "unspecified")
 			(uuid "e51de126-7de1-4fd7-8c2f-4d00d450b91d")
 		)
@@ -3941,7 +3942,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/c698e358-37a2-4713-bb2e-b56e2c990e5c")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -4092,7 +4092,7 @@
 	(footprint "charge_battery_footprint_lib:CP_Radial_D18.0mm_P7.50mm"
 		(layer "F.Cu")
 		(uuid "1928193e-f651-43bc-89a3-61c59b7b6432")
-		(at 194.81944 84.34)
+		(at 110.52222 91.5)
 		(descr "CP, Radial series, Radial, pin pitch=7.50mm, , diameter=18mm, Electrolytic Capacitor")
 		(tags "CP Radial series Radial pin pitch 7.50mm  diameter 18mm Electrolytic Capacitor")
 		(property "Reference" "C5"
@@ -7310,7 +7310,7 @@
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "Net-(U1-F)")
+			(net 3 "GND1")
 			(pintype "passive")
 			(uuid "7581f7b5-32ed-4a11-ba75-cfa543346a4e")
 		)
@@ -7329,7 +7329,7 @@
 	(footprint "charge_battery_footprint_lib:DO-204AC-2"
 		(layer "F.Cu")
 		(uuid "1c84ab8f-fca5-437e-ad36-8184d38ed131")
-		(at 233.579 53.0078)
+		(at 31.60164 27.6915)
 		(property "Reference" "D2"
 			(at 6.731 0 0)
 			(unlocked yes)
@@ -7819,7 +7819,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/be126d39-1e42-4489-bb70-6283dd0a7738")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -8152,7 +8151,7 @@
 			(size 1.15 1.8)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.217391)
-			(net 6 "Net-(U1-F)")
+			(net 3 "GND1")
 			(pintype "unspecified")
 			(solder_mask_margin 0.102)
 			(uuid "d7ffea1e-7151-4123-83c8-109ff03e0c2d")
@@ -8285,7 +8284,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/4a2138c6-0658-4057-bbc6-0f6e2f2cd4ab")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -8835,7 +8833,7 @@
 	(footprint "charge_battery_footprint_lib:Res_0603"
 		(layer "F.Cu")
 		(uuid "26eef49a-9003-4963-ba59-7052cc2a89ae")
-		(at 245.69 41.9046)
+		(at 87.2432 38.0198)
 		(property "Reference" "R3"
 			(at 1.24 -1.8646 0)
 			(unlocked yes)
@@ -10140,7 +10138,7 @@
 			(at 2.72415 -1.905)
 			(size 1.4605 0.5334)
 			(layers "F.Cu" "F.Paste" "F.Mask")
-			(net 15 "+9_1V")
+			(net 60 "+9V")
 			(pinfunction "V+")
 			(pintype "power_in")
 			(uuid "f9128e19-547e-4705-8b4d-4eeff4295a66")
@@ -10804,7 +10802,7 @@
 			(size 0.975 1.4)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 15 "+9_1V")
+			(net 60 "+9V")
 			(pinfunction "A")
 			(pintype "passive")
 			(uuid "74ee3870-964a-48e3-b676-b77ee110945a")
@@ -10928,7 +10926,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/79d62b12-52f1-4f13-aa47-d381c21d134b")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -11501,7 +11498,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/270c6b14-272e-4c0a-aca2-05ebf9d793f9")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -12061,7 +12057,7 @@
 			(size 1.81 1.32)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.17)
-			(net 15 "+9_1V")
+			(net 15 "+9")
 			(pintype "passive")
 			(solder_mask_margin 0.102)
 			(uuid "f987f2bf-d7a3-4496-8c70-a309b53a3cc5")
@@ -12894,7 +12890,7 @@
 			(size 3 1.6)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.15625)
-			(net 6 "Net-(U1-F)")
+			(net 3 "GND1")
 			(pintype "passive")
 			(uuid "8348b28a-1d17-4340-9ee0-d01b5897a812")
 		)
@@ -12913,7 +12909,7 @@
 	(footprint "charge_battery_footprint_lib:DO-201AD-2"
 		(layer "F.Cu")
 		(uuid "444f3282-d5ae-4c3a-b90a-e6affe44cc9a")
-		(at 190.1216 71.0722)
+		(at 20.97 38.5)
 		(property "Reference" "CR1"
 			(at 10.03 0 0)
 			(unlocked yes)
@@ -13401,7 +13397,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/5bec092e-edf9-4426-a519-fb961ec30b28")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -13602,7 +13597,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/4be6094c-b56e-4583-ba11-ad36fc75d7b7")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -13926,7 +13920,7 @@
 	(footprint "charge_battery_footprint_lib:Res_Hole_2W"
 		(layer "F.Cu")
 		(uuid "57a8b414-0d32-43ae-8ec7-b798786050b5")
-		(at 213.67 97.2876)
+		(at 44.5184 64.7154)
 		(property "Reference" "R6"
 			(at 1.905 -4.826 0)
 			(unlocked yes)
@@ -14909,7 +14903,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/1c4fd918-88e7-4943-83d6-19b27c360b3f")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -16148,7 +16141,7 @@
 				)
 			)
 		)
-		(property "Value" "4990R/1%"
+		(property "Value" "4.99K 1206 1%"
 			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "a1a20ca2-cca9-4a76-8fea-42dba55cb025")
@@ -16237,7 +16230,7 @@
 				)
 			)
 		)
-		(path "/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9/3757a229-6638-4941-aab7-79450132ea05")
+		(path "/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9/50da8a6a-1b75-4776-83ef-be47385eeff3")
 		(sheetname "Flyback Converter")
 		(sheetfile "fly_back.kicad_sch")
 		(attr smd)
@@ -17016,7 +17009,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/4cdf0942-3879-4770-8cba-de0c62ab86f6")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -17115,7 +17107,7 @@
 	(footprint "charge_battery_footprint_lib:Res_0603"
 		(layer "F.Cu")
 		(uuid "7febb130-442a-4562-a25c-9cb9a44edfc4")
-		(at 245.69 44.4442)
+		(at 43.71264 19.1279)
 		(property "Reference" "R4"
 			(at 1.24 -1.8646 0)
 			(unlocked yes)
@@ -18533,7 +18525,7 @@
 			(drill 1.1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 15 "+9_1V")
+			(net 15 "+9")
 			(pinfunction "OUT")
 			(pintype "power_in")
 			(uuid "85a4df2f-68be-4804-9a57-07ffab9cf7d5")
@@ -18553,7 +18545,7 @@
 	(footprint "charge_battery_footprint_lib:Ceramic_Cap_Hole_5mm"
 		(layer "F.Cu")
 		(uuid "85896ffe-ab2f-4678-bdbf-ef1850655ac1")
-		(at 251.855 34.59)
+		(at 56 75 180)
 		(descr "C, Disc series, Radial, pin pitch=5.00mm, , diameter*width=6*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf")
 		(tags "C Disc series Radial pin pitch 5.00mm  diameter 6mm width 2.5mm Capacitor")
 		(property "Reference" "C2"
@@ -18579,7 +18571,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_Hole_5mm"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -18592,7 +18584,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -18605,7 +18597,7 @@
 			)
 		)
 		(property "Description" "Code 102, 10%"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -18618,7 +18610,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -18631,7 +18623,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Gốm Xanh 1nF 2000V"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -18644,7 +18636,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-gom-xanh-1nf-2000v"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -18661,44 +18653,14 @@
 		(sheetfile "fly_back.kicad_sch")
 		(attr through_hole)
 		(fp_line
-			(start -0.62 -1.37)
-			(end -0.62 -0.925)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "1457fa23-a231-42f3-aa2b-877df5089040")
-		)
-		(fp_line
-			(start -0.62 -1.37)
-			(end 5.62 -1.37)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "7393d2a0-6dbb-43b7-9c31-1d0ff6139a6b")
-		)
-		(fp_line
-			(start -0.62 0.925)
-			(end -0.62 1.37)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "35567575-c3e8-431a-90e3-9cb064364774")
-		)
-		(fp_line
-			(start -0.62 1.37)
+			(start 5.62 0.925)
 			(end 5.62 1.37)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "1ad04264-1712-4b34-b8b7-1c3cdd352b83")
+			(uuid "7f8357ce-e41e-4e46-ac10-856fc2065a65")
 		)
 		(fp_line
 			(start 5.62 -1.37)
@@ -18711,44 +18673,44 @@
 			(uuid "06af823a-2ee3-4a99-a967-c4b0658fc629")
 		)
 		(fp_line
-			(start 5.62 0.925)
+			(start -0.62 1.37)
 			(end 5.62 1.37)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "7f8357ce-e41e-4e46-ac10-856fc2065a65")
+			(uuid "1ad04264-1712-4b34-b8b7-1c3cdd352b83")
 		)
 		(fp_line
-			(start -1.05 -1.5)
-			(end -1.05 1.5)
+			(start -0.62 0.925)
+			(end -0.62 1.37)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "63513d5b-fcce-49cb-aadf-95d75a4e5cd8")
+			(layer "F.SilkS")
+			(uuid "35567575-c3e8-431a-90e3-9cb064364774")
 		)
 		(fp_line
-			(start -1.05 1.5)
-			(end 6.05 1.5)
+			(start -0.62 -1.37)
+			(end 5.62 -1.37)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "7e63a3df-ae88-497b-b89e-f9fa96a04a70")
+			(layer "F.SilkS")
+			(uuid "7393d2a0-6dbb-43b7-9c31-1d0ff6139a6b")
 		)
 		(fp_line
-			(start 6.05 -1.5)
-			(end -1.05 -1.5)
+			(start -0.62 -1.37)
+			(end -0.62 -0.925)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "93db9595-789b-4768-98f1-4b01ff32b409")
+			(layer "F.SilkS")
+			(uuid "1457fa23-a231-42f3-aa2b-877df5089040")
 		)
 		(fp_line
 			(start 6.05 1.5)
@@ -18761,24 +18723,44 @@
 			(uuid "f67bbdc4-13b1-49f7-8244-77e29612671c")
 		)
 		(fp_line
-			(start -0.5 -1.25)
-			(end -0.5 1.25)
+			(start 6.05 -1.5)
+			(end -1.05 -1.5)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "1d75ab66-1f8f-4057-886a-9bdeef48a8ee")
+			(layer "F.CrtYd")
+			(uuid "93db9595-789b-4768-98f1-4b01ff32b409")
 		)
 		(fp_line
-			(start -0.5 1.25)
-			(end 5.5 1.25)
+			(start -1.05 1.5)
+			(end 6.05 1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "7e63a3df-ae88-497b-b89e-f9fa96a04a70")
+		)
+		(fp_line
+			(start -1.05 -1.5)
+			(end -1.05 1.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "63513d5b-fcce-49cb-aadf-95d75a4e5cd8")
+		)
+		(fp_line
+			(start 5.5 1.25)
+			(end 5.5 -1.25)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "396d436c-e60c-4619-8440-5b0822cb6705")
+			(uuid "6e7c38d1-4cd4-495c-b24b-2d363f9e20fa")
 		)
 		(fp_line
 			(start 5.5 -1.25)
@@ -18791,14 +18773,24 @@
 			(uuid "bdc679ab-5a42-448a-b13d-6f17cabf5858")
 		)
 		(fp_line
-			(start 5.5 1.25)
-			(end 5.5 -1.25)
+			(start -0.5 1.25)
+			(end 5.5 1.25)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "6e7c38d1-4cd4-495c-b24b-2d363f9e20fa")
+			(uuid "396d436c-e60c-4619-8440-5b0822cb6705")
+		)
+		(fp_line
+			(start -0.5 -1.25)
+			(end -0.5 1.25)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "1d75ab66-1f8f-4057-886a-9bdeef48a8ee")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 2.5 0 0)
@@ -18812,7 +18804,7 @@
 			)
 		)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at 0 0 180)
 			(size 1.6 1.6)
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
@@ -18822,12 +18814,12 @@
 			(uuid "c9df6f14-47c9-4928-8b46-54733869d147")
 		)
 		(pad "2" thru_hole circle
-			(at 5 0)
+			(at 5 0 180)
 			(size 1.6 1.6)
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 3 "GND1")
+			(net 6 "Earth")
 			(pintype "unspecified")
 			(uuid "5378fede-7250-41cd-a1f3-a108a0ee07a2")
 		)
@@ -19166,9 +19158,9 @@
 	(footprint "charge_battery_footprint_lib:MOV07D471K"
 		(layer "F.Cu")
 		(uuid "8d7d054e-ab39-4d11-b494-e1c8f4483ad6")
-		(at 80 96)
+		(at 89 86 90)
 		(property "Reference" "RV1"
-			(at 0.39 -3.39 0)
+			(at 0.39 -3.39 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "2b8493e0-0f11-40df-be1c-d6da6a36edf8")
@@ -19180,7 +19172,7 @@
 			)
 		)
 		(property "Value" "470V"
-			(at 0 1 0)
+			(at 0 1 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "0b48a631-0f52-4504-888e-9a23c7957d95")
@@ -19192,7 +19184,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:MOV07D471K"
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19205,7 +19197,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19218,7 +19210,7 @@
 			)
 		)
 		(property "Description" "MOV-07D471K, Varistors 7D471K 470V"
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19231,7 +19223,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19244,7 +19236,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Chống Sét Varistor 07D471K 470V"
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19257,7 +19249,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-chong-set-varistor-07d471k-470v"
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19274,6 +19266,16 @@
 		(sheetfile "fly_back.kicad_sch")
 		(attr through_hole)
 		(fp_line
+			(start 4.5 -2.5)
+			(end 4.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "27a7f00a-6182-4273-8b84-26a3363a49c1")
+		)
+		(fp_line
 			(start -4.5 -2.5)
 			(end 4.5 -2.5)
 			(stroke
@@ -19282,6 +19284,16 @@
 			)
 			(layer "F.SilkS")
 			(uuid "bdc77450-b415-47c5-a83b-49c52b9371bc")
+		)
+		(fp_line
+			(start 4.5 2.5)
+			(end -4.5 2.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "f817c005-2584-4122-84d7-13053f2fe646")
 		)
 		(fp_line
 			(start -4.5 2.5)
@@ -19297,21 +19309,11 @@
 			(start 4.5 -2.5)
 			(end 4.5 2.5)
 			(stroke
-				(width 0.1)
-				(type solid)
+				(width 0.05)
+				(type default)
 			)
-			(layer "F.SilkS")
-			(uuid "27a7f00a-6182-4273-8b84-26a3363a49c1")
-		)
-		(fp_line
-			(start 4.5 2.5)
-			(end -4.5 2.5)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "f817c005-2584-4122-84d7-13053f2fe646")
+			(layer "F.CrtYd")
+			(uuid "bc590b06-11f9-4792-9711-5f15072520ec")
 		)
 		(fp_line
 			(start -4.5 -2.5)
@@ -19324,26 +19326,6 @@
 			(uuid "af07e1c8-dddf-4b07-9be6-0e0284f85d3b")
 		)
 		(fp_line
-			(start -4.5 2.5)
-			(end -4.5 -2.5)
-			(stroke
-				(width 0.05)
-				(type default)
-			)
-			(layer "F.CrtYd")
-			(uuid "6521592d-adf3-4cb5-9b8b-77a7810bb4ad")
-		)
-		(fp_line
-			(start 4.5 -2.5)
-			(end 4.5 2.5)
-			(stroke
-				(width 0.05)
-				(type default)
-			)
-			(layer "F.CrtYd")
-			(uuid "bc590b06-11f9-4792-9711-5f15072520ec")
-		)
-		(fp_line
 			(start 4.5 2.5)
 			(end -4.5 2.5)
 			(stroke
@@ -19353,8 +19335,18 @@
 			(layer "F.CrtYd")
 			(uuid "64638ebf-bc08-4ff2-bc53-0b284d4a2829")
 		)
+		(fp_line
+			(start -4.5 2.5)
+			(end -4.5 -2.5)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "6521592d-adf3-4cb5-9b8b-77a7810bb4ad")
+		)
 		(fp_text user "${REFERENCE}"
-			(at 0 2.5 0)
+			(at 0 2.5 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "3283061b-007f-4b3c-bd28-2ce642cfc57f")
@@ -19366,7 +19358,7 @@
 			)
 		)
 		(pad "1" thru_hole oval
-			(at -2.5 0)
+			(at -2.5 0 90)
 			(size 3.3 1.65)
 			(drill 1.1)
 			(layers "*.Cu" "*.Mask")
@@ -19377,7 +19369,7 @@
 			(uuid "b6fa6792-2b12-4a1f-b820-fddfebabeb01")
 		)
 		(pad "2" thru_hole oval
-			(at 2.5 0)
+			(at 2.5 0 90)
 			(size 3.3 1.65)
 			(drill 1.1)
 			(layers "*.Cu" "*.Mask")
@@ -19717,7 +19709,7 @@
 	(footprint "Diode_THT:Diode_Bridge_Vishay_KBU"
 		(layer "F.Cu")
 		(uuid "90b94d9c-fdc0-4d00-8849-8fd679ae9a28")
-		(at 224.97 42.975)
+		(at 122.0575 109.5575 180)
 		(descr "Vishay KBU rectifier package, 5.08mm pitch, see http://www.vishay.com/docs/88656/kbu4.pdf")
 		(tags "Vishay KBU rectifier diode bridge")
 		(property "Reference" "D1"
@@ -19743,7 +19735,7 @@
 			)
 		)
 		(property "Footprint" "Diode_THT:Diode_Bridge_Vishay_KBU"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19756,7 +19748,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2208121800_SEP-KBU1010_C5127084.pdf"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19769,7 +19761,7 @@
 			)
 		)
 		(property "Description" "1 pha, 1KV, 10A, KBU"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19782,7 +19774,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19795,7 +19787,7 @@
 			)
 		)
 		(property "Supply part number" "KBU1010 Cầu Chỉnh Lưu 1KV 10A"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19808,7 +19800,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/kbu808-cau-chinh-luu-800v-8a"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -19826,64 +19818,14 @@
 		(sheetfile "fly_back.kicad_sch")
 		(attr through_hole)
 		(fp_line
-			(start -4.3 -2.3)
-			(end -3.1 -2.3)
+			(start 19.3 5.3)
+			(end 19.3 -2.1)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "aa54bda0-cefd-4f45-9e6c-6d1a44edda92")
-		)
-		(fp_line
-			(start -4.3 -1)
-			(end -4.3 -2.3)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "70abc1be-3e06-4c8d-8a09-86cda26d4c59")
-		)
-		(fp_line
-			(start -4.1 -2.1)
-			(end -4.1 5.3)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "a156763f-c251-434c-8e3b-7323b0d971c9")
-		)
-		(fp_line
-			(start -4.1 5.3)
-			(end 19.3 5.3)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "f98713d0-b3eb-4ab9-905b-f7313adc177e")
-		)
-		(fp_line
-			(start 0.6 -1.7)
-			(end 0.6 -2.1)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "5859bcf4-3cb1-4e29-a510-2d2b565fcd21")
-		)
-		(fp_line
-			(start 0.6 1.9)
-			(end 0.6 5.3)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "1ada97d9-e546-4766-ae8e-76d6676ef7b2")
+			(uuid "81e8c1b2-e6a5-4e63-a05f-354ecf634420")
 		)
 		(fp_line
 			(start 19.3 -2.1)
@@ -19896,44 +19838,64 @@
 			(uuid "b12e7170-44ca-43fa-a052-2f7f369306d6")
 		)
 		(fp_line
-			(start 19.3 5.3)
-			(end 19.3 -2.1)
+			(start 0.6 1.9)
+			(end 0.6 5.3)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "81e8c1b2-e6a5-4e63-a05f-354ecf634420")
+			(uuid "1ada97d9-e546-4766-ae8e-76d6676ef7b2")
 		)
 		(fp_line
-			(start -4.25 -2.25)
-			(end -4.25 5.45)
+			(start 0.6 -1.7)
+			(end 0.6 -2.1)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "03cf2bcb-95b1-4576-b872-66ee9e5ef8d4")
+			(layer "F.SilkS")
+			(uuid "5859bcf4-3cb1-4e29-a510-2d2b565fcd21")
 		)
 		(fp_line
-			(start -4.25 -2.25)
-			(end 19.45 -2.25)
+			(start -4.1 5.3)
+			(end 19.3 5.3)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "db6e7495-16c8-4c2d-9e6c-d1796347d716")
+			(layer "F.SilkS")
+			(uuid "f98713d0-b3eb-4ab9-905b-f7313adc177e")
 		)
 		(fp_line
-			(start 19.45 5.45)
-			(end -4.25 5.45)
+			(start -4.1 -2.1)
+			(end -4.1 5.3)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "e27d7f03-008c-4c35-a032-9b498bf3b279")
+			(layer "F.SilkS")
+			(uuid "a156763f-c251-434c-8e3b-7323b0d971c9")
+		)
+		(fp_line
+			(start -4.3 -1)
+			(end -4.3 -2.3)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "70abc1be-3e06-4c8d-8a09-86cda26d4c59")
+		)
+		(fp_line
+			(start -4.3 -2.3)
+			(end -3.1 -2.3)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "aa54bda0-cefd-4f45-9e6c-6d1a44edda92")
 		)
 		(fp_line
 			(start 19.45 5.45)
@@ -19946,44 +19908,44 @@
 			(uuid "2580f17f-ff32-4453-b274-378f0a8b1b01")
 		)
 		(fp_line
-			(start -4 -1)
-			(end -4 5.2)
+			(start 19.45 5.45)
+			(end -4.25 5.45)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "7135d051-78ed-463d-ac84-c5cc5e9e4a1f")
+			(layer "F.CrtYd")
+			(uuid "e27d7f03-008c-4c35-a032-9b498bf3b279")
 		)
 		(fp_line
-			(start -4 5.2)
-			(end 19.2 5.2)
+			(start -4.25 -2.25)
+			(end 19.45 -2.25)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "21b113c1-4b8d-42dd-b96c-0bdc8f94cd27")
+			(layer "F.CrtYd")
+			(uuid "db6e7495-16c8-4c2d-9e6c-d1796347d716")
 		)
 		(fp_line
-			(start -3.1 -2)
-			(end -4 -1)
+			(start -4.25 -2.25)
+			(end -4.25 5.45)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "5f2948a7-9a89-460a-ae71-9bcbc708e091")
+			(layer "F.CrtYd")
+			(uuid "03cf2bcb-95b1-4576-b872-66ee9e5ef8d4")
 		)
 		(fp_line
-			(start 0.6 -2)
-			(end 0.6 5.2)
+			(start 19.2 5.2)
+			(end 19.2 -2)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "76cfad23-a864-4859-a4e0-021f85388c3d")
+			(uuid "3066c5cd-7842-413d-bea9-7a4b59c21637")
 		)
 		(fp_line
 			(start 19.2 -2)
@@ -19996,14 +19958,44 @@
 			(uuid "9338e63e-e65b-4cc5-b487-62608095b32c")
 		)
 		(fp_line
-			(start 19.2 5.2)
-			(end 19.2 -2)
+			(start 0.6 -2)
+			(end 0.6 5.2)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "3066c5cd-7842-413d-bea9-7a4b59c21637")
+			(uuid "76cfad23-a864-4859-a4e0-021f85388c3d")
+		)
+		(fp_line
+			(start -3.1 -2)
+			(end -4 -1)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "5f2948a7-9a89-460a-ae71-9bcbc708e091")
+		)
+		(fp_line
+			(start -4 5.2)
+			(end 19.2 5.2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "21b113c1-4b8d-42dd-b96c-0bdc8f94cd27")
+		)
+		(fp_line
+			(start -4 -1)
+			(end -4 5.2)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "7135d051-78ed-463d-ac84-c5cc5e9e4a1f")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 7.7 3.3 0)
@@ -20017,7 +20009,7 @@
 			)
 		)
 		(pad "1" thru_hole rect
-			(at 0 0)
+			(at 0 0 180)
 			(size 2.8 2.8)
 			(drill 1.4)
 			(layers "*.Cu" "*.Mask")
@@ -20028,17 +20020,17 @@
 			(uuid "254e47cb-f7be-40dc-8b40-08d432216054")
 		)
 		(pad "2" thru_hole circle
-			(at 5.08 0)
+			(at 5.08 0 180)
 			(size 2.8 2.8)
 			(drill 1.4)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "Net-(U1-F)")
+			(net 3 "GND1")
 			(pintype "passive")
 			(uuid "3a310435-b276-4f7a-a274-6ad5ef7b116e")
 		)
 		(pad "3" thru_hole circle
-			(at 10.16 0)
+			(at 10.16 0 180)
 			(size 2.8 2.8)
 			(drill 1.4)
 			(layers "*.Cu" "*.Mask")
@@ -20048,7 +20040,7 @@
 			(uuid "e8f33d0c-2570-4f18-bd61-ade0e3b67e37")
 		)
 		(pad "4" thru_hole circle
-			(at 15.24 0)
+			(at 15.24 0 180)
 			(size 2.8 2.8)
 			(drill 1.4)
 			(layers "*.Cu" "*.Mask")
@@ -20328,7 +20320,7 @@
 	(footprint "charge_battery_footprint_lib:Res_Hole_2W"
 		(layer "F.Cu")
 		(uuid "98778e17-e2d5-4311-a5fd-72193b10f465")
-		(at 213.67 102.6202)
+		(at 44.5184 70.048)
 		(property "Reference" "R7"
 			(at 1.905 -4.826 0)
 			(unlocked yes)
@@ -20746,7 +20738,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/dc63a2d8-be77-4958-b28c-dc1b44bcb51d")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -20897,11 +20888,11 @@
 	(footprint "charge_battery_footprint_lib:Thermistor_NTC"
 		(layer "F.Cu")
 		(uuid "9a5ce41e-d2e6-4750-a58b-fa62968cc0c4")
-		(at 213.67 85.055)
+		(at 92.05 93.7 90)
 		(descr "Resistor, Axial_DIN0204 series, Axial, Vertical, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Vertical pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "TH1"
-			(at 11.65 -1.08 0)
+			(at 11.65 -1.08 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "5a5333f5-9c4a-45d9-a08f-aa7935b6c688")
@@ -20912,8 +20903,8 @@
 				)
 			)
 		)
-		(property "Value" "1.3R"
-			(at 7.98 7.88 0)
+		(property "Value" "3R"
+			(at 7.98 7.88 90)
 			(layer "F.Fab")
 			(uuid "191d7a1a-188d-45f6-978f-ecbf77d32f47")
 			(effects
@@ -20924,7 +20915,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Thermistor_NTC"
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -20937,7 +20928,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -20950,7 +20941,7 @@
 			)
 		)
 		(property "Description" "Temperature dependent resistor, negative temperature coefficient"
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -20963,7 +20954,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -20975,21 +20966,8 @@
 				)
 			)
 		)
-		(property "Supply part number" "1.3D-15 Điện Trở Nhiệt NTC 1.3 Ohm 16.5 x 7mm "
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "0a44188b-01ff-4105-b921-e001cbcddcbc")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/1-3d-15-dien-tro-nhiet-ntc-1-3-ohm-16-5-x-7mm"
-			(at 0 0 0)
+		(property "Supply URL" "https://www.thegioiic.com/3d-15-dien-tro-nhiet-ntc-3-ohm-16-5-x-7mm"
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -21040,7 +21018,7 @@
 			(uuid "5dd4c895-9cdb-4e77-9466-2cb2c15c2c53")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 8.07 3.43 0)
+			(at 8.07 3.43 90)
 			(layer "F.Fab")
 			(uuid "7090d653-ab02-4d36-8f40-bfaf2817c569")
 			(effects
@@ -21051,7 +21029,7 @@
 			)
 		)
 		(pad "1" thru_hole circle
-			(at 4.3 3.5)
+			(at 4.3 3.5 90)
 			(size 1.7 1.7)
 			(drill 1.05)
 			(layers "*.Cu" "*.Mask")
@@ -21061,7 +21039,7 @@
 			(uuid "1e10eb56-8181-4b62-bb53-4fa8001b9a26")
 		)
 		(pad "2" thru_hole circle
-			(at 11.8 3.5)
+			(at 11.8 3.5 90)
 			(size 1.7 1.7)
 			(drill 1.05)
 			(layers "*.Cu" "*.Mask")
@@ -21335,7 +21313,7 @@
 			(size 2.1 2.9)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 11 "Net-(D4-K)")
+			(net 61 "unconnected-(L3-Pad1)")
 			(pinfunction "1")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
@@ -21346,7 +21324,7 @@
 			(size 2.1 2.9)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 44 "+5V")
+			(net 62 "unconnected-(L3-Pad2)")
 			(pinfunction "2")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
@@ -21676,7 +21654,7 @@
 	(footprint "Diode_SMD:D_2010_5025Metric_Pad1.52x2.65mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "af11e43b-0cdd-41fd-9a7d-d122c08e6758")
-		(at 192.17 96.26)
+		(at 73.5 59)
 		(descr "Diode SMD 2010 (5025 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "diode handsolder")
 		(property "Reference" "R1"
@@ -21947,10 +21925,10 @@
 	(footprint "charge_battery_footprint_lib:IND_SS11VL-R05350_KEM"
 		(layer "F.Cu")
 		(uuid "b1053e3b-a94e-40c4-824c-e1c1cce4cffe")
-		(at 141 48)
+		(at 86.5 104.5 180)
 		(tags "SS11VL-R05350 ")
 		(property "Reference" "L1"
-			(at 6.5 5 0)
+			(at 6.5 5 180)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "3396b6e7-a748-4ed1-854a-45270de82a77")
@@ -21962,7 +21940,7 @@
 			)
 		)
 		(property "Value" "SS11VL-R05350"
-			(at 6.5 5 0)
+			(at 6.5 5 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "d548e167-af3d-4e6f-87c2-1a59557b1397")
@@ -21974,7 +21952,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:IND_SS11VL-R05350_KEM"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -21987,7 +21965,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/447/KEM_LF0022_SS11VL-3316893.pdf"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -22000,7 +21978,7 @@
 			)
 		)
 		(property "Description" "Common Mode Chokes / Filters 250VAC 1.1A 5mH DCR=400mOhms"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -22013,7 +21991,7 @@
 			)
 		)
 		(property "Supply name" "Mouser"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -22026,7 +22004,7 @@
 			)
 		)
 		(property "Supply part number" "80-SS11VL-11050"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -22039,7 +22017,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/KEMET/SS11VL-11050?qs=EU6FO9ffTwcryP%252B%2F%252BYgxUg%3D%3D"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -22057,24 +22035,14 @@
 		(sheetfile "fly_back.kicad_sch")
 		(attr through_hole)
 		(fp_line
-			(start -5.1332 -2.874)
-			(end -5.1332 12.874)
+			(start 18.1332 12.874)
+			(end 18.1332 -2.874)
 			(stroke
 				(width 0.1524)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "07e8d8d7-1f56-49ab-b39f-0fd252ed9e5b")
-		)
-		(fp_line
-			(start -5.1332 12.874)
-			(end 18.1332 12.874)
-			(stroke
-				(width 0.1524)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "c58775fa-dd19-4b87-95fd-765cba8e79a6")
+			(uuid "2475f04f-b0ca-4cda-9b42-54753eac98b4")
 		)
 		(fp_line
 			(start 18.1332 -2.874)
@@ -22087,44 +22055,24 @@
 			(uuid "8534244a-d336-4675-8d99-919c3f8332fc")
 		)
 		(fp_line
-			(start 18.1332 12.874)
-			(end 18.1332 -2.874)
+			(start -5.1332 12.874)
+			(end 18.1332 12.874)
 			(stroke
 				(width 0.1524)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "2475f04f-b0ca-4cda-9b42-54753eac98b4")
+			(uuid "c58775fa-dd19-4b87-95fd-765cba8e79a6")
 		)
 		(fp_line
-			(start -5.2602 -3.001)
-			(end -5.2602 13.001)
+			(start -5.1332 -2.874)
+			(end -5.1332 12.874)
 			(stroke
 				(width 0.1524)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "23aef33b-0276-47cd-983c-544c7f4ce35e")
-		)
-		(fp_line
-			(start -5.2602 13.001)
-			(end 18.2602 13.001)
-			(stroke
-				(width 0.1524)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "c7d29e7e-5f90-4bdc-85b9-7f7bc9a81535")
-		)
-		(fp_line
-			(start 18.2602 -3.001)
-			(end -5.2602 -3.001)
-			(stroke
-				(width 0.1524)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "d10c2458-bb64-49fb-9797-a9403ed10a71")
+			(layer "F.SilkS")
+			(uuid "07e8d8d7-1f56-49ab-b39f-0fd252ed9e5b")
 		)
 		(fp_line
 			(start 18.2602 13.001)
@@ -22137,24 +22085,44 @@
 			(uuid "340c0f6e-61c2-4518-b02d-b8699578cefd")
 		)
 		(fp_line
-			(start -5.0062 -2.747)
-			(end -5.0062 12.747)
+			(start 18.2602 -3.001)
+			(end -5.2602 -3.001)
 			(stroke
-				(width 0.0254)
+				(width 0.1524)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "df2e290e-a2bd-48dc-b7b6-32e29136c6eb")
+			(layer "F.CrtYd")
+			(uuid "d10c2458-bb64-49fb-9797-a9403ed10a71")
 		)
 		(fp_line
-			(start -5.0062 12.747)
-			(end 18.0062 12.747)
+			(start -5.2602 13.001)
+			(end 18.2602 13.001)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "c7d29e7e-5f90-4bdc-85b9-7f7bc9a81535")
+		)
+		(fp_line
+			(start -5.2602 -3.001)
+			(end -5.2602 13.001)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "23aef33b-0276-47cd-983c-544c7f4ce35e")
+		)
+		(fp_line
+			(start 18.0062 12.747)
+			(end 18.0062 -2.747)
 			(stroke
 				(width 0.0254)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "e4ff1ff4-b979-4691-a588-3f0d8353c1f6")
+			(uuid "384116fb-7e32-407d-bc50-c867d21a209e")
 		)
 		(fp_line
 			(start 18.0062 -2.747)
@@ -22167,17 +22135,27 @@
 			(uuid "713d6964-ab7f-41e6-ae1e-5038f606e9a2")
 		)
 		(fp_line
-			(start 18.0062 12.747)
-			(end 18.0062 -2.747)
+			(start -5.0062 12.747)
+			(end 18.0062 12.747)
 			(stroke
 				(width 0.0254)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "384116fb-7e32-407d-bc50-c867d21a209e")
+			(uuid "e4ff1ff4-b979-4691-a588-3f0d8353c1f6")
+		)
+		(fp_line
+			(start -5.0062 -2.747)
+			(end -5.0062 12.747)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "df2e290e-a2bd-48dc-b7b6-32e29136c6eb")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 6.5 5 0)
+			(at 6.5 5 180)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "e55c521a-38d3-4788-b611-2d69391a9687")
@@ -22189,7 +22167,7 @@
 			)
 		)
 		(pad "1" thru_hole rect
-			(at 0 0)
+			(at 0 0 180)
 			(size 2.286 2.286)
 			(drill 1.143)
 			(layers "*.Cu" "*.Mask")
@@ -22200,7 +22178,7 @@
 			(uuid "63472bbb-835e-4a54-83b9-bd62ca116105")
 		)
 		(pad "2" thru_hole circle
-			(at 0 10)
+			(at 0 10 180)
 			(size 2.286 2.286)
 			(drill 1.143)
 			(layers "*.Cu" "*.Mask")
@@ -22211,7 +22189,7 @@
 			(uuid "35dc5e80-f76c-45ad-aff9-36178977bd43")
 		)
 		(pad "3" thru_hole circle
-			(at 12.999999 0)
+			(at 12.999999 0 180)
 			(size 2.286 2.286)
 			(drill 1.143)
 			(layers "*.Cu" "*.Mask")
@@ -22222,7 +22200,7 @@
 			(uuid "07c7394c-d239-4a4b-aab3-ea7bd5bee538")
 		)
 		(pad "4" thru_hole circle
-			(at 12.999999 10)
+			(at 12.999999 10 180)
 			(size 2.286 2.286)
 			(drill 1.143)
 			(layers "*.Cu" "*.Mask")
@@ -22280,9 +22258,9 @@
 	(footprint "charge_battery_footprint_lib:Candy_Cap_hole_100nF_275V"
 		(layer "F.Cu")
 		(uuid "b66ebec4-20ca-499f-9145-857b44bfb42d")
-		(at 213.67 72.2674)
+		(at 92.1019 94.1132 -90)
 		(property "Reference" "C4"
-			(at 7.62 -8.7122 0)
+			(at 7.62 -8.7122 -90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "9868f9df-9b12-4510-a65c-aac994dab87a")
@@ -22294,7 +22272,7 @@
 			)
 		)
 		(property "Value" "100nF/275V"
-			(at 8.6614 1.524 0)
+			(at 8.6614 1.524 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "fbff6fa3-4352-421b-bfaf-c5ccf28c6b4f")
@@ -22306,7 +22284,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Candy_Cap_hole_100nF_275V"
-			(at 6.7938 -9.4962 0)
+			(at 6.7938 -9.4962 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -22319,7 +22297,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 6.7938 -9.4962 0)
+			(at 6.7938 -9.4962 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -22332,7 +22310,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 6.7938 -9.4962 0)
+			(at 6.7938 -9.4962 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -22345,7 +22323,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 0 0 0)
+			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -22358,7 +22336,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Kẹo Vàng X2 100nF (0.1uF) 104K 275VAC"
-			(at 0 0 0)
+			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -22371,7 +22349,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-keo-vang-x2-100nf-0-1uf-104k-275vac"
-			(at 0 0 0)
+			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -22410,7 +22388,7 @@
 			(uuid "399629d6-6be7-46e0-9d65-63fc9f74954f")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 9.0424 -6.985 0)
+			(at 9.0424 -6.985 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "8ca37765-b20c-4bc0-b16b-2906a7ddea51")
@@ -22422,7 +22400,7 @@
 			)
 		)
 		(pad "1" thru_hole circle
-			(at 1.4738 -4.9962)
+			(at 1.4738 -4.9962 270)
 			(size 2 2)
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
@@ -22432,7 +22410,7 @@
 			(uuid "929ba139-b457-456b-b842-ce895c127af9")
 		)
 		(pad "2" thru_hole circle
-			(at 16.4736 -4.9962)
+			(at 16.4736 -4.9962 270)
 			(size 2 2)
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
@@ -22571,7 +22549,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/46bccbaf-458e-4db5-b4ca-758cef64e53c")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -22826,7 +22803,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/3fe638e3-3c95-4e2a-9a1b-0f10b049f4b9")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -25797,7 +25773,7 @@
 	(footprint "charge_battery_footprint_lib:Res_0603"
 		(layer "F.Cu")
 		(uuid "c39d86a1-9833-49aa-8238-db6d9e7d31cd")
-		(at 245.69 46.9838)
+		(at 43.71264 21.6675)
 		(property "Reference" "R5"
 			(at 1.24 -1.8646 0)
 			(unlocked yes)
@@ -26052,7 +26028,7 @@
 	(footprint "charge_battery_footprint_lib:FUSAD2722W65L2250D600"
 		(layer "F.Cu")
 		(uuid "c6782595-c31e-4b20-9a05-1ac373059917")
-		(at 87 86.5)
+		(at 76.5 77)
 		(property "Reference" "F1"
 			(at -7.825 -4.135 0)
 			(layer "F.SilkS")
@@ -28131,7 +28107,7 @@
 			(at 2.72415 -1.905)
 			(size 1.4605 0.5334)
 			(layers "F.Cu" "F.Paste" "F.Mask")
-			(net 15 "+9_1V")
+			(net 60 "+9V")
 			(pinfunction "V+")
 			(pintype "power_in")
 			(uuid "8e3ec0bd-8b06-444d-81b9-3c9df05909a2")
@@ -31248,7 +31224,7 @@
 			(size 1.81 1.32)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.17)
-			(net 15 "+9_1V")
+			(net 15 "+9")
 			(pintype "passive")
 			(solder_mask_margin 0.102)
 			(uuid "3c675bbf-2037-4a02-9533-34f6e10cfbd0")
@@ -31362,7 +31338,7 @@
 	(footprint "charge_battery_footprint_lib:Res_1206"
 		(layer "F.Cu")
 		(uuid "df5514c2-eb8f-4bab-89b2-d983d8763f5d")
-		(at 199.015 95.585)
+		(at 29.8634 63.0128)
 		(property "Reference" "R8"
 			(at 0 -1.82 0)
 			(layer "F.SilkS")
@@ -31611,7 +31587,7 @@
 	(footprint "charge_battery_footprint_lib:CONN3_HB9500_KAN"
 		(layer "F.Cu")
 		(uuid "e31e5b4c-1f04-43af-8fda-4c2fb9ba03b7")
-		(at 63.1526 86.500002 -90)
+		(at 63.1526 87.000002 -90)
 		(tags "HB9500M-9.5-3P ")
 		(property "Reference" "J1"
 			(at -4 -5 -90)
@@ -31849,7 +31825,7 @@
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 3 "GND1")
+			(net 6 "Earth")
 			(pinfunction "3")
 			(pintype "unspecified")
 			(uuid "8e987e40-01b7-479a-8bff-a7a7c5bee8f6")
@@ -31891,7 +31867,7 @@
 	(footprint "charge_battery_footprint_lib:eDIP-12B_PWI"
 		(layer "F.Cu")
 		(uuid "e48783f7-e699-4f62-a8d4-6660f4a57071")
-		(at 248.5652 57.228)
+		(at 95.92 32.1439)
 		(property "Reference" "U1"
 			(at 5.1816 4.445 0)
 			(unlocked yes)
@@ -32249,7 +32225,7 @@
 			(drill 0.762)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "Net-(U1-F)")
+			(net 3 "GND1")
 			(pinfunction "F")
 			(pintype "unspecified")
 			(uuid "c81debcf-6861-4a8d-843d-570d8be0dab0")
@@ -32271,7 +32247,7 @@
 			(drill 0.762)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "Net-(U1-F)")
+			(net 3 "GND1")
 			(pinfunction "S")
 			(pintype "unspecified")
 			(uuid "52b04c58-2561-4813-855f-cd28bb1c96e1")
@@ -32282,7 +32258,7 @@
 			(drill 0.762)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "Net-(U1-F)")
+			(net 3 "GND1")
 			(pinfunction "S")
 			(pintype "unspecified")
 			(uuid "aa7adbf5-04d8-4b96-a0f7-d681bdd889b1")
@@ -32293,7 +32269,7 @@
 			(drill 0.762)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "Net-(U1-F)")
+			(net 3 "GND1")
 			(pinfunction "S")
 			(pintype "unspecified")
 			(uuid "d16b1836-6ae2-4aa7-ba17-4a37ff03b10d")
@@ -32304,7 +32280,7 @@
 			(drill 0.762)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "Net-(U1-F)")
+			(net 3 "GND1")
 			(pinfunction "S")
 			(pintype "unspecified")
 			(uuid "2d677622-9114-40f1-9218-d90b6887464e")
@@ -32315,7 +32291,7 @@
 			(drill 0.762)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "Net-(U1-F)")
+			(net 3 "GND1")
 			(pinfunction "S")
 			(pintype "unspecified")
 			(uuid "df8349d9-cae1-4dab-9163-3334b3316551")
@@ -32326,7 +32302,7 @@
 			(drill 0.762)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "Net-(U1-F)")
+			(net 3 "GND1")
 			(pinfunction "S")
 			(pintype "unspecified")
 			(uuid "4095f917-798e-4342-bf6c-05f90613db13")
@@ -32703,7 +32679,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/ac6de6e3-2200-4aa2-936b-d40accfea03e")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -33133,7 +33108,7 @@
 	(footprint "Diode_SMD:D_2010_5025Metric_Pad1.52x2.65mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "ed037c1a-12b5-43ec-a678-55b7561b7e25")
-		(at 192.17 100.55)
+		(at 73.5 63.29)
 		(descr "Diode SMD 2010 (5025 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "diode handsolder")
 		(property "Reference" "R2"
@@ -33398,6 +33373,215 @@
 			)
 			(rotate
 				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "charge_battery_footprint_lib:Inductor_3.3u_7447471033"
+		(layer "F.Cu")
+		(uuid "f338e8a1-1a9f-4f49-a9f6-e29b8b0f41a9")
+		(at 233 121)
+		(descr "WE-TIS_111190")
+		(tags "Inductor")
+		(property "Reference" "L2"
+			(at 0 7 0)
+			(layer "F.SilkS")
+			(uuid "75abd840-39aa-4dbc-95fa-59fef0effba2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "Value" "3.3u/7.5A"
+			(at 0 7 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7a7cf608-7227-486d-a4f9-82273416952c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Inductor_3.3u_7447471033"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "964991b6-5bb6-4ea3-b8d7-e35fea058875")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "38bac591-fd94-4f53-98e1-624137ce7edb")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Power Inductors - Leaded WE-TIS Lead Rad 1111 3.3uH 7.5A .009Ohm"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f722da97-f5d2-4cba-85fe-8d3fab466350")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Height" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2500ea9c-3c9e-4ce2-a4d9-fdca4b9c18b1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4133fea4-6130-4856-9991-11cbd18154ff")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Supply Part Number" "7447471033"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2ecb3707-32f9-482f-8df7-9009017d29b8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Wurth-Elektronik/7447471033?qs=VxkwJfKV0FQNDFTjyDhZkQ%3D%3D"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "49ba66cf-4eab-4e62-a6da-2bc1e2b319e1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9/1f7aad93-f3d4-43c9-a137-4a2ef232c96b")
+		(sheetname "Flyback Converter")
+		(sheetfile "fly_back.kicad_sch")
+		(attr through_hole)
+		(fp_circle
+			(center 0.0226 0)
+			(end 5.5452 0)
+			(stroke
+				(width 0.127)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "60a08e4b-722e-4c0e-97e2-789c42287eee")
+		)
+		(fp_circle
+			(center 0.0226 0)
+			(end 5.5452 0)
+			(stroke
+				(width 0.127)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.CrtYd")
+			(uuid "69f5794c-8ea9-43e2-8833-f70f03c97a90")
+		)
+		(fp_line
+			(start -2.5 0)
+			(end 2.5 0)
+			(stroke
+				(width 0.127)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "c79af6c5-78b6-4bde-a2c5-cfe22ac6ac0d")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 0 5.5226)
+			(stroke
+				(width 0.127)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.Fab")
+			(uuid "02108429-65f9-4391-92e1-f80cddc06aac")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 7 0)
+			(layer "F.Fab")
+			(uuid "e5371bf9-ca1f-4128-82db-4cb2e611a1db")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at -2.5 0)
+			(size 1.5 1.5)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 31 "Net-(C10-Pad2)")
+			(pinfunction "1")
+			(pintype "passive")
+			(uuid "795d32d3-b164-45c5-8cc1-a12bdebac657")
+		)
+		(pad "2" thru_hole circle
+			(at 2.5 0)
+			(size 1.5 1.5)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 35 "+12V")
+			(pinfunction "2")
+			(pintype "passive")
+			(uuid "0f86c8ad-f602-4ca3-bc15-4026968cf511")
+		)
+		(model "D:/My Project/NCKH/CHARGE_BATTERY/Hardware/Library/3d_model/Inductor_3.3u_7447471033.stp"
+			(offset
+				(xyz 0 0 5.41)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 135)
 			)
 		)
 	)
@@ -36330,7 +36514,7 @@
 	(footprint "charge_battery_footprint_lib:Candy_Cap_hole_100nF_275V"
 		(layer "F.Cu")
 		(uuid "f94048fd-e4ea-4039-a06a-494d597ce8ae")
-		(at 70.0264 111.4962)
+		(at 68.1132 90.8981)
 		(property "Reference" "C1"
 			(at 7.62 -8.7122 0)
 			(unlocked yes)
@@ -36619,7 +36803,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/f3b98076-d6b5-4d33-b602-4c3369d2f8d1")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -37153,7 +37336,6 @@
 				)
 			)
 		)
-		(path "/810061e0-77df-407e-a763-7d91437d6cce/b09b3791-74c1-4d56-82d5-4e1b5e78c92d")
 		(sheetname "Buck Converter 5V")
 		(sheetfile "Buck_5V.kicad_sch")
 		(attr smd)
@@ -37259,93 +37441,5 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
-	(segment
-		(start 77.5 96)
-		(end 63.1526 96)
-		(width 1.27)
-		(layer "F.Cu")
-		(net 1)
-		(uuid "1a77b0be-02b7-4cd7-aff3-d28ef6d53a8f")
-	)
-	(segment
-		(start 75 106.5)
-		(end 77.5 104)
-		(width 1.27)
-		(layer "F.Cu")
-		(net 1)
-		(uuid "1d925e04-812d-4e84-899c-758bcfb5f3f5")
-	)
-	(segment
-		(start 71.5002 106.5)
-		(end 75 106.5)
-		(width 1.27)
-		(layer "F.Cu")
-		(net 1)
-		(uuid "9d37746c-1535-45af-9387-ae14026380a4")
-	)
-	(segment
-		(start 77.5 104)
-		(end 77.5 96)
-		(width 1.27)
-		(layer "F.Cu")
-		(net 1)
-		(uuid "c78e39d2-5352-4dfc-b0c6-5d5210f8326a")
-	)
-	(segment
-		(start 100.4874 86.5)
-		(end 100.4874 96)
-		(width 1.27)
-		(layer "F.Cu")
-		(net 2)
-		(uuid "096b7850-4ff7-4096-a9e4-415253418a8d")
-	)
-	(segment
-		(start 100.4874 103.0126)
-		(end 97 106.5)
-		(width 1.27)
-		(layer "F.Cu")
-		(net 2)
-		(uuid "69a338e6-9f6c-47e5-bdb5-53cd0746fa01")
-	)
-	(segment
-		(start 97 106.5)
-		(end 86.5 106.5)
-		(width 1.27)
-		(layer "F.Cu")
-		(net 2)
-		(uuid "75f6bd5e-3970-4a17-956f-235953583ef5")
-	)
-	(segment
-		(start 100.4874 96)
-		(end 100.4874 103.0126)
-		(width 1.27)
-		(layer "F.Cu")
-		(net 2)
-		(uuid "b15818b3-f42d-4bff-93d4-fce9f629f516")
-	)
-	(segment
-		(start 82.5 96)
-		(end 100.4874 96)
-		(width 1.27)
-		(layer "F.Cu")
-		(net 2)
-		(uuid "b5fc1ac3-839d-40ce-838c-17b10a26fbcd")
-	)
-	(segment
-		(start 63.1526 86.500002)
-		(end 73.563402 86.500002)
-		(width 1.27)
-		(layer "F.Cu")
-		(net 24)
-		(uuid "8eb143bd-415d-4756-974c-ea0c693564c1")
-	)
-	(segment
-		(start 73.563402 86.500002)
-		(end 73.5888 86.5254)
-		(width 1.27)
-		(layer "F.Cu")
-		(net 24)
-		(uuid "9acef43e-4ec6-4628-b523-e02eb8516268")
 	)
 )
