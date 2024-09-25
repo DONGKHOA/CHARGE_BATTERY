@@ -2758,7 +2758,7 @@
 					(justify left top)
 				)
 			)
-			(property "Footprint" "WE-TIS_111190"
+			(property "Footprint" "charge_battery_footprint_lib:Inductor_3.3u_7447471033"
 				(at 16.51 -96.19 0)
 				(effects
 					(font
@@ -2778,7 +2778,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Shielded Radial Leaded Inductor"
+			(property "Description" "Power Inductors - Leaded WE-TIS Lead Rad 1111 3.3uH 7.5A .009Ohm"
 				(at 0 0 0)
 				(effects
 					(font
@@ -5430,6 +5430,183 @@
 				)
 			)
 		)
+		(symbol "charge_battery_sym_lib:Res_4.99K_1206_1%"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "4.99K 1206 1%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:Res_1206"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Điện Trở 4.99 KOhm 1206 1%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply Name" "thegioiic"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply Part Number" "Điện Trở 4.99 KOhm 1206 1%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.thegioiic.com/dien-tro-4-99-kohm-1206-1-"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Res_4.99K_1206_1%_0_1"
+				(polyline
+					(pts
+						(xy -2.286 -3.81) (xy -2.54 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -3.81) (xy 2.54 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 -3.81) (xy -1.905 -2.794) (xy -1.524 -3.81) (xy -1.143 -4.826) (xy -0.762 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -3.81) (xy 1.143 -2.794) (xy 1.524 -3.81) (xy 1.905 -4.826) (xy 2.286 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Res_4.99K_1206_1%_1_1"
+				(polyline
+					(pts
+						(xy -0.762 -3.81) (xy -0.381 -2.794) (xy 0 -3.81) (xy 0.381 -4.826) (xy 0.762 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -3.81 -3.81 0)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 -3.81 180)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "charge_battery_sym_lib:Res_47.5K_0805_1%"
 			(pin_numbers hide)
 			(pin_names hide)
@@ -5557,183 +5734,6 @@
 				)
 			)
 			(symbol "Res_47.5K_0805_1%_1_1"
-				(polyline
-					(pts
-						(xy -0.762 -3.81) (xy -0.381 -2.794) (xy 0 -3.81) (xy 0.381 -4.826) (xy 0.762 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -3.81 -3.81 0)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 -3.81 180)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "charge_battery_sym_lib:Res_4990R_1206_1%"
-			(pin_numbers hide)
-			(pin_names hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "4990R 1206 1%"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "charge_battery_footprint_lib:Res_1206"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Điện Trở 4.99 KOhm 1206 1%"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply Name" "thegioiic"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply Part Number" "Điện Trở 4.99 KOhm 1206 1%"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply URL" "https://www.thegioiic.com/dien-tro-4-99-kohm-1206-1-"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Res_4990R_1206_1%_0_1"
-				(polyline
-					(pts
-						(xy -2.286 -3.81) (xy -2.54 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 -3.81) (xy 2.54 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.286 -3.81) (xy -1.905 -2.794) (xy -1.524 -3.81) (xy -1.143 -4.826) (xy -0.762 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -3.81) (xy 1.143 -2.794) (xy 1.524 -3.81) (xy 1.905 -4.826) (xy 2.286 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Res_4990R_1206_1%_1_1"
 				(polyline
 					(pts
 						(xy -0.762 -3.81) (xy -0.381 -2.794) (xy 0 -3.81) (xy 0.381 -4.826) (xy 0.762 -3.81)
@@ -8659,6 +8659,138 @@
 				)
 			)
 		)
+		(symbol "power:Earth"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "Earth"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"Earth\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global ground gnd"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Earth_0_1"
+				(polyline
+					(pts
+						(xy -0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.127 -2.54) (xy 0.127 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Earth_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:GND1"
 			(power)
 			(pin_numbers hide)
@@ -9021,6 +9153,12 @@
 		(uuid "756592d5-6232-4dee-badd-d6a1a77e7a85")
 	)
 	(junction
+		(at 246.38 166.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "857e1da8-383c-4021-b3ce-55640c6bed73")
+	)
+	(junction
 		(at 212.09 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9141,10 +9279,10 @@
 		(uuid "d9a3ef93-4615-4a7c-8b2d-bfe0c24ef1f7")
 	)
 	(junction
-		(at 209.55 143.51)
+		(at 209.55 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f04fe815-ee80-46e1-8d3e-ac06d6c44998")
+		(uuid "e709376a-eb57-4df9-b6d5-587889d991f2")
 	)
 	(junction
 		(at 242.57 147.32)
@@ -9278,6 +9416,16 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 142.24) (xy 209.55 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12aa698a-124d-4839-b9ea-46de53f83ba8")
+	)
+	(wire
+		(pts
 			(xy 245.11 80.01) (xy 246.38 80.01)
 		)
 		(stroke
@@ -9285,6 +9433,16 @@
 			(type default)
 		)
 		(uuid "1389d88c-25c4-467c-bcb7-91ccd66055b2")
+	)
+	(wire
+		(pts
+			(xy 246.38 166.37) (xy 246.38 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14a2a163-bace-42e4-8f81-8c3e948cfa8d")
 	)
 	(wire
 		(pts
@@ -9308,7 +9466,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 143.51) (xy 209.55 143.51)
+			(xy 203.2 142.24) (xy 209.55 142.24)
 		)
 		(stroke
 			(width 0)
@@ -9378,16 +9536,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 138.43) (xy 214.63 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1ff49714-2506-4695-83f6-f6c47b126ba4")
-	)
-	(wire
-		(pts
 			(xy 57.15 110.49) (xy 57.15 149.86)
 		)
 		(stroke
@@ -9415,6 +9563,16 @@
 			(type default)
 		)
 		(uuid "22454be7-afd1-469e-9477-65bb3cc8b014")
+	)
+	(wire
+		(pts
+			(xy 203.2 142.24) (xy 203.2 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24c45f4f-799a-4597-9ed1-f1e22e08bd86")
 	)
 	(wire
 		(pts
@@ -9495,16 +9653,6 @@
 			(type default)
 		)
 		(uuid "2e9104f3-82ef-44e9-8930-059bae714219")
-	)
-	(wire
-		(pts
-			(xy 173.99 129.54) (xy 173.99 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31cb4f70-cb47-4ee0-9531-93457e84ca45")
 	)
 	(wire
 		(pts
@@ -9638,17 +9786,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 138.43) (xy 214.63 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "45d3ca28-bd1b-43e3-882c-9c47eed6ca30")
-	)
-	(wire
-		(pts
-			(xy 203.2 119.38) (xy 203.2 123.19)
+			(xy 203.2 119.38) (xy 203.2 121.92)
 		)
 		(stroke
 			(width 0)
@@ -9848,7 +9986,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 166.37) (xy 256.54 166.37)
+			(xy 242.57 166.37) (xy 246.38 166.37)
 		)
 		(stroke
 			(width 0)
@@ -9905,6 +10043,16 @@
 			(type default)
 		)
 		(uuid "74667953-ee19-4456-8047-4439ce22bd93")
+	)
+	(wire
+		(pts
+			(xy 173.99 144.78) (xy 214.63 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7669b8ee-b8f6-4b2d-9231-c44afd177b6f")
 	)
 	(wire
 		(pts
@@ -10028,16 +10176,6 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 147.32) (xy 209.55 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "889e8767-ed44-4001-8054-5738bf79f17d")
-	)
-	(wire
-		(pts
 			(xy 76.2 118.11) (xy 76.2 105.41)
 		)
 		(stroke
@@ -10075,6 +10213,16 @@
 			(type default)
 		)
 		(uuid "8e6d96dc-a558-45e6-ac42-9406f5177443")
+	)
+	(wire
+		(pts
+			(xy 246.38 166.37) (xy 256.54 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ed2933b-0929-461a-a20d-c53b9b81f76b")
 	)
 	(wire
 		(pts
@@ -10148,6 +10296,16 @@
 	)
 	(wire
 		(pts
+			(xy 173.99 129.54) (xy 173.99 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b20f83b-1f01-4920-a660-fddc7ffbfd4b")
+	)
+	(wire
+		(pts
 			(xy 128.27 105.41) (xy 128.27 124.46)
 		)
 		(stroke
@@ -10175,6 +10333,16 @@
 			(type default)
 		)
 		(uuid "a1b07f39-27c0-4705-a4c5-d2092a439944")
+	)
+	(wire
+		(pts
+			(xy 214.63 144.78) (xy 214.63 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a21ba306-5ce8-4ca6-a5d8-653dde8927ec")
 	)
 	(wire
 		(pts
@@ -10228,7 +10396,7 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 105.41) (xy 218.44 143.51)
+			(xy 218.44 105.41) (xy 218.44 142.24)
 		)
 		(stroke
 			(width 0)
@@ -10258,7 +10426,7 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 143.51) (xy 209.55 143.51)
+			(xy 218.44 142.24) (xy 209.55 142.24)
 		)
 		(stroke
 			(width 0)
@@ -10408,7 +10576,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 130.81) (xy 203.2 133.35)
+			(xy 203.2 129.54) (xy 203.2 130.81)
 		)
 		(stroke
 			(width 0)
@@ -10885,7 +11053,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "06c389ad-5a65-4b6d-a628-86e681ebd9f7")
-		(property "Reference" "C89"
+		(property "Reference" "C15"
 			(at 317.246 143.256 0)
 			(effects
 				(font
@@ -10964,7 +11132,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C89")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -11075,7 +11243,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0e4e1d5c-dda1-430c-b3e9-8daf01b4e3a5")
-		(property "Reference" "C11"
+		(property "Reference" "C13"
 			(at 282.194 92.202 90)
 			(effects
 				(font
@@ -11156,7 +11324,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C11")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -11171,7 +11339,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1013337d-f701-467f-9d7f-e2e43e91aa6f")
-		(property "Reference" "D"
+		(property "Reference" "D2"
 			(at 209.804 103.378 90)
 			(effects
 				(font
@@ -11254,73 +11422,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "D")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND1")
-		(at 57.15 152.4 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "14f79725-cfad-4337-ae05-dac0a0ccbada")
-		(property "Reference" "#PWR01"
-			(at 57.15 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND1"
-			(at 57.15 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 57.15 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 57.15 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
-			(at 57.15 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6695b95c-42e6-4814-8d22-847c995635bc")
-		)
-		(instances
-			(project "Power_Supply"
-				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "#PWR01")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -11335,7 +11437,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "15ec70ae-e1e1-4ca7-a0c5-ae5d56335c97")
-		(property "Reference" "R1"
+		(property "Reference" "R4"
 			(at 169.926 109.22 90)
 			(effects
 				(font
@@ -11416,7 +11518,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R1")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -11431,7 +11533,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "168f67ec-8eb2-458d-b348-6bd1cb6fa26c")
-		(property "Reference" "R10"
+		(property "Reference" "R9"
 			(at 249.936 75.946 0)
 			(effects
 				(font
@@ -11510,7 +11612,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R10")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -11710,7 +11812,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:RGP25M-E3_54")
-		(at 203.2 143.51 90)
+		(at 203.2 140.97 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11718,7 +11820,7 @@
 		(dnp no)
 		(uuid "1e04b189-8799-42c5-b274-ad1b4f52661d")
 		(property "Reference" "CR1"
-			(at 196.342 137.414 90)
+			(at 196.342 134.874 90)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -11727,7 +11829,7 @@
 			)
 		)
 		(property "Value" "RGP25M-E3/54"
-			(at 183.896 141.478 90)
+			(at 183.896 138.938 90)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -11736,7 +11838,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:DO-201AD-2"
-			(at 210.058 138.938 0)
+			(at 210.058 136.398 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11746,7 +11848,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/88703/rgp25a.pdf"
-			(at 210.058 138.43 0)
+			(at 210.058 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11756,7 +11858,7 @@
 			)
 		)
 		(property "Description" "RGP25M-E3/54"
-			(at 209.804 138.938 0)
+			(at 209.804 136.398 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11765,7 +11867,7 @@
 			)
 		)
 		(property "Supply Name" "Mouser"
-			(at 210.312 138.43 0)
+			(at 210.312 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11774,7 +11876,7 @@
 			)
 		)
 		(property "Supply part number" "RGP25M-E3/54"
-			(at 210.312 138.43 0)
+			(at 210.312 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11783,7 +11885,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Vishay-General-Semiconductor/RGP25M-E3-54?qs=lBalI7KQBwruMh%252BrSq8TLA%3D%3D"
-			(at 210.312 143.51 0)
+			(at 210.312 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11832,7 +11934,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WE-TIS_111190"
+		(property "Footprint" "charge_battery_footprint_lib:Inductor_3.3u_7447471033"
 			(at 323.85 186.36 0)
 			(effects
 				(font
@@ -11852,7 +11954,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Shielded Radial Leaded Inductor"
+		(property "Description" "Power Inductors - Leaded WE-TIS Lead Rad 1111 3.3uH 7.5A .009Ohm"
 			(at 307.34 90.17 0)
 			(effects
 				(font
@@ -12115,7 +12217,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "30ebeeaf-c9e6-4ee3-bc03-6e1c2ef810ac")
-		(property "Reference" "R6"
+		(property "Reference" "R10"
 			(at 258.064 151.13 90)
 			(effects
 				(font
@@ -12196,7 +12298,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R6")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -12204,15 +12306,15 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Res_5.6R_1206_5%")
-		(at 199.39 127 90)
+		(at 199.39 125.73 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "36799005-899b-4952-a2ef-d676ae9a3944")
-		(property "Reference" "R9"
-			(at 204.724 125.984 90)
+		(property "Reference" "R8"
+			(at 204.724 124.714 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12221,7 +12323,7 @@
 			)
 		)
 		(property "Value" "5.6R/5%"
-			(at 204.724 128.27 90)
+			(at 204.724 127 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12230,7 +12332,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_1206"
-			(at 199.39 127 0)
+			(at 199.39 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12239,7 +12341,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 199.39 127 0)
+			(at 199.39 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12248,7 +12350,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 199.39 127 0)
+			(at 199.39 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12257,7 +12359,7 @@
 			)
 		)
 		(property "Supply Name" "thegioiic"
-			(at 199.39 127 0)
+			(at 199.39 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12266,7 +12368,7 @@
 			)
 		)
 		(property "Supply Part Number" "Điện Trở 5.6 Ohm 1206 5%"
-			(at 199.39 127 0)
+			(at 199.39 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12275,7 +12377,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-5-6-ohm-1206-5-"
-			(at 199.39 127 0)
+			(at 199.39 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12292,103 +12394,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:Res_4990R_1206_1%")
-		(at 300.99 119.38 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3757a229-6638-4941-aab7-79450132ea05")
-		(property "Reference" "R11"
-			(at 306.578 118.11 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "4990R/1%"
-			(at 306.578 120.65 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_1206"
-			(at 300.99 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 300.99 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Điện Trở 4.99 KOhm 1206 1%"
-			(at 300.99 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply Name" "thegioiic"
-			(at 300.99 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply Part Number" "Điện Trở 4.99 KOhm 1206 1%"
-			(at 300.99 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-4-99-kohm-1206-1-"
-			(at 300.99 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "da3b0b05-1b30-4e9a-be1d-0f8031e5dfb4")
-		)
-		(pin "2"
-			(uuid "ea35a777-3ce2-4d76-9b21-5d6283de84e7")
-		)
-		(instances
-			(project ""
-				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R11")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -12403,7 +12409,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3b089c24-7ba6-4374-88ed-b3d399aad367")
-		(property "Reference" "R13"
+		(property "Reference" "R14"
 			(at 348.488 162.56 90)
 			(effects
 				(font
@@ -12484,7 +12490,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R13")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -12600,7 +12606,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "47238a02-56de-4921-9dc9-5e9e9637d320")
-		(property "Reference" "C10"
+		(property "Reference" "C12"
 			(at 268.224 92.456 90)
 			(effects
 				(font
@@ -12681,7 +12687,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C10")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -12696,7 +12702,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "47839865-2ebe-4adb-bb9f-602751ec409d")
-		(property "Reference" "C7"
+		(property "Reference" "C9"
 			(at 258.572 161.29 90)
 			(effects
 				(font
@@ -12777,7 +12783,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C7")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -12793,7 +12799,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a67eeb6-e4b5-404c-b1e1-d6f7ae0a1916")
-		(property "Reference" "C88"
+		(property "Reference" "C11"
 			(at 266.7 104.9781 90)
 			(effects
 				(font
@@ -12874,7 +12880,104 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C88")
+					(reference "C11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_4.99K_1206_1%")
+		(at 300.99 119.38 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "50da8a6a-1b75-4776-83ef-be47385eeff3")
+		(property "Reference" "R11"
+			(at 307.34 118.1099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "4.99K 1206 1%"
+			(at 307.34 120.6499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_1206"
+			(at 300.99 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 300.99 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Điện Trở 4.99 KOhm 1206 1%"
+			(at 300.99 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "thegioiic"
+			(at 300.99 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "Điện Trở 4.99 KOhm 1206 1%"
+			(at 300.99 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/dien-tro-4-99-kohm-1206-1-"
+			(at 300.99 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7db25979-b018-4ea3-b267-12717a513712")
+		)
+		(pin "1"
+			(uuid "c0bad286-2ca2-478c-b899-922dd58d85a4")
+		)
+		(instances
+			(project ""
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -13015,7 +13118,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5637f640-38db-4e6f-a3c9-dee086917a29")
-		(property "Reference" "R4"
+		(property "Reference" "R2"
 			(at 161.036 133.096 90)
 			(effects
 				(font
@@ -13096,7 +13199,73 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R4")
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:Earth")
+		(at 57.15 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56a886e9-fd73-4345-b1b8-68fab01f3778")
+		(property "Reference" "#PWR04"
+			(at 57.15 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Earth"
+			(at 57.15 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 57.15 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
+			(at 57.15 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3f72ca48-8b60-40f2-975b-905c425ebb2c")
+		)
+		(instances
+			(project ""
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -13111,7 +13280,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "625e9d7c-ee00-4fcc-9600-f74205692fdc")
-		(property "Reference" "R3"
+		(property "Reference" "R1"
 			(at 160.528 117.856 90)
 			(effects
 				(font
@@ -13192,7 +13361,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R3")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -13377,7 +13546,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8e8ea989-2c6e-4baf-b3ec-2a9454bde6e9")
-		(property "Reference" "C12"
+		(property "Reference" "C14"
 			(at 297.434 92.202 90)
 			(effects
 				(font
@@ -13458,7 +13627,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C12")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -13671,7 +13840,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9fe72649-1ebf-4a82-bd02-1a84d3f6aabf")
-		(property "Reference" "R7"
+		(property "Reference" "R6"
 			(at 181.61 100.838 90)
 			(effects
 				(font
@@ -13752,7 +13921,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R7")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -13868,7 +14037,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a25f2dbf-0867-45be-a834-1259ce84fc26")
-		(property "Reference" "C8"
+		(property "Reference" "C6"
 			(at 195.326 105.156 90)
 			(effects
 				(font
@@ -13949,7 +14118,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C8")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -14151,7 +14320,7 @@
 				)
 			)
 		)
-		(property "Value" "1.3R"
+		(property "Value" "3R"
 			(at 123.19 109.474 90)
 			(effects
 				(font
@@ -14195,16 +14364,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "1.3D-15 Điện Trở Nhiệt NTC 1.3 Ohm 16.5 x 7mm "
-			(at 109.982 104.648 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/1-3d-15-dien-tro-nhiet-ntc-1-3-ohm-16-5-x-7mm"
+		(property "Supply URL" "https://www.thegioiic.com/3d-15-dien-tro-nhiet-ntc-3-ohm-16-5-x-7mm"
 			(at 109.982 107.188 0)
 			(effects
 				(font
@@ -14338,7 +14498,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c07ae8e2-3299-403e-86f5-aeb366fe4ade")
-		(property "Reference" "R61"
+		(property "Reference" "R13"
 			(at 348.488 143.51 90)
 			(effects
 				(font
@@ -14419,7 +14579,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R61")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -14531,7 +14691,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cb94183b-8bb2-470f-8a0d-8b52205cc596")
-		(property "Reference" "C90"
+		(property "Reference" "C7"
 			(at 228.6 69.85 0)
 			(effects
 				(font
@@ -14610,7 +14770,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C90")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -14691,7 +14851,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e5e43e27-7298-481d-80e3-dfa3ae774c44")
-		(property "Reference" "R5"
+		(property "Reference" "R3"
 			(at 166.116 151.384 90)
 			(effects
 				(font
@@ -14772,7 +14932,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R5")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -14787,7 +14947,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e72001d8-f53e-4eed-ae19-56f06da273c3")
-		(property "Reference" "C9"
+		(property "Reference" "C10"
 			(at 259.334 74.422 0)
 			(effects
 				(font
@@ -14866,7 +15026,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C9")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -14881,7 +15041,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ea1f38fd-d16a-466d-b241-44ca0d0bc9f7")
-		(property "Reference" "R8"
+		(property "Reference" "R7"
 			(at 182.118 112.268 90)
 			(effects
 				(font
@@ -14962,7 +15122,7 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R8")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -14977,7 +15137,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "eb5b3e8d-2097-40a1-a86e-5c29403333a9")
-		(property "Reference" "R2"
+		(property "Reference" "R5"
 			(at 175.768 124.714 90)
 			(effects
 				(font
@@ -15058,7 +15218,73 @@
 		(instances
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "R2")
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND1")
+		(at 246.38 168.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ebdded2d-b99b-41ba-b1a7-0a596360918e")
+		(property "Reference" "#PWR01"
+			(at 246.38 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND1"
+			(at 246.38 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 246.38 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 246.38 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND1\" , ground"
+			(at 246.38 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "80d558dc-cf4f-4beb-bc8c-7eb8584c6863")
+		)
+		(instances
+			(project "Power_Supply"
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -15073,7 +15299,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "eef31e77-6b2c-4b8e-8d67-ceadb7ee59a0")
-		(property "Reference" "D2"
+		(property "Reference" "D3"
 			(at 252.984 99.568 0)
 			(effects
 				(font
@@ -15145,7 +15371,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "D2")
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -15161,7 +15387,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f74b908b-8af8-4e15-a4d8-51b952717cfe")
-		(property "Reference" "C13"
+		(property "Reference" "C16"
 			(at 335.28 92.2781 90)
 			(effects
 				(font
@@ -15242,7 +15468,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C13")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -15257,7 +15483,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ff291609-ed86-476c-9adf-e6719bed6cf5")
-		(property "Reference" "C6"
+		(property "Reference" "C8"
 			(at 243.332 154.686 90)
 			(effects
 				(font
@@ -15338,7 +15564,7 @@
 		(instances
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C6")
+					(reference "C8")
 					(unit 1)
 				)
 			)
