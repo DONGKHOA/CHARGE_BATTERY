@@ -340,7 +340,7 @@
 				)
 			)
 		)
-		(symbol "charge_battery_sym_lib:BYC10-600127"
+		(symbol "charge_battery_sym_lib:1N5408"
 			(pin_numbers hide)
 			(pin_names
 				(offset 0.254) hide)
@@ -355,7 +355,7 @@
 					)
 				)
 			)
-			(property "Value" "BYC10-600,127"
+			(property "Value" "1N5408"
 				(at 5.08 -3.81 0)
 				(effects
 					(font
@@ -363,7 +363,7 @@
 					)
 				)
 			)
-			(property "Footprint" "charge_battery_footprint_lib:TO-220-2_MCH"
+			(property "Footprint" "charge_battery_footprint_lib:DO-201AD-2"
 				(at 1.27 -12.7 0)
 				(effects
 					(font
@@ -373,7 +373,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.ween-semi.com/documents/BYC10-600.pdf?t=636456811170187779"
+			(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Fairchild%20PDFs/1N5400.pdf"
 				(at 1.27 -12.7 0)
 				(effects
 					(font
@@ -383,7 +383,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Rectifiers 10A, 600V "
+			(property "Description" "Rectifiers 3A, 1KV "
 				(at -0.762 -12.7 0)
 				(effects
 					(font
@@ -392,7 +392,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply name" "Mouser"
+			(property "Supply name" "Thegioiic"
 				(at 1.778 -12.7 0)
 				(effects
 					(font
@@ -401,7 +401,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply part number" "771-BYC10-600127"
+			(property "Supply part number" "1N5408"
 				(at 1.016 -12.7 0)
 				(effects
 					(font
@@ -410,7 +410,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply URL" "https://www.mouser.vn/ProductDetail/WeEn-Semiconductors/BYC10-600127?qs=me8TqzrmIYWRbKqfcOk3Bg%3D%3D"
+			(property "Supply URL" "https://www.thegioiic.com/1n5408-diode-chinh-luu-3a-1kv"
 				(at -0.762 -12.7 0)
 				(effects
 					(font
@@ -428,7 +428,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "BYC10-600127_1_1"
+			(symbol "1N5408_1_1"
 				(polyline
 					(pts
 						(xy 2.54 0) (xy 3.4798 0)
@@ -550,7 +550,7 @@
 					)
 				)
 			)
-			(symbol "BYC10-600127_1_2"
+			(symbol "1N5408_1_2"
 				(polyline
 					(pts
 						(xy -1.905 3.81) (xy 1.905 3.81)
@@ -12064,7 +12064,7 @@
 	)
 	(wire
 		(pts
-			(xy 328.93 78.74) (xy 328.93 69.85)
+			(xy 328.93 68.58) (xy 328.93 78.74)
 		)
 		(stroke
 			(width 0)
@@ -12271,16 +12271,6 @@
 			(type default)
 		)
 		(uuid "3474cb58-15a8-45f3-a0e4-6135263f7004")
-	)
-	(wire
-		(pts
-			(xy 328.93 69.85) (xy 346.71 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "35d8e2ae-a9be-4597-8a97-a3dfb1909ea6")
 	)
 	(wire
 		(pts
@@ -13514,7 +13504,7 @@
 	)
 	(wire
 		(pts
-			(xy 372.11 69.85) (xy 372.11 78.74)
+			(xy 372.11 68.58) (xy 372.11 78.74)
 		)
 		(stroke
 			(width 0)
@@ -13561,6 +13551,16 @@
 			(type default)
 		)
 		(uuid "b178d498-84bf-41be-b7f9-a0f2f11ec44b")
+	)
+	(wire
+		(pts
+			(xy 328.93 68.58) (xy 345.44 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1dce21d-e359-4af7-8779-1411adcf9a9c")
 	)
 	(wire
 		(pts
@@ -13751,6 +13751,16 @@
 			(type default)
 		)
 		(uuid "bff4c2c3-80fb-4681-bde3-778ed3c572c1")
+	)
+	(wire
+		(pts
+			(xy 355.6 68.58) (xy 372.11 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0560988-b873-44bf-aadf-4088053829cb")
 	)
 	(wire
 		(pts
@@ -14191,16 +14201,6 @@
 			(type default)
 		)
 		(uuid "e98c2381-4423-4884-a733-a6ef02cf124e")
-	)
-	(wire
-		(pts
-			(xy 356.87 69.85) (xy 372.11 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9efbd85-862f-45ae-a203-dc79a504b23e")
 	)
 	(wire
 		(pts
@@ -16351,6 +16351,103 @@
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:1N5408")
+		(at 345.44 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "30cf6a00-e515-4396-87e8-483a50ea4040")
+		(property "Reference" "D4"
+			(at 350.52 62.23 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "1N5408"
+			(at 350.52 64.77 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:DO-201AD-2"
+			(at 346.71 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Fairchild%20PDFs/1N5400.pdf"
+			(at 346.71 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Rectifiers 3A, 1KV"
+			(at 344.678 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 347.218 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "1N5408"
+			(at 346.456 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/1n5408-diode-chinh-luu-3a-1kv"
+			(at 344.678 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fea51245-1b13-491d-8a32-cf4fa936f056")
+		)
+		(pin "1"
+			(uuid "be168f01-e809-4e4d-b13f-086d06771545")
+		)
+		(instances
+			(project ""
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -23640,103 +23737,6 @@
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
 					(reference "R12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:BYC10-600127")
-		(at 346.71 69.85 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e97ea7d1-acbf-47de-adaf-4a173c3fe73c")
-		(property "Reference" "D4"
-			(at 351.79 63.5 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "BYC10-600,127"
-			(at 351.79 66.04 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:TO-220-2_MCH"
-			(at 347.98 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ween-semi.com/documents/BYC10-600.pdf?t=636456811170187779"
-			(at 347.98 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Rectifiers 10A, 600V"
-			(at 345.948 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Mouser"
-			(at 348.488 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "771-BYC10-600127"
-			(at 347.726 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.mouser.vn/ProductDetail/WeEn-Semiconductors/BYC10-600127?qs=me8TqzrmIYWRbKqfcOk3Bg%3D%3D"
-			(at 345.948 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "85820c3a-5689-4f39-8f60-7506c8b9bfdd")
-		)
-		(pin "2"
-			(uuid "78371165-92e6-4aff-932e-7da2cc772bbd")
-		)
-		(instances
-			(project ""
-				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "D4")
 					(unit 1)
 				)
 			)
