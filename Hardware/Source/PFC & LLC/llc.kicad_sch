@@ -9566,16 +9566,6 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 114.3) (xy 274.32 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "51d051e3-6880-498f-874e-6dfbc2495776")
-	)
-	(wire
-		(pts
 			(xy 439.42 180.34) (xy 439.42 181.61)
 		)
 		(stroke
@@ -9726,7 +9716,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 124.46) (xy 146.05 124.46)
+			(xy 140.97 124.46) (xy 149.86 124.46)
 		)
 		(stroke
 			(width 0)
@@ -9866,7 +9856,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 111.76) (xy 166.37 111.76)
+			(xy 160.02 111.76) (xy 166.37 111.76)
 		)
 		(stroke
 			(width 0)
@@ -9896,7 +9886,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 111.76) (xy 146.05 111.76)
+			(xy 140.97 111.76) (xy 149.86 111.76)
 		)
 		(stroke
 			(width 0)
@@ -9943,16 +9933,6 @@
 			(type default)
 		)
 		(uuid "6dfcadea-e588-4ef3-a91a-670679ca6bc5")
-	)
-	(wire
-		(pts
-			(xy 274.32 116.84) (xy 271.78 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6ec4911d-6e2d-4fe1-bed4-4800a4580d36")
 	)
 	(wire
 		(pts
@@ -10266,7 +10246,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 124.46) (xy 166.37 124.46)
+			(xy 160.02 124.46) (xy 166.37 124.46)
 		)
 		(stroke
 			(width 0)
@@ -10883,6 +10863,16 @@
 			(type default)
 		)
 		(uuid "ae1365a6-184d-46a8-bd88-767090117a5c")
+	)
+	(wire
+		(pts
+			(xy 271.78 114.3) (xy 274.32 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae2e84a4-6b61-437b-8b59-d3bb9a2523c0")
 	)
 	(wire
 		(pts
@@ -11733,6 +11723,16 @@
 			(type default)
 		)
 		(uuid "ef8dbd98-2d44-4b8a-9e03-fd5e1313fb2e")
+	)
+	(wire
+		(pts
+			(xy 271.78 116.84) (xy 274.32 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0a964bc-54f8-4896-ae72-aa21ed8bbf6b")
 	)
 	(wire
 		(pts
@@ -17576,7 +17576,8 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Socket")
-		(at 279.4 114.3 0)
+		(at 279.4 116.84 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17584,7 +17585,7 @@
 		(dnp no)
 		(uuid "5f8c2c8a-7f67-4910-88f1-3618a6e5c8b6")
 		(property "Reference" "J2"
-			(at 280.162 116.84 0)
+			(at 280.162 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17593,7 +17594,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Socket"
-			(at 276.86 119.126 0)
+			(at 276.86 112.014 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17601,8 +17602,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Phoenix_GMSTB:PhoenixContact_GMSTBA_2,5_2-G_1x02_P7.50mm_Horizontal"
-			(at 279.4 114.3 0)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_2-G-3.81_1x02_P3.81mm_Horizontal"
+			(at 279.4 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17611,7 +17612,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 279.4 114.3 0)
+			(at 279.4 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17620,7 +17621,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 279.4 114.3 0)
+			(at 279.4 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21449,7 +21450,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:IDH06G65C6")
-		(at 151.13 111.76 0)
+		(at 154.94 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -21457,7 +21458,7 @@
 		(dnp no)
 		(uuid "9f2d8376-e2c3-4aa8-ae3d-f9ca6a22235a")
 		(property "Reference" "D7"
-			(at 151.13 106.426 0)
+			(at 154.94 106.426 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21465,7 +21466,7 @@
 			)
 		)
 		(property "Value" "IDH06G65C6"
-			(at 151.13 108.712 0)
+			(at 154.94 108.712 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21473,7 +21474,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:TO-220-2_MCH"
-			(at 139.7 94.488 0)
+			(at 143.51 94.488 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21482,7 +21483,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/196/Infineon_IDH06G65C6_DS_v02_00_EN-1131100.pdf"
-			(at 147.066 94.234 0)
+			(at 150.876 94.234 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21491,7 +21492,7 @@
 			)
 		)
 		(property "Description" "Schottky Diodes & Rectifiers SIC DIODES"
-			(at 148.336 93.98 0)
+			(at 152.146 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21500,7 +21501,7 @@
 			)
 		)
 		(property "Supply name" "Mouser"
-			(at 147.32 94.996 0)
+			(at 151.13 94.996 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21509,7 +21510,7 @@
 			)
 		)
 		(property "Supply part number" "726-IDH06G65C6XKSA1"
-			(at 145.034 94.234 0)
+			(at 148.844 94.234 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21518,7 +21519,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Infineon-Technologies/IDH06G65C6XKSA1?qs=HXFqYaX1Q2y0Eo%2FTJueHsw%3D%3D"
-			(at 147.066 94.234 0)
+			(at 150.876 94.234 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21527,7 +21528,7 @@
 			)
 		)
 		(property " Supply part number" ""
-			(at 151.13 111.76 0)
+			(at 154.94 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21536,7 +21537,7 @@
 			)
 		)
 		(property "Field7" ""
-			(at 151.13 111.76 0)
+			(at 154.94 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21545,7 +21546,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 151.13 111.76 0)
+			(at 154.94 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21554,7 +21555,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 151.13 111.76 0)
+			(at 154.94 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21563,7 +21564,7 @@
 			)
 		)
 		(property "Supply part name" ""
-			(at 151.13 111.76 0)
+			(at 154.94 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25675,7 +25676,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:IDH06G65C6")
-		(at 151.13 124.46 0)
+		(at 154.94 124.46 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25683,7 +25684,7 @@
 		(dnp no)
 		(uuid "f99ae515-4af6-4402-a6fb-0816b3b9048d")
 		(property "Reference" "D8"
-			(at 151.13 127.508 0)
+			(at 154.94 127.508 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25691,7 +25692,7 @@
 			)
 		)
 		(property "Value" "IDH06G65C6"
-			(at 151.13 129.794 0)
+			(at 154.94 129.794 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25699,7 +25700,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:TO-220-2_MCH"
-			(at 139.7 107.188 0)
+			(at 143.51 107.188 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25708,7 +25709,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/196/Infineon_IDH06G65C6_DS_v02_00_EN-1131100.pdf"
-			(at 147.066 106.934 0)
+			(at 150.876 106.934 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25717,7 +25718,7 @@
 			)
 		)
 		(property "Description" "Schottky Diodes & Rectifiers SIC DIODES"
-			(at 148.336 106.68 0)
+			(at 152.146 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25726,7 +25727,7 @@
 			)
 		)
 		(property "Supply name" "Mouser"
-			(at 147.32 107.696 0)
+			(at 151.13 107.696 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25735,7 +25736,7 @@
 			)
 		)
 		(property "Supply part number" "726-IDH06G65C6XKSA1"
-			(at 145.034 106.934 0)
+			(at 148.844 106.934 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25744,7 +25745,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Infineon-Technologies/IDH06G65C6XKSA1?qs=HXFqYaX1Q2y0Eo%2FTJueHsw%3D%3D"
-			(at 147.066 106.934 0)
+			(at 150.876 106.934 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25753,7 +25754,7 @@
 			)
 		)
 		(property " Supply part number" ""
-			(at 151.13 124.46 0)
+			(at 154.94 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25762,7 +25763,7 @@
 			)
 		)
 		(property "Field7" ""
-			(at 151.13 124.46 0)
+			(at 154.94 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25771,7 +25772,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 151.13 124.46 0)
+			(at 154.94 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25780,7 +25781,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 151.13 124.46 0)
+			(at 154.94 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25789,7 +25790,7 @@
 			)
 		)
 		(property "Supply part name" ""
-			(at 151.13 124.46 0)
+			(at 154.94 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
