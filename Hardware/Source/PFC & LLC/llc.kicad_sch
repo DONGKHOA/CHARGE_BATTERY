@@ -1286,46 +1286,50 @@
 				)
 			)
 		)
-		(symbol "charge_battery_sym_lib:6N137M"
+		(symbol "charge_battery_sym_lib:6N137_SMD"
+			(pin_names
+				(offset 0.254) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at 0.762 13.716 0)
+				(at 7.62 17.78 0)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.524 1.524)
 					)
 				)
 			)
-			(property "Value" "6N137M"
-				(at 8.89 -1.27 0)
+			(property "Value" "6N137_SMD"
+				(at 7.62 15.24 0)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.524 1.524)
 					)
 				)
 			)
-			(property "Footprint" "charge_battery_footprint_lib:DIP-8"
-				(at -2.54 -11.43 0)
+			(property "Footprint" "charge_battery_footprint_lib:SOIC8_SMD"
+				(at -2.286 -4.572 0)
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://media.digikey.com/PDF/Data%20Sheets/Lite-On%20PDFs/6N137%20Series.pdf"
-				(at -2.54 -11.43 0)
+			(property "Datasheet" "https://rocelec.widen.net/view/pdf/x8jl2cmeks/ONSM-S-A0006115631-1.pdf?t.download=true&u=5oefqw"
+				(at 2.794 -4.318 0)
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
 					(hide yes)
 				)
 			)
 			(property "Description" "Ngõ ra: Open Collector, Số chân: 8"
-				(at -1.27 -11.43 0)
+				(at 2.54 -6.858 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1334,7 +1338,7 @@
 				)
 			)
 			(property "Supply name" "Thegioiic"
-				(at 0 -11.43 0)
+				(at 5.842 -4.572 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1343,7 +1347,7 @@
 				)
 			)
 			(property "Supply part number" "6N137M Logic Output Optoisolator 2500Vrms 1 Channel, 8-DIP"
-				(at -2.54 -11.43 0)
+				(at 1.27 -5.588 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1351,8 +1355,8 @@
 					(hide yes)
 				)
 			)
-			(property "Supply URL" "https://www.thegioiic.com/6n137m-logic-output-optoisolator-2500vrms-1-channel-8-dip"
-				(at -2.54 -11.43 0)
+			(property "Supply URL" "https://www.thegioiic.com/6n137sm-logic-output-optoisolator-2500vrms-1-channel-8-smd"
+				(at 1.778 -5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1360,21 +1364,435 @@
 					(hide yes)
 				)
 			)
-			(symbol "6N137M_1_1"
-				(rectangle
-					(start 0 12.7)
-					(end 12.7 0)
+			(property "ki_keywords" "6N137_SMD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "6N137_SM_ISO 6N137_SM_ISO-M 6N137_SM_ISO-L"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "6N137_SMD_0_1"
+				(polyline
+					(pts
+						(xy 0 5.08) (xy 2.54 5.08)
+					)
 					(stroke
-						(width 0.254)
+						(width 0.127)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 7.62) (xy 2.54 7.62)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 5.715) (xy 3.175 5.715)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 6.985) (xy 3.175 6.985)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 5.08) (xy 2.54 5.715)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 5.715) (xy 1.905 6.985)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 7.62) (xy 2.54 6.985)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 6.985) (xy 2.54 5.715)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 6.35) (xy 5.715 5.715)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 7.62) (xy 5.715 6.985)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 2.8575) (xy 5.08 3.175)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 3.4925) (xy 5.08 3.81)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 4.1275) (xy 5.08 4.445)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 4.7625) (xy 5.08 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 5.3975) (xy 5.08 5.715)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 6.0325) (xy 5.08 6.35)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 6.6675) (xy 5.08 6.985)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 7.3025) (xy 5.08 7.62)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 7.9375) (xy 5.08 8.255)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 8.89) (xy 5.08 8.5725)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 9.525) (xy 5.08 9.2075)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 9.8425) (xy 5.08 10.16)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.715 6.985) (xy 4.445 6.35)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 5.08) (xy 7.62 7.62)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 7.62) (xy 15.24 7.62)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.89 3.81) (xy 11.1125 3.81)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.89 5.08) (xy 7.62 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.89 6.35) (xy 8.89 3.81)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.89 6.35) (xy 11.1125 6.35)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 15.24 2.54) (xy 5.08 2.54)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 15.24 5.08) (xy 13.0175 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.0325 6.0325) (xy 5.3975 5.3975) (xy 6.35 5.3975)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 11.1125 6.35)
+					(mid 9.843 5.08)
+					(end 11.1125 3.81)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 12.7 5.08)
+					(radius 0.3048)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 				(pin no_connect line
-					(at -2.54 10.16 0)
-					(length 2.54)
+					(at -3.81 10.16 0)
+					(length 3.81)
 					(name "NC"
 						(effects
 							(font
@@ -1390,10 +1808,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -2.54 7.62 0)
-					(length 2.54)
-					(name "Anode"
+				(pin unspecified line
+					(at -3.81 7.62 0)
+					(length 3.81)
+					(name "ANODE"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1408,10 +1826,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -2.54 5.08 0)
-					(length 2.54)
-					(name "Cathode"
+				(pin unspecified line
+					(at -3.81 5.08 0)
+					(length 3.81)
+					(name "CATHODE"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1427,8 +1845,8 @@
 					)
 				)
 				(pin no_connect line
-					(at -2.54 2.54 0)
-					(length 2.54)
+					(at -3.81 2.54 0)
+					(length 3.81)
 					(name "NC"
 						(effects
 							(font
@@ -1444,9 +1862,9 @@
 						)
 					)
 				)
-				(pin open_emitter line
-					(at 15.24 2.54 180)
-					(length 2.54)
+				(pin power_out line
+					(at 19.05 2.54 180)
+					(length 3.81)
 					(name "GND"
 						(effects
 							(font
@@ -1462,10 +1880,10 @@
 						)
 					)
 				)
-				(pin open_collector line
-					(at 15.24 5.08 180)
-					(length 2.54)
-					(name "Vo"
+				(pin unspecified line
+					(at 19.05 5.08 180)
+					(length 3.81)
+					(name "VO"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1480,10 +1898,10 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 15.24 7.62 180)
-					(length 2.54)
-					(name "V_E"
+				(pin unspecified line
+					(at 19.05 7.62 180)
+					(length 3.81)
+					(name "VE"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1499,9 +1917,9 @@
 					)
 				)
 				(pin power_in line
-					(at 15.24 10.16 180)
-					(length 2.54)
-					(name "Vcc"
+					(at 19.05 10.16 180)
+					(length 3.81)
+					(name "VCC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1513,6 +1931,73 @@
 							(font
 								(size 1.27 1.27)
 							)
+						)
+					)
+				)
+			)
+			(symbol "6N137_SMD_1_1"
+				(rectangle
+					(start 0 12.7)
+					(end 15.24 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(text "A"
+					(at 1.27 8.636 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+							(color 0 72 72 1)
+						)
+					)
+				)
+				(text "E"
+					(at 13.97 8.636 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+							(color 0 72 72 1)
+						)
+					)
+				)
+				(text "GND"
+					(at 12.954 3.556 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+							(color 0 72 72 1)
+						)
+					)
+				)
+				(text "K"
+					(at 1.27 4.064 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+							(color 0 72 72 1)
+						)
+					)
+				)
+				(text "O"
+					(at 13.97 6.096 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+							(color 0 72 72 1)
+						)
+					)
+				)
+				(text "VCC"
+					(at 13.208 11.176 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+							(color 0 72 72 1)
 						)
 					)
 				)
@@ -3251,6 +3736,417 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "charge_battery_sym_lib:EER35_Transformer_Horizontal"
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "L"
+				(at 0.254 13.208 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "EER35_Transformer_Horizontal"
+				(at 4.064 -3.302 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:Transformer_ER35_Horizontal"
+				(at 5.842 -5.334 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 20.066 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 4.953 -3.429 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "EER35_Transformer_Horizontal_0_1"
+				(polyline
+					(pts
+						(xy 9.906 11.684) (xy 9.906 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.668 -1.524) (xy 10.668 11.684)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 7.64 -1.2846)
+					(mid 8.5214 -0.9154)
+					(end 8.91 -0.04)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 7.64 1.2554)
+					(mid 8.5214 1.6246)
+					(end 8.91 2.5)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 7.64 3.7954)
+					(mid 8.5214 4.1646)
+					(end 8.91 5.04)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 7.64 6.3354)
+					(mid 8.5214 6.7046)
+					(end 8.91 7.58)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 7.645 8.8644)
+					(mid 8.5271 9.2346)
+					(end 8.915 10.109)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 8.89 10.16)
+					(mid 8.518 11.058)
+					(end 7.62 11.43)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 8.91 -0.04)
+					(mid 8.538 0.858)
+					(end 7.64 1.23)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 8.91 2.5)
+					(mid 8.538 3.398)
+					(end 7.64 3.77)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 8.91 5.04)
+					(mid 8.538 5.938)
+					(end 7.64 6.31)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 8.91 7.58)
+					(mid 8.538 8.478)
+					(end 7.64 8.85)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 11.4554 2.54)
+					(mid 11.8199 1.6599)
+					(end 12.7 1.2954)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 11.4554 7.62)
+					(mid 11.8199 6.7399)
+					(end 12.7 6.3754)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 11.4554 10.16)
+					(mid 11.8199 9.2799)
+					(end 12.7 8.9154)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 11.4808 0)
+					(mid 11.8453 -0.8803)
+					(end 12.7254 -1.2446)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 12.7 3.81)
+					(mid 11.803 3.4427)
+					(end 11.4554 2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 12.7 8.89)
+					(mid 11.803 8.5227)
+					(end 11.4554 7.62)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 12.7 11.43)
+					(mid 11.803 11.0627)
+					(end 11.4554 10.16)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 12.7254 1.27)
+					(mid 11.8315 0.9011)
+					(end 11.4808 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "EER35_Transformer_Horizontal_1_1"
+				(pin passive line
+					(at 0 11.43 0)
+					(length 7.62)
+					(name "AA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 6.35 180)
+					(length 7.62)
+					(name "SC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 3.81 180)
+					(length 7.62)
+					(name "SC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 -1.27 180)
+					(length 7.62)
+					(name "SB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -1.27 0)
+					(length 7.62)
+					(name "AB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 11.43 180)
+					(length 7.62)
+					(name "SA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6207,429 +7103,6 @@
 				)
 			)
 		)
-		(symbol "charge_battery_sym_lib:Transformer"
-			(pin_names
-				(offset 0.254) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "L4"
-				(at 10.1727 15.24 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Transformer"
-				(at 10.1727 12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "charge_battery_footprint_lib:Transformer_ER35"
-				(at 5.842 -5.334 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 20.066 12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "L_m = 325uH"
-				(at 4.953 -3.429 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property " Supply part number" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Field7" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Device" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply name" "Nhật Tảo Market"
-				(at 5.334 -7.874 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply part name" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Transformer_0_1"
-				(polyline
-					(pts
-						(xy 9.525 10.16) (xy 9.525 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.795 0) (xy 10.795 10.16)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 7.62 0.0254)
-					(mid 8.5039 0.3937)
-					(end 8.89 1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 7.62 2.5654)
-					(mid 8.5039 2.9337)
-					(end 8.89 3.81)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 7.62 5.1054)
-					(mid 8.5039 5.4737)
-					(end 8.89 6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 7.62 7.6454)
-					(mid 8.5039 8.0137)
-					(end 8.89 8.89)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 8.89 1.27)
-					(mid 8.518 2.168)
-					(end 7.62 2.54)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 8.89 3.81)
-					(mid 8.518 4.708)
-					(end 7.62 5.08)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 8.89 6.35)
-					(mid 8.518 7.248)
-					(end 7.62 7.62)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 8.89 8.89)
-					(mid 8.518 9.788)
-					(end 7.62 10.16)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 11.4554 3.81)
-					(mid 11.8199 2.9299)
-					(end 12.7 2.5654)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 11.4554 6.35)
-					(mid 11.8199 5.4699)
-					(end 12.7 5.1054)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 11.4554 8.89)
-					(mid 11.8199 8.0099)
-					(end 12.7 7.6454)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 11.4808 1.27)
-					(mid 11.8454 0.3901)
-					(end 12.7254 0.0254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 12.7 5.08)
-					(mid 11.8058 4.7115)
-					(end 11.4554 3.81)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 12.7 7.62)
-					(mid 11.8058 7.2515)
-					(end 11.4554 6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 12.7 10.16)
-					(mid 11.8058 9.7915)
-					(end 11.4554 8.89)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 12.7254 2.54)
-					(mid 11.8309 2.1717)
-					(end 11.4808 1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Transformer_1_1"
-				(pin passive line
-					(at 0 10.16 0)
-					(length 7.62)
-					(name "AA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 7.62)
-					(name "AB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 10.16 180)
-					(length 7.62)
-					(name "SA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 5.08 180)
-					(length 7.62)
-					(name "SC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 0 180)
-					(length 7.62)
-					(name "SB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "power:+12V"
 			(power)
 			(pin_numbers hide)
@@ -7652,6 +8125,12 @@
 		(uuid "7e17815b-a78a-4d50-b45d-e5195518d851")
 	)
 	(junction
+		(at 143.51 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "844130f2-e2f0-4e42-93b8-afd044ebd673")
+	)
+	(junction
 		(at 228.6 207.01)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7924,16 +8403,6 @@
 	(no_connect
 		(at 233.68 194.31)
 		(uuid "c8d05b2c-1663-4d8d-8da0-f39109c7bdd0")
-	)
-	(wire
-		(pts
-			(xy 143.51 116.84) (xy 143.51 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "00eb6cd3-ae11-4a7e-af14-a203936ea27a")
 	)
 	(wire
 		(pts
@@ -8297,16 +8766,6 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 285.75) (xy 76.2 285.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c44e694-5794-4f10-ab6d-ba774e755a59")
-	)
-	(wire
-		(pts
 			(xy 439.42 180.34) (xy 441.96 180.34)
 		)
 		(stroke
@@ -8457,16 +8916,6 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 283.21) (xy 82.55 283.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "28c291fe-011f-49d3-bd57-c7773581f7e1")
-	)
-	(wire
-		(pts
 			(xy 217.17 185.42) (xy 233.68 185.42)
 		)
 		(stroke
@@ -8504,16 +8953,6 @@
 			(type default)
 		)
 		(uuid "2b4134aa-f680-4dca-9161-252d7349b2e8")
-	)
-	(wire
-		(pts
-			(xy 82.55 251.46) (xy 76.2 251.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2bfef852-aefc-4ade-a479-2072039282fe")
 	)
 	(wire
 		(pts
@@ -8604,6 +9043,16 @@
 			(type default)
 		)
 		(uuid "3043d1a5-dab8-437f-86c2-83df44d7b3ea")
+	)
+	(wire
+		(pts
+			(xy 140.97 116.84) (xy 143.51 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30a60d42-dcef-4a91-a79f-e006e220934c")
 	)
 	(wire
 		(pts
@@ -8777,6 +9226,16 @@
 	)
 	(wire
 		(pts
+			(xy 71.12 283.21) (xy 77.47 283.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c1c7075-57a0-4f7b-9b5b-c6f7c936c968")
+	)
+	(wire
+		(pts
 			(xy 97.79 199.39) (xy 97.79 207.01)
 		)
 		(stroke
@@ -8917,16 +9376,6 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 121.92) (xy 116.84 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "45000cd0-cf88-43fe-a7d9-83ea18524df5")
-	)
-	(wire
-		(pts
 			(xy 359.41 135.89) (xy 369.57 135.89)
 		)
 		(stroke
@@ -8997,7 +9446,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 134.62) (xy 116.84 134.62)
+			(xy 99.06 134.62) (xy 119.38 134.62)
 		)
 		(stroke
 			(width 0)
@@ -9077,23 +9526,13 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 111.76) (xy 119.38 111.76)
+			(xy 115.57 111.76) (xy 120.65 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "4fcc8e6f-335a-41ee-9a43-5077dec73f35")
-	)
-	(wire
-		(pts
-			(xy 139.7 116.84) (xy 143.51 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5016cc35-d802-4cb3-afd3-6f21f3a16dde")
 	)
 	(wire
 		(pts
@@ -9184,16 +9623,6 @@
 			(type default)
 		)
 		(uuid "5583151e-b8c0-405b-adfd-527ccb0ae4ca")
-	)
-	(wire
-		(pts
-			(xy 116.84 121.92) (xy 119.38 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "56d36fc2-c290-45ea-bf76-57d594417d2b")
 	)
 	(wire
 		(pts
@@ -9294,6 +9723,16 @@
 			(type default)
 		)
 		(uuid "5beb1f84-fc97-4b0a-a53c-14a903905d41")
+	)
+	(wire
+		(pts
+			(xy 140.97 124.46) (xy 146.05 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c7962a1-161c-4b8a-9bbc-9cedebd2f560")
 	)
 	(wire
 		(pts
@@ -9457,6 +9896,16 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 111.76) (xy 146.05 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b5a8277-e6b6-4619-89fa-f06fef2ffe9c")
+	)
+	(wire
+		(pts
 			(xy 482.6 90.17) (xy 490.22 90.17)
 		)
 		(stroke
@@ -9577,6 +10026,16 @@
 	)
 	(wire
 		(pts
+			(xy 119.38 124.46) (xy 119.38 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "715078a1-487e-41d6-8762-fb452dfc47ec")
+	)
+	(wire
+		(pts
 			(xy 335.28 114.3) (xy 335.28 116.84)
 		)
 		(stroke
@@ -9594,6 +10053,16 @@
 			(type default)
 		)
 		(uuid "72cdfd02-910f-408c-8a20-8a9ffd96f59f")
+	)
+	(wire
+		(pts
+			(xy 143.51 119.38) (xy 140.97 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7309bafc-4d69-43f7-b80c-d3d4a7dbe912")
 	)
 	(wire
 		(pts
@@ -9747,6 +10216,16 @@
 	)
 	(wire
 		(pts
+			(xy 71.12 248.92) (xy 77.47 248.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fd8eea6-8b3a-4367-afdf-d88de9f6a865")
+	)
+	(wire
+		(pts
 			(xy 115.57 270.51) (xy 115.57 273.05)
 		)
 		(stroke
@@ -9787,17 +10266,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 248.92) (xy 82.55 248.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "837a7832-b8e0-4ca5-8063-bad310625ca1")
-	)
-	(wire
-		(pts
-			(xy 156.21 121.92) (xy 166.37 121.92)
+			(xy 156.21 124.46) (xy 166.37 124.46)
 		)
 		(stroke
 			(width 0)
@@ -9914,6 +10383,16 @@
 			(type default)
 		)
 		(uuid "896c45dd-4cd4-4a1e-bd4a-538dd7a08125")
+	)
+	(wire
+		(pts
+			(xy 143.51 116.84) (xy 143.51 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89e61fa1-e571-4c20-8b0a-83c0c26062c8")
 	)
 	(wire
 		(pts
@@ -10087,7 +10566,17 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 283.21) (xy 67.31 283.21)
+			(xy 76.2 285.75) (xy 77.47 285.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "945ab4d1-acf8-496e-bfb4-61e594bb49c8")
+	)
+	(wire
+		(pts
+			(xy 59.69 283.21) (xy 63.5 283.21)
 		)
 		(stroke
 			(width 0)
@@ -10244,6 +10733,16 @@
 			(type default)
 		)
 		(uuid "9e75f907-5623-4e13-8a52-37dc7d5e7871")
+	)
+	(wire
+		(pts
+			(xy 76.2 251.46) (xy 77.47 251.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f8b42fc-baed-4d54-b209-a1429ba2edb2")
 	)
 	(wire
 		(pts
@@ -10497,16 +10996,6 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 111.76) (xy 146.05 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b7a2c62f-a65f-4a15-b803-9df3d2520392")
-	)
-	(wire
-		(pts
 			(xy 520.7 114.3) (xy 520.7 115.57)
 		)
 		(stroke
@@ -10754,6 +11243,16 @@
 			(type default)
 		)
 		(uuid "ce5a39c1-708b-4faa-be45-16bddc6d0f11")
+	)
+	(wire
+		(pts
+			(xy 143.51 139.7) (xy 143.51 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ced6a1b3-8d63-43db-8019-855ac8a21ca2")
 	)
 	(wire
 		(pts
@@ -11047,7 +11546,7 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 121.92) (xy 166.37 111.76)
+			(xy 166.37 124.46) (xy 166.37 111.76)
 		)
 		(stroke
 			(width 0)
@@ -11124,6 +11623,16 @@
 			(type default)
 		)
 		(uuid "ea3c8d35-08c6-4db6-a702-d6fea2f149a1")
+	)
+	(wire
+		(pts
+			(xy 120.65 124.46) (xy 119.38 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eaa8e942-d345-40aa-8332-4cf4253bc75f")
 	)
 	(wire
 		(pts
@@ -11257,16 +11766,6 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 121.92) (xy 146.05 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4574832-c1cb-4c8c-b8b0-f6f995ff2071")
-	)
-	(wire
-		(pts
 			(xy 76.2 186.69) (xy 90.17 186.69)
 		)
 		(stroke
@@ -11287,7 +11786,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 248.92) (xy 67.31 248.92)
+			(xy 59.69 248.92) (xy 63.5 248.92)
 		)
 		(stroke
 			(width 0)
@@ -12375,164 +12874,6 @@
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
 					(reference "C59")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:6N137M")
-		(at 85.09 290.83 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "04b45c25-b5de-4e3f-8069-ab162f366b12")
-		(property "Reference" "U6"
-			(at 91.44 273.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "6N137M"
-			(at 91.44 275.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:DIP-8"
-			(at 82.55 302.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://media.digikey.com/PDF/Data%20Sheets/Lite-On%20PDFs/6N137%20Series.pdf"
-			(at 82.55 302.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Ngõ ra: Open Collector, Số chân: 8"
-			(at 83.82 302.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 85.09 302.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "6N137M Logic Output Optoisolator 2500Vrms 1 Channel, 8-DIP"
-			(at 82.55 302.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/6n137m-logic-output-optoisolator-2500vrms-1-channel-8-dip"
-			(at 82.55 302.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property " Supply part number" ""
-			(at 85.09 290.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Field7" ""
-			(at 85.09 290.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" ""
-			(at 85.09 290.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 85.09 290.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part name" ""
-			(at 85.09 290.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "6"
-			(uuid "f6b2cfa9-898e-4236-820d-01937e6a7c47")
-		)
-		(pin "5"
-			(uuid "0d65041f-b9b8-4d1b-9062-ca8a1adef67e")
-		)
-		(pin "7"
-			(uuid "b6ebcdad-c8b1-426a-8b3b-42ef4f8b85a3")
-		)
-		(pin "8"
-			(uuid "1452d690-cc03-44fd-aa58-c5f3b817c626")
-		)
-		(pin "2"
-			(uuid "16a712a0-6821-4c3b-80c6-58ed06e077e1")
-		)
-		(pin "3"
-			(uuid "bc95a77e-8733-4bd6-a0b6-bca5f0425201")
-		)
-		(pin "4"
-			(uuid "73bc6e65-8e72-4d2b-9998-6b145b9df1b7")
-		)
-		(pin "1"
-			(uuid "fc954ac5-cba8-4cf9-a197-c5a408f8a37e")
-		)
-		(instances
-			(project "PFC & LLC"
-				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -18121,7 +18462,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Res_510R_0603_1%")
-		(at 67.31 283.21 0)
+		(at 63.5 283.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18130,7 +18471,7 @@
 		(fields_autoplaced yes)
 		(uuid "72008880-d520-494a-a5ce-9441a0eba0a2")
 		(property "Reference" "R27"
-			(at 71.12 276.86 0)
+			(at 67.31 276.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18138,7 +18479,7 @@
 			)
 		)
 		(property "Value" "510R/1%/1_10W"
-			(at 71.12 279.4 0)
+			(at 67.31 279.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18146,7 +18487,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 107.188 271.78 90)
+			(at 103.378 271.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18155,7 +18496,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 106.934 282.448 90)
+			(at 103.124 282.448 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18164,7 +18505,7 @@
 			)
 		)
 		(property "Description" "Res 510R Ohm 0603 1%"
-			(at 107.696 276.352 90)
+			(at 103.886 276.352 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18173,7 +18514,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 107.442 270.764 90)
+			(at 103.632 270.764 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18182,7 +18523,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 510Ohm 0603 1%"
-			(at 107.188 269.748 90)
+			(at 103.378 269.748 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18191,7 +18532,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-510-ohm-0603-1-"
-			(at 108.458 262.636 90)
+			(at 104.648 262.636 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18378,6 +18719,86 @@
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
 					(reference "U9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:EER35_Transformer_Horizontal")
+		(at 120.65 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "744a56c5-5f37-4a78-92eb-46202869a462")
+		(property "Reference" "L4"
+			(at 130.8227 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EER35_Transformer_Horizontal"
+			(at 130.8227 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Transformer_ER35_Horizontal"
+			(at 126.492 128.524 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.716 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 125.603 126.619 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "12"
+			(uuid "6250e0a2-74de-4a86-8f4e-2a3ef4d5ee03")
+		)
+		(pin "9"
+			(uuid "3fd904eb-7c23-4eaf-a985-caba7344278a")
+		)
+		(pin "8"
+			(uuid "90437247-6d28-4c41-9f0e-b7e28e32afac")
+		)
+		(pin "1"
+			(uuid "86f1b6ab-694d-41ea-bb74-90aac2d14fd2")
+		)
+		(pin "16"
+			(uuid "f87ee50d-d6e6-406c-a783-6ab9640a2244")
+		)
+		(pin "11"
+			(uuid "55c3b6a1-f2d9-4d87-9339-bc16ae68c5c5")
+		)
+		(instances
+			(project ""
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
+					(reference "L4")
 					(unit 1)
 				)
 			)
@@ -19243,164 +19664,6 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:6N137M")
-		(at 85.09 256.54 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "832e02f5-2d02-49c5-a1f2-1da3dedae423")
-		(property "Reference" "U5"
-			(at 91.44 238.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "6N137M"
-			(at 91.44 241.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:DIP-8"
-			(at 82.55 267.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://media.digikey.com/PDF/Data%20Sheets/Lite-On%20PDFs/6N137%20Series.pdf"
-			(at 82.55 267.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Ngõ ra: Open Collector, Số chân: 8"
-			(at 83.82 267.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 85.09 267.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "6N137M Logic Output Optoisolator 2500Vrms 1 Channel, 8-DIP"
-			(at 82.55 267.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/6n137m-logic-output-optoisolator-2500vrms-1-channel-8-dip"
-			(at 82.55 267.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property " Supply part number" ""
-			(at 85.09 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Field7" ""
-			(at 85.09 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" ""
-			(at 85.09 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 85.09 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part name" ""
-			(at 85.09 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "6"
-			(uuid "ae02a1da-e66d-49c0-80df-99b7ac876dd9")
-		)
-		(pin "5"
-			(uuid "ed2ce370-65b4-47d1-98af-d7c3e745f5cf")
-		)
-		(pin "7"
-			(uuid "7d99c186-99aa-4d63-958b-0eeea57d0a8e")
-		)
-		(pin "8"
-			(uuid "6fd671a4-9839-4500-b066-5f15965caf8f")
-		)
-		(pin "2"
-			(uuid "8d0c3d20-a327-4921-bb82-7d7a734be81e")
-		)
-		(pin "3"
-			(uuid "94530812-6f5c-4f67-942f-62f76c28f792")
-		)
-		(pin "4"
-			(uuid "7e2175dc-682b-457a-8816-ac1f7732646f")
-		)
-		(pin "1"
-			(uuid "59b74f97-0c2e-4bf7-8616-6ce19daa7dfd")
-		)
-		(instances
-			(project ""
-				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "U5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND2")
 		(at 323.85 200.66 0)
 		(unit 1)
@@ -19872,6 +20135,121 @@
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
 					(reference "#PWR053")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:6N137_SMD")
+		(at 81.28 256.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8bb02ce4-ff74-407c-8dba-8fee9fc352d4")
+		(property "Reference" "U5"
+			(at 88.9 238.76 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "6N137_SMD"
+			(at 88.9 241.3 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:SOIC8_SMD"
+			(at 78.994 261.112 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://rocelec.widen.net/view/pdf/x8jl2cmeks/ONSM-S-A0006115631-1.pdf?t.download=true&u=5oefqw"
+			(at 84.074 260.858 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Ngõ ra: Open Collector, Số chân: 8"
+			(at 83.82 263.398 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 87.122 261.112 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "6N137M Logic Output Optoisolator 2500Vrms 1 Channel, 8-DIP"
+			(at 82.55 262.128 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/6n137sm-logic-output-optoisolator-2500vrms-1-channel-8-smd"
+			(at 83.058 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "2f82899e-6839-4249-8346-c42dfcb80b85")
+		)
+		(pin "8"
+			(uuid "6b2f621b-787e-4189-a117-64fe261c453b")
+		)
+		(pin "6"
+			(uuid "b3396782-99fc-4e00-b23d-6f65dd54dcaf")
+		)
+		(pin "7"
+			(uuid "5f744286-6866-42ab-992d-e8cdc85d342a")
+		)
+		(pin "1"
+			(uuid "18c8957c-b1ff-45e1-b7a3-5a5ccf6020f5")
+		)
+		(pin "2"
+			(uuid "3bced26e-089d-4e26-80db-459a48a9b2d2")
+		)
+		(pin "5"
+			(uuid "633dede7-080d-401c-8621-9dcad1cee133")
+		)
+		(pin "4"
+			(uuid "0ab38e0d-93c0-42b1-a223-84d2a9b14cf8")
+		)
+		(instances
+			(project ""
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
+					(reference "U5")
 					(unit 1)
 				)
 			)
@@ -22278,33 +22656,53 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:Transformer")
-		(at 119.38 121.92 0)
+		(lib_id "charge_battery_sym_lib:6N137_SMD")
+		(at 81.28 290.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c1b540ba-5c20-40ae-a7d7-5b1077c20d04")
-		(property "Reference" "L4"
-			(at 129.5527 106.68 0)
+		(uuid "bccd020c-47bb-4767-9b98-5de7f120165d")
+		(property "Reference" "U6"
+			(at 88.9 273.05 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.524 1.524)
 				)
 			)
 		)
-		(property "Value" "Transformer"
-			(at 129.5527 109.22 0)
+		(property "Value" "6N137_SMD"
+			(at 88.9 275.59 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.524 1.524)
 				)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Transformer_ER35"
-			(at 125.222 127.254 0)
+		(property "Footprint" "charge_battery_footprint_lib:SOIC8_SMD"
+			(at 78.994 295.402 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://rocelec.widen.net/view/pdf/x8jl2cmeks/ONSM-S-A0006115631-1.pdf?t.download=true&u=5oefqw"
+			(at 84.074 295.148 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Ngõ ra: Open Collector, Số chân: 8"
+			(at 83.82 297.688 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22312,8 +22710,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 139.446 109.22 0)
+		(property "Supply name" "Thegioiic"
+			(at 87.122 295.402 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22321,8 +22719,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "L_m = 325uH"
-			(at 124.333 125.349 0)
+		(property "Supply part number" "6N137M Logic Output Optoisolator 2500Vrms 1 Channel, 8-DIP"
+			(at 82.55 296.418 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22330,79 +22728,43 @@
 				(hide yes)
 			)
 		)
-		(property " Supply part number" ""
-			(at 119.38 121.92 0)
+		(property "Supply URL" "https://www.thegioiic.com/6n137sm-logic-output-optoisolator-2500vrms-1-channel-8-smd"
+			(at 83.058 295.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Field7" ""
-			(at 119.38 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" ""
-			(at 119.38 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 119.38 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Nhật Tảo Market"
-			(at 124.714 129.794 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part name" ""
-			(at 119.38 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "9f57d540-ea8d-4a31-afaf-51133a88ccef")
-		)
-		(pin "3"
-			(uuid "593c358f-45a0-40a7-b4be-42c8bdccdf4e")
 		)
 		(pin "2"
-			(uuid "4135bdd0-7d3e-4d26-95c5-aa35a30bdaf6")
-		)
-		(pin "1"
-			(uuid "edb96a65-3b47-42bd-8e6e-0e2af132299c")
+			(uuid "4faa09eb-40bf-4005-99c6-277d28a34e58")
 		)
 		(pin "4"
-			(uuid "4b4f6f4e-884c-4363-bd46-0c072c47173c")
+			(uuid "c21ae267-8e4e-422e-9224-7ecc2f6f469c")
+		)
+		(pin "1"
+			(uuid "bcc2b66a-c7c7-48e3-80e0-5948398c9e43")
+		)
+		(pin "3"
+			(uuid "c32bf0ad-6d0b-4ba4-8e54-d12940982231")
+		)
+		(pin "7"
+			(uuid "f63f9d6b-b9b5-4800-aea7-898384166f6f")
+		)
+		(pin "6"
+			(uuid "7feb7fdd-031e-4ac1-bc01-67d683e0c9db")
+		)
+		(pin "8"
+			(uuid "6600775c-9689-46e6-bce1-cd08ed92e655")
+		)
+		(pin "5"
+			(uuid "30a861ca-583d-407e-890e-c8385ab34878")
 		)
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "L4")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -23789,16 +24151,15 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Res_510R_0603_1%")
-		(at 67.31 248.92 0)
+		(at 63.5 248.92 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "dc56068b-0b8d-4716-bd29-413e3774ea06")
 		(property "Reference" "R26"
-			(at 71.12 242.57 0)
+			(at 66.548 243.332 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23806,7 +24167,7 @@
 			)
 		)
 		(property "Value" "510R/1%/1_10W"
-			(at 71.12 245.11 0)
+			(at 67.31 245.872 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23814,7 +24175,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 107.188 237.49 90)
+			(at 103.378 237.49 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23823,7 +24184,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 106.934 248.158 90)
+			(at 103.124 248.158 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23832,7 +24193,7 @@
 			)
 		)
 		(property "Description" "Res 510R Ohm 0603 1%"
-			(at 107.696 242.062 90)
+			(at 103.886 242.062 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23841,7 +24202,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 107.442 236.474 90)
+			(at 103.632 236.474 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23850,7 +24211,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 510Ohm 0603 1%"
-			(at 107.188 235.458 90)
+			(at 103.378 235.458 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23859,7 +24220,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-510-ohm-0603-1-"
-			(at 108.458 228.346 90)
+			(at 104.648 228.346 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25314,7 +25675,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:IDH06G65C6")
-		(at 151.13 121.92 0)
+		(at 151.13 124.46 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -25322,7 +25683,7 @@
 		(dnp no)
 		(uuid "f99ae515-4af6-4402-a6fb-0816b3b9048d")
 		(property "Reference" "D8"
-			(at 151.13 124.968 0)
+			(at 151.13 127.508 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25330,7 +25691,7 @@
 			)
 		)
 		(property "Value" "IDH06G65C6"
-			(at 151.13 127.254 0)
+			(at 151.13 129.794 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25338,7 +25699,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:TO-220-2_MCH"
-			(at 139.7 104.648 0)
+			(at 139.7 107.188 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25347,7 +25708,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/196/Infineon_IDH06G65C6_DS_v02_00_EN-1131100.pdf"
-			(at 147.066 104.394 0)
+			(at 147.066 106.934 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25356,7 +25717,7 @@
 			)
 		)
 		(property "Description" "Schottky Diodes & Rectifiers SIC DIODES"
-			(at 148.336 104.14 0)
+			(at 148.336 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25365,7 +25726,7 @@
 			)
 		)
 		(property "Supply name" "Mouser"
-			(at 147.32 105.156 0)
+			(at 147.32 107.696 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25374,7 +25735,7 @@
 			)
 		)
 		(property "Supply part number" "726-IDH06G65C6XKSA1"
-			(at 145.034 104.394 0)
+			(at 145.034 106.934 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25383,7 +25744,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Infineon-Technologies/IDH06G65C6XKSA1?qs=HXFqYaX1Q2y0Eo%2FTJueHsw%3D%3D"
-			(at 147.066 104.394 0)
+			(at 147.066 106.934 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25392,7 +25753,7 @@
 			)
 		)
 		(property " Supply part number" ""
-			(at 151.13 121.92 0)
+			(at 151.13 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25401,7 +25762,7 @@
 			)
 		)
 		(property "Field7" ""
-			(at 151.13 121.92 0)
+			(at 151.13 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25410,7 +25771,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 151.13 121.92 0)
+			(at 151.13 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25419,7 +25780,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 151.13 121.92 0)
+			(at 151.13 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25428,7 +25789,7 @@
 			)
 		)
 		(property "Supply part name" ""
-			(at 151.13 121.92 0)
+			(at 151.13 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
