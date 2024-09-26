@@ -340,7 +340,7 @@
 				)
 			)
 		)
-		(symbol "charge_battery_sym_lib:BYC10-600127"
+		(symbol "charge_battery_sym_lib:1N5408"
 			(pin_numbers hide)
 			(pin_names
 				(offset 0.254) hide)
@@ -355,7 +355,7 @@
 					)
 				)
 			)
-			(property "Value" "BYC10-600,127"
+			(property "Value" "1N5408"
 				(at 5.08 -3.81 0)
 				(effects
 					(font
@@ -363,7 +363,7 @@
 					)
 				)
 			)
-			(property "Footprint" "charge_battery_footprint_lib:TO-220-2_MCH"
+			(property "Footprint" "charge_battery_footprint_lib:DO-201AD-2"
 				(at 1.27 -12.7 0)
 				(effects
 					(font
@@ -373,7 +373,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.ween-semi.com/documents/BYC10-600.pdf?t=636456811170187779"
+			(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Fairchild%20PDFs/1N5400.pdf"
 				(at 1.27 -12.7 0)
 				(effects
 					(font
@@ -383,7 +383,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Rectifiers 10A, 600V "
+			(property "Description" "Rectifiers 3A, 1KV "
 				(at -0.762 -12.7 0)
 				(effects
 					(font
@@ -392,7 +392,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply name" "Mouser"
+			(property "Supply name" "Thegioiic"
 				(at 1.778 -12.7 0)
 				(effects
 					(font
@@ -401,7 +401,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply part number" "771-BYC10-600127"
+			(property "Supply part number" "1N5408"
 				(at 1.016 -12.7 0)
 				(effects
 					(font
@@ -410,7 +410,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply URL" "https://www.mouser.vn/ProductDetail/WeEn-Semiconductors/BYC10-600127?qs=me8TqzrmIYWRbKqfcOk3Bg%3D%3D"
+			(property "Supply URL" "https://www.thegioiic.com/1n5408-diode-chinh-luu-3a-1kv"
 				(at -0.762 -12.7 0)
 				(effects
 					(font
@@ -428,7 +428,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "BYC10-600127_1_1"
+			(symbol "1N5408_1_1"
 				(polyline
 					(pts
 						(xy 2.54 0) (xy 3.4798 0)
@@ -550,7 +550,7 @@
 					)
 				)
 			)
-			(symbol "BYC10-600127_1_2"
+			(symbol "1N5408_1_2"
 				(polyline
 					(pts
 						(xy -1.905 3.81) (xy 1.905 3.81)
@@ -12064,7 +12064,7 @@
 	)
 	(wire
 		(pts
-			(xy 328.93 78.74) (xy 328.93 69.85)
+			(xy 328.93 68.58) (xy 328.93 78.74)
 		)
 		(stroke
 			(width 0)
@@ -12271,16 +12271,6 @@
 			(type default)
 		)
 		(uuid "3474cb58-15a8-45f3-a0e4-6135263f7004")
-	)
-	(wire
-		(pts
-			(xy 328.93 69.85) (xy 346.71 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "35d8e2ae-a9be-4597-8a97-a3dfb1909ea6")
 	)
 	(wire
 		(pts
@@ -13514,7 +13504,7 @@
 	)
 	(wire
 		(pts
-			(xy 372.11 69.85) (xy 372.11 78.74)
+			(xy 372.11 68.58) (xy 372.11 78.74)
 		)
 		(stroke
 			(width 0)
@@ -13561,6 +13551,16 @@
 			(type default)
 		)
 		(uuid "b178d498-84bf-41be-b7f9-a0f2f11ec44b")
+	)
+	(wire
+		(pts
+			(xy 328.93 68.58) (xy 345.44 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1dce21d-e359-4af7-8779-1411adcf9a9c")
 	)
 	(wire
 		(pts
@@ -13751,6 +13751,16 @@
 			(type default)
 		)
 		(uuid "bff4c2c3-80fb-4681-bde3-778ed3c572c1")
+	)
+	(wire
+		(pts
+			(xy 355.6 68.58) (xy 372.11 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0560988-b873-44bf-aadf-4088053829cb")
 	)
 	(wire
 		(pts
@@ -14194,16 +14204,6 @@
 	)
 	(wire
 		(pts
-			(xy 356.87 69.85) (xy 372.11 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9efbd85-862f-45ae-a203-dc79a504b23e")
-	)
-	(wire
-		(pts
 			(xy 226.06 158.75) (xy 226.06 215.9)
 		)
 		(stroke
@@ -14339,7 +14339,7 @@
 		(uuid e14947eb-7012-465e-b751-e8e022597523)
 	)
 	(rectangle
-		(start 93.98 139.192)
+		(start 82.55 139.192)
 		(end 188.468 203.2)
 		(stroke
 			(width 0)
@@ -15750,7 +15750,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ed442d1-21c9-4d71-b1fa-7a35a66c567e")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR05"
 			(at 156.21 198.12 0)
 			(effects
 				(font
@@ -15800,7 +15800,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR07")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -16096,7 +16096,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c2327a7-0ec7-4450-8945-e76be7f9fbc9")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR016"
 			(at 391.16 128.27 0)
 			(effects
 				(font
@@ -16146,7 +16146,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR015")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -16300,7 +16300,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2ed3865f-2420-43dd-aca0-3238d31c0690")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR07"
 			(at 172.72 279.4 0)
 			(effects
 				(font
@@ -16350,7 +16350,104 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR06")
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:1N5408")
+		(at 345.44 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "30cf6a00-e515-4396-87e8-483a50ea4040")
+		(property "Reference" "D4"
+			(at 350.52 62.23 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "1N5408"
+			(at 350.52 64.77 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:DO-201AD-2"
+			(at 346.71 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Fairchild%20PDFs/1N5400.pdf"
+			(at 346.71 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Rectifiers 3A, 1KV"
+			(at 344.678 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 347.218 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "1N5408"
+			(at 346.456 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/1n5408-diode-chinh-luu-3a-1kv"
+			(at 344.678 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fea51245-1b13-491d-8a32-cf4fa936f056")
+		)
+		(pin "1"
+			(uuid "be168f01-e809-4e4d-b13f-086d06771545")
+		)
+		(instances
+			(project ""
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -16797,7 +16894,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "38cf41fa-ee96-4fbb-b464-23bd5ad2d132")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR013"
 			(at 215.9 281.94 0)
 			(effects
 				(font
@@ -16847,7 +16944,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR012")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -17005,7 +17102,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3cb6238a-57a8-459a-8953-0a3958097445")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR014"
 			(at 215.9 297.18 0)
 			(effects
 				(font
@@ -17055,7 +17152,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR013")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -18470,7 +18567,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64012a1c-034d-4206-abf7-ade9b387cdb2")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR08"
 			(at 176.53 167.64 0)
 			(effects
 				(font
@@ -18520,7 +18617,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR04")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -19784,7 +19881,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "903daa5b-f5e9-4172-aa2e-7018885d9517")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR011"
 			(at 215.9 255.27 0)
 			(effects
 				(font
@@ -19834,7 +19931,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR010")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -19849,7 +19946,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "95b7c005-6603-4e1c-8d55-dfb99af21c11")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR012"
 			(at 215.9 271.78 0)
 			(effects
 				(font
@@ -19899,7 +19996,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR011")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -20510,7 +20607,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a82d87f2-2dea-4fd0-b7c5-e3e951ec83e2")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR015"
 			(at 321.31 226.06 0)
 			(effects
 				(font
@@ -20560,7 +20657,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR014")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -21167,7 +21264,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b7cd97c1-c060-4bdc-9c29-50a8d72875ad")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR017"
 			(at 480.06 185.42 0)
 			(effects
 				(font
@@ -21217,7 +21314,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR016")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -21233,7 +21330,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bbeb3613-00cb-422e-821b-a86a22b32b07")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR04"
 			(at 146.05 266.7 0)
 			(effects
 				(font
@@ -21283,7 +21380,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR03")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -21724,7 +21821,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c312ba50-c835-4ef5-9685-7aa93135a886")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR09"
 			(at 187.96 293.37 0)
 			(effects
 				(font
@@ -21774,7 +21871,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR08")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -21790,7 +21887,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4ffa4e4-dccd-4260-bdad-ccba09aa3980")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR010"
 			(at 214.63 144.78 0)
 			(effects
 				(font
@@ -21840,7 +21937,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR09")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -23646,103 +23743,6 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:BYC10-600127")
-		(at 346.71 69.85 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e97ea7d1-acbf-47de-adaf-4a173c3fe73c")
-		(property "Reference" "D4"
-			(at 351.79 63.5 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "BYC10-600,127"
-			(at 351.79 66.04 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:TO-220-2_MCH"
-			(at 347.98 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ween-semi.com/documents/BYC10-600.pdf?t=636456811170187779"
-			(at 347.98 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Rectifiers 10A, 600V"
-			(at 345.948 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Mouser"
-			(at 348.488 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "771-BYC10-600127"
-			(at 347.726 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.mouser.vn/ProductDetail/WeEn-Semiconductors/BYC10-600127?qs=me8TqzrmIYWRbKqfcOk3Bg%3D%3D"
-			(at 345.948 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "85820c3a-5689-4f39-8f60-7506c8b9bfdd")
-		)
-		(pin "2"
-			(uuid "78371165-92e6-4aff-932e-7da2cc772bbd")
-		)
-		(instances
-			(project ""
-				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "D4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "charge_battery_sym_lib:Res_10R_2512_1%")
 		(at 313.69 105.41 0)
 		(unit 1)
@@ -24084,7 +24084,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f23b47d7-6657-478c-b46d-2f665f7fb66e")
-		(property "Reference" "#PWR0134"
+		(property "Reference" "#PWR03"
 			(at 133.35 180.34 0)
 			(effects
 				(font
@@ -24134,7 +24134,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR0134")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -24150,7 +24150,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f39a32e3-d75d-4804-83f7-7c227e370eaa")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR018"
 			(at 480.06 200.66 0)
 			(effects
 				(font
@@ -24200,7 +24200,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR017")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -24357,7 +24357,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f4f58932-afcf-4258-be75-020f98502800")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR06"
 			(at 170.18 260.35 0)
 			(effects
 				(font
@@ -24407,7 +24407,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
-					(reference "#PWR05")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
