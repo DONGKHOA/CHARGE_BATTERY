@@ -1526,6 +1526,169 @@
 				)
 			)
 		)
+		(symbol "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_1KV"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 1.016 2.794 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "100nF/1KV"
+				(at 0.254 5.334 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_1812"
+				(at -0.254 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0.254 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "10%, 1812"
+				(at 1.016 5.588 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply name" "Mouser"
+				(at 1.27 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply part number" "C1812C104KDRACTU"
+				(at 1.27 5.588 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.mouser.vn/ProductDetail/KEMET/C1812C104KDRACTU?qs=bKSwwZi%2FkPDxKxr8rInknw%3D%3D"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Ceramic_Cap_SMD_100nF_1KV_1_1"
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 2.2098 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.2098 -1.905) (xy 2.2098 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.8448 -1.905) (xy 2.8448 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.8448 0) (xy 3.81 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at -1.27 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 6.35 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "charge_battery_sym_lib:Ceramic_Cap_SMD_10uF_16V"
 			(pin_numbers hide)
 			(pin_names hide)
@@ -11340,6 +11503,12 @@
 		(uuid "5af92baf-b8b7-4271-8722-067cc06ab890")
 	)
 	(junction
+		(at 426.72 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5c4c7280-d656-4f8b-ab2c-a10c74f3ca3a")
+	)
+	(junction
 		(at 350.52 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11418,6 +11587,12 @@
 		(uuid "8a6bb9ac-e823-4180-b5a6-ebd57c855e7d")
 	)
 	(junction
+		(at 412.75 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8b01b951-f349-477e-aa34-adc199fe5ad8")
+	)
+	(junction
 		(at 205.74 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11446,12 +11621,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "92cd59e3-3463-4c36-8b75-d31e45b5d2fa")
-	)
-	(junction
-		(at 411.48 78.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "93ec8b06-1087-4700-b820-f63f3505e68b")
 	)
 	(junction
 		(at 261.62 215.9)
@@ -11508,6 +11677,12 @@
 		(uuid "a398babd-df14-4ca5-ad86-326fe0a07f6d")
 	)
 	(junction
+		(at 412.75 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a8714ec1-44ef-4b06-8de1-0a2cb680546c")
+	)
+	(junction
 		(at 143.51 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11532,6 +11707,12 @@
 		(uuid "b30d1432-6240-4fc6-8b5b-8c0fc49dc02f")
 	)
 	(junction
+		(at 369.57 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b55c6e74-eb61-4354-a7f0-4d5acc2f7e85")
+	)
+	(junction
 		(at 217.17 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11554,6 +11735,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cb1ccdbf-a08a-4cd3-b97a-c01e671a247f")
+	)
+	(junction
+		(at 369.57 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d4075d4b-f81e-4251-9827-235257700e85")
 	)
 	(junction
 		(at 297.18 105.41)
@@ -11655,7 +11842,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 92.71) (xy 411.48 118.11)
+			(xy 426.72 92.71) (xy 426.72 118.11)
 		)
 		(stroke
 			(width 0)
@@ -11695,7 +11882,7 @@
 	)
 	(wire
 		(pts
-			(xy 364.49 78.74) (xy 372.11 78.74)
+			(xy 364.49 78.74) (xy 369.57 78.74)
 		)
 		(stroke
 			(width 0)
@@ -11875,7 +12062,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 118.11) (xy 397.51 118.11)
+			(xy 426.72 118.11) (xy 412.75 118.11)
 		)
 		(stroke
 			(width 0)
@@ -12015,6 +12202,16 @@
 	)
 	(wire
 		(pts
+			(xy 369.57 93.98) (xy 369.57 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20716336-6742-4be3-b443-9267b4e22ad9")
+	)
+	(wire
+		(pts
 			(xy 466.09 215.9) (xy 466.09 214.63)
 		)
 		(stroke
@@ -12102,6 +12299,16 @@
 			(type default)
 		)
 		(uuid "2b260f46-0374-4af1-aef0-f3917ec9ba7f")
+	)
+	(wire
+		(pts
+			(xy 412.75 93.98) (xy 412.75 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cea478f-3193-4328-9c88-5ba2d0c1d8e1")
 	)
 	(wire
 		(pts
@@ -12285,6 +12492,16 @@
 	)
 	(wire
 		(pts
+			(xy 369.57 78.74) (xy 372.11 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "394e4888-7080-41ec-9f5d-a517d3439e12")
+	)
+	(wire
+		(pts
 			(xy 195.58 78.74) (xy 195.58 80.01)
 		)
 		(stroke
@@ -12422,6 +12639,16 @@
 			(type default)
 		)
 		(uuid "426c8e03-4084-45ff-be63-f88b1a955d9f")
+	)
+	(wire
+		(pts
+			(xy 426.72 78.74) (xy 429.26 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43b8e604-515a-4345-b1cb-23a312c82a42")
 	)
 	(wire
 		(pts
@@ -12765,6 +12992,16 @@
 	)
 	(wire
 		(pts
+			(xy 412.75 78.74) (xy 426.72 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66cc8bfe-d9cb-49df-9492-04a1732858c7")
+	)
+	(wire
+		(pts
 			(xy 261.62 123.19) (xy 261.62 173.99)
 		)
 		(stroke
@@ -12875,7 +13112,7 @@
 	)
 	(wire
 		(pts
-			(xy 350.52 118.11) (xy 383.54 118.11)
+			(xy 350.52 118.11) (xy 369.57 118.11)
 		)
 		(stroke
 			(width 0)
@@ -12945,7 +13182,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 78.74) (xy 411.48 87.63)
+			(xy 426.72 78.74) (xy 426.72 87.63)
 		)
 		(stroke
 			(width 0)
@@ -12962,6 +13199,16 @@
 			(type default)
 		)
 		(uuid "7a35f100-a6b5-4cc1-ba28-e76ca70983bb")
+	)
+	(wire
+		(pts
+			(xy 369.57 118.11) (xy 383.54 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7aabea0e-38e7-4f9d-8293-b2beb2640ae9")
 	)
 	(wire
 		(pts
@@ -12992,6 +13239,16 @@
 			(type default)
 		)
 		(uuid "7c76b115-dd1d-417e-a463-5d6b57956d07")
+	)
+	(wire
+		(pts
+			(xy 412.75 78.74) (xy 412.75 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d7a1d6c-5800-4b10-bc4d-f221d8253488")
 	)
 	(wire
 		(pts
@@ -13075,6 +13332,16 @@
 	)
 	(wire
 		(pts
+			(xy 412.75 118.11) (xy 397.51 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80c2bb4e-a5f8-46e9-965d-da725d9dc244")
+	)
+	(wire
+		(pts
 			(xy 207.01 289.56) (xy 215.9 289.56)
 		)
 		(stroke
@@ -13102,16 +13369,6 @@
 			(type default)
 		)
 		(uuid "83c6443c-9619-4960-90cf-0e27f9f614e7")
-	)
-	(wire
-		(pts
-			(xy 411.48 78.74) (xy 417.83 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "85674c5a-f9eb-45b4-a1d2-53913c171f9c")
 	)
 	(wire
 		(pts
@@ -13945,7 +14202,7 @@
 	)
 	(wire
 		(pts
-			(xy 397.51 78.74) (xy 411.48 78.74)
+			(xy 397.51 78.74) (xy 412.75 78.74)
 		)
 		(stroke
 			(width 0)
@@ -14202,6 +14459,16 @@
 			(type default)
 		)
 		(uuid "eb28082d-efbc-41de-ab6b-4490ecee0fbd")
+	)
+	(wire
+		(pts
+			(xy 369.57 78.74) (xy 369.57 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee987972-fc29-427c-9888-f6c75b5b18e0")
 	)
 	(wire
 		(pts
@@ -14580,7 +14847,7 @@
 	)
 	(global_label "PFC_VCC"
 		(shape output)
-		(at 417.83 78.74 0)
+		(at 429.26 78.74 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -14590,7 +14857,7 @@
 		)
 		(uuid "abaa54b5-7a0f-4814-a5ca-9c53f6013776")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 429.04 78.74 0)
+			(at 440.47 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16400,6 +16667,102 @@
 		)
 	)
 	(symbol
+		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_1KV")
+		(at 369.57 92.71 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "31d873cb-c6b3-49ad-8abc-9508dd15f34a")
+		(property "Reference" "C8"
+			(at 371.856 90.424 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100nF/1KV"
+			(at 370.84 93.472 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_1812"
+			(at 364.49 92.964 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 364.49 92.456 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "10%, 1812"
+			(at 363.982 91.694 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Mouser"
+			(at 364.49 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "C1812C104KDRACTU"
+			(at 363.982 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/KEMET/C1812C104KDRACTU?qs=bKSwwZi%2FkPDxKxr8rInknw%3D%3D"
+			(at 364.49 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9c9af5b7-8492-4f50-8d75-5e82668e2341")
+		)
+		(pin "2"
+			(uuid "fb65001b-8a5b-4021-8633-d29738a84de0")
+		)
+		(instances
+			(project ""
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "charge_battery_sym_lib:JS1-12V-F")
 		(at 160.02 170.18 270)
 		(mirror x)
@@ -17313,7 +17676,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Cap_Polarized_100uF_400V")
-		(at 411.48 87.63 270)
+		(at 426.72 87.63 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17321,7 +17684,7 @@
 		(dnp no)
 		(uuid "4a995e73-424b-47aa-b9eb-df114f5e0e86")
 		(property "Reference" "C24"
-			(at 413.766 90.424 90)
+			(at 429.006 90.424 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17330,7 +17693,7 @@
 			)
 		)
 		(property "Value" "100uF/400V"
-			(at 412.242 93.472 90)
+			(at 427.482 93.472 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17339,7 +17702,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:CP_Radial_D18.0mm_P7.50mm"
-			(at 425.958 82.042 0)
+			(at 441.198 82.042 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17348,7 +17711,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 425.958 75.184 0)
+			(at 441.198 75.184 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17357,7 +17720,7 @@
 			)
 		)
 		(property "Description" "Tụ hóa"
-			(at 425.45 82.042 0)
+			(at 440.69 82.042 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17366,7 +17729,7 @@
 			)
 		)
 		(property "Supply name " "ThegioiIC"
-			(at 425.958 84.836 0)
+			(at 441.198 84.836 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17375,7 +17738,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Hoá 100uF 400V 18x30mm Xuyên Lỗ"
-			(at 425.958 82.55 0)
+			(at 441.198 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17384,7 +17747,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-hoa-100uf-400v-18x30mm-xuyen-lo"
-			(at 425.958 75.184 0)
+			(at 441.198 75.184 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19345,6 +19708,102 @@
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
 					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_1KV")
+		(at 412.75 92.71 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7fb447fe-fc0e-414d-bd15-8bdb829e1d37")
+		(property "Reference" "C117"
+			(at 415.544 90.424 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100nF/1KV"
+			(at 413.766 93.472 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_1812"
+			(at 407.67 92.964 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 407.67 92.456 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "10%, 1812"
+			(at 407.162 91.694 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Mouser"
+			(at 407.67 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "C1812C104KDRACTU"
+			(at 407.162 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/KEMET/C1812C104KDRACTU?qs=bKSwwZi%2FkPDxKxr8rInknw%3D%3D"
+			(at 407.67 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c505d25e-1332-4681-a847-5a47cba3dce5")
+		)
+		(pin "2"
+			(uuid "1c3473da-ddfc-4250-a99b-aa608c838a02")
+		)
+		(instances
+			(project ""
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/bb0951d9-6e6a-40f4-8bc1-318f9d0bfafc"
+					(reference "C117")
 					(unit 1)
 				)
 			)
