@@ -5415,203 +5415,6 @@
 				)
 			)
 		)
-		(symbol "charge_battery_sym_lib:R_Shunt_50mR"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 1.016 2.032 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R_Shunt_50mR"
-				(at 2.794 -2.032 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "charge_battery_footprint_lib:R_Shunt"
-				(at -17.78 16.51 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at -7.366 15.748 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Shunt resistor"
-				(at -11.176 15.494 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply name" "BanLinhKien"
-				(at -15.621 15.367 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply part number" "Trở Shunt 50mR 1.2x10x7MM"
-				(at -15.621 15.367 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply URL" "https://banlinhkien.com/tro-shunt-50mr-10x6.5mm-p15749443.html"
-				(at -15.621 15.367 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R res shunt resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*Shunt*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_Shunt_50mR_0_1"
-				(polyline
-					(pts
-						(xy 1.524 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.096 0) (xy 6.35 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 0) (xy 1.905 1.016) (xy 2.286 0) (xy 2.667 -1.016) (xy 3.048 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.048 0) (xy 3.429 1.016) (xy 3.81 0) (xy 4.191 -1.016) (xy 4.572 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.572 0) (xy 4.953 1.016) (xy 5.334 0) (xy 5.715 -1.016) (xy 6.096 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_Shunt_50mR_1_1"
-				(pin passive line
-					(at 0 0 0)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "charge_battery_sym_lib:Res_100K_0603_1%"
 			(pin_numbers hide)
 			(pin_names hide)
@@ -6710,6 +6513,183 @@
 				)
 				(pin passive line
 					(at 7.62 0 180)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "charge_battery_sym_lib:Res_50mR_2512_1%"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "50mR/2512/1%"
+				(at 0.508 -6.096 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+				(at 0 -5.588 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Current Sense Resistors - SMD 4W 0.05 Ohms 1%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply Name" "Mouser"
+				(at 0.254 -5.842 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply Part Number" "660-TLRH3APTTE50L0F"
+				(at 0.508 -5.842 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.mouser.vn/ProductDetail/KOA-Speer/TLRH3APTTE50L0F?qs=eArw%252Bdd9rguJ2eBTdOyx8Q%3D%3D"
+				(at 0 -6.096 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Res_50mR_2512_1%_0_1"
+				(polyline
+					(pts
+						(xy -2.286 -2.54) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 -2.54) (xy -1.905 -1.524) (xy -1.524 -2.54) (xy -1.143 -3.556) (xy -0.762 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -2.54) (xy 1.143 -1.524) (xy 1.524 -2.54) (xy 1.905 -3.556) (xy 2.286 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Res_50mR_2512_1%_1_1"
+				(polyline
+					(pts
+						(xy -0.762 -2.54) (xy -0.381 -1.524) (xy 0 -2.54) (xy 0.381 -3.556) (xy 0.762 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -3.81 -2.54 0)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 -2.54 180)
 					(length 1.27)
 					(name "~"
 						(effects
@@ -12747,7 +12727,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0435eb69-30ca-4ced-80b6-21951e574794")
-		(property "Reference" "C59"
+		(property "Reference" "C61"
 			(at 485.648 120.65 90)
 			(effects
 				(font
@@ -12873,7 +12853,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C59")
+					(reference "C61")
 					(unit 1)
 				)
 			)
@@ -13228,7 +13208,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "198d8ced-48b4-42cb-aeb4-8016594a0a09")
-		(property "Reference" "C62"
+		(property "Reference" "C64"
 			(at 513.08 190.246 90)
 			(effects
 				(font
@@ -13354,7 +13334,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C62")
+					(reference "C64")
 					(unit 1)
 				)
 			)
@@ -13369,7 +13349,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1b6187af-82fe-4b9c-9e67-5e88480889c9")
-		(property "Reference" "C37"
+		(property "Reference" "C39"
 			(at 169.672 130.048 90)
 			(effects
 				(font
@@ -13450,7 +13430,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C37")
+					(reference "C39")
 					(unit 1)
 				)
 			)
@@ -13465,7 +13445,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1f73a907-3d83-4ac3-a307-12c9bf4a8ca2")
-		(property "Reference" "C54"
+		(property "Reference" "C56"
 			(at 401.066 189.484 90)
 			(effects
 				(font
@@ -13591,7 +13571,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C54")
+					(reference "C56")
 					(unit 1)
 				)
 			)
@@ -13606,7 +13586,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1fbabf0d-3942-4a38-8a61-6e9e24e99bcc")
-		(property "Reference" "C61"
+		(property "Reference" "C63"
 			(at 500.126 120.904 90)
 			(effects
 				(font
@@ -13732,7 +13712,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C61")
+					(reference "C63")
 					(unit 1)
 				)
 			)
@@ -13747,7 +13727,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "20ad82e1-7789-4272-baf8-eed155bc25bf")
-		(property "Reference" "C42"
+		(property "Reference" "C44"
 			(at 324.358 163.83 90)
 			(effects
 				(font
@@ -13873,7 +13853,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C42")
+					(reference "C44")
 					(unit 1)
 				)
 			)
@@ -14613,7 +14593,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2c6fe8cb-e65f-4748-b92e-5c8f9923326a")
-		(property "Reference" "C60"
+		(property "Reference" "C62"
 			(at 500.126 95.504 90)
 			(effects
 				(font
@@ -14739,7 +14719,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C60")
+					(reference "C62")
 					(unit 1)
 				)
 			)
@@ -15501,7 +15481,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3a3c8676-529d-4ebf-8cb9-3b7997430e04")
-		(property "Reference" "C44"
+		(property "Reference" "C46"
 			(at 338.836 164.084 90)
 			(effects
 				(font
@@ -15627,7 +15607,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C44")
+					(reference "C46")
 					(unit 1)
 				)
 			)
@@ -15642,7 +15622,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3ccb6c58-7bb7-400a-800c-12843f019cba")
-		(property "Reference" "C50"
+		(property "Reference" "C52"
 			(at 386.588 163.83 90)
 			(effects
 				(font
@@ -15768,7 +15748,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C50")
+					(reference "C52")
 					(unit 1)
 				)
 			)
@@ -15922,7 +15902,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3f9b28c8-9126-4e8c-b426-d9cd7dafaee0")
-		(property "Reference" "C45"
+		(property "Reference" "C47"
 			(at 342.9 119.888 90)
 			(effects
 				(font
@@ -16048,7 +16028,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C45")
+					(reference "C47")
 					(unit 1)
 				)
 			)
@@ -16270,7 +16250,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "43c286df-0723-4754-a0b0-84614e6fb346")
-		(property "Reference" "C57"
+		(property "Reference" "C59"
 			(at 454.406 120.65 90)
 			(effects
 				(font
@@ -16396,7 +16376,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C57")
+					(reference "C59")
 					(unit 1)
 				)
 			)
@@ -16541,7 +16521,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "52d66467-7694-417e-a81d-bf7f1c826e68")
-		(property "Reference" "C48"
+		(property "Reference" "C50"
 			(at 370.586 164.084 90)
 			(effects
 				(font
@@ -16667,7 +16647,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C48")
+					(reference "C50")
 					(unit 1)
 				)
 			)
@@ -16682,7 +16662,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "54a213f4-d955-44aa-b4c7-5153793965c1")
-		(property "Reference" "C46"
+		(property "Reference" "C48"
 			(at 356.108 163.83 90)
 			(effects
 				(font
@@ -16808,148 +16788,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C46")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:R_Shunt_50mR")
-		(at 233.68 111.76 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "54b3c48f-9655-4096-9629-9a176ce5cb69")
-		(property "Reference" "R37"
-			(at 235.458 114.554 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "R_Shunt_50mR"
-			(at 230.886 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:R_Shunt"
-			(at 215.9 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 226.314 96.012 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Shunt resistor"
-			(at 222.504 96.266 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "BanLinhKien"
-			(at 218.059 96.393 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Trở Shunt 50mR 1.2x10x7MM"
-			(at 218.059 96.393 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://banlinhkien.com/tro-shunt-50mr-10x6.5mm-p15749443.html"
-			(at 218.059 96.393 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property " Supply part number" ""
-			(at 233.68 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Field7" ""
-			(at 233.68 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" ""
-			(at 233.68 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 233.68 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part name" ""
-			(at 233.68 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "732a379e-41df-4bf3-b165-b645017936dc")
-		)
-		(pin "2"
-			(uuid "0e008718-7d0e-47ed-a9bd-d5dd483b15cd")
-		)
-		(instances
-			(project "PFC & LLC"
-				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "R37")
+					(reference "C48")
 					(unit 1)
 				)
 			)
@@ -17029,7 +16868,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "57b2508f-afd5-473e-8fa9-209c2f012aee")
-		(property "Reference" "C63"
+		(property "Reference" "C65"
 			(at 516.128 95.25 90)
 			(effects
 				(font
@@ -17155,7 +16994,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C63")
+					(reference "C65")
 					(unit 1)
 				)
 			)
@@ -17237,7 +17076,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "59790054-3d55-4eee-9fbc-383e782fb0f6")
-		(property "Reference" "C30"
+		(property "Reference" "C32"
 			(at 92.71 105.41 0)
 			(effects
 				(font
@@ -17361,7 +17200,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C30")
+					(reference "C32")
 					(unit 1)
 				)
 			)
@@ -17442,7 +17281,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5f6d1e3a-e3dd-4594-84c8-0a66078cb8c7")
-		(property "Reference" "C35"
+		(property "Reference" "C37"
 			(at 127 170.434 90)
 			(effects
 				(font
@@ -17568,7 +17407,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C35")
+					(reference "C37")
 					(unit 1)
 				)
 			)
@@ -17719,7 +17558,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6127d0dc-f77c-4292-b9b2-3b3fc5ccd6d4")
-		(property "Reference" "C56"
+		(property "Reference" "C58"
 			(at 447.294 185.42 90)
 			(effects
 				(font
@@ -17845,7 +17684,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C56")
+					(reference "C58")
 					(unit 1)
 				)
 			)
@@ -18067,7 +17906,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6b7e1311-29dc-471f-a406-a73169507c7b")
-		(property "Reference" "C53"
+		(property "Reference" "C55"
 			(at 401.066 164.084 90)
 			(effects
 				(font
@@ -18193,7 +18032,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C53")
+					(reference "C55")
 					(unit 1)
 				)
 			)
@@ -18814,7 +18653,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "76a7cd90-2580-4d06-b7f4-316bb0303ddc")
-		(property "Reference" "C51"
+		(property "Reference" "C53"
 			(at 386.588 189.23 90)
 			(effects
 				(font
@@ -18940,7 +18779,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C51")
+					(reference "C53")
 					(unit 1)
 				)
 			)
@@ -19532,7 +19371,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "80d6c43f-750e-4a70-adb0-b6a6e63cde39")
-		(property "Reference" "C43"
+		(property "Reference" "C45"
 			(at 327.66 190.4999 90)
 			(effects
 				(font
@@ -19658,7 +19497,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C43")
+					(reference "C45")
 					(unit 1)
 				)
 			)
@@ -19805,7 +19644,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "85ab7b8c-c9b2-4e65-ba29-bf1f58a441cf")
-		(property "Reference" "C31"
+		(property "Reference" "C33"
 			(at 111.506 244.094 90)
 			(effects
 				(font
@@ -19931,7 +19770,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C31")
+					(reference "C33")
 					(unit 1)
 				)
 			)
@@ -20265,7 +20104,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8d250de3-ceaf-414c-ad4c-4a5d2a149259")
-		(property "Reference" "C38"
+		(property "Reference" "C40"
 			(at 179.324 130.302 90)
 			(effects
 				(font
@@ -20346,7 +20185,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C38")
+					(reference "C40")
 					(unit 1)
 				)
 			)
@@ -20558,7 +20397,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "93d107bf-1c94-4747-8501-b5467690915a")
-		(property "Reference" "C29"
+		(property "Reference" "C31"
 			(at 87.63 168.402 90)
 			(effects
 				(font
@@ -20684,7 +20523,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C29")
+					(reference "C31")
 					(unit 1)
 				)
 			)
@@ -20699,7 +20538,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "93dd793a-e317-4e15-be29-b0e6c538029c")
-		(property "Reference" "C52"
+		(property "Reference" "C54"
 			(at 380.492 139.446 0)
 			(effects
 				(font
@@ -20825,7 +20664,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C52")
+					(reference "C54")
 					(unit 1)
 				)
 			)
@@ -20905,7 +20744,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "98095fa0-3b40-4bcb-a01a-8be5fe9d854a")
-		(property "Reference" "C55"
+		(property "Reference" "C57"
 			(at 433.324 185.166 90)
 			(effects
 				(font
@@ -21031,7 +20870,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C55")
+					(reference "C57")
 					(unit 1)
 				)
 			)
@@ -21251,7 +21090,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9d229dfd-0050-4dd5-a011-2c411f832f60")
-		(property "Reference" "C66"
+		(property "Reference" "C68"
 			(at 530.606 120.904 90)
 			(effects
 				(font
@@ -21377,7 +21216,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C66")
+					(reference "C68")
 					(unit 1)
 				)
 			)
@@ -21894,7 +21733,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a6231e85-01fe-49e8-b60a-566c678f7ef0")
-		(property "Reference" "C36"
+		(property "Reference" "C38"
 			(at 140.97 170.434 90)
 			(effects
 				(font
@@ -22020,7 +21859,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C36")
+					(reference "C38")
 					(unit 1)
 				)
 			)
@@ -22035,7 +21874,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b2addc3a-df1f-4f68-b8a8-1b9c03b656fd")
-		(property "Reference" "C49"
+		(property "Reference" "C51"
 			(at 370.586 189.484 90)
 			(effects
 				(font
@@ -22161,7 +22000,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C49")
+					(reference "C51")
 					(unit 1)
 				)
 			)
@@ -22176,7 +22015,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b96a9d2f-497e-4fa0-806e-126f1a596aea")
-		(property "Reference" "C33"
+		(property "Reference" "C35"
 			(at 125.73 244.094 90)
 			(effects
 				(font
@@ -22302,7 +22141,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C33")
+					(reference "C35")
 					(unit 1)
 				)
 			)
@@ -22317,7 +22156,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b9ae538a-ac13-4fb8-8bb6-bf37090e872f")
-		(property "Reference" "C40"
+		(property "Reference" "C42"
 			(at 219.456 190.754 90)
 			(effects
 				(font
@@ -22443,7 +22282,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C40")
+					(reference "C42")
 					(unit 1)
 				)
 			)
@@ -22458,7 +22297,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bab32646-2747-4db6-91f2-7a12598ba18d")
-		(property "Reference" "C41"
+		(property "Reference" "C43"
 			(at 244.348 210.312 0)
 			(effects
 				(font
@@ -22584,7 +22423,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C41")
+					(reference "C43")
 					(unit 1)
 				)
 			)
@@ -23113,7 +22952,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c676b56e-1bf1-411a-bbb4-e0e25166f6cd")
-		(property "Reference" "C39"
+		(property "Reference" "C41"
 			(at 195.326 130.302 90)
 			(effects
 				(font
@@ -23194,7 +23033,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C39")
+					(reference "C41")
 					(unit 1)
 				)
 			)
@@ -23209,7 +23048,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c7a12dd7-c695-4af4-a60f-eb252d46c7c1")
-		(property "Reference" "C34"
+		(property "Reference" "C36"
 			(at 125.73 278.384 90)
 			(effects
 				(font
@@ -23335,7 +23174,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C34")
+					(reference "C36")
 					(unit 1)
 				)
 			)
@@ -23887,7 +23726,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d801610c-a8bc-4fd6-bf14-4d4f5de79279")
-		(property "Reference" "C32"
+		(property "Reference" "C34"
 			(at 111.506 278.384 90)
 			(effects
 				(font
@@ -24013,7 +23852,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C32")
+					(reference "C34")
 					(unit 1)
 				)
 			)
@@ -24404,6 +24243,100 @@
 		)
 	)
 	(symbol
+		(lib_id "charge_battery_sym_lib:Res_50mR_2512_1%")
+		(at 237.49 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e5b52601-9ce8-4b64-9d10-553d83662cd5")
+		(property "Reference" "R37"
+			(at 237.744 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "50mR/2512/1%"
+			(at 237.744 109.474 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_2512"
+			(at 237.49 114.808 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 237.49 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Current Sense Resistors - SMD 4W 0.05 Ohms 1%"
+			(at 237.49 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "Mouser"
+			(at 237.744 115.062 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "660-TLRH3APTTE50L0F"
+			(at 237.998 115.062 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.mouser.vn/ProductDetail/KOA-Speer/TLRH3APTTE50L0F?qs=eArw%252Bdd9rguJ2eBTdOyx8Q%3D%3D"
+			(at 237.49 115.316 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "be7ba9be-d688-4169-8b92-eb0dc5700f3f")
+		)
+		(pin "1"
+			(uuid "a5dbd923-a580-4a14-974b-5d73ed177871")
+		)
+		(instances
+			(project ""
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
+					(reference "R37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "charge_battery_sym_lib:SS54")
 		(at 106.68 163.83 0)
 		(unit 1)
@@ -24551,7 +24484,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ea45dfe3-30db-4d76-a0a3-0ecac691bd2e")
-		(property "Reference" "C64"
+		(property "Reference" "C66"
 			(at 516.128 120.65 90)
 			(effects
 				(font
@@ -24677,7 +24610,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C64")
+					(reference "C66")
 					(unit 1)
 				)
 			)
@@ -24998,7 +24931,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "efbda795-d47b-4144-b4dd-86e6d35525cf")
-		(property "Reference" "C58"
+		(property "Reference" "C60"
 			(at 485.648 95.25 90)
 			(effects
 				(font
@@ -25124,7 +25057,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C58")
+					(reference "C60")
 					(unit 1)
 				)
 			)
@@ -25204,7 +25137,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f21b76cb-75d4-4d68-af71-28272584bc2f")
-		(property "Reference" "C28"
+		(property "Reference" "C30"
 			(at 71.374 168.402 90)
 			(effects
 				(font
@@ -25330,7 +25263,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C28")
+					(reference "C30")
 					(unit 1)
 				)
 			)
@@ -25542,7 +25475,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f8e68fb6-2a56-4f43-b787-5bc653616b39")
-		(property "Reference" "C47"
+		(property "Reference" "C49"
 			(at 356.108 189.23 90)
 			(effects
 				(font
@@ -25668,7 +25601,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C47")
+					(reference "C49")
 					(unit 1)
 				)
 			)
@@ -25822,7 +25755,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fa9fcf64-add8-4329-ad6c-a20468682d51")
-		(property "Reference" "C65"
+		(property "Reference" "C67"
 			(at 530.606 95.504 90)
 			(effects
 				(font
@@ -25948,7 +25881,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/c86e0501-622e-4a08-a50b-30d27954cac4"
-					(reference "C65")
+					(reference "C67")
 					(unit 1)
 				)
 			)
