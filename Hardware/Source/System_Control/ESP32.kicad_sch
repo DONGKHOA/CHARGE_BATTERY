@@ -344,6 +344,202 @@
 				)
 			)
 		)
+		(symbol "LED_0805_1"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED_0805"
+				(at 0 -4.064 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:LED_0805"
+				(at -3.81 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at -9.906 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0.254 4.826 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply name" "Thegioiic"
+				(at -0.762 5.334 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply part number" "LED Xanh Lá 0805 Dán SMD Trong Suốt"
+				(at 0.508 4.826 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.thegioiic.com/led-xanh-la-0805-dan-smd-trong-suot"
+				(at -0.762 5.334 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_0805_1_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_0805_1_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Res_10K_0603_1%_1"
 			(pin_numbers hide)
 			(pin_names hide)
@@ -2135,6 +2331,192 @@
 				)
 			)
 		)
+		(symbol "charge_battery_sym_lib:Res_1K_0603_1%"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 3.556 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1K/1%/1_10W"
+				(at 4.064 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:Res_0603"
+				(at 18.288 -15.494 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
+				(at 7.62 -15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Res 1 KOhm 0603 1%"
+				(at 13.716 -16.002 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply name" "Thegioiic"
+				(at 19.304 -15.748 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply part number" "Điện Trở 1 KOhm 0603 1%"
+				(at 20.32 -15.494 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
+				(at 27.432 -16.764 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Res_1K_0603_1%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Res_1K_0603_1%_0_1"
+				(polyline
+					(pts
+						(xy 1.524 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.096 0) (xy 6.35 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 0) (xy 1.905 1.016) (xy 2.286 0) (xy 2.667 -1.016) (xy 3.048 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.048 0) (xy 3.429 1.016) (xy 3.81 0) (xy 4.191 -1.016) (xy 4.572 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.572 0) (xy 4.953 1.016) (xy 5.334 0) (xy 5.715 -1.016) (xy 6.096 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Res_1K_0603_1%_1_1"
+				(pin passive line
+					(at 0 0 0)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "charge_battery_sym_lib:Res_20R_0402_5%"
 			(pin_numbers hide)
 			(pin_names hide)
@@ -2274,6 +2656,192 @@
 				)
 			)
 			(symbol "Res_20R_0402_5%_1_1"
+				(pin passive line
+					(at 0 0 0)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "charge_battery_sym_lib:Res_20R_0603_1%"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 3.302 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "20R/1%/1_10W"
+				(at 3.81 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:Res_0603"
+				(at 39.878 11.43 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 39.624 0.762 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Res 20 Ohm 0603 1%"
+				(at 40.386 6.858 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply name" "Thegioiic"
+				(at 40.132 12.446 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply part number" "Điện Trở 20 Ohm 0603 1%"
+				(at 39.878 13.462 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.thegioiic.com/dien-tro-20-ohm-0603-1-"
+				(at 41.148 20.574 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Res_20R_0603_1%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Res_20R_0603_1%_0_1"
+				(polyline
+					(pts
+						(xy 1.524 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.096 0) (xy 6.35 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 0) (xy 1.905 1.016) (xy 2.286 0) (xy 2.667 -1.016) (xy 3.048 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.048 0) (xy 3.429 1.016) (xy 3.81 0) (xy 4.191 -1.016) (xy 4.572 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.572 0) (xy 4.953 1.016) (xy 5.334 0) (xy 5.715 -1.016) (xy 6.096 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Res_20R_0603_1%_1_1"
 				(pin passive line
 					(at 0 0 0)
 					(length 1.27)
@@ -4002,6 +4570,12 @@
 		(uuid "cb9aded0-f1fd-43b3-8795-0916160bf8c5")
 	)
 	(junction
+		(at 100.33 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d6fc5b90-6b2c-4bc0-aec7-7ae55291cfec")
+	)
+	(junction
 		(at 186.69 140.97)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4044,10 +4618,6 @@
 	(no_connect
 		(at 123.19 29.21)
 		(uuid "36738ea1-87a1-4d3d-b996-388286991f92")
-	)
-	(no_connect
-		(at 95.25 118.11)
-		(uuid "41b26a2b-3771-40b4-aa14-2c1563cc2ea1")
 	)
 	(no_connect
 		(at 64.77 120.65)
@@ -4128,10 +4698,6 @@
 	(no_connect
 		(at 66.04 34.29)
 		(uuid "e140dc90-3fae-433b-964b-5e0801835539")
-	)
-	(no_connect
-		(at 95.25 115.57)
-		(uuid "e2518a36-10f1-48a6-af04-cf1499f67db6")
 	)
 	(no_connect
 		(at 64.77 87.63)
@@ -4315,6 +4881,16 @@
 	)
 	(wire
 		(pts
+			(xy 96.52 172.72) (xy 100.33 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24a7efad-e055-407e-9038-00a346d8ebcb")
+	)
+	(wire
+		(pts
 			(xy 147.9296 29.21) (xy 143.51 29.21)
 		)
 		(stroke
@@ -4425,6 +5001,16 @@
 	)
 	(wire
 		(pts
+			(xy 96.52 162.56) (xy 100.33 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "404f3945-d4ac-4c2c-8b5a-64c857b7b8d0")
+	)
+	(wire
+		(pts
 			(xy 44.45 39.37) (xy 44.45 38.1)
 		)
 		(stroke
@@ -4465,6 +5051,16 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 162.56) (xy 100.33 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5292cbb3-4f4d-4667-a522-7a06edd281b8")
+	)
+	(wire
+		(pts
 			(xy 40.64 101.6) (xy 50.8 101.6)
 		)
 		(stroke
@@ -4472,6 +5068,16 @@
 			(type default)
 		)
 		(uuid "5573fe38-e070-4087-9347-721ab8f63bca")
+	)
+	(wire
+		(pts
+			(xy 62.23 172.72) (xy 74.93 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55b53f81-16f6-4e0c-8cda-587bd94d4a47")
 	)
 	(wire
 		(pts
@@ -4522,6 +5128,16 @@
 			(type default)
 		)
 		(uuid "626e1d99-d0a1-40b6-8883-51b2737ac105")
+	)
+	(wire
+		(pts
+			(xy 95.25 118.11) (xy 120.65 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "668ee2dc-270d-4ff6-ac93-fc6599c2eb75")
 	)
 	(wire
 		(pts
@@ -4705,6 +5321,16 @@
 	)
 	(wire
 		(pts
+			(xy 95.25 115.57) (xy 120.65 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e782558-c83b-40d1-bdbb-0ca5dab3874a")
+	)
+	(wire
+		(pts
 			(xy 152.4 20.32) (xy 149.86 20.32)
 		)
 		(stroke
@@ -4792,6 +5418,16 @@
 			(type default)
 		)
 		(uuid "a21e628a-3f5c-423d-b842-3964a15c9b2e")
+	)
+	(wire
+		(pts
+			(xy 100.33 176.53) (xy 100.33 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a418727b-20b2-423d-a547-5919cc0b6438")
 	)
 	(wire
 		(pts
@@ -5055,6 +5691,16 @@
 	)
 	(wire
 		(pts
+			(xy 62.23 162.56) (xy 74.93 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed642d3d-253a-40c3-b538-b760ef0579ab")
+	)
+	(wire
+		(pts
 			(xy 173.99 139.7) (xy 173.99 140.97)
 		)
 		(stroke
@@ -5062,6 +5708,16 @@
 			(type default)
 		)
 		(uuid "ee34e669-11d4-4bbf-8ed0-dc983c45c9d6")
+	)
+	(wire
+		(pts
+			(xy 82.55 172.72) (xy 88.9 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef889db8-e5d3-4990-8516-7253fe6d264f")
 	)
 	(wire
 		(pts
@@ -5095,6 +5751,16 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 162.56) (xy 88.9 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb3c0e22-55bc-4a7b-9b0a-7a24afe3a865")
+	)
+	(wire
+		(pts
 			(xy 165.1 44.45) (xy 157.48 44.45)
 		)
 		(stroke
@@ -5102,6 +5768,28 @@
 			(type default)
 		)
 		(uuid "ffaf5d88-b1b8-480e-b358-2f10c8781348")
+	)
+	(label "LED_TEST"
+		(at 62.23 162.56 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "053735f4-9920-4629-b85b-905518679399")
+	)
+	(label "LED_STATUS"
+		(at 62.23 172.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "10610894-0054-4ed5-9352-6b64e5f9c7eb")
 	)
 	(label "EN"
 		(at 58.42 82.55 0)
@@ -5135,6 +5823,17 @@
 			(justify left bottom)
 		)
 		(uuid "1f02d209-1965-43c1-81b4-db1afb1a5fab")
+	)
+	(label "LED_TEST"
+		(at 120.65 115.57 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "297c2e08-4347-401e-8591-a11880f8d158")
 	)
 	(label "FLASH"
 		(at 165.1 90.17 0)
@@ -5190,6 +5889,17 @@
 			(justify right bottom)
 		)
 		(uuid "6636f95d-a8a6-48db-a5ac-c755a64cdb84")
+	)
+	(label "LED_STATUS"
+		(at 120.65 118.11 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "66f58b1e-6408-4916-be47-f9367bfb2158")
 	)
 	(label "RTS"
 		(at 200.66 45.72 0)
@@ -5456,6 +6166,100 @@
 		)
 	)
 	(symbol
+		(lib_id "charge_battery_sym_lib:Res_1K_0603_1%")
+		(at 88.9 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "03418912-5be9-498b-a6ae-28e2bd98d789")
+		(property "Reference" "R7"
+			(at 92.456 169.926 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1K/1%/1_10W"
+			(at 92.202 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
+			(at 107.188 188.214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
+			(at 96.52 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Res 1 KOhm 0603 1%"
+			(at 102.616 188.722 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 108.204 188.468 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Điện Trở 1 KOhm 0603 1%"
+			(at 109.22 188.214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
+			(at 116.332 189.484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6229f0c8-c5e6-49be-b7f5-e56ad7b615da")
+		)
+		(pin "2"
+			(uuid "d5f21ab1-5ca1-41d3-911a-d55de13ace88")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "Res_10K_0603_1%_1")
 		(lib_id "charge_battery_sym_lib:Res_10K_0603_1%")
 		(at 133.35 107.95 180)
@@ -5465,7 +6269,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "07ab0edd-163f-48f7-885b-ea5af18867f4")
-		(property "Reference" "R11"
+		(property "Reference" "R12"
 			(at 130.048 103.378 0)
 			(effects
 				(font
@@ -5544,7 +6348,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "R11")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -5560,7 +6364,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "07de2bfb-2456-42a6-b109-f99fee934bf3")
-		(property "Reference" "R17"
+		(property "Reference" "R18"
 			(at 214.63 51.562 0)
 			(effects
 				(font
@@ -5639,7 +6443,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "R17")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -5720,7 +6524,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0c9a7a46-0bbe-4bc8-9cf6-a7e3f1732f48")
-		(property "Reference" "R16"
+		(property "Reference" "R17"
 			(at 214.63 26.924 0)
 			(effects
 				(font
@@ -5799,7 +6603,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "R16")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -5881,7 +6685,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "14929dc5-b6ae-4073-9de2-1595ba8d7c72")
-		(property "Reference" "R12"
+		(property "Reference" "R13"
 			(at 153.67 38.1 0)
 			(effects
 				(font
@@ -5960,7 +6764,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "R12")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -6366,6 +7170,101 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_20R_0603_1%")
+		(at 106.68 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "32d35df8-5249-4cb1-9e55-87bcba95be50")
+		(property "Reference" "R8"
+			(at 110.49 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20R/1%/1_10W"
+			(at 110.49 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
+			(at 146.558 22.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.304 33.528 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Res 20 Ohm 0603 1%"
+			(at 147.066 27.432 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 146.812 21.844 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Điện Trở 20 Ohm 0603 1%"
+			(at 146.558 20.828 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/dien-tro-20-ohm-0603-1-"
+			(at 147.828 13.716 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a93b3e04-c67f-4d63-8204-fcbaafd96725")
+		)
+		(pin "1"
+			(uuid "9d91ae12-dbd4-415d-a109-c8039575f32b")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -6781,7 +7680,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4cf885e5-ea68-433f-86f9-75268d69c050")
-		(property "Reference" "R9"
+		(property "Reference" "R10"
 			(at 118.11 80.01 0)
 			(effects
 				(font
@@ -6860,7 +7759,101 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "R9")
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_1K_0603_1%")
+		(at 88.9 162.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "52febd27-da25-46e9-a387-9b6367f1879b")
+		(property "Reference" "R6"
+			(at 92.456 159.766 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1K/1%/1_10W"
+			(at 92.202 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
+			(at 107.188 178.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
+			(at 96.52 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Res 1 KOhm 0603 1%"
+			(at 102.616 178.562 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 108.204 178.308 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Điện Trở 1 KOhm 0603 1%"
+			(at 109.22 178.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
+			(at 116.332 179.324 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0655634c-1f93-4b1e-891d-e1494b52b2d9")
+		)
+		(pin "2"
+			(uuid "cb7eafff-a414-4cc2-84a4-bccb75f83bf7")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -7273,6 +8266,101 @@
 		)
 	)
 	(symbol
+		(lib_id "charge_battery_sym_lib:Res_20R_0603_1%")
+		(at 106.68 36.83 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "74ed9de1-037a-4b80-aaca-73481e36dbce")
+		(property "Reference" "R9"
+			(at 110.49 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20R/1%/1_10W"
+			(at 110.49 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
+			(at 146.558 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.304 37.592 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Res 20 Ohm 0603 1%"
+			(at 147.066 43.688 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 146.812 49.276 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Điện Trở 20 Ohm 0603 1%"
+			(at 146.558 50.292 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/dien-tro-20-ohm-0603-1-"
+			(at 147.828 57.404 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "183074fe-541a-4a94-b27c-6be7a9cd6a4b")
+		)
+		(pin "1"
+			(uuid "a57a6483-ac32-43ba-a1c9-0affd019f213")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 130.81 20.32 0)
 		(mirror y)
@@ -7514,6 +8602,72 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
+		(at 100.33 176.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "802771c7-518e-4193-910c-9a912f30dd3f")
+		(property "Reference" "#PWR032"
+			(at 100.33 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDD"
+			(at 100.33 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
+			(at 100.33 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "82a87bd4-7ca2-4df5-a40d-d95c7f3122f4")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
+					(reference "#PWR032")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDD")
 		(at 186.69 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7573,101 +8727,6 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
 					(reference "#PWR040")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:Res_20R_0402_5%")
-		(at 106.68 36.83 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "905fb8db-1ffb-41bf-848a-06339ffe5d09")
-		(property "Reference" "R8"
-			(at 110.49 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "20R/5%/1_16W"
-			(at 110.49 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_0402"
-			(at 146.558 48.26 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.304 37.592 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "20R (Code 200) 1/16W"
-			(at 147.066 43.688 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 146.812 49.276 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 20 Ohm 0402 5%"
-			(at 146.558 50.292 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-20-ohm-0402-5-"
-			(at 147.828 57.404 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "e2ab683e-c07a-42ce-b9c6-92389c80f174")
-		)
-		(pin "1"
-			(uuid "2c743549-cf5a-42b8-9c78-af35fa96173a")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -7840,6 +8899,101 @@
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "LED_0805_1")
+		(lib_id "charge_battery_sym_lib:LED_0805")
+		(at 78.74 162.56 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9cd407e3-b895-4933-8107-8723c3494974")
+		(property "Reference" "D7"
+			(at 78.994 159.766 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED_0805"
+			(at 79.502 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:LED_0805"
+			(at 82.55 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 88.646 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 78.486 167.386 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 79.502 167.894 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "LED Xanh Lá 0805 Dán SMD Trong Suốt"
+			(at 78.232 167.386 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/led-xanh-la-0805-dan-smd-trong-suot"
+			(at 79.502 167.894 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fab714d3-0f2b-4582-b8b4-6b6ada36855e")
+		)
+		(pin "1"
+			(uuid "ebdc0622-febf-450f-b7f5-080f186c66d1")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -8056,7 +9210,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ac5078e1-97f8-423a-9b92-d69ad66b144e")
-		(property "Reference" "R13"
+		(property "Reference" "R14"
 			(at 153.67 53.34 0)
 			(effects
 				(font
@@ -8135,7 +9289,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "R13")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -8151,7 +9305,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b7095aff-9f17-4e07-af43-9e10664f5e73")
-		(property "Reference" "R15"
+		(property "Reference" "R16"
 			(at 186.69 121.412 90)
 			(effects
 				(font
@@ -8232,7 +9386,102 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "R15")
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "LED_0805_1")
+		(lib_id "charge_battery_sym_lib:LED_0805")
+		(at 78.74 172.72 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c218a132-a1be-4bde-905e-6191080db46c")
+		(property "Reference" "D8"
+			(at 78.994 169.926 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED_0805"
+			(at 79.502 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:LED_0805"
+			(at 82.55 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 88.646 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 78.486 177.546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 79.502 178.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "LED Xanh Lá 0805 Dán SMD Trong Suốt"
+			(at 78.232 177.546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/led-xanh-la-0805-dan-smd-trong-suot"
+			(at 79.502 178.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "44b3ee6e-7128-4bb8-8a08-67230e007265")
+		)
+		(pin "1"
+			(uuid "12065eb1-dc12-4adc-bf15-7d9629eeff2a")
+		)
+		(instances
+			(project "System_Control"
+				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -8679,7 +9928,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "da18b52e-7347-486f-90bf-fcbeb64f2c7b")
-		(property "Reference" "R14"
+		(property "Reference" "R15"
 			(at 186.69 82.042 90)
 			(effects
 				(font
@@ -8760,7 +10009,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "R14")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -8961,101 +10210,6 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:Res_20R_0402_5%")
-		(at 106.68 34.29 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f8ce4759-3e78-4d3c-ba8c-a3482805b468")
-		(property "Reference" "R7"
-			(at 110.49 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "20R/5%/1_16W"
-			(at 110.49 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_0402"
-			(at 146.558 22.86 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.304 33.528 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "20R (Code 200) 1/16W"
-			(at 147.066 27.432 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 146.812 21.844 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 20 Ohm 0402 5%"
-			(at 146.558 20.828 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-20-ohm-0402-5-"
-			(at 147.828 13.716 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "8ff70faf-fd94-4240-a3b5-e00bde4a4150")
-		)
-		(pin "1"
-			(uuid "82fd29e1-371e-4976-86b3-659fe5811195")
-		)
-		(instances
-			(project "System_Control"
-				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GNDPWR")
 		(at 133.35 53.34 0)
 		(unit 1)
@@ -9131,7 +10285,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fafaec40-5057-4366-b059-5870501dc04a")
-		(property "Reference" "R10"
+		(property "Reference" "R11"
 			(at 118.11 95.25 0)
 			(effects
 				(font
@@ -9210,7 +10364,7 @@
 		(instances
 			(project "System_Control"
 				(path "/85c53e8c-0403-413d-b6c5-0718d4365b1f/bc09c168-950d-49ef-aa8a-d95b0b1387ca"
-					(reference "R10")
+					(reference "R11")
 					(unit 1)
 				)
 			)
