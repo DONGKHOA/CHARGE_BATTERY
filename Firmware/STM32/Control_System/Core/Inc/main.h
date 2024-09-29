@@ -67,6 +67,20 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define ADC1_IN2_S2_Pin LL_GPIO_PIN_2
+#define ADC1_IN2_S2_GPIO_Port GPIOE
+#define ADC1_IN2_S1_Pin LL_GPIO_PIN_3
+#define ADC1_IN2_S1_GPIO_Port GPIOE
+#define ADC1_IN2_S0_Pin LL_GPIO_PIN_4
+#define ADC1_IN2_S0_GPIO_Port GPIOE
+#define ADC1_IN1_S3_Pin LL_GPIO_PIN_5
+#define ADC1_IN1_S3_GPIO_Port GPIOE
+#define ADC1_IN1_S2_Pin LL_GPIO_PIN_6
+#define ADC1_IN1_S2_GPIO_Port GPIOE
+#define ADC1_IN1_S1_Pin LL_GPIO_PIN_13
+#define ADC1_IN1_S1_GPIO_Port GPIOC
+#define ADC1_IN1_S0_Pin LL_GPIO_PIN_14
+#define ADC1_IN1_S0_GPIO_Port GPIOC
 #define LED_TEST_Pin LL_GPIO_PIN_0
 #define LED_TEST_GPIO_Port GPIOC
 #define LED_STATUS_Pin LL_GPIO_PIN_1
@@ -89,6 +103,24 @@ void Error_Handler(void);
 #define BAL_13_GPIO_Port GPIOC
 #define RS485_CONTROL_Pin LL_GPIO_PIN_15
 #define RS485_CONTROL_GPIO_Port GPIOA
+#define BAL_8_Pin LL_GPIO_PIN_3
+#define BAL_8_GPIO_Port GPIOB
+#define BAL_7_Pin LL_GPIO_PIN_4
+#define BAL_7_GPIO_Port GPIOB
+#define BAL_6_Pin LL_GPIO_PIN_5
+#define BAL_6_GPIO_Port GPIOB
+#define BAL_5_Pin LL_GPIO_PIN_6
+#define BAL_5_GPIO_Port GPIOB
+#define BAL_4_Pin LL_GPIO_PIN_7
+#define BAL_4_GPIO_Port GPIOB
+#define BAL_3_Pin LL_GPIO_PIN_8
+#define BAL_3_GPIO_Port GPIOB
+#define BAL_2_Pin LL_GPIO_PIN_9
+#define BAL_2_GPIO_Port GPIOB
+#define BAL_1_Pin LL_GPIO_PIN_0
+#define BAL_1_GPIO_Port GPIOE
+#define ADC1_IN2_S3_Pin LL_GPIO_PIN_1
+#define ADC1_IN2_S3_GPIO_Port GPIOE
 
 /* USER CODE BEGIN Private defines */
 

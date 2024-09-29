@@ -380,30 +380,45 @@ static void MX_GPIO_Init(void)
 /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
-  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOH);
-  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOC);
-  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOA);
   LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOE);
+  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOC);
+  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOH);
+  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOA);
   LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOB);
   LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOD);
 
   /**/
-  LL_GPIO_ResetOutputPin(GPIOC, LED_TEST_Pin|LED_STATUS_Pin|DISCHARGE_Pin|CHARGE_Pin
-                          |BAL_16_Pin|BAL_15_Pin|BAL_14_Pin|BAL_13_Pin);
+  LL_GPIO_ResetOutputPin(GPIOE, ADC1_IN2_S2_Pin|ADC1_IN2_S1_Pin|ADC1_IN2_S0_Pin|ADC1_IN1_S3_Pin
+                          |ADC1_IN1_S2_Pin|BAL_1_Pin|ADC1_IN2_S3_Pin);
+
+  /**/
+  LL_GPIO_ResetOutputPin(GPIOC, ADC1_IN1_S1_Pin|ADC1_IN1_S0_Pin|LED_TEST_Pin|LED_STATUS_Pin
+                          |DISCHARGE_Pin|CHARGE_Pin|BAL_16_Pin|BAL_15_Pin
+                          |BAL_14_Pin|BAL_13_Pin);
 
   /**/
   LL_GPIO_ResetOutputPin(CONTROL_BACKLIGHT_GPIO_Port, CONTROL_BACKLIGHT_Pin);
 
   /**/
-  LL_GPIO_ResetOutputPin(RS485_CONTROL_GPIO_Port, RS485_CONTROL_Pin);
+  LL_GPIO_ResetOutputPin(GPIOA, LL_GPIO_PIN_8|LL_GPIO_PIN_11|LL_GPIO_PIN_12|RS485_CONTROL_Pin);
 
   /**/
-  LL_GPIO_ResetOutputPin(GPIOB, LL_GPIO_PIN_3|LL_GPIO_PIN_4|LL_GPIO_PIN_5|LL_GPIO_PIN_6
-                          |LL_GPIO_PIN_7|LL_GPIO_PIN_8|LL_GPIO_PIN_9);
+  LL_GPIO_ResetOutputPin(GPIOB, BAL_8_Pin|BAL_7_Pin|BAL_6_Pin|BAL_5_Pin
+                          |BAL_4_Pin|BAL_3_Pin|BAL_2_Pin);
 
   /**/
-  GPIO_InitStruct.Pin = LED_TEST_Pin|LED_STATUS_Pin|DISCHARGE_Pin|CHARGE_Pin
-                          |BAL_16_Pin|BAL_15_Pin|BAL_14_Pin|BAL_13_Pin;
+  GPIO_InitStruct.Pin = ADC1_IN2_S2_Pin|ADC1_IN2_S1_Pin|ADC1_IN2_S0_Pin|ADC1_IN1_S3_Pin
+                          |ADC1_IN1_S2_Pin|BAL_1_Pin|ADC1_IN2_S3_Pin;
+  GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
+  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+  LL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+
+  /**/
+  GPIO_InitStruct.Pin = ADC1_IN1_S1_Pin|ADC1_IN1_S0_Pin|LED_TEST_Pin|LED_STATUS_Pin
+                          |DISCHARGE_Pin|CHARGE_Pin|BAL_16_Pin|BAL_15_Pin
+                          |BAL_14_Pin|BAL_13_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
@@ -425,16 +440,16 @@ static void MX_GPIO_Init(void)
   LL_GPIO_Init(CONTROL_BACKLIGHT_GPIO_Port, &GPIO_InitStruct);
 
   /**/
-  GPIO_InitStruct.Pin = RS485_CONTROL_Pin;
+  GPIO_InitStruct.Pin = LL_GPIO_PIN_8|LL_GPIO_PIN_11|LL_GPIO_PIN_12|RS485_CONTROL_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
-  LL_GPIO_Init(RS485_CONTROL_GPIO_Port, &GPIO_InitStruct);
+  LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /**/
-  GPIO_InitStruct.Pin = LL_GPIO_PIN_3|LL_GPIO_PIN_4|LL_GPIO_PIN_5|LL_GPIO_PIN_6
-                          |LL_GPIO_PIN_7|LL_GPIO_PIN_8|LL_GPIO_PIN_9;
+  GPIO_InitStruct.Pin = BAL_8_Pin|BAL_7_Pin|BAL_6_Pin|BAL_5_Pin
+                          |BAL_4_Pin|BAL_3_Pin|BAL_2_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
