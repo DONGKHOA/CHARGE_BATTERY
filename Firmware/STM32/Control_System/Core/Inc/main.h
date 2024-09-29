@@ -37,6 +37,8 @@ extern "C" {
 #include "stm32f4xx_ll_utils.h"
 #include "stm32f4xx_ll_pwr.h"
 #include "stm32f4xx_ll_dma.h"
+#include "stm32f4xx_ll_spi.h"
+#include "stm32f4xx_ll_usart.h"
 #include "stm32f4xx_ll_gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -101,6 +103,12 @@ void Error_Handler(void);
 #define BAL_14_GPIO_Port GPIOC
 #define BAL_13_Pin LL_GPIO_PIN_9
 #define BAL_13_GPIO_Port GPIOC
+#define BAL_12_Pin LL_GPIO_PIN_8
+#define BAL_12_GPIO_Port GPIOA
+#define BAL_11_Pin LL_GPIO_PIN_11
+#define BAL_11_GPIO_Port GPIOA
+#define BAL_10_Pin LL_GPIO_PIN_12
+#define BAL_10_GPIO_Port GPIOA
 #define RS485_CONTROL_Pin LL_GPIO_PIN_15
 #define RS485_CONTROL_GPIO_Port GPIOA
 #define BAL_8_Pin LL_GPIO_PIN_3

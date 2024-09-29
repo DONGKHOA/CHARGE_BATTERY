@@ -20,11 +20,6 @@ extern "C" {
 
 #include "x11/lv_x11.h"
 
-#include "display/drm/lv_linux_drm.h"
-#include "display/fb/lv_linux_fbdev.h"
-
-#include "display/tft_espi/lv_tft_espi.h"
-
 #include "nuttx/lv_nuttx_entry.h"
 #include "nuttx/lv_nuttx_fbdev.h"
 #include "nuttx/lv_nuttx_touchscreen.h"
