@@ -6398,6 +6398,16 @@
 	)
 	(wire
 		(pts
+			(xy 39.37 45.72) (xy 33.02 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70799643-866a-4489-af92-a6a84d13d06c")
+	)
+	(wire
+		(pts
 			(xy 186.69 118.11) (xy 186.69 120.65)
 		)
 		(stroke
@@ -6658,16 +6668,6 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 45.72) (xy 33.02 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9435c707-a399-4fa3-bfc1-701a4a0baf82")
-	)
-	(wire
-		(pts
 			(xy 194.31 152.4) (xy 186.69 152.4)
 		)
 		(stroke
@@ -6705,16 +6705,6 @@
 			(type default)
 		)
 		(uuid "97939036-99d8-48e7-9327-13bf376ef6c5")
-	)
-	(wire
-		(pts
-			(xy 39.37 48.26) (xy 33.02 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97a83ae8-34ca-43aa-8008-f881a436d217")
 	)
 	(wire
 		(pts
@@ -6865,16 +6855,6 @@
 			(type default)
 		)
 		(uuid "a9c4462f-33f9-4c87-bfab-db4749bec6d3")
-	)
-	(wire
-		(pts
-			(xy 39.37 50.8) (xy 33.02 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa1ba64c-d755-4f4c-a6c3-cfe60877ab06")
 	)
 	(wire
 		(pts
@@ -7348,6 +7328,16 @@
 	)
 	(wire
 		(pts
+			(xy 39.37 50.8) (xy 33.02 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd828fd1-0c46-49b0-8e09-b0a4bbd2a744")
+	)
+	(wire
+		(pts
 			(xy 106.68 163.83) (xy 106.68 167.64)
 		)
 		(stroke
@@ -7355,6 +7345,16 @@
 			(type default)
 		)
 		(uuid "df1694b5-5ea6-4580-999c-e68666190eb7")
+	)
+	(wire
+		(pts
+			(xy 39.37 48.26) (xy 33.02 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e08609e0-d281-4650-9e94-598914960a8f")
 	)
 	(wire
 		(pts
@@ -7911,28 +7911,6 @@
 			)
 		)
 	)
-	(global_label "UART1_RX"
-		(shape bidirectional)
-		(at 33.02 48.26 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "11277040-f03b-4606-aa7f-6270185beadc")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 19.6102 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "UART4_TX"
 		(shape bidirectional)
 		(at 97.79 50.8 0)
@@ -8329,28 +8307,6 @@
 			)
 		)
 	)
-	(global_label "UART1_TX"
-		(shape bidirectional)
-		(at 33.02 45.72 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "3fe0fb8d-8f60-4a28-bf72-38ccd6648ffc")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 19.9126 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "FSMC_D0"
 		(shape output)
 		(at 97.79 104.14 0)
@@ -8501,6 +8457,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "UART1_TX"
+		(shape bidirectional)
+		(at 33.02 48.26 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "70f80e1b-f893-4aff-b8d7-87547eff0066")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 19.9126 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -8945,6 +8923,28 @@
 			)
 		)
 	)
+	(global_label "UART1_RX"
+		(shape bidirectional)
+		(at 33.02 50.8 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a5c12b5d-18c9-41cf-9126-ad64528d2852")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 19.6102 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "FSMC_A16"
 		(shape output)
 		(at 97.79 96.52 0)
@@ -9189,7 +9189,7 @@
 	)
 	(global_label "BAL_12"
 		(shape output)
-		(at 33.02 50.8 180)
+		(at 33.02 45.72 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9197,9 +9197,9 @@
 			)
 			(justify right)
 		)
-		(uuid "e3b11e60-7f4d-4670-b13b-2738c0002b93")
+		(uuid "e54ee66a-e119-41d3-9f8f-a65ff1119aba")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 23.2615 50.8 0)
+			(at 23.2615 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
