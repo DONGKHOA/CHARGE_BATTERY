@@ -29,7 +29,6 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
 #include "stm32f4xx_ll_adc.h"
-#include "stm32f4xx_ll_dma.h"
 #include "stm32f4xx_ll_rcc.h"
 #include "stm32f4xx_ll_bus.h"
 #include "stm32f4xx_ll_system.h"
@@ -37,9 +36,7 @@ extern "C" {
 #include "stm32f4xx_ll_cortex.h"
 #include "stm32f4xx_ll_utils.h"
 #include "stm32f4xx_ll_pwr.h"
-#include "stm32f4xx_ll_spi.h"
-#include "stm32f4xx_ll_tim.h"
-#include "stm32f4xx_ll_usart.h"
+#include "stm32f4xx_ll_dma.h"
 #include "stm32f4xx_ll_gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -70,8 +67,28 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define TOUCH_DETECT_Pin LL_GPIO_PIN_2
-#define TOUCH_DETECT_GPIO_Port GPIOA
+#define LED_TEST_Pin LL_GPIO_PIN_0
+#define LED_TEST_GPIO_Port GPIOC
+#define LED_STATUS_Pin LL_GPIO_PIN_1
+#define LED_STATUS_GPIO_Port GPIOC
+#define DISCHARGE_Pin LL_GPIO_PIN_2
+#define DISCHARGE_GPIO_Port GPIOC
+#define CHARGE_Pin LL_GPIO_PIN_3
+#define CHARGE_GPIO_Port GPIOC
+#define TOUCH_IRQ_Pin LL_GPIO_PIN_12
+#define TOUCH_IRQ_GPIO_Port GPIOD
+#define CONTROL_BACKLIGHT_Pin LL_GPIO_PIN_13
+#define CONTROL_BACKLIGHT_GPIO_Port GPIOD
+#define BAL_16_Pin LL_GPIO_PIN_6
+#define BAL_16_GPIO_Port GPIOC
+#define BAL_15_Pin LL_GPIO_PIN_7
+#define BAL_15_GPIO_Port GPIOC
+#define BAL_14_Pin LL_GPIO_PIN_8
+#define BAL_14_GPIO_Port GPIOC
+#define BAL_13_Pin LL_GPIO_PIN_9
+#define BAL_13_GPIO_Port GPIOC
+#define RS485_CONTROL_Pin LL_GPIO_PIN_15
+#define RS485_CONTROL_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 
