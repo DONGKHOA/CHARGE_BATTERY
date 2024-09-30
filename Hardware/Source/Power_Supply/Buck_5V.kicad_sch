@@ -3628,6 +3628,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 68.58) (xy 120.65 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81018a98-6fa7-4d02-9784-77b9619df64a")
+	)
+	(wire
+		(pts
 			(xy 83.82 85.09) (xy 83.82 86.36)
 		)
 		(stroke
@@ -3775,6 +3785,16 @@
 			(type default)
 		)
 		(uuid "b9c3cfb8-14f2-408b-88a5-c5fe9dfa1700")
+	)
+	(wire
+		(pts
+			(xy 130.81 68.58) (xy 120.65 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf9af324-2cfe-40a7-a8a2-dfb8f7ef454e")
 	)
 	(wire
 		(pts
@@ -6057,6 +6077,72 @@
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/810061e0-77df-407e-a763-7d91437d6cce"
 					(reference "C27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND2")
+		(at 120.65 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e83f3b84-af7f-4ac1-83be-e550e783f644")
+		(property "Reference" "#PWR027"
+			(at 120.65 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND2"
+			(at 120.65 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
+			(at 120.65 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eba68dc8-7f06-450f-9779-f6cc200bfd16")
+		)
+		(instances
+			(project "Power_Supply"
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/810061e0-77df-407e-a763-7d91437d6cce"
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
