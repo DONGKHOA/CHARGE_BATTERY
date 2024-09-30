@@ -1695,6 +1695,184 @@
 				)
 			)
 		)
+		(symbol "charge_battery_sym_lib:Cap_Polarized_SMD_680uF_25V"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "47uF/25V"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5"
+				(at 3.302 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.thegioiic.com/upload/documents/5121f69ada901167d040dfa7ca79f071.pdf"
+				(at 0.762 12.446 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Polarized capacitor 680uF 25V, 20%"
+				(at -0.762 12.192 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply name" "Thegioiic"
+				(at 2.032 12.446 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply part number" "Tụ Nhôm SMD 680uF 25V 10x10.5mm"
+				(at 1.27 12.446 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.thegioiic.com/tu-nhom-smd-680uf-25v-10x10-5mm"
+				(at 2.032 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Cap_Polarized_SMD_680uF_25V_0_1"
+				(polyline
+					(pts
+						(xy 1.016 -1.27) (xy 1.016 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.016) (xy 0.762 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.032 -1.524) (xy 2.032 1.524)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 3.302 1.524)
+					(mid 2.9134 0)
+					(end 3.302 -1.524)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Cap_Polarized_SMD_680uF_25V_1_1"
+				(pin passive line
+					(at 0 0 0)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "charge_battery_sym_lib:Ceramic_Cap_Hole_1nF_2000V"
 			(pin_numbers hide)
 			(pin_names hide)
@@ -9088,6 +9266,102 @@
 				)
 			)
 		)
+		(symbol "power:GND3"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND3"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND3\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND3_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND3_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 	)
 	(junction
 		(at 243.84 68.58)
@@ -9142,12 +9416,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "115e7c2c-df07-44e8-a716-866f276bd375")
-	)
-	(junction
-		(at 273.05 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1403a77d-c4b4-4209-a141-1f695d1a7b65")
 	)
 	(junction
 		(at 57.15 149.86)
@@ -9384,6 +9652,12 @@
 		(uuid "9cfacc6e-9ef9-42da-a08c-cc504b0fdf63")
 	)
 	(junction
+		(at 278.13 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a0636494-a076-4825-b7ae-b9d1b0436452")
+	)
+	(junction
 		(at 297.18 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9402,12 +9676,6 @@
 		(uuid "b788bf50-a54f-4756-8300-5624ad8daf8c")
 	)
 	(junction
-		(at 273.05 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c00a7248-619a-4c5b-a6a9-23ed1660419a")
-	)
-	(junction
 		(at 326.39 171.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9418,6 +9686,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ca5f1393-2587-48ad-8010-753335b3adbc")
+	)
+	(junction
+		(at 278.13 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb21d40c-1dc4-448e-b2fb-efc7dd0fe111")
 	)
 	(junction
 		(at 173.99 88.9)
@@ -9901,16 +10175,6 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 68.58) (xy 284.48 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29a3f02f-1c8e-4f61-a07c-b64554bda536")
-	)
-	(wire
-		(pts
 			(xy 218.44 99.06) (xy 218.44 142.24)
 		)
 		(stroke
@@ -10001,7 +10265,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 76.2) (xy 240.03 76.2)
+			(xy 240.03 76.2) (xy 278.13 76.2)
 		)
 		(stroke
 			(width 0)
@@ -10331,6 +10595,16 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 76.2) (xy 307.34 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d4c8332-bd9b-47be-a800-cd13fae22e35")
+	)
+	(wire
+		(pts
 			(xy 66.04 105.41) (xy 67.31 105.41)
 		)
 		(stroke
@@ -10381,6 +10655,16 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 68.58) (xy 283.21 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76859264-03d9-4b6c-a073-6a4b423c5a09")
+	)
+	(wire
+		(pts
 			(xy 118.11 130.81) (xy 118.11 138.43)
 		)
 		(stroke
@@ -10421,7 +10705,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 68.58) (xy 266.7 68.58)
+			(xy 266.7 68.58) (xy 278.13 68.58)
 		)
 		(stroke
 			(width 0)
@@ -10458,16 +10742,6 @@
 			(type default)
 		)
 		(uuid "7fee8a53-3046-4176-807f-dc8630a9db0f")
-	)
-	(wire
-		(pts
-			(xy 273.05 76.2) (xy 307.34 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "80d4144a-70e3-45a2-ba2a-485cdedd5128")
 	)
 	(wire
 		(pts
@@ -10681,7 +10955,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 69.85) (xy 273.05 68.58)
+			(xy 278.13 69.85) (xy 278.13 68.58)
 		)
 		(stroke
 			(width 0)
@@ -10871,7 +11145,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 68.58) (xy 307.34 68.58)
+			(xy 303.53 68.58) (xy 307.34 68.58)
 		)
 		(stroke
 			(width 0)
@@ -11171,7 +11445,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 74.93) (xy 273.05 76.2)
+			(xy 278.13 74.93) (xy 278.13 76.2)
 		)
 		(stroke
 			(width 0)
@@ -13164,7 +13438,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Inductor_3.3u_7.5A")
-		(at 284.48 68.58 0)
+		(at 283.21 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13173,7 +13447,7 @@
 		(fields_autoplaced yes)
 		(uuid "45ac2749-93ca-4fd6-a7fe-11d2fc2edf7d")
 		(property "Reference" "L3"
-			(at 294.64 62.23 0)
+			(at 293.37 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13181,7 +13455,7 @@
 			)
 		)
 		(property "Value" "3.3u/7.5A"
-			(at 294.64 64.77 0)
+			(at 293.37 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13189,7 +13463,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Inductor_3.3u_7447471033"
-			(at 300.99 164.77 0)
+			(at 299.72 164.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13199,7 +13473,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 300.99 264.77 0)
+			(at 299.72 264.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13209,7 +13483,7 @@
 			)
 		)
 		(property "Description" "Power Inductors - Leaded WE-TIS Lead Rad 1111 3.3uH 7.5A .009Ohm"
-			(at 284.48 68.58 0)
+			(at 283.21 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13218,7 +13492,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 300.99 464.77 0)
+			(at 299.72 464.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13228,7 +13502,7 @@
 			)
 		)
 		(property "Supply Name" "Mouser"
-			(at 284.48 68.58 0)
+			(at 283.21 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13237,7 +13511,7 @@
 			)
 		)
 		(property "Supply Part Number" "7447471033"
-			(at 300.99 864.77 0)
+			(at 299.72 864.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13247,7 +13521,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Wurth-Elektronik/7447471033?qs=VxkwJfKV0FQNDFTjyDhZkQ%3D%3D"
-			(at 284.48 68.58 0)
+			(at 283.21 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14221,6 +14495,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND3")
+		(at 321.31 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6758248e-cac2-4296-b131-f32bbfdb8ca9")
+		(property "Reference" "#PWR014"
+			(at 321.31 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND3"
+			(at 321.31 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 321.31 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 321.31 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND3\" , ground"
+			(at 321.31 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f3f46d24-8b34-4666-94b5-98c0cdfedcb7")
+		)
+		(instances
+			(project ""
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+12V")
 		(at 360.68 88.9 0)
 		(unit 1)
@@ -14832,102 +15171,6 @@
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
 					(reference "C26")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:Cap_Hole_1500uF_35V")
-		(at 276.86 72.39 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9e52563a-5251-46c9-9c09-f34f6a3c1071")
-		(property "Reference" "C27"
-			(at 273.304 70.866 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1500uF/35V"
-			(at 273.558 74.676 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D13.0mm_P5.00mm"
-			(at 276.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 276.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1500uF_35V"
-			(at 276.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply Name" "thegioiic"
-			(at 276.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply Part Number" "Tụ Hóa 1500uF 35V 13x21mm Xuyên Lỗ"
-			(at 276.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-hoa-1500uf-35v-13x21mm-xuyen-lo"
-			(at 276.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dea93e9d-ecc6-4ee8-bc55-2c0d57916c7c")
-		)
-		(pin "2"
-			(uuid "5ea2c656-eaef-4f09-9ee0-fde87361362b")
-		)
-		(instances
-			(project "Power_Supply"
-				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C27")
 					(unit 1)
 				)
 			)
@@ -15694,6 +15937,103 @@
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
 					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Cap_Polarized_SMD_680uF_25V")
+		(at 278.13 69.85 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c2bbe7a0-97b4-49a3-bd99-ee1b7d45c920")
+		(property "Reference" "C27"
+			(at 280.67 70.6881 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "680uF/25V"
+			(at 280.67 73.2281 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5"
+			(at 290.83 73.152 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.thegioiic.com/upload/documents/5121f69ada901167d040dfa7ca79f071.pdf"
+			(at 290.576 70.612 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor 680uF 25V, 20%"
+			(at 290.322 69.088 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 290.576 71.882 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Tụ Nhôm SMD 680uF 25V 10x10.5mm"
+			(at 290.576 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/tu-nhom-smd-680uf-25v-10x10-5mm"
+			(at 290.83 71.882 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "12115182-74a3-4c7f-97c4-c6229368c374")
+		)
+		(pin "2"
+			(uuid "ff86aa0a-ccc3-4460-a431-21cae44ebb3c")
+		)
+		(instances
+			(project ""
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
+					(reference "C27")
 					(unit 1)
 				)
 			)
@@ -16660,71 +17000,6 @@
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND2")
-		(at 321.31 77.47 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "eedee4cc-030d-4bc9-922e-084c2ddca4f6")
-		(property "Reference" "#PWR014"
-			(at 321.31 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND3"
-			(at 320.802 81.534 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 321.31 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 321.31 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
-			(at 321.31 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0195bbaa-0907-461c-875f-482fd8da11b0")
-		)
-		(instances
-			(project "Power_Supply"
-				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "#PWR014")
 					(unit 1)
 				)
 			)
