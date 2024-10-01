@@ -5,6 +5,169 @@
 	(uuid "459f098e-e2f0-44ec-bfd2-53210191ba08")
 	(paper "A3")
 	(lib_symbols
+		(symbol "Cap_Hole_470pF_100V_1"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "470pF_100V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_Hole_5mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Hole_470pF_100V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply Name" "thegioiic"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply Part Number" "Tụ Kẹo Xanh 470pF 100VDC 2A471J-CL11"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.thegioiic.com/tu-keo-xanh-470pf-100vdc-2a471j-cl11"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Cap_Hole_470pF_100V_1_1_1"
+				(polyline
+					(pts
+						(xy -1.27 -3.81) (xy -0.3302 -3.81)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3302 -5.715) (xy -0.3302 -1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.3048 -5.715) (xy 0.3048 -1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.3048 -3.81) (xy 1.27 -3.81)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at -3.81 -3.81 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 3.81 -3.81 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "charge_battery_sym_lib:1N914"
 			(pin_numbers hide)
 			(pin_names
@@ -896,7 +1059,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply Name" "ICDAYROI"
+			(property "Supply Name" "thegioiic"
 				(at 0 0 0)
 				(effects
 					(font
@@ -905,7 +1068,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply Part Number" "Tụ 470PF/100V 100V471J"
+			(property "Supply Part Number" "Tụ Kẹo Xanh 470pF 100VDC 2A471J-CL11"
 				(at 0 0 0)
 				(effects
 					(font
@@ -914,7 +1077,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply URL" "https://icdayroi.com/tu-470pf-100v-100v471j"
+			(property "Supply URL" "https://www.thegioiic.com/tu-keo-xanh-470pf-100vdc-2a471j-cl11"
 				(at 0 0 0)
 				(effects
 					(font
@@ -8232,9 +8395,9 @@
 					)
 				)
 				(pin passive line
-					(at 10.16 31.75 180)
+					(at 10.16 2.54 180)
 					(length 7.62)
-					(name "OUT1A"
+					(name "OUT1B"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -8250,9 +8413,9 @@
 					)
 				)
 				(pin passive line
-					(at 10.16 24.13 180)
+					(at 10.16 31.75 180)
 					(length 7.62)
-					(name "OUT1B"
+					(name "OUT1A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -8268,9 +8431,9 @@
 					)
 				)
 				(pin passive line
-					(at 10.16 -2.54 180)
+					(at 10.16 24.13 180)
 					(length 7.62)
-					(name "OUT2A"
+					(name "OUT1B"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -8322,16 +8485,16 @@
 					)
 				)
 				(pin passive line
-					(at 10.16 10.16 180)
+					(at 10.16 -2.54 180)
 					(length 7.62)
-					(name "OUT1A"
+					(name "OUT2A"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "8"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -8340,9 +8503,9 @@
 					)
 				)
 				(pin passive line
-					(at 10.16 2.54 180)
+					(at 10.16 10.16 180)
 					(length 7.62)
-					(name "OUT1B"
+					(name "OUT1A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -14197,7 +14360,7 @@
 		(pin "12"
 			(uuid "85ef0b60-c32e-47ab-9ab5-54a0d4b8d8eb")
 		)
-		(pin "8"
+		(pin "7"
 			(uuid "c54fbed9-d8d1-4b87-9d5c-a65c85ea208b")
 		)
 		(pin "16"
@@ -14898,6 +15061,7 @@
 		)
 	)
 	(symbol
+		(lib_name "Cap_Hole_470pF_100V_1")
 		(lib_id "charge_battery_sym_lib:Cap_Hole_470pF_100V")
 		(at 260.35 59.69 0)
 		(unit 1)
@@ -14949,7 +15113,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply Name" "ICDAYROI"
+		(property "Supply Name" "thegioiic"
 			(at 260.35 59.69 0)
 			(effects
 				(font
@@ -14958,7 +15122,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply Part Number" "Tụ 470PF/100V 100V471J"
+		(property "Supply Part Number" "Tụ Kẹo Xanh 470pF 100VDC 2A471J-CL11"
 			(at 260.35 59.69 0)
 			(effects
 				(font
@@ -14967,7 +15131,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://icdayroi.com/tu-470pf-100v-100v471j"
+		(property "Supply URL" "https://www.thegioiic.com/tu-keo-xanh-470pf-100vdc-2a471j-cl11"
 			(at 260.35 59.69 0)
 			(effects
 				(font
@@ -16391,7 +16555,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply Name" "ICDAYROI"
+		(property "Supply Name" "thegioiic"
 			(at 259.08 78.74 0)
 			(effects
 				(font
@@ -16400,7 +16564,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply Part Number" "Tụ 470PF/100V 100V471J"
+		(property "Supply Part Number" "Tụ Kẹo Xanh 470pF 100VDC 2A471J-CL11"
 			(at 259.08 78.74 0)
 			(effects
 				(font
@@ -16409,7 +16573,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://icdayroi.com/tu-470pf-100v-100v471j"
+		(property "Supply URL" "https://www.thegioiic.com/tu-keo-xanh-470pf-100vdc-2a471j-cl11"
 			(at 259.08 78.74 0)
 			(effects
 				(font
