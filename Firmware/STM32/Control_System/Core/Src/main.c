@@ -472,7 +472,7 @@ static void MX_GPIO_Init(void)
                           |BAL_14_Pin|BAL_13_Pin);
 
   /**/
-  LL_GPIO_ResetOutputPin(CONTROL_BACKLIGHT_GPIO_Port, CONTROL_BACKLIGHT_Pin);
+  LL_GPIO_ResetOutputPin(GPIOD, CONTROL_BACKLIGHT_Pin|BAL_9_Pin);
 
   /**/
   LL_GPIO_ResetOutputPin(GPIOA, BAL_12_Pin|BAL_11_Pin|BAL_10_Pin|RS485_CONTROL_Pin);
@@ -507,12 +507,12 @@ static void MX_GPIO_Init(void)
   LL_GPIO_Init(TOUCH_IRQ_GPIO_Port, &GPIO_InitStruct);
 
   /**/
-  GPIO_InitStruct.Pin = CONTROL_BACKLIGHT_Pin;
+  GPIO_InitStruct.Pin = CONTROL_BACKLIGHT_Pin|BAL_9_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
-  LL_GPIO_Init(CONTROL_BACKLIGHT_GPIO_Port, &GPIO_InitStruct);
+  LL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /**/
   GPIO_InitStruct.Pin = BAL_12_Pin|BAL_11_Pin|BAL_10_Pin|RS485_CONTROL_Pin;

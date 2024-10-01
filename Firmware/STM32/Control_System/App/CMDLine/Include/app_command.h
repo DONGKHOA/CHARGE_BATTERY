@@ -1,0 +1,40 @@
+/*
+ * app_command.h
+ *
+ *  Created on: Jul 8, 2024
+ *      Author: dongkhoa
+ */
+
+#ifndef CMDLINE_COMMAND_H_
+#define CMDLINE_COMMAND_H_
+
+/*********************
+ *      INCLUDES
+ *********************/
+
+#include "stm32f4xx.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+  /**********************
+   *   PUBLIC FUNCTIONS
+   **********************/
+
+  void APP_COMMAND_Init(void);
+  void APP_COMMAND_CreateTask(void);
+
+  /**
+   * @brief List of command
+   */
+  int APP_COMMAND_Help(int argc, char *argv[]);
+  int APP_COMMAND_ReadVoltageLLC(int argc, char *argv[]);
+  int APP_COMMAND_SetParameterPiControl(int argc, char *argv[]);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* CMDLINE_COMMAND_H_ */

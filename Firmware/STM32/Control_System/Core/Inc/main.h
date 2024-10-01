@@ -111,6 +111,8 @@ void Error_Handler(void);
 #define BAL_10_GPIO_Port GPIOA
 #define RS485_CONTROL_Pin LL_GPIO_PIN_15
 #define RS485_CONTROL_GPIO_Port GPIOA
+#define BAL_9_Pin LL_GPIO_PIN_3
+#define BAL_9_GPIO_Port GPIOD
 #define BAL_8_Pin LL_GPIO_PIN_3
 #define BAL_8_GPIO_Port GPIOB
 #define BAL_7_Pin LL_GPIO_PIN_4

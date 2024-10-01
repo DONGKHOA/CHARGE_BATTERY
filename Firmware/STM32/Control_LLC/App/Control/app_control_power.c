@@ -322,12 +322,12 @@ APP_CONTROL_ResetData (void)
 static void
 APP_CONTROL_ReadVoltageInput (void)
 {
-  BSP_ADC_StartConvert(&s_control_power.s_adc1);
-  BSP_ADC_WaitConversion(&s_control_power.s_adc1);
-  if (s_control_power.s_adc1.e_status == BSP_ADC_OK)
-  {
-    BSP_ADC_Read(&s_control_power.s_adc1);
-  }
+//  BSP_ADC_StartConvert(&s_control_power.s_adc1);
+//  BSP_ADC_WaitConversion(&s_control_power.s_adc1);
+//  if (s_control_power.s_adc1.e_status == BSP_ADC_OK)
+//  {
+//    BSP_ADC_Read(&s_control_power.s_adc1);
+//  }
 }
 
 static void

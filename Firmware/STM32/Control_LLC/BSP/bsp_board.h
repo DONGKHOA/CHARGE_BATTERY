@@ -12,7 +12,6 @@
  *      INCLUDES
  *********************/
 
-#include "adc.h"
 #include "i2c.h"
 #include "pwm.h"
 #include "systick.h"
