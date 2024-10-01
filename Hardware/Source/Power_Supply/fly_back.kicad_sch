@@ -1695,6 +1695,184 @@
 				)
 			)
 		)
+		(symbol "charge_battery_sym_lib:Cap_Polarized_SMD_680uF_25V"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "47uF/25V"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5"
+				(at 3.302 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.thegioiic.com/upload/documents/5121f69ada901167d040dfa7ca79f071.pdf"
+				(at 0.762 12.446 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Polarized capacitor 680uF 25V, 20%"
+				(at -0.762 12.192 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply name" "Thegioiic"
+				(at 2.032 12.446 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply part number" "Tụ Nhôm SMD 680uF 25V 10x10.5mm"
+				(at 1.27 12.446 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.thegioiic.com/tu-nhom-smd-680uf-25v-10x10-5mm"
+				(at 2.032 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Cap_Polarized_SMD_680uF_25V_0_1"
+				(polyline
+					(pts
+						(xy 1.016 -1.27) (xy 1.016 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.016) (xy 0.762 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.032 -1.524) (xy 2.032 1.524)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 3.302 1.524)
+					(mid 2.9134 0)
+					(end 3.302 -1.524)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Cap_Polarized_SMD_680uF_25V_1_1"
+				(pin passive line
+					(at 0 0 0)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "charge_battery_sym_lib:Ceramic_Cap_Hole_1nF_2000V"
 			(pin_numbers hide)
 			(pin_names hide)
@@ -6501,60 +6679,51 @@
 				)
 			)
 		)
-		(symbol "charge_battery_sym_lib:SS11VL-R05350"
-			(pin_names
-				(offset 0.254)
-			)
+		(symbol "charge_battery_sym_lib:SC-02-E60JKH"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "L"
-				(at 15.24 7.62 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "SS11VL-R05350"
-				(at 15.494 -14.224 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "charge_battery_footprint_lib:IND_SS11VL-R05350_KEM"
-				(at -0.762 -20.066 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.mouser.vn/datasheet/2/447/KEM_LF0022_SS11VL-3316893.pdf"
-				(at 4.572 -19.812 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Common Mode Chokes / Filters 250VAC 1.1A 5mH DCR=400mOhms"
-				(at 1.778 -20.066 0)
+			(property "Reference" "FL"
+				(at -1.27 2.286 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
+				)
+			)
+			(property "Value" "SC-02-E60JKH"
+				(at -8.636 -23.114 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
 					(hide yes)
 				)
 			)
-			(property "Supply name" "Mouser"
-				(at -0.508 -20.066 0)
+			(property "Footprint" "charge_battery_footprint_lib:SC02E60JKH"
+				(at 16.51 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://content.kemet.com/datasheets/KEM_LF0076_SC-JKH.pdf"
+				(at 16.51 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "KEMET, SC_JKH, AC Line Filters, Common Mode, 250 VAC, 6 mH, 2 A, 120C, -25C, 100 mOhms, 320, 24.5mm, 24.5mm, 17mm, 3.5mm, 11mm, 18mm, 13 g"
+				(at -1.27 -23.876 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -6562,203 +6731,61 @@
 					(hide yes)
 				)
 			)
-			(property "Supply part number" "80-SS11VL-11050"
-				(at 0 -20.066 0)
+			(property "Height" "17"
+				(at 16.51 -394.92 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 					(hide yes)
 				)
 			)
-			(property "Supply URL" "https://www.mouser.vn/ProductDetail/KEMET/SS11VL-11050?qs=EU6FO9ffTwcryP%252B%2F%252BYgxUg%3D%3D"
-				(at -12.192 -20.066 0)
+			(property "Mouser Part Number" "80-SC-02-E60JKH"
+				(at 16.51 -494.92 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "SS11VL-R05350"
-				(at 0 0 0)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/KEMET/SC-02-E60JKH?qs=PzGy0jfpSMtza3nlRmZjgA%3D%3D"
+				(at 16.51 -594.92 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "IND_SS11VL-R05350_KEM"
-				(at 0 0 0)
+			(property "Manufacturer_Name" "KEMET"
+				(at 16.51 -694.92 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 					(hide yes)
 				)
 			)
-			(symbol "SS11VL-R05350_0_1"
-				(polyline
-					(pts
-						(xy 7.62 -12.7) (xy 22.86 -12.7)
+			(property "Manufacturer_Part_Number" "SC-02-E60JKH"
+				(at 16.51 -794.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
+					(justify left top)
+					(hide yes)
 				)
-				(polyline
-					(pts
-						(xy 7.62 -10.16) (xy 12.7 -10.16)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 0) (xy 12.7 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 2.54) (xy 7.62 -12.7)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 0) (xy 13.335 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 13.335 -10.16) (xy 12.7 -10.16)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 14.9225 0) (xy 14.9225 -10.16)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 15.5575 0) (xy 15.5575 -10.16)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 17.145 -10.16) (xy 17.78 -10.16)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 17.78 0) (xy 17.145 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 22.86 -12.7) (xy 22.86 2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 22.86 -10.16) (xy 17.78 -10.16)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 22.86 0) (xy 17.78 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 22.86 2.54) (xy 7.62 2.54)
-					)
+			)
+			(symbol "SC-02-E60JKH_0_1"
+				(arc
+					(start -1.905 -16.51)
+					(mid -0.64 -15.24)
+					(end -1.905 -13.97)
 					(stroke
 						(width 0.127)
 						(type default)
@@ -6768,9 +6795,9 @@
 					)
 				)
 				(arc
-					(start 13.335 -10.16)
-					(mid 14.5994 -8.89)
-					(end 13.335 -7.62)
+					(start -1.905 -13.97)
+					(mid -0.64 -12.7)
+					(end -1.905 -11.43)
 					(stroke
 						(width 0.127)
 						(type default)
@@ -6780,9 +6807,9 @@
 					)
 				)
 				(arc
-					(start 13.335 -7.62)
-					(mid 14.5994 -6.35)
-					(end 13.335 -5.08)
+					(start -1.905 -11.43)
+					(mid -0.64 -10.16)
+					(end -1.905 -8.89)
 					(stroke
 						(width 0.127)
 						(type default)
@@ -6792,21 +6819,9 @@
 					)
 				)
 				(arc
-					(start 13.335 -5.08)
-					(mid 14.5994 -3.81)
-					(end 13.335 -2.54)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 13.335 -2.54)
-					(mid 14.5994 -1.27)
-					(end 13.335 0)
+					(start -1.905 -8.89)
+					(mid -0.64 -7.62)
+					(end -1.905 -6.35)
 					(stroke
 						(width 0.127)
 						(type default)
@@ -6816,7 +6831,7 @@
 					)
 				)
 				(circle
-					(center 13.335 0.635)
+					(center -1.905 -5.715)
 					(radius 0.127)
 					(stroke
 						(width 0.381)
@@ -6826,10 +6841,166 @@
 						(type none)
 					)
 				)
-				(arc
-					(start 17.145 -7.62)
-					(mid 15.8805 -8.89)
-					(end 17.145 -10.16)
+				(polyline
+					(pts
+						(xy -7.62 -19.05) (xy 7.62 -19.05)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 -16.51) (xy -2.54 -16.51)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 -6.35) (xy -2.54 -6.35)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 -3.81) (xy -7.62 -19.05)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -6.35) (xy -1.905 -6.35)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -16.51) (xy -2.54 -16.51)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3175 -6.35) (xy -0.3175 -16.51)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.3175 -6.35) (xy 0.3175 -16.51)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 -16.51) (xy 2.54 -16.51)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -6.35) (xy 1.905 -6.35)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -19.05) (xy 7.62 -3.81)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -16.51) (xy 2.54 -16.51)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -6.35) (xy 2.54 -6.35)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -3.81) (xy -7.62 -3.81)
+					)
 					(stroke
 						(width 0.127)
 						(type default)
@@ -6839,9 +7010,9 @@
 					)
 				)
 				(arc
-					(start 17.145 -5.08)
-					(mid 15.8805 -6.35)
-					(end 17.145 -7.62)
+					(start 1.905 -13.97)
+					(mid 0.64 -15.24)
+					(end 1.905 -16.51)
 					(stroke
 						(width 0.127)
 						(type default)
@@ -6851,9 +7022,9 @@
 					)
 				)
 				(arc
-					(start 17.145 -2.54)
-					(mid 15.8805 -3.81)
-					(end 17.145 -5.08)
+					(start 1.905 -11.43)
+					(mid 0.64 -12.7)
+					(end 1.905 -13.97)
 					(stroke
 						(width 0.127)
 						(type default)
@@ -6863,9 +7034,21 @@
 					)
 				)
 				(arc
-					(start 17.145 0)
-					(mid 15.8805 -1.27)
-					(end 17.145 -2.54)
+					(start 1.905 -8.89)
+					(mid 0.64 -10.16)
+					(end 1.905 -11.43)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 1.905 -6.35)
+					(mid 0.64 -7.62)
+					(end 1.905 -8.89)
 					(stroke
 						(width 0.127)
 						(type default)
@@ -6875,7 +7058,7 @@
 					)
 				)
 				(circle
-					(center 17.145 0.635)
+					(center 1.905 -5.715)
 					(radius 0.127)
 					(stroke
 						(width 0.381)
@@ -6886,7 +7069,7 @@
 					)
 				)
 				(pin unspecified line
-					(at 0 0 0)
+					(at -15.24 -6.35 0)
 					(length 7.62)
 					(name "1"
 						(effects
@@ -6904,7 +7087,7 @@
 					)
 				)
 				(pin unspecified line
-					(at 0 -10.16 0)
+					(at -15.24 -16.51 0)
 					(length 7.62)
 					(name "2"
 						(effects
@@ -6922,7 +7105,7 @@
 					)
 				)
 				(pin unspecified line
-					(at 30.48 -10.16 180)
+					(at 15.24 -16.51 180)
 					(length 7.62)
 					(name "3"
 						(effects
@@ -6940,7 +7123,7 @@
 					)
 				)
 				(pin unspecified line
-					(at 30.48 0 180)
+					(at 15.24 -6.35 180)
 					(length 7.62)
 					(name "4"
 						(effects
@@ -9083,6 +9266,102 @@
 				)
 			)
 		)
+		(symbol "power:GND3"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND3"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND3\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND3_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND3_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 	)
 	(junction
 		(at 243.84 68.58)
@@ -9137,12 +9416,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "115e7c2c-df07-44e8-a716-866f276bd375")
-	)
-	(junction
-		(at 273.05 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1403a77d-c4b4-4209-a141-1f695d1a7b65")
 	)
 	(junction
 		(at 57.15 149.86)
@@ -9379,6 +9652,12 @@
 		(uuid "9cfacc6e-9ef9-42da-a08c-cc504b0fdf63")
 	)
 	(junction
+		(at 278.13 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a0636494-a076-4825-b7ae-b9d1b0436452")
+	)
+	(junction
 		(at 297.18 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9397,12 +9676,6 @@
 		(uuid "b788bf50-a54f-4756-8300-5624ad8daf8c")
 	)
 	(junction
-		(at 273.05 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c00a7248-619a-4c5b-a6a9-23ed1660419a")
-	)
-	(junction
 		(at 326.39 171.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9413,6 +9686,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ca5f1393-2587-48ad-8010-753335b3adbc")
+	)
+	(junction
+		(at 278.13 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb21d40c-1dc4-448e-b2fb-efc7dd0fe111")
 	)
 	(junction
 		(at 173.99 88.9)
@@ -9896,16 +10175,6 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 68.58) (xy 284.48 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29a3f02f-1c8e-4f61-a07c-b64554bda536")
-	)
-	(wire
-		(pts
 			(xy 218.44 99.06) (xy 218.44 142.24)
 		)
 		(stroke
@@ -9996,7 +10265,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 76.2) (xy 240.03 76.2)
+			(xy 240.03 76.2) (xy 278.13 76.2)
 		)
 		(stroke
 			(width 0)
@@ -10326,6 +10595,16 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 76.2) (xy 307.34 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d4c8332-bd9b-47be-a800-cd13fae22e35")
+	)
+	(wire
+		(pts
 			(xy 66.04 105.41) (xy 67.31 105.41)
 		)
 		(stroke
@@ -10376,6 +10655,16 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 68.58) (xy 283.21 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76859264-03d9-4b6c-a073-6a4b423c5a09")
+	)
+	(wire
+		(pts
 			(xy 118.11 130.81) (xy 118.11 138.43)
 		)
 		(stroke
@@ -10416,7 +10705,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 68.58) (xy 266.7 68.58)
+			(xy 266.7 68.58) (xy 278.13 68.58)
 		)
 		(stroke
 			(width 0)
@@ -10453,16 +10742,6 @@
 			(type default)
 		)
 		(uuid "7fee8a53-3046-4176-807f-dc8630a9db0f")
-	)
-	(wire
-		(pts
-			(xy 273.05 76.2) (xy 307.34 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "80d4144a-70e3-45a2-ba2a-485cdedd5128")
 	)
 	(wire
 		(pts
@@ -10676,7 +10955,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 69.85) (xy 273.05 68.58)
+			(xy 278.13 69.85) (xy 278.13 68.58)
 		)
 		(stroke
 			(width 0)
@@ -10866,7 +11145,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 68.58) (xy 307.34 68.58)
+			(xy 303.53 68.58) (xy 307.34 68.58)
 		)
 		(stroke
 			(width 0)
@@ -11166,7 +11445,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 74.93) (xy 273.05 76.2)
+			(xy 278.13 74.93) (xy 278.13 76.2)
 		)
 		(stroke
 			(width 0)
@@ -13159,7 +13438,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Inductor_3.3u_7.5A")
-		(at 284.48 68.58 0)
+		(at 283.21 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13168,7 +13447,7 @@
 		(fields_autoplaced yes)
 		(uuid "45ac2749-93ca-4fd6-a7fe-11d2fc2edf7d")
 		(property "Reference" "L3"
-			(at 294.64 62.23 0)
+			(at 293.37 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13176,7 +13455,7 @@
 			)
 		)
 		(property "Value" "3.3u/7.5A"
-			(at 294.64 64.77 0)
+			(at 293.37 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13184,7 +13463,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Inductor_3.3u_7447471033"
-			(at 300.99 164.77 0)
+			(at 299.72 164.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13194,7 +13473,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 300.99 264.77 0)
+			(at 299.72 264.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13204,7 +13483,7 @@
 			)
 		)
 		(property "Description" "Power Inductors - Leaded WE-TIS Lead Rad 1111 3.3uH 7.5A .009Ohm"
-			(at 284.48 68.58 0)
+			(at 283.21 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13213,7 +13492,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 300.99 464.77 0)
+			(at 299.72 464.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13223,7 +13502,7 @@
 			)
 		)
 		(property "Supply Name" "Mouser"
-			(at 284.48 68.58 0)
+			(at 283.21 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13232,7 +13511,7 @@
 			)
 		)
 		(property "Supply Part Number" "7447471033"
-			(at 300.99 864.77 0)
+			(at 299.72 864.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13242,7 +13521,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Wurth-Elektronik/7447471033?qs=VxkwJfKV0FQNDFTjyDhZkQ%3D%3D"
-			(at 284.48 68.58 0)
+			(at 283.21 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14216,6 +14495,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND3")
+		(at 321.31 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6758248e-cac2-4296-b131-f32bbfdb8ca9")
+		(property "Reference" "#PWR014"
+			(at 321.31 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND3"
+			(at 321.31 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 321.31 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 321.31 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND3\" , ground"
+			(at 321.31 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f3f46d24-8b34-4666-94b5-98c0cdfedcb7")
+		)
+		(instances
+			(project ""
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+12V")
 		(at 360.68 88.9 0)
 		(unit 1)
@@ -14439,110 +14783,6 @@
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
 					(reference "#PWR028")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:SS11VL-R05350")
-		(at 91.44 137.16 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7c3911e9-76a7-4dd0-92cf-6c906051b2d8")
-		(property "Reference" "L1"
-			(at 95.25 113.03 90)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SS11VL-R05350"
-			(at 87.122 131.318 90)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:IND_SS11VL-R05350_KEM"
-			(at 111.506 137.922 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.vn/datasheet/2/447/KEM_LF0022_SS11VL-3316893.pdf"
-			(at 111.252 132.588 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Common Mode Chokes / Filters 250VAC 1.1A 5mH DCR=400mOhms"
-			(at 111.506 135.382 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Mouser"
-			(at 111.506 137.668 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "80-SS11VL-11050"
-			(at 111.506 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.mouser.vn/ProductDetail/KEMET/SS11VL-11050?qs=EU6FO9ffTwcryP%252B%2F%252BYgxUg%3D%3D"
-			(at 111.506 149.352 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1229b466-41b9-4d7d-90b7-51688ea4e299")
-		)
-		(pin "2"
-			(uuid "6af79e2e-f9bd-41d0-9e81-215d6e2c542e")
-		)
-		(pin "3"
-			(uuid "56582efc-e779-45f6-9902-80582bb8acdf")
-		)
-		(pin "4"
-			(uuid "e2cad040-1fc6-4791-b1ff-ab9849d13121")
-		)
-		(instances
-			(project "Power_Supply"
-				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "L1")
 					(unit 1)
 				)
 			)
@@ -14931,102 +15171,6 @@
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
 					(reference "C26")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:Cap_Hole_1500uF_35V")
-		(at 276.86 72.39 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9e52563a-5251-46c9-9c09-f34f6a3c1071")
-		(property "Reference" "C27"
-			(at 273.304 70.866 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1500uF/35V"
-			(at 273.558 74.676 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D13.0mm_P5.00mm"
-			(at 276.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 276.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1500uF_35V"
-			(at 276.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply Name" "thegioiic"
-			(at 276.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply Part Number" "Tụ Hóa 1500uF 35V 13x21mm Xuyên Lỗ"
-			(at 276.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-hoa-1500uf-35v-13x21mm-xuyen-lo"
-			(at 276.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dea93e9d-ecc6-4ee8-bc55-2c0d57916c7c")
-		)
-		(pin "2"
-			(uuid "5ea2c656-eaef-4f09-9ee0-fde87361362b")
-		)
-		(instances
-			(project "Power_Supply"
-				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "C27")
 					(unit 1)
 				)
 			)
@@ -15799,6 +15943,103 @@
 		)
 	)
 	(symbol
+		(lib_id "charge_battery_sym_lib:Cap_Polarized_SMD_680uF_25V")
+		(at 278.13 69.85 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c2bbe7a0-97b4-49a3-bd99-ee1b7d45c920")
+		(property "Reference" "C27"
+			(at 280.67 70.6881 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "680uF/25V"
+			(at 280.67 73.2281 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5"
+			(at 290.83 73.152 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.thegioiic.com/upload/documents/5121f69ada901167d040dfa7ca79f071.pdf"
+			(at 290.576 70.612 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor 680uF 25V, 20%"
+			(at 290.322 69.088 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 290.576 71.882 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Tụ Nhôm SMD 680uF 25V 10x10.5mm"
+			(at 290.576 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/tu-nhom-smd-680uf-25v-10x10-5mm"
+			(at 290.83 71.882 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "12115182-74a3-4c7f-97c4-c6229368c374")
+		)
+		(pin "2"
+			(uuid "ff86aa0a-ccc3-4460-a431-21cae44ebb3c")
+		)
+		(instances
+			(project ""
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
+					(reference "C27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+12V")
 		(at 321.31 66.04 0)
 		(unit 1)
@@ -15817,7 +16058,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+12V"
+		(property "Value" "+7V"
 			(at 321.31 60.96 0)
 			(effects
 				(font
@@ -16182,6 +16423,135 @@
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
 					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:SC-02-E60JKH")
+		(at 85.09 121.92 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e1e9eb29-1239-4ac2-a8b0-69a50d06b969")
+		(property "Reference" "FL1"
+			(at 105.41 121.9199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SC-02-E60JKH"
+			(at 108.204 130.556 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:SC02E60JKH"
+			(at 180.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_LF0076_SC-JKH.pdf"
+			(at 280.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "KEMET, SC_JKH, AC Line Filters, Common Mode, 250 VAC, 6 mH, 2 A, 120C, -25C, 100 mOhms, 320, 24.5mm, 24.5mm, 17mm, 3.5mm, 11mm, 18mm, 13 g"
+			(at 108.966 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "17"
+			(at 480.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "80-SC-02-E60JKH"
+			(at 580.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/KEMET/SC-02-E60JKH?qs=PzGy0jfpSMtza3nlRmZjgA%3D%3D"
+			(at 680.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "KEMET"
+			(at 780.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SC-02-E60JKH"
+			(at 880.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1d801634-b8f9-4671-b90f-ae703c3704fd")
+		)
+		(pin "2"
+			(uuid "5fbfe744-0845-4d23-bf58-fd52285ed245")
+		)
+		(pin "4"
+			(uuid "055ed0b8-b455-4bf9-8731-8001e72bd8bb")
+		)
+		(pin "3"
+			(uuid "5704aeab-205c-41b0-95b2-8c07b0a59aef")
+		)
+		(instances
+			(project ""
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
+					(reference "FL1")
 					(unit 1)
 				)
 			)
@@ -16630,71 +17000,6 @@
 			(project "Power_Supply"
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND2")
-		(at 321.31 77.47 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "eedee4cc-030d-4bc9-922e-084c2ddca4f6")
-		(property "Reference" "#PWR014"
-			(at 321.31 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND3"
-			(at 320.802 81.534 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 321.31 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 321.31 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND2\" , ground"
-			(at 321.31 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0195bbaa-0907-461c-875f-482fd8da11b0")
-		)
-		(instances
-			(project "Power_Supply"
-				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "#PWR014")
 					(unit 1)
 				)
 			)
