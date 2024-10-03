@@ -3,7 +3,7 @@ Archive member included to satisfy reference by file (symbol)
 C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-exit.o)
                               C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (exit)
 C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-malloc.o)
-                              ./BSP/UART/bsp_ring_buffer.o (malloc)
+                              ./Middleware/Ring_Buffer/ring_buffer.o (malloc)
 C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mallocr.o)
                               C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-malloc.o) (_malloc_r)
 C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mlock.o)
@@ -130,6 +130,8 @@ Discarded input sections
  .group         0x00000000        0xc ./App/CMDLine/app_cmdline.o
  .group         0x00000000        0xc ./App/CMDLine/app_cmdline.o
  .group         0x00000000        0xc ./App/CMDLine/app_cmdline.o
+ .group         0x00000000        0xc ./App/CMDLine/app_cmdline.o
+ .group         0x00000000        0xc ./App/CMDLine/app_cmdline.o
  .text          0x00000000        0x0 ./App/CMDLine/app_cmdline.o
  .data          0x00000000        0x0 ./App/CMDLine/app_cmdline.o
  .bss           0x00000000        0x0 ./App/CMDLine/app_cmdline.o
@@ -143,7 +145,7 @@ Discarded input sections
                 0x00000000       0x20 ./App/CMDLine/app_cmdline.o
  .debug_rnglists
                 0x00000000       0x14 ./App/CMDLine/app_cmdline.o
- .debug_macro   0x00000000      0x2f3 ./App/CMDLine/app_cmdline.o
+ .debug_macro   0x00000000      0x305 ./App/CMDLine/app_cmdline.o
  .debug_macro   0x00000000      0xaba ./App/CMDLine/app_cmdline.o
  .debug_macro   0x00000000       0x22 ./App/CMDLine/app_cmdline.o
  .debug_macro   0x00000000       0x8e ./App/CMDLine/app_cmdline.o
@@ -183,6 +185,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x7e ./App/CMDLine/app_cmdline.o
  .debug_macro   0x00000000       0x89 ./App/CMDLine/app_cmdline.o
  .debug_macro   0x00000000      0x12d ./App/CMDLine/app_cmdline.o
+ .debug_macro   0x00000000      0x149 ./App/CMDLine/app_cmdline.o
+ .debug_macro   0x00000000       0x16 ./App/CMDLine/app_cmdline.o
  .debug_macro   0x00000000       0x61 ./App/CMDLine/app_cmdline.o
  .debug_macro   0x00000000       0x2a ./App/CMDLine/app_cmdline.o
  .debug_macro   0x00000000       0x43 ./App/CMDLine/app_cmdline.o
@@ -199,12 +203,14 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./App/CMDLine/app_cmdline.o
  .debug_macro   0x00000000       0x35 ./App/CMDLine/app_cmdline.o
  .debug_macro   0x00000000       0x20 ./App/CMDLine/app_cmdline.o
- .debug_line    0x00000000      0xb14 ./App/CMDLine/app_cmdline.o
- .debug_str     0x00000000    0xc1027 ./App/CMDLine/app_cmdline.o
+ .debug_line    0x00000000      0xbd5 ./App/CMDLine/app_cmdline.o
+ .debug_str     0x00000000    0xc17eb ./App/CMDLine/app_cmdline.o
  .comment       0x00000000       0x44 ./App/CMDLine/app_cmdline.o
  .debug_frame   0x00000000       0x34 ./App/CMDLine/app_cmdline.o
  .ARM.attributes
                 0x00000000       0x34 ./App/CMDLine/app_cmdline.o
+ .group         0x00000000        0xc ./App/CMDLine/app_command.o
+ .group         0x00000000        0xc ./App/CMDLine/app_command.o
  .group         0x00000000        0xc ./App/CMDLine/app_command.o
  .group         0x00000000        0xc ./App/CMDLine/app_command.o
  .group         0x00000000        0xc ./App/CMDLine/app_command.o
@@ -294,7 +300,7 @@ Discarded input sections
                 0x00000000       0x38 ./App/CMDLine/app_command.o
  .debug_rnglists
                 0x00000000       0x26 ./App/CMDLine/app_command.o
- .debug_macro   0x00000000      0x333 ./App/CMDLine/app_command.o
+ .debug_macro   0x00000000      0x345 ./App/CMDLine/app_command.o
  .debug_macro   0x00000000      0xaba ./App/CMDLine/app_command.o
  .debug_macro   0x00000000       0x2e ./App/CMDLine/app_command.o
  .debug_macro   0x00000000       0x2f ./App/CMDLine/app_command.o
@@ -356,8 +362,10 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 ./App/CMDLine/app_command.o
  .debug_macro   0x00000000      0x146 ./App/CMDLine/app_command.o
  .debug_macro   0x00000000       0x22 ./App/CMDLine/app_command.o
- .debug_line    0x00000000      0xbf4 ./App/CMDLine/app_command.o
- .debug_str     0x00000000    0xc1d2f ./App/CMDLine/app_command.o
+ .debug_macro   0x00000000      0x149 ./App/CMDLine/app_command.o
+ .debug_macro   0x00000000       0x16 ./App/CMDLine/app_command.o
+ .debug_line    0x00000000      0xcb5 ./App/CMDLine/app_command.o
+ .debug_str     0x00000000    0xc24f3 ./App/CMDLine/app_command.o
  .comment       0x00000000       0x44 ./App/CMDLine/app_command.o
  .debug_frame   0x00000000       0x94 ./App/CMDLine/app_command.o
  .ARM.attributes
@@ -504,33 +512,199 @@ Discarded input sections
  .ARM.attributes
                 0x00000000       0x34 ./BSP/FSMC/bsp_fsmc.o
  .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/GPIO/bsp_gpio.o
  .text          0x00000000        0x0 ./BSP/GPIO/bsp_gpio.o
  .data          0x00000000        0x0 ./BSP/GPIO/bsp_gpio.o
  .bss           0x00000000        0x0 ./BSP/GPIO/bsp_gpio.o
- .debug_info    0x00000000       0x22 ./BSP/GPIO/bsp_gpio.o
- .debug_abbrev  0x00000000       0x12 ./BSP/GPIO/bsp_gpio.o
+ .text.BSP_GPIO_SetState
+                0x00000000       0x30 ./BSP/GPIO/bsp_gpio.o
+ .text.BSP_GPIO_GetState
+                0x00000000       0x2a ./BSP/GPIO/bsp_gpio.o
+ .debug_info    0x00000000      0x1d3 ./BSP/GPIO/bsp_gpio.o
+ .debug_abbrev  0x00000000      0x107 ./BSP/GPIO/bsp_gpio.o
  .debug_aranges
-                0x00000000       0x18 ./BSP/GPIO/bsp_gpio.o
- .debug_macro   0x00000000       0x11 ./BSP/GPIO/bsp_gpio.o
+                0x00000000       0x28 ./BSP/GPIO/bsp_gpio.o
+ .debug_rnglists
+                0x00000000       0x19 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x1e4 ./BSP/GPIO/bsp_gpio.o
  .debug_macro   0x00000000      0xaba ./BSP/GPIO/bsp_gpio.o
- .debug_line    0x00000000       0x37 ./BSP/GPIO/bsp_gpio.o
- .debug_str     0x00000000     0x2e19 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x2e ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x2f ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x22 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x8e ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x51 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x103 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x6a ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x1df ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x1c ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x22 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0xfb ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000     0x1011 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x11f ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000    0x15e97 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x6d ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x295 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000     0x368c ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x189 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x5c ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x980 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x9e9 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x115 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x13e ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0xa5 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x174 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x287 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x5f ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x236 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x12c ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x21e ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x2e ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x516 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x127 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x7e ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000       0x89 ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x12d ./BSP/GPIO/bsp_gpio.o
+ .debug_macro   0x00000000      0x143 ./BSP/GPIO/bsp_gpio.o
+ .debug_line    0x00000000      0x774 ./BSP/GPIO/bsp_gpio.o
+ .debug_str     0x00000000    0xbe4fc ./BSP/GPIO/bsp_gpio.o
  .comment       0x00000000       0x44 ./BSP/GPIO/bsp_gpio.o
+ .debug_frame   0x00000000       0x60 ./BSP/GPIO/bsp_gpio.o
  .ARM.attributes
                 0x00000000       0x34 ./BSP/GPIO/bsp_gpio.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
+ .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
  .group         0x00000000        0xc ./BSP/SPI/bsp_spi.o
  .text          0x00000000        0x0 ./BSP/SPI/bsp_spi.o
  .data          0x00000000        0x0 ./BSP/SPI/bsp_spi.o
  .bss           0x00000000        0x0 ./BSP/SPI/bsp_spi.o
- .debug_info    0x00000000       0x22 ./BSP/SPI/bsp_spi.o
- .debug_abbrev  0x00000000       0x12 ./BSP/SPI/bsp_spi.o
+ .bss.u32_spi_timeout
+                0x00000000        0x4 ./BSP/SPI/bsp_spi.o
+ .text.BSP_SPI_Transmit
+                0x00000000       0xb8 ./BSP/SPI/bsp_spi.o
+ .text.BSP_SPI_Receive
+                0x00000000       0x84 ./BSP/SPI/bsp_spi.o
+ .text.BSP_SPI_TimeOut
+                0x00000000       0x24 ./BSP/SPI/bsp_spi.o
+ .debug_info    0x00000000      0x232 ./BSP/SPI/bsp_spi.o
+ .debug_abbrev  0x00000000      0x13d ./BSP/SPI/bsp_spi.o
  .debug_aranges
-                0x00000000       0x18 ./BSP/SPI/bsp_spi.o
- .debug_macro   0x00000000       0x11 ./BSP/SPI/bsp_spi.o
+                0x00000000       0x30 ./BSP/SPI/bsp_spi.o
+ .debug_rnglists
+                0x00000000       0x21 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x1ea ./BSP/SPI/bsp_spi.o
  .debug_macro   0x00000000      0xaba ./BSP/SPI/bsp_spi.o
- .debug_line    0x00000000       0x35 ./BSP/SPI/bsp_spi.o
- .debug_str     0x00000000     0x2e17 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x2e ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x2f ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x22 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x8e ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x51 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x103 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x6a ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x1df ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x1c ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x22 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0xfb ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000     0x1011 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x11f ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000    0x15e97 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x6d ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x295 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000     0x368c ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x189 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x5c ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x980 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x9e9 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x115 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x13e ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0xa5 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x174 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x287 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x5f ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x236 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x12c ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x21e ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x2e ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x516 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x127 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x7e ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000       0x89 ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x12d ./BSP/SPI/bsp_spi.o
+ .debug_macro   0x00000000      0x235 ./BSP/SPI/bsp_spi.o
+ .debug_line    0x00000000      0x845 ./BSP/SPI/bsp_spi.o
+ .debug_str     0x00000000    0xbeada ./BSP/SPI/bsp_spi.o
  .comment       0x00000000       0x44 ./BSP/SPI/bsp_spi.o
+ .debug_frame   0x00000000       0x80 ./BSP/SPI/bsp_spi.o
  .ARM.attributes
                 0x00000000       0x34 ./BSP/SPI/bsp_spi.o
  .group         0x00000000        0xc ./BSP/SysTick/bsp_systick.o
@@ -633,144 +807,6 @@ Discarded input sections
  .debug_frame   0x00000000       0xb8 ./BSP/SysTick/bsp_systick.o
  .ARM.attributes
                 0x00000000       0x34 ./BSP/SysTick/bsp_systick.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .group         0x00000000        0xc ./BSP/UART/bsp_ring_buffer.o
- .text          0x00000000        0x0 ./BSP/UART/bsp_ring_buffer.o
- .data          0x00000000        0x0 ./BSP/UART/bsp_ring_buffer.o
- .bss           0x00000000        0x0 ./BSP/UART/bsp_ring_buffer.o
- .text.QUEUE_Init
-                0x00000000       0x30 ./BSP/UART/bsp_ring_buffer.o
- .text.QUEUE_Reset
-                0x00000000       0x26 ./BSP/UART/bsp_ring_buffer.o
- .text.QUEUE_Is_Empty
-                0x00000000       0x22 ./BSP/UART/bsp_ring_buffer.o
- .text.QUEUE_Is_Full
-                0x00000000       0x22 ./BSP/UART/bsp_ring_buffer.o
- .text.QUEUE_Push_Data
-                0x00000000       0x4c ./BSP/UART/bsp_ring_buffer.o
- .text.QUEUE_Pull_Data
-                0x00000000       0x48 ./BSP/UART/bsp_ring_buffer.o
- .debug_info    0x00000000      0x22d ./BSP/UART/bsp_ring_buffer.o
- .debug_abbrev  0x00000000      0x154 ./BSP/UART/bsp_ring_buffer.o
- .debug_aranges
-                0x00000000       0x48 ./BSP/UART/bsp_ring_buffer.o
- .debug_rnglists
-                0x00000000       0x31 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x2b0 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0xaba ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x2e ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x2f ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x22 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x8e ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x51 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x103 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x6a ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x1df ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x1c ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x22 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0xfb ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000     0x1011 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x11f ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000    0x15e97 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x6d ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x295 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000     0x368c ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x189 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x5c ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x980 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x9e9 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x115 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x13e ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0xa5 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x174 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x287 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x5f ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x236 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x12c ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x21e ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x2e ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x516 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x127 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x7e ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x89 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x12d ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x22 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x2a ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x61 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x43 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x34 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x16 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x35 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x16 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x43 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x34 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x10 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x58 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x8e ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x1c ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x177 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000      0x369 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x16 ./BSP/UART/bsp_ring_buffer.o
- .debug_macro   0x00000000       0x29 ./BSP/UART/bsp_ring_buffer.o
- .debug_line    0x00000000      0x96e ./BSP/UART/bsp_ring_buffer.o
- .debug_str     0x00000000    0xc0fdb ./BSP/UART/bsp_ring_buffer.o
- .comment       0x00000000       0x44 ./BSP/UART/bsp_ring_buffer.o
- .debug_frame   0x00000000       0xf8 ./BSP/UART/bsp_ring_buffer.o
- .ARM.attributes
-                0x00000000       0x34 ./BSP/UART/bsp_ring_buffer.o
  .group         0x00000000        0xc ./BSP/UART/bsp_uart.o
  .group         0x00000000        0xc ./BSP/UART/bsp_uart.o
  .group         0x00000000        0xc ./BSP/UART/bsp_uart.o
@@ -854,7 +890,7 @@ Discarded input sections
  .text.BSP_UART_IsAvailableDataReceive
                 0x00000000       0x24 ./BSP/UART/bsp_uart.o
  .text.BSP_UART_SendChar
-                0x00000000       0x66 ./BSP/UART/bsp_uart.o
+                0x00000000       0x60 ./BSP/UART/bsp_uart.o
  .text.BSP_UART_SendString
                 0x00000000       0x2e ./BSP/UART/bsp_uart.o
  .text.BSP_UART_ReadChar
@@ -909,7 +945,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x12d ./BSP/UART/bsp_uart.o
  .debug_macro   0x00000000       0x22 ./BSP/UART/bsp_uart.o
  .debug_macro   0x00000000      0x1bb ./BSP/UART/bsp_uart.o
- .debug_line    0x00000000      0xc1c ./BSP/UART/bsp_uart.o
+ .debug_line    0x00000000      0xc6a ./BSP/UART/bsp_uart.o
  .debug_str     0x00000000    0xbf464 ./BSP/UART/bsp_uart.o
  .comment       0x00000000       0x44 ./BSP/UART/bsp_uart.o
  .debug_frame   0x00000000      0x3b4 ./BSP/UART/bsp_uart.o
@@ -1066,6 +1102,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xb5b ./Core/Src/main.o
  .debug_macro   0x00000000      0x1e6 ./Core/Src/main.o
  .debug_macro   0x00000000      0x1bb ./Core/Src/main.o
+ .debug_macro   0x00000000      0x149 ./Core/Src/main.o
  .debug_macro   0x00000000       0x22 ./Core/Src/main.o
  .debug_macro   0x00000000       0x61 ./Core/Src/main.o
  .debug_macro   0x00000000       0x2a ./Core/Src/main.o
@@ -1591,19 +1628,243 @@ Discarded input sections
  .text          0x00000000       0x14 ./Core/Startup/startup_stm32f407vetx.o
  .data          0x00000000        0x0 ./Core/Startup/startup_stm32f407vetx.o
  .bss           0x00000000        0x0 ./Core/Startup/startup_stm32f407vetx.o
+ .group         0x00000000        0xc ./Devices/ADC_MUX/cd74hc4067.o
+ .text          0x00000000        0x0 ./Devices/ADC_MUX/cd74hc4067.o
+ .data          0x00000000        0x0 ./Devices/ADC_MUX/cd74hc4067.o
+ .bss           0x00000000        0x0 ./Devices/ADC_MUX/cd74hc4067.o
+ .debug_info    0x00000000       0x22 ./Devices/ADC_MUX/cd74hc4067.o
+ .debug_abbrev  0x00000000       0x12 ./Devices/ADC_MUX/cd74hc4067.o
+ .debug_aranges
+                0x00000000       0x18 ./Devices/ADC_MUX/cd74hc4067.o
+ .debug_macro   0x00000000       0x11 ./Devices/ADC_MUX/cd74hc4067.o
+ .debug_macro   0x00000000      0xaba ./Devices/ADC_MUX/cd74hc4067.o
+ .debug_line    0x00000000       0x40 ./Devices/ADC_MUX/cd74hc4067.o
+ .debug_str     0x00000000     0x2e22 ./Devices/ADC_MUX/cd74hc4067.o
+ .comment       0x00000000       0x44 ./Devices/ADC_MUX/cd74hc4067.o
+ .ARM.attributes
+                0x00000000       0x34 ./Devices/ADC_MUX/cd74hc4067.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
+ .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
  .group         0x00000000        0xc ./Devices/SSD1963/ssd1963.o
  .text          0x00000000        0x0 ./Devices/SSD1963/ssd1963.o
  .data          0x00000000        0x0 ./Devices/SSD1963/ssd1963.o
  .bss           0x00000000        0x0 ./Devices/SSD1963/ssd1963.o
- .debug_info    0x00000000       0x22 ./Devices/SSD1963/ssd1963.o
- .debug_abbrev  0x00000000       0x12 ./Devices/SSD1963/ssd1963.o
+ .text.BSP_FSMC_Send_Command
+                0x00000000       0x1e ./Devices/SSD1963/ssd1963.o
+ .text.BSP_FSMC_Send_Data
+                0x00000000       0x20 ./Devices/SSD1963/ssd1963.o
+ .text.SSD1963_SetAddrWindowForLv
+                0x00000000       0x98 ./Devices/SSD1963/ssd1963.o
+ .text.SSD1963_SendData
+                0x00000000       0x3a ./Devices/SSD1963/ssd1963.o
+ .text.SSD1963_SetRotation
+                0x00000000       0x58 ./Devices/SSD1963/ssd1963.o
+ .text.SSD1963_Init
+                0x00000000      0x19e ./Devices/SSD1963/ssd1963.o
+ .text.SSD1963_Flush
+                0x00000000       0x74 ./Devices/SSD1963/ssd1963.o
+ .debug_info    0x00000000     0x117d ./Devices/SSD1963/ssd1963.o
+ .debug_abbrev  0x00000000      0x248 ./Devices/SSD1963/ssd1963.o
  .debug_aranges
-                0x00000000       0x18 ./Devices/SSD1963/ssd1963.o
- .debug_macro   0x00000000       0x11 ./Devices/SSD1963/ssd1963.o
+                0x00000000       0x50 ./Devices/SSD1963/ssd1963.o
+ .debug_rnglists
+                0x00000000       0x39 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0xb4a ./Devices/SSD1963/ssd1963.o
  .debug_macro   0x00000000      0xaba ./Devices/SSD1963/ssd1963.o
- .debug_line    0x00000000       0x3d ./Devices/SSD1963/ssd1963.o
- .debug_str     0x00000000     0x2e1f ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x2e ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x2f ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x22 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x8e ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x51 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x103 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x6a ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x1df ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x1c ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x22 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0xfb ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000     0x1011 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x11f ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000    0x15e97 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x6d ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x295 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000     0x368c ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x189 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x5c ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x980 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x9e9 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x115 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x13e ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0xa5 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x174 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x287 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x5f ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x236 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x12c ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x21e ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x2e ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x516 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x127 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x7e ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x89 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x12d ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x5b ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x22 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x4d5 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x58 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x2e ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x5f ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x22 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x77 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x61 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x2a ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x43 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x34 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x16 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x43 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x34 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x10 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x58 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x8e ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x1c ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x177 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x369 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x10 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x35 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x20 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x10 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x10 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x460 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x1c ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x58 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x1a4 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x74 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x11 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x22 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x16d ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x10 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x16 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x58 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x24e ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x52 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x16 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x10 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x12 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x28 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x10 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x12 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x10 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x12 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x1c ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x10 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x10 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x51 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x10 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x1c ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x1c ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x16 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x11 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x10 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x10 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000      0x149 ./Devices/SSD1963/ssd1963.o
+ .debug_macro   0x00000000       0x16 ./Devices/SSD1963/ssd1963.o
+ .debug_line    0x00000000     0x46fc ./Devices/SSD1963/ssd1963.o
+ .debug_str     0x00000000    0xc9c8c ./Devices/SSD1963/ssd1963.o
  .comment       0x00000000       0x44 ./Devices/SSD1963/ssd1963.o
+ .debug_frame   0x00000000      0x110 ./Devices/SSD1963/ssd1963.o
  .ARM.attributes
                 0x00000000       0x34 ./Devices/SSD1963/ssd1963.o
  .group         0x00000000        0xc ./Devices/XPT2046/xpt2046.o
@@ -3902,6 +4163,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x7e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
  .debug_macro   0x00000000       0x89 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
  .debug_macro   0x00000000      0x12d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
+ .debug_macro   0x00000000      0x143 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
  .debug_macro   0x00000000      0x1d5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
  .group         0x00000000        0xc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
  .group         0x00000000        0xc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
@@ -4121,6 +4383,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x7e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
  .debug_macro   0x00000000       0x89 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
  .debug_macro   0x00000000      0x12d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
+ .debug_macro   0x00000000      0x235 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
  .debug_macro   0x00000000      0x1d5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
  .debug_macro   0x00000000      0x781 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
  .group         0x00000000        0xc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.o
@@ -4358,6 +4621,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x7e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
  .debug_macro   0x00000000       0x89 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
  .debug_macro   0x00000000      0x12d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
+ .debug_macro   0x00000000       0x5b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
  .debug_macro   0x00000000      0x781 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
  .debug_macro   0x00000000      0x20a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
  .debug_macro   0x00000000       0xaa ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
@@ -31477,6 +31741,144 @@ Discarded input sections
  .debug_frame   0x00000000      0xafc ./LVGL/src/widgets/lv_textarea.o
  .ARM.attributes
                 0x00000000       0x34 ./LVGL/src/widgets/lv_textarea.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .group         0x00000000        0xc ./Middleware/Ring_Buffer/ring_buffer.o
+ .text          0x00000000        0x0 ./Middleware/Ring_Buffer/ring_buffer.o
+ .data          0x00000000        0x0 ./Middleware/Ring_Buffer/ring_buffer.o
+ .bss           0x00000000        0x0 ./Middleware/Ring_Buffer/ring_buffer.o
+ .text.QUEUE_Init
+                0x00000000       0x30 ./Middleware/Ring_Buffer/ring_buffer.o
+ .text.QUEUE_Reset
+                0x00000000       0x26 ./Middleware/Ring_Buffer/ring_buffer.o
+ .text.QUEUE_Is_Empty
+                0x00000000       0x22 ./Middleware/Ring_Buffer/ring_buffer.o
+ .text.QUEUE_Is_Full
+                0x00000000       0x22 ./Middleware/Ring_Buffer/ring_buffer.o
+ .text.QUEUE_Push_Data
+                0x00000000       0x4c ./Middleware/Ring_Buffer/ring_buffer.o
+ .text.QUEUE_Pull_Data
+                0x00000000       0x48 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_info    0x00000000      0x22d ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_abbrev  0x00000000      0x154 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_aranges
+                0x00000000       0x48 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_rnglists
+                0x00000000       0x31 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x2b0 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0xaba ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x2e ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x2f ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x22 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x8e ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x51 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x103 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x6a ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x1df ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x1c ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x22 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0xfb ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000     0x1011 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x11f ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000    0x15e97 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x6d ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x295 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000     0x368c ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x189 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x5c ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x980 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x9e9 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x115 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x13e ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0xa5 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x174 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x287 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x5f ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x236 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x12c ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x21e ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x2e ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x516 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x127 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x7e ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x89 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x12d ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x22 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x2a ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x61 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x43 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x34 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x16 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x35 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x16 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x43 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x34 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x10 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x58 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x8e ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x1c ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x177 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000      0x369 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x16 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_macro   0x00000000       0x29 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_line    0x00000000      0x974 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_str     0x00000000    0xc0fe5 ./Middleware/Ring_Buffer/ring_buffer.o
+ .comment       0x00000000       0x44 ./Middleware/Ring_Buffer/ring_buffer.o
+ .debug_frame   0x00000000       0xf8 ./Middleware/Ring_Buffer/ring_buffer.o
+ .ARM.attributes
+                0x00000000       0x34 ./Middleware/Ring_Buffer/ring_buffer.o
  .text          0x00000000        0x0 C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-exit.o)
  .data          0x00000000        0x0 C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-exit.o)
  .bss           0x00000000        0x0 C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-exit.o)
@@ -31787,7 +32189,6 @@ LOAD ./BSP/FSMC/bsp_fsmc.o
 LOAD ./BSP/GPIO/bsp_gpio.o
 LOAD ./BSP/SPI/bsp_spi.o
 LOAD ./BSP/SysTick/bsp_systick.o
-LOAD ./BSP/UART/bsp_ring_buffer.o
 LOAD ./BSP/UART/bsp_uart.o
 LOAD ./Core/Src/main.o
 LOAD ./Core/Src/stm32f4xx_hal_msp.o
@@ -31796,6 +32197,7 @@ LOAD ./Core/Src/syscalls.o
 LOAD ./Core/Src/sysmem.o
 LOAD ./Core/Src/system_stm32f4xx.o
 LOAD ./Core/Startup/startup_stm32f407vetx.o
+LOAD ./Devices/ADC_MUX/cd74hc4067.o
 LOAD ./Devices/SSD1963/ssd1963.o
 LOAD ./Devices/XPT2046/xpt2046.o
 LOAD ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
@@ -32024,6 +32426,7 @@ LOAD ./LVGL/src/widgets/lv_slider.o
 LOAD ./LVGL/src/widgets/lv_switch.o
 LOAD ./LVGL/src/widgets/lv_table.o
 LOAD ./LVGL/src/widgets/lv_textarea.o
+LOAD ./Middleware/Ring_Buffer/ring_buffer.o
 START GROUP
 LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a
 LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
@@ -32752,7 +33155,7 @@ LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_rnglists
                 0x000008e1       0x55 ./FREERTOS/portable/GCC/ARM_CM4F/port.o
 
-.debug_macro    0x00000000     0x70c6
+.debug_macro    0x00000000     0x6baa
  .debug_macro   0x00000000      0xb2d ./Core/Src/main.o
  .debug_macro   0x00000b2d      0x781 ./Core/Src/main.o
  .debug_macro   0x000012ae      0x1d5 ./Core/Src/main.o
@@ -32762,70 +33165,66 @@ LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0000191b       0x61 ./Core/Src/main.o
  .debug_macro   0x0000197c       0xaa ./Core/Src/main.o
  .debug_macro   0x00001a26      0x23b ./Core/Src/main.o
- .debug_macro   0x00001c61      0x149 ./Core/Src/main.o
- .debug_macro   0x00001daa      0x17e ./Core/Src/main.o
- .debug_macro   0x00001f28       0x22 ./Core/Src/main.o
- .debug_macro   0x00001f4a      0x4d5 ./Core/Src/main.o
- .debug_macro   0x0000241f       0x58 ./Core/Src/main.o
- .debug_macro   0x00002477       0x2e ./Core/Src/main.o
- .debug_macro   0x000024a5       0x5f ./Core/Src/main.o
- .debug_macro   0x00002504       0x77 ./Core/Src/main.o
- .debug_macro   0x0000257b       0x10 ./Core/Src/main.o
- .debug_macro   0x0000258b       0x10 ./Core/Src/main.o
- .debug_macro   0x0000259b      0x460 ./Core/Src/main.o
- .debug_macro   0x000029fb       0x1c ./Core/Src/main.o
- .debug_macro   0x00002a17       0x58 ./Core/Src/main.o
- .debug_macro   0x00002a6f      0x1a4 ./Core/Src/main.o
- .debug_macro   0x00002c13       0x74 ./Core/Src/main.o
- .debug_macro   0x00002c87       0x11 ./Core/Src/main.o
- .debug_macro   0x00002c98       0x22 ./Core/Src/main.o
- .debug_macro   0x00002cba      0x16d ./Core/Src/main.o
- .debug_macro   0x00002e27       0x10 ./Core/Src/main.o
- .debug_macro   0x00002e37       0x16 ./Core/Src/main.o
- .debug_macro   0x00002e4d       0x58 ./Core/Src/main.o
- .debug_macro   0x00002ea5      0x24e ./Core/Src/main.o
- .debug_macro   0x000030f3       0x52 ./Core/Src/main.o
- .debug_macro   0x00003145       0x16 ./Core/Src/main.o
- .debug_macro   0x0000315b       0x10 ./Core/Src/main.o
- .debug_macro   0x0000316b       0x12 ./Core/Src/main.o
- .debug_macro   0x0000317d       0x28 ./Core/Src/main.o
- .debug_macro   0x000031a5       0x10 ./Core/Src/main.o
- .debug_macro   0x000031b5       0x12 ./Core/Src/main.o
- .debug_macro   0x000031c7       0x10 ./Core/Src/main.o
- .debug_macro   0x000031d7       0x12 ./Core/Src/main.o
- .debug_macro   0x000031e9       0x1c ./Core/Src/main.o
- .debug_macro   0x00003205       0x10 ./Core/Src/main.o
- .debug_macro   0x00003215       0x10 ./Core/Src/main.o
- .debug_macro   0x00003225       0x51 ./Core/Src/main.o
- .debug_macro   0x00003276       0x10 ./Core/Src/main.o
- .debug_macro   0x00003286       0x1c ./Core/Src/main.o
- .debug_macro   0x000032a2       0x1c ./Core/Src/main.o
- .debug_macro   0x000032be       0x16 ./Core/Src/main.o
- .debug_macro   0x000032d4       0x11 ./Core/Src/main.o
- .debug_macro   0x000032e5       0x10 ./Core/Src/main.o
- .debug_macro   0x000032f5      0x246 ./Core/Src/stm32f4xx_hal_msp.o
- .debug_macro   0x0000353b      0x28b ./Core/Src/stm32f4xx_it.o
- .debug_macro   0x000037c6      0x1cb ./Core/Src/system_stm32f4xx.o
- .debug_macro   0x00003991      0x22b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_macro   0x00003bbc      0x1cb ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_macro   0x00003d87      0x1d1 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_macro   0x00003f58      0x1cb ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.o
- .debug_macro   0x00004123      0x26b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o
- .debug_macro   0x0000438e      0xb55 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o
- .debug_macro   0x00004ee3      0x206 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.o
- .debug_macro   0x000050e9      0x20d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
- .debug_macro   0x000052f6      0x143 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
- .debug_macro   0x00005439      0x1f8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
- .debug_macro   0x00005631      0x77b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
- .debug_macro   0x00005dac      0x27a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
- .debug_macro   0x00006026      0x235 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
- .debug_macro   0x0000625b      0x23a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.o
- .debug_macro   0x00006495      0x1b5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.o
- .debug_macro   0x0000664a      0x2ab ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
- .debug_macro   0x000068f5       0x5b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
- .debug_macro   0x00006950      0x427 ./FREERTOS/tasks.o
- .debug_macro   0x00006d77       0x17 ./FREERTOS/tasks.o
- .debug_macro   0x00006d8e      0x338 ./FREERTOS/portable/GCC/ARM_CM4F/port.o
+ .debug_macro   0x00001c61      0x17e ./Core/Src/main.o
+ .debug_macro   0x00001ddf       0x22 ./Core/Src/main.o
+ .debug_macro   0x00001e01      0x4d5 ./Core/Src/main.o
+ .debug_macro   0x000022d6       0x58 ./Core/Src/main.o
+ .debug_macro   0x0000232e       0x2e ./Core/Src/main.o
+ .debug_macro   0x0000235c       0x5f ./Core/Src/main.o
+ .debug_macro   0x000023bb       0x77 ./Core/Src/main.o
+ .debug_macro   0x00002432       0x10 ./Core/Src/main.o
+ .debug_macro   0x00002442       0x10 ./Core/Src/main.o
+ .debug_macro   0x00002452      0x460 ./Core/Src/main.o
+ .debug_macro   0x000028b2       0x1c ./Core/Src/main.o
+ .debug_macro   0x000028ce       0x58 ./Core/Src/main.o
+ .debug_macro   0x00002926      0x1a4 ./Core/Src/main.o
+ .debug_macro   0x00002aca       0x74 ./Core/Src/main.o
+ .debug_macro   0x00002b3e       0x11 ./Core/Src/main.o
+ .debug_macro   0x00002b4f       0x22 ./Core/Src/main.o
+ .debug_macro   0x00002b71      0x16d ./Core/Src/main.o
+ .debug_macro   0x00002cde       0x10 ./Core/Src/main.o
+ .debug_macro   0x00002cee       0x16 ./Core/Src/main.o
+ .debug_macro   0x00002d04       0x58 ./Core/Src/main.o
+ .debug_macro   0x00002d5c      0x24e ./Core/Src/main.o
+ .debug_macro   0x00002faa       0x52 ./Core/Src/main.o
+ .debug_macro   0x00002ffc       0x16 ./Core/Src/main.o
+ .debug_macro   0x00003012       0x10 ./Core/Src/main.o
+ .debug_macro   0x00003022       0x12 ./Core/Src/main.o
+ .debug_macro   0x00003034       0x28 ./Core/Src/main.o
+ .debug_macro   0x0000305c       0x10 ./Core/Src/main.o
+ .debug_macro   0x0000306c       0x12 ./Core/Src/main.o
+ .debug_macro   0x0000307e       0x10 ./Core/Src/main.o
+ .debug_macro   0x0000308e       0x12 ./Core/Src/main.o
+ .debug_macro   0x000030a0       0x1c ./Core/Src/main.o
+ .debug_macro   0x000030bc       0x10 ./Core/Src/main.o
+ .debug_macro   0x000030cc       0x10 ./Core/Src/main.o
+ .debug_macro   0x000030dc       0x51 ./Core/Src/main.o
+ .debug_macro   0x0000312d       0x10 ./Core/Src/main.o
+ .debug_macro   0x0000313d       0x1c ./Core/Src/main.o
+ .debug_macro   0x00003159       0x1c ./Core/Src/main.o
+ .debug_macro   0x00003175       0x16 ./Core/Src/main.o
+ .debug_macro   0x0000318b       0x11 ./Core/Src/main.o
+ .debug_macro   0x0000319c       0x10 ./Core/Src/main.o
+ .debug_macro   0x000031ac      0x246 ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_macro   0x000033f2      0x28b ./Core/Src/stm32f4xx_it.o
+ .debug_macro   0x0000367d      0x1cb ./Core/Src/system_stm32f4xx.o
+ .debug_macro   0x00003848      0x22b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_macro   0x00003a73      0x1cb ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_macro   0x00003c3e      0x1d1 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_macro   0x00003e0f      0x1cb ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.o
+ .debug_macro   0x00003fda      0x26b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o
+ .debug_macro   0x00004245      0xb55 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o
+ .debug_macro   0x00004d9a      0x206 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.o
+ .debug_macro   0x00004fa0      0x20d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
+ .debug_macro   0x000051ad      0x1f8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
+ .debug_macro   0x000053a5      0x77b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
+ .debug_macro   0x00005b20      0x27a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
+ .debug_macro   0x00005d9a      0x23a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.o
+ .debug_macro   0x00005fd4      0x1b5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.o
+ .debug_macro   0x00006189      0x2ab ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
+ .debug_macro   0x00006434      0x427 ./FREERTOS/tasks.o
+ .debug_macro   0x0000685b       0x17 ./FREERTOS/tasks.o
+ .debug_macro   0x00006872      0x338 ./FREERTOS/portable/GCC/ARM_CM4F/port.o
 
 .debug_line     0x00000000    0x1061e
  .debug_line    0x00000000     0x4a89 ./Core/Src/main.o

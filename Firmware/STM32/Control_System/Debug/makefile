@@ -9,6 +9,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Middleware/Ring_Buffer/subdir.mk
 -include LVGL/src/widgets/subdir.mk
 -include LVGL/src/misc/subdir.mk
 -include LVGL/src/hal/subdir.mk
@@ -69,6 +70,7 @@ RM := rm -rf
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include Devices/XPT2046/subdir.mk
 -include Devices/SSD1963/subdir.mk
+-include Devices/ADC_MUX/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include BSP/UART/subdir.mk

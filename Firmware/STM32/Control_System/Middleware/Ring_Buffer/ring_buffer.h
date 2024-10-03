@@ -5,14 +5,14 @@
  *      Author: dongkhoa
  */
 
-#ifndef UART_RING_BUFFER_H_
-#define UART_RING_BUFFER_H_
+#ifndef UART_BSP_RING_BUFFER_H_
+#define UART_BSP_RING_BUFFER_H_
 
 /*********************
  *      INCLUDES
  *********************/
 
-#include "stm32f1xx.h"
+#include "stm32f4xx.h"
 #include <stdbool.h>
 
 #ifdef __cplusplus
@@ -49,4 +49,4 @@ extern "C"
 }
 #endif
 
-#endif /* UART_RING_BUFFER_H_ */
+#endif /* UART_BSP_RING_BUFFER_H_ */

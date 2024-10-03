@@ -26,7 +26,7 @@ BSP/UART/bsp_uart.o: ../BSP/UART/bsp_uart.c ../BSP/UART/bsp_uart.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
- ../BSP/UART/bsp_ring_buffer.h \
+ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/Middleware/Ring_Buffer/ring_buffer.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usart.h
 ../BSP/UART/bsp_uart.h:
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
@@ -56,5 +56,5 @@ BSP/UART/bsp_uart.o: ../BSP/UART/bsp_uart.c ../BSP/UART/bsp_uart.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
-../BSP/UART/bsp_ring_buffer.h:
+D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/Middleware/Ring_Buffer/ring_buffer.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usart.h:

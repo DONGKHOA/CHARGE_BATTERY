@@ -32,9 +32,11 @@ App/CMDLine/app_command.o: ../App/CMDLine/app_command.c \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/bsp.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/ADC/bsp_adc.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/GPIO/bsp_gpio.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/SysTick/bsp_systick.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/UART/bsp_uart.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/UART/bsp_ring_buffer.h
+ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/Middleware/Ring_Buffer/ring_buffer.h \
+ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/FSMC/bsp_fsmc.h
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/App/CMDLine/Include/app_command.h:
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h:
@@ -68,6 +70,8 @@ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/Devices/device.h
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/bsp.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/ADC/bsp_adc.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/GPIO/bsp_gpio.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/SysTick/bsp_systick.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/UART/bsp_uart.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/UART/bsp_ring_buffer.h:
+D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/Middleware/Ring_Buffer/ring_buffer.h:
+D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/FSMC/bsp_fsmc.h:

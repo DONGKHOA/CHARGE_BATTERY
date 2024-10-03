@@ -10,7 +10,6 @@
  *********************/
 
 #include "bsp_uart.h"
-
 #include "stm32f4xx_ll_usart.h"
 
 /*********************
@@ -22,7 +21,7 @@
 #define LIMIT_WAIT_BUFFER        1000UL
 
 /**********************
- *  STATIC VARIABLES
+ *  PRIVATE DATA
  **********************/
 
 /**
@@ -83,8 +82,8 @@ BSP_UART_IsAvailableDataReceive (uart_cfg_t *uartstdio_device)
  * @param uartstdio_device Pointer to the UART configuration data structure.
  * @param c The character to be sent via UART communication.
  *
- * @return If the u32_uart_timeout reaches 0, the function will return without sending
- * the character.
+ * @return If the u32_uart_timeout reaches 0, the function will return without
+ * sending the character.
  */
 void
 BSP_UART_SendChar (uart_cfg_t *uartstdio_device, char c)
@@ -98,7 +97,6 @@ BSP_UART_SendChar (uart_cfg_t *uartstdio_device, char c)
     {
       return;
     }
-    u32_uart_timeout--;
   }
 
   // Critical section to ensure atomic access to the buffer
@@ -159,8 +157,8 @@ BSP_UART_ReadChar (uart_cfg_t *uartstdio_device)
 }
 
 /**
- * The function `UART_u32_uart_TimeOut` decrements the variable `u32_uart_timeout` if it is not
- * equal to 0.
+ * The function `BSP_UART_TimeOut` decrements the variable `u32_uart_timeout` if
+ * it is not equal to 0.
  */
 void
 BSP_UART_TimeOut (void)

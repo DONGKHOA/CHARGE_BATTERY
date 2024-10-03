@@ -13,8 +13,7 @@
  *********************/
 
 #include "stm32f4xx.h"
-
-#include "bsp_ring_buffer.h"
+#include "ring_buffer.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -49,7 +48,7 @@ extern "C"
   void    BSP_UART_SendString(uart_cfg_t *uartstdio_device, const char *s);
   char    BSP_UART_ReadChar(uart_cfg_t *uartstdio_device);
 
-  // Call Function "UART_TimeOut" in ISR SysTick
+  // Call Function "BSP_UART_TimeOut" in ISR SysTick
   void BSP_UART_TimeOut(void);
 
   // Call Function "UART_ISR" in ISR UART

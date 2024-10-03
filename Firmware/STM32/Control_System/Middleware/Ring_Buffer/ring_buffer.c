@@ -9,8 +9,7 @@
  *      INCLUDES
  *********************/
 
-#include "bsp_ring_buffer.h"
-
+#include "ring_buffer.h"
 #include <stdlib.h>
 
 /*********************

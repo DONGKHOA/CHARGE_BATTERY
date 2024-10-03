@@ -31,6 +31,7 @@ BSP/SysTick \
 BSP/UART \
 Core/Src \
 Core/Startup \
+Devices/ADC_MUX \
 Devices/SSD1963 \
 Devices/XPT2046 \
 Drivers/STM32F4xx_HAL_Driver/Src \
@@ -91,4 +92,5 @@ LVGL/src/font \
 LVGL/src/hal \
 LVGL/src/misc \
 LVGL/src/widgets \
+Middleware/Ring_Buffer \
 
