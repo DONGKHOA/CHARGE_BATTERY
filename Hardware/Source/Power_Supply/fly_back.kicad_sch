@@ -11813,6 +11813,16 @@
 		)
 		(uuid "ffee9a99-df6b-4a8f-8f55-bac804eded93")
 	)
+	(text "0.25W, R4 r5 1206"
+		(exclude_from_sim no)
+		(at 184.912 130.556 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3b3d11bf-18fd-471a-b5d5-7398d10394e3")
+	)
 	(text "Line"
 		(exclude_from_sim no)
 		(at 41.91 105.41 0)
@@ -15252,107 +15262,6 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:KBU1010 ")
-		(at 135.89 124.46 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a195d9dc-92e8-444d-b2db-f4676aa3bb58")
-		(property "Reference" "D1"
-			(at 133.096 119.126 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "KBU1010"
-			(at 140.462 130.556 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:Diode_Bridge_Vishay_KBU"
-			(at 134.62 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2208121800_SEP-KBU1010_C5127084.pdf"
-			(at 138.43 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1 pha, 1KV, 10A, KBU"
-			(at 138.43 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 135.89 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "KBU1010 Cầu Chỉnh Lưu 1KV 10A"
-			(at 138.43 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/kbu808-cau-chinh-luu-800v-8a"
-			(at 137.16 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9dff9e35-43dc-4b45-9dfa-8838f5d73014")
-		)
-		(pin "1"
-			(uuid "c8508fda-fb58-4a8d-ad16-93d709c584b2")
-		)
-		(pin "4"
-			(uuid "d8473030-e4c5-403a-94e5-bf4e0a3b0921")
-		)
-		(pin "3"
-			(uuid "79c3cd39-9826-41a7-b201-321fe96bd0ed")
-		)
-		(instances
-			(project "Power_Supply"
-				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "charge_battery_sym_lib:Candy_Cap_hole_33nF_630VDC")
 		(at 194.31 110.49 90)
 		(unit 1)
@@ -15820,6 +15729,107 @@
 			(project ""
 				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
 					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:KBU1010 ")
+		(at 135.89 124.46 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "be6c490c-235a-4143-b058-1b50c5ca5652")
+		(property "Reference" "D1"
+			(at 130.556 127.254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "KBU1010"
+			(at 141.986 119.888 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:Diode_Bridge_Vishay_KBU"
+			(at 118.11 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2208121800_SEP-KBU1010_C5127084.pdf"
+			(at 119.38 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1 pha, 1KV, 10A, KBU"
+			(at 119.38 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 135.89 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "KBU1010 Cầu Chỉnh Lưu 1KV 10A"
+			(at 119.38 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/kbu808-cau-chinh-luu-800v-8a"
+			(at 119.38 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d7c5c8f5-f294-4b13-9626-d5ee88e8f335")
+		)
+		(pin "1"
+			(uuid "ed94a1a4-435e-46d1-a809-380500ab2526")
+		)
+		(pin "4"
+			(uuid "fa1210f1-821f-4559-8db0-0faea3601024")
+		)
+		(pin "3"
+			(uuid "f15b0a25-c594-4f53-a816-fca5367dbbfe")
+		)
+		(instances
+			(project "Power_Supply"
+				(path "/5c8a7907-026b-4416-b231-5ef9f93b99e1/5a1d07e8-1900-453e-ab71-30ad5bc9dcd9"
+					(reference "D1")
 					(unit 1)
 				)
 			)
