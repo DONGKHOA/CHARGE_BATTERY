@@ -495,7 +495,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../../Gerber_File/PFC&LLC/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -523,6 +523,12 @@
       "fields_ordered": [
         {
           "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": true
+        },
+        {
+          "group_by": false,
           "label": "Reference",
           "name": "Reference",
           "show": true
@@ -543,7 +549,7 @@
           "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -555,12 +561,6 @@
           "group_by": false,
           "label": "DNP",
           "name": "${DNP}",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
           "show": false
         },
         {
@@ -627,7 +627,7 @@
           "group_by": false,
           "label": "Supply part name",
           "name": "Supply part name",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
