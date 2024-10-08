@@ -27,6 +27,7 @@ App/CMDLine \
 App/Control \
 App/Data \
 App/LED \
+BSP/GPIO \
 BSP/I2C \
 BSP/PWM \
 BSP/SysTick \
@@ -38,6 +39,7 @@ Drivers/STM32F1xx_HAL_Driver/Src \
 Middleware/Frequency_convert_pulse/Private \
 Middleware/Frequency_convert_pulse \
 Middleware/PI_Control \
+Middleware/Ring_Buffer \
 Middleware/Voltage_convert_frequency \
 Scheduler \
 

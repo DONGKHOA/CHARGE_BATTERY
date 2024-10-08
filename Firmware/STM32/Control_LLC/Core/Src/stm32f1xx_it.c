@@ -189,7 +189,7 @@ void SysTick_Handler(void)
 	BSP_BOARD_TimeOut();
 	SCH_RunSystemTickTimer();
   /* USER CODE END SysTick_IRQn 0 */
-  HAL_IncTick();
+
   /* USER CODE BEGIN SysTick_IRQn 1 */
 
   /* USER CODE END SysTick_IRQn 1 */
