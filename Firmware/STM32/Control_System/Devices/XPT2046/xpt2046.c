@@ -10,7 +10,7 @@
  *********************/
 
 #include "xpt2046.h"
-#include "stm32f4xx_ll_utils.h"
+#include "main.h"
 
 /**********************
  *    PRIVATE DEFINES
@@ -22,6 +22,8 @@
 /**********************
  *    PRIVATE DATA
  **********************/
+
+static uint16_t Xread, Yread;
 
 static uint8_t ChannelSettingsX, ChannelSettingsY;
 static uint8_t SendBuffer[5];
@@ -122,13 +124,25 @@ uint16_t calC_raw[] = { 0, 0 }; /**< Raw data for calibration point C. */
 static void
 XPT2046_GetRawData (void)
 {
-  HAL_GPIO_WritePin(SPI1_CS_Touch_GPIO_Port, SPI1_CS_Touch_Pin, GPIO_PIN_RESET);
-
+  BSP_GPIO_SetState(GPIOB, LL_GPIO_PIN_12, GPIO_LOW);
   // Send Control bytes and receive raw ADC values from controler
-  HAL_SPI_TransmitReceive(
-      Xpt2046SpiHandler, SendBuffer, ReceiveBuffer, 5, XPT2046_SPI_TIMEOUT);
+  BSP_SPI_TransmitReceive(SPI1, SendBuffer, ReceiveBuffer, 5);
+  BSP_GPIO_SetState(GPIOB, LL_GPIO_PIN_12, GPIO_HIGH);
+}
 
-  HAL_GPIO_WritePin(SPI1_CS_Touch_GPIO_Port, SPI1_CS_Touch_Pin, GPIO_PIN_SET);
+static void XPT2046_GetTouchPoint(uint16_t *X, uint16_t *Y)
+{
+	uint32_t AverageX = 0, AverageY = 0;
+	uint8_t i;
+
+	for(i = 0; i < MAX_SAMPLES; i++)
+	{
+		AverageX += TouchSamples[0][i];
+		AverageY += TouchSamples[1][i];
+	}
+
+	*X = AverageX / MAX_SAMPLES;
+	*Y = AverageY / MAX_SAMPLES;
 }
 
 /**********************
@@ -138,14 +152,12 @@ XPT2046_GetRawData (void)
 void
 XPT2046_Init (SPI_TypeDef *p_spi)
 {
-  // Get SPI handler and IRQ number
-  Xpt2046SpiHandler = hspi;
-  Xpt2046Irqn       = TouchIRQn;
 
   // Default State
   TouchState = XPT2046_IDLE;
-  HAL_GPIO_WritePin(
-      SPI1_CS_Touch_GPIO_Port, SPI1_CS_Touch_Pin, GPIO_PIN_SET); // CS Idle
+  BSP_GPIO_SetState(GPIOB, LL_GPIO_PIN_12, GPIO_HIGH);
+//   HAL_GPIO_WritePin(
+//       SPI1_CS_Touch_GPIO_Port, SPI1_CS_Touch_Pin, GPIO_PIN_SET); // CS Idle
 
   //
   // Prepare Send Buffer
@@ -168,4 +180,18 @@ XPT2046_Init (SPI_TypeDef *p_spi)
   SendBuffer[2] = (ChannelSettingsY >> 3);
   SendBuffer[3] = (ChannelSettingsY << 5);
   SendBuffer[4] = 0;
+}
+
+void XPT2064_Read(lv_indev_drv_t * drv, lv_indev_data_t*data)
+{
+	if(TouchState==XPT2046_TOUCHED)
+	{
+		XPT2046_GetTouchPoint(&Xread,&Yread);
+		 data->state = LV_INDEV_STATE_PRESSED;
+		    data->point.x = Xread;
+		    data->point.y = Yread;
+	}
+	else {
+	    data->state = LV_INDEV_STATE_RELEASED;
+	  }
 }

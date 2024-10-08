@@ -12,7 +12,7 @@
  *      INCLUDES
  *********************/
 
-#include "stm32f4xx.h"
+#include "stm32f1xx.h"
 #include <stdbool.h>
 
 #ifdef __cplusplus

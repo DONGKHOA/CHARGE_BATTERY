@@ -13,10 +13,9 @@
  *********************/
 
 #include <stdint.h>
-#include "ssd1963.h"
+#include "../SSD1963/ssd1963.h"
 #include "bsp.h"
-#include "stm32f407xx.h"
-#include "lv_drv.h"
+#include "lvgl.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -55,8 +54,7 @@ extern "C"
    **********************/
 
   void XPT2046_Init(SPI_TypeDef *p_spi);
-
-  void XPT2064_Read(lv_indev_drv_t * drv, lv_indev_data_t*data)
+  void XPT2064_Read(lv_indev_drv_t * drv, lv_indev_data_t*data);
 
 #ifdef __cplusplus
 }

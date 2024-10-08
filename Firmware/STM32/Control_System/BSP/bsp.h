@@ -15,6 +15,7 @@
 #include "ADC/bsp_adc.h"
 #include "GPIO/bsp_gpio.h"
 #include "SysTick/bsp_systick.h"
+#include "SPI/bsp_spi.h"
 #include "UART/bsp_uart.h"
 #include "FSMC/bsp_fsmc.h"
 

@@ -11,6 +11,7 @@ RM := rm -rf
 -include sources.mk
 -include Scheduler/subdir.mk
 -include Middleware/Voltage_convert_frequency/subdir.mk
+-include Middleware/Ring_Buffer/subdir.mk
 -include Middleware/PI_Control/subdir.mk
 -include Middleware/Frequency_convert_pulse/Private/subdir.mk
 -include Middleware/Frequency_convert_pulse/subdir.mk
@@ -22,6 +23,7 @@ RM := rm -rf
 -include BSP/SysTick/subdir.mk
 -include BSP/PWM/subdir.mk
 -include BSP/I2C/subdir.mk
+-include BSP/GPIO/subdir.mk
 -include App/LED/subdir.mk
 -include App/Data/subdir.mk
 -include App/Control/subdir.mk
