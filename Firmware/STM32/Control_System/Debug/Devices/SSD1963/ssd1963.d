@@ -259,6 +259,8 @@ Devices/SSD1963/ssd1963.o: ../Devices/SSD1963/ssd1963.c \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/GPIO/bsp_gpio.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/SysTick/bsp_systick.h \
+ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/SPI/bsp_spi.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/UART/bsp_uart.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/Middleware/Ring_Buffer/ring_buffer.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/FSMC/bsp_fsmc.h
@@ -522,6 +524,8 @@ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/ADC/bsp_adc.
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/GPIO/bsp_gpio.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/SysTick/bsp_systick.h:
+D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/SPI/bsp_spi.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/UART/bsp_uart.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/Middleware/Ring_Buffer/ring_buffer.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/FSMC/bsp_fsmc.h:

@@ -40,8 +40,16 @@ extern "C"
    *   PUBLIC FUNCTIONS
    **********************/
 
-  spi_status_t BSP_SPI_Transmit (SPI_TypeDef * p_spi, uint8_t * p_data, uint32_t size);
-  spi_status_t BSP_SPI_Receive (SPI_TypeDef * p_spi, uint8_t * p_data, uint32_t size);
+  spi_status_t BSP_SPI_Transmit(SPI_TypeDef *p_spi,
+                                uint8_t     *p_data,
+                                uint32_t     size);
+  spi_status_t BSP_SPI_Receive(SPI_TypeDef *p_spi,
+                               uint8_t     *p_data,
+                               uint32_t     size);
+  spi_status_t BSP_SPI_TransmitReceive(SPI_TypeDef *p_spi,
+                                       uint8_t     *p_data_tx,
+                                       uint8_t     *p_data_rx,
+                                       uint32_t     size);
 
   // Call Function "BSP_SPI_TimeOut" in ISR SysTick
   void BSP_SPI_TimeOut(void);

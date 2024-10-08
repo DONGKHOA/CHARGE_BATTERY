@@ -258,11 +258,22 @@ Devices/XPT2046/xpt2046.o: ../Devices/XPT2046/xpt2046.c \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/GPIO/bsp_gpio.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/SysTick/bsp_systick.h \
+ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/SPI/bsp_spi.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/UART/bsp_uart.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/Middleware/Ring_Buffer/ring_buffer.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/FSMC/bsp_fsmc.h \
- ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h \
- ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h
+ ../Core/Inc/main.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usart.h
 ../Devices/XPT2046/xpt2046.h:
 ../Devices/XPT2046/../SSD1963/ssd1963.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/LVGL/lvgl.h:
@@ -523,8 +534,19 @@ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/ADC/bsp_adc.
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/GPIO/bsp_gpio.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/SysTick/bsp_systick.h:
+D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/SPI/bsp_spi.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/UART/bsp_uart.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/Middleware/Ring_Buffer/ring_buffer.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_System/BSP/FSMC/bsp_fsmc.h:
-../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h:
+../Core/Inc/main.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usart.h:
