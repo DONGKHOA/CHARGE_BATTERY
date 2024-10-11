@@ -5,8 +5,8 @@
  *      Author: dongkhoa
  */
 
-#ifndef ADC_EX_ADS1115_H_
-#define ADC_EX_ADS1115_H_
+#ifndef ADS1115_ADS1115_H_
+#define ADS1115_ADS1115_H_
 
 /*********************
  *      INCLUDES

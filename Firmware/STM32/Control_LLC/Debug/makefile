@@ -15,6 +15,7 @@ RM := rm -rf
 -include Middleware/PI_Control/subdir.mk
 -include Middleware/Frequency_convert_pulse/Private/subdir.mk
 -include Middleware/Frequency_convert_pulse/subdir.mk
+-include Middleware/Current_convert_frequency/subdir.mk
 -include Drivers/STM32F1xx_HAL_Driver/Src/subdir.mk
 -include Devices/ADS1115/subdir.mk
 -include Core/Startup/subdir.mk

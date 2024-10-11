@@ -9,30 +9,37 @@
  *      INCLUDES
  *********************/
 
-#include "bsp_board.h"
+#include "main.h"
+
 #include "app_control_power.h"
+#include "app_data_struct.h"
 
 #include "scheduler.h"
-#include "app_data_struct.h"
 #include "frequency_convert_pulse.h"
 #include "voltage_convert_frequency.h"
+#include "current_convert_frequency.h"
 #include "pi_control.h"
+
 #include "device.h"
-#include <stdlib.h>
+
+#include "bsp_board.h"
 
 /*********************
  *    PRIVATE DEFINES
  *********************/
 
 #define TIME_LIMIT_PHASE_START 60 // 60ms=[Soft-start](55s)+[Operation-PI](5s)
-#define KI                     0.1
-#define KP                     0.1
-#define VOLTAGE_OUTPUT         48 // V
 
-#define NUMBER_CHANNEL_ADC            1
-#define START_THRESHOLD_INPUT_VOLTAGE 85
-#define END_THRESHOLD_INPUT_VOLTAGE   85
-#define STORAGE_INPUT_VOLTAGE         s_control_power.s_adc1.p_adc_voltage_data[0]
+#define KI_VOLTAGE  0.1f
+#define KP_VOLTAGE  0.1f
+#define VOLTAGE_REF 58.0f
+
+#define KI_CURRENT  0.1f
+#define KP_CURRENT  0.1f
+#define CURRENT_REF 6.0f
+
+#define ADS1115_CURRENT_CHANNEL DEV_ADS1115_CHANNEL_1
+#define ADS1115_VOLTAGE_CHANNEL DEV_ADS1115_CHANNEL_2
 
 /*********************
  *    PRIVATE TYPEDEFS
@@ -49,85 +56,37 @@ typedef struct _Control_TaskContextTypedef_
  *
  * This structure holds various configuration and control parameters
  * for the power control system. It includes state information,
- * PI control configuration, PWM configuration, ADC data,
- * voltage, frequency of operation, and the number of times the
- * frequency has changed.
+ * PI control configuration, PWM configuration, voltage, frequency of operation,
+ * and the number of times the frequency has changed.
  */
 typedef struct _Control_Power_t
 {
-  /**
-   * @brief Pointer to the current state of the control system.
-   *
-   * This points to the current state of the power control system.
-   */
-  CONTROL_STATE_t *state;
-
-  /**
-   * @brief Pointer to the PI control configuration.
-   *
-   * This points to the PI control structure used for regulating
-   * the power output.
-   */
-  pi_control_t *control_power_pi;
-
-  /**
-   * @brief Pointer to the PWM configuration.
-   *
-   * This points to the PWM configuration structure used for controlling
-   * the power gate.
-   */
-  pwm_cfg_t *pwm_control_1;
-
-  /**
-   * @brief ADC configuration data.
-   *
-   * This structure holds the ADC configuration and data used
-   * for measuring input voltage.
-   */
-  adc_data_t s_adc1;
-
-  /**
-   * @brief Voltage measurement.
-   *
-   * The measured output voltage.
-   */
-  float* f_output_voltage;
-
-  /**
-   * @brief Frequency of operation.
-   *
-   * The operating frequency of LLC.
-   */
-  uint32_t frequency_operation;
-
-  /**
-   * @brief Number of times the frequency has changed.
-   *
-   * This keeps track of times the frequency has been adjusted in the state is
-   * set 'CGT_SOFT_START'.
-   */
-  uint8_t times_change_fre;
-
+  CONTROL_STATE_t *p_state;
+  pi_control_t    *p_control_voltage;
+  pi_control_t    *p_control_current;
+  pwm_cfg_t       *p_pwm_control_1;
+  float           *p_output_current;
+  float           *p_output_voltage;
+  uint32_t         u32_frequency_operation;
+  uint8_t          u32_times_change_fre;
 } Control_Power_t;
 
 /******************************
  *  PRIVATE PROTOTYPE FUNCTION
  ******************************/
 
-static void  APP_CONTROL_TaskUpdate(void);
-static float APP_CONTROL_ConvertVoltageOutput(float voltage);
-static void  APP_CONTROL_ResetData(void);
-static void  APP_CONTROL_ReadVoltageInput(void);
-static void  APP_CONTROL_EnablePFC(void);
-static void  APP_CONTROL_DisablePFC(void);
+static void APP_CONTROL_TaskUpdate(void);
+static void APP_CONTROL_CCCVChager(void);
+static void APP_CONTROL_ConvertVoltageOutput(void);
+static void APP_CONTROL_ResetData(void);
+// static void APP_CONTROL_RelayOn(void);
+// static void APP_CONTROL_RelayOff(void);
 
 /*********************
  *    PRIVATE DATA
  *********************/
 
 static Control_Power_t            s_control_power;
-static uint32_t                   adc_data[NUMBER_CHANNEL_ADC]         = { 0 };
-static float                      adc_voltage_data[NUMBER_CHANNEL_ADC] = { 0 };
 static Control_TaskContextTypedef s_ControlTaskContext
     = { SCH_INVALID_TASK_HANDLE, // Will be updated by Scheduler
         {
@@ -157,41 +116,45 @@ void
 APP_CONTROL_Init (void)
 {
   // Link pointer to variable
-  s_control_power.state = (CONTROL_STATE_t *)&s_control_llc_data.s_state_data;
-  s_control_power.control_power_pi
-      = (pi_control_t *)&s_control_llc_data.s_control_system;
-  s_control_power.pwm_control_1
+  s_control_power.p_state = (CONTROL_STATE_t *)&s_control_llc_data.s_state_data;
+  s_control_power.p_control_voltage
+      = (pi_control_t *)&s_control_llc_data.s_control_voltage;
+  s_control_power.p_control_current
+      = (pi_control_t *)&s_control_llc_data.s_control_current;
+  s_control_power.p_pwm_control_1
       = (pwm_cfg_t *)&s_control_llc_data.s_control_gate;
-  s_control_power.f_output_voltage = (float *)&s_control_llc_data.f_output_voltage;
-  // Prepare data task control power
-  s_control_power.state = CGT_WAIT_INPUT_VOLTAGE;
+  s_control_power.p_output_voltage
+      = (float *)&s_control_llc_data.f_output_voltage;
+  s_control_power.p_output_current
+      = (float *)&s_control_llc_data.f_output_current;
 
-  // Initialize PI control parameters
-  s_control_power.control_power_pi->f_Ki       = KI;
-  s_control_power.control_power_pi->f_Kp       = KP;
-  s_control_power.control_power_pi->f_setPoint = VOLTAGE_OUTPUT;
+  // Prepare data task control power
+  *s_control_power.p_state = CGT_WAIT_INPUT_VOLTAGE;
+
+  // Initialize PI control parameters of control voltage
+  s_control_power.p_control_voltage->f_Ki       = KI_VOLTAGE;
+  s_control_power.p_control_voltage->f_Kp       = KP_VOLTAGE;
+  s_control_power.p_control_voltage->f_setPoint = VOLTAGE_REF;
+
+  // Initialize PI control parameters of control current
+  s_control_power.p_control_current->f_Ki       = KI_CURRENT;
+  s_control_power.p_control_current->f_Kp       = KP_CURRENT;
+  s_control_power.p_control_current->f_setPoint = CURRENT_REF;
 
   // Initialize PWM control parameters
-  s_control_power.pwm_control_1->channel = GATE_DRIVER_TIM_CHANNEL;
-  s_control_power.pwm_control_1->output  = GATE_DRIVER_TIM_MODE;
-  s_control_power.pwm_control_1->p_tim   = GATE_DRIVER_TIM;
+  s_control_power.p_pwm_control_1->channel = PWM_CHANNEL_1;
+  s_control_power.p_pwm_control_1->output  = PWM_POSITIVE_NEGATIVE;
+  s_control_power.p_pwm_control_1->p_tim   = TIM1;
 
-  // Initialize ADC configuration
-  s_control_power.s_adc1.p_ADCx             = INPUT_VOTAGE_ADC;
-  s_control_power.s_adc1.u32_num_channel    = NUMBER_CHANNEL_ADC;
-  s_control_power.s_adc1.p_adc_data         = &adc_data[0];
-  s_control_power.s_adc1.p_adc_voltage_data = &adc_voltage_data[0];
-
-  // Reset control data and disable PFC
+  // Reset control data
   APP_CONTROL_ResetData();
-  APP_CONTROL_DisablePFC();
 
-  // Configure ADC and enable PWM timer
-  BSP_ADC_Config(&s_control_power.s_adc1);
-  BSP_PWM_EnableTimer(s_control_power.pwm_control_1);
+  // Enable PWM timer
+  BSP_PWM_EnableTimer(s_control_power.p_pwm_control_1);
 
   // Reset PI control
-  PIControl_Reset(s_control_power.control_power_pi);
+  PIControl_Reset(s_control_power.p_control_voltage);
+  PIControl_Reset(s_control_power.p_control_current);
 }
 
 /**
@@ -228,114 +191,94 @@ APP_CONTROL_CreateTask (void)
 static void
 APP_CONTROL_TaskUpdate (void)
 {
-  switch (*s_control_power.state)
+  switch (*s_control_power.p_state)
   {
     case CGT_WAIT_INPUT_VOLTAGE:
-      // Waiting for input voltage to be fit range 80V - 265V
-      APP_CONTROL_ReadVoltageInput();
-
-      if ((STORAGE_INPUT_VOLTAGE > START_THRESHOLD_INPUT_VOLTAGE)
-          && (STORAGE_INPUT_VOLTAGE < END_THRESHOLD_INPUT_VOLTAGE))
-      {
-        APP_CONTROL_EnablePFC();
-        s_control_power.times_change_fre = 0;
-        *s_control_power.state           = CGT_SOFT_START;
-      }
       break;
     case CGT_SOFT_START:
       // Handle soft start initialization
-      FCP_PhaseStart(s_control_power.times_change_fre);
-      if (s_control_power.times_change_fre == TIME_LIMIT_PHASE_START)
+      FCP_PhaseStart(s_control_power.u32_times_change_fre);
+      if (s_control_power.u32_times_change_fre == TIME_LIMIT_PHASE_START)
       {
-        s_control_power.times_change_fre = 0;
-        *s_control_power.state           = CGT_PROCESS;
+        s_control_power.u32_times_change_fre = 0;
+        *s_control_power.p_state             = CGT_PROCESS;
       }
-      s_control_power.times_change_fre++;
+      s_control_power.u32_times_change_fre++;
 
-      // Check voltage input
-      APP_CONTROL_ReadVoltageInput();
-      if ((STORAGE_INPUT_VOLTAGE < START_THRESHOLD_INPUT_VOLTAGE)
-          && (STORAGE_INPUT_VOLTAGE > END_THRESHOLD_INPUT_VOLTAGE))
-      {
-        APP_CONTROL_DisablePFC();
-        *s_control_power.state = CGT_WAIT_INPUT_VOLTAGE;
-      }
       break;
     case CGT_PROCESS:
-      if (s_control_power.times_change_fre == CONTROL_PI_TIME_SAMPLE)
+      if (s_control_power.u32_times_change_fre == CONTROL_PI_TIME_SAMPLE)
       {
-        // Read voltage from ADS1115
-        float temp_voltage = ADS1115_Voltage(DEV_ADS1115_CHANNEL_0);
-
-        // Convert from output voltage to input voltage (Circuit read ADC)
-        *s_control_power.f_output_voltage
-            = APP_CONTROL_ConvertVoltageOutput(temp_voltage);
-
-        // PI control
-        PIControl_Process(*s_control_power.f_output_voltage,
-                          s_control_power.control_power_pi);
-
-        // Voltage convert frequency
-        s_control_power.frequency_operation
-            = VCF_Process(s_control_power.control_power_pi->f_out);
-
-        // Frequency convert pulse
-        FCP_PhaseProcess(s_control_power.frequency_operation);
-
-        s_control_power.times_change_fre = 0;
+        APP_CONTROL_CCCVChager();
+        s_control_power.u32_times_change_fre = 0;
       }
-      s_control_power.times_change_fre++;
-
-      // Check voltage input
-      APP_CONTROL_ReadVoltageInput();
-      if ((STORAGE_INPUT_VOLTAGE < START_THRESHOLD_INPUT_VOLTAGE)
-          && (STORAGE_INPUT_VOLTAGE > END_THRESHOLD_INPUT_VOLTAGE))
-      {
-        APP_CONTROL_DisablePFC();
-        *s_control_power.state = CGT_WAIT_INPUT_VOLTAGE;
-      }
+      s_control_power.u32_times_change_fre++;
       break;
     default:
       break;
   }
 }
 
-static float
-APP_CONTROL_ConvertVoltageOutput (float voltage)
+static void
+APP_CONTROL_CCCVChager (void)
 {
-  float temp_voltage;
-  float max_voltage = 54; // Range 43.2V -> 52.8V
-  // Convert
-  temp_voltage = (voltage * max_voltage) / ADS1115_VREF;
-  // Done
-  return temp_voltage;
+  // Read voltage feedback
+  *s_control_power.p_output_voltage = ADS1115_Voltage(ADS1115_VOLTAGE_CHANNEL);
+  APP_CONTROL_ConvertVoltageOutput();
+
+  // If voltage feedback <= VOLTAGE REFERENCE System in mode CC
+  // If voltage feedback > VOLTAGE REFERENCE System in mode CV
+
+  if (*s_control_power.p_output_voltage <= VOLTAGE_REF)
+  {
+    // Read voltage channel current
+    float value_temp = ADS1115_Voltage(ADS1115_CURRENT_CHANNEL);
+
+    // Convert from voltage channel current to current
+    *s_control_power.p_output_current
+        = ACS712_CurrentConverterVoltage(value_temp);
+
+    // PI control
+    PIControl_Process(*s_control_power.p_output_current,
+                      s_control_power.p_control_current);
+
+    // Current convert frequency
+    s_control_power.u32_frequency_operation
+        = CCF_Process(s_control_power.p_control_current->f_out);
+
+    // Frequency convert pulse
+    FCP_PhaseProcess(s_control_power.u32_frequency_operation);
+  }
+  else
+  {
+    // PI control
+    PIControl_Process(*s_control_power.p_output_voltage,
+                      s_control_power.p_control_voltage);
+
+    // Voltage convert frequency
+    s_control_power.u32_frequency_operation
+        = VCF_Process(s_control_power.p_control_voltage->f_out);
+
+    // Frequency convert pulse
+    FCP_PhaseProcess(s_control_power.u32_frequency_operation);
+  }
 }
 
+static void
+APP_CONTROL_ConvertVoltageOutput (void)
+{
+  float value_temp                  = *s_control_power.p_output_voltage;
+  *s_control_power.p_output_voltage = (value_temp / 3.09 + 3.3) * 13;
+}
+
+/**
+ * The function `APP_CONTROL_ResetData` resets certain data values related to
+ * power control.
+ */
 static void
 APP_CONTROL_ResetData (void)
 {
-  s_control_power.frequency_operation = 60000000;
-  s_control_power.times_change_fre    = 0;
-  *s_control_power.f_output_voltage             = 0;
-}
-
-static void
-APP_CONTROL_ReadVoltageInput (void)
-{
-//  BSP_ADC_StartConvert(&s_control_power.s_adc1);
-//  BSP_ADC_WaitConversion(&s_control_power.s_adc1);
-//  if (s_control_power.s_adc1.e_status == BSP_ADC_OK)
-//  {
-//    BSP_ADC_Read(&s_control_power.s_adc1);
-//  }
-}
-
-static void
-APP_CONTROL_EnablePFC (void)
-{
-}
-
-static void
-APP_CONTROL_DisablePFC (void)
-{
+  s_control_power.u32_frequency_operation = 60000000;
+  s_control_power.u32_times_change_fre    = 0;
+  *s_control_power.p_output_voltage       = 0;
 }

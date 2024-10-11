@@ -87,7 +87,7 @@ uart_cfg_t uart_cfg_cml;
 void
 APP_COMMAND_Init (void)
 {
-  BSP_UART_Config(&uart_cfg_cml, COMMAND_LINE_UART, COMMAND_LINE_IRQ);
+  BSP_UART_Config(&uart_cfg_cml, USART1, USART1_IRQn);
   BSP_UART_SendString(&uart_cfg_cml, "> LLC CONTROL FIRMWARE\r\n");
 
   // Reset Data
@@ -162,8 +162,8 @@ APP_COMMAND_SetParameterPiControl (int argc, char *argv[])
 	float f_kp_temp = atof(argv[1]);
 	float f_ki_temp = atof(argv[2]);
 
-	s_control_llc_data.s_control_system.f_Ki = f_ki_temp;
-	s_control_llc_data.s_control_system.f_Kp = f_kp_temp;
+//	s_control_llc_data.s_control_system.f_Ki = f_ki_temp;
+//	s_control_llc_data.s_control_system.f_Kp = f_kp_temp;
 
   return (CMDLINE_OK);
 }

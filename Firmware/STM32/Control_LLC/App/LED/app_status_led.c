@@ -56,9 +56,9 @@ static StatusLed_TaskContextTypedef s_StatusLedTaskContext
 void
 APP_STATUS_LED_Init (void)
 {
-  LL_GPIO_ResetOutputPin(LED_STATUS_1_PORT, LED_STATUS_1_PIN);
-  LL_GPIO_ResetOutputPin(LED_STATUS_2_PORT, LED_STATUS_2_PIN);
-  LL_GPIO_ResetOutputPin(LED_STATUS_3_PORT, LED_STATUS_3_PIN);
+//  LL_GPIO_ResetOutputPin(LED_STATUS_1_PORT, LED_STATUS_1_PIN);
+//  LL_GPIO_ResetOutputPin(LED_STATUS_2_PORT, LED_STATUS_2_PIN);
+//  LL_GPIO_ResetOutputPin(LED_STATUS_3_PORT, LED_STATUS_3_PIN);
   s_status_led.p_status_led
       = (CONTROL_STATE_t *)&s_control_llc_data.s_state_data;
 }
@@ -88,21 +88,21 @@ APP_STATUS_LED_TaskUpdate (void)
   switch (*s_status_led.p_status_led)
   {
     case CGT_WAIT_INPUT_VOLTAGE:
-      LL_GPIO_SetOutputPin(LED_STATUS_1_PORT, LED_STATUS_1_PIN);
-      LL_GPIO_ResetOutputPin(LED_STATUS_2_PORT, LED_STATUS_2_PIN);
-      LL_GPIO_ResetOutputPin(LED_STATUS_3_PORT, LED_STATUS_3_PIN);
+//      LL_GPIO_SetOutputPin(LED_STATUS_1_PORT, LED_STATUS_1_PIN);
+//      LL_GPIO_ResetOutputPin(LED_STATUS_2_PORT, LED_STATUS_2_PIN);
+//      LL_GPIO_ResetOutputPin(LED_STATUS_3_PORT, LED_STATUS_3_PIN);
       break;
 
     case CGT_SOFT_START:
-      LL_GPIO_ResetOutputPin(LED_STATUS_1_PORT, LED_STATUS_1_PIN);
-      LL_GPIO_SetOutputPin(LED_STATUS_2_PORT, LED_STATUS_2_PIN);
-      LL_GPIO_ResetOutputPin(LED_STATUS_3_PORT, LED_STATUS_3_PIN);
+//      LL_GPIO_ResetOutputPin(LED_STATUS_1_PORT, LED_STATUS_1_PIN);
+//      LL_GPIO_SetOutputPin(LED_STATUS_2_PORT, LED_STATUS_2_PIN);
+//      LL_GPIO_ResetOutputPin(LED_STATUS_3_PORT, LED_STATUS_3_PIN);
       break;
 
     case CGT_PROCESS:
-      LL_GPIO_ResetOutputPin(LED_STATUS_1_PORT, LED_STATUS_1_PIN);
-      LL_GPIO_ResetOutputPin(LED_STATUS_2_PORT, LED_STATUS_2_PIN);
-      LL_GPIO_TogglePin(LED_STATUS_3_PORT, LED_STATUS_3_PIN);
+//      LL_GPIO_ResetOutputPin(LED_STATUS_1_PORT, LED_STATUS_1_PIN);
+//      LL_GPIO_ResetOutputPin(LED_STATUS_2_PORT, LED_STATUS_2_PIN);
+//      LL_GPIO_TogglePin(LED_STATUS_3_PORT, LED_STATUS_3_PIN);
       break;
 
     default:
