@@ -13,54 +13,54 @@ extern "C"
 {
 #endif
 
-    /*********************
-     *      INCLUDES
-     *********************/
+  /*********************
+   *      INCLUDES
+   *********************/
 
 #include <stdint.h>
 
-    /**********************
-     *    PUBLIC TYPEDEFS
-     **********************/
+  /**********************
+   *    PUBLIC TYPEDEFS
+   **********************/
 
-    /**
-     * @brief Enumeration defining status codes.
-     */
-    typedef enum _status_t
-    {
-        STS_FIRST = 0,          /**< @brief First status code. */
-        STS_DONE  = STS_FIRST,  /**< @brief Operation completed successfully. */
-        STS_ERROR,              /**< @brief General error status. */
-        STS_ITEMS_NOT_FOUND,    /**< @brief Items not found error. */
-        STS_INVALID_PARAMETERS, /**< @brief Invalid parameters error. */
-        STS_OUT_OF_HEAP,        /**< @brief Out of heap memory error. */
-        STS_CRC_ERROR,          /**< @brief CRC error. */
-        STS_OUT_OF_MEMORY,      /**< @brief Out of memory error. */
-        STS_INVALID_RESPONSE,   /**< @brief Invalid response error. */
-        STS_MEM_WRITE_FAILED,   /**< @brief Memory write operation failed error.
-                                 */
-        STS_MEM_READ_FAILED, /**< @brief Memory read operation failed error. */
-        STS_NOT_ENABLED,     /**< @brief Feature or item not enabled error. */
-        STS_LAST = STS_NOT_ENABLED /**< @brief Last status code. */
-    } status_t;
+  /**
+   * @brief Enumeration defining status codes.
+   */
+  typedef enum _status_t
+  {
+    STS_FIRST = 0,          /**< @brief First status code. */
+    STS_DONE  = STS_FIRST,  /**< @brief Operation completed successfully. */
+    STS_ERROR,              /**< @brief General error status. */
+    STS_ITEMS_NOT_FOUND,    /**< @brief Items not found error. */
+    STS_INVALID_PARAMETERS, /**< @brief Invalid parameters error. */
+    STS_OUT_OF_HEAP,        /**< @brief Out of heap memory error. */
+    STS_CRC_ERROR,          /**< @brief CRC error. */
+    STS_OUT_OF_MEMORY,      /**< @brief Out of memory error. */
+    STS_INVALID_RESPONSE,   /**< @brief Invalid response error. */
+    STS_MEM_WRITE_FAILED,   /**< @brief Memory write operation failed error.
+                             */
+    STS_MEM_READ_FAILED,    /**< @brief Memory read operation failed error. */
+    STS_NOT_ENABLED,        /**< @brief Feature or item not enabled error. */
+    STS_LAST = STS_NOT_ENABLED /**< @brief Last status code. */
+  } status_t;
 
-    typedef enum
-    {
-        NO  = 0,
-        YES = !NO
-    } YesNoStatus;
+  typedef enum
+  {
+    NO  = 0,
+    YES = !NO
+  } YesNoStatus;
 
-    typedef enum
-    {
-        STOP  = 0,
-        START = !STOP
-    } StartStopStatus;
+  typedef enum
+  {
+    STOP  = 0,
+    START = !STOP
+  } StartStopStatus;
 
-    typedef enum
-    {
-        CLOSE = 0,
-        OPEN  = !CLOSE
-    } OpenCloseStatus;
+  typedef enum
+  {
+    CLOSE = 0,
+    OPEN  = !CLOSE
+  } OpenCloseStatus;
 
 /*********************
  *    PUBLIC DEFINES

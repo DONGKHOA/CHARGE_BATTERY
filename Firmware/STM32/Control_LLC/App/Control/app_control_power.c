@@ -30,13 +30,15 @@
 
 #define TIME_LIMIT_PHASE_START 60 // 60ms=[Soft-start](55s)+[Operation-PI](5s)
 
-#define KI_VOLTAGE  0.1f
-#define KP_VOLTAGE  0.1f
-#define VOLTAGE_REF 58.0f
+#define KI_VOLTAGE 0.1f
+#define KP_VOLTAGE 0.1f
+#define VOLTAGE_START_THRESHOLD
+#define VOLTAGE_END_THRESHOLD 58.0f
 
-#define KI_CURRENT  0.1f
-#define KP_CURRENT  0.1f
-#define CURRENT_REF 6.0f
+#define KI_CURRENT              0.1f
+#define KP_CURRENT              0.1f
+#define CURRENT_START_THRESHOLD 6.0f
+#define CURRENT_END_THRESHOLD   0.1f
 
 #define ADS1115_CURRENT_CHANNEL DEV_ADS1115_CHANNEL_1
 #define ADS1115_VOLTAGE_CHANNEL DEV_ADS1115_CHANNEL_2
@@ -129,17 +131,17 @@ APP_CONTROL_Init (void)
       = (float *)&s_control_llc_data.f_output_current;
 
   // Prepare data task control power
-  *s_control_power.p_state = CGT_WAIT_INPUT_VOLTAGE;
+  *s_control_power.p_state = WAIT_INPUT_VOLTAGE;
 
   // Initialize PI control parameters of control voltage
   s_control_power.p_control_voltage->f_Ki       = KI_VOLTAGE;
   s_control_power.p_control_voltage->f_Kp       = KP_VOLTAGE;
-  s_control_power.p_control_voltage->f_setPoint = VOLTAGE_REF;
+  s_control_power.p_control_voltage->f_setPoint = VOLTAGE_END_THRESHOLD;
 
   // Initialize PI control parameters of control current
   s_control_power.p_control_current->f_Ki       = KI_CURRENT;
   s_control_power.p_control_current->f_Kp       = KP_CURRENT;
-  s_control_power.p_control_current->f_setPoint = CURRENT_REF;
+  s_control_power.p_control_current->f_setPoint = CURRENT_START_THRESHOLD;
 
   // Initialize PWM control parameters
   s_control_power.p_pwm_control_1->channel = PWM_CHANNEL_1;
@@ -176,9 +178,10 @@ APP_CONTROL_CreateTask (void)
 
 /**
  * @brief State machine with 3 states:
- * - CGT_WAIT_INPUT_VOLTAGE: Wait for the input voltage to fit the system.
- * - CGT_SOFT_START: Initialize LLC.
- * - CGT_PROCESS: Control the output LLC.
+ * - WAIT_INPUT_VOLTAGE: Wait for the input voltage to fit the system.
+ * - SOFT_START: Initialize LLC.
+ * - DISCHARGING: Discharging charger.
+ * - CHARGING: Charging charger.
  *
  * After initialization, the state is set to CGT_WAIT_INPUT_VOLTAGE, which means
  * the system is waiting for the input voltage to be within the range of 85V -
@@ -193,27 +196,36 @@ APP_CONTROL_TaskUpdate (void)
 {
   switch (*s_control_power.p_state)
   {
-    case CGT_WAIT_INPUT_VOLTAGE:
+    case WAIT_INPUT_VOLTAGE:
       break;
-    case CGT_SOFT_START:
+    case SOFT_START:
       // Handle soft start initialization
       FCP_PhaseStart(s_control_power.u32_times_change_fre);
       if (s_control_power.u32_times_change_fre == TIME_LIMIT_PHASE_START)
       {
         s_control_power.u32_times_change_fre = 0;
-        *s_control_power.p_state             = CGT_PROCESS;
+        *s_control_power.p_state             = DISCHARGING;
       }
       s_control_power.u32_times_change_fre++;
 
       break;
-    case CGT_PROCESS:
+    case DISCHARGING:
+      break;
+    case CHARGING:
+
+      // Progress of charging
       if (s_control_power.u32_times_change_fre == CONTROL_PI_TIME_SAMPLE)
       {
         APP_CONTROL_CCCVChager();
         s_control_power.u32_times_change_fre = 0;
       }
       s_control_power.u32_times_change_fre++;
-      break;
+
+      // Check
+      if
+      {
+        break;
+      }
     default:
       break;
   }
@@ -229,7 +241,7 @@ APP_CONTROL_CCCVChager (void)
   // If voltage feedback <= VOLTAGE REFERENCE System in mode CC
   // If voltage feedback > VOLTAGE REFERENCE System in mode CV
 
-  if (*s_control_power.p_output_voltage <= VOLTAGE_REF)
+  if (*s_control_power.p_output_voltage <= VOLTAGE_END_THRESHOLD)
   {
     // Read voltage channel current
     float value_temp = ADS1115_Voltage(ADS1115_CURRENT_CHANNEL);

@@ -33,9 +33,9 @@ void
 QUEUE_Init (ring_buffer_t *rb)
 {
   rb->u8_buffer = (uint8_t *)malloc(RING_BUFFER_SIZE);
-  rb->u32_in     = 0;
-  rb->u32_out    = 0;
-  rb->u32_count  = 0;
+  rb->u32_in    = 0;
+  rb->u32_out   = 0;
+  rb->u32_count = 0;
 }
 
 /**

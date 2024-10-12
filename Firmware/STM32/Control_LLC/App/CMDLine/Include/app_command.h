@@ -29,9 +29,18 @@ extern "C"
   /**
    * @brief List of command
    */
-  int APP_COMMAND_Help(int argc, char *argv[]);
-  int APP_COMMAND_ReadVoltageLLC(int argc, char *argv[]);
-  int APP_COMMAND_SetParameterPiControl(int argc, char *argv[]);
+  int APP_COMMAND_Help (int argc, char *argv[]);
+
+  int APP_COMMAND_ReadCurrentOutput (int argc, char *argv[]);
+  int APP_COMMAND_SetCurrentOutput (int argc, char *argv[]);
+  int APP_COMMAND_SetParaControlCurrent (int argc, char *argv[]);
+
+  int APP_COMMAND_ReadVoltageOutput (int argc, char *argv[]);
+  int APP_COMMAND_SetParaControlVoltage (int argc, char *argv[]);
+
+  int APP_COMMAND_MonitorPower (int argc, char *argv[]);
+
+  int APP_COMMAND_MonitorParaPI (int argc, char *argv[]);
 
 #ifdef __cplusplus
 }

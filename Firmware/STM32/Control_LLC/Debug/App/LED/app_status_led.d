@@ -22,7 +22,18 @@ App/LED/app_status_led.o: ../App/LED/app_status_led.c \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ACS712/acs712.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/PI_Control/pi_control.h \
  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Common/Include/basetypedef.h
+ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Common/Include/basetypedef.h \
+ ../Core/Inc/main.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_i2c.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rcc.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_bus.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_system.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_exti.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_cortex.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_utils.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_pwr.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h
 ../App/LED/app_status_led.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h:
@@ -47,3 +58,14 @@ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ACS712/acs7
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/PI_Control/pi_control.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.h:
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Common/Include/basetypedef.h:
+../Core/Inc/main.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_i2c.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rcc.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_bus.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_system.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_exti.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_cortex.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_utils.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_pwr.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:

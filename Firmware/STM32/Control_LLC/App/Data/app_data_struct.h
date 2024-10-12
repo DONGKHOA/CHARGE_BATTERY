@@ -28,9 +28,10 @@ extern "C"
 
   typedef enum
   {
-    CGT_WAIT_INPUT_VOLTAGE = 0,
-    CGT_SOFT_START,
-    CGT_PROCESS
+    WAIT_INPUT_VOLTAGE = 0,
+    SOFT_START,
+    CHARGING,
+    DISCHARGING
   } CONTROL_STATE_t;
 
   typedef struct _CONTROL_LLC_DataTypedef

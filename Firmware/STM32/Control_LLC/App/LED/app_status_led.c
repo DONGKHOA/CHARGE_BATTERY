@@ -13,7 +13,9 @@
 #include "app_data_struct.h"
 #include "scheduler.h"
 
-#include "stm32f1xx_ll_gpio.h"
+#include "main.h"
+
+#include "bsp_board.h"
 
 /*********************
  *    PRIVATE TYPEDEFS
@@ -49,6 +51,7 @@ static StatusLed_TaskContextTypedef s_StatusLedTaskContext
             100,                      // taskPeriodInMS;
             APP_STATUS_LED_TaskUpdate // taskFunction;
         } };
+
 /**********************
  *   PUBLIC FUNCTIONS
  **********************/
@@ -56,9 +59,9 @@ static StatusLed_TaskContextTypedef s_StatusLedTaskContext
 void
 APP_STATUS_LED_Init (void)
 {
-//  LL_GPIO_ResetOutputPin(LED_STATUS_1_PORT, LED_STATUS_1_PIN);
-//  LL_GPIO_ResetOutputPin(LED_STATUS_2_PORT, LED_STATUS_2_PIN);
-//  LL_GPIO_ResetOutputPin(LED_STATUS_3_PORT, LED_STATUS_3_PIN);
+  LL_GPIO_ResetOutputPin(LED_WAIT_GPIO_Port, LED_WAIT_Pin);
+  LL_GPIO_ResetOutputPin(LED_SOFT_START_GPIO_Port, LED_SOFT_START_Pin);
+  LL_GPIO_ResetOutputPin(LED_PROCESS_GPIO_Port, LED_PROCESS_Pin);
   s_status_led.p_status_led
       = (CONTROL_STATE_t *)&s_control_llc_data.s_state_data;
 }
@@ -78,33 +81,38 @@ APP_STATUS_LED_CreateTask (void)
  *
  * This function sets the status LEDs according to the current control state.
  * The LEDs provide a visual indication of the system's status:
- * - CGT_WAIT_INPUT_VOLTAGE: LED 1 ON, LED 2 OFF, LED 3 OFF
- * - CGT_SOFT_START: LED 1 OFF, LED 2 ON, LED 3 OFF
- * - CGT_PROCESS: LED 1 OFF, LED 2 OFF, LED 3 TOGGLE with frequency 500Hz
+ * - WAIT_INPUT_VOLTAGE: LED 1 ON, LED 2 OFF, LED 3 OFF
+ * - SOFT_START: LED 1 OFF, LED 2 ON, LED 3 OFF
+ * - DISCHARGING: LED 1 OFF, LED 2 OFF, LED 3 ON
+ * - CHARGING: LED 1 OFF, LED 2 OFF, LED 3 TOGGLE with frequency 500Hz
  */
 static void
 APP_STATUS_LED_TaskUpdate (void)
 {
   switch (*s_status_led.p_status_led)
   {
-    case CGT_WAIT_INPUT_VOLTAGE:
-//      LL_GPIO_SetOutputPin(LED_STATUS_1_PORT, LED_STATUS_1_PIN);
-//      LL_GPIO_ResetOutputPin(LED_STATUS_2_PORT, LED_STATUS_2_PIN);
-//      LL_GPIO_ResetOutputPin(LED_STATUS_3_PORT, LED_STATUS_3_PIN);
+    case WAIT_INPUT_VOLTAGE:
+      LL_GPIO_SetOutputPin(LED_WAIT_GPIO_Port, LED_WAIT_Pin);
+      LL_GPIO_ResetOutputPin(LED_SOFT_START_GPIO_Port, LED_SOFT_START_Pin);
+      LL_GPIO_ResetOutputPin(LED_PROCESS_GPIO_Port, LED_PROCESS_Pin);
       break;
 
-    case CGT_SOFT_START:
-//      LL_GPIO_ResetOutputPin(LED_STATUS_1_PORT, LED_STATUS_1_PIN);
-//      LL_GPIO_SetOutputPin(LED_STATUS_2_PORT, LED_STATUS_2_PIN);
-//      LL_GPIO_ResetOutputPin(LED_STATUS_3_PORT, LED_STATUS_3_PIN);
+    case SOFT_START:
+      LL_GPIO_ResetOutputPin(LED_WAIT_GPIO_Port, LED_WAIT_Pin);
+      LL_GPIO_SetOutputPin(LED_SOFT_START_GPIO_Port, LED_SOFT_START_Pin);
+      LL_GPIO_ResetOutputPin(LED_PROCESS_GPIO_Port, LED_PROCESS_Pin);
       break;
 
-    case CGT_PROCESS:
-//      LL_GPIO_ResetOutputPin(LED_STATUS_1_PORT, LED_STATUS_1_PIN);
-//      LL_GPIO_ResetOutputPin(LED_STATUS_2_PORT, LED_STATUS_2_PIN);
-//      LL_GPIO_TogglePin(LED_STATUS_3_PORT, LED_STATUS_3_PIN);
+    case DISCHARGING:
+      LL_GPIO_ResetOutputPin(LED_WAIT_GPIO_Port, LED_WAIT_Pin);
+      LL_GPIO_ResetOutputPin(LED_SOFT_START_GPIO_Port, LED_SOFT_START_Pin);
+      LL_GPIO_SetOutputPin(LED_PROCESS_GPIO_Port, LED_PROCESS_Pin);
       break;
-
+    case CHARGING:
+      LL_GPIO_ResetOutputPin(LED_WAIT_GPIO_Port, LED_WAIT_Pin);
+      LL_GPIO_ResetOutputPin(LED_SOFT_START_GPIO_Port, LED_SOFT_START_Pin);
+      LL_GPIO_TogglePin(LED_PROCESS_GPIO_Port, LED_PROCESS_Pin);
+      break;
     default:
       break;
   }

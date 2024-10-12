@@ -16,7 +16,6 @@
 
 #include "scheduler.h"
 #include "device.h"
-#include <stdlib.h>
 #include <stdio.h>
 
 /*********************
@@ -66,12 +65,9 @@ static Command_TaskContextTypedef s_CommandTaskContext
 
 tCmdLineEntry g_psCmdTable[] = {
   { "help", APP_COMMAND_Help, " : Display list of commands, format: help" },
-  { "read_voltage_llc",
-    APP_COMMAND_ReadVoltageLLC,
-    "Read Voltage, format: read_voltage_llc" },
-  { "set_parameter_pi",
-    APP_COMMAND_SetParameterPiControl,
-    "Set parameter, format: set_parameter_pi kp ki" }
+  { "read_voltage_output",
+    APP_COMMAND_ReadVoltageOutput,
+    "Read Voltage, format: read_voltage" },
 };
 
 /*********************
@@ -137,36 +133,79 @@ APP_COMMAND_Help (int argc, char *argv[])
   return (CMDLINE_OK);
 }
 
-// Format: read_voltage_llc
+// Format: read_current
 int
-APP_COMMAND_ReadVoltageLLC (int argc, char *argv[])
+APP_COMMAND_ReadCurrentOutput (int argc, char *argv[])
 {
-	if (argc < 1) return CMDLINE_TOO_FEW_ARGS;
-	if (argc > 1) return CMDLINE_TOO_MANY_ARGS;
+  if (argc < 1)
+  {
+    return CMDLINE_TOO_FEW_ARGS;
+  }
+  if (argc > 1)
+  {
+    return CMDLINE_TOO_MANY_ARGS;
+  }
 
-	char voltage[10];
-	sprintf(voltage, "%.2f", s_control_llc_data.f_output_voltage);
+  char current[10];
+  sprintf(current, "%.2f", s_control_llc_data.f_output_current);
 
-	BSP_UART_SendString(&uart_cfg_cml, voltage);
+  BSP_UART_SendString(&uart_cfg_cml, current);
 
   return (CMDLINE_OK);
 }
+
+int
+APP_COMMAND_SetCurrentOutput (int argc, char *argv[])
+{
+}
+
+int
+APP_COMMAND_SetParaControlCurrent (int argc, char *argv[])
+{
+}
+
+// Format: read_voltage
+int
+APP_COMMAND_ReadVoltageOutput (int argc, char *argv[])
+{
+  if (argc < 1)
+  {
+    return CMDLINE_TOO_FEW_ARGS;
+  }
+  if (argc > 1)
+  {
+    return CMDLINE_TOO_MANY_ARGS;
+  }
+
+  char voltage[10];
+  sprintf(voltage, "%.2f", s_control_llc_data.f_output_voltage);
+
+  BSP_UART_SendString(&uart_cfg_cml, voltage);
+
+  return (CMDLINE_OK);
+}
+
+int APP_COMMAND_SetParaControlVoltage(int argc, char *argv[]);
+
+int APP_COMMAND_MonitorPower(int argc, char *argv[]);
+
+int APP_COMMAND_MonitorParaPI(int argc, char *argv[]);
 
 // Format: set_parameter_pi kp ki
-int
-APP_COMMAND_SetParameterPiControl (int argc, char *argv[])
-{
-	if (argc < 3) return CMDLINE_TOO_FEW_ARGS;
-	if (argc > 3) return CMDLINE_TOO_MANY_ARGS;
-
-	float f_kp_temp = atof(argv[1]);
-	float f_ki_temp = atof(argv[2]);
-
-//	s_control_llc_data.s_control_system.f_Ki = f_ki_temp;
-//	s_control_llc_data.s_control_system.f_Kp = f_kp_temp;
-
-  return (CMDLINE_OK);
-}
+// int
+// APP_COMMAND_SetParameterPiControl (int argc, char *argv[])
+//{
+//	if (argc < 3) return CMDLINE_TOO_FEW_ARGS;
+//	if (argc > 3) return CMDLINE_TOO_MANY_ARGS;
+//
+//	float f_kp_temp = atof(argv[1]);
+//	float f_ki_temp = atof(argv[2]);
+//
+////	s_control_llc_data.s_control_system.f_Ki = f_ki_temp;
+////	s_control_llc_data.s_control_system.f_Kp = f_kp_temp;
+//
+//  return (CMDLINE_OK);
+//}
 
 /********************
  *  PRIVATE FUNCTION
@@ -197,7 +236,7 @@ APP_COMMAND_TaskUpdate (void)
         retVal               = CmdLineProcess(s_commandBuffer);
         s_commandBufferIndex = 0;
 
-        //Send status command in terminal.
+        // Send status command in terminal.
         BSP_UART_SendString(&uart_cfg_cml, "\r\n> ");
         BSP_UART_SendString(&uart_cfg_cml, ErrorCode[retVal]);
         BSP_UART_SendString(&uart_cfg_cml, "> ");

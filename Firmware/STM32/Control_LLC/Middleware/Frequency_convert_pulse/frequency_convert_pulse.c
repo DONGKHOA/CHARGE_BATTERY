@@ -67,7 +67,8 @@
  *   PRIVATE DATA
  **********************/
 
-static pwm_cfg_t *pwm_control_1 = (pwm_cfg_t *)&s_control_llc_data.s_control_gate;
+static pwm_cfg_t *pwm_control_1
+    = (pwm_cfg_t *)&s_control_llc_data.s_control_gate;
 
 /******************************
  *  PRIVATE PROTOTYPE FUNCTION

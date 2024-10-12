@@ -204,8 +204,8 @@ last_byte:
 /**
  * @brief Decrements the u32_timer_wait_set variable for I2C timeout handling.
  *
- * This function decrements the u32_timer_wait_set variable used for handling I2C
- * timeouts.
+ * This function decrements the u32_timer_wait_set variable used for handling
+ * I2C timeouts.
  */
 void
 BSP_I2C_TimeOut (void)

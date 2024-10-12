@@ -27,7 +27,6 @@ App/CMDLine \
 App/Control \
 App/Data \
 App/LED \
-BSP/GPIO \
 BSP/I2C \
 BSP/PWM \
 BSP/SysTick \
