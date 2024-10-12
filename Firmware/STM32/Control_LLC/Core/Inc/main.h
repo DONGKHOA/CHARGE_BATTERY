@@ -82,10 +82,10 @@ void Error_Handler(void);
 #define LED_SOFT_START_GPIO_Port GPIOB
 #define LED_PROCESS_Pin LL_GPIO_PIN_2
 #define LED_PROCESS_GPIO_Port GPIOB
-#define RS485_CONTROL_Pin LL_GPIO_PIN_10
-#define RS485_CONTROL_GPIO_Port GPIOB
-#define VOLTAGE_PROTECTION_Pin LL_GPIO_PIN_15
+#define VOLTAGE_PROTECTION_Pin LL_GPIO_PIN_12
 #define VOLTAGE_PROTECTION_GPIO_Port GPIOB
+#define RS485_CONTROL_Pin LL_GPIO_PIN_13
+#define RS485_CONTROL_GPIO_Port GPIOB
 #ifndef NVIC_PRIORITYGROUP_0
 #define NVIC_PRIORITYGROUP_0         ((uint32_t)0x00000007) /*!< 0 bit  for pre-emption priority,
                                                                  4 bits for subpriority */

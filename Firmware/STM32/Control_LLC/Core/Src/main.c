@@ -56,7 +56,6 @@ static void MX_USART1_UART_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_USART2_UART_Init(void);
-static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -110,7 +109,6 @@ int main(void)
   MX_TIM1_Init();
   MX_I2C1_Init();
   MX_USART2_UART_Init();
-  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 
   // Initialization Application
@@ -302,45 +300,6 @@ static void MX_TIM1_Init(void)
 }
 
 /**
-  * @brief TIM2 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_TIM2_Init(void)
-{
-
-  /* USER CODE BEGIN TIM2_Init 0 */
-
-  /* USER CODE END TIM2_Init 0 */
-
-  LL_TIM_InitTypeDef TIM_InitStruct = {0};
-
-  /* Peripheral clock enable */
-  LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_TIM2);
-
-  /* TIM2 interrupt Init */
-  NVIC_SetPriority(TIM2_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),2, 0));
-  NVIC_EnableIRQ(TIM2_IRQn);
-
-  /* USER CODE BEGIN TIM2_Init 1 */
-
-  /* USER CODE END TIM2_Init 1 */
-  TIM_InitStruct.Prescaler = 0;
-  TIM_InitStruct.CounterMode = LL_TIM_COUNTERMODE_UP;
-  TIM_InitStruct.Autoreload = 65535;
-  TIM_InitStruct.ClockDivision = LL_TIM_CLOCKDIVISION_DIV1;
-  LL_TIM_Init(TIM2, &TIM_InitStruct);
-  LL_TIM_EnableARRPreload(TIM2);
-  LL_TIM_SetClockSource(TIM2, LL_TIM_CLOCKSOURCE_INTERNAL);
-  LL_TIM_SetTriggerOutput(TIM2, LL_TIM_TRGO_RESET);
-  LL_TIM_DisableMasterSlaveMode(TIM2);
-  /* USER CODE BEGIN TIM2_Init 2 */
-
-  /* USER CODE END TIM2_Init 2 */
-
-}
-
-/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -474,8 +433,8 @@ static void MX_GPIO_Init(void)
   LL_GPIO_ResetOutputPin(GPIOA, PFC_ON_OFF_Pin|LED_TEST_Pin);
 
   /**/
-  LL_GPIO_ResetOutputPin(GPIOB, LED_WAIT_Pin|LED_SOFT_START_Pin|LED_PROCESS_Pin|RS485_CONTROL_Pin
-                          |VOLTAGE_PROTECTION_Pin);
+  LL_GPIO_ResetOutputPin(GPIOB, LED_WAIT_Pin|LED_SOFT_START_Pin|LED_PROCESS_Pin|VOLTAGE_PROTECTION_Pin
+                          |RS485_CONTROL_Pin);
 
   /**/
   GPIO_InitStruct.Pin = PFC_ON_OFF_Pin|LED_TEST_Pin;
@@ -485,8 +444,8 @@ static void MX_GPIO_Init(void)
   LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /**/
-  GPIO_InitStruct.Pin = LED_WAIT_Pin|LED_SOFT_START_Pin|LED_PROCESS_Pin|RS485_CONTROL_Pin
-                          |VOLTAGE_PROTECTION_Pin;
+  GPIO_InitStruct.Pin = LED_WAIT_Pin|LED_SOFT_START_Pin|LED_PROCESS_Pin|VOLTAGE_PROTECTION_Pin
+                          |RS485_CONTROL_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;

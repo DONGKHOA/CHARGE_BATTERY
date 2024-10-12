@@ -1,5 +1,5 @@
 /*
- * s_control_gate_driver.c
+ * app_control.c
  *
  *  Created on: Jul 9, 2024
  *      Author: dongkhoa
@@ -28,17 +28,14 @@
  *    PRIVATE DEFINES
  *********************/
 
-#define TIME_LIMIT_PHASE_START 60 // 60ms=[Soft-start](55s)+[Operation-PI](5s)
+#define TIME_LIMIT_STOP_CHARGING 30000 // 5 minute
+#define TIME_LIMIT_PHASE_START   60 // 60ms=[Soft-start](55s)+[Operation-PI](5s)
 
 #define KI_VOLTAGE 0.1f
 #define KP_VOLTAGE 0.1f
-#define VOLTAGE_START_THRESHOLD
-#define VOLTAGE_END_THRESHOLD 58.0f
 
-#define KI_CURRENT              0.1f
-#define KP_CURRENT              0.1f
-#define CURRENT_START_THRESHOLD 6.0f
-#define CURRENT_END_THRESHOLD   0.1f
+#define KI_CURRENT 0.1f
+#define KP_CURRENT 0.1f
 
 #define ADS1115_CURRENT_CHANNEL DEV_ADS1115_CHANNEL_1
 #define ADS1115_VOLTAGE_CHANNEL DEV_ADS1115_CHANNEL_2
@@ -78,17 +75,18 @@ typedef struct _Control_Power_t
  ******************************/
 
 static void APP_CONTROL_TaskUpdate(void);
-static void APP_CONTROL_CCCVChager(void);
+static void APP_CONTROL_CC_CVCharger(void);
 static void APP_CONTROL_ConvertVoltageOutput(void);
 static void APP_CONTROL_ResetData(void);
-// static void APP_CONTROL_RelayOn(void);
-// static void APP_CONTROL_RelayOff(void);
+static void APP_CONTROL_RelayOn(void);
+static void APP_CONTROL_RelayOff(void);
 
 /*********************
  *    PRIVATE DATA
  *********************/
 
 static Control_Power_t            s_control_power;
+static uint16_t                   u16_time_wait_discharging = 0;
 static Control_TaskContextTypedef s_ControlTaskContext
     = { SCH_INVALID_TASK_HANDLE, // Will be updated by Scheduler
         {
@@ -117,6 +115,9 @@ static Control_TaskContextTypedef s_ControlTaskContext
 void
 APP_CONTROL_Init (void)
 {
+  // Turn Off Relay
+  APP_CONTROL_RelayOff();
+
   // Link pointer to variable
   s_control_power.p_state = (CONTROL_STATE_t *)&s_control_llc_data.s_state_data;
   s_control_power.p_control_voltage
@@ -177,19 +178,9 @@ APP_CONTROL_CreateTask (void)
  ********************/
 
 /**
- * @brief State machine with 3 states:
- * - WAIT_INPUT_VOLTAGE: Wait for the input voltage to fit the system.
- * - SOFT_START: Initialize LLC.
- * - DISCHARGING: Discharging charger.
- * - CHARGING: Charging charger.
- *
- * After initialization, the state is set to CGT_WAIT_INPUT_VOLTAGE, which means
- * the system is waiting for the input voltage to be within the range of 85V -
- * 265V.
- *
- * If the input voltage is within the specified range, the state will change to
- * CGT_SOFT_START. After completing the CGT_SOFT_START state, the state will
- * change to CGT_PROCESS.
+ * The function `APP_CONTROL_TaskUpdate` implements a state machine for
+ * controlling power states including soft start, charging, discharging, and
+ * waiting periods based on certain conditions and thresholds.
  */
 static void
 APP_CONTROL_TaskUpdate (void)
@@ -197,8 +188,12 @@ APP_CONTROL_TaskUpdate (void)
   switch (*s_control_power.p_state)
   {
     case WAIT_INPUT_VOLTAGE:
+
+      APP_CONTROL_RelayOn();
+      *s_control_power.p_state = SOFT_START;
       break;
     case SOFT_START:
+
       // Handle soft start initialization
       FCP_PhaseStart(s_control_power.u32_times_change_fre);
       if (s_control_power.u32_times_change_fre == TIME_LIMIT_PHASE_START)
@@ -209,37 +204,81 @@ APP_CONTROL_TaskUpdate (void)
       s_control_power.u32_times_change_fre++;
 
       break;
-    case DISCHARGING:
-      break;
     case CHARGING:
 
       // Progress of charging
       if (s_control_power.u32_times_change_fre == CONTROL_PI_TIME_SAMPLE)
       {
-        APP_CONTROL_CCCVChager();
+        APP_CONTROL_CC_CVCharger();
         s_control_power.u32_times_change_fre = 0;
       }
       s_control_power.u32_times_change_fre++;
 
-      // Check
-      if
+      // If the charging current <= CURRENT_END_THRESHOLD, wait for 5 minutes,
+      // then switch to discharging
+      if (*s_control_power.p_output_current <= CURRENT_END_THRESHOLD)
       {
-        break;
+        u16_time_wait_discharging            = TIME_LIMIT_STOP_CHARGING;
+        s_control_power.u32_times_change_fre = 0;
+        *s_control_power.p_state             = WAIT_DISCHARGING;
       }
+      break;
+    case WAIT_DISCHARGING:
+
+      // wait for 5 minutes
+      if (u16_time_wait_discharging == 0)
+      {
+        *s_control_power.p_state = DISCHARGING;
+      }
+      break;
+    case DISCHARGING:
+
+      // Turn off PWM
+      BSP_PWM_DisableTimer(s_control_power.p_pwm_control_1);
+
+      if (*s_control_power.p_output_voltage >= VOLTAGE_START_THRESHOLD)
+      {
+        // Turn on PWM
+        BSP_PWM_EnableTimer(s_control_power.p_pwm_control_1);
+
+        s_control_power.u32_times_change_fre = 0;
+        *s_control_power.p_state             = SOFT_START;
+      }
+      break;
     default:
       break;
   }
 }
 
+/**
+ * The function `APP_CONTROL_TimeWaitDischarging` decrements the variable
+ * `u16_time_wait_discharging` if it is greater than 0.
+ */
+void
+APP_CONTROL_TimeWaitDischarging (void)
+{
+  if (u16_time_wait_discharging > 0)
+  {
+    u16_time_wait_discharging--;
+  }
+}
+
+/**
+ * The function `APP_CONTROL_CC_CVCharger` reads voltage feedback, switches
+ * system mode based on voltage threshold, performs PI control based on current
+ * or voltage feedback, converts frequency, and processes pulse based on the
+ * system mode.
+ */
 static void
-APP_CONTROL_CCCVChager (void)
+APP_CONTROL_CC_CVCharger (void)
 {
   // Read voltage feedback
   *s_control_power.p_output_voltage = ADS1115_Voltage(ADS1115_VOLTAGE_CHANNEL);
   APP_CONTROL_ConvertVoltageOutput();
 
-  // If voltage feedback <= VOLTAGE REFERENCE System in mode CC
-  // If voltage feedback > VOLTAGE REFERENCE System in mode CV
+  // If the voltage feedback <= VOLTAGE_REFERENCE, the system operates in CC
+  // mode. If the voltage feedback > VOLTAGE_REFERENCE, the system operates in
+  // CV mode.
 
   if (*s_control_power.p_output_voltage <= VOLTAGE_END_THRESHOLD)
   {
@@ -276,11 +315,35 @@ APP_CONTROL_CCCVChager (void)
   }
 }
 
+/**
+ * The function `APP_CONTROL_ConvertVoltageOutput` converts the output voltage
+ * value using a specific formula.
+ */
 static void
 APP_CONTROL_ConvertVoltageOutput (void)
 {
   float value_temp                  = *s_control_power.p_output_voltage;
   *s_control_power.p_output_voltage = (value_temp / 3.09 + 3.3) * 13;
+}
+
+/**
+ * The function `APP_CONTROL_RelayOn` turns on a relay by resetting the output
+ * pin of a specific GPIO port.
+ */
+static void
+APP_CONTROL_RelayOn (void)
+{
+  LL_GPIO_ResetOutputPin(VOLTAGE_PROTECTION_GPIO_Port, VOLTAGE_PROTECTION_Pin);
+}
+
+/**
+ * The function `APP_CONTROL_RelayOff` turns off a relay by setting a specific
+ * GPIO pin to a high voltage level.
+ */
+static void
+APP_CONTROL_RelayOff (void)
+{
+  LL_GPIO_SetOutputPin(VOLTAGE_PROTECTION_GPIO_Port, VOLTAGE_PROTECTION_Pin);
 }
 
 /**

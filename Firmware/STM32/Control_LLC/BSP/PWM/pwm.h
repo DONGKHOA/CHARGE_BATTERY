@@ -113,7 +113,8 @@ extern "C"
    **********************/
 
   void BSP_PWM_SetParameterProcess(pwm_cfg_t *pwm_cfg);
-  void BSP_PWM_EnableTimer(pwm_cfg_t *pwm_cfg);
+  void BSP_PWM_EnableTimer (pwm_cfg_t *pwm_cfg);
+  void BSP_PWM_DisableTimer (pwm_cfg_t *pwm_cfg);
   /**
    * @brief Resets PWM parameters in the configuration structure to default
    * values.

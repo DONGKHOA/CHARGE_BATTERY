@@ -13,10 +13,12 @@
 #include "app_command.h"
 #include "app_cmdline.h"
 #include "app_data_struct.h"
+#include "app_control_power.h"
 
 #include "scheduler.h"
 #include "device.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /*********************
  *    PRIVATE TYPEDEFS
@@ -65,9 +67,34 @@ static Command_TaskContextTypedef s_CommandTaskContext
 
 tCmdLineEntry g_psCmdTable[] = {
   { "help", APP_COMMAND_Help, " : Display list of commands, format: help" },
-  { "read_voltage_output",
+
+  { "read_current",
+    APP_COMMAND_ReadCurrentOutput,
+    " : Read Current, format: read_current" },
+
+  { "set_current",
+    APP_COMMAND_SetCurrentOutput,
+    " : Set Current, format: set_current current(A)" },
+
+  { "set_pi_current",
+    APP_COMMAND_SetParaControlCurrent,
+    " : set_pi_current, format: set_pi_current kp ki" },
+
+  { "read_voltage",
     APP_COMMAND_ReadVoltageOutput,
-    "Read Voltage, format: read_voltage" },
+    " : Read Voltage, format: read_voltage" },
+
+  { "set_pi_voltage",
+    APP_COMMAND_SetParaControlVoltage,
+    " : set_pi_voltage, format: set_pi_voltage kp ki" },
+
+  { "monitor_power",
+    APP_COMMAND_MonitorPower,
+    " : Monitor Power, format: monitor_power" },
+
+  { "monitor_para_pi",
+    APP_COMMAND_MonitorParaPI,
+    " : Monitor Parameter PI Control, format: monitor_para_pi" }
 };
 
 /*********************
@@ -146,22 +173,53 @@ APP_COMMAND_ReadCurrentOutput (int argc, char *argv[])
     return CMDLINE_TOO_MANY_ARGS;
   }
 
-  char current[10];
-  sprintf(current, "%.2f", s_control_llc_data.f_output_current);
+  char c_msg[30];
+  sprintf(c_msg, "Current: %.2f\n\r", s_control_llc_data.f_output_current);
 
-  BSP_UART_SendString(&uart_cfg_cml, current);
+  BSP_UART_SendString(&uart_cfg_cml, c_msg);
 
   return (CMDLINE_OK);
 }
 
+// Format: set_current current(A)
 int
 APP_COMMAND_SetCurrentOutput (int argc, char *argv[])
 {
+  if (argc < 2)
+  {
+    return CMDLINE_TOO_FEW_ARGS;
+  }
+  if (argc > 2)
+  {
+    return CMDLINE_TOO_MANY_ARGS;
+  }
+  float f_value_temp = atof(argv[1]);
+  if (f_value_temp > CURRENT_START_THRESHOLD)
+  {
+    return CMDLINE_INVALID_ARG;
+  }
+  s_control_llc_data.f_output_current = f_value_temp;
+
+  return (CMDLINE_OK);
 }
 
+// Format: set_pi_current kp ki
 int
 APP_COMMAND_SetParaControlCurrent (int argc, char *argv[])
 {
+  if (argc < 3)
+  {
+    return CMDLINE_TOO_FEW_ARGS;
+  }
+  if (argc > 3)
+  {
+    return CMDLINE_TOO_MANY_ARGS;
+  }
+
+  s_control_llc_data.s_control_current.f_Ki = atof(argv[1]);
+  s_control_llc_data.s_control_current.f_Kp = atof(argv[2]);
+
+  return (CMDLINE_OK);
 }
 
 // Format: read_voltage
@@ -177,40 +235,110 @@ APP_COMMAND_ReadVoltageOutput (int argc, char *argv[])
     return CMDLINE_TOO_MANY_ARGS;
   }
 
-  char voltage[10];
-  sprintf(voltage, "%.2f", s_control_llc_data.f_output_voltage);
+  char c_msg[30];
+  sprintf(c_msg, "Voltage: %.2f\n\r", s_control_llc_data.f_output_voltage);
 
-  BSP_UART_SendString(&uart_cfg_cml, voltage);
+  BSP_UART_SendString(&uart_cfg_cml, c_msg);
 
   return (CMDLINE_OK);
 }
 
-int APP_COMMAND_SetParaControlVoltage(int argc, char *argv[]);
+// Format: set_pi_voltage kp ki
+int
+APP_COMMAND_SetParaControlVoltage (int argc, char *argv[])
+{
+  if (argc < 3)
+  {
+    return CMDLINE_TOO_FEW_ARGS;
+  }
+  if (argc > 3)
+  {
+    return CMDLINE_TOO_MANY_ARGS;
+  }
 
-int APP_COMMAND_MonitorPower(int argc, char *argv[]);
+  s_control_llc_data.s_control_voltage.f_Ki = atof(argv[1]);
+  s_control_llc_data.s_control_voltage.f_Kp = atof(argv[2]);
 
-int APP_COMMAND_MonitorParaPI(int argc, char *argv[]);
+  return (CMDLINE_OK);
+}
 
-// Format: set_parameter_pi kp ki
-// int
-// APP_COMMAND_SetParameterPiControl (int argc, char *argv[])
-//{
-//	if (argc < 3) return CMDLINE_TOO_FEW_ARGS;
-//	if (argc > 3) return CMDLINE_TOO_MANY_ARGS;
-//
-//	float f_kp_temp = atof(argv[1]);
-//	float f_ki_temp = atof(argv[2]);
-//
-////	s_control_llc_data.s_control_system.f_Ki = f_ki_temp;
-////	s_control_llc_data.s_control_system.f_Kp = f_kp_temp;
-//
-//  return (CMDLINE_OK);
-//}
+// Format: monitor_power
+int
+APP_COMMAND_MonitorPower (int argc, char *argv[])
+{
+  if (argc < 1)
+  {
+    return CMDLINE_TOO_FEW_ARGS;
+  }
+  if (argc > 1)
+  {
+    return CMDLINE_TOO_MANY_ARGS;
+  }
+
+  if ((s_control_llc_data.s_state_data == CHARGING)
+      || (s_control_llc_data.s_state_data == WAIT_DISCHARGING))
+  {
+    char c_msg[30];
+    sprintf(c_msg,
+            "Power Charging: %.2f\n\r",
+            s_control_llc_data.f_output_voltage
+                * s_control_llc_data.f_output_current);
+
+    BSP_UART_SendString(&uart_cfg_cml, c_msg);
+  }
+  else
+  {
+    BSP_UART_SendString(&uart_cfg_cml, "NO CHARGING\n\r");
+  }
+
+  return (CMDLINE_OK);
+}
+
+// Format: monitor_para_pi
+int
+APP_COMMAND_MonitorParaPI (int argc, char *argv[])
+{
+  if (argc < 1)
+  {
+    return CMDLINE_TOO_FEW_ARGS;
+  }
+  if (argc > 1)
+  {
+    return CMDLINE_TOO_MANY_ARGS;
+  }
+
+  char c_msg[30];
+
+  BSP_UART_SendString(&uart_cfg_cml, "PARAMETER PI CONTROL OF CURRENT\n\r");
+
+  sprintf(c_msg,
+          "KP: %.2f, KI: %.2f\n\r",
+          s_control_llc_data.s_control_current.f_Kp,
+          s_control_llc_data.s_control_current.f_Ki); 
+
+  BSP_UART_SendString(&uart_cfg_cml, c_msg);
+
+  BSP_UART_SendString(&uart_cfg_cml, "PARAMETER PI CONTROL OF VOLTAGE\n\r");
+
+  sprintf(c_msg,
+          "KP: %.2f, KI: %.2f\n\r",
+          s_control_llc_data.s_control_voltage.f_Kp,
+          s_control_llc_data.s_control_voltage.f_Ki);
+
+  BSP_UART_SendString(&uart_cfg_cml, c_msg);
+
+  return (CMDLINE_OK);
+}
 
 /********************
  *  PRIVATE FUNCTION
  ********************/
 
+/**
+ * The function `APP_COMMAND_TaskUpdate` reads characters from a UART buffer,
+ * processes commands based on the received data, and sends responses back
+ * through UART.
+ */
 static void
 APP_COMMAND_TaskUpdate (void)
 {

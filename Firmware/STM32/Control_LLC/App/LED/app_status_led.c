@@ -103,15 +103,17 @@ APP_STATUS_LED_TaskUpdate (void)
       LL_GPIO_ResetOutputPin(LED_PROCESS_GPIO_Port, LED_PROCESS_Pin);
       break;
 
+    case CHARGING:
+    case WAIT_DISCHARGING:
+      LL_GPIO_ResetOutputPin(LED_WAIT_GPIO_Port, LED_WAIT_Pin);
+      LL_GPIO_ResetOutputPin(LED_SOFT_START_GPIO_Port, LED_SOFT_START_Pin);
+      LL_GPIO_TogglePin(LED_PROCESS_GPIO_Port, LED_PROCESS_Pin);
+      break;
+
     case DISCHARGING:
       LL_GPIO_ResetOutputPin(LED_WAIT_GPIO_Port, LED_WAIT_Pin);
       LL_GPIO_ResetOutputPin(LED_SOFT_START_GPIO_Port, LED_SOFT_START_Pin);
       LL_GPIO_SetOutputPin(LED_PROCESS_GPIO_Port, LED_PROCESS_Pin);
-      break;
-    case CHARGING:
-      LL_GPIO_ResetOutputPin(LED_WAIT_GPIO_Port, LED_WAIT_Pin);
-      LL_GPIO_ResetOutputPin(LED_SOFT_START_GPIO_Port, LED_SOFT_START_Pin);
-      LL_GPIO_TogglePin(LED_PROCESS_GPIO_Port, LED_PROCESS_Pin);
       break;
     default:
       break;

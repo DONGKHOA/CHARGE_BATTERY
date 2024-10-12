@@ -25,6 +25,7 @@
 #include "bsp_board.h"
 #include "scheduler.h"
 #include "app_data_struct.h"
+#include "app_control_power.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -187,6 +188,7 @@ void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
 	BSP_BOARD_TimeOut();
+	APP_CONTROL_TimeWaitDischarging();
 	SCH_RunSystemTickTimer();
   /* USER CODE END SysTick_IRQn 0 */
 
@@ -201,19 +203,6 @@ void SysTick_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32f1xx.s).                    */
 /******************************************************************************/
-
-/**
-  * @brief This function handles TIM2 global interrupt.
-  */
-void TIM2_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM2_IRQn 0 */
-
-  /* USER CODE END TIM2_IRQn 0 */
-  /* USER CODE BEGIN TIM2_IRQn 1 */
-
-  /* USER CODE END TIM2_IRQn 1 */
-}
 
 /**
   * @brief This function handles USART1 global interrupt.
