@@ -495,9 +495,9 @@
         #error If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
     #endif /* configTIMER_TASK_PRIORITY */
 
-    #ifndef configTIMER_QUEUE_LENGTH
-        #error If configUSE_TIMERS is set to 1 then configTIMER_QUEUE_LENGTH must also be defined.
-    #endif /* configTIMER_QUEUE_LENGTH */
+    #ifndef configTIMER_RING_BUFFER_LENGTH
+        #error If configUSE_TIMERS is set to 1 then configTIMER_RING_BUFFER_LENGTH must also be defined.
+    #endif /* configTIMER_RING_BUFFER_LENGTH */
 
     #ifndef configTIMER_TASK_STACK_DEPTH
         #error If configUSE_TIMERS is set to 1 then configTIMER_TASK_STACK_DEPTH must also be defined.
@@ -533,11 +533,11 @@
     #define portTASK_SWITCH_HOOK( pxTCB )    ( void ) ( pxTCB )
 #endif
 
-#ifndef configQUEUE_REGISTRY_SIZE
-    #define configQUEUE_REGISTRY_SIZE    0U
+#ifndef configRING_BUFFER_REGISTRY_SIZE
+    #define configRING_BUFFER_REGISTRY_SIZE    0U
 #endif
 
-#if ( configQUEUE_REGISTRY_SIZE < 1 )
+#if ( configRING_BUFFER_REGISTRY_SIZE < 1 )
     #define vQueueAddToRegistry( xQueue, pcName )
     #define vQueueUnregisterQueue( xQueue )
     #define pcQueueGetName( xQueue )
@@ -616,31 +616,31 @@
     #define traceTASK_PRIORITY_DISINHERIT( pxTCBOfMutexHolder, uxOriginalPriority )
 #endif
 
-#ifndef traceBLOCKING_ON_QUEUE_RECEIVE
+#ifndef traceBLOCKING_ON_RING_BUFFER_RECEIVE
 
 /* Task is about to block because it cannot read from a
  * queue/mutex/semaphore.  pxQueue is a pointer to the queue/mutex/semaphore
  * upon which the read was attempted.  pxCurrentTCB points to the TCB of the
  * task that attempted the read. */
-    #define traceBLOCKING_ON_QUEUE_RECEIVE( pxQueue )
+    #define traceBLOCKING_ON_RING_BUFFER_RECEIVE( pxQueue )
 #endif
 
-#ifndef traceBLOCKING_ON_QUEUE_PEEK
+#ifndef traceBLOCKING_ON_RING_BUFFER_PEEK
 
 /* Task is about to block because it cannot read from a
  * queue/mutex/semaphore.  pxQueue is a pointer to the queue/mutex/semaphore
  * upon which the read was attempted.  pxCurrentTCB points to the TCB of the
  * task that attempted the read. */
-    #define traceBLOCKING_ON_QUEUE_PEEK( pxQueue )
+    #define traceBLOCKING_ON_RING_BUFFER_PEEK( pxQueue )
 #endif
 
-#ifndef traceBLOCKING_ON_QUEUE_SEND
+#ifndef traceBLOCKING_ON_RING_BUFFER_SEND
 
 /* Task is about to block because it cannot write to a
  * queue/mutex/semaphore.  pxQueue is a pointer to the queue/mutex/semaphore
  * upon which the write was attempted.  pxCurrentTCB points to the TCB of the
  * task that attempted the write. */
-    #define traceBLOCKING_ON_QUEUE_SEND( pxQueue )
+    #define traceBLOCKING_ON_RING_BUFFER_SEND( pxQueue )
 #endif
 
 #ifndef configCHECK_FOR_STACK_OVERFLOW
@@ -673,12 +673,12 @@
     #define traceMOVED_TASK_TO_OVERFLOW_DELAYED_LIST()
 #endif
 
-#ifndef traceQUEUE_CREATE
-    #define traceQUEUE_CREATE( pxNewQueue )
+#ifndef traceRING_BUFFER_CREATE
+    #define traceRING_BUFFER_CREATE( pxNewQueue )
 #endif
 
-#ifndef traceQUEUE_CREATE_FAILED
-    #define traceQUEUE_CREATE_FAILED( ucQueueType )
+#ifndef traceRING_BUFFER_CREATE_FAILED
+    #define traceRING_BUFFER_CREATE_FAILED( ucQueueType )
 #endif
 
 #ifndef traceCREATE_MUTEX
@@ -713,60 +713,60 @@
     #define traceCREATE_COUNTING_SEMAPHORE_FAILED()
 #endif
 
-#ifndef traceQUEUE_SET_SEND
-    #define traceQUEUE_SET_SEND    traceQUEUE_SEND
+#ifndef traceRING_BUFFER_SET_SEND
+    #define traceRING_BUFFER_SET_SEND    traceRING_BUFFER_SEND
 #endif
 
-#ifndef traceQUEUE_SEND
-    #define traceQUEUE_SEND( pxQueue )
+#ifndef traceRING_BUFFER_SEND
+    #define traceRING_BUFFER_SEND( pxQueue )
 #endif
 
-#ifndef traceQUEUE_SEND_FAILED
-    #define traceQUEUE_SEND_FAILED( pxQueue )
+#ifndef traceRING_BUFFER_SEND_FAILED
+    #define traceRING_BUFFER_SEND_FAILED( pxQueue )
 #endif
 
-#ifndef traceQUEUE_RECEIVE
-    #define traceQUEUE_RECEIVE( pxQueue )
+#ifndef traceRING_BUFFER_RECEIVE
+    #define traceRING_BUFFER_RECEIVE( pxQueue )
 #endif
 
-#ifndef traceQUEUE_PEEK
-    #define traceQUEUE_PEEK( pxQueue )
+#ifndef traceRING_BUFFER_PEEK
+    #define traceRING_BUFFER_PEEK( pxQueue )
 #endif
 
-#ifndef traceQUEUE_PEEK_FAILED
-    #define traceQUEUE_PEEK_FAILED( pxQueue )
+#ifndef traceRING_BUFFER_PEEK_FAILED
+    #define traceRING_BUFFER_PEEK_FAILED( pxQueue )
 #endif
 
-#ifndef traceQUEUE_PEEK_FROM_ISR
-    #define traceQUEUE_PEEK_FROM_ISR( pxQueue )
+#ifndef traceRING_BUFFER_PEEK_FROM_ISR
+    #define traceRING_BUFFER_PEEK_FROM_ISR( pxQueue )
 #endif
 
-#ifndef traceQUEUE_RECEIVE_FAILED
-    #define traceQUEUE_RECEIVE_FAILED( pxQueue )
+#ifndef traceRING_BUFFER_RECEIVE_FAILED
+    #define traceRING_BUFFER_RECEIVE_FAILED( pxQueue )
 #endif
 
-#ifndef traceQUEUE_SEND_FROM_ISR
-    #define traceQUEUE_SEND_FROM_ISR( pxQueue )
+#ifndef traceRING_BUFFER_SEND_FROM_ISR
+    #define traceRING_BUFFER_SEND_FROM_ISR( pxQueue )
 #endif
 
-#ifndef traceQUEUE_SEND_FROM_ISR_FAILED
-    #define traceQUEUE_SEND_FROM_ISR_FAILED( pxQueue )
+#ifndef traceRING_BUFFER_SEND_FROM_ISR_FAILED
+    #define traceRING_BUFFER_SEND_FROM_ISR_FAILED( pxQueue )
 #endif
 
-#ifndef traceQUEUE_RECEIVE_FROM_ISR
-    #define traceQUEUE_RECEIVE_FROM_ISR( pxQueue )
+#ifndef traceRING_BUFFER_RECEIVE_FROM_ISR
+    #define traceRING_BUFFER_RECEIVE_FROM_ISR( pxQueue )
 #endif
 
-#ifndef traceQUEUE_RECEIVE_FROM_ISR_FAILED
-    #define traceQUEUE_RECEIVE_FROM_ISR_FAILED( pxQueue )
+#ifndef traceRING_BUFFER_RECEIVE_FROM_ISR_FAILED
+    #define traceRING_BUFFER_RECEIVE_FROM_ISR_FAILED( pxQueue )
 #endif
 
-#ifndef traceQUEUE_PEEK_FROM_ISR_FAILED
-    #define traceQUEUE_PEEK_FROM_ISR_FAILED( pxQueue )
+#ifndef traceRING_BUFFER_PEEK_FROM_ISR_FAILED
+    #define traceRING_BUFFER_PEEK_FROM_ISR_FAILED( pxQueue )
 #endif
 
-#ifndef traceQUEUE_DELETE
-    #define traceQUEUE_DELETE( pxQueue )
+#ifndef traceRING_BUFFER_DELETE
+    #define traceRING_BUFFER_DELETE( pxQueue )
 #endif
 
 #ifndef traceTASK_CREATE
@@ -889,8 +889,8 @@
     #define tracePEND_FUNC_CALL_FROM_ISR( xFunctionToPend, pvParameter1, ulParameter2, ret )
 #endif
 
-#ifndef traceQUEUE_REGISTRY_ADD
-    #define traceQUEUE_REGISTRY_ADD( xQueue, pcQueueName )
+#ifndef traceRING_BUFFER_REGISTRY_ADD
+    #define traceRING_BUFFER_REGISTRY_ADD( xQueue, pcQueueName )
 #endif
 
 #ifndef traceTASK_NOTIFY_TAKE_BLOCK
@@ -2643,8 +2643,8 @@
     #define configPOST_SLEEP_PROCESSING( x )
 #endif
 
-#ifndef configUSE_QUEUE_SETS
-    #define configUSE_QUEUE_SETS    0
+#ifndef configUSE_RING_BUFFER_SETS
+    #define configUSE_RING_BUFFER_SETS    0
 #endif
 
 #ifndef portTASK_USES_FLOATING_POINT
@@ -3130,7 +3130,7 @@ typedef struct xSTATIC_TCB
  * strict data hiding policy.  This means the Queue structure used internally by
  * FreeRTOS is not accessible to application code.  However, if the application
  * writer wants to statically allocate the memory required to create a queue
- * then the size of the queue object needs to be known.  The StaticQueue_t
+ * then the size of the queue object needs to be known.  The StaticRING_BUFFER_t
  * structure below is provided for this purpose.  Its sizes and alignment
  * requirements are guaranteed to match those of the genuine structure, no
  * matter which architecture is being used, and no matter how the values in
@@ -3156,7 +3156,7 @@ typedef struct xSTATIC_QUEUE
         uint8_t ucDummy6;
     #endif
 
-    #if ( configUSE_QUEUE_SETS == 1 )
+    #if ( configUSE_RING_BUFFER_SETS == 1 )
         void * pvDummy7;
     #endif
 
@@ -3164,8 +3164,8 @@ typedef struct xSTATIC_QUEUE
         UBaseType_t uxDummy8;
         uint8_t ucDummy9;
     #endif
-} StaticQueue_t;
-typedef StaticQueue_t StaticSemaphore_t;
+} StaticRING_BUFFER_t;
+typedef StaticRING_BUFFER_t StaticSemaphore_t;
 
 /*
  * In line with software engineering best practice, especially when supplying a

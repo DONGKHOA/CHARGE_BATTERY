@@ -1126,18 +1126,18 @@
                 {
                     /* The timer queue is allocated statically in case
                      * configSUPPORT_DYNAMIC_ALLOCATION is 0. */
-                    PRIVILEGED_DATA static StaticQueue_t xStaticTimerQueue;
-                    PRIVILEGED_DATA static uint8_t ucStaticTimerQueueStorage[ ( size_t ) configTIMER_QUEUE_LENGTH * sizeof( DaemonTaskMessage_t ) ];
+                    PRIVILEGED_DATA static StaticRING_BUFFER_t xStaticTimerQueue;
+                    PRIVILEGED_DATA static uint8_t ucStaticTimerQueueStorage[ ( size_t ) configTIMER_RING_BUFFER_LENGTH * sizeof( DaemonTaskMessage_t ) ];
 
-                    xTimerQueue = xQueueCreateStatic( ( UBaseType_t ) configTIMER_QUEUE_LENGTH, ( UBaseType_t ) sizeof( DaemonTaskMessage_t ), &( ucStaticTimerQueueStorage[ 0 ] ), &xStaticTimerQueue );
+                    xTimerQueue = xQueueCreateStatic( ( UBaseType_t ) configTIMER_RING_BUFFER_LENGTH, ( UBaseType_t ) sizeof( DaemonTaskMessage_t ), &( ucStaticTimerQueueStorage[ 0 ] ), &xStaticTimerQueue );
                 }
                 #else
                 {
-                    xTimerQueue = xQueueCreate( ( UBaseType_t ) configTIMER_QUEUE_LENGTH, ( UBaseType_t ) sizeof( DaemonTaskMessage_t ) );
+                    xTimerQueue = xQueueCreate( ( UBaseType_t ) configTIMER_RING_BUFFER_LENGTH, ( UBaseType_t ) sizeof( DaemonTaskMessage_t ) );
                 }
                 #endif /* if ( configSUPPORT_STATIC_ALLOCATION == 1 ) */
 
-                #if ( configQUEUE_REGISTRY_SIZE > 0 )
+                #if ( configRING_BUFFER_REGISTRY_SIZE > 0 )
                 {
                     if( xTimerQueue != NULL )
                     {
@@ -1148,7 +1148,7 @@
                         mtCOVERAGE_TEST_MARKER();
                     }
                 }
-                #endif /* configQUEUE_REGISTRY_SIZE */
+                #endif /* configRING_BUFFER_REGISTRY_SIZE */
             }
             else
             {

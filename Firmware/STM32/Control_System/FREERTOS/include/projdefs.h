@@ -58,13 +58,13 @@ typedef void (* TaskFunction_t)( void * arg );
 
 #define pdPASS                                   ( pdTRUE )
 #define pdFAIL                                   ( pdFALSE )
-#define errQUEUE_EMPTY                           ( ( BaseType_t ) 0 )
-#define errQUEUE_FULL                            ( ( BaseType_t ) 0 )
+#define errRING_BUFFER_EMPTY                           ( ( BaseType_t ) 0 )
+#define errRING_BUFFER_FULL                            ( ( BaseType_t ) 0 )
 
 /* FreeRTOS error definitions. */
 #define errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY    ( -1 )
-#define errQUEUE_BLOCKED                         ( -4 )
-#define errQUEUE_YIELD                           ( -5 )
+#define errRING_BUFFER_BLOCKED                         ( -4 )
+#define errRING_BUFFER_YIELD                           ( -5 )
 
 /* Macros used for basic data corruption checks. */
 #ifndef configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES

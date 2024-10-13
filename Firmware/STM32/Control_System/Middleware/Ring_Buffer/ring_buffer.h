@@ -38,12 +38,12 @@ extern "C"
    *   PUBLIC FUNCTION
    *********************/
 
-  void    QUEUE_Init(ring_buffer_t *rb);
-  void    QUEUE_Reset(ring_buffer_t *rb);
-  bool    QUEUE_Is_Empty(ring_buffer_t *rb);
-  bool    QUEUE_Is_Full(ring_buffer_t *rb);
-  void    QUEUE_Push_Data(ring_buffer_t *rb, char element);
-  uint8_t QUEUE_Pull_Data(ring_buffer_t *rb);
+  void    RING_BUFFER_Init(ring_buffer_t *rb);
+  void    RING_BUFFER_Reset(ring_buffer_t *rb);
+  bool    RING_BUFFER_Is_Empty(ring_buffer_t *rb);
+  bool    RING_BUFFER_Is_Full(ring_buffer_t *rb);
+  void    RING_BUFFER_Push_Data(ring_buffer_t *rb, char element);
+  uint8_t RING_BUFFER_Pull_Data(ring_buffer_t *rb);
 
 #ifdef __cplusplus
 }

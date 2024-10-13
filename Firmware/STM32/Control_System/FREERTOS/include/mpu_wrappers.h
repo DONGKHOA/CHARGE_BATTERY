@@ -120,11 +120,11 @@
         #define xQueueAddToSet               MPU_xQueueAddToSet
         #define xQueueSelectFromSet          MPU_xQueueSelectFromSet
 
-        #if ( configQUEUE_REGISTRY_SIZE > 0 )
+        #if ( configRING_BUFFER_REGISTRY_SIZE > 0 )
             #define vQueueAddToRegistry      MPU_vQueueAddToRegistry
             #define vQueueUnregisterQueue    MPU_vQueueUnregisterQueue
             #define pcQueueGetName           MPU_pcQueueGetName
-        #endif /* #if ( configQUEUE_REGISTRY_SIZE > 0 ) */
+        #endif /* #if ( configRING_BUFFER_REGISTRY_SIZE > 0 ) */
 
 /* Privileged only wrappers for Queue APIs. These are needed so that
  * the application can use opaque handles maintained in mpu_wrappers.c

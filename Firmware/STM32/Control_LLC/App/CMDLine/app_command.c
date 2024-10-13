@@ -60,7 +60,7 @@ static Command_TaskContextTypedef s_CommandTaskContext
     = { SCH_INVALID_TASK_HANDLE, // Will be updated by Scheduler
         {
             SCH_TASK_SYNC,         // taskType;
-            SCH_TASK_PRIO_0,       // taskPriority;
+            SCH_TASK_PRIO_1,       // taskPriority;
             10,                    // taskPeriodInMS;
             APP_COMMAND_TaskUpdate // taskFunction;
         } };

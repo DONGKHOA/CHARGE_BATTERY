@@ -48,8 +48,8 @@ BSP_UART_Config (uart_cfg_t    *uartstdio_device,
   uartstdio_device->p_uart      = uart;
   uartstdio_device->e_uart_irqn = uart_irqn;
 
-  QUEUE_Init((ring_buffer_t *)&uartstdio_device->s_tx_buffer);
-  QUEUE_Init((ring_buffer_t *)&uartstdio_device->s_rx_buffer);
+  RING_BUFFER_Init((ring_buffer_t *)&uartstdio_device->s_tx_buffer);
+  RING_BUFFER_Init((ring_buffer_t *)&uartstdio_device->s_rx_buffer);
 
   /**
    * Enable the UART Error Interrupt:
@@ -64,7 +64,7 @@ BSP_UART_Config (uart_cfg_t    *uartstdio_device,
 uint8_t
 BSP_UART_IsAvailableDataReceive (uart_cfg_t *uartstdio_device)
 {
-  if (QUEUE_Is_Empty((ring_buffer_t *)&uartstdio_device->s_rx_buffer))
+  if (RING_BUFFER_Is_Empty((ring_buffer_t *)&uartstdio_device->s_rx_buffer))
   {
     return 0;
   }
@@ -91,7 +91,7 @@ BSP_UART_SendChar (uart_cfg_t *uartstdio_device, char c)
   uint32_t u32_uart_timeout = LIMIT_WAIT_BUFFER;
 
   // Wait until there is space in the transmit buffer or u32_uart_timeout occurs
-  while (QUEUE_Is_Full((ring_buffer_t *)&uartstdio_device->s_tx_buffer))
+  while (RING_BUFFER_Is_Full((ring_buffer_t *)&uartstdio_device->s_tx_buffer))
   {
     if (u32_uart_timeout == 0)
     {
@@ -102,7 +102,7 @@ BSP_UART_SendChar (uart_cfg_t *uartstdio_device, char c)
 
   // Critical section to ensure atomic access to the buffer
   ATOMIC_BLOCK_START(uartstdio_device->p_uart);
-  QUEUE_Push_Data((ring_buffer_t *)&uartstdio_device->s_tx_buffer, c);
+  RING_BUFFER_Push_Data((ring_buffer_t *)&uartstdio_device->s_tx_buffer, c);
   ATOMIC_BLOCK_END(uartstdio_device->p_uart);
 
   // Enable Transmit Data Register Empty interrupt
@@ -147,10 +147,10 @@ char
 BSP_UART_ReadChar (uart_cfg_t *uartstdio_device)
 {
   register char c = '\0';
-  if (!QUEUE_Is_Empty((ring_buffer_t *)&uartstdio_device->s_rx_buffer))
+  if (!RING_BUFFER_Is_Empty((ring_buffer_t *)&uartstdio_device->s_rx_buffer))
   {
     ATOMIC_BLOCK_START(uartstdio_device->p_uart);
-    c = (char)QUEUE_Pull_Data((ring_buffer_t *)&uartstdio_device->s_rx_buffer);
+    c = (char)RING_BUFFER_Pull_Data((ring_buffer_t *)&uartstdio_device->s_rx_buffer);
     ATOMIC_BLOCK_END(uartstdio_device->p_uart);
     return c;
   }
@@ -207,7 +207,7 @@ BSP_UART_ISR (uart_cfg_t *uartstdio_device)
     }
     else
     {
-      QUEUE_Push_Data((ring_buffer_t *)&uartstdio_device->s_rx_buffer, c);
+      RING_BUFFER_Push_Data((ring_buffer_t *)&uartstdio_device->s_rx_buffer, c);
     }
     return;
   }
@@ -216,14 +216,14 @@ BSP_UART_ISR (uart_cfg_t *uartstdio_device)
   if ((LL_USART_IsActiveFlag_TXE(uartstdio_device->p_uart) != RESET)
       && (LL_USART_IsEnabledIT_TXE(uartstdio_device->p_uart) != RESET))
   {
-    if (QUEUE_Is_Empty((ring_buffer_t *)&uartstdio_device->s_tx_buffer))
+    if (RING_BUFFER_Is_Empty((ring_buffer_t *)&uartstdio_device->s_tx_buffer))
     {
       LL_USART_DisableIT_TXE(uartstdio_device->p_uart);
     }
     else
     {
       uint8_t c
-          = QUEUE_Pull_Data((ring_buffer_t *)&uartstdio_device->s_tx_buffer);
+          = RING_BUFFER_Pull_Data((ring_buffer_t *)&uartstdio_device->s_tx_buffer);
       LL_USART_TransmitData8(uartstdio_device->p_uart, c);
     }
     return;

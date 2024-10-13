@@ -91,7 +91,7 @@ static Control_TaskContextTypedef s_ControlTaskContext
     = { SCH_INVALID_TASK_HANDLE, // Will be updated by Scheduler
         {
             SCH_TASK_SYNC,         // taskType;
-            SCH_TASK_PRIO_1,       // taskPriority;
+            SCH_TASK_PRIO_0,       // taskPriority;
             1,                     // taskPeriodInMS;
             APP_CONTROL_TaskUpdate // taskFunction;
         } };

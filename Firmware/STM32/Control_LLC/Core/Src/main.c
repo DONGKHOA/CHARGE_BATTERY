@@ -111,7 +111,7 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  // Initialization Application
+  // Initializes Application
   APP_COMMAND_Init();
   APP_CONTROL_Init();
   APP_STATUS_LED_Init();

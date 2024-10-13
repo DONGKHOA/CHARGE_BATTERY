@@ -462,7 +462,7 @@ TaskHandle_t xTimerGetTimerDaemonTaskHandle( void ) PRIVILEGED_FUNCTION;
  * through a queue called the timer command queue.  The timer command queue is
  * private to the kernel itself and is not directly accessible to application
  * code.  The length of the timer command queue is set by the
- * configTIMER_QUEUE_LENGTH configuration constant.
+ * configTIMER_RING_BUFFER_LENGTH configuration constant.
  *
  * xTimerStart() starts a timer that was previously created using the
  * xTimerCreate() API function.  If the timer had already been started and was
@@ -515,7 +515,7 @@ TaskHandle_t xTimerGetTimerDaemonTaskHandle( void ) PRIVILEGED_FUNCTION;
  * through a queue called the timer command queue.  The timer command queue is
  * private to the kernel itself and is not directly accessible to application
  * code.  The length of the timer command queue is set by the
- * configTIMER_QUEUE_LENGTH configuration constant.
+ * configTIMER_RING_BUFFER_LENGTH configuration constant.
  *
  * xTimerStop() stops a timer that was previously started using either of the
  * The xTimerStart(), xTimerReset(), xTimerStartFromISR(), xTimerResetFromISR(),
@@ -560,7 +560,7 @@ TaskHandle_t xTimerGetTimerDaemonTaskHandle( void ) PRIVILEGED_FUNCTION;
  * through a queue called the timer command queue.  The timer command queue is
  * private to the kernel itself and is not directly accessible to application
  * code.  The length of the timer command queue is set by the
- * configTIMER_QUEUE_LENGTH configuration constant.
+ * configTIMER_RING_BUFFER_LENGTH configuration constant.
  *
  * xTimerChangePeriod() changes the period of a timer that was previously
  * created using the xTimerCreate() API function.
@@ -639,7 +639,7 @@ TaskHandle_t xTimerGetTimerDaemonTaskHandle( void ) PRIVILEGED_FUNCTION;
  * through a queue called the timer command queue.  The timer command queue is
  * private to the kernel itself and is not directly accessible to application
  * code.  The length of the timer command queue is set by the
- * configTIMER_QUEUE_LENGTH configuration constant.
+ * configTIMER_RING_BUFFER_LENGTH configuration constant.
  *
  * xTimerDelete() deletes a timer that was previously created using the
  * xTimerCreate() API function.
@@ -678,7 +678,7 @@ TaskHandle_t xTimerGetTimerDaemonTaskHandle( void ) PRIVILEGED_FUNCTION;
  * through a queue called the timer command queue.  The timer command queue is
  * private to the kernel itself and is not directly accessible to application
  * code.  The length of the timer command queue is set by the
- * configTIMER_QUEUE_LENGTH configuration constant.
+ * configTIMER_RING_BUFFER_LENGTH configuration constant.
  *
  * xTimerReset() re-starts a timer that was previously created using the
  * xTimerCreate() API function.  If the timer had already been started and was

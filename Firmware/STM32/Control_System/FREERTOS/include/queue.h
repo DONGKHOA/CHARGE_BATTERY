@@ -27,8 +27,8 @@
  */
 
 
-#ifndef QUEUE_H
-#define QUEUE_H
+#ifndef RING_BUFFER_H
+#define RING_BUFFER_H
 
 #ifndef INC_FREERTOS_H
     #error "include FreeRTOS.h" must appear in source files before "include queue.h"
@@ -70,12 +70,12 @@ typedef struct QueueDefinition   * QueueSetMemberHandle_t;
 #define queueOVERWRITE                        ( ( BaseType_t ) 2 )
 
 /* For internal use only.  These definitions *must* match those in queue.c. */
-#define queueQUEUE_TYPE_BASE                  ( ( uint8_t ) 0U )
-#define queueQUEUE_TYPE_SET                   ( ( uint8_t ) 0U )
-#define queueQUEUE_TYPE_MUTEX                 ( ( uint8_t ) 1U )
-#define queueQUEUE_TYPE_COUNTING_SEMAPHORE    ( ( uint8_t ) 2U )
-#define queueQUEUE_TYPE_BINARY_SEMAPHORE      ( ( uint8_t ) 3U )
-#define queueQUEUE_TYPE_RECURSIVE_MUTEX       ( ( uint8_t ) 4U )
+#define queueRING_BUFFER_TYPE_BASE                  ( ( uint8_t ) 0U )
+#define queueRING_BUFFER_TYPE_SET                   ( ( uint8_t ) 0U )
+#define queueRING_BUFFER_TYPE_MUTEX                 ( ( uint8_t ) 1U )
+#define queueRING_BUFFER_TYPE_COUNTING_SEMAPHORE    ( ( uint8_t ) 2U )
+#define queueRING_BUFFER_TYPE_BINARY_SEMAPHORE      ( ( uint8_t ) 3U )
+#define queueRING_BUFFER_TYPE_RECURSIVE_MUTEX       ( ( uint8_t ) 4U )
 
 /**
  * queue. h
@@ -146,7 +146,7 @@ typedef struct QueueDefinition   * QueueSetMemberHandle_t;
  * \ingroup QueueManagement
  */
 #if ( configSUPPORT_DYNAMIC_ALLOCATION == 1 )
-    #define xQueueCreate( uxQueueLength, uxItemSize )    xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )
+    #define xQueueCreate( uxQueueLength, uxItemSize )    xQueueGenericCreate( ( uxQueueLength ), ( uxItemSize ), ( queueRING_BUFFER_TYPE_BASE ) )
 #endif
 
 /**
@@ -156,7 +156,7 @@ typedef struct QueueDefinition   * QueueSetMemberHandle_t;
  *                            UBaseType_t uxQueueLength,
  *                            UBaseType_t uxItemSize,
  *                            uint8_t *pucQueueStorage,
- *                            StaticQueue_t *pxQueueBuffer
+ *                            StaticRING_BUFFER_t *pxQueueBuffer
  *                        );
  * @endcode
  *
@@ -188,7 +188,7 @@ typedef struct QueueDefinition   * QueueSetMemberHandle_t;
  * one time - which is ( uxQueueLength * uxItemsSize ) bytes.  If uxItemSize is
  * zero then pucQueueStorage can be NULL.
  *
- * @param pxQueueBuffer Must point to a variable of type StaticQueue_t, which
+ * @param pxQueueBuffer Must point to a variable of type StaticRING_BUFFER_t, which
  * will be used to hold the queue's data structure.
  *
  * @return If the queue is created then a handle to the created queue is
@@ -202,22 +202,22 @@ typedef struct QueueDefinition   * QueueSetMemberHandle_t;
  *  char ucData[ 20 ];
  * };
  *
- #define QUEUE_LENGTH 10
+ #define RING_BUFFER_LENGTH 10
  #define ITEM_SIZE sizeof( uint32_t )
  *
  * // xQueueBuffer will hold the queue structure.
- * StaticQueue_t xQueueBuffer;
+ * StaticRING_BUFFER_t xQueueBuffer;
  *
  * // ucQueueStorage will hold the items posted to the queue.  Must be at least
  * // [(queue length) * ( queue item size)] bytes long.
- * uint8_t ucQueueStorage[ QUEUE_LENGTH * ITEM_SIZE ];
+ * uint8_t ucQueueStorage[ RING_BUFFER_LENGTH * ITEM_SIZE ];
  *
  * void vATask( void *pvParameters )
  * {
  *  QueueHandle_t xQueue1;
  *
  *  // Create a queue capable of containing 10 uint32_t values.
- *  xQueue1 = xQueueCreate( QUEUE_LENGTH, // The number of items the queue can hold.
+ *  xQueue1 = xQueueCreate( RING_BUFFER_LENGTH, // The number of items the queue can hold.
  *                          ITEM_SIZE     // The size of each item in the queue
  *                          &( ucQueueStorage[ 0 ] ), // The buffer that will hold the items in the queue.
  *                          &xQueueBuffer ); // The buffer that will hold the queue structure.
@@ -232,7 +232,7 @@ typedef struct QueueDefinition   * QueueSetMemberHandle_t;
  * \ingroup QueueManagement
  */
 #if ( configSUPPORT_STATIC_ALLOCATION == 1 )
-    #define xQueueCreateStatic( uxQueueLength, uxItemSize, pucQueueStorage, pxQueueBuffer )    xQueueGenericCreateStatic( ( uxQueueLength ), ( uxItemSize ), ( pucQueueStorage ), ( pxQueueBuffer ), ( queueQUEUE_TYPE_BASE ) )
+    #define xQueueCreateStatic( uxQueueLength, uxItemSize, pucQueueStorage, pxQueueBuffer )    xQueueGenericCreateStatic( ( uxQueueLength ), ( uxItemSize ), ( pucQueueStorage ), ( pxQueueBuffer ), ( queueRING_BUFFER_TYPE_BASE ) )
 #endif /* configSUPPORT_STATIC_ALLOCATION */
 
 /**
@@ -240,7 +240,7 @@ typedef struct QueueDefinition   * QueueSetMemberHandle_t;
  * @code{c}
  * BaseType_t xQueueGetStaticBuffers( QueueHandle_t xQueue,
  *                                    uint8_t ** ppucQueueStorage,
- *                                    StaticQueue_t ** ppxStaticQueue );
+ *                                    StaticRING_BUFFER_t ** ppxStaticQueue );
  * @endcode
  *
  * Retrieve pointers to a statically created queue's data structure buffer
@@ -292,7 +292,7 @@ typedef struct QueueDefinition   * QueueSetMemberHandle_t;
  * queue is full.  The time is defined in tick periods so the constant
  * portTICK_PERIOD_MS should be used to convert to real time if this is required.
  *
- * @return pdTRUE if the item was successfully posted, otherwise errQUEUE_FULL.
+ * @return pdTRUE if the item was successfully posted, otherwise errRING_BUFFER_FULL.
  *
  * Example usage:
  * @code{c}
@@ -375,7 +375,7 @@ typedef struct QueueDefinition   * QueueSetMemberHandle_t;
  * is full.  The  time is defined in tick periods so the constant
  * portTICK_PERIOD_MS should be used to convert to real time if this is required.
  *
- * @return pdTRUE if the item was successfully posted, otherwise errQUEUE_FULL.
+ * @return pdTRUE if the item was successfully posted, otherwise errRING_BUFFER_FULL.
  *
  * Example usage:
  * @code{c}
@@ -460,7 +460,7 @@ typedef struct QueueDefinition   * QueueSetMemberHandle_t;
  * queue is full.  The time is defined in tick periods so the constant
  * portTICK_PERIOD_MS should be used to convert to real time if this is required.
  *
- * @return pdTRUE if the item was successfully posted, otherwise errQUEUE_FULL.
+ * @return pdTRUE if the item was successfully posted, otherwise errRING_BUFFER_FULL.
  *
  * Example usage:
  * @code{c}
@@ -633,7 +633,7 @@ typedef struct QueueDefinition   * QueueSetMemberHandle_t;
  * item at the back of the queue, or queueSEND_TO_FRONT to place the item
  * at the front of the queue (for high priority messages).
  *
- * @return pdTRUE if the item was successfully posted, otherwise errQUEUE_FULL.
+ * @return pdTRUE if the item was successfully posted, otherwise errRING_BUFFER_FULL.
  *
  * Example usage:
  * @code{c}
@@ -999,7 +999,7 @@ void vQueueDelete( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
  * a context switch should be requested before the interrupt is exited.
  *
  * @return pdTRUE if the data was successfully sent to the queue, otherwise
- * errQUEUE_FULL.
+ * errRING_BUFFER_FULL.
  *
  * Example usage for buffered IO (where the ISR can obtain more than one value
  * per call):
@@ -1071,7 +1071,7 @@ void vQueueDelete( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
  * a context switch should be requested before the interrupt is exited.
  *
  * @return pdTRUE if the data was successfully sent to the queue, otherwise
- * errQUEUE_FULL.
+ * errRING_BUFFER_FULL.
  *
  * Example usage for buffered IO (where the ISR can obtain more than one value
  * per call):
@@ -1236,7 +1236,7 @@ void vQueueDelete( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
  * a context switch should be requested before the interrupt is exited.
  *
  * @return pdTRUE if the data was successfully sent to the queue, otherwise
- * errQUEUE_FULL.
+ * errRING_BUFFER_FULL.
  *
  * Example usage for buffered IO (where the ISR can obtain more than one value
  * per call):
@@ -1319,7 +1319,7 @@ void vQueueDelete( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
  * at the front of the queue (for high priority messages).
  *
  * @return pdTRUE if the data was successfully sent to the queue, otherwise
- * errQUEUE_FULL.
+ * errRING_BUFFER_FULL.
  *
  * Example usage for buffered IO (where the ISR can obtain more than one value
  * per call):
@@ -1499,7 +1499,7 @@ QueueHandle_t xQueueCreateMutex( const uint8_t ucQueueType ) PRIVILEGED_FUNCTION
 
 #if ( configSUPPORT_STATIC_ALLOCATION == 1 )
     QueueHandle_t xQueueCreateMutexStatic( const uint8_t ucQueueType,
-                                           StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+                                           StaticRING_BUFFER_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
 #endif
 
 #if ( configUSE_COUNTING_SEMAPHORES == 1 )
@@ -1510,7 +1510,7 @@ QueueHandle_t xQueueCreateMutex( const uint8_t ucQueueType ) PRIVILEGED_FUNCTION
 #if ( ( configUSE_COUNTING_SEMAPHORES == 1 ) && ( configSUPPORT_STATIC_ALLOCATION == 1 ) )
     QueueHandle_t xQueueCreateCountingSemaphoreStatic( const UBaseType_t uxMaxCount,
                                                        const UBaseType_t uxInitialCount,
-                                                       StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+                                                       StaticRING_BUFFER_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
 #endif
 
 BaseType_t xQueueSemaphoreTake( QueueHandle_t xQueue,
@@ -1542,8 +1542,8 @@ BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
  * to be available to a kernel aware debugger.  If you are not using a kernel
  * aware debugger then this function can be ignored.
  *
- * configQUEUE_REGISTRY_SIZE defines the maximum number of handles the
- * registry can hold.  configQUEUE_REGISTRY_SIZE must be greater than 0
+ * configRING_BUFFER_REGISTRY_SIZE defines the maximum number of handles the
+ * registry can hold.  configRING_BUFFER_REGISTRY_SIZE must be greater than 0
  * within FreeRTOSConfig.h for the registry to be available.  Its value
  * does not affect the number of queues, semaphores and mutexes that can be
  * created - just the number that the registry can hold.
@@ -1561,7 +1561,7 @@ BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
  * stores a pointer to the string - so the string must be persistent (global or
  * preferably in ROM/Flash), not on the stack.
  */
-#if ( configQUEUE_REGISTRY_SIZE > 0 )
+#if ( configRING_BUFFER_REGISTRY_SIZE > 0 )
     void vQueueAddToRegistry( QueueHandle_t xQueue,
                               const char * pcQueueName ) PRIVILEGED_FUNCTION;
 #endif
@@ -1576,7 +1576,7 @@ BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
  *
  * @param xQueue The handle of the queue being removed from the registry.
  */
-#if ( configQUEUE_REGISTRY_SIZE > 0 )
+#if ( configRING_BUFFER_REGISTRY_SIZE > 0 )
     void vQueueUnregisterQueue( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
 #endif
 
@@ -1591,7 +1591,7 @@ BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
  * queue is returned.  If the queue is not in the registry then NULL is
  * returned.
  */
-#if ( configQUEUE_REGISTRY_SIZE > 0 )
+#if ( configRING_BUFFER_REGISTRY_SIZE > 0 )
     const char * pcQueueGetName( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
 #endif
 
@@ -1615,7 +1615,7 @@ BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
     QueueHandle_t xQueueGenericCreateStatic( const UBaseType_t uxQueueLength,
                                              const UBaseType_t uxItemSize,
                                              uint8_t * pucQueueStorage,
-                                             StaticQueue_t * pxStaticQueue,
+                                             StaticRING_BUFFER_t * pxStaticQueue,
                                              const uint8_t ucQueueType ) PRIVILEGED_FUNCTION;
 #endif
 
@@ -1628,7 +1628,7 @@ BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
 #if ( configSUPPORT_STATIC_ALLOCATION == 1 )
     BaseType_t xQueueGenericGetStaticBuffers( QueueHandle_t xQueue,
                                               uint8_t ** ppucQueueStorage,
-                                              StaticQueue_t ** ppxStaticQueue ) PRIVILEGED_FUNCTION;
+                                              StaticRING_BUFFER_t ** ppxStaticQueue ) PRIVILEGED_FUNCTION;
 #endif
 
 /*
@@ -1679,7 +1679,7 @@ BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
  * @return If the queue set is created successfully then a handle to the created
  * queue set is returned.  Otherwise NULL is returned.
  */
-#if ( ( configUSE_QUEUE_SETS == 1 ) && ( configSUPPORT_DYNAMIC_ALLOCATION == 1 ) )
+#if ( ( configUSE_RING_BUFFER_SETS == 1 ) && ( configSUPPORT_DYNAMIC_ALLOCATION == 1 ) )
     QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) PRIVILEGED_FUNCTION;
 #endif
 
@@ -1705,7 +1705,7 @@ BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
  * queue set because it is already a member of a different queue set then pdFAIL
  * is returned.
  */
-#if ( configUSE_QUEUE_SETS == 1 )
+#if ( configUSE_RING_BUFFER_SETS == 1 )
     BaseType_t xQueueAddToSet( QueueSetMemberHandle_t xQueueOrSemaphore,
                                QueueSetHandle_t xQueueSet ) PRIVILEGED_FUNCTION;
 #endif
@@ -1727,7 +1727,7 @@ BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
  * then pdPASS is returned.  If the queue was not in the queue set, or the
  * queue (or semaphore) was not empty, then pdFAIL is returned.
  */
-#if ( configUSE_QUEUE_SETS == 1 )
+#if ( configUSE_RING_BUFFER_SETS == 1 )
     BaseType_t xQueueRemoveFromSet( QueueSetMemberHandle_t xQueueOrSemaphore,
                                     QueueSetHandle_t xQueueSet ) PRIVILEGED_FUNCTION;
 #endif
@@ -1766,7 +1766,7 @@ BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
  * in the queue set that is available, or NULL if no such queue or semaphore
  * exists before before the specified block time expires.
  */
-#if ( configUSE_QUEUE_SETS == 1 )
+#if ( configUSE_RING_BUFFER_SETS == 1 )
     QueueSetMemberHandle_t xQueueSelectFromSet( QueueSetHandle_t xQueueSet,
                                                 const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
 #endif
@@ -1774,7 +1774,7 @@ BaseType_t xQueueGiveMutexRecursive( QueueHandle_t xMutex ) PRIVILEGED_FUNCTION;
 /*
  * A version of xQueueSelectFromSet() that can be used from an ISR.
  */
-#if ( configUSE_QUEUE_SETS == 1 )
+#if ( configUSE_RING_BUFFER_SETS == 1 )
     QueueSetMemberHandle_t xQueueSelectFromSetFromISR( QueueSetHandle_t xQueueSet ) PRIVILEGED_FUNCTION;
 #endif
 
@@ -1807,4 +1807,4 @@ UBaseType_t uxQueueGetQueueLength( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
 #endif
 /* *INDENT-ON* */
 
-#endif /* QUEUE_H */
+#endif /* RING_BUFFER_H */

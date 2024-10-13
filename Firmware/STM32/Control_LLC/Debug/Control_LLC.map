@@ -3044,24 +3044,24 @@ LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .text.PIControl_Process
                 0x08004acc       0xf0 ./Middleware/PI_Control/pi_control.o
                 0x08004acc                PIControl_Process
- .text.QUEUE_Init
+ .text.RING_BUFFER_Init
                 0x08004bbc       0x30 ./Middleware/Ring_Buffer/ring_buffer.o
-                0x08004bbc                QUEUE_Init
- .text.QUEUE_Reset
+                0x08004bbc                RING_BUFFER_Init
+ .text.RING_BUFFER_Reset
                 0x08004bec       0x24 ./Middleware/Ring_Buffer/ring_buffer.o
-                0x08004bec                QUEUE_Reset
- .text.QUEUE_Is_Empty
+                0x08004bec                RING_BUFFER_Reset
+ .text.RING_BUFFER_Is_Empty
                 0x08004c10       0x20 ./Middleware/Ring_Buffer/ring_buffer.o
-                0x08004c10                QUEUE_Is_Empty
- .text.QUEUE_Is_Full
+                0x08004c10                RING_BUFFER_Is_Empty
+ .text.RING_BUFFER_Is_Full
                 0x08004c30       0x20 ./Middleware/Ring_Buffer/ring_buffer.o
-                0x08004c30                QUEUE_Is_Full
- .text.QUEUE_Push_Data
+                0x08004c30                RING_BUFFER_Is_Full
+ .text.RING_BUFFER_Push_Data
                 0x08004c50       0x4c ./Middleware/Ring_Buffer/ring_buffer.o
-                0x08004c50                QUEUE_Push_Data
- .text.QUEUE_Pull_Data
+                0x08004c50                RING_BUFFER_Push_Data
+ .text.RING_BUFFER_Pull_Data
                 0x08004c9c       0x48 ./Middleware/Ring_Buffer/ring_buffer.o
-                0x08004c9c                QUEUE_Pull_Data
+                0x08004c9c                RING_BUFFER_Pull_Data
  *fill*         0x08004ce4        0x4 
  .text.VCF_Process
                 0x08004ce8       0x60 ./Middleware/Voltage_convert_frequency/voltage_convert_frequency.o
@@ -4163,7 +4163,7 @@ LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_line    0x0000e88c      0x52a ./Middleware/Voltage_convert_frequency/voltage_convert_frequency.o
  .debug_line    0x0000edb6      0xa19 ./Scheduler/scheduler.o
 
-.debug_str      0x00000000    0x689c7
+.debug_str      0x00000000    0x689eb
  .debug_str     0x00000000    0x57a4b ./App/CMDLine/app_cmdline.o
                               0x57d04 (size before relaxing)
  .debug_str     0x00057a4b     0x511c ./App/CMDLine/app_command.o
@@ -4180,47 +4180,47 @@ LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                               0x5773a (size before relaxing)
  .debug_str     0x000625da      0x158 ./BSP/SysTick/systick.o
                               0x54b1a (size before relaxing)
- .debug_str     0x00062732      0x2e2 ./BSP/UART/uart.o
-                              0x55b98 (size before relaxing)
- .debug_str     0x00062a14      0x731 ./Core/Src/main.o
+ .debug_str     0x00062732      0x300 ./BSP/UART/uart.o
+                              0x55bb6 (size before relaxing)
+ .debug_str     0x00062a32      0x731 ./Core/Src/main.o
                               0x5e572 (size before relaxing)
- .debug_str     0x00063145      0x112 ./Core/Src/stm32f1xx_it.o
+ .debug_str     0x00063163      0x112 ./Core/Src/stm32f1xx_it.o
                               0x5df8f (size before relaxing)
- .debug_str     0x00063257     0x1fcc ./Core/Src/syscalls.o
+ .debug_str     0x00063275     0x1fcc ./Core/Src/syscalls.o
                                0x98fe (size before relaxing)
- .debug_str     0x00065223       0x6b ./Core/Src/sysmem.o
+ .debug_str     0x00065241       0x6b ./Core/Src/sysmem.o
                                0x6116 (size before relaxing)
- .debug_str     0x0006528e       0x6e ./Core/Src/system_stm32f1xx.o
+ .debug_str     0x000652ac       0x6e ./Core/Src/system_stm32f1xx.o
                               0x54762 (size before relaxing)
- .debug_str     0x000652fc       0x44 ./Core/Startup/startup_stm32f103c8tx.o
+ .debug_str     0x0006531a       0x44 ./Core/Startup/startup_stm32f103c8tx.o
                                  0x87 (size before relaxing)
- .debug_str     0x00065340       0xcd ./Devices/ADS1115/ads1115.o
+ .debug_str     0x0006535e       0xcd ./Devices/ADS1115/ads1115.o
                               0x549db (size before relaxing)
- .debug_str     0x0006540d      0x3ea ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.o
+ .debug_str     0x0006542b      0x3ea ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.o
                               0x560a5 (size before relaxing)
- .debug_str     0x000657f7      0x454 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.o
+ .debug_str     0x00065815      0x454 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.o
                               0x56e48 (size before relaxing)
- .debug_str     0x00065c4b      0x2f8 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.o
+ .debug_str     0x00065c69      0x2f8 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.o
                               0x55c2c (size before relaxing)
- .debug_str     0x00065f43     0x112c ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.o
+ .debug_str     0x00065f61     0x112c ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.o
                               0x58dfe (size before relaxing)
- .debug_str     0x0006706f      0x7c4 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.o
+ .debug_str     0x0006708d      0x7c4 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.o
                               0x574ad (size before relaxing)
- .debug_str     0x00067833      0xa5b ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.o
+ .debug_str     0x00067851      0xa5b ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.o
                               0x56921 (size before relaxing)
- .debug_str     0x0006828e       0x44 ./Middleware/Current_convert_frequency/current_convert_frequency.o
+ .debug_str     0x000682ac       0x44 ./Middleware/Current_convert_frequency/current_convert_frequency.o
                               0x54728 (size before relaxing)
- .debug_str     0x000682d2       0xba ./Middleware/Frequency_convert_pulse/Private/data_private.o
+ .debug_str     0x000682f0       0xba ./Middleware/Frequency_convert_pulse/Private/data_private.o
                               0x547ca (size before relaxing)
- .debug_str     0x0006838c      0x1c4 ./Middleware/Frequency_convert_pulse/frequency_convert_pulse.o
+ .debug_str     0x000683aa      0x1c4 ./Middleware/Frequency_convert_pulse/frequency_convert_pulse.o
                               0x5c8e5 (size before relaxing)
- .debug_str     0x00068550       0x37 ./Middleware/PI_Control/pi_control.o
+ .debug_str     0x0006856e       0x37 ./Middleware/PI_Control/pi_control.o
                               0x54772 (size before relaxing)
- .debug_str     0x00068587       0x58 ./Middleware/Ring_Buffer/ring_buffer.o
-                              0x57d0e (size before relaxing)
- .debug_str     0x000685df       0x44 ./Middleware/Voltage_convert_frequency/voltage_convert_frequency.o
+ .debug_str     0x000685a5       0x5e ./Middleware/Ring_Buffer/ring_buffer.o
+                              0x57d32 (size before relaxing)
+ .debug_str     0x00068603       0x44 ./Middleware/Voltage_convert_frequency/voltage_convert_frequency.o
                               0x54728 (size before relaxing)
- .debug_str     0x00068623      0x3a4 ./Scheduler/scheduler.o
+ .debug_str     0x00068647      0x3a4 ./Scheduler/scheduler.o
                               0x58392 (size before relaxing)
 
 .comment        0x00000000       0x43

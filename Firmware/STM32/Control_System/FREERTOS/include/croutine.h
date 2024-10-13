@@ -318,7 +318,7 @@ void vCoRoutineSchedule( void );
 
 /**
  * @code{c}
- * crQUEUE_SEND(
+ * crRING_BUFFER_SEND(
  *                CoRoutineHandle_t xHandle,
  *                QueueHandle_t pxQueue,
  *                void *pvItemToQueue,
@@ -327,13 +327,13 @@ void vCoRoutineSchedule( void );
  *           )
  * @endcode
  *
- * The macro's crQUEUE_SEND() and crQUEUE_RECEIVE() are the co-routine
+ * The macro's crRING_BUFFER_SEND() and crRING_BUFFER_RECEIVE() are the co-routine
  * equivalent to the xQueueSend() and xQueueReceive() functions used by tasks.
  *
- * crQUEUE_SEND and crQUEUE_RECEIVE can only be used from a co-routine whereas
+ * crRING_BUFFER_SEND and crRING_BUFFER_RECEIVE can only be used from a co-routine whereas
  * xQueueSend() and xQueueReceive() can only be used from tasks.
  *
- * crQUEUE_SEND can only be called from the co-routine function itself - not
+ * crRING_BUFFER_SEND can only be called from the co-routine function itself - not
  * from within a function called by the co-routine function.  This is because
  * co-routines do not maintain their own stack.
  *
@@ -380,7 +380,7 @@ void vCoRoutineSchedule( void );
  *  for( ;; )
  *  {
  *      // This assumes the queue has already been created.
- *      crQUEUE_SEND( xHandle, xCoRoutineQueue, &xNumberToPost, NO_DELAY, &xResult );
+ *      crRING_BUFFER_SEND( xHandle, xCoRoutineQueue, &xNumberToPost, NO_DELAY, &xResult );
  *
  *      if( xResult != pdPASS )
  *      {
@@ -398,18 +398,18 @@ void vCoRoutineSchedule( void );
  *  crEND();
  * }
  * @endcode
- * \defgroup crQUEUE_SEND crQUEUE_SEND
+ * \defgroup crRING_BUFFER_SEND crRING_BUFFER_SEND
  * \ingroup Tasks
  */
-#define crQUEUE_SEND( xHandle, pxQueue, pvItemToQueue, xTicksToWait, pxResult )           \
+#define crRING_BUFFER_SEND( xHandle, pxQueue, pvItemToQueue, xTicksToWait, pxResult )           \
     do {                                                                                  \
         *( pxResult ) = xQueueCRSend( ( pxQueue ), ( pvItemToQueue ), ( xTicksToWait ) ); \
-        if( *( pxResult ) == errQUEUE_BLOCKED )                                           \
+        if( *( pxResult ) == errRING_BUFFER_BLOCKED )                                           \
         {                                                                                 \
             crSET_STATE0( ( xHandle ) );                                                  \
             *pxResult = xQueueCRSend( ( pxQueue ), ( pvItemToQueue ), 0 );                \
         }                                                                                 \
-        if( *pxResult == errQUEUE_YIELD )                                                 \
+        if( *pxResult == errRING_BUFFER_YIELD )                                                 \
         {                                                                                 \
             crSET_STATE1( ( xHandle ) );                                                  \
             *pxResult = pdPASS;                                                           \
@@ -419,7 +419,7 @@ void vCoRoutineSchedule( void );
 /**
  * croutine. h
  * @code{c}
- * crQUEUE_RECEIVE(
+ * crRING_BUFFER_RECEIVE(
  *                   CoRoutineHandle_t xHandle,
  *                   QueueHandle_t pxQueue,
  *                   void *pvBuffer,
@@ -428,13 +428,13 @@ void vCoRoutineSchedule( void );
  *               )
  * @endcode
  *
- * The macro's crQUEUE_SEND() and crQUEUE_RECEIVE() are the co-routine
+ * The macro's crRING_BUFFER_SEND() and crRING_BUFFER_RECEIVE() are the co-routine
  * equivalent to the xQueueSend() and xQueueReceive() functions used by tasks.
  *
- * crQUEUE_SEND and crQUEUE_RECEIVE can only be used from a co-routine whereas
+ * crRING_BUFFER_SEND and crRING_BUFFER_RECEIVE can only be used from a co-routine whereas
  * xQueueSend() and xQueueReceive() can only be used from tasks.
  *
- * crQUEUE_RECEIVE can only be called from the co-routine function itself - not
+ * crRING_BUFFER_RECEIVE can only be called from the co-routine function itself - not
  * from within a function called by the co-routine function.  This is because
  * co-routines do not maintain their own stack.
  *
@@ -458,7 +458,7 @@ void vCoRoutineSchedule( void );
  * available immediately. The actual amount of time this equates to is defined
  * by configTICK_RATE_HZ (set in FreeRTOSConfig.h).  The constant
  * portTICK_PERIOD_MS can be used to convert ticks to milliseconds (see the
- * crQUEUE_SEND example).
+ * crRING_BUFFER_SEND example).
  *
  * @param pxResult The variable pointed to by pxResult will be set to pdPASS if
  * data was successfully retrieved from the queue, otherwise it will be set to
@@ -480,7 +480,7 @@ void vCoRoutineSchedule( void );
  *  for( ;; )
  *  {
  *      // Wait for data to become available on the queue.
- *      crQUEUE_RECEIVE( xHandle, xCoRoutineQueue, &uxLEDToFlash, portMAX_DELAY, &xResult );
+ *      crRING_BUFFER_RECEIVE( xHandle, xCoRoutineQueue, &uxLEDToFlash, portMAX_DELAY, &xResult );
  *
  *      if( xResult == pdPASS )
  *      {
@@ -492,18 +492,18 @@ void vCoRoutineSchedule( void );
  *  crEND();
  * }
  * @endcode
- * \defgroup crQUEUE_RECEIVE crQUEUE_RECEIVE
+ * \defgroup crRING_BUFFER_RECEIVE crRING_BUFFER_RECEIVE
  * \ingroup Tasks
  */
-#define crQUEUE_RECEIVE( xHandle, pxQueue, pvBuffer, xTicksToWait, pxResult )           \
+#define crRING_BUFFER_RECEIVE( xHandle, pxQueue, pvBuffer, xTicksToWait, pxResult )           \
     do {                                                                                \
         *( pxResult ) = xQueueCRReceive( ( pxQueue ), ( pvBuffer ), ( xTicksToWait ) ); \
-        if( *( pxResult ) == errQUEUE_BLOCKED )                                         \
+        if( *( pxResult ) == errRING_BUFFER_BLOCKED )                                         \
         {                                                                               \
             crSET_STATE0( ( xHandle ) );                                                \
             *( pxResult ) = xQueueCRReceive( ( pxQueue ), ( pvBuffer ), 0 );            \
         }                                                                               \
-        if( *( pxResult ) == errQUEUE_YIELD )                                           \
+        if( *( pxResult ) == errRING_BUFFER_YIELD )                                           \
         {                                                                               \
             crSET_STATE1( ( xHandle ) );                                                \
             *( pxResult ) = pdPASS;                                                     \
@@ -513,23 +513,23 @@ void vCoRoutineSchedule( void );
 /**
  * croutine. h
  * @code{c}
- * crQUEUE_SEND_FROM_ISR(
+ * crRING_BUFFER_SEND_FROM_ISR(
  *                          QueueHandle_t pxQueue,
  *                          void *pvItemToQueue,
  *                          BaseType_t xCoRoutinePreviouslyWoken
  *                     )
  * @endcode
  *
- * The macro's crQUEUE_SEND_FROM_ISR() and crQUEUE_RECEIVE_FROM_ISR() are the
+ * The macro's crRING_BUFFER_SEND_FROM_ISR() and crRING_BUFFER_RECEIVE_FROM_ISR() are the
  * co-routine equivalent to the xQueueSendFromISR() and xQueueReceiveFromISR()
  * functions used by tasks.
  *
- * crQUEUE_SEND_FROM_ISR() and crQUEUE_RECEIVE_FROM_ISR() can only be used to
+ * crRING_BUFFER_SEND_FROM_ISR() and crRING_BUFFER_RECEIVE_FROM_ISR() can only be used to
  * pass data between a co-routine and and ISR, whereas xQueueSendFromISR() and
  * xQueueReceiveFromISR() can only be used to pass data between a task and and
  * ISR.
  *
- * crQUEUE_SEND_FROM_ISR can only be called from an ISR to send data to a queue
+ * crRING_BUFFER_SEND_FROM_ISR can only be called from an ISR to send data to a queue
  * that is being used from within a co-routine.
  *
  * See the co-routine section of the WEB documentation for information on
@@ -567,7 +567,7 @@ void vCoRoutineSchedule( void );
  *   {
  *       // Wait for data to become available on the queue.  This assumes the
  *       // queue xCommsRxQueue has already been created!
- *       crQUEUE_RECEIVE( xHandle, xCommsRxQueue, &uxLEDToFlash, portMAX_DELAY, &xResult );
+ *       crRING_BUFFER_RECEIVE( xHandle, xCommsRxQueue, &uxLEDToFlash, portMAX_DELAY, &xResult );
  *
  *       // Was a character received?
  *       if( xResult == pdPASS )
@@ -599,37 +599,37 @@ void vCoRoutineSchedule( void );
  *       // In this manner we can ensure that if more than one co-routine is
  *       // blocked on the queue only one is woken by this ISR no matter how
  *       // many characters are posted to the queue.
- *       xCRWokenByPost = crQUEUE_SEND_FROM_ISR( xCommsRxQueue, &cRxedChar, xCRWokenByPost );
+ *       xCRWokenByPost = crRING_BUFFER_SEND_FROM_ISR( xCommsRxQueue, &cRxedChar, xCRWokenByPost );
  *   }
  * }
  * @endcode
- * \defgroup crQUEUE_SEND_FROM_ISR crQUEUE_SEND_FROM_ISR
+ * \defgroup crRING_BUFFER_SEND_FROM_ISR crRING_BUFFER_SEND_FROM_ISR
  * \ingroup Tasks
  */
-#define crQUEUE_SEND_FROM_ISR( pxQueue, pvItemToQueue, xCoRoutinePreviouslyWoken ) \
+#define crRING_BUFFER_SEND_FROM_ISR( pxQueue, pvItemToQueue, xCoRoutinePreviouslyWoken ) \
     xQueueCRSendFromISR( ( pxQueue ), ( pvItemToQueue ), ( xCoRoutinePreviouslyWoken ) )
 
 
 /**
  * croutine. h
  * @code{c}
- * crQUEUE_SEND_FROM_ISR(
+ * crRING_BUFFER_SEND_FROM_ISR(
  *                          QueueHandle_t pxQueue,
  *                          void *pvBuffer,
  *                          BaseType_t * pxCoRoutineWoken
  *                     )
  * @endcode
  *
- * The macro's crQUEUE_SEND_FROM_ISR() and crQUEUE_RECEIVE_FROM_ISR() are the
+ * The macro's crRING_BUFFER_SEND_FROM_ISR() and crRING_BUFFER_RECEIVE_FROM_ISR() are the
  * co-routine equivalent to the xQueueSendFromISR() and xQueueReceiveFromISR()
  * functions used by tasks.
  *
- * crQUEUE_SEND_FROM_ISR() and crQUEUE_RECEIVE_FROM_ISR() can only be used to
+ * crRING_BUFFER_SEND_FROM_ISR() and crRING_BUFFER_RECEIVE_FROM_ISR() can only be used to
  * pass data between a co-routine and and ISR, whereas xQueueSendFromISR() and
  * xQueueReceiveFromISR() can only be used to pass data between a task and and
  * ISR.
  *
- * crQUEUE_RECEIVE_FROM_ISR can only be called from an ISR to receive data
+ * crRING_BUFFER_RECEIVE_FROM_ISR can only be called from an ISR to receive data
  * from a queue that is being used from within a co-routine (a co-routine
  * posted to the queue).
  *
@@ -645,7 +645,7 @@ void vCoRoutineSchedule( void );
  * pvBuffer.
  *
  * @param pxCoRoutineWoken A co-routine may be blocked waiting for space to become
- * available on the queue.  If crQUEUE_RECEIVE_FROM_ISR causes such a
+ * available on the queue.  If crRING_BUFFER_RECEIVE_FROM_ISR causes such a
  * co-routine to unblock *pxCoRoutineWoken will get set to pdTRUE, otherwise
  * *pxCoRoutineWoken will remain unchanged.
  *
@@ -669,7 +669,7 @@ void vCoRoutineSchedule( void );
  *   for( ;; )
  *   {
  *       // Send the next character to the queue.
- *       crQUEUE_SEND( xHandle, xCoRoutineQueue, &cCharToTx, NO_DELAY, &xResult );
+ *       crRING_BUFFER_SEND( xHandle, xCoRoutineQueue, &cCharToTx, NO_DELAY, &xResult );
  *
  *       if( xResult == pdPASS )
  *       {
@@ -712,17 +712,17 @@ void vCoRoutineSchedule( void );
  *       // xCRWokenByPost will automatically be set to pdTRUE if a co-routine
  *       // is woken by the post - ensuring that only a single co-routine is
  *       // woken no matter how many times we go around this loop.
- *       if( crQUEUE_RECEIVE_FROM_ISR( pxQueue, &cCharToTx, &xCRWokenByPost ) )
+ *       if( crRING_BUFFER_RECEIVE_FROM_ISR( pxQueue, &cCharToTx, &xCRWokenByPost ) )
  *       {
  *           SEND_CHARACTER( cCharToTx );
  *       }
  *   }
  * }
  * @endcode
- * \defgroup crQUEUE_RECEIVE_FROM_ISR crQUEUE_RECEIVE_FROM_ISR
+ * \defgroup crRING_BUFFER_RECEIVE_FROM_ISR crRING_BUFFER_RECEIVE_FROM_ISR
  * \ingroup Tasks
  */
-#define crQUEUE_RECEIVE_FROM_ISR( pxQueue, pvBuffer, pxCoRoutineWoken ) \
+#define crRING_BUFFER_RECEIVE_FROM_ISR( pxQueue, pvBuffer, pxCoRoutineWoken ) \
     xQueueCRReceiveFromISR( ( pxQueue ), ( pvBuffer ), ( pxCoRoutineWoken ) )
 
 /*

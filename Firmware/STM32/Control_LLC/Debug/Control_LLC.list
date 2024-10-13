@@ -39,13 +39,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   0000f7cf  00000000  00000000  0003190f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000689c7  00000000  00000000  000410de  2**0
+ 18 .debug_str    000689eb  00000000  00000000  000410de  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000a9aa5  2**0
+ 19 .comment      00000043  00000000  00000000  000a9ac9  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  000044c4  00000000  00000000  000a9ae8  2**2
+ 20 .debug_frame  000044c4  00000000  00000000  000a9b0c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 0000006b  00000000  00000000  000adfac  2**0
+ 21 .debug_line_str 0000006b  00000000  00000000  000adfd0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -5660,15 +5660,15 @@ BSP_UART_Config (uart_cfg_t    *uartstdio_device,
  8002838:	79fa      	ldrb	r2, [r7, #7]
  800283a:	f883 2024 	strb.w	r2, [r3, #36]	@ 0x24
 
-  QUEUE_Init((ring_buffer_t *)&uartstdio_device->s_tx_buffer);
+  RING_BUFFER_Init((ring_buffer_t *)&uartstdio_device->s_tx_buffer);
  800283e:	68fb      	ldr	r3, [r7, #12]
  8002840:	3310      	adds	r3, #16
  8002842:	4618      	mov	r0, r3
- 8002844:	f002 f9ba 	bl	8004bbc <QUEUE_Init>
-  QUEUE_Init((ring_buffer_t *)&uartstdio_device->s_rx_buffer);
+ 8002844:	f002 f9ba 	bl	8004bbc <RING_BUFFER_Init>
+  RING_BUFFER_Init((ring_buffer_t *)&uartstdio_device->s_rx_buffer);
  8002848:	68fb      	ldr	r3, [r7, #12]
  800284a:	4618      	mov	r0, r3
- 800284c:	f002 f9b6 	bl	8004bbc <QUEUE_Init>
+ 800284c:	f002 f9b6 	bl	8004bbc <RING_BUFFER_Init>
 
   /**
    * Enable the UART Error Interrupt:
@@ -5697,10 +5697,10 @@ BSP_UART_IsAvailableDataReceive (uart_cfg_t *uartstdio_device)
  8002866:	b082      	sub	sp, #8
  8002868:	af00      	add	r7, sp, #0
  800286a:	6078      	str	r0, [r7, #4]
-  if (QUEUE_Is_Empty((ring_buffer_t *)&uartstdio_device->s_rx_buffer))
+  if (RING_BUFFER_Is_Empty((ring_buffer_t *)&uartstdio_device->s_rx_buffer))
  800286c:	687b      	ldr	r3, [r7, #4]
  800286e:	4618      	mov	r0, r3
- 8002870:	f002 f9ce 	bl	8004c10 <QUEUE_Is_Empty>
+ 8002870:	f002 f9ce 	bl	8004c10 <RING_BUFFER_Is_Empty>
  8002874:	4603      	mov	r3, r0
  8002876:	2b00      	cmp	r3, #0
  8002878:	d001      	beq.n	800287e <BSP_UART_IsAvailableDataReceive+0x1a>
@@ -5735,7 +5735,7 @@ BSP_UART_SendChar (uart_cfg_t *uartstdio_device, char c)
  8002898:	60fb      	str	r3, [r7, #12]
 
   // Wait until there is space in the transmit buffer or u32_uart_timeout occurs
-  while (QUEUE_Is_Full((ring_buffer_t *)&uartstdio_device->s_tx_buffer))
+  while (RING_BUFFER_Is_Full((ring_buffer_t *)&uartstdio_device->s_tx_buffer))
  800289a:	e005      	b.n	80028a8 <BSP_UART_SendChar+0x20>
   {
     if (u32_uart_timeout == 0)
@@ -5749,11 +5749,11 @@ BSP_UART_SendChar (uart_cfg_t *uartstdio_device, char c)
  80028a2:	68fb      	ldr	r3, [r7, #12]
  80028a4:	3b01      	subs	r3, #1
  80028a6:	60fb      	str	r3, [r7, #12]
-  while (QUEUE_Is_Full((ring_buffer_t *)&uartstdio_device->s_tx_buffer))
+  while (RING_BUFFER_Is_Full((ring_buffer_t *)&uartstdio_device->s_tx_buffer))
  80028a8:	687b      	ldr	r3, [r7, #4]
  80028aa:	3310      	adds	r3, #16
  80028ac:	4618      	mov	r0, r3
- 80028ae:	f002 f9bf 	bl	8004c30 <QUEUE_Is_Full>
+ 80028ae:	f002 f9bf 	bl	8004c30 <RING_BUFFER_Is_Full>
  80028b2:	4603      	mov	r3, r0
  80028b4:	2b00      	cmp	r3, #0
  80028b6:	d1f1      	bne.n	800289c <BSP_UART_SendChar+0x14>
@@ -5765,13 +5765,13 @@ BSP_UART_SendChar (uart_cfg_t *uartstdio_device, char c)
  80028ba:	6a1b      	ldr	r3, [r3, #32]
  80028bc:	4618      	mov	r0, r3
  80028be:	f7ff ff2e 	bl	800271e <LL_USART_DisableIT_RXNE>
-  QUEUE_Push_Data((ring_buffer_t *)&uartstdio_device->s_tx_buffer, c);
+  RING_BUFFER_Push_Data((ring_buffer_t *)&uartstdio_device->s_tx_buffer, c);
  80028c2:	687b      	ldr	r3, [r7, #4]
  80028c4:	3310      	adds	r3, #16
  80028c6:	78fa      	ldrb	r2, [r7, #3]
  80028c8:	4611      	mov	r1, r2
  80028ca:	4618      	mov	r0, r3
- 80028cc:	f002 f9c0 	bl	8004c50 <QUEUE_Push_Data>
+ 80028cc:	f002 f9c0 	bl	8004c50 <RING_BUFFER_Push_Data>
   ATOMIC_BLOCK_END(uartstdio_device->p_uart);
  80028d0:	687b      	ldr	r3, [r7, #4]
  80028d2:	6a1b      	ldr	r3, [r3, #32]
@@ -5841,10 +5841,10 @@ BSP_UART_ReadChar (uart_cfg_t *uartstdio_device)
  8002922:	6078      	str	r0, [r7, #4]
   register char c = '\0';
  8002924:	2400      	movs	r4, #0
-  if (!QUEUE_Is_Empty((ring_buffer_t *)&uartstdio_device->s_rx_buffer))
+  if (!RING_BUFFER_Is_Empty((ring_buffer_t *)&uartstdio_device->s_rx_buffer))
  8002926:	687b      	ldr	r3, [r7, #4]
  8002928:	4618      	mov	r0, r3
- 800292a:	f002 f971 	bl	8004c10 <QUEUE_Is_Empty>
+ 800292a:	f002 f971 	bl	8004c10 <RING_BUFFER_Is_Empty>
  800292e:	4603      	mov	r3, r0
  8002930:	f083 0301 	eor.w	r3, r3, #1
  8002934:	b2db      	uxtb	r3, r3
@@ -5856,10 +5856,10 @@ BSP_UART_ReadChar (uart_cfg_t *uartstdio_device)
  800293c:	6a1b      	ldr	r3, [r3, #32]
  800293e:	4618      	mov	r0, r3
  8002940:	f7ff feed 	bl	800271e <LL_USART_DisableIT_RXNE>
-    c = (char)QUEUE_Pull_Data((ring_buffer_t *)&uartstdio_device->s_rx_buffer);
+    c = (char)RING_BUFFER_Pull_Data((ring_buffer_t *)&uartstdio_device->s_rx_buffer);
  8002944:	687b      	ldr	r3, [r7, #4]
  8002946:	4618      	mov	r0, r3
- 8002948:	f002 f9a8 	bl	8004c9c <QUEUE_Pull_Data>
+ 8002948:	f002 f9a8 	bl	8004c9c <RING_BUFFER_Pull_Data>
  800294c:	4603      	mov	r3, r0
  800294e:	461c      	mov	r4, r3
     ATOMIC_BLOCK_END(uartstdio_device->p_uart);
@@ -5990,16 +5990,16 @@ BSP_UART_ISR (uart_cfg_t *uartstdio_device)
     }
     else
     {
-      QUEUE_Push_Data((ring_buffer_t *)&uartstdio_device->s_rx_buffer, c);
+      RING_BUFFER_Push_Data((ring_buffer_t *)&uartstdio_device->s_rx_buffer, c);
     }
     return;
  8002a10:	e033      	b.n	8002a7a <BSP_UART_ISR+0xee>
-      QUEUE_Push_Data((ring_buffer_t *)&uartstdio_device->s_rx_buffer, c);
+      RING_BUFFER_Push_Data((ring_buffer_t *)&uartstdio_device->s_rx_buffer, c);
  8002a12:	687b      	ldr	r3, [r7, #4]
  8002a14:	7bfa      	ldrb	r2, [r7, #15]
  8002a16:	4611      	mov	r1, r2
  8002a18:	4618      	mov	r0, r3
- 8002a1a:	f002 f919 	bl	8004c50 <QUEUE_Push_Data>
+ 8002a1a:	f002 f919 	bl	8004c50 <RING_BUFFER_Push_Data>
     return;
  8002a1e:	e02c      	b.n	8002a7a <BSP_UART_ISR+0xee>
   }
@@ -6022,11 +6022,11 @@ BSP_UART_ISR (uart_cfg_t *uartstdio_device)
  8002a3c:	2b00      	cmp	r3, #0
  8002a3e:	d01c      	beq.n	8002a7a <BSP_UART_ISR+0xee>
   {
-    if (QUEUE_Is_Empty((ring_buffer_t *)&uartstdio_device->s_tx_buffer))
+    if (RING_BUFFER_Is_Empty((ring_buffer_t *)&uartstdio_device->s_tx_buffer))
  8002a40:	687b      	ldr	r3, [r7, #4]
  8002a42:	3310      	adds	r3, #16
  8002a44:	4618      	mov	r0, r3
- 8002a46:	f002 f8e3 	bl	8004c10 <QUEUE_Is_Empty>
+ 8002a46:	f002 f8e3 	bl	8004c10 <RING_BUFFER_Is_Empty>
  8002a4a:	4603      	mov	r3, r0
  8002a4c:	2b00      	cmp	r3, #0
  8002a4e:	d005      	beq.n	8002a5c <BSP_UART_ISR+0xd0>
@@ -6038,16 +6038,16 @@ BSP_UART_ISR (uart_cfg_t *uartstdio_device)
  8002a56:	f7ff fe84 	bl	8002762 <LL_USART_DisableIT_TXE>
     {
       uint8_t c
-          = QUEUE_Pull_Data((ring_buffer_t *)&uartstdio_device->s_tx_buffer);
+          = RING_BUFFER_Pull_Data((ring_buffer_t *)&uartstdio_device->s_tx_buffer);
       LL_USART_TransmitData8(uartstdio_device->p_uart, c);
     }
     return;
  8002a5a:	e00d      	b.n	8002a78 <BSP_UART_ISR+0xec>
-          = QUEUE_Pull_Data((ring_buffer_t *)&uartstdio_device->s_tx_buffer);
+          = RING_BUFFER_Pull_Data((ring_buffer_t *)&uartstdio_device->s_tx_buffer);
  8002a5c:	687b      	ldr	r3, [r7, #4]
  8002a5e:	3310      	adds	r3, #16
  8002a60:	4618      	mov	r0, r3
- 8002a62:	f002 f91b 	bl	8004c9c <QUEUE_Pull_Data>
+ 8002a62:	f002 f91b 	bl	8004c9c <RING_BUFFER_Pull_Data>
  8002a66:	4603      	mov	r3, r0
  8002a68:	73bb      	strb	r3, [r7, #14]
       LL_USART_TransmitData8(uartstdio_device->p_uart, c);
@@ -7162,7 +7162,7 @@ int main(void)
  80030f0:	f000 f9a4 	bl	800343c <MX_USART2_UART_Init>
   /* USER CODE BEGIN 2 */
 
-  // Initialization Application
+  // Initializes Application
   APP_COMMAND_Init();
  80030f4:	f7fe f8c6 	bl	8001284 <APP_COMMAND_Init>
   APP_CONTROL_Init();
@@ -12041,12 +12041,12 @@ PIControl_Process (float f_new_value, pi_control_t *p_pi)
  8004bb4:	3fe00000 	.word	0x3fe00000
  8004bb8:	40240000 	.word	0x40240000
 
-08004bbc <QUEUE_Init>:
+08004bbc <RING_BUFFER_Init>:
  * @param rb The parameter `rb` is a pointer to a `ring_buffer_t` structure,
  * which is used to implement a queue data structure.
  */
 void
-QUEUE_Init (ring_buffer_t *rb)
+RING_BUFFER_Init (ring_buffer_t *rb)
 {
  8004bbc:	b580      	push	{r7, lr}
  8004bbe:	b082      	sub	sp, #8
@@ -12077,12 +12077,12 @@ QUEUE_Init (ring_buffer_t *rb)
  8004be8:	46bd      	mov	sp, r7
  8004bea:	bd80      	pop	{r7, pc}
 
-08004bec <QUEUE_Reset>:
+08004bec <RING_BUFFER_Reset>:
  *
  * @param rb Pointer to the ring buffer to reset.
  */
 void
-QUEUE_Reset (ring_buffer_t *rb)
+RING_BUFFER_Reset (ring_buffer_t *rb)
 {
  8004bec:	b480      	push	{r7}
  8004bee:	b083      	sub	sp, #12
@@ -12107,12 +12107,12 @@ QUEUE_Reset (ring_buffer_t *rb)
  8004c0c:	bc80      	pop	{r7}
  8004c0e:	4770      	bx	lr
 
-08004c10 <QUEUE_Is_Empty>:
+08004c10 <RING_BUFFER_Is_Empty>:
  * of elements in the ring buffer is 0, indicating that the buffer is empty, and
  * `false` otherwise.
  */
 bool
-QUEUE_Is_Empty (ring_buffer_t *rb)
+RING_BUFFER_Is_Empty (ring_buffer_t *rb)
 {
  8004c10:	b480      	push	{r7}
  8004c12:	b083      	sub	sp, #12
@@ -12133,12 +12133,12 @@ QUEUE_Is_Empty (ring_buffer_t *rb)
  8004c2c:	bc80      	pop	{r7}
  8004c2e:	4770      	bx	lr
 
-08004c30 <QUEUE_Is_Full>:
+08004c30 <RING_BUFFER_Is_Full>:
  * `true` or `false`, based on whether the count of elements in the ring buffer
  * `rb` is equal to the predefined size `RING_BUFFER_SIZE`.
  */
 bool
-QUEUE_Is_Full (ring_buffer_t *rb)
+RING_BUFFER_Is_Full (ring_buffer_t *rb)
 {
  8004c30:	b480      	push	{r7}
  8004c32:	b083      	sub	sp, #12
@@ -12159,12 +12159,12 @@ QUEUE_Is_Full (ring_buffer_t *rb)
  8004c4c:	bc80      	pop	{r7}
  8004c4e:	4770      	bx	lr
 
-08004c50 <QUEUE_Push_Data>:
+08004c50 <RING_BUFFER_Push_Data>:
  * represents the data element that needs to be added to the ring buffer. It is
  * of type `char`, which means it can store a single character (1 byte) of data.
  */
 void
-QUEUE_Push_Data (ring_buffer_t *rb, char element)
+RING_BUFFER_Push_Data (ring_buffer_t *rb, char element)
 {
  8004c50:	b580      	push	{r7, lr}
  8004c52:	b082      	sub	sp, #8
@@ -12172,16 +12172,16 @@ QUEUE_Push_Data (ring_buffer_t *rb, char element)
  8004c56:	6078      	str	r0, [r7, #4]
  8004c58:	460b      	mov	r3, r1
  8004c5a:	70fb      	strb	r3, [r7, #3]
-  if (QUEUE_Is_Full(rb))
+  if (RING_BUFFER_Is_Full(rb))
  8004c5c:	6878      	ldr	r0, [r7, #4]
- 8004c5e:	f7ff ffe7 	bl	8004c30 <QUEUE_Is_Full>
+ 8004c5e:	f7ff ffe7 	bl	8004c30 <RING_BUFFER_Is_Full>
  8004c62:	4603      	mov	r3, r0
  8004c64:	2b00      	cmp	r3, #0
- 8004c66:	d002      	beq.n	8004c6e <QUEUE_Push_Data+0x1e>
+ 8004c66:	d002      	beq.n	8004c6e <RING_BUFFER_Push_Data+0x1e>
   {
-    QUEUE_Reset(rb);
+    RING_BUFFER_Reset(rb);
  8004c68:	6878      	ldr	r0, [r7, #4]
- 8004c6a:	f7ff ffbf 	bl	8004bec <QUEUE_Reset>
+ 8004c6a:	f7ff ffbf 	bl	8004bec <RING_BUFFER_Reset>
   }
   *(rb->u8_buffer + rb->u32_in) = element;
  8004c6e:	687b      	ldr	r3, [r7, #4]
@@ -12211,27 +12211,27 @@ QUEUE_Push_Data (ring_buffer_t *rb, char element)
  8004c98:	46bd      	mov	sp, r7
  8004c9a:	bd80      	pop	{r7, pc}
 
-08004c9c <QUEUE_Pull_Data>:
- * @return The function `QUEUE_Pull_Data` is returning a `uint8_t` data value
+08004c9c <RING_BUFFER_Pull_Data>:
+ * @return The function `RING_BUFFER_Pull_Data` is returning a `uint8_t` data value
  * from the ring buffer pointed to by the `rb` parameter.
  */
 uint8_t
-QUEUE_Pull_Data (ring_buffer_t *rb)
+RING_BUFFER_Pull_Data (ring_buffer_t *rb)
 {
  8004c9c:	b590      	push	{r4, r7, lr}
  8004c9e:	b083      	sub	sp, #12
  8004ca0:	af00      	add	r7, sp, #0
  8004ca2:	6078      	str	r0, [r7, #4]
-  if (QUEUE_Is_Empty(rb))
+  if (RING_BUFFER_Is_Empty(rb))
  8004ca4:	6878      	ldr	r0, [r7, #4]
- 8004ca6:	f7ff ffb3 	bl	8004c10 <QUEUE_Is_Empty>
+ 8004ca6:	f7ff ffb3 	bl	8004c10 <RING_BUFFER_Is_Empty>
  8004caa:	4603      	mov	r3, r0
  8004cac:	2b00      	cmp	r3, #0
- 8004cae:	d001      	beq.n	8004cb4 <QUEUE_Pull_Data+0x18>
+ 8004cae:	d001      	beq.n	8004cb4 <RING_BUFFER_Pull_Data+0x18>
   {
     return 0xFF;
  8004cb0:	23ff      	movs	r3, #255	@ 0xff
- 8004cb2:	e013      	b.n	8004cdc <QUEUE_Pull_Data+0x40>
+ 8004cb2:	e013      	b.n	8004cdc <RING_BUFFER_Pull_Data+0x40>
   }
   register uint8_t data = *(rb->u8_buffer + rb->u32_out);
  8004cb4:	687b      	ldr	r3, [r7, #4]

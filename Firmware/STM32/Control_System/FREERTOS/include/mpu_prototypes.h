@@ -218,19 +218,19 @@ uint8_t MPU_ucQueueGetQueueType( QueueHandle_t xQueue ) FREERTOS_SYSTEM_CALL;
 void MPU_vQueueDelete( QueueHandle_t xQueue ) PRIVILEGED_FUNCTION;
 QueueHandle_t MPU_xQueueCreateMutex( const uint8_t ucQueueType ) PRIVILEGED_FUNCTION;
 QueueHandle_t MPU_xQueueCreateMutexStatic( const uint8_t ucQueueType,
-                                           StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+                                           StaticRING_BUFFER_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
 QueueHandle_t MPU_xQueueCreateCountingSemaphore( const UBaseType_t uxMaxCount,
                                                  const UBaseType_t uxInitialCount ) PRIVILEGED_FUNCTION;
 QueueHandle_t MPU_xQueueCreateCountingSemaphoreStatic( const UBaseType_t uxMaxCount,
                                                        const UBaseType_t uxInitialCount,
-                                                       StaticQueue_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
+                                                       StaticRING_BUFFER_t * pxStaticQueue ) PRIVILEGED_FUNCTION;
 QueueHandle_t MPU_xQueueGenericCreate( const UBaseType_t uxQueueLength,
                                        const UBaseType_t uxItemSize,
                                        const uint8_t ucQueueType ) PRIVILEGED_FUNCTION;
 QueueHandle_t MPU_xQueueGenericCreateStatic( const UBaseType_t uxQueueLength,
                                              const UBaseType_t uxItemSize,
                                              uint8_t * pucQueueStorage,
-                                             StaticQueue_t * pxStaticQueue,
+                                             StaticRING_BUFFER_t * pxStaticQueue,
                                              const uint8_t ucQueueType ) PRIVILEGED_FUNCTION;
 QueueSetHandle_t MPU_xQueueCreateSet( const UBaseType_t uxEventQueueLength ) PRIVILEGED_FUNCTION;
 BaseType_t MPU_xQueueRemoveFromSet( QueueSetMemberHandle_t xQueueOrSemaphore,
@@ -239,7 +239,7 @@ BaseType_t MPU_xQueueGenericReset( QueueHandle_t xQueue,
                                    BaseType_t xNewQueue ) PRIVILEGED_FUNCTION;
 BaseType_t MPU_xQueueGenericGetStaticBuffers( QueueHandle_t xQueue,
                                               uint8_t ** ppucQueueStorage,
-                                              StaticQueue_t ** ppxStaticQueue ) PRIVILEGED_FUNCTION;
+                                              StaticRING_BUFFER_t ** ppxStaticQueue ) PRIVILEGED_FUNCTION;
 BaseType_t MPU_xQueueGenericSendFromISR( QueueHandle_t xQueue,
                                          const void * const pvItemToQueue,
                                          BaseType_t * const pxHigherPriorityTaskWoken,
