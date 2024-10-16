@@ -75,7 +75,6 @@ typedef struct _Control_Power_t
  ******************************/
 
 static void APP_CONTROL_TaskUpdate(void);
-static void APP_CONTROL_CC_CVCharger(void);
 static void APP_CONTROL_ConvertVoltageOutput(void);
 static void APP_CONTROL_ResetData(void);
 static void APP_CONTROL_RelayOn(void);
@@ -179,8 +178,7 @@ APP_CONTROL_CreateTask (void)
 
 /**
  * The function `APP_CONTROL_TaskUpdate` implements a state machine for
- * controlling power states including soft start, charging, discharging, and
- * waiting periods based on certain conditions and thresholds.
+ * controlling a power system with different charging modes and transitions.
  */
 static void
 APP_CONTROL_TaskUpdate (void)
@@ -190,7 +188,7 @@ APP_CONTROL_TaskUpdate (void)
     case WAIT_INPUT_VOLTAGE:
 
       APP_CONTROL_RelayOn();
-      *s_control_power.p_state = SOFT_START;
+      *s_control_power.p_state = DISCHARGING;
       break;
     case SOFT_START:
 
@@ -199,17 +197,71 @@ APP_CONTROL_TaskUpdate (void)
       if (s_control_power.u32_times_change_fre == TIME_LIMIT_PHASE_START)
       {
         s_control_power.u32_times_change_fre = 0;
-        *s_control_power.p_state             = DISCHARGING;
+        *s_control_power.p_state             = CC_MODE_CHARGING;
       }
       s_control_power.u32_times_change_fre++;
 
       break;
-    case CHARGING:
+    case CC_MODE_CHARGING:
 
       // Progress of charging
       if (s_control_power.u32_times_change_fre == CONTROL_PI_TIME_SAMPLE)
       {
-        APP_CONTROL_CC_CVCharger();
+        // Read voltage channel current
+        float value_temp = ADS1115_ReadVoltage(ADS1115_CURRENT_CHANNEL);
+
+        // Convert from voltage channel current to current
+        *s_control_power.p_output_current
+            = ACS712_CurrentConverterVoltage(value_temp);
+
+        // PI control
+        PIControl_Process(*s_control_power.p_output_current,
+                          s_control_power.p_control_current);
+
+        // Current convert frequency
+        s_control_power.u32_frequency_operation
+            = CCF_Process(s_control_power.p_control_current->f_out);
+
+        // Frequency convert pulse
+        FCP_PhaseProcess(s_control_power.u32_frequency_operation);
+        s_control_power.u32_times_change_fre = 0;
+      }
+      s_control_power.u32_times_change_fre++;
+
+      // Read voltage feedback
+      *s_control_power.p_output_voltage
+          = ADS1115_ReadVoltage(ADS1115_VOLTAGE_CHANNEL);
+      APP_CONTROL_ConvertVoltageOutput();
+
+      if (*s_control_power.p_output_voltage > VOLTAGE_END_THRESHOLD)
+      {
+        if(*s_control_power.p_output_current >= CURRENT_END_THRESHOLD)
+        {
+          *s_control_power.p_state             = CV_MODE_CHARGING;
+          s_control_power.u32_times_change_fre = 0;
+        }
+        else
+        {
+          *s_control_power.p_state             = WAIT_UNPLUGGED;
+          s_control_power.u32_times_change_fre = 0;
+        }
+      }
+      break;
+    case CV_MODE_CHARGING:
+
+      // Progress of charging
+      if (s_control_power.u32_times_change_fre == CONTROL_PI_TIME_SAMPLE)
+      {
+        // PI control
+        PIControl_Process(*s_control_power.p_output_voltage,
+                          s_control_power.p_control_voltage);
+
+        // Voltage convert frequency
+        s_control_power.u32_frequency_operation
+            = VCF_Process(s_control_power.p_control_voltage->f_out);
+
+        // Frequency convert pulse
+        FCP_PhaseProcess(s_control_power.u32_frequency_operation);
         s_control_power.u32_times_change_fre = 0;
       }
       s_control_power.u32_times_change_fre++;
@@ -223,18 +275,41 @@ APP_CONTROL_TaskUpdate (void)
         *s_control_power.p_state             = WAIT_DISCHARGING;
       }
       break;
+
     case WAIT_DISCHARGING:
 
       // wait for 5 minutes
       if (u16_time_wait_discharging == 0)
       {
-        *s_control_power.p_state = DISCHARGING;
+        // Turn off PWM
+        BSP_PWM_DisableTimer(s_control_power.p_pwm_control_1);
+        *s_control_power.p_state = WAIT_UNPLUGGED;
       }
       break;
+
+    case WAIT_UNPLUGGED:
+
+      // Read voltage feedback
+      *s_control_power.p_output_voltage
+          = ADS1115_ReadVoltage(ADS1115_VOLTAGE_CHANNEL);
+      APP_CONTROL_ConvertVoltageOutput();
+
+      if (*s_control_power.p_output_voltage < VOLTAGE_START_THRESHOLD)
+      {
+        // Turn on PWM
+        BSP_PWM_EnableTimer(s_control_power.p_pwm_control_1);
+
+        s_control_power.u32_times_change_fre = 0;
+        *s_control_power.p_state             = DISCHARGING;
+      }
+      break;
+
     case DISCHARGING:
 
-      // Turn off PWM
-      BSP_PWM_DisableTimer(s_control_power.p_pwm_control_1);
+      // Read voltage feedback
+      *s_control_power.p_output_voltage
+          = ADS1115_ReadVoltage(ADS1115_VOLTAGE_CHANNEL);
+      APP_CONTROL_ConvertVoltageOutput();
 
       if (*s_control_power.p_output_voltage >= VOLTAGE_START_THRESHOLD)
       {
@@ -260,58 +335,6 @@ APP_CONTROL_TimeWaitDischarging (void)
   if (u16_time_wait_discharging > 0)
   {
     u16_time_wait_discharging--;
-  }
-}
-
-/**
- * The function `APP_CONTROL_CC_CVCharger` reads voltage feedback, switches
- * system mode based on voltage threshold, performs PI control based on current
- * or voltage feedback, converts frequency, and processes pulse based on the
- * system mode.
- */
-static void
-APP_CONTROL_CC_CVCharger (void)
-{
-  // Read voltage feedback
-  *s_control_power.p_output_voltage = ADS1115_Voltage(ADS1115_VOLTAGE_CHANNEL);
-  APP_CONTROL_ConvertVoltageOutput();
-
-  // If the voltage feedback <= VOLTAGE_REFERENCE, the system operates in CC
-  // mode. If the voltage feedback > VOLTAGE_REFERENCE, the system operates in
-  // CV mode.
-
-  if (*s_control_power.p_output_voltage <= VOLTAGE_END_THRESHOLD)
-  {
-    // Read voltage channel current
-    float value_temp = ADS1115_Voltage(ADS1115_CURRENT_CHANNEL);
-
-    // Convert from voltage channel current to current
-    *s_control_power.p_output_current
-        = ACS712_CurrentConverterVoltage(value_temp);
-
-    // PI control
-    PIControl_Process(*s_control_power.p_output_current,
-                      s_control_power.p_control_current);
-
-    // Current convert frequency
-    s_control_power.u32_frequency_operation
-        = CCF_Process(s_control_power.p_control_current->f_out);
-
-    // Frequency convert pulse
-    FCP_PhaseProcess(s_control_power.u32_frequency_operation);
-  }
-  else
-  {
-    // PI control
-    PIControl_Process(*s_control_power.p_output_voltage,
-                      s_control_power.p_control_voltage);
-
-    // Voltage convert frequency
-    s_control_power.u32_frequency_operation
-        = VCF_Process(s_control_power.p_control_voltage->f_out);
-
-    // Frequency convert pulse
-    FCP_PhaseProcess(s_control_power.u32_frequency_operation);
   }
 }
 

@@ -63,6 +63,9 @@
       .auto_reload_reg_timer /**< Ending threshold auto-reload register \
                                 value. */
 
+#define C_EQ 600 // pF
+#define L_m  532 // uH
+
 /**********************
  *   PRIVATE DATA
  **********************/
@@ -75,6 +78,7 @@ static pwm_cfg_t *pwm_control_1
  ******************************/
 
 static int32_t abs_32(int32_t num);
+static void    calculate_DeadTime(uint32_t frequency);
 
 /**********************
  *    PUBLIC FUNCTIONS
@@ -105,6 +109,9 @@ FCP_PhaseStart (uint8_t time)
       = table_data_start[time].auto_reload_reg_timer * DUTY_CYCLE / 100;
 
   // Apply the PWM parameters
+  while (!(pwm_control_1->p_tim->CNT == pwm_control_1->p_tim->ARR))
+    ;
+  calculate_DeadTime(table_data_start[time].frequency);
   BSP_PWM_SetParameterProcess(pwm_control_1);
 }
 
@@ -135,11 +142,11 @@ FCP_PhaseProcess (uint32_t frequency)
   else if (frequency < FRE_START_THRESHOLD)
   {
     // Set the prescaler value
-    pwm_control_1->u16_prescaler = PRE_START_THRESHOLD - 1;
+    pwm_control_1->u16_prescaler = 0;
     // Set the auto-reload register value
-    pwm_control_1->u16_reg_auto_reload = REG_START_THRESHOLD - 1;
+    pwm_control_1->u16_reg_auto_reload = 0;
     // Set the compare register value
-    pwm_control_1->u16_reg_compare = REG_START_THRESHOLD * DUTY_CYCLE / 100;
+    pwm_control_1->u16_reg_compare = 0;
   }
   else
   {
@@ -169,6 +176,10 @@ FCP_PhaseProcess (uint32_t frequency)
     }
   }
 
+  // Apply the PWM parameters
+  while (!(pwm_control_1->p_tim->CNT == pwm_control_1->p_tim->ARR))
+    ;
+  calculate_DeadTime(frequency);
   BSP_PWM_SetParameterProcess(pwm_control_1);
 }
 
@@ -197,4 +208,20 @@ abs_32 (int32_t num)
   {
     return -num;
   }
+}
+/**
+ * The function calculates and sets the dead time for a PWM control based on a
+ * given frequency.
+ *
+ * @param frequency It seems like you were about to provide some information
+ * about the `frequency` parameter in the `calculate_DeadTime` function. Could
+ * you please provide more details or let me know how I can assist you further
+ * with this code snippet?
+ */
+
+static void
+calculate_DeadTime (uint32_t frequency)
+{
+  double temp                = 3.0 * C_EQ * 200000 * L_m * 0.00000000006;
+  pwm_control_1->u8_deadTime = (uint8_t)temp + 1;
 }

@@ -7,8 +7,7 @@ Devices/ADS1115/ads1115.o: ../Devices/ADS1115/ads1115.c \
  ../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
- ../Devices/ADS1115/ads1115.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/I2C/i2c.h
+ ../Devices/ADS1115/ads1115.h ../BSP/I2C/i2c.h
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_utils.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h:
@@ -18,4 +17,4 @@ Devices/ADS1115/ads1115.o: ../Devices/ADS1115/ads1115.c \
 ../Drivers/CMSIS/Include/cmsis_gcc.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h:
 ../Devices/ADS1115/ads1115.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/I2C/i2c.h:
+../BSP/I2C/i2c.h:

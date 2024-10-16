@@ -30,9 +30,11 @@ extern "C"
   {
     WAIT_INPUT_VOLTAGE = 0,
     SOFT_START,
-    CHARGING,
-	WAIT_DISCHARGING,
-    DISCHARGING
+    CC_MODE_CHARGING,
+    CV_MODE_CHARGING,
+    WAIT_DISCHARGING,
+    WAIT_UNPLUGGED,
+    DISCHARGING,
   } CONTROL_STATE_t;
 
   typedef struct _CONTROL_LLC_DataTypedef
@@ -42,6 +44,7 @@ extern "C"
     pi_control_t    s_control_current;
     pwm_cfg_t       s_control_gate;
     uart_cfg_t      s_uart_cmd;
+    float           f_input_voltage;
     float           f_output_voltage;
     float           f_output_current;
   } CONTROL_LLC_DataTypedef;

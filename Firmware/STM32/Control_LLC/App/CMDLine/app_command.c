@@ -275,7 +275,8 @@ APP_COMMAND_MonitorPower (int argc, char *argv[])
     return CMDLINE_TOO_MANY_ARGS;
   }
 
-  if ((s_control_llc_data.s_state_data == CHARGING)
+  if ((s_control_llc_data.s_state_data == CC_MODE_CHARGING)
+      || (s_control_llc_data.s_state_data == CV_MODE_CHARGING)
       || (s_control_llc_data.s_state_data == WAIT_DISCHARGING))
   {
     char c_msg[30];
@@ -314,7 +315,7 @@ APP_COMMAND_MonitorParaPI (int argc, char *argv[])
   sprintf(c_msg,
           "KP: %.2f, KI: %.2f\n\r",
           s_control_llc_data.s_control_current.f_Kp,
-          s_control_llc_data.s_control_current.f_Ki); 
+          s_control_llc_data.s_control_current.f_Ki);
 
   BSP_UART_SendString(&uart_cfg_cml, c_msg);
 

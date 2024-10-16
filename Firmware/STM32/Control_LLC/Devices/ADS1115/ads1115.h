@@ -19,15 +19,15 @@ extern "C"
 {
 #endif
 
-/**********************
- *    PUBLIC DEFINE
- **********************/
+  /**********************
+   *    PUBLIC DEFINES
+   **********************/
 
-#define ADS1115_VREF       4096 // mV
+#define ADS1115_VREF 4.096f // V
 
-/**********************
- *    PUBLIC TYPEDEFS
- **********************/
+  /**********************
+   *    PUBLIC TYPEDEFS
+   **********************/
 
   typedef enum _ads1115_channel_t
   {
@@ -42,7 +42,8 @@ extern "C"
    **********************/
 
   uint16_t ADS1115_GetData(ads1115_channel_t channel);
-  float    ADS1115_Voltage(ads1115_channel_t channel);
+  float    ADS1115_ReadVoltage(ads1115_channel_t channel);
+  float    ADS1115_GetVoltage(uint16_t value_adc);
 
 #ifdef __cplusplus
 }

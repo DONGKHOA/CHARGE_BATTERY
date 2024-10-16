@@ -18,22 +18,13 @@ Core/Src/stm32f1xx_it.o: ../Core/Src/stm32f1xx_it.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h \
- ../Core/Inc/stm32f1xx_it.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/bsp_board.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/GPIO/gpio.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/I2C/i2c.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/PWM/pwm.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/SysTick/systick.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Ring_Buffer/ring_buffer.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Common/Include/basetypedef.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Data/app_data_struct.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/device.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ADS1115/ads1115.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ACS712/acs712.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/PI_Control/pi_control.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/app_control_power.h
+ ../Core/Inc/stm32f1xx_it.h ../BSP/bsp_board.h ../BSP/GPIO/gpio.h \
+ ../BSP/I2C/i2c.h ../BSP/TIMER/PWM/pwm.h ../BSP/SysTick/systick.h \
+ ../BSP/UART/uart.h ../Middleware/Ring_Buffer/ring_buffer.h \
+ ../Scheduler/scheduler.h ../App/Common/Include/basetypedef.h \
+ ../App/Data/app_data_struct.h ../Devices/device.h \
+ ../Devices/ADS1115/ads1115.h ../Devices/ACS712/acs712.h \
+ ../Middleware/PI_Control/pi_control.h ../App/Control/app_control_power.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_i2c.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
@@ -55,18 +46,18 @@ Core/Src/stm32f1xx_it.o: ../Core/Src/stm32f1xx_it.c ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h:
 ../Core/Inc/stm32f1xx_it.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/bsp_board.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/GPIO/gpio.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/I2C/i2c.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/PWM/pwm.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/SysTick/systick.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Ring_Buffer/ring_buffer.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Common/Include/basetypedef.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Data/app_data_struct.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/device.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ADS1115/ads1115.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ACS712/acs712.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/PI_Control/pi_control.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/app_control_power.h:
+../BSP/bsp_board.h:
+../BSP/GPIO/gpio.h:
+../BSP/I2C/i2c.h:
+../BSP/TIMER/PWM/pwm.h:
+../BSP/SysTick/systick.h:
+../BSP/UART/uart.h:
+../Middleware/Ring_Buffer/ring_buffer.h:
+../Scheduler/scheduler.h:
+../App/Common/Include/basetypedef.h:
+../App/Data/app_data_struct.h:
+../Devices/device.h:
+../Devices/ADS1115/ads1115.h:
+../Devices/ACS712/acs712.h:
+../Middleware/PI_Control/pi_control.h:
+../App/Control/app_control_power.h:

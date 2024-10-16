@@ -1,6 +1,5 @@
 App/CMDLine/app_command.o: ../App/CMDLine/app_command.c \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/bsp_board.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/GPIO/gpio.h \
+ ../BSP/bsp_board.h ../BSP/GPIO/gpio.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
@@ -9,24 +8,18 @@ App/CMDLine/app_command.o: ../App/CMDLine/app_command.c \
  ../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/I2C/i2c.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/PWM/pwm.h \
+ ../BSP/I2C/i2c.h ../BSP/TIMER/PWM/pwm.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/SysTick/systick.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Ring_Buffer/ring_buffer.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CMDLine/Include/app_command.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CMDLine/Include/app_cmdline.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Data/app_data_struct.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/device.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ADS1115/ads1115.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ACS712/acs712.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/PI_Control/pi_control.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/app_control_power.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.h \
- D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Common/Include/basetypedef.h
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/bsp_board.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/GPIO/gpio.h:
+ ../BSP/SysTick/systick.h ../BSP/UART/uart.h \
+ ../Middleware/Ring_Buffer/ring_buffer.h \
+ ../App/CMDLine/Include/app_command.h \
+ ../App/CMDLine/Include/app_cmdline.h ../App/Data/app_data_struct.h \
+ ../Devices/device.h ../Devices/ADS1115/ads1115.h \
+ ../Devices/ACS712/acs712.h ../Middleware/PI_Control/pi_control.h \
+ ../App/Control/app_control_power.h ../Scheduler/scheduler.h \
+ ../App/Common/Include/basetypedef.h
+../BSP/bsp_board.h:
+../BSP/GPIO/gpio.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h:
@@ -35,19 +28,19 @@ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/GPIO/gpio.h:
 ../Drivers/CMSIS/Include/cmsis_compiler.h:
 ../Drivers/CMSIS/Include/cmsis_gcc.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/I2C/i2c.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/PWM/pwm.h:
+../BSP/I2C/i2c.h:
+../BSP/TIMER/PWM/pwm.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/SysTick/systick.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Ring_Buffer/ring_buffer.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CMDLine/Include/app_command.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CMDLine/Include/app_cmdline.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Data/app_data_struct.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/device.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ADS1115/ads1115.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ACS712/acs712.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/PI_Control/pi_control.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/app_control_power.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.h:
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Common/Include/basetypedef.h:
+../BSP/SysTick/systick.h:
+../BSP/UART/uart.h:
+../Middleware/Ring_Buffer/ring_buffer.h:
+../App/CMDLine/Include/app_command.h:
+../App/CMDLine/Include/app_cmdline.h:
+../App/Data/app_data_struct.h:
+../Devices/device.h:
+../Devices/ADS1115/ads1115.h:
+../Devices/ACS712/acs712.h:
+../Middleware/PI_Control/pi_control.h:
+../App/Control/app_control_power.h:
+../Scheduler/scheduler.h:
+../App/Common/Include/basetypedef.h:

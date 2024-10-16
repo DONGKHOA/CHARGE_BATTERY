@@ -20,7 +20,7 @@
 #define ADS1115_ADDRESS     0x48
 #define ADS1115_MAX_CHANNEL 4
 
-#define ADS1115_RESOLUTION 16   // bit
+#define ADS1115_RESOLUTION 16 // bit
 #define ADS1115_STEP       (1 << ADS1115_RESOLUTION)
 
 /*********************
@@ -124,8 +124,21 @@ ADS1115_GetData (ads1115_channel_t channel)
   return data[channel].data_reading;
 }
 
+/**
+ * The function ADS1115_ReadVoltage reads raw data from a specified channel,
+ * calibrates the ADC, converts the voltage, and returns the voltage value.
+ *
+ * @param channel The `channel` parameter in the `ADS1115_ReadVoltage` function
+ * represents the specific channel of the ADS1115 analog-to-digital converter
+ * from which you want to read the voltage. It is of type `ads1115_channel_t`,
+ * which is likely an enumeration or a defined type that specifies
+ *
+ * @return The function `ADS1115_ReadVoltage` is returning the voltage value
+ * read from the specified channel after converting the raw data reading to
+ * voltage using the ADC reference voltage and step size.
+ */
 float
-ADS1115_Voltage (ads1115_channel_t channel)
+ADS1115_ReadVoltage (ads1115_channel_t channel)
 {
   /**< Read raw Data */
   ADS1115_GetData(channel);
@@ -136,4 +149,23 @@ ADS1115_Voltage (ads1115_channel_t channel)
   data[0].voltage = (float)(data[0].data_reading * ADS1115_VREF) / ADS1115_STEP;
 
   return data[channel].voltage;
+}
+
+/**
+ * The function ADS1115_GetVoltage converts a raw ADC value to voltage using a
+ * specific formula.
+ *
+ * @param value_adc The `value_adc` parameter represents the raw ADC
+ * (Analog-to-Digital Converter) value read from the ADS1115 ADC module.
+ *
+ * @return The function `ADS1115_GetVoltage` returns the voltage value
+ * calculated based on the input `value_adc` using the formula `(value_adc *
+ * ADS1115_VREF) / ADS1115_STEP`.
+ */
+float
+ADS1115_GetVoltage (uint16_t value_adc)
+{
+  /**< Convert voltage */
+  float voltage = (float)(value_adc * ADS1115_VREF) / ADS1115_STEP;
+  return voltage;
 }

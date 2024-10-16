@@ -24,6 +24,7 @@ extern "C"
    **********************/
 
   void APP_STATUS_LED_Init(void);
+  void APP_STATUS_LED_CreateTimer(void);
   void APP_STATUS_LED_CreateTask(void);
 
 #ifdef __cplusplus
