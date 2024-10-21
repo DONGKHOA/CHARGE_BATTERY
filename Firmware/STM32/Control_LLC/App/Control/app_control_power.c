@@ -12,6 +12,7 @@
 #include "main.h"
 
 #include "app_control_power.h"
+#include "app_check_input_voltage.h"
 #include "app_data_struct.h"
 
 #include "scheduler.h"
@@ -90,7 +91,6 @@ static Control_TaskContextTypedef s_ControlTaskContext
     = { SCH_INVALID_TASK_HANDLE, // Will be updated by Scheduler
         {
             SCH_TASK_SYNC,         // taskType;
-            SCH_TASK_PRIO_0,       // taskPriority;
             1,                     // taskPeriodInMS;
             APP_CONTROL_TaskUpdate // taskFunction;
         } };
@@ -187,8 +187,18 @@ APP_CONTROL_TaskUpdate (void)
   {
     case WAIT_INPUT_VOLTAGE:
 
-      APP_CONTROL_RelayOn();
-      *s_control_power.p_state = DISCHARGING;
+      if ((s_control_llc_data.f_input_voltage >= AC_INPUT_VOLTAGE_MIN)
+          && (s_control_llc_data.f_output_voltage <= AC_INPUT_VOLTAGE_MAX))
+      {
+        APP_CONTROL_RelayOn();
+        *s_control_power.p_state = DISCHARGING;
+      }
+      else
+      {
+        // Turn off PWM
+        BSP_PWM_DisableTimer(s_control_power.p_pwm_control_1);
+        APP_CONTROL_RelayOff();
+      }
       break;
     case SOFT_START:
 
@@ -235,7 +245,7 @@ APP_CONTROL_TaskUpdate (void)
 
       if (*s_control_power.p_output_voltage > VOLTAGE_END_THRESHOLD)
       {
-        if(*s_control_power.p_output_current >= CURRENT_END_THRESHOLD)
+        if (*s_control_power.p_output_current >= CURRENT_END_THRESHOLD)
         {
           *s_control_power.p_state             = CV_MODE_CHARGING;
           s_control_power.u32_times_change_fre = 0;

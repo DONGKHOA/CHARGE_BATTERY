@@ -87,6 +87,50 @@ CMakeFiles/Control_LLC.elf.dir/App/CMDLine/app_command.c.obj: D:/OneDrive/Disk_2
   D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Ring_Buffer/ring_buffer.h \
   D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.h
 
+CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CheckInputVoltage/app_check_input_voltage.c \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/_newlib_version.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/machine/_default_types.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/sys/_intsup.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/sys/_stdint.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/sys/features.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdint.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Common/Include/basetypedef.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Data/app_data_struct.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/bsp_board.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/GPIO/gpio.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/I2C/i2c.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/SysTick/systick.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/TIMER/PWM/pwm.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Core/Inc/main.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/device.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ACS712/acs712.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ADS1115/ads1115.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Include/cmsis_compiler.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Include/cmsis_gcc.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Include/cmsis_version.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Include/core_cm3.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_bus.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_cortex.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_exti.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_i2c.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_pwr.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rcc.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_system.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_utils.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/PI_Control/pi_control.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Ring_Buffer/ring_buffer.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.h
+
 CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/app_control_power.c \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/_newlib_version.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/machine/_default_types.h \
@@ -296,6 +340,7 @@ CMakeFiles/Control_LLC.elf.dir/Core/Src/main.c.obj: D:/OneDrive/Disk_2/CHARGE_BA
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdbool.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdint.h \
   D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CMDLine/Include/app_command.h \
+  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CheckInputVoltage/app_check_input_voltage.h \
   D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Common/Include/basetypedef.h \
   D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/app_control_power.h \
   D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/LED/app_status_led.h \
@@ -739,38 +784,6 @@ CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.obj: D:/OneDri
   D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Include/core_cm3.h \
   D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/PI_Control/pi_control.h
 
-CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Read_220VAC/read_220vac.c \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/_newlib_version.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/machine/_default_types.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/stdint.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/sys/_intsup.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/sys/_stdint.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/sys/features.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdbool.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/lib/gcc/arm-none-eabi/13.3.1/include/stdint.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Data/app_data_struct.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/bsp_board.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/GPIO/gpio.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/I2C/i2c.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/SysTick/systick.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/TIMER/PWM/pwm.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/device.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ACS712/acs712.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ADS1115/ads1115.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Include/cmsis_compiler.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Include/cmsis_gcc.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Include/cmsis_version.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/CMSIS/Include/core_cm3.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/PI_Control/pi_control.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Read_220VAC/read_220vac.h \
-  D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Ring_Buffer/ring_buffer.h
-
 CMakeFiles/Control_LLC.elf.dir/Middleware/Ring_Buffer/ring_buffer.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Ring_Buffer/ring_buffer.c \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/_ansi.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/_newlib_version.h \
@@ -995,11 +1008,13 @@ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_H
 
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.h:
 
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_cortex.h:
+C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/sys/_timeval.h:
 
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/app_control_power.c:
+D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CheckInputVoltage/app_check_input_voltage.c:
 
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_bus.h:
+
+D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_cortex.h:
 
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rcc.h:
 
@@ -1010,6 +1025,8 @@ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_H
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:
 
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_utils.h:
+
+D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/app_control_power.c:
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/sys/_timespec.h:
 
@@ -1035,6 +1052,8 @@ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.c:
 
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Core/Src/main.c:
 
+D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CheckInputVoltage/app_check_input_voltage.h:
+
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Core/Src/stm32f1xx_it.c:
 
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.c:
@@ -1056,8 +1075,6 @@ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/machine/types.h:
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/signal.h:
-
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/sys/_timeval.h:
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/13.3\ rel1/arm-none-eabi/include/sys/errno.h:
 
@@ -1094,10 +1111,6 @@ D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Current_
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Frequency_convert_pulse/Private/data_private.h:
 
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/PI_Control/pi_control.c:
-
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Read_220VAC/read_220vac.c:
-
-D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Read_220VAC/read_220vac.h:
 
 D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Ring_Buffer/ring_buffer.c:
 

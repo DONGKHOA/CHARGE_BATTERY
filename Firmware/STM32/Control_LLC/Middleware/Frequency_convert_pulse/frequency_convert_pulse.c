@@ -142,11 +142,11 @@ FCP_PhaseProcess (uint32_t frequency)
   else if (frequency < FRE_START_THRESHOLD)
   {
     // Set the prescaler value
-    pwm_control_1->u16_prescaler = 0;
+    pwm_control_1->u16_prescaler = PRE_START_THRESHOLD - 1;
     // Set the auto-reload register value
-    pwm_control_1->u16_reg_auto_reload = 0;
+    pwm_control_1->u16_reg_auto_reload = REG_START_THRESHOLD - 1;
     // Set the compare register value
-    pwm_control_1->u16_reg_compare = 0;
+    pwm_control_1->u16_reg_compare = REG_START_THRESHOLD * DUTY_CYCLE / 100;
   }
   else
   {

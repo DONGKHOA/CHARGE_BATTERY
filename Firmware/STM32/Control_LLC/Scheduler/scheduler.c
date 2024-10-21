@@ -53,7 +53,7 @@ typedef struct SCH_TimerContextTypedef
  *    PRIVATE DEFINE
  *********************/
 
-#define MAX_TASK   3
+#define MAX_TASK   4
 #define MAX_TIMERS 2
 
 /*********************
@@ -199,6 +199,36 @@ SCH_TASK_StopTask (SCH_TASK_HANDLE taskIndex)
 
     /**< @brief Update status to indicate success. */
     status = STS_DONE;
+  }
+
+  /**< @brief Return the status of the operation. */
+  return status;
+}
+
+/**
+ * The function `SCH_TASK_EnableTask` enables a task identified by `taskIndex`
+ * if it is within the range of scheduled tasks.
+ *
+ * @param taskIndex The `taskIndex` parameter is the index of the task that you
+ * want to enable in the task scheduler. It is used to identify the specific
+ * task within the scheduler's task list.
+ *
+ * @return The function `SCH_TASK_EnableTask` returns the status of the
+ * operation, which can be either `STS_ERROR` if the task index is out of range
+ * or `STS_DONE` if the task is successfully enabled.
+ */
+status_t
+SCH_TASK_EnableTask (SCH_TASK_HANDLE taskIndex)
+{
+  status_t status
+      = STS_ERROR; /**< @brief Initialize status to indicate error. */
+
+  if (taskIndex < s_NumOfTaskScheduled)
+  {
+    /**< @brief Get Task Context */
+    SCH_TaskContextTypedef *pTaskContext = &s_TaskContext[taskIndex];
+    pTaskContext->taskFlag               = TRUE;
+    status                               = STS_DONE;
   }
 
   /**< @brief Return the status of the operation. */

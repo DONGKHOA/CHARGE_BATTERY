@@ -49,7 +49,7 @@ else ()
     add_compile_options(-Og -g)
 endif ()
 
-include_directories(Core/Inc Drivers/STM32F1xx_HAL_Driver/Inc Drivers/CMSIS/Device/ST/STM32F1xx/Include Drivers/CMSIS/Include BSP/UART Scheduler BSP/I2C BSP/SysTick App/Control App/LED App/CMDLine/Include App/Common/Include App/Data Middleware/PI_Control Middleware/Frequency_convert_pulse Middleware/Ring_Buffer Middleware/Voltage_convert_frequency Middleware/Current_convert_frequency Devices Devices/ACS712 Devices/ADS1115 BSP BSP/GPIO Middleware/Read_220VAC BSP/TIMER/PWM BSP/TIMER/IRQ)
+include_directories(Core/Inc Drivers/STM32F1xx_HAL_Driver/Inc Drivers/CMSIS/Device/ST/STM32F1xx/Include Drivers/CMSIS/Include BSP/UART Scheduler BSP/I2C BSP/SysTick App/Control App/LED App/CMDLine/Include App/Common/Include App/Data Middleware/PI_Control Middleware/Frequency_convert_pulse Middleware/Ring_Buffer Middleware/Voltage_convert_frequency Middleware/Current_convert_frequency Devices Devices/ACS712 Devices/ADS1115 BSP BSP/GPIO BSP/TIMER/PWM BSP/TIMER/IRQ App/CheckInputVoltage)
 
 add_definitions(-DDEBUG -DSTM32F103xB -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1)
 

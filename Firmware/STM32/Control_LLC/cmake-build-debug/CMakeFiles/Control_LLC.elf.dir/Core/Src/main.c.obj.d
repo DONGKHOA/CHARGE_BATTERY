@@ -39,4 +39,5 @@ CMakeFiles/Control_LLC.elf.dir/Core/Src/main.c.obj: \
  C:/PROGRA~2/ARMGNU~1/133167~1.3RE/lib/gcc/arm-none-eabi/13.3.1/include/stdbool.h \
  D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\Control/app_control_power.h \
  D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\CMDLine\Include/app_command.h \
+ D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\CheckInputVoltage/app_check_input_voltage.h \
  D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\LED/app_status_led.h

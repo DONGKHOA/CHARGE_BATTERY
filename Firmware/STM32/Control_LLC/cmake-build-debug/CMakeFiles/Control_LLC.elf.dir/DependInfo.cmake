@@ -52,15 +52,16 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ADS1115"
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP"
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/GPIO"
-  "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Read_220VAC"
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/TIMER/PWM"
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/TIMER/IRQ"
+  "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CheckInputVoltage"
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CMDLine/app_cmdline.c" "CMakeFiles/Control_LLC.elf.dir/App/CMDLine/app_cmdline.c.obj" "gcc" "CMakeFiles/Control_LLC.elf.dir/App/CMDLine/app_cmdline.c.obj.d"
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CMDLine/app_command.c" "CMakeFiles/Control_LLC.elf.dir/App/CMDLine/app_command.c.obj" "gcc" "CMakeFiles/Control_LLC.elf.dir/App/CMDLine/app_command.c.obj.d"
+  "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CheckInputVoltage/app_check_input_voltage.c" "CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.obj" "gcc" "CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.obj.d"
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/app_control_power.c" "CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.obj" "gcc" "CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.obj.d"
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Data/app_data_struct.c" "CMakeFiles/Control_LLC.elf.dir/App/Data/app_data_struct.c.obj" "gcc" "CMakeFiles/Control_LLC.elf.dir/App/Data/app_data_struct.c.obj.d"
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/LED/app_status_led.c" "CMakeFiles/Control_LLC.elf.dir/App/LED/app_status_led.c.obj" "gcc" "CMakeFiles/Control_LLC.elf.dir/App/LED/app_status_led.c.obj.d"
@@ -88,7 +89,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Frequency_convert_pulse/Private/data_private.c" "CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/Private/data_private.c.obj" "gcc" "CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/Private/data_private.c.obj.d"
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Frequency_convert_pulse/frequency_convert_pulse.c" "CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/frequency_convert_pulse.c.obj" "gcc" "CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/frequency_convert_pulse.c.obj.d"
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/PI_Control/pi_control.c" "CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.obj" "gcc" "CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.obj.d"
-  "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Read_220VAC/read_220vac.c" "CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.obj" "gcc" "CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.obj.d"
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Ring_Buffer/ring_buffer.c" "CMakeFiles/Control_LLC.elf.dir/Middleware/Ring_Buffer/ring_buffer.c.obj" "gcc" "CMakeFiles/Control_LLC.elf.dir/Middleware/Ring_Buffer/ring_buffer.c.obj.d"
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Voltage_convert_frequency/voltage_convert_frequency.c" "CMakeFiles/Control_LLC.elf.dir/Middleware/Voltage_convert_frequency/voltage_convert_frequency.c.obj" "gcc" "CMakeFiles/Control_LLC.elf.dir/Middleware/Voltage_convert_frequency/voltage_convert_frequency.c.obj.d"
   "D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Scheduler/scheduler.c" "CMakeFiles/Control_LLC.elf.dir/Scheduler/scheduler.c.obj" "gcc" "CMakeFiles/Control_LLC.elf.dir/Scheduler/scheduler.c.obj.d"

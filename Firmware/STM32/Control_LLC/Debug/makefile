@@ -12,7 +12,6 @@ RM := rm -rf
 -include Scheduler/subdir.mk
 -include Middleware/Voltage_convert_frequency/subdir.mk
 -include Middleware/Ring_Buffer/subdir.mk
--include Middleware/Read_220VAC/subdir.mk
 -include Middleware/PI_Control/subdir.mk
 -include Middleware/Frequency_convert_pulse/Private/subdir.mk
 -include Middleware/Frequency_convert_pulse/subdir.mk
@@ -29,6 +28,7 @@ RM := rm -rf
 -include App/LED/subdir.mk
 -include App/Data/subdir.mk
 -include App/Control/subdir.mk
+-include App/CheckInputVoltage/subdir.mk
 -include App/CMDLine/subdir.mk
 -include objects.mk
 

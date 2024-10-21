@@ -23,6 +23,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../BSP/TIMER/PWM/pwm.h ../BSP/SysTick/systick.h ../BSP/UART/uart.h \
  ../Middleware/Ring_Buffer/ring_buffer.h \
  ../App/Control/app_control_power.h ../App/CMDLine/Include/app_command.h \
+ ../App/CheckInputVoltage/app_check_input_voltage.h \
  ../App/LED/app_status_led.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_i2c.h:
@@ -55,4 +56,5 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Middleware/Ring_Buffer/ring_buffer.h:
 ../App/Control/app_control_power.h:
 ../App/CMDLine/Include/app_command.h:
+../App/CheckInputVoltage/app_check_input_voltage.h:
 ../App/LED/app_status_led.h:

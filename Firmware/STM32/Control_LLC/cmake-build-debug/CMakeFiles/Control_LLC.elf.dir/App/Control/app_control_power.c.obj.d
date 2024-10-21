@@ -28,6 +28,7 @@ CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.obj: \
  D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Drivers\STM32F1xx_HAL_Driver\Inc/stm32f1xx_ll_usart.h \
  D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Drivers\STM32F1xx_HAL_Driver\Inc/stm32f1xx_ll_gpio.h \
  D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\Control\app_control_power.h \
+ D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\CheckInputVoltage/app_check_input_voltage.h \
  D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\Data/app_data_struct.h \
  D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\BSP/bsp_board.h \
  D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\BSP\GPIO/gpio.h \

@@ -25,6 +25,7 @@
 #include "bsp_board.h"
 #include "app_control_power.h"
 #include "app_command.h"
+#include "app_check_input_voltage.h"
 #include "app_status_led.h"
 /* USER CODE END Includes */
 
@@ -127,6 +128,7 @@ int main(void)
   // Create Task
   APP_COMMAND_CreateTask();
   APP_CONTROL_CreateTask();
+  APP_CHECK_INPUT_VOLTAGE_CreateTask();
   APP_STATUS_LED_CreateTask();
 
   SCH_StartScheduler();
@@ -333,10 +335,10 @@ static void MX_TIM3_Init(void)
   /* USER CODE END TIM3_Init 1 */
   TIM_InitStruct.Prescaler = 59;
   TIM_InitStruct.CounterMode = LL_TIM_COUNTERMODE_UP;
-  TIM_InitStruct.Autoreload = 29;
+  TIM_InitStruct.Autoreload = 499;
   TIM_InitStruct.ClockDivision = LL_TIM_CLOCKDIVISION_DIV1;
   LL_TIM_Init(TIM3, &TIM_InitStruct);
-  LL_TIM_DisableARRPreload(TIM3);
+  LL_TIM_EnableARRPreload(TIM3);
   LL_TIM_SetClockSource(TIM3, LL_TIM_CLOCKSOURCE_INTERNAL);
   LL_TIM_SetTriggerOutput(TIM3, LL_TIM_TRGO_RESET);
   LL_TIM_DisableMasterSlaveMode(TIM3);

@@ -24,6 +24,7 @@ C_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 App/CMDLine \
+App/CheckInputVoltage \
 App/Control \
 App/Data \
 App/LED \
@@ -40,7 +41,6 @@ Middleware/Current_convert_frequency \
 Middleware/Frequency_convert_pulse/Private \
 Middleware/Frequency_convert_pulse \
 Middleware/PI_Control \
-Middleware/Read_220VAC \
 Middleware/Ring_Buffer \
 Middleware/Voltage_convert_frequency \
 Scheduler \

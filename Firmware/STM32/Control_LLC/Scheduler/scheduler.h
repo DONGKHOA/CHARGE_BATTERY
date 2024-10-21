@@ -71,27 +71,11 @@ extern "C"
   } SCH_TIMER_TYPE;
 
   /**
-   * @brief Enumeration for task priorities in the scheduler.
-   */
-  typedef enum _SCH_TASK_PRIORITY
-  {
-    SCH_TASK_PRIO_0 = 0, /**< @brief Priority level 0. */
-    SCH_TASK_PRIO_1,     /**< @brief Priority level 1. */
-    SCH_TASK_PRIO_2,     /**< @brief Priority level 2. */
-    SCH_TASK_PRIO_3,     /**< @brief Priority level 3. */
-    SCH_TASK_PRIO_4,     /**< @brief Priority level 4. */
-    SCH_TASK_PRIO_5,     /**< @brief Priority level 5. */
-    SCH_TASK_PRIO_6,     /**< @brief Priority level 6. */
-    SCH_TASK_PRIO_7      /**< @brief Priority level 7. */
-  } SCH_TASK_PRIORITY;
-
-  /**
    * @brief Structure for defining properties of a task.
    */
   typedef struct _SCH_TaskPropertyTypedef
   {
     SCH_TASK_TYPE     taskType;       /**< @brief Type of the task. */
-    SCH_TASK_PRIORITY taskPriority;   /**< @brief Priority of the task. */
     uint16_t          taskPeriodInMS; /**< @brief Period of the task in
                                              milliseconds. */
     SCH_TASK taskFunction;            /**< @brief Function pointer to the
@@ -146,12 +130,11 @@ extern "C"
    **********************/
 
   void SCH_Initialize(void);
-  void SCH_TIM_Start(const SCH_SoftTimerTypedef timer, const uint32_t timeInMs);
-  uint16_t SCH_TIM_HasCompleted(const SCH_SoftTimerTypedef timer);
-  status_t SCH_TASK_ResumeTask(SCH_TASK_HANDLE taskIndex);
-  status_t SCH_TASK_StopTask(SCH_TASK_HANDLE taskIndex);
   status_t SCH_TASK_CreateTask(SCH_TASK_HANDLE         *pHandle,
                                SCH_TaskPropertyTypedef *pTaskProperty);
+  status_t SCH_TASK_ResumeTask(SCH_TASK_HANDLE taskIndex);
+  status_t SCH_TASK_StopTask(SCH_TASK_HANDLE taskIndex);
+  status_t SCH_TASK_EnableTask(SCH_TASK_HANDLE taskIndex);
   void     SCH_RunSystemTickTimer(void);
   void     SCH_StartScheduler(void);
   void     SCH_StopScheduler(void);
@@ -161,6 +144,8 @@ extern "C"
                                SCH_TimerPropertyTypedef *pTimerProperty);
   status_t SCH_TIM_StopTimer(SCH_TIMER_HANDLE timerIndex);
   status_t SCH_TIM_RestartTimer(SCH_TIMER_HANDLE timerIndex);
+  void SCH_TIM_Start(const SCH_SoftTimerTypedef timer, const uint32_t timeInMs);
+  uint16_t SCH_TIM_HasCompleted(const SCH_SoftTimerTypedef timer);
 
 #ifdef __cplusplus
 }

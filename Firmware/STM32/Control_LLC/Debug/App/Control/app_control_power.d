@@ -19,13 +19,14 @@ App/Control/app_control_power.o: ../App/Control/app_control_power.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h \
- ../App/Control/app_control_power.h ../App/Data/app_data_struct.h \
- ../BSP/bsp_board.h ../BSP/GPIO/gpio.h ../BSP/I2C/i2c.h \
- ../BSP/TIMER/PWM/pwm.h ../BSP/SysTick/systick.h ../BSP/UART/uart.h \
- ../Middleware/Ring_Buffer/ring_buffer.h ../Devices/device.h \
- ../Devices/ADS1115/ads1115.h ../Devices/ACS712/acs712.h \
- ../Middleware/PI_Control/pi_control.h ../Scheduler/scheduler.h \
- ../App/Common/Include/basetypedef.h \
+ ../App/Control/app_control_power.h \
+ ../App/CheckInputVoltage/app_check_input_voltage.h \
+ ../App/Data/app_data_struct.h ../BSP/bsp_board.h ../BSP/GPIO/gpio.h \
+ ../BSP/I2C/i2c.h ../BSP/TIMER/PWM/pwm.h ../BSP/SysTick/systick.h \
+ ../BSP/UART/uart.h ../Middleware/Ring_Buffer/ring_buffer.h \
+ ../Devices/device.h ../Devices/ADS1115/ads1115.h \
+ ../Devices/ACS712/acs712.h ../Middleware/PI_Control/pi_control.h \
+ ../Scheduler/scheduler.h ../App/Common/Include/basetypedef.h \
  ../Middleware/Frequency_convert_pulse/frequency_convert_pulse.h \
  ../Middleware/Voltage_convert_frequency/voltage_convert_frequency.h \
  ../Middleware/Current_convert_frequency/current_convert_frequency.h
@@ -50,6 +51,7 @@ App/Control/app_control_power.o: ../App/Control/app_control_power.c \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h:
 ../App/Control/app_control_power.h:
+../App/CheckInputVoltage/app_check_input_voltage.h:
 ../App/Data/app_data_struct.h:
 ../BSP/bsp_board.h:
 ../BSP/GPIO/gpio.h:

@@ -58,7 +58,6 @@ static StatusLed_TaskContextTypedef s_StatusLedTaskContext
     = { SCH_INVALID_TASK_HANDLE, // Will be updated by Scheduler
         {
             SCH_TASK_SYNC,            // taskType;
-            SCH_TASK_PRIO_2,          // taskPriority;
             500,                      // taskPeriodInMS;
             APP_STATUS_LED_TaskUpdate // taskFunction;
         } };

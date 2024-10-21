@@ -96,10 +96,24 @@ CMakeFiles/Control_LLC.elf.dir/App/CMDLine/app_command.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Control_LLC.elf.dir/App/CMDLine/app_command.c.s"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\CMDLine\app_command.c -o CMakeFiles\Control_LLC.elf.dir\App\CMDLine\app_command.c.s
 
+CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
+CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/CheckInputVoltage/app_check_input_voltage.c
+CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.obj"
+	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.obj -MF CMakeFiles\Control_LLC.elf.dir\App\CheckInputVoltage\app_check_input_voltage.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\App\CheckInputVoltage\app_check_input_voltage.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\CheckInputVoltage\app_check_input_voltage.c
+
+CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.i"
+	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\CheckInputVoltage\app_check_input_voltage.c > CMakeFiles\Control_LLC.elf.dir\App\CheckInputVoltage\app_check_input_voltage.c.i
+
+CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.s"
+	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\CheckInputVoltage\app_check_input_voltage.c -o CMakeFiles\Control_LLC.elf.dir\App\CheckInputVoltage\app_check_input_voltage.c.s
+
 CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Control/app_control_power.c
 CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.obj -MF CMakeFiles\Control_LLC.elf.dir\App\Control\app_control_power.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\App\Control\app_control_power.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\Control\app_control_power.c
 
 CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.i: cmake_force
@@ -113,7 +127,7 @@ CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.s: cmake_force
 CMakeFiles/Control_LLC.elf.dir/App/Data/app_data_struct.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/App/Data/app_data_struct.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/Data/app_data_struct.c
 CMakeFiles/Control_LLC.elf.dir/App/Data/app_data_struct.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Control_LLC.elf.dir/App/Data/app_data_struct.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Control_LLC.elf.dir/App/Data/app_data_struct.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/App/Data/app_data_struct.c.obj -MF CMakeFiles\Control_LLC.elf.dir\App\Data\app_data_struct.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\App\Data\app_data_struct.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\Data\app_data_struct.c
 
 CMakeFiles/Control_LLC.elf.dir/App/Data/app_data_struct.c.i: cmake_force
@@ -127,7 +141,7 @@ CMakeFiles/Control_LLC.elf.dir/App/Data/app_data_struct.c.s: cmake_force
 CMakeFiles/Control_LLC.elf.dir/App/LED/app_status_led.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/App/LED/app_status_led.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/App/LED/app_status_led.c
 CMakeFiles/Control_LLC.elf.dir/App/LED/app_status_led.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Control_LLC.elf.dir/App/LED/app_status_led.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Control_LLC.elf.dir/App/LED/app_status_led.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/App/LED/app_status_led.c.obj -MF CMakeFiles\Control_LLC.elf.dir\App\LED\app_status_led.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\App\LED\app_status_led.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\App\LED\app_status_led.c
 
 CMakeFiles/Control_LLC.elf.dir/App/LED/app_status_led.c.i: cmake_force
@@ -141,7 +155,7 @@ CMakeFiles/Control_LLC.elf.dir/App/LED/app_status_led.c.s: cmake_force
 CMakeFiles/Control_LLC.elf.dir/BSP/I2C/i2c.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/BSP/I2C/i2c.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/I2C/i2c.c
 CMakeFiles/Control_LLC.elf.dir/BSP/I2C/i2c.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Control_LLC.elf.dir/BSP/I2C/i2c.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Control_LLC.elf.dir/BSP/I2C/i2c.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/BSP/I2C/i2c.c.obj -MF CMakeFiles\Control_LLC.elf.dir\BSP\I2C\i2c.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\BSP\I2C\i2c.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\BSP\I2C\i2c.c
 
 CMakeFiles/Control_LLC.elf.dir/BSP/I2C/i2c.c.i: cmake_force
@@ -155,7 +169,7 @@ CMakeFiles/Control_LLC.elf.dir/BSP/I2C/i2c.c.s: cmake_force
 CMakeFiles/Control_LLC.elf.dir/BSP/SysTick/systick.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/BSP/SysTick/systick.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/SysTick/systick.c
 CMakeFiles/Control_LLC.elf.dir/BSP/SysTick/systick.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Control_LLC.elf.dir/BSP/SysTick/systick.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Control_LLC.elf.dir/BSP/SysTick/systick.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/BSP/SysTick/systick.c.obj -MF CMakeFiles\Control_LLC.elf.dir\BSP\SysTick\systick.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\BSP\SysTick\systick.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\BSP\SysTick\systick.c
 
 CMakeFiles/Control_LLC.elf.dir/BSP/SysTick/systick.c.i: cmake_force
@@ -169,7 +183,7 @@ CMakeFiles/Control_LLC.elf.dir/BSP/SysTick/systick.c.s: cmake_force
 CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/IRQ/timer_irq.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/IRQ/timer_irq.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/TIMER/IRQ/timer_irq.c
 CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/IRQ/timer_irq.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/IRQ/timer_irq.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/IRQ/timer_irq.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/IRQ/timer_irq.c.obj -MF CMakeFiles\Control_LLC.elf.dir\BSP\TIMER\IRQ\timer_irq.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\BSP\TIMER\IRQ\timer_irq.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\BSP\TIMER\IRQ\timer_irq.c
 
 CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/IRQ/timer_irq.c.i: cmake_force
@@ -183,7 +197,7 @@ CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/IRQ/timer_irq.c.s: cmake_force
 CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/PWM/pwm.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/PWM/pwm.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/TIMER/PWM/pwm.c
 CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/PWM/pwm.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/PWM/pwm.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/PWM/pwm.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/PWM/pwm.c.obj -MF CMakeFiles\Control_LLC.elf.dir\BSP\TIMER\PWM\pwm.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\BSP\TIMER\PWM\pwm.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\BSP\TIMER\PWM\pwm.c
 
 CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/PWM/pwm.c.i: cmake_force
@@ -197,7 +211,7 @@ CMakeFiles/Control_LLC.elf.dir/BSP/TIMER/PWM/pwm.c.s: cmake_force
 CMakeFiles/Control_LLC.elf.dir/BSP/UART/uart.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/BSP/UART/uart.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/BSP/UART/uart.c
 CMakeFiles/Control_LLC.elf.dir/BSP/UART/uart.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/Control_LLC.elf.dir/BSP/UART/uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/Control_LLC.elf.dir/BSP/UART/uart.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/BSP/UART/uart.c.obj -MF CMakeFiles\Control_LLC.elf.dir\BSP\UART\uart.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\BSP\UART\uart.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\BSP\UART\uart.c
 
 CMakeFiles/Control_LLC.elf.dir/BSP/UART/uart.c.i: cmake_force
@@ -211,7 +225,7 @@ CMakeFiles/Control_LLC.elf.dir/BSP/UART/uart.c.s: cmake_force
 CMakeFiles/Control_LLC.elf.dir/Core/Src/main.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Core/Src/main.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Core/Src/main.c
 CMakeFiles/Control_LLC.elf.dir/Core/Src/main.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/Control_LLC.elf.dir/Core/Src/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/Control_LLC.elf.dir/Core/Src/main.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Core/Src/main.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Core\Src\main.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Core\Src\main.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Core\Src\main.c
 
 CMakeFiles/Control_LLC.elf.dir/Core/Src/main.c.i: cmake_force
@@ -225,7 +239,7 @@ CMakeFiles/Control_LLC.elf.dir/Core/Src/main.c.s: cmake_force
 CMakeFiles/Control_LLC.elf.dir/Core/Src/stm32f1xx_it.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Core/Src/stm32f1xx_it.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Core/Src/stm32f1xx_it.c
 CMakeFiles/Control_LLC.elf.dir/Core/Src/stm32f1xx_it.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/Control_LLC.elf.dir/Core/Src/stm32f1xx_it.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/Control_LLC.elf.dir/Core/Src/stm32f1xx_it.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Core/Src/stm32f1xx_it.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Core\Src\stm32f1xx_it.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Core\Src\stm32f1xx_it.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Core\Src\stm32f1xx_it.c
 
 CMakeFiles/Control_LLC.elf.dir/Core/Src/stm32f1xx_it.c.i: cmake_force
@@ -239,7 +253,7 @@ CMakeFiles/Control_LLC.elf.dir/Core/Src/stm32f1xx_it.c.s: cmake_force
 CMakeFiles/Control_LLC.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Core/Src/syscalls.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Core/Src/syscalls.c
 CMakeFiles/Control_LLC.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/Control_LLC.elf.dir/Core/Src/syscalls.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/Control_LLC.elf.dir/Core/Src/syscalls.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Core/Src/syscalls.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Core\Src\syscalls.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Core\Src\syscalls.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Core\Src\syscalls.c
 
 CMakeFiles/Control_LLC.elf.dir/Core/Src/syscalls.c.i: cmake_force
@@ -253,7 +267,7 @@ CMakeFiles/Control_LLC.elf.dir/Core/Src/syscalls.c.s: cmake_force
 CMakeFiles/Control_LLC.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Core/Src/sysmem.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Core/Src/sysmem.c
 CMakeFiles/Control_LLC.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/Control_LLC.elf.dir/Core/Src/sysmem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/Control_LLC.elf.dir/Core/Src/sysmem.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Core/Src/sysmem.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Core\Src\sysmem.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Core\Src\sysmem.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Core\Src\sysmem.c
 
 CMakeFiles/Control_LLC.elf.dir/Core/Src/sysmem.c.i: cmake_force
@@ -267,7 +281,7 @@ CMakeFiles/Control_LLC.elf.dir/Core/Src/sysmem.c.s: cmake_force
 CMakeFiles/Control_LLC.elf.dir/Core/Src/system_stm32f1xx.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Core/Src/system_stm32f1xx.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Core/Src/system_stm32f1xx.c
 CMakeFiles/Control_LLC.elf.dir/Core/Src/system_stm32f1xx.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/Control_LLC.elf.dir/Core/Src/system_stm32f1xx.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/Control_LLC.elf.dir/Core/Src/system_stm32f1xx.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Core/Src/system_stm32f1xx.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Core\Src\system_stm32f1xx.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Core\Src\system_stm32f1xx.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Core\Src\system_stm32f1xx.c
 
 CMakeFiles/Control_LLC.elf.dir/Core/Src/system_stm32f1xx.c.i: cmake_force
@@ -280,7 +294,7 @@ CMakeFiles/Control_LLC.elf.dir/Core/Src/system_stm32f1xx.c.s: cmake_force
 
 CMakeFiles/Control_LLC.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Core/Startup/startup_stm32f103c8tx.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building ASM object CMakeFiles/Control_LLC.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building ASM object CMakeFiles/Control_LLC.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\Control_LLC.elf.dir\Core\Startup\startup_stm32f103c8tx.s.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Core\Startup\startup_stm32f103c8tx.s
 
 CMakeFiles/Control_LLC.elf.dir/Core/Startup/startup_stm32f103c8tx.s.i: cmake_force
@@ -294,7 +308,7 @@ CMakeFiles/Control_LLC.elf.dir/Core/Startup/startup_stm32f103c8tx.s.s: cmake_for
 CMakeFiles/Control_LLC.elf.dir/Devices/ADS1115/ads1115.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Devices/ADS1115/ads1115.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Devices/ADS1115/ads1115.c
 CMakeFiles/Control_LLC.elf.dir/Devices/ADS1115/ads1115.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/Control_LLC.elf.dir/Devices/ADS1115/ads1115.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/Control_LLC.elf.dir/Devices/ADS1115/ads1115.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Devices/ADS1115/ads1115.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Devices\ADS1115\ads1115.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Devices\ADS1115\ads1115.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Devices\ADS1115\ads1115.c
 
 CMakeFiles/Control_LLC.elf.dir/Devices/ADS1115/ads1115.c.i: cmake_force
@@ -308,7 +322,7 @@ CMakeFiles/Control_LLC.elf.dir/Devices/ADS1115/ads1115.c.s: cmake_force
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.c
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_dma.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_dma.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_dma.c
 
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.c.i: cmake_force
@@ -322,7 +336,7 @@ CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.c
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_exti.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_exti.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_exti.c
 
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.c.i: cmake_force
@@ -336,7 +350,7 @@ CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_ext
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_gpio.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_gpio.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_gpio.c
 
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c.i: cmake_force
@@ -350,7 +364,7 @@ CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpi
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.c
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_i2c.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_i2c.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_i2c.c
 
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.c.i: cmake_force
@@ -364,7 +378,7 @@ CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.c
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_pwr.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_pwr.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_pwr.c
 
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.c.i: cmake_force
@@ -378,7 +392,7 @@ CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.c
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_rcc.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_rcc.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_rcc.c
 
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.c.i: cmake_force
@@ -392,7 +406,7 @@ CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_tim.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_tim.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_tim.c
 
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.c.i: cmake_force
@@ -406,7 +420,7 @@ CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.c
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usart.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usart.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usart.c
 
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.c.i: cmake_force
@@ -420,7 +434,7 @@ CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usa
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.c
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_utils.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_utils.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_utils.c
 
 CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.c.i: cmake_force
@@ -434,7 +448,7 @@ CMakeFiles/Control_LLC.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_uti
 CMakeFiles/Control_LLC.elf.dir/Middleware/Current_convert_frequency/current_convert_frequency.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Middleware/Current_convert_frequency/current_convert_frequency.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Current_convert_frequency/current_convert_frequency.c
 CMakeFiles/Control_LLC.elf.dir/Middleware/Current_convert_frequency/current_convert_frequency.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/Control_LLC.elf.dir/Middleware/Current_convert_frequency/current_convert_frequency.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/Control_LLC.elf.dir/Middleware/Current_convert_frequency/current_convert_frequency.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Middleware/Current_convert_frequency/current_convert_frequency.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Middleware\Current_convert_frequency\current_convert_frequency.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Middleware\Current_convert_frequency\current_convert_frequency.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Middleware\Current_convert_frequency\current_convert_frequency.c
 
 CMakeFiles/Control_LLC.elf.dir/Middleware/Current_convert_frequency/current_convert_frequency.c.i: cmake_force
@@ -448,7 +462,7 @@ CMakeFiles/Control_LLC.elf.dir/Middleware/Current_convert_frequency/current_conv
 CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/Private/data_private.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/Private/data_private.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Frequency_convert_pulse/Private/data_private.c
 CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/Private/data_private.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/Private/data_private.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/Private/data_private.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/Private/data_private.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Middleware\Frequency_convert_pulse\Private\data_private.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Middleware\Frequency_convert_pulse\Private\data_private.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Middleware\Frequency_convert_pulse\Private\data_private.c
 
 CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/Private/data_private.c.i: cmake_force
@@ -462,7 +476,7 @@ CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/Private/data_p
 CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/frequency_convert_pulse.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/frequency_convert_pulse.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Frequency_convert_pulse/frequency_convert_pulse.c
 CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/frequency_convert_pulse.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/frequency_convert_pulse.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/frequency_convert_pulse.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/frequency_convert_pulse.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Middleware\Frequency_convert_pulse\frequency_convert_pulse.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Middleware\Frequency_convert_pulse\frequency_convert_pulse.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Middleware\Frequency_convert_pulse\frequency_convert_pulse.c
 
 CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/frequency_convert_pulse.c.i: cmake_force
@@ -476,7 +490,7 @@ CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/frequency_conv
 CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/PI_Control/pi_control.c
 CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.obj"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Middleware\PI_Control\pi_control.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Middleware\PI_Control\pi_control.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Middleware\PI_Control\pi_control.c
 
 CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.i: cmake_force
@@ -486,20 +500,6 @@ CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.i: cmake_force
 CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.s"
 	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Middleware\PI_Control\pi_control.c -o CMakeFiles\Control_LLC.elf.dir\Middleware\PI_Control\pi_control.c.s
-
-CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
-CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Read_220VAC/read_220vac.c
-CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.obj: CMakeFiles/Control_LLC.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.obj"
-	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.obj -MF CMakeFiles\Control_LLC.elf.dir\Middleware\Read_220VAC\read_220vac.c.obj.d -o CMakeFiles\Control_LLC.elf.dir\Middleware\Read_220VAC\read_220vac.c.obj -c D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Middleware\Read_220VAC\read_220vac.c
-
-CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.i"
-	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Middleware\Read_220VAC\read_220vac.c > CMakeFiles\Control_LLC.elf.dir\Middleware\Read_220VAC\read_220vac.c.i
-
-CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.s"
-	C:\PROGRA~2\ARMGNU~1\133167~1.3RE\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\OneDrive\Disk_2\CHARGE_BATTERY\Firmware\STM32\Control_LLC\Middleware\Read_220VAC\read_220vac.c -o CMakeFiles\Control_LLC.elf.dir\Middleware\Read_220VAC\read_220vac.c.s
 
 CMakeFiles/Control_LLC.elf.dir/Middleware/Ring_Buffer/ring_buffer.c.obj: CMakeFiles/Control_LLC.elf.dir/flags.make
 CMakeFiles/Control_LLC.elf.dir/Middleware/Ring_Buffer/ring_buffer.c.obj: D:/OneDrive/Disk_2/CHARGE_BATTERY/Firmware/STM32/Control_LLC/Middleware/Ring_Buffer/ring_buffer.c
@@ -547,6 +547,7 @@ CMakeFiles/Control_LLC.elf.dir/Scheduler/scheduler.c.s: cmake_force
 Control_LLC_elf_OBJECTS = \
 "CMakeFiles/Control_LLC.elf.dir/App/CMDLine/app_cmdline.c.obj" \
 "CMakeFiles/Control_LLC.elf.dir/App/CMDLine/app_command.c.obj" \
+"CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.obj" \
 "CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.obj" \
 "CMakeFiles/Control_LLC.elf.dir/App/Data/app_data_struct.c.obj" \
 "CMakeFiles/Control_LLC.elf.dir/App/LED/app_status_led.c.obj" \
@@ -575,7 +576,6 @@ Control_LLC_elf_OBJECTS = \
 "CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/Private/data_private.c.obj" \
 "CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/frequency_convert_pulse.c.obj" \
 "CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.obj" \
-"CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.obj" \
 "CMakeFiles/Control_LLC.elf.dir/Middleware/Ring_Buffer/ring_buffer.c.obj" \
 "CMakeFiles/Control_LLC.elf.dir/Middleware/Voltage_convert_frequency/voltage_convert_frequency.c.obj" \
 "CMakeFiles/Control_LLC.elf.dir/Scheduler/scheduler.c.obj"
@@ -585,6 +585,7 @@ Control_LLC_elf_EXTERNAL_OBJECTS =
 
 Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/App/CMDLine/app_cmdline.c.obj
 Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/App/CMDLine/app_command.c.obj
+Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/App/CheckInputVoltage/app_check_input_voltage.c.obj
 Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/App/Control/app_control_power.c.obj
 Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/App/Data/app_data_struct.c.obj
 Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/App/LED/app_status_led.c.obj
@@ -613,7 +614,6 @@ Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/Middleware/Current_convert_frequ
 Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/Private/data_private.c.obj
 Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/Middleware/Frequency_convert_pulse/frequency_convert_pulse.c.obj
 Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/Middleware/PI_Control/pi_control.c.obj
-Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/Middleware/Read_220VAC/read_220vac.c.obj
 Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/Middleware/Ring_Buffer/ring_buffer.c.obj
 Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/Middleware/Voltage_convert_frequency/voltage_convert_frequency.c.obj
 Control_LLC.elf: CMakeFiles/Control_LLC.elf.dir/Scheduler/scheduler.c.obj
