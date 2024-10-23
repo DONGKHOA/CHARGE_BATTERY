@@ -1,0 +1,37 @@
+@startuml uart
+
+skin rose
+
+class uart_config {
+    + rx_buffer : ring_buffer
+    + tx_buffer : ring_buffer
+    + uart : USART_TypeDef *
+    + uart_irqn : IRQn_Type
+    - timeout : uint32_t
+
+    + UART_Config()
+    + UART_IsAvailableDataReceive() : bool
+    + UART_SendChar() : void
+    + UART_SendString() : void
+    + UART_ReadChar() : char
+    + UART_TimeOut() : void
+    + UART_ISR() : void
+}
+
+class ring_buffer {
+    + buffer : uint8_t[]
+    + in : uint32_t
+    + out : uint32_t
+    + count : uint32_t
+
+    + QUEUE_Init() : void
+    + QUEUE_Reset() : void
+    + QUEUE_Is_Empty() : bool
+    + QUEUE_Is_Full() : bool
+    + QUEUE_Push_Data() : void
+    + QUEUE_Pull_Data() : uint8_t
+}
+
+uart_config *-- ring_buffer
+
+@enduml

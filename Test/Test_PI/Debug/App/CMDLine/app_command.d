@@ -1,0 +1,46 @@
+App/CMDLine/app_command.o: ../App/CMDLine/app_command.c \
+ ../BSP/bsp_board.h ../BSP/GPIO/gpio.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h \
+ ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
+ ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
+ ../Drivers/CMSIS/Include/core_cm3.h \
+ ../Drivers/CMSIS/Include/cmsis_version.h \
+ ../Drivers/CMSIS/Include/cmsis_compiler.h \
+ ../Drivers/CMSIS/Include/cmsis_gcc.h \
+ ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
+ ../BSP/I2C/i2c.h ../BSP/TIMER/PWM/pwm.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h \
+ ../BSP/SysTick/systick.h ../BSP/UART/uart.h \
+ ../Middleware/Ring_Buffer/ring_buffer.h \
+ ../App/CMDLine/Include/app_command.h \
+ ../App/CMDLine/Include/app_cmdline.h ../App/Data/app_data_struct.h \
+ ../Devices/device.h ../Devices/ADS1115/ads1115.h \
+ ../Devices/ACS712/acs712.h ../Middleware/PI_Control/pi_control.h \
+ ../App/Control/app_control_power.h ../Scheduler/scheduler.h \
+ ../App/Common/Include/basetypedef.h
+../BSP/bsp_board.h:
+../BSP/GPIO/gpio.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h:
+../Drivers/CMSIS/Include/core_cm3.h:
+../Drivers/CMSIS/Include/cmsis_version.h:
+../Drivers/CMSIS/Include/cmsis_compiler.h:
+../Drivers/CMSIS/Include/cmsis_gcc.h:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h:
+../BSP/I2C/i2c.h:
+../BSP/TIMER/PWM/pwm.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h:
+../BSP/SysTick/systick.h:
+../BSP/UART/uart.h:
+../Middleware/Ring_Buffer/ring_buffer.h:
+../App/CMDLine/Include/app_command.h:
+../App/CMDLine/Include/app_cmdline.h:
+../App/Data/app_data_struct.h:
+../Devices/device.h:
+../Devices/ADS1115/ads1115.h:
+../Devices/ACS712/acs712.h:
+../Middleware/PI_Control/pi_control.h:
+../App/Control/app_control_power.h:
+../Scheduler/scheduler.h:
+../App/Common/Include/basetypedef.h:
