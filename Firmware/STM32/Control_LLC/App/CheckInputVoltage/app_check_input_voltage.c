@@ -140,12 +140,13 @@ APP_CHECK_INPUT_VOLTAGE_TaskUpdate (void)
         = sqrt_newton(s_check_input_voltage.f_adc_voltage) * ADC_GAIN_HW;
 
     s_check_input_voltage.u8_samples_count = 0;
+    s_check_input_voltage.u32_sum_adc_value_sqr = 0;
   }
 
   s_check_input_voltage.u16_adc_value = ADS1115_GetData(DEV_ADS1115_CHANNEL_0);
 
   s_check_input_voltage.u32_sum_adc_value_sqr
-      = s_check_input_voltage.u16_adc_value
+      += s_check_input_voltage.u16_adc_value
         * s_check_input_voltage.u16_adc_value;
 
   s_check_input_voltage.u8_samples_count++;

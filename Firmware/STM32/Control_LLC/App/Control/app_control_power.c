@@ -204,7 +204,7 @@ APP_CONTROL_TaskUpdate (void)
 
       // Handle soft start initialization
       FCP_PhaseStart(s_control_power.u32_times_change_fre);
-      if (s_control_power.u32_times_change_fre == TIME_LIMIT_PHASE_START)
+      if (s_control_power.u32_times_change_fre >= TIME_LIMIT_PHASE_START)
       {
         s_control_power.u32_times_change_fre = 0;
         *s_control_power.p_state             = CC_MODE_CHARGING;
@@ -215,7 +215,7 @@ APP_CONTROL_TaskUpdate (void)
     case CC_MODE_CHARGING:
 
       // Progress of charging
-      if (s_control_power.u32_times_change_fre == CONTROL_PI_TIME_SAMPLE)
+      if (s_control_power.u32_times_change_fre >= CONTROL_PI_TIME_SAMPLE)
       {
         // Read voltage channel current
         float value_temp = ADS1115_ReadVoltage(ADS1115_CURRENT_CHANNEL);
@@ -262,6 +262,10 @@ APP_CONTROL_TaskUpdate (void)
       // Progress of charging
       if (s_control_power.u32_times_change_fre == CONTROL_PI_TIME_SAMPLE)
       {
+        // Read voltage channel voltage
+        *s_control_power.p_output_voltage = ADS1115_ReadVoltage(ADS1115_VOLTAGE_CHANNEL);
+        APP_CONTROL_ConvertVoltageOutput();
+
         // PI control
         PIControl_Process(*s_control_power.p_output_voltage,
                           s_control_power.p_control_voltage);
