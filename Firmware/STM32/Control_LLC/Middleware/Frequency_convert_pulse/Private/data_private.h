@@ -23,7 +23,7 @@ extern "C"
    *    PRIVATE DATA
    **********************/
 
-#define SIZE_TABLE_DATA_PROCESS 170
+#define SIZE_TABLE_DATA_PROCESS 198
 
   extern const FCP_data_t table_data_process[];
   extern const FCP_data_t table_data_start[];

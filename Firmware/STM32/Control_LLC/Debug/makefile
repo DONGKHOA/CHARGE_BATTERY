@@ -10,19 +10,16 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include Scheduler/subdir.mk
--include Middleware/Voltage_convert_frequency/subdir.mk
 -include Middleware/Ring_Buffer/subdir.mk
 -include Middleware/PI_Control/subdir.mk
 -include Middleware/Frequency_convert_pulse/Private/subdir.mk
 -include Middleware/Frequency_convert_pulse/subdir.mk
--include Middleware/Current_convert_frequency/subdir.mk
 -include Drivers/STM32F1xx_HAL_Driver/Src/subdir.mk
 -include Devices/ADS1115/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include BSP/UART/subdir.mk
 -include BSP/TIMER/PWM/subdir.mk
--include BSP/TIMER/IRQ/subdir.mk
 -include BSP/SysTick/subdir.mk
 -include BSP/I2C/subdir.mk
 -include App/LED/subdir.mk

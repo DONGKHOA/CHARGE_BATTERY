@@ -15,6 +15,7 @@
 #include "gpio.h"
 #include "i2c.h"
 #include "pwm.h"
+#include "timer_irq.h"
 #include "systick.h"
 #include "uart.h"
 
@@ -31,7 +32,9 @@ extern "C"
   static inline void BSP_BOARD_TimeOut (void)
   {
     BSP_UART_TimeOut();
+#if I2C_LL
     BSP_I2C_TimeOut();
+#endif
   }
 
 #ifdef __cplusplus

@@ -9,7 +9,7 @@
  *      INCLUDES
  *********************/
 
-#include "stm32f1xx_ll_utils.h"
+#include "main.h"
 #include "ads1115.h"
 #include "i2c.h"
 
@@ -17,51 +17,41 @@
  *    PRIVATE DEFINE
  **********************/
 
-#define ADS1115_ADDRESS     0x48
 #define ADS1115_MAX_CHANNEL 4
 
 #define ADS1115_RESOLUTION 16 // bit
-#define ADS1115_STEP       (1 << ADS1115_RESOLUTION)
-
-/*********************
- *    PRIVATE TYPEDEFS
- *********************/
-
-/**
- * @brief Structure to hold ADS1115 sensor data.
- */
-typedef struct _ads1115_data_t
-{
-  /**
-   * @brief The raw data reading from the IC.
-   */
-  volatile uint16_t data_reading;
-
-  /**
-   * @brief The converted voltage value from the IC.
-   */
-  volatile float voltage;
-} ads1115_data_t;
+#define ADS1115_STEP       (1 << (ADS1115_RESOLUTION - 1))
 
 /**********************
  *    PRIVATE DATA
  **********************/
 
-/**
- * @brief Storage Data read from IC.
- */
-static volatile ads1115_data_t data[ADS1115_MAX_CHANNEL];
+static uint8_t             i2c_buffer[3];
+#if I2C_LL
+static volatile i2c_data_t i2c_1;
+#endif
 
-static volatile uint8_t    i2c_buffer[3];
-static volatile i2c_data_t i2c_1 = {
-  .i2c_reg = I2C1,           // Assign register I21
-  .buffer  = i2c_buffer,     // Assign buffer
-  .address = ADS1115_ADDRESS // Assign address Slave
-};
+/**********************
+ *    EXTERN DATA
+ **********************/
+
+#if !I2C_LL
+  extern I2C_HandleTypeDef hi2c1;
+#endif
 
 /**********************
  *   PUBLIC FUNCTIONS
  **********************/
+
+void
+ADS1115_SetPara (void)
+{
+#if I2C_LL
+  i2c_1.p_i2c_reg = I2C1;                   // Assign register I21
+  i2c_1.buffer    = (uint8_t *)&i2c_buffer; // Assign buffer
+  i2c_1.address   = ADS_ADDR_GND << 1;      // Assign address Slave
+#endif
+}
 
 /**
  * @brief Reads data from the ADS1115 sensor for a specified channel.
@@ -76,52 +66,79 @@ static volatile i2c_data_t i2c_1 = {
  * returns 0.
  */
 uint16_t
-ADS1115_GetData (ads1115_channel_t channel)
+ADS1115_GetData (ads1115_channel_t channel, ads1115_gain_t gain)
 {
-  i2c_1.buffer[0] = 0x01;
+  // Start with default values
+  uint16_t config
+      = ADS1015_REG_CONFIG_CQUE_NONE |   // Disable the comparator (default val)
+        ADS1015_REG_CONFIG_CLAT_NONLAT | // Non-latching (default val)
+        ADS1015_REG_CONFIG_CPOL_ACTVLOW
+        |                               // Alert/Rdy active low   (default val)
+        ADS1015_REG_CONFIG_CMODE_TRAD | // Traditional comparator (default val)
+        ADS1015_REG_CONFIG_DR_1600SPS | // 1600 samples per second (default)
+        ADS1015_REG_CONFIG_MODE_SINGLE; // Single-shot mode (default)
+
+  // Set PGA/voltage range
+  config |= gain;
   switch (channel)
   {
     case DEV_ADS1115_CHANNEL_0:
-      i2c_1.buffer[1] = 0xC1;
+      config |= ADS1015_REG_CONFIG_MUX_SINGLE_0;
       break;
     case DEV_ADS1115_CHANNEL_1:
-      i2c_1.buffer[1] = 0xD1;
+      config |= ADS1015_REG_CONFIG_MUX_SINGLE_1;
       break;
     case DEV_ADS1115_CHANNEL_2:
-      i2c_1.buffer[1] = 0xE1;
+      config |= ADS1015_REG_CONFIG_MUX_SINGLE_2;
       break;
     case DEV_ADS1115_CHANNEL_3:
-      i2c_1.buffer[1] = 0xF1;
+      config |= ADS1015_REG_CONFIG_MUX_SINGLE_3;
       break;
   }
 
-  i2c_1.buffer[0]   = 0x83;
+  // Set 'start single-conversion' bit
+  config |= ADS1015_REG_CONFIG_OS_SINGLE;
+  i2c_buffer[0]     = ADS1015_REG_POINTER_CONFIG;
+  i2c_buffer[1]     = (uint8_t)(config >> 8);
+  i2c_buffer[2]     = (uint8_t)(config & 0xFF);
+#if I2C_LL
   i2c_1.size_buffer = 3;
   BSP_I2C_MasterTransmit7B((i2c_data_t *)&i2c_1);
   if (i2c_1.status == I2C_TIMEOUT)
   {
     return 0;
   }
+#else
+  HAL_I2C_Master_Transmit(&hi2c1, ADS_ADDR_GND << 1, i2c_buffer, 3, 10);
+#endif
 
-  i2c_1.buffer[0]   = 0x00;
+
+  // Read data
+  i2c_buffer[0]     = ADS1015_REG_POINTER_CONVERT;
+#if I2C_LL
   i2c_1.size_buffer = 1;
   BSP_I2C_MasterTransmit7B((i2c_data_t *)&i2c_1);
   if (i2c_1.status == I2C_TIMEOUT)
   {
     return 0;
   }
+#else
+  HAL_I2C_Master_Transmit(&hi2c1, ADS_ADDR_GND << 1, &i2c_buffer[0], 1, 10);
+#endif
 
-  LL_mDelay(20);
+
+#if I2C_LL
   i2c_1.size_buffer = 2;
   BSP_I2C_MasterReceive7B((i2c_data_t *)&i2c_1);
-
-  data[channel].data_reading = (i2c_1.buffer[0] << 8 | i2c_1.buffer[1]);
-  if (data[channel].data_reading < 0)
+  if (i2c_1.status == I2C_TIMEOUT)
   {
-    data[channel].data_reading = 0;
+    return 0;
   }
+#else
+  HAL_I2C_Master_Receive(&hi2c1, ADS_ADDR_GND << 1, i2c_buffer, 2, 10);
+#endif
 
-  return data[channel].data_reading;
+  return (uint16_t)(i2c_buffer[0] << 8 | i2c_buffer[1]);
 }
 
 /**
@@ -138,17 +155,15 @@ ADS1115_GetData (ads1115_channel_t channel)
  * voltage using the ADC reference voltage and step size.
  */
 float
-ADS1115_ReadVoltage (ads1115_channel_t channel)
+ADS1115_ReadVoltage (ads1115_channel_t channel, ads1115_gain_t gain)
 {
   /**< Read raw Data */
-  ADS1115_GetData(channel);
+  uint16_t value = ADS1115_GetData(channel, gain);
 
   /**< Calibrate ADC */
 
   /**< Convert voltage */
-  data[0].voltage = (float)(data[0].data_reading * ADS1115_VREF) / ADS1115_STEP;
-
-  return data[channel].voltage;
+  return (float)(value * ADS1115_VREF) / ADS1115_STEP;
 }
 
 /**

@@ -12,6 +12,8 @@
 #include "i2c.h"
 #include "stm32f1xx_ll_i2c.h"
 
+#if I2C_LL
+
 /**********************
  *   PRIVATE DEFINES
  **********************/
@@ -28,20 +30,20 @@
  *   PRIVATE DATA
  **********************/
 
-static volatile uint_fast32_t u32_timer_wait_set = 0;
+static volatile uint32_t u32_timer_wait_set = 0;
 
 /******************************
  *  PRIVATE PROTOTYPE FUNCTION
  ******************************/
 
-static i2c_status_t I2C_MasterStart(I2C_TypeDef *_i2c_reg);
-static void         I2C_MastterStop(I2C_TypeDef *_i2c_reg);
+static i2c_status_t I2C_MasterStart(I2C_TypeDef *p_i2c);
+static void         I2C_MastterStop(I2C_TypeDef *p_i2c);
 
-static i2c_status_t I2C_SetAddress7B(I2C_TypeDef *_i2c_reg, uint8_t _address);
-static i2c_status_t I2C_TransmitData7B(I2C_TypeDef *_i2c_reg,
+static i2c_status_t I2C_SetAddress7B(I2C_TypeDef *p_i2c, uint8_t _address);
+static i2c_status_t I2C_TransmitData7B(I2C_TypeDef *p_i2c,
                                        uint32_t     _size,
                                        uint8_t     *_buffer);
-static i2c_status_t I2C_WaitBitRXNE(I2C_TypeDef *_i2c_reg);
+static i2c_status_t I2C_WaitBitRXNE(I2C_TypeDef *p_i2c);
 
 /**********************
  *   PUBLIC FUNCTIONS
@@ -60,23 +62,33 @@ static i2c_status_t I2C_WaitBitRXNE(I2C_TypeDef *_i2c_reg);
 i2c_status_t
 BSP_I2C_MasterTransmit7B (i2c_data_t *p_i2c)
 {
+  p_i2c->status = I2C_OK;
+
+  u32_timer_wait_set = TIMEOUT_WAIT_SET;
+  while ((I2C1->SR1 & I2C_SR2_BUSY))
+  {
+    if (u32_timer_wait_set == 0)
+    {
+      return I2C_TIMEOUT;
+    }
+  }
   // Start Condition
-  p_i2c->status = I2C_MasterStart((I2C_TypeDef *)p_i2c->i2c_reg);
+  p_i2c->status = I2C_MasterStart((I2C_TypeDef *)p_i2c->p_i2c_reg);
   if (p_i2c->status == I2C_TIMEOUT)
   {
     return I2C_TIMEOUT;
   }
 
   // Transmit Address, Clear ADDR bit
-  p_i2c->status = I2C_SetAddress7B((I2C_TypeDef *)p_i2c->i2c_reg,
-                                   (uint16_t)p_i2c->address);
+  p_i2c->status = I2C_SetAddress7B((I2C_TypeDef *)p_i2c->p_i2c_reg,
+                                   (uint8_t)p_i2c->address);
   if (p_i2c->status == I2C_TIMEOUT)
   {
     return I2C_TIMEOUT;
   }
 
   // Transmit Data
-  p_i2c->status = I2C_TransmitData7B((I2C_TypeDef *)p_i2c->i2c_reg,
+  p_i2c->status = I2C_TransmitData7B((I2C_TypeDef *)p_i2c->p_i2c_reg,
                                      (uint32_t)p_i2c->size_buffer,
                                      (uint8_t *)p_i2c->buffer);
   if (p_i2c->status == I2C_TIMEOUT)
@@ -85,11 +97,10 @@ BSP_I2C_MasterTransmit7B (i2c_data_t *p_i2c)
   }
 
   // Stop Condition
-  I2C_MastterStop((I2C_TypeDef *)p_i2c->i2c_reg);
+  I2C_MastterStop((I2C_TypeDef *)p_i2c->p_i2c_reg);
 
   // Done Transmit Frame
-  p_i2c->status = I2C_OK;
-  return I2C_OK;
+  return p_i2c->status;
 }
 
 /**** STEPS FOLLOWED  ************
@@ -130,75 +141,101 @@ i2c_status_t
 BSP_I2C_MasterReceive7B (i2c_data_t *p_i2c)
 {
   uint32_t remaining = p_i2c->size_buffer;
+
+  u32_timer_wait_set = TIMEOUT_WAIT_SET;
+  while ((I2C1->SR1 & I2C_SR2_BUSY))
+  {
+    if (u32_timer_wait_set == 0)
+    {
+      return I2C_TIMEOUT;
+    }
+  }
+
   // Start Condition
-  p_i2c->status = I2C_MasterStart((I2C_TypeDef *)p_i2c->i2c_reg);
+  p_i2c->status = I2C_MasterStart((I2C_TypeDef *)p_i2c->p_i2c_reg);
   if (p_i2c->status == I2C_TIMEOUT)
   {
     return I2C_TIMEOUT;
   }
 
   // Transmit Address, Clear ADDR bit
-  I2C_SetAddress7B((I2C_TypeDef *)p_i2c->i2c_reg, (uint8_t)p_i2c->address);
+  I2C_SetAddress7B((I2C_TypeDef *)p_i2c->p_i2c_reg, (uint8_t)p_i2c->address | 0x01);
+  if (p_i2c->status == I2C_TIMEOUT)
+  {
+	return I2C_TIMEOUT;
+  }
 
   // Receive Data
   if (p_i2c->size_buffer == 1)
   {
-    goto last_byte;
-  }
+    I2C_MastterStop((I2C_TypeDef *)p_i2c->p_i2c_reg);
 
-  while (remaining > 2)
-  {
     // Wait for RxNE to set
-    p_i2c->status = I2C_WaitBitRXNE((I2C_TypeDef *)p_i2c->i2c_reg);
+    p_i2c->status = I2C_WaitBitRXNE((I2C_TypeDef *)p_i2c->p_i2c_reg);
     if (p_i2c->status == I2C_TIMEOUT)
     {
       return I2C_TIMEOUT;
     }
 
-    // Copy the data into the buffer
-    p_i2c->buffer[p_i2c->size_buffer - remaining]
-        = LL_I2C_ReceiveData8((I2C_TypeDef *)p_i2c->i2c_reg);
+    p_i2c->buffer[p_i2c->size_buffer - remaining] = p_i2c->p_i2c_reg->DR;
 
-    // Set the ACK bit to Acknowledge the data received
-    p_i2c->i2c_reg->CR1 = (p_i2c->i2c_reg->CR1) | I2C_CR1_ACK_Msk;
-
-    remaining--;
+	  // Done Receive Frame
+	  p_i2c->status = I2C_OK;
+	  return I2C_OK;
   }
-  // Read the SECOND LAST BYTE
-  // Wait for RxNE to set
-  p_i2c->status = I2C_WaitBitRXNE((I2C_TypeDef *)p_i2c->i2c_reg);
-  if (p_i2c->status == I2C_TIMEOUT)
+  else
   {
-    return I2C_TIMEOUT;
+	  while (remaining > 2)
+	  {
+		// Wait for RxNE to set
+		p_i2c->status = I2C_WaitBitRXNE((I2C_TypeDef *)p_i2c->p_i2c_reg);
+		if (p_i2c->status == I2C_TIMEOUT)
+		{
+		  return I2C_TIMEOUT;
+		}
+
+		// Copy the data into the buffer
+		p_i2c->buffer[p_i2c->size_buffer - remaining] = p_i2c->p_i2c_reg->DR;
+
+		// Set the ACK bit to Acknowledge the data received
+		p_i2c->p_i2c_reg->CR1 |= I2C_CR1_ACK;
+
+		remaining--;
+	  }
+
+	  // Read the SECOND LAST BYTE
+	  // Wait for RxNE to set
+	  p_i2c->status = I2C_WaitBitRXNE((I2C_TypeDef *)p_i2c->p_i2c_reg);
+	  if (p_i2c->status == I2C_TIMEOUT)
+	  {
+		return I2C_TIMEOUT;
+	  }
+
+	  // Copy the data into the buffer
+	  p_i2c->buffer[p_i2c->size_buffer - remaining] = p_i2c->p_i2c_reg->DR;
+
+	  // Clear ACK bit
+	  p_i2c->p_i2c_reg->CR1 = (p_i2c->p_i2c_reg->CR1) & ~I2C_CR1_ACK_Msk;
+
+	  // Stop I2C
+	  I2C_MastterStop((I2C_TypeDef *)p_i2c->p_i2c_reg);
+	  remaining--;
+
+	  // Wait for RxNE to set
+	  p_i2c->status = I2C_WaitBitRXNE((I2C_TypeDef *)p_i2c->p_i2c_reg);
+	  if (p_i2c->status == I2C_TIMEOUT)
+	  {
+		return I2C_TIMEOUT;
+	  }
+
+	  // Copy the data into the buffer
+	  p_i2c->buffer[p_i2c->size_buffer - remaining] = p_i2c->p_i2c_reg->DR;
+
+	  // Done Receive Frame
+	  p_i2c->status = I2C_OK;
+	  return I2C_OK;
+
   }
-
-  // Copy the data into the buffer
-  p_i2c->buffer[p_i2c->size_buffer - remaining]
-      = LL_I2C_ReceiveData8((I2C_TypeDef *)p_i2c->i2c_reg);
-  remaining--;
-
-last_byte:
-
-  // Clear ACK bit
-  p_i2c->i2c_reg->CR1 = (p_i2c->i2c_reg->CR1) & ~I2C_CR1_ACK_Msk;
-
-  // Stop I2C
-  I2C_MastterStop((I2C_TypeDef *)p_i2c->i2c_reg);
-
-  // Wait for RxNE to set
-  p_i2c->status = I2C_WaitBitRXNE((I2C_TypeDef *)p_i2c->i2c_reg);
-  if (p_i2c->status == I2C_TIMEOUT)
-  {
-    return I2C_TIMEOUT;
-  }
-
-  // Copy the data into the buffer
-  p_i2c->buffer[p_i2c->size_buffer - remaining]
-      = LL_I2C_ReceiveData8((I2C_TypeDef *)p_i2c->i2c_reg);
-
-  // Done Receive Frame
-  p_i2c->status = I2C_OK;
-  return I2C_OK;
 }
 
 /**
@@ -226,18 +263,17 @@ BSP_I2C_TimeOut (void)
  * This function enables the ACK and generates the START condition for I2C
  * communication.
  *
- * @param _i2c_reg Pointer to the I2C peripheral instance.
+ * @param p_i2c Pointer to the I2C peripheral instance.
  * @return Status of the I2C operation.
  */
 static i2c_status_t
-I2C_MasterStart (I2C_TypeDef *_i2c_reg)
+I2C_MasterStart (I2C_TypeDef *p_i2c)
 {
-  _i2c_reg->CR1 |= I2C_CR1_ACK_Msk;   // Enable the ACK
-  _i2c_reg->CR1 |= I2C_CR1_START_Msk; // Generate START
+  p_i2c->CR1 |= I2C_CR1_ACK;   // Enable the ACK
+  p_i2c->CR1 |= I2C_CR1_START; // Generate START
 
-  // Wait for PE bit to set
   u32_timer_wait_set = TIMEOUT_WAIT_SET;
-  while (LL_I2C_IsEnabled(_i2c_reg))
+  while (!(p_i2c->SR1 & I2C_SR1_SB))
   {
     if (u32_timer_wait_set == 0)
     {
@@ -252,12 +288,12 @@ I2C_MasterStart (I2C_TypeDef *_i2c_reg)
  *
  * This function generates the STOP condition to end the I2C communication.
  *
- * @param _i2c_reg Pointer to the I2C peripheral instance.
+ * @param p_i2c Pointer to the I2C peripheral instance.
  */
 static void
-I2C_MastterStop (I2C_TypeDef *_i2c_reg)
+I2C_MastterStop (I2C_TypeDef *p_i2c)
 {
-  LL_I2C_GenerateStopCondition(_i2c_reg);
+  p_i2c->CR1 |= I2C_CR1_STOP;
 }
 
 /**** STEPS FOLLOWED  ************
@@ -274,19 +310,19 @@ I2C_MastterStop (I2C_TypeDef *_i2c_reg)
  * the ADDR bit to be set, and clears the ADDR bit by reading the SR1 and SR2
  * registers.
  *
- * @param _i2c_reg Pointer to the I2C peripheral instance.
+ * @param p_i2c Pointer to the I2C peripheral instance.
  * @param _address 7-bit address of the I2C device.
  * @return Status of the I2C operation.
  */
 static i2c_status_t
-I2C_SetAddress7B (I2C_TypeDef *_i2c_reg, uint8_t _address)
+I2C_SetAddress7B (I2C_TypeDef *p_i2c, uint8_t u8_address)
 {
   // Send the address
-  I2C1->DR = _address;
+  p_i2c->DR = u8_address;
 
   // Wait for ADDR bit to set
   u32_timer_wait_set = TIMEOUT_WAIT_SET;
-  while (!LL_I2C_IsActiveFlag_ADDR(_i2c_reg))
+  while (!LL_I2C_IsActiveFlag_ADDR(p_i2c))
   {
     if (u32_timer_wait_set == 0)
     {
@@ -295,7 +331,11 @@ I2C_SetAddress7B (I2C_TypeDef *_i2c_reg, uint8_t _address)
   }
 
   // Read SR1 and SR2 to clear the ADDR bit
-  LL_I2C_ClearFlag_ADDR(_i2c_reg);
+  volatile uint32_t tmpreg;
+  tmpreg = p_i2c->SR1;
+  (void)tmpreg;
+  tmpreg = p_i2c->SR2;
+  (void)tmpreg;
 
   return I2C_OK;
 }
@@ -315,17 +355,17 @@ I2C_SetAddress7B (I2C_TypeDef *_i2c_reg, uint8_t _address)
  * transmits data from the buffer to the DR register. It waits for the BTF bit
  * to set, indicating the end of the last data transmission.
  *
- * @param _i2c_reg Pointer to the I2C peripheral instance.
+ * @param p_i2c Pointer to the I2C peripheral instance.
  * @param _size    Size of the data buffer.
  * @param _buffer  Pointer to the data buffer.
  * @return Status of the I2C operation.
  */
 static i2c_status_t
-I2C_TransmitData7B (I2C_TypeDef *_i2c_reg, uint32_t _size, uint8_t *_buffer)
+I2C_TransmitData7B (I2C_TypeDef *p_i2c, uint32_t _size, uint8_t *_buffer)
 {
   // Wait for TXE bit to set
   u32_timer_wait_set = TIMEOUT_WAIT_SET;
-  while (!LL_I2C_IsActiveFlag_TXE(_i2c_reg))
+  while (!LL_I2C_IsActiveFlag_TXE(p_i2c))
   {
     if (u32_timer_wait_set == 0)
     {
@@ -337,7 +377,7 @@ I2C_TransmitData7B (I2C_TypeDef *_i2c_reg, uint32_t _size, uint8_t *_buffer)
   {
     // Wait for TXE bit to set
     u32_timer_wait_set = TIMEOUT_WAIT_SET;
-    while (!LL_I2C_IsActiveFlag_TXE(_i2c_reg))
+    while (!LL_I2C_IsActiveFlag_TXE(p_i2c))
     {
       if (u32_timer_wait_set == 0)
       {
@@ -352,7 +392,7 @@ I2C_TransmitData7B (I2C_TypeDef *_i2c_reg, uint32_t _size, uint8_t *_buffer)
 
   // Wait for BTF to set
   u32_timer_wait_set = TIMEOUT_WAIT_SET;
-  while (!LL_I2C_IsActiveFlag_BTF(_i2c_reg))
+  while (!LL_I2C_IsActiveFlag_BTF(p_i2c))
   {
     if (u32_timer_wait_set == 0)
     {
@@ -369,14 +409,14 @@ I2C_TransmitData7B (I2C_TypeDef *_i2c_reg, uint32_t _size, uint8_t *_buffer)
  * This function waits for the RXNE bit to be set, indicating that data is ready
  * to be read from the Data Register (DR).
  *
- * @param _i2c_reg Pointer to the I2C peripheral instance.
+ * @param p_i2c Pointer to the I2C peripheral instance.
  * @return Status of the I2C operation.
  */
 static i2c_status_t
-I2C_WaitBitRXNE (I2C_TypeDef *_i2c_reg)
+I2C_WaitBitRXNE (I2C_TypeDef *p_i2c)
 {
   u32_timer_wait_set = TIMEOUT_WAIT_SET;
-  while (!LL_I2C_IsActiveFlag_RXNE(_i2c_reg))
+  while (!(p_i2c->SR1 & I2C_SR1_RXNE))
   {
     if (u32_timer_wait_set == 0)
     {
@@ -385,3 +425,4 @@ I2C_WaitBitRXNE (I2C_TypeDef *_i2c_reg)
   }
   return I2C_OK;
 }
+#endif

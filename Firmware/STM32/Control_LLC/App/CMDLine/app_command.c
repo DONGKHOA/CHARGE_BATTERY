@@ -100,17 +100,22 @@ tCmdLineEntry g_psCmdTable[] = {
  *    PUBLIC DATA
  *********************/
 
-uart_cfg_t uart_cfg_cml;
+static uart_cfg_t *uart_cfg_cml;
 
 /**********************
  *   PUBLIC FUNCTIONS
  **********************/
 
+/**
+ * The function `APP_COMMAND_Init` initializes UART configuration and sends a
+ * string message for LLC control firmware.
+ */
 void
 APP_COMMAND_Init (void)
 {
-  BSP_UART_Config(&uart_cfg_cml, USART1, USART1_IRQn);
-  BSP_UART_SendString(&uart_cfg_cml, "> LLC CONTROL FIRMWARE\r\n");
+  uart_cfg_cml = (uart_cfg_t *)&s_control_llc_data.s_uart_cmd;
+  BSP_UART_Config(uart_cfg_cml, USART1, USART1_IRQn);
+  BSP_UART_SendString(uart_cfg_cml, "> LLC CONTROL FIRMWARE\r\n");
 
   // Reset Data
   s_commandBufferIndex = 0;
@@ -139,8 +144,8 @@ APP_COMMAND_Help (int argc, char *argv[])
 {
   tCmdLineEntry *pEntry;
 
-  BSP_UART_SendString(&uart_cfg_cml, "\nAvailable commands\r\n");
-  BSP_UART_SendString(&uart_cfg_cml, "------------------\r\n");
+  BSP_UART_SendString(uart_cfg_cml, "\nAvailable commands\r\n");
+  BSP_UART_SendString(uart_cfg_cml, "------------------\r\n");
 
   // Point at the beginning of the command table.
   pEntry = &g_psCmdTable[0];
@@ -148,9 +153,9 @@ APP_COMMAND_Help (int argc, char *argv[])
   while (pEntry->pcCmd)
   {
     // Print the command name and the brief description.
-    BSP_UART_SendString(&uart_cfg_cml, pEntry->pcCmd);
-    BSP_UART_SendString(&uart_cfg_cml, pEntry->pcHelp);
-    BSP_UART_SendString(&uart_cfg_cml, "\r\n");
+    BSP_UART_SendString(uart_cfg_cml, pEntry->pcCmd);
+    BSP_UART_SendString(uart_cfg_cml, pEntry->pcHelp);
+    BSP_UART_SendString(uart_cfg_cml, "\r\n");
 
     // Advance to the next entry in the table.
     pEntry++;
@@ -175,7 +180,7 @@ APP_COMMAND_ReadCurrentOutput (int argc, char *argv[])
   char c_msg[30];
   sprintf(c_msg, "Current: %.2f\n\r", s_control_llc_data.f_output_current);
 
-  BSP_UART_SendString(&uart_cfg_cml, c_msg);
+  BSP_UART_SendString(uart_cfg_cml, c_msg);
 
   return (CMDLINE_OK);
 }
@@ -237,7 +242,7 @@ APP_COMMAND_ReadVoltageOutput (int argc, char *argv[])
   char c_msg[30];
   sprintf(c_msg, "Voltage: %.2f\n\r", s_control_llc_data.f_output_voltage);
 
-  BSP_UART_SendString(&uart_cfg_cml, c_msg);
+  BSP_UART_SendString(uart_cfg_cml, c_msg);
 
   return (CMDLINE_OK);
 }
@@ -284,11 +289,11 @@ APP_COMMAND_MonitorPower (int argc, char *argv[])
             s_control_llc_data.f_output_voltage
                 * s_control_llc_data.f_output_current);
 
-    BSP_UART_SendString(&uart_cfg_cml, c_msg);
+    BSP_UART_SendString(uart_cfg_cml, c_msg);
   }
   else
   {
-    BSP_UART_SendString(&uart_cfg_cml, "NO CHARGING\n\r");
+    BSP_UART_SendString(uart_cfg_cml, "NO CHARGING\n\r");
   }
 
   return (CMDLINE_OK);
@@ -309,23 +314,23 @@ APP_COMMAND_MonitorParaPI (int argc, char *argv[])
 
   char c_msg[30];
 
-  BSP_UART_SendString(&uart_cfg_cml, "PARAMETER PI CONTROL OF CURRENT\n\r");
+  BSP_UART_SendString(uart_cfg_cml, "PARAMETER PI CONTROL OF CURRENT\n\r");
 
   sprintf(c_msg,
           "KP: %.2f, KI: %.2f\n\r",
           s_control_llc_data.s_control_current.f_Kp,
           s_control_llc_data.s_control_current.f_Ki);
 
-  BSP_UART_SendString(&uart_cfg_cml, c_msg);
+  BSP_UART_SendString(uart_cfg_cml, c_msg);
 
-  BSP_UART_SendString(&uart_cfg_cml, "PARAMETER PI CONTROL OF VOLTAGE\n\r");
+  BSP_UART_SendString(uart_cfg_cml, "PARAMETER PI CONTROL OF VOLTAGE\n\r");
 
   sprintf(c_msg,
           "KP: %.2f, KI: %.2f\n\r",
           s_control_llc_data.s_control_voltage.f_Kp,
           s_control_llc_data.s_control_voltage.f_Ki);
 
-  BSP_UART_SendString(&uart_cfg_cml, c_msg);
+  BSP_UART_SendString(uart_cfg_cml, c_msg);
 
   return (CMDLINE_OK);
 }
@@ -345,10 +350,10 @@ APP_COMMAND_TaskUpdate (void)
   char   rxData;
   int8_t retVal;
 
-  while (BSP_UART_IsAvailableDataReceive(&uart_cfg_cml))
+  while (BSP_UART_IsAvailableDataReceive(uart_cfg_cml))
   {
-    rxData = BSP_UART_ReadChar(&uart_cfg_cml);
-    BSP_UART_SendChar(&uart_cfg_cml, rxData);
+    rxData = BSP_UART_ReadChar(uart_cfg_cml);
+    BSP_UART_SendChar(uart_cfg_cml, rxData);
     // Check rxData is ESC key.
     if (rxData == 27)
     {
@@ -365,13 +370,13 @@ APP_COMMAND_TaskUpdate (void)
         s_commandBufferIndex = 0;
 
         // Send status command in terminal.
-        BSP_UART_SendString(&uart_cfg_cml, "\r\n> ");
-        BSP_UART_SendString(&uart_cfg_cml, ErrorCode[retVal]);
-        BSP_UART_SendString(&uart_cfg_cml, "> ");
+        BSP_UART_SendString(uart_cfg_cml, "\r\n> ");
+        BSP_UART_SendString(uart_cfg_cml, ErrorCode[retVal]);
+        BSP_UART_SendString(uart_cfg_cml, "> ");
       }
       else
       {
-        BSP_UART_SendString(&uart_cfg_cml, "\r\n> ");
+        BSP_UART_SendString(uart_cfg_cml, "\r\n> ");
       }
     }
     else if ((rxData == 8)

@@ -17,8 +17,6 @@
 
 #include "scheduler.h"
 #include "frequency_convert_pulse.h"
-#include "voltage_convert_frequency.h"
-#include "current_convert_frequency.h"
 #include "pi_control.h"
 
 #include "device.h"
@@ -30,7 +28,7 @@
  *********************/
 
 #define TIME_LIMIT_STOP_CHARGING 30000 // 5 minute
-#define TIME_LIMIT_PHASE_START   60 // 60ms=[Soft-start](55s)+[Operation-PI](5s)
+#define TIME_LIMIT_PHASE_START   43    // ms
 
 #define KI_VOLTAGE 0.1f
 #define KP_VOLTAGE 0.1f
@@ -40,6 +38,8 @@
 
 #define ADS1115_CURRENT_CHANNEL DEV_ADS1115_CHANNEL_1
 #define ADS1115_VOLTAGE_CHANNEL DEV_ADS1115_CHANNEL_2
+
+#define BASE_FREQUENCY 81.079f
 
 /*********************
  *    PRIVATE TYPEDEFS
@@ -77,7 +77,8 @@ typedef struct _Control_Power_t
 
 static void APP_CONTROL_TaskUpdate(void);
 static void APP_CONTROL_ConvertVoltageOutput(void);
-static void APP_CONTROL_ResetData(void);
+static void APP_CONTROL_TurnOnPFC(void);
+static void APP_CONTROL_TurnOffPFC(void);
 static void APP_CONTROL_RelayOn(void);
 static void APP_CONTROL_RelayOff(void);
 
@@ -144,19 +145,23 @@ APP_CONTROL_Init (void)
   s_control_power.p_control_current->f_setPoint = CURRENT_START_THRESHOLD;
 
   // Initialize PWM control parameters
-  s_control_power.p_pwm_control_1->channel = PWM_CHANNEL_1;
-  s_control_power.p_pwm_control_1->output  = PWM_POSITIVE_NEGATIVE;
-  s_control_power.p_pwm_control_1->p_tim   = TIM1;
+  s_control_power.p_pwm_control_1->output = PWM_POSITIVE_NEGATIVE;
+  s_control_power.p_pwm_control_1->p_tim  = TIM1;
 
   // Reset control data
-  APP_CONTROL_ResetData();
+  s_control_power.u32_frequency_operation = 60000000;
+  s_control_power.u32_times_change_fre    = 0;
+  *s_control_power.p_output_voltage       = 0;
 
-  // Enable PWM timer
-  BSP_PWM_EnableTimer(s_control_power.p_pwm_control_1);
+  // Disable PWM timer
+  BSP_PWM_DisableTimerChannel1(s_control_power.p_pwm_control_1);
 
   // Reset PI control
   PIControl_Reset(s_control_power.p_control_voltage);
   PIControl_Reset(s_control_power.p_control_current);
+
+  // Initialize Device
+  ADS1115_SetPara();
 }
 
 /**
@@ -191,13 +196,16 @@ APP_CONTROL_TaskUpdate (void)
           && (s_control_llc_data.f_output_voltage <= AC_INPUT_VOLTAGE_MAX))
       {
         APP_CONTROL_RelayOn();
+        APP_CONTROL_TurnOnPFC();
+        BSP_PWM_EnableTimerChannel1(s_control_power.p_pwm_control_1);
+
         *s_control_power.p_state = DISCHARGING;
       }
       else
       {
-        // Turn off PWM
-        BSP_PWM_DisableTimer(s_control_power.p_pwm_control_1);
+        APP_CONTROL_TurnOffPFC();
         APP_CONTROL_RelayOff();
+        BSP_PWM_DisableTimerChannel1(s_control_power.p_pwm_control_1);
       }
       break;
     case SOFT_START:
@@ -218,7 +226,8 @@ APP_CONTROL_TaskUpdate (void)
       if (s_control_power.u32_times_change_fre >= CONTROL_PI_TIME_SAMPLE)
       {
         // Read voltage channel current
-        float value_temp = ADS1115_ReadVoltage(ADS1115_CURRENT_CHANNEL);
+        float value_temp
+            = ADS1115_ReadVoltage(ADS1115_CURRENT_CHANNEL, GAIN_ONE);
 
         // Convert from voltage channel current to current
         *s_control_power.p_output_current
@@ -228,9 +237,9 @@ APP_CONTROL_TaskUpdate (void)
         PIControl_Process(*s_control_power.p_output_current,
                           s_control_power.p_control_current);
 
-        // Current convert frequency
-        s_control_power.u32_frequency_operation
-            = CCF_Process(s_control_power.p_control_current->f_out);
+        float tmpFre
+            = s_control_power.p_control_current->f_out + BASE_FREQUENCY;
+        s_control_power.u32_frequency_operation = (uint32_t)tmpFre;
 
         // Frequency convert pulse
         FCP_PhaseProcess(s_control_power.u32_frequency_operation);
@@ -240,7 +249,7 @@ APP_CONTROL_TaskUpdate (void)
 
       // Read voltage feedback
       *s_control_power.p_output_voltage
-          = ADS1115_ReadVoltage(ADS1115_VOLTAGE_CHANNEL);
+          = ADS1115_ReadVoltage(ADS1115_VOLTAGE_CHANNEL, GAIN_ONE);
       APP_CONTROL_ConvertVoltageOutput();
 
       if (*s_control_power.p_output_voltage > VOLTAGE_END_THRESHOLD)
@@ -263,16 +272,17 @@ APP_CONTROL_TaskUpdate (void)
       if (s_control_power.u32_times_change_fre == CONTROL_PI_TIME_SAMPLE)
       {
         // Read voltage channel voltage
-        *s_control_power.p_output_voltage = ADS1115_ReadVoltage(ADS1115_VOLTAGE_CHANNEL);
+        *s_control_power.p_output_voltage
+            = ADS1115_ReadVoltage(ADS1115_VOLTAGE_CHANNEL, GAIN_ONE);
         APP_CONTROL_ConvertVoltageOutput();
 
         // PI control
         PIControl_Process(*s_control_power.p_output_voltage,
                           s_control_power.p_control_voltage);
 
-        // Voltage convert frequency
-        s_control_power.u32_frequency_operation
-            = VCF_Process(s_control_power.p_control_voltage->f_out);
+        float tmpFre
+            = s_control_power.p_control_voltage->f_out + BASE_FREQUENCY;
+        s_control_power.u32_frequency_operation = (uint32_t)tmpFre;
 
         // Frequency convert pulse
         FCP_PhaseProcess(s_control_power.u32_frequency_operation);
@@ -292,11 +302,32 @@ APP_CONTROL_TaskUpdate (void)
 
     case WAIT_DISCHARGING:
 
-      // wait for 5 minutes
+      // Progress of charging
+      if (s_control_power.u32_times_change_fre == CONTROL_PI_TIME_SAMPLE)
+      {
+        // Read voltage channel voltage
+        *s_control_power.p_output_voltage
+            = ADS1115_ReadVoltage(ADS1115_VOLTAGE_CHANNEL, GAIN_ONE);
+        APP_CONTROL_ConvertVoltageOutput();
+
+        // PI control
+        PIControl_Process(*s_control_power.p_output_voltage,
+                          s_control_power.p_control_voltage);
+
+        float tmpFre
+            = s_control_power.p_control_voltage->f_out + BASE_FREQUENCY;
+        s_control_power.u32_frequency_operation = (uint32_t)tmpFre;
+
+        // Frequency convert pulse
+        FCP_PhaseProcess(s_control_power.u32_frequency_operation);
+        s_control_power.u32_times_change_fre = 0;
+      }
+      s_control_power.u32_times_change_fre++;
+
       if (u16_time_wait_discharging == 0)
       {
         // Turn off PWM
-        BSP_PWM_DisableTimer(s_control_power.p_pwm_control_1);
+        BSP_PWM_DisableTimerChannel1(s_control_power.p_pwm_control_1);
         *s_control_power.p_state = WAIT_UNPLUGGED;
       }
       break;
@@ -305,13 +336,13 @@ APP_CONTROL_TaskUpdate (void)
 
       // Read voltage feedback
       *s_control_power.p_output_voltage
-          = ADS1115_ReadVoltage(ADS1115_VOLTAGE_CHANNEL);
+          = ADS1115_ReadVoltage(ADS1115_VOLTAGE_CHANNEL, GAIN_ONE);
       APP_CONTROL_ConvertVoltageOutput();
 
       if (*s_control_power.p_output_voltage < VOLTAGE_START_THRESHOLD)
       {
         // Turn on PWM
-        BSP_PWM_EnableTimer(s_control_power.p_pwm_control_1);
+        BSP_PWM_EnableTimerChannel1(s_control_power.p_pwm_control_1);
 
         s_control_power.u32_times_change_fre = 0;
         *s_control_power.p_state             = DISCHARGING;
@@ -322,13 +353,13 @@ APP_CONTROL_TaskUpdate (void)
 
       // Read voltage feedback
       *s_control_power.p_output_voltage
-          = ADS1115_ReadVoltage(ADS1115_VOLTAGE_CHANNEL);
+          = ADS1115_ReadVoltage(ADS1115_VOLTAGE_CHANNEL, GAIN_ONE);
       APP_CONTROL_ConvertVoltageOutput();
 
       if (*s_control_power.p_output_voltage >= VOLTAGE_START_THRESHOLD)
       {
         // Turn on PWM
-        BSP_PWM_EnableTimer(s_control_power.p_pwm_control_1);
+        BSP_PWM_EnableTimerChannel1(s_control_power.p_pwm_control_1);
 
         s_control_power.u32_times_change_fre = 0;
         *s_control_power.p_state             = SOFT_START;
@@ -363,6 +394,18 @@ APP_CONTROL_ConvertVoltageOutput (void)
   *s_control_power.p_output_voltage = (value_temp / 3.09 + 3.3) * 13;
 }
 
+static void
+APP_CONTROL_TurnOnPFC (void)
+{
+  LL_GPIO_ResetOutputPin(PFC_ON_OFF_GPIO_Port, PFC_ON_OFF_Pin);
+}
+
+static void
+APP_CONTROL_TurnOffPFC (void)
+{
+  LL_GPIO_SetOutputPin(PFC_ON_OFF_GPIO_Port, PFC_ON_OFF_Pin);
+}
+
 /**
  * The function `APP_CONTROL_RelayOn` turns on a relay by resetting the output
  * pin of a specific GPIO port.
@@ -381,16 +424,4 @@ static void
 APP_CONTROL_RelayOff (void)
 {
   LL_GPIO_SetOutputPin(VOLTAGE_PROTECTION_GPIO_Port, VOLTAGE_PROTECTION_Pin);
-}
-
-/**
- * The function `APP_CONTROL_ResetData` resets certain data values related to
- * power control.
- */
-static void
-APP_CONTROL_ResetData (void)
-{
-  s_control_power.u32_frequency_operation = 60000000;
-  s_control_power.u32_times_change_fre    = 0;
-  *s_control_power.p_output_voltage       = 0;
 }

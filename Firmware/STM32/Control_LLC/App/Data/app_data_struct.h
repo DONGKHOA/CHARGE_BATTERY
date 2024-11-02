@@ -42,8 +42,8 @@ extern "C"
     CONTROL_STATE_t s_state_data;
     pi_control_t    s_control_voltage;
     pi_control_t    s_control_current;
+    uart_cfg_t s_uart_cmd;
     pwm_cfg_t       s_control_gate;
-    uart_cfg_t      s_uart_cmd;
     float           f_input_voltage;
     float           f_output_voltage;
     float           f_output_current;

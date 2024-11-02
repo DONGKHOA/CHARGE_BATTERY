@@ -19,6 +19,12 @@ extern "C"
 {
 #endif
 
+#ifndef I2C_LL
+	#define I2C_LL 0
+#endif
+
+#if I2C_LL
+
   /**********************
    *    PUBLIC TYPEDEFS
    **********************/
@@ -44,11 +50,11 @@ extern "C"
    */
   typedef struct _i2c_data_t
   {
-    volatile I2C_TypeDef *i2c_reg; /**< @brief Pointer to the I2C peripheral. */
-    volatile uint8_t     *buffer; /**< @brief Pointer to the I2C data buffer. */
-    volatile uint32_t size_buffer; /**< @brief Size of the I2C data buffer. */
-    volatile i2c_status_t status;  /**< @brief Status of the I2C operation. */
-    volatile uint16_t     address; /**< @brief Address of the I2C device. */
+    I2C_TypeDef *p_i2c_reg; /**< @brief Pointer to the I2C peripheral. */
+    uint8_t     *buffer; /**< @brief Pointer to the I2C data buffer. */
+    uint32_t size_buffer; /**< @brief Size of the I2C data buffer. */
+    i2c_status_t status;  /**< @brief Status of the I2C operation. */
+    uint16_t     address; /**< @brief Address of the I2C device. */
   } i2c_data_t;
 
   /**********************
@@ -60,6 +66,8 @@ extern "C"
 
   // Call Function "I2C_TimeOut" in ISR SysTick
   void BSP_I2C_TimeOut(void);
+
+#endif
 
 #ifdef __cplusplus
 }

@@ -30,18 +30,15 @@ App/Data \
 App/LED \
 BSP/I2C \
 BSP/SysTick \
-BSP/TIMER/IRQ \
 BSP/TIMER/PWM \
 BSP/UART \
 Core/Src \
 Core/Startup \
 Devices/ADS1115 \
 Drivers/STM32F1xx_HAL_Driver/Src \
-Middleware/Current_convert_frequency \
 Middleware/Frequency_convert_pulse/Private \
 Middleware/Frequency_convert_pulse \
 Middleware/PI_Control \
 Middleware/Ring_Buffer \
-Middleware/Voltage_convert_frequency \
 Scheduler \
 

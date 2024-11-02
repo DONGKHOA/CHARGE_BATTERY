@@ -28,4 +28,9 @@ extern "C"
 	  return 2.5f + 0.1f * current;
   }
 
+  static inline float ACS712_VoltageConverterCurrent(float voltage)
+  {
+	  return (voltage - 2.5f)/0.1f;
+  }
+
 #endif /* ACS712_ACS712_H_ */

@@ -90,13 +90,20 @@ static Check_Input_Voltage_t s_check_input_voltage;
 void
 APP_CHECK_INPUT_VOLTAGE_Init (void)
 {
+  // Link pointer to variable
+  s_check_input_voltage.p_input_voltage
+      = (float *)&s_control_llc_data.f_input_voltage;
+
+  // Set Auto Reload Register
+
+  TIM3->ARR = 999; // 1ms
+
+  // Reset Data
   s_check_input_voltage.u8_samples_count        = 0;
   s_check_input_voltage.u16_adc_value           = 0;
   s_check_input_voltage.u32_sum_adc_value_sqr   = 0;
   s_check_input_voltage.f_sum_adc_value_sqr_avg = 0;
   s_check_input_voltage.f_adc_voltage           = 0;
-  s_check_input_voltage.p_input_voltage
-      = (float *)&s_control_llc_data.f_input_voltage;
 }
 
 /**
@@ -121,6 +128,8 @@ APP_CHECK_INPUT_VOLTAGE_CreateTask (void)
 static void
 APP_CHECK_INPUT_VOLTAGE_TaskUpdate (void)
 {
+  BSP_TIM_Stop_IT(TIM3);
+
   if ((s_control_llc_data.f_input_voltage < AC_INPUT_VOLTAGE_MIN)
       || (s_control_llc_data.f_output_voltage > AC_INPUT_VOLTAGE_MAX))
   {
@@ -139,17 +148,20 @@ APP_CHECK_INPUT_VOLTAGE_TaskUpdate (void)
     *s_check_input_voltage.p_input_voltage
         = sqrt_newton(s_check_input_voltage.f_adc_voltage) * ADC_GAIN_HW;
 
-    s_check_input_voltage.u8_samples_count = 0;
+    s_check_input_voltage.u8_samples_count      = 0;
     s_check_input_voltage.u32_sum_adc_value_sqr = 0;
   }
 
-  s_check_input_voltage.u16_adc_value = ADS1115_GetData(DEV_ADS1115_CHANNEL_0);
+  s_check_input_voltage.u16_adc_value
+      = ADS1115_GetData(DEV_ADS1115_CHANNEL_0, GAIN_ONE);
 
   s_check_input_voltage.u32_sum_adc_value_sqr
       += s_check_input_voltage.u16_adc_value
-        * s_check_input_voltage.u16_adc_value;
+         * s_check_input_voltage.u16_adc_value;
 
   s_check_input_voltage.u8_samples_count++;
+
+  BSP_TIM_Start_IT(TIM3);
 }
 
 /**

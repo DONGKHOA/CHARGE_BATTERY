@@ -35,14 +35,6 @@ extern "C"
 #define PWM_POSITIVE_NEGATIVE 1 /**< Positive and negative output mode. */
 #define PWM_NO_OUTPUT         2 /**< No output. */
 
-/**
- * @brief Channels for PWM.
- */
-#define PWM_CHANNEL_1 LL_TIM_CHANNEL_CH1 /**< PWM Channel 1. */
-#define PWM_CHANNEL_2 LL_TIM_CHANNEL_CH2 /**< PWM Channel 2. */
-#define PWM_CHANNEL_3 LL_TIM_CHANNEL_CH3 /**< PWM Channel 3. */
-#define PWM_CHANNEL_4 LL_TIM_CHANNEL_CH4 /**< PWM Channel 4. */
-
   /**********************
    *    PUBLIC TYPEDEFS
    **********************/
@@ -86,17 +78,6 @@ extern "C"
     volatile uint16_t u16_prescaler;
 
     /**
-     * @brief PWM channel.
-     *
-     * Specifies which PWM channel to use:
-     * - PWM_CHANNEL_1
-     * - PWM_CHANNEL_2
-     * - PWM_CHANNEL_3
-     * - PWM_CHANNEL_4
-     */
-    volatile uint32_t channel;
-
-    /**
      * @brief PWM output mode.
      *
      * Specifies the output mode:
@@ -118,9 +99,9 @@ extern "C"
    *    PUBLIC FUNCTIONS
    **********************/
 
-  void BSP_PWM_SetParameterProcess(pwm_cfg_t *pwm_cfg);
-  void BSP_PWM_EnableTimer (pwm_cfg_t *pwm_cfg);
-  void BSP_PWM_DisableTimer (pwm_cfg_t *pwm_cfg);
+  void BSP_PWM_SetParameterProcessChannel1(pwm_cfg_t *pwm_cfg);
+  void BSP_PWM_EnableTimerChannel1 (pwm_cfg_t *pwm_cfg);
+  void BSP_PWM_DisableTimerChannel1 (pwm_cfg_t *pwm_cfg);
   /**
    * @brief Resets PWM parameters in the configuration structure to default
    * values.

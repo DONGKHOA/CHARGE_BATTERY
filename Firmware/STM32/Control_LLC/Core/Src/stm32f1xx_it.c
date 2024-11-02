@@ -62,7 +62,6 @@ static volatile uart_cfg_t *p_uart1
 /* External variables --------------------------------------------------------*/
 
 /* USER CODE BEGIN EV */
-
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -191,8 +190,9 @@ void SysTick_Handler(void)
   BSP_BOARD_TimeOut();
   APP_CONTROL_TimeWaitDischarging();
   SCH_RunSystemTickTimer();
-  /* USER CODE END SysTick_IRQn 0 */
 
+  /* USER CODE END SysTick_IRQn 0 */
+  HAL_IncTick();
   /* USER CODE BEGIN SysTick_IRQn 1 */
 
   /* USER CODE END SysTick_IRQn 1 */
@@ -211,7 +211,8 @@ void SysTick_Handler(void)
 void TIM3_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM3_IRQn 0 */
-  SCH_TASK_EnableTask(2);
+	SCH_TASK_EnableTask(0);
+	BSP_TIM_IRQ_Handler(TIM3);
   /* USER CODE END TIM3_IRQn 0 */
   /* USER CODE BEGIN TIM3_IRQn 1 */
 
@@ -229,19 +230,6 @@ void USART1_IRQHandler(void)
   /* USER CODE BEGIN USART1_IRQn 1 */
 
   /* USER CODE END USART1_IRQn 1 */
-}
-
-/**
-  * @brief This function handles USART2 global interrupt.
-  */
-void USART2_IRQHandler(void)
-{
-  /* USER CODE BEGIN USART2_IRQn 0 */
-
-  /* USER CODE END USART2_IRQn 0 */
-  /* USER CODE BEGIN USART2_IRQn 1 */
-
-  /* USER CODE END USART2_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

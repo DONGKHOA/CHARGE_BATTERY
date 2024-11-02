@@ -25,7 +25,7 @@ void
 BSP_SYSTICK_TimerStart (void)
 {
 
-  SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
+  SysTick->CTRL |= (SysTick_CTRL_ENABLE_Msk | SysTick_CTRL_TICKINT_Msk);
 }
 
 /**

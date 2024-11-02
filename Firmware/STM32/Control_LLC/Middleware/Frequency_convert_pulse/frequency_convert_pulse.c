@@ -28,10 +28,9 @@
  */
 #define DUTY_CYCLE 50 /**< Duty cycle percentage (50%). */
 
-#define FRE_START_THRESHOLD                                                  \
-  76000                          /**< Starting threshold frequency (80 KHz). \
-                                  */
-#define FRE_END_THRESHOLD 133000 /**< Ending threshold frequency (110 KHz). */
+#define FRE_START_THRESHOLD table_data_process[0].frequency
+#define FRE_END_THRESHOLD \
+  table_data_process[SIZE_TABLE_DATA_PROCESS - 1].frequency
 
 /**
  * @brief Thresholds for pre-scaler.
@@ -62,9 +61,6 @@
   table_data_process[(SIZE_TABLE_DATA_PROCESS - 1)]                     \
       .auto_reload_reg_timer /**< Ending threshold auto-reload register \
                                 value. */
-
-#define C_EQ 600 // pF
-#define L_m  532 // uH
 
 /**********************
  *   PRIVATE DATA
@@ -109,10 +105,8 @@ FCP_PhaseStart (uint8_t time)
       = table_data_start[time].auto_reload_reg_timer * DUTY_CYCLE / 100;
 
   // Apply the PWM parameters
-  while (!(pwm_control_1->p_tim->CNT == pwm_control_1->p_tim->ARR))
-    ;
   calculate_DeadTime(table_data_start[time].frequency);
-  BSP_PWM_SetParameterProcess(pwm_control_1);
+  BSP_PWM_SetParameterProcessChannel1(pwm_control_1);
 }
 
 /**
@@ -150,37 +144,41 @@ FCP_PhaseProcess (uint32_t frequency)
   }
   else
   {
-    uint32_t i;
-    int32_t  delta_1 = 0;
-    int32_t  delta_2 = 0;
-    for (i = 0; i < SIZE_TABLE_DATA_PROCESS - 1; i++)
-    {
-      delta_1 = abs_32((int32_t)(frequency - table_data_process[i].frequency));
-      delta_2
-          = abs_32((int32_t)(frequency - table_data_process[i + 1].frequency));
+    int32_t min_diff = abs_32(frequency - table_data_process[0].frequency);
 
-      if (delta_1 <= delta_2)
+    for (uint32_t i = 1; i < SIZE_TABLE_DATA_PROCESS; i++)
+    {
+      int32_t diff = abs_32(frequency - table_data_process[i].frequency);
+
+      if (diff < min_diff)
       {
+        min_diff = diff;
+
         // Set the prescaler value
         pwm_control_1->u16_prescaler
-            = table_data_process[i - 1].prescaler_timer - 1;
+            = table_data_process[i].prescaler_timer - 1;
         // Set the auto-reload register value
         pwm_control_1->u16_reg_auto_reload
-            = table_data_process[i - 1].auto_reload_reg_timer - 1;
+            = table_data_process[i].auto_reload_reg_timer - 1;
         // Set the compare register value
         pwm_control_1->u16_reg_compare
-            = table_data_process[i - 1].auto_reload_reg_timer * DUTY_CYCLE
-              / 100;
-        break;
+            = table_data_process[i].auto_reload_reg_timer * DUTY_CYCLE / 100;
       }
     }
   }
 
   // Apply the PWM parameters
-  while (!(pwm_control_1->p_tim->CNT == pwm_control_1->p_tim->ARR))
-    ;
   calculate_DeadTime(frequency);
-  BSP_PWM_SetParameterProcess(pwm_control_1);
+
+  if (pwm_control_1->p_tim->SR & TIM_SR_UIF)
+   {
+ 	  LL_TIM_ClearFlag_UPDATE((TIM_TypeDef *)pwm_control_1->p_tim);
+   }
+
+   while (!((pwm_control_1->p_tim->SR & TIM_SR_UIF) == TIM_SR_UIF))
+     ;
+
+   BSP_PWM_SetParameterProcessChannel1(pwm_control_1);
 }
 
 /**********************
@@ -222,6 +220,6 @@ abs_32 (int32_t num)
 static void
 calculate_DeadTime (uint32_t frequency)
 {
-  double temp                = 3.0 * C_EQ * 200000 * L_m * 0.00000000006;
-  pwm_control_1->u8_deadTime = (uint8_t)temp + 1;
+  double temp                = 0.000021168 * frequency;
+  pwm_control_1->u8_deadTime = (uint8_t)temp + 0;
 }
