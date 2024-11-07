@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "ADC EXTERNAL")
-		(date "2024-11-03")
+		(date "2024-11-06")
 		(rev "Ver 2.0")
 		(company "Ho Chi Minh City University of Technology - HCMUT")
 		(comment 1 "Design: QUOC THANG - DONG KHOA")
@@ -455,6 +455,177 @@
 						)
 					)
 					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "charge_battery_sym_lib:BZT52-C5V1"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 3.556 2.794 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "BZT52-C5V1"
+				(at 3.81 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:Diode_Zener_BZT52H"
+				(at -0.762 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.thegioiic.com/upload/documents/bd01e81ba54c77ab315e0ded4820e422.pdf"
+				(at 4.826 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "3.3V 375mW Zener Diode, SOD-123F"
+				(at 0 7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply name" "Thegioiic"
+				(at -5.08 6.604 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply part number" "DIODE ZENER 5.1V 500mW SOD123"
+				(at -0.508 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.thegioiic.com/bzt52c5v1-diode-zener-5-1v-500mw"
+				(at 1.27 6.604 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "BZT52-C5V1"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D?SOD?123F*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "BZT52-C5V1_0_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 1.27) (xy 5.08 -1.27) (xy 4.572 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 2.54 -1.27) (xy 5.08 0) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BZT52-C5V1_1_1"
+				(pin passive line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1292,54 +1463,78 @@
 		)
 	)
 	(junction
-		(at 160.02 125.73)
+		(at 185.42 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0da98c12-e289-47df-86c5-fe1c52804917")
 	)
 	(junction
-		(at 134.62 76.2)
+		(at 163.83 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "13536133-f79c-4132-a6d2-f693a9341fac")
+		(uuid "1480f406-1bd6-4641-9f4b-b7b7c5468e3b")
 	)
 	(junction
-		(at 119.38 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "174e46e8-3fe8-4027-a050-f593cb316e1f")
-	)
-	(junction
-		(at 104.14 92.71)
+		(at 85.09 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4ebe1f59-f5b6-4221-a611-37367435305d")
 	)
 	(junction
-		(at 104.14 81.28)
+		(at 116.84 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "92204388-abc1-4b6a-a764-f32997c76c85")
+	)
+	(junction
+		(at 149.86 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9c9c5f4e-3063-4b77-b131-afdcf640b449")
+	)
+	(junction
+		(at 99.06 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b7b4533b-240d-499e-b218-3edbc5ba0d86")
+	)
+	(junction
+		(at 85.09 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c3dccb98-97e3-4eb6-bdf8-d4805672772f")
 	)
 	(junction
-		(at 160.02 115.57)
+		(at 116.84 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c52175a9-8dd4-4619-b3b1-c1f349926785")
+	)
+	(junction
+		(at 149.86 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d1b08cb3-63e8-4c44-9e06-0a79cf7436d4")
+	)
+	(junction
+		(at 185.42 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d577e140-6e51-424d-bb52-d52f65a58281")
 	)
 	(junction
-		(at 119.38 78.74)
+		(at 130.81 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "fda9719b-bb42-4dab-b508-ec23a66160c8")
+		(uuid "d90f70d7-1d95-4f40-99b0-54793a7eab64")
 	)
 	(no_connect
-		(at 151.13 83.82)
+		(at 176.53 82.55)
 		(uuid "06d567e3-399c-4711-9168-22d06f64bdbc")
 	)
 	(wire
 		(pts
-			(xy 119.38 91.44) (xy 119.38 92.71)
+			(xy 116.84 88.9) (xy 116.84 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1349,7 +1544,17 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 83.82) (xy 182.88 83.82)
+			(xy 163.83 91.44) (xy 149.86 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08831ee6-8192-4e95-ae61-a566ce58df62")
+	)
+	(wire
+		(pts
+			(xy 201.93 82.55) (xy 208.28 82.55)
 		)
 		(stroke
 			(width 0)
@@ -1359,7 +1564,27 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 115.57) (xy 160.02 116.84)
+			(xy 163.83 74.93) (xy 163.83 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10b07f7d-c628-4ed7-a90c-bc18ccbad2f6")
+	)
+	(wire
+		(pts
+			(xy 149.86 74.93) (xy 163.83 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10dac5ae-9feb-41a8-9edd-da0fa9592ba4")
+	)
+	(wire
+		(pts
+			(xy 185.42 114.3) (xy 185.42 115.57)
 		)
 		(stroke
 			(width 0)
@@ -1369,17 +1594,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 76.2) (xy 151.13 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "175bbb50-f0ec-4ebd-ba34-90dbc96ca0c5")
-	)
-	(wire
-		(pts
-			(xy 104.14 92.71) (xy 119.38 92.71)
+			(xy 85.09 91.44) (xy 99.06 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1389,7 +1604,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 78.74) (xy 119.38 78.74)
+			(xy 81.28 77.47) (xy 116.84 77.47)
 		)
 		(stroke
 			(width 0)
@@ -1399,7 +1614,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 81.28) (xy 176.53 81.28)
+			(xy 209.55 80.01) (xy 201.93 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1409,7 +1624,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 115.57) (xy 160.02 115.57)
+			(xy 200.66 114.3) (xy 185.42 114.3)
 		)
 		(stroke
 			(width 0)
@@ -1419,7 +1634,17 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 91.44) (xy 134.62 92.71)
+			(xy 130.81 81.28) (xy 130.81 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41ae7d56-0ec7-4336-8594-ad076c3ebcb6")
+	)
+	(wire
+		(pts
+			(xy 149.86 88.9) (xy 149.86 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1429,7 +1654,27 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 78.74) (xy 119.38 83.82)
+			(xy 130.81 88.9) (xy 130.81 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4df1d586-2dc2-4a1d-b861-311d6afdde1d")
+	)
+	(wire
+		(pts
+			(xy 99.06 80.01) (xy 99.06 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e8e930f-d811-45fc-81eb-df9a65bfa2c6")
+	)
+	(wire
+		(pts
+			(xy 116.84 77.47) (xy 116.84 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1439,7 +1684,17 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 78.74) (xy 176.53 78.74)
+			(xy 130.81 77.47) (xy 176.53 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "543d6b00-46b2-40d8-95aa-6daa2995bc46")
+	)
+	(wire
+		(pts
+			(xy 210.82 77.47) (xy 201.93 77.47)
 		)
 		(stroke
 			(width 0)
@@ -1449,7 +1704,17 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 76.2) (xy 176.53 76.2)
+			(xy 116.84 77.47) (xy 130.81 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65a0f331-e8eb-4753-8b92-a34938c833a6")
+	)
+	(wire
+		(pts
+			(xy 210.82 74.93) (xy 201.93 74.93)
 		)
 		(stroke
 			(width 0)
@@ -1459,7 +1724,17 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 63.5) (xy 163.83 66.04)
+			(xy 99.06 88.9) (xy 99.06 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d8ac36a-f887-4d3e-bb9d-52dc3fab5d9d")
+	)
+	(wire
+		(pts
+			(xy 189.23 62.23) (xy 189.23 64.77)
 		)
 		(stroke
 			(width 0)
@@ -1469,7 +1744,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 83.82) (xy 182.88 95.25)
+			(xy 208.28 82.55) (xy 208.28 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1479,7 +1754,17 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 92.71) (xy 104.14 93.98)
+			(xy 163.83 74.93) (xy 176.53 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85fb6155-ce94-4546-8450-93f1410f96f2")
+	)
+	(wire
+		(pts
+			(xy 85.09 91.44) (xy 85.09 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1489,7 +1774,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 81.28) (xy 151.13 81.28)
+			(xy 85.09 80.01) (xy 99.06 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1499,17 +1784,27 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 78.74) (xy 151.13 78.74)
+			(xy 99.06 80.01) (xy 176.53 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a29d5a8c-b855-43cf-8a1f-b9d445d5737f")
+		(uuid "97ed6db9-74ba-4e48-9cf5-18b72702db1f")
 	)
 	(wire
 		(pts
-			(xy 175.26 124.46) (xy 175.26 125.73)
+			(xy 116.84 91.44) (xy 130.81 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0b62d03-5ed8-4a3d-b5c8-4cba9b531359")
+	)
+	(wire
+		(pts
+			(xy 200.66 123.19) (xy 200.66 124.46)
 		)
 		(stroke
 			(width 0)
@@ -1519,7 +1814,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 127) (xy 160.02 125.73)
+			(xy 185.42 125.73) (xy 185.42 124.46)
 		)
 		(stroke
 			(width 0)
@@ -1529,7 +1824,17 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 125.73) (xy 160.02 124.46)
+			(xy 149.86 91.44) (xy 149.86 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c60caf9e-8bfe-48bf-85a4-10859b789544")
+	)
+	(wire
+		(pts
+			(xy 185.42 124.46) (xy 185.42 123.19)
 		)
 		(stroke
 			(width 0)
@@ -1539,7 +1844,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 76.2) (xy 134.62 76.2)
+			(xy 81.28 74.93) (xy 149.86 74.93)
 		)
 		(stroke
 			(width 0)
@@ -1549,7 +1854,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 115.57) (xy 175.26 116.84)
+			(xy 200.66 114.3) (xy 200.66 115.57)
 		)
 		(stroke
 			(width 0)
@@ -1559,7 +1864,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 91.44) (xy 104.14 92.71)
+			(xy 85.09 88.9) (xy 85.09 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1569,7 +1874,17 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 95.25) (xy 163.83 93.98)
+			(xy 163.83 88.9) (xy 163.83 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfaff301-5d6d-4f2b-9b0c-06933a4ddbb0")
+	)
+	(wire
+		(pts
+			(xy 189.23 93.98) (xy 189.23 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1579,7 +1894,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 114.3) (xy 160.02 115.57)
+			(xy 185.42 113.03) (xy 185.42 114.3)
 		)
 		(stroke
 			(width 0)
@@ -1589,7 +1904,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 81.28) (xy 104.14 83.82)
+			(xy 85.09 80.01) (xy 85.09 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1599,7 +1914,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 125.73) (xy 160.02 125.73)
+			(xy 200.66 124.46) (xy 185.42 124.46)
 		)
 		(stroke
 			(width 0)
@@ -1609,7 +1924,17 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 81.28) (xy 104.14 81.28)
+			(xy 116.84 91.44) (xy 116.84 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1639137-5023-4f32-a089-6954355663b1")
+	)
+	(wire
+		(pts
+			(xy 81.28 80.01) (xy 85.09 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1619,17 +1944,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 92.71) (xy 134.62 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f7fde6a3-151e-42fb-849b-827c0ee654cd")
-	)
-	(wire
-		(pts
-			(xy 134.62 76.2) (xy 134.62 83.82)
+			(xy 149.86 74.93) (xy 149.86 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1639,7 +1954,7 @@
 	)
 	(global_label "ALERT_ADS1115"
 		(shape output)
-		(at 185.42 76.2 0)
+		(at 210.82 74.93 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1649,7 +1964,7 @@
 		)
 		(uuid "206182ed-b440-4a83-b3ba-390deb7f342e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 203.2822 76.2 0)
+			(at 228.6822 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1661,7 +1976,7 @@
 	)
 	(global_label "Current_ACS"
 		(shape input)
-		(at 100.33 81.28 180)
+		(at 81.28 80.01 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1671,7 +1986,7 @@
 		)
 		(uuid "2d0c37c0-5798-40b7-b907-cf8b70b8a3d0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 85.8544 81.28 0)
+			(at 66.8044 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1683,7 +1998,7 @@
 	)
 	(global_label "Voltage_LLC"
 		(shape input)
-		(at 100.33 78.74 180)
+		(at 81.28 77.47 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1693,7 +2008,7 @@
 		)
 		(uuid "58b0f532-14de-4f96-926f-17611501986c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 86.0359 78.74 0)
+			(at 66.9859 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1705,7 +2020,7 @@
 	)
 	(global_label "SDA_ADS1115"
 		(shape bidirectional)
-		(at 184.15 81.28 0)
+		(at 209.55 80.01 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1715,7 +2030,7 @@
 		)
 		(uuid "7113ef2a-3ab9-410f-8ec1-22e965fe79f6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 201.1883 81.28 0)
+			(at 226.5883 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1727,7 +2042,7 @@
 	)
 	(global_label "VAC_IN"
 		(shape input)
-		(at 100.33 76.2 180)
+		(at 81.28 74.93 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1737,7 +2052,7 @@
 		)
 		(uuid "98a62eba-8d4d-4f57-8087-e8109d9dbf4f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 90.9947 76.2 0)
+			(at 71.9447 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1749,7 +2064,7 @@
 	)
 	(global_label "SCL_ADS1115"
 		(shape output)
-		(at 185.42 78.74 0)
+		(at 210.82 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1759,7 +2074,7 @@
 		)
 		(uuid "a99d6b7f-dcb5-430e-aa35-d138e3d97f56")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 201.2865 78.74 0)
+			(at 226.6865 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1771,7 +2086,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_1nF_50V")
-		(at 119.38 90.17 90)
+		(at 116.84 87.63 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1779,8 +2094,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "013635ba-2fc7-4aaf-ba5e-38e806b57350")
-		(property "Reference" "C96"
-			(at 123.19 86.3599 90)
+		(property "Reference" "C93"
+			(at 120.65 83.8199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1789,7 +2104,7 @@
 			)
 		)
 		(property "Value" "1nF/50V"
-			(at 123.19 88.8999 90)
+			(at 120.65 86.3599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1798,7 +2113,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-			(at 114.3 90.424 0)
+			(at 111.76 87.884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1807,7 +2122,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 114.3 89.916 0)
+			(at 111.76 87.376 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1816,7 +2131,7 @@
 			)
 		)
 		(property "Description" "10%, 0603 (1608 Metric)"
-			(at 113.792 89.154 0)
+			(at 111.252 86.614 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1825,7 +2140,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 114.3 88.9 0)
+			(at 111.76 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1834,7 +2149,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Gốm 0603 1nF 50V"
-			(at 113.792 88.9 0)
+			(at 111.252 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1843,7 +2158,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-1nf-50v"
-			(at 114.3 90.17 0)
+			(at 111.76 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1860,7 +2175,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
-					(reference "C96")
+					(reference "C93")
 					(unit 1)
 				)
 			)
@@ -1868,15 +2183,15 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_10uF_16V")
-		(at 160.02 124.46 90)
+		(at 185.42 123.19 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "04d52fc0-f804-4d63-8a49-5979788dabe1")
-		(property "Reference" "C98"
-			(at 162.306 120.142 90)
+		(property "Reference" "C95"
+			(at 187.706 118.872 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1885,7 +2200,7 @@
 			)
 		)
 		(property "Value" "10uF/16V"
-			(at 162.052 122.428 90)
+			(at 187.452 121.158 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1894,7 +2209,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-			(at 154.94 124.714 0)
+			(at 180.34 123.444 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1903,7 +2218,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 154.94 124.206 0)
+			(at 180.34 122.936 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1912,7 +2227,7 @@
 			)
 		)
 		(property "Description" "10%, 0603 (1608 Metric)"
-			(at 154.432 123.444 0)
+			(at 179.832 122.174 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1921,7 +2236,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 154.94 123.19 0)
+			(at 180.34 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1930,7 +2245,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Gốm 0603 10uF 16V"
-			(at 154.432 123.19 0)
+			(at 179.832 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1939,7 +2254,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-10uf-16v"
-			(at 154.94 124.46 0)
+			(at 180.34 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1956,7 +2271,72 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
-					(reference "C98")
+					(reference "C95")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDA")
+		(at 116.84 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2637eb6e-eda3-41c4-a553-502055274316")
+		(property "Reference" "#PWR0114"
+			(at 116.84 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 116.84 96.774 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 116.84 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ea352bf8-bf88-4979-bc5c-d36796fbe0a8")
+		)
+		(instances
+			(project "PFC & LLC"
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
+					(reference "#PWR0114")
 					(unit 1)
 				)
 			)
@@ -1965,15 +2345,15 @@
 	(symbol
 		(lib_name "Ceramic_Cap_SMD_100nF_16V_1")
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_16V")
-		(at 175.26 123.19 90)
+		(at 200.66 121.92 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "297f8056-6560-4f33-991e-293b3b477fb5")
-		(property "Reference" "C99"
-			(at 177.8 120.396 90)
+		(property "Reference" "C96"
+			(at 203.2 119.126 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1982,7 +2362,7 @@
 			)
 		)
 		(property "Value" "100nF/16V"
-			(at 177.546 122.428 90)
+			(at 202.946 121.158 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1991,7 +2371,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-			(at 170.18 123.444 0)
+			(at 195.58 122.174 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2000,7 +2380,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 170.18 122.936 0)
+			(at 195.58 121.666 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2009,7 +2389,7 @@
 			)
 		)
 		(property "Description" "10%, 0603 (1608 Metric)"
-			(at 169.672 122.174 0)
+			(at 195.072 120.904 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2018,7 +2398,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 170.18 121.92 0)
+			(at 195.58 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2027,7 +2407,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Gốm 0603 100nF (0.1uF) 16V"
-			(at 169.672 121.92 0)
+			(at 195.072 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2036,7 +2416,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-100nf-0-1uf-16v"
-			(at 170.18 123.19 0)
+			(at 195.58 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2053,7 +2433,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
-					(reference "C99")
+					(reference "C96")
 					(unit 1)
 				)
 			)
@@ -2061,7 +2441,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 163.83 95.25 0)
+		(at 189.23 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2069,8 +2449,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "38cc0c8b-ccb7-4fd2-8be6-e717c689edc0")
-		(property "Reference" "#PWR0108"
-			(at 163.83 100.33 0)
+		(property "Reference" "#PWR0119"
+			(at 189.23 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2079,7 +2459,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 163.703 99.06 0)
+			(at 189.103 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2087,7 +2467,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 96.52 0)
+			(at 189.23 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2096,7 +2476,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 96.52 0)
+			(at 189.23 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2105,7 +2485,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 163.83 95.25 0)
+			(at 189.23 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2119,7 +2499,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
-					(reference "#PWR0108")
+					(reference "#PWR0119")
 					(unit 1)
 				)
 			)
@@ -2127,7 +2507,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 163.83 63.5 0)
+		(at 189.23 62.23 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2135,8 +2515,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5a587e01-267d-4426-9f47-64fb1d8521ab")
-		(property "Reference" "#PWR0107"
-			(at 163.83 67.31 0)
+		(property "Reference" "#PWR0118"
+			(at 189.23 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2145,7 +2525,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 163.83 59.436 0)
+			(at 189.23 58.166 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2153,7 +2533,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 63.5 0)
+			(at 189.23 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2162,7 +2542,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 63.5 0)
+			(at 189.23 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2171,7 +2551,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 163.83 63.5 0)
+			(at 189.23 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2185,7 +2565,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
-					(reference "#PWR0107")
+					(reference "#PWR0118")
 					(unit 1)
 				)
 			)
@@ -2193,7 +2573,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_1nF_50V")
-		(at 134.62 90.17 90)
+		(at 149.86 87.63 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2201,8 +2581,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6260381b-b8f2-4edf-9e1d-021b88b39ea4")
-		(property "Reference" "C97"
-			(at 138.43 86.3599 90)
+		(property "Reference" "C94"
+			(at 153.67 83.8199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2211,7 +2591,7 @@
 			)
 		)
 		(property "Value" "1nF/50V"
-			(at 138.43 88.8999 90)
+			(at 153.67 86.3599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2220,7 +2600,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-			(at 129.54 90.424 0)
+			(at 144.78 87.884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2229,7 +2609,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 129.54 89.916 0)
+			(at 144.78 87.376 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2238,7 +2618,7 @@
 			)
 		)
 		(property "Description" "10%, 0603 (1608 Metric)"
-			(at 129.032 89.154 0)
+			(at 144.272 86.614 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2247,7 +2627,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 129.54 88.9 0)
+			(at 144.78 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2256,7 +2636,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Gốm 0603 1nF 50V"
-			(at 129.032 88.9 0)
+			(at 144.272 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2265,7 +2645,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-1nf-50v"
-			(at 129.54 90.17 0)
+			(at 144.78 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2282,7 +2662,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
-					(reference "C97")
+					(reference "C94")
 					(unit 1)
 				)
 			)
@@ -2290,7 +2670,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 160.02 127 0)
+		(at 185.42 125.73 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2298,8 +2678,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64bdd20b-64aa-45e2-8033-8ba4fb96543a")
-		(property "Reference" "#PWR0106"
-			(at 160.02 132.08 0)
+		(property "Reference" "#PWR0117"
+			(at 185.42 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2308,7 +2688,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 159.893 130.81 0)
+			(at 185.293 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2316,7 +2696,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 128.27 0)
+			(at 185.42 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2325,7 +2705,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 128.27 0)
+			(at 185.42 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2334,7 +2714,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 160.02 127 0)
+			(at 185.42 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2348,7 +2728,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
-					(reference "#PWR0106")
+					(reference "#PWR0117")
 					(unit 1)
 				)
 			)
@@ -2356,15 +2736,15 @@
 	)
 	(symbol
 		(lib_id "power:GNDA")
-		(at 104.14 93.98 0)
+		(at 85.09 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "71774aa1-f88e-4282-b344-dffb1b0e6fef")
-		(property "Reference" "#PWR0104"
-			(at 104.14 100.33 0)
+		(property "Reference" "#PWR0113"
+			(at 85.09 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2373,7 +2753,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 104.14 98.044 0)
+			(at 85.09 96.774 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2381,7 +2761,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 93.98 0)
+			(at 85.09 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2390,7 +2770,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 93.98 0)
+			(at 85.09 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2399,7 +2779,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
-			(at 104.14 93.98 0)
+			(at 85.09 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2413,7 +2793,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
-					(reference "#PWR0104")
+					(reference "#PWR0113")
 					(unit 1)
 				)
 			)
@@ -2421,7 +2801,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 182.88 95.25 0)
+		(at 208.28 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2429,8 +2809,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "82608ff2-ff34-4571-afc3-8c1ee23e5f05")
-		(property "Reference" "#PWR0109"
-			(at 182.88 101.6 0)
+		(property "Reference" "#PWR0120"
+			(at 208.28 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2439,7 +2819,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 182.88 99.06 0)
+			(at 208.28 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2447,7 +2827,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 182.88 95.25 0)
+			(at 208.28 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2456,7 +2836,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 182.88 95.25 0)
+			(at 208.28 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2465,7 +2845,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 182.88 95.25 0)
+			(at 208.28 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2479,7 +2859,72 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
-					(reference "#PWR0109")
+					(reference "#PWR0120")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDA")
+		(at 149.86 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "88f13750-e65f-43e8-a950-bf4bb07f5243")
+		(property "Reference" "#PWR0115"
+			(at 149.86 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 149.86 96.774 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 149.86 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "88c09ab9-ff65-466a-9ca7-f7f6812d59b0")
+		)
+		(instances
+			(project "PFC & LLC"
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
+					(reference "#PWR0115")
 					(unit 1)
 				)
 			)
@@ -2487,7 +2932,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_1nF_50V")
-		(at 104.14 90.17 90)
+		(at 85.09 87.63 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2495,8 +2940,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "96eeb72f-9aca-4e35-9f5e-2f6cba99a5d2")
-		(property "Reference" "C95"
-			(at 107.95 86.3599 90)
+		(property "Reference" "C92"
+			(at 88.9 83.8199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2505,7 +2950,7 @@
 			)
 		)
 		(property "Value" "1nF/50V"
-			(at 107.95 88.8999 90)
+			(at 88.9 86.3599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2514,7 +2959,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-			(at 99.06 90.424 0)
+			(at 80.01 87.884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2523,7 +2968,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 99.06 89.916 0)
+			(at 80.01 87.376 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2532,7 +2977,7 @@
 			)
 		)
 		(property "Description" "10%, 0603 (1608 Metric)"
-			(at 98.552 89.154 0)
+			(at 79.502 86.614 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2541,7 +2986,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 99.06 88.9 0)
+			(at 80.01 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2550,7 +2995,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Gốm 0603 1nF 50V"
-			(at 98.552 88.9 0)
+			(at 79.502 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2559,7 +3004,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-1nf-50v"
-			(at 99.06 90.17 0)
+			(at 80.01 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2576,7 +3021,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
-					(reference "C95")
+					(reference "C92")
 					(unit 1)
 				)
 			)
@@ -2584,7 +3029,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 160.02 114.3 0)
+		(at 185.42 113.03 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2592,8 +3037,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9c671d93-7b65-43ed-a221-4ca1772d8af4")
-		(property "Reference" "#PWR0105"
-			(at 160.02 118.11 0)
+		(property "Reference" "#PWR0116"
+			(at 185.42 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2602,7 +3047,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 160.02 110.236 0)
+			(at 185.42 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2610,7 +3055,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 114.3 0)
+			(at 185.42 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2619,7 +3064,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 114.3 0)
+			(at 185.42 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2628,7 +3073,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 160.02 114.3 0)
+			(at 185.42 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2642,7 +3087,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
-					(reference "#PWR0105")
+					(reference "#PWR0116")
 					(unit 1)
 				)
 			)
@@ -2650,15 +3095,15 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:ADS1115IDGS")
-		(at 154.94 90.17 0)
+		(at 180.34 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "9e928dca-44f8-4a6f-b39e-12a26f1bdb41")
-		(property "Reference" "U17"
-			(at 157.226 68.834 0)
+		(property "Reference" "U15"
+			(at 182.626 67.564 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2667,7 +3112,7 @@
 			)
 		)
 		(property "Value" "ADS1115IDGS"
-			(at 179.578 90.932 0)
+			(at 204.978 89.662 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2676,7 +3121,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:VSSOP-10"
-			(at 153.67 113.03 0)
+			(at 179.07 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2685,7 +3130,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ads1113.pdf"
-			(at 153.67 113.03 0)
+			(at 179.07 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2694,7 +3139,7 @@
 			)
 		)
 		(property "Description" "Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs With Internal Reference, Oscillator, and Programmable Comparator, VSSOP-10"
-			(at 154.94 113.03 0)
+			(at 180.34 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2703,7 +3148,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 154.94 113.03 0)
+			(at 180.34 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2712,7 +3157,7 @@
 			)
 		)
 		(property "Supply part number" "ADS1115IDGSR IC ADC 16-Bit Sigma-Delta 10-VSSOP"
-			(at 154.94 113.03 0)
+			(at 180.34 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2721,7 +3166,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/ads1115idgsr-ic-adc-16-bit-sigma-delta-10-vssop"
-			(at 154.94 113.03 0)
+			(at 180.34 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2730,7 +3175,7 @@
 			)
 		)
 		(property " Supply part number" ""
-			(at 154.94 90.17 0)
+			(at 180.34 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2739,7 +3184,7 @@
 			)
 		)
 		(property "Field7" ""
-			(at 154.94 90.17 0)
+			(at 180.34 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2748,7 +3193,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 154.94 90.17 0)
+			(at 180.34 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2757,7 +3202,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 154.94 90.17 0)
+			(at 180.34 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2766,7 +3211,7 @@
 			)
 		)
 		(property "Supply part name" ""
-			(at 154.94 90.17 0)
+			(at 180.34 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2807,7 +3252,298 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
-					(reference "U17")
+					(reference "U15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:BZT52-C5V1")
+		(at 130.81 88.9 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b116e74f-838c-408e-82d6-56da3cce0bb8")
+		(property "Reference" "D16"
+			(at 133.35 83.8199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "BZT52-C5V1"
+			(at 133.35 86.3599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Diode_Zener_BZT52H"
+			(at 124.46 89.662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.thegioiic.com/upload/documents/bd01e81ba54c77ab315e0ded4820e422.pdf"
+			(at 123.952 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "3.3V 375mW Zener Diode, SOD-123F"
+			(at 123.698 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 124.206 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "DIODE ZENER 5.1V 500mW SOD123"
+			(at 123.952 89.408 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/bzt52c5v1-diode-zener-5-1v-500mw"
+			(at 124.206 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "85f548c5-d90f-424d-9710-6fe5958b5ec2")
+		)
+		(pin "2"
+			(uuid "3a49c009-4ea7-4b40-bd1b-e3839db5a014")
+		)
+		(instances
+			(project "PFC & LLC"
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
+					(reference "D16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:BZT52-C5V1")
+		(at 99.06 88.9 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f11816c2-8e85-4fde-81a0-ab7a33a4c98e")
+		(property "Reference" "D15"
+			(at 101.6 83.8199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "BZT52-C5V1"
+			(at 101.6 86.3599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Diode_Zener_BZT52H"
+			(at 92.71 89.662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.thegioiic.com/upload/documents/bd01e81ba54c77ab315e0ded4820e422.pdf"
+			(at 92.202 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "3.3V 375mW Zener Diode, SOD-123F"
+			(at 91.948 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 92.456 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "DIODE ZENER 5.1V 500mW SOD123"
+			(at 92.202 89.408 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/bzt52c5v1-diode-zener-5-1v-500mw"
+			(at 92.456 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dfa97020-8b99-4c28-9e8d-37343f84aa6e")
+		)
+		(pin "2"
+			(uuid "1c1c6310-36a7-4cbc-a253-dd05b947ef96")
+		)
+		(instances
+			(project "PFC & LLC"
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:BZT52-C5V1")
+		(at 163.83 88.9 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f7b09d26-0195-4916-a141-02644bee0dcc")
+		(property "Reference" "D17"
+			(at 166.37 83.8199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "BZT52-C5V1"
+			(at 166.37 86.3599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Diode_Zener_BZT52H"
+			(at 157.48 89.662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.thegioiic.com/upload/documents/bd01e81ba54c77ab315e0ded4820e422.pdf"
+			(at 156.972 84.074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "3.3V 375mW Zener Diode, SOD-123F"
+			(at 156.718 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 157.226 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "DIODE ZENER 5.1V 500mW SOD123"
+			(at 156.972 89.408 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/bzt52c5v1-diode-zener-5-1v-500mw"
+			(at 157.226 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "79420249-63ac-467b-948d-d90398c703e4")
+		)
+		(pin "2"
+			(uuid "f31d316d-6c8a-4fae-b718-558d3ba3dd8f")
+		)
+		(instances
+			(project ""
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/e834f355-1206-4dc4-b161-ae801911fe6e"
+					(reference "D17")
 					(unit 1)
 				)
 			)

@@ -6,7 +6,7 @@
 	(paper "A3")
 	(title_block
 		(title "LLC")
-		(date "2024-11-03")
+		(date "2024-11-06")
 		(rev "Ver 2.0")
 		(company "Ho Chi Minh City University of Technology - HCMUT")
 		(comment 1 "Design: QUOC THANG - DONG KHOA")
@@ -3021,6 +3021,183 @@
 				)
 			)
 		)
+		(symbol "charge_battery_sym_lib:Res_2R_1206_1%"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "2R/5%/1_4W"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:Res_1206"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor 2 Ohm 1206 5%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply Name" "thegioiic"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply Part Number" "Điện Trở 2 Ohm 1206 5%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.thegioiic.com/dien-tro-2-ohm-1206-5-"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Res_2R_1206_1%_0_1"
+				(polyline
+					(pts
+						(xy -2.286 -3.81) (xy -2.54 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -3.81) (xy 2.54 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 -3.81) (xy -1.905 -2.794) (xy -1.524 -3.81) (xy -1.143 -4.826) (xy -0.762 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.762 -3.81) (xy -0.381 -2.794) (xy 0 -3.81) (xy 0.381 -4.826) (xy 0.762 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -3.81) (xy 1.143 -2.794) (xy 1.524 -3.81) (xy 1.905 -4.826) (xy 2.286 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Res_2R_1206_1%_1_1"
+				(pin passive line
+					(at -3.81 -3.81 0)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 -3.81 180)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "charge_battery_sym_lib:SS54"
 			(pin_numbers hide)
 			(pin_names hide)
@@ -3100,7 +3277,7 @@
 			(symbol "SS54_0_1"
 				(polyline
 					(pts
-						(xy -0.508 0) (xy 0.635 0)
+						(xy -1.27 0) (xy -0.127 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -3112,7 +3289,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.762 -1.905) (xy 3.302 0)
+						(xy 0 -1.27) (xy 2.54 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -3124,7 +3301,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.762 1.905) (xy 0.762 -1.905)
+						(xy 0 1.27) (xy 0 -1.27)
 					)
 					(stroke
 						(width 0.2032)
@@ -3136,7 +3313,7 @@
 				)
 				(polyline
 					(pts
-						(xy 3.302 -1.905) (xy 3.302 1.905)
+						(xy 2.54 -1.27) (xy 2.54 1.27)
 					)
 					(stroke
 						(width 0.2032)
@@ -3148,7 +3325,7 @@
 				)
 				(polyline
 					(pts
-						(xy 3.302 0) (xy 0.762 1.905)
+						(xy 2.54 0) (xy 0 1.27)
 					)
 					(stroke
 						(width 0.2032)
@@ -3160,7 +3337,7 @@
 				)
 				(polyline
 					(pts
-						(xy 3.302 0) (xy 4.572 0)
+						(xy 2.54 0) (xy 3.81 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -3174,7 +3351,7 @@
 			(symbol "SS54_1_1"
 				(pin unspecified line
 					(at -3.81 0 0)
-					(length 3.81)
+					(length 2.54)
 					(name "A"
 						(effects
 							(font
@@ -3191,8 +3368,8 @@
 					)
 				)
 				(pin unspecified line
-					(at 7.62 0 180)
-					(length 3.81)
+					(at 6.35 0 180)
+					(length 2.54)
 					(name "K"
 						(effects
 							(font
@@ -3703,13 +3880,13 @@
 		)
 	)
 	(junction
-		(at 227.33 73.66)
+		(at 181.61 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "05f6be53-61f6-460d-95e6-15ff77b90296")
+		(uuid "17a0afb3-8587-4015-a728-86b12ba9dcad")
 	)
 	(junction
-		(at 171.45 132.08)
+		(at 147.32 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1d80bbd7-fd6a-4458-84d8-0e25c502498b")
@@ -3721,7 +3898,7 @@
 		(uuid "23869592-275d-495d-a06a-f2508c67c7f9")
 	)
 	(junction
-		(at 147.32 154.94)
+		(at 123.19 173.99)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "298ca4cf-d632-43b2-a06b-8701716fae2d")
@@ -3733,7 +3910,7 @@
 		(uuid "2eb4c9f3-3107-4beb-bac3-eeae2b114d9f")
 	)
 	(junction
-		(at 212.09 160.02)
+		(at 187.96 179.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "36c6d6c1-f4c4-411f-8b47-8db8d524125d")
@@ -3745,16 +3922,28 @@
 		(uuid "382e6fde-3d05-4be2-86c4-0399bc40fc12")
 	)
 	(junction
-		(at 127 142.24)
+		(at 181.61 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3c66b2bc-c892-443f-a13c-1428eda8e794")
+	)
+	(junction
+		(at 102.87 161.29)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "43132627-c9a5-47f1-9825-5b8f003b836e")
 	)
 	(junction
-		(at 190.5 132.08)
+		(at 166.37 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4b6156e5-813c-4058-a40b-e06c0767b573")
+	)
+	(junction
+		(at 148.59 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e2676e4-d86f-4913-92aa-0634aba11573")
 	)
 	(junction
 		(at 184.15 76.2)
@@ -3787,7 +3976,7 @@
 		(uuid "6974798e-2b9a-492f-85d0-53c571b4e99d")
 	)
 	(junction
-		(at 193.04 96.52)
+		(at 193.04 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7efe163b-71fa-4ee9-a197-cc1ce27002f5")
@@ -3799,16 +3988,22 @@
 		(uuid "80cdbae7-81cf-4a92-9595-572e74944a4a")
 	)
 	(junction
-		(at 184.15 83.82)
+		(at 184.15 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "863588f9-a18d-4eba-9692-0e9455394962")
 	)
 	(junction
-		(at 212.09 96.52)
+		(at 228.6 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "bac4cf42-56b0-455c-bd0c-707921bb6d8b")
+		(uuid "929e8439-0aee-4214-8d9c-119528efc725")
+	)
+	(junction
+		(at 212.09 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a56a3fc6-fafd-4f0d-86b1-77d0be68c295")
 	)
 	(junction
 		(at 279.4 73.66)
@@ -3817,37 +4012,43 @@
 		(uuid "bb1f0d8d-66c9-4fc6-a0d2-8bea26dfd7c0")
 	)
 	(junction
-		(at 198.12 132.08)
+		(at 173.99 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c6bf1945-5a5c-4b25-a652-9b56abe4ecec")
 	)
 	(junction
-		(at 198.12 160.02)
+		(at 111.76 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cbe2c945-65c0-440a-a838-682d532414b6")
+	)
+	(junction
+		(at 173.99 179.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d1c59ef3-5ac9-405a-b2b2-0993f86e5277")
 	)
 	(junction
-		(at 213.36 73.66)
+		(at 210.82 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e7a19cfa-c604-486d-b9e3-c31e8389ff4c")
+		(uuid "d907f69b-e54d-43af-af4a-8fcd2db53368")
 	)
 	(junction
-		(at 127 157.48)
+		(at 102.87 176.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e904f7f0-cacc-4250-8031-449f0fb3e5e5")
 	)
 	(junction
-		(at 127 170.18)
+		(at 102.87 189.23)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ea068d11-67e8-411f-bd0a-08be6fce144e")
 	)
 	(junction
-		(at 127 132.08)
+		(at 102.87 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f0dae442-5c9c-42c7-918f-adf0645d0ff6")
@@ -3859,14 +4060,14 @@
 		(uuid "f12f9380-4675-468a-b79d-e3cc26105ab5")
 	)
 	(junction
-		(at 120.65 57.15)
+		(at 148.59 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ffe8c932-cd5e-483d-acaa-5e66f8a534da")
+		(uuid "fb377cd3-19d4-4c03-ae1c-7b069d4428a9")
 	)
 	(wire
 		(pts
-			(xy 184.15 83.82) (xy 185.42 83.82)
+			(xy 184.15 93.98) (xy 185.42 93.98)
 		)
 		(stroke
 			(width 0)
@@ -3886,7 +4087,17 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 142.24) (xy 198.12 160.02)
+			(xy 111.76 43.18) (xy 193.04 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bb52704-4f53-4497-ae83-31e27d0c1361")
+	)
+	(wire
+		(pts
+			(xy 173.99 161.29) (xy 173.99 179.07)
 		)
 		(stroke
 			(width 0)
@@ -3896,7 +4107,17 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 157.48) (xy 127 157.48)
+			(xy 165.1 82.55) (xy 170.18 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "113e77b7-6705-4c82-a917-a23a2c1f1206")
+	)
+	(wire
+		(pts
+			(xy 97.79 176.53) (xy 102.87 176.53)
 		)
 		(stroke
 			(width 0)
@@ -3906,7 +4127,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 167.64) (xy 171.45 176.53)
+			(xy 147.32 186.69) (xy 147.32 195.58)
 		)
 		(stroke
 			(width 0)
@@ -3916,7 +4137,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 73.66) (xy 227.33 78.74)
+			(xy 228.6 73.66) (xy 228.6 78.74)
 		)
 		(stroke
 			(width 0)
@@ -3936,13 +4157,13 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 132.08) (xy 190.5 132.08)
+			(xy 210.82 73.66) (xy 215.9 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "29810fff-7e80-4f41-a90c-0af7f5b0f9b1")
+		(uuid "29ef0814-4d99-4b44-8fd9-eb15d94a98a9")
 	)
 	(wire
 		(pts
@@ -3956,7 +4177,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 170.18) (xy 147.32 170.18)
+			(xy 102.87 189.23) (xy 123.19 189.23)
 		)
 		(stroke
 			(width 0)
@@ -3966,7 +4187,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 83.82) (xy 184.15 86.36)
+			(xy 184.15 93.98) (xy 184.15 96.52)
 		)
 		(stroke
 			(width 0)
@@ -3976,7 +4197,27 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 154.94) (xy 147.32 154.94)
+			(xy 163.83 52.07) (xy 168.91 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ea8f1dc-57e7-4d52-b83d-3b17ccf6ab4d")
+	)
+	(wire
+		(pts
+			(xy 111.76 43.18) (xy 111.76 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ff3ea84-e0ac-4f87-bdb5-7169df600efb")
+	)
+	(wire
+		(pts
+			(xy 97.79 173.99) (xy 123.19 173.99)
 		)
 		(stroke
 			(width 0)
@@ -3986,17 +4227,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 96.52) (xy 212.09 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "32a0300b-efaf-4f18-b5a7-3accbf44ba2b")
-	)
-	(wire
-		(pts
-			(xy 171.45 132.08) (xy 176.53 132.08)
+			(xy 147.32 151.13) (xy 152.4 151.13)
 		)
 		(stroke
 			(width 0)
@@ -4006,7 +4237,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 76.2) (xy 184.15 76.2)
+			(xy 144.78 76.2) (xy 184.15 76.2)
 		)
 		(stroke
 			(width 0)
@@ -4026,7 +4257,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 162.56) (xy 234.95 162.56)
+			(xy 154.94 181.61) (xy 210.82 181.61)
 		)
 		(stroke
 			(width 0)
@@ -4036,7 +4267,27 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 160.02) (xy 234.95 160.02)
+			(xy 154.94 82.55) (xy 148.59 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b07338e-eb09-4531-8147-8b4d4652fca5")
+	)
+	(wire
+		(pts
+			(xy 228.6 73.66) (xy 233.68 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ddf3668-8619-47c6-9df5-bc719d52d9b7")
+	)
+	(wire
+		(pts
+			(xy 187.96 179.07) (xy 210.82 179.07)
 		)
 		(stroke
 			(width 0)
@@ -4066,17 +4317,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 57.15) (xy 120.65 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "40c2d13d-8327-4fce-b29b-b04f3057c251")
-	)
-	(wire
-		(pts
-			(xy 127 157.48) (xy 163.83 157.48)
+			(xy 102.87 176.53) (xy 139.7 176.53)
 		)
 		(stroke
 			(width 0)
@@ -4086,7 +4327,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 142.24) (xy 143.51 142.24)
+			(xy 102.87 161.29) (xy 119.38 161.29)
 		)
 		(stroke
 			(width 0)
@@ -4096,7 +4337,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 132.08) (xy 127 133.35)
+			(xy 102.87 151.13) (xy 102.87 152.4)
 		)
 		(stroke
 			(width 0)
@@ -4106,7 +4347,17 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 83.82) (xy 172.72 83.82)
+			(xy 148.59 52.07) (xy 153.67 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43390a78-c74c-453f-a0ea-185fdd8f188d")
+	)
+	(wire
+		(pts
+			(xy 144.78 93.98) (xy 148.59 93.98)
 		)
 		(stroke
 			(width 0)
@@ -4126,7 +4377,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 173.99) (xy 205.74 173.99)
+			(xy 189.23 193.04) (xy 181.61 193.04)
 		)
 		(stroke
 			(width 0)
@@ -4136,7 +4387,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 142.24) (xy 127 143.51)
+			(xy 102.87 161.29) (xy 102.87 162.56)
 		)
 		(stroke
 			(width 0)
@@ -4146,7 +4397,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 132.08) (xy 190.5 147.32)
+			(xy 166.37 151.13) (xy 166.37 166.37)
 		)
 		(stroke
 			(width 0)
@@ -4166,13 +4417,23 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 147.32) (xy 190.5 147.32)
+			(xy 154.94 166.37) (xy 166.37 166.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "4da48c5e-09bf-4fd1-bd3b-94ac55f01ae4")
+	)
+	(wire
+		(pts
+			(xy 148.59 64.77) (xy 154.94 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4df27aab-dd0b-409c-8a37-038b18493036")
 	)
 	(wire
 		(pts
@@ -4196,6 +4457,26 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 151.13) (xy 166.37 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56370feb-45db-4ca1-9ffb-166c16761664")
+	)
+	(wire
+		(pts
+			(xy 181.61 82.55) (xy 181.61 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bff1db7-d895-498f-93c2-71580fa1ab39")
+	)
+	(wire
+		(pts
 			(xy 256.54 81.28) (xy 254 81.28)
 		)
 		(stroke
@@ -4216,7 +4497,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 132.08) (xy 171.45 142.24)
+			(xy 147.32 151.13) (xy 147.32 161.29)
 		)
 		(stroke
 			(width 0)
@@ -4226,7 +4507,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 175.26) (xy 213.36 173.99)
+			(xy 189.23 194.31) (xy 189.23 193.04)
 		)
 		(stroke
 			(width 0)
@@ -4236,7 +4517,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 133.35) (xy 143.51 132.08)
+			(xy 119.38 152.4) (xy 119.38 151.13)
 		)
 		(stroke
 			(width 0)
@@ -4246,7 +4527,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 78.74) (xy 227.33 78.74)
+			(xy 223.52 78.74) (xy 228.6 78.74)
 		)
 		(stroke
 			(width 0)
@@ -4266,7 +4547,17 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 78.74) (xy 213.36 78.74)
+			(xy 148.59 93.98) (xy 156.21 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60daac4c-b949-4178-9e09-2958d4c96415")
+	)
+	(wire
+		(pts
+			(xy 215.9 78.74) (xy 210.82 78.74)
 		)
 		(stroke
 			(width 0)
@@ -4276,7 +4567,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 132.08) (xy 143.51 132.08)
+			(xy 102.87 151.13) (xy 119.38 151.13)
 		)
 		(stroke
 			(width 0)
@@ -4286,7 +4577,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 157.48) (xy 127 161.29)
+			(xy 102.87 176.53) (xy 102.87 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4296,7 +4587,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 149.86) (xy 234.95 149.86)
+			(xy 154.94 168.91) (xy 210.82 168.91)
 		)
 		(stroke
 			(width 0)
@@ -4306,7 +4597,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 83.82) (xy 184.15 83.82)
+			(xy 163.83 93.98) (xy 181.61 93.98)
 		)
 		(stroke
 			(width 0)
@@ -4316,17 +4607,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 57.15) (xy 193.04 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "72ea6bd7-1af1-4ac7-8df9-f0e8cc2fd85f")
-	)
-	(wire
-		(pts
-			(xy 184.15 93.98) (xy 184.15 96.52)
+			(xy 184.15 104.14) (xy 184.15 106.68)
 		)
 		(stroke
 			(width 0)
@@ -4336,7 +4617,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 132.08) (xy 212.09 132.08)
+			(xy 173.99 151.13) (xy 187.96 151.13)
 		)
 		(stroke
 			(width 0)
@@ -4346,7 +4627,17 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 168.91) (xy 147.32 170.18)
+			(xy 193.04 43.18) (xy 193.04 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cbb5e7f-f396-43f0-979a-5a2506170214")
+	)
+	(wire
+		(pts
+			(xy 123.19 187.96) (xy 123.19 189.23)
 		)
 		(stroke
 			(width 0)
@@ -4356,7 +4647,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 170.18) (xy 127 176.53)
+			(xy 102.87 189.23) (xy 102.87 195.58)
 		)
 		(stroke
 			(width 0)
@@ -4366,7 +4657,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 160.02) (xy 198.12 160.02)
+			(xy 154.94 179.07) (xy 173.99 179.07)
 		)
 		(stroke
 			(width 0)
@@ -4376,27 +4667,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 64.77) (xy 180.34 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8621dca9-b34f-45db-893e-f9e2205daeb6")
-	)
-	(wire
-		(pts
-			(xy 213.36 73.66) (xy 215.9 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8c529d63-8c63-4049-85fd-172d212ab883")
-	)
-	(wire
-		(pts
-			(xy 212.09 142.24) (xy 212.09 160.02)
+			(xy 187.96 161.29) (xy 187.96 179.07)
 		)
 		(stroke
 			(width 0)
@@ -4406,7 +4677,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 57.15) (xy 120.65 57.15)
+			(xy 101.6 43.18) (xy 111.76 43.18)
 		)
 		(stroke
 			(width 0)
@@ -4436,7 +4707,17 @@
 	)
 	(wire
 		(pts
-			(xy 127 140.97) (xy 127 142.24)
+			(xy 212.09 106.68) (xy 212.09 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "979f7f03-b7df-4528-a9b6-8f54114870a6")
+	)
+	(wire
+		(pts
+			(xy 102.87 160.02) (xy 102.87 161.29)
 		)
 		(stroke
 			(width 0)
@@ -4446,7 +4727,17 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 88.9) (xy 193.04 96.52)
+			(xy 148.59 52.07) (xy 148.59 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9caaa21d-27c0-4cb9-92e5-ce61a2feb869")
+	)
+	(wire
+		(pts
+			(xy 193.04 99.06) (xy 193.04 106.68)
 		)
 		(stroke
 			(width 0)
@@ -4456,7 +4747,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 76.2) (xy 193.04 78.74)
+			(xy 193.04 76.2) (xy 193.04 88.9)
 		)
 		(stroke
 			(width 0)
@@ -4476,6 +4767,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 52.07) (xy 181.61 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aabb3207-7f47-475e-8d1e-312e14ea3dda")
+	)
+	(wire
+		(pts
 			(xy 256.54 80.01) (xy 256.54 81.28)
 		)
 		(stroke
@@ -4486,7 +4787,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 168.91) (xy 127 170.18)
+			(xy 102.87 187.96) (xy 102.87 189.23)
 		)
 		(stroke
 			(width 0)
@@ -4496,7 +4797,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 96.52) (xy 193.04 96.52)
+			(xy 212.09 106.68) (xy 193.04 106.68)
 		)
 		(stroke
 			(width 0)
@@ -4516,7 +4817,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 130.81) (xy 127 132.08)
+			(xy 102.87 149.86) (xy 102.87 151.13)
 		)
 		(stroke
 			(width 0)
@@ -4526,7 +4827,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 64.77) (xy 172.72 64.77)
+			(xy 144.78 52.07) (xy 148.59 52.07)
 		)
 		(stroke
 			(width 0)
@@ -4536,7 +4837,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 142.24) (xy 143.51 140.97)
+			(xy 119.38 161.29) (xy 119.38 160.02)
 		)
 		(stroke
 			(width 0)
@@ -4546,7 +4847,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 78.74) (xy 213.36 73.66)
+			(xy 210.82 78.74) (xy 210.82 73.66)
 		)
 		(stroke
 			(width 0)
@@ -4576,7 +4877,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 73.66) (xy 227.33 73.66)
+			(xy 223.52 73.66) (xy 228.6 73.66)
 		)
 		(stroke
 			(width 0)
@@ -4586,7 +4887,17 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 73.66) (xy 213.36 73.66)
+			(xy 181.61 64.77) (xy 162.56 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8217edc-8844-4813-aef1-4b72abb5d429")
+	)
+	(wire
+		(pts
+			(xy 193.04 73.66) (xy 210.82 73.66)
 		)
 		(stroke
 			(width 0)
@@ -4596,7 +4907,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 160.02) (xy 212.09 160.02)
+			(xy 173.99 179.07) (xy 187.96 179.07)
 		)
 		(stroke
 			(width 0)
@@ -4606,7 +4917,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 134.62) (xy 212.09 132.08)
+			(xy 187.96 153.67) (xy 187.96 151.13)
 		)
 		(stroke
 			(width 0)
@@ -4616,7 +4927,17 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 86.36) (xy 232.41 96.52)
+			(xy 148.59 82.55) (xy 148.59 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce7af2fd-9af1-40aa-abb6-29ed6770d70a")
+	)
+	(wire
+		(pts
+			(xy 232.41 86.36) (xy 232.41 106.68)
 		)
 		(stroke
 			(width 0)
@@ -4636,7 +4957,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 132.08) (xy 198.12 132.08)
+			(xy 166.37 151.13) (xy 173.99 151.13)
 		)
 		(stroke
 			(width 0)
@@ -4646,23 +4967,13 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 154.94) (xy 163.83 154.94)
+			(xy 123.19 173.99) (xy 139.7 173.99)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "d440cb98-689c-437a-bd3e-86cbdb333d94")
-	)
-	(wire
-		(pts
-			(xy 120.65 57.15) (xy 193.04 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d444f739-6e5c-4b7e-a116-1ef2745195bc")
 	)
 	(wire
 		(pts
@@ -4686,7 +4997,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 175.26) (xy 193.04 173.99)
+			(xy 168.91 194.31) (xy 168.91 193.04)
 		)
 		(stroke
 			(width 0)
@@ -4696,7 +5007,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 154.94) (xy 147.32 161.29)
+			(xy 123.19 173.99) (xy 123.19 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4706,17 +5017,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 73.66) (xy 233.68 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd059d42-4d75-455d-93e8-1ac609b6684d")
-	)
-	(wire
-		(pts
-			(xy 198.12 132.08) (xy 198.12 134.62)
+			(xy 173.99 151.13) (xy 173.99 153.67)
 		)
 		(stroke
 			(width 0)
@@ -4726,13 +5027,23 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 173.99) (xy 200.66 173.99)
+			(xy 168.91 193.04) (xy 176.53 193.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "df9e0580-1728-4a4e-b732-b5790e5cd25b")
+	)
+	(wire
+		(pts
+			(xy 181.61 93.98) (xy 184.15 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfaf9652-e7e1-4ea4-8ce5-1b746d36a799")
 	)
 	(wire
 		(pts
@@ -4746,6 +5057,16 @@
 	)
 	(wire
 		(pts
+			(xy 176.53 52.07) (xy 181.61 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1d8ab30-19b2-46f4-a90e-28a3864ebfa3")
+	)
+	(wire
+		(pts
 			(xy 304.8 101.6) (xy 322.58 101.6)
 		)
 		(stroke
@@ -4756,7 +5077,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 96.52) (xy 184.15 96.52)
+			(xy 193.04 106.68) (xy 184.15 106.68)
 		)
 		(stroke
 			(width 0)
@@ -4773,6 +5094,26 @@
 			(type default)
 		)
 		(uuid "e8178498-11ad-41b4-bf4d-e41d79241d63")
+	)
+	(polyline
+		(pts
+			(xy 243.84 20.32) (xy 243.84 226.06)
+		)
+		(stroke
+			(width 0.508)
+			(type dash)
+		)
+		(uuid "eafc5d48-448f-4f47-b921-d11ed29b8b12")
+	)
+	(wire
+		(pts
+			(xy 177.8 82.55) (xy 181.61 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed3fd698-8f47-4e25-a974-47c8bdad4102")
 	)
 	(wire
 		(pts
@@ -4796,7 +5137,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 130.81) (xy 171.45 132.08)
+			(xy 147.32 149.86) (xy 147.32 151.13)
 		)
 		(stroke
 			(width 0)
@@ -4806,7 +5147,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 96.52) (xy 232.41 96.52)
+			(xy 212.09 106.68) (xy 232.41 106.68)
 		)
 		(stroke
 			(width 0)
@@ -4816,7 +5157,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 77.47) (xy 120.65 100.33)
+			(xy 111.76 81.28) (xy 111.76 109.22)
 		)
 		(stroke
 			(width 0)
@@ -4844,29 +5185,19 @@
 		)
 		(uuid "f84a25a2-6cbc-4fe4-aa2d-e675a1cd5907")
 	)
-	(text "SỬA LẠI THÀNH:\n- 33N\n- 10N"
-		(exclude_from_sim no)
-		(at 219.964 90.932 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
+	(wire
+		(pts
+			(xy 181.61 64.77) (xy 184.15 64.77)
 		)
-		(uuid "18faedfd-260d-4c5a-837e-b62fb85f9f27")
-	)
-	(text "Thêm Fast turn off"
-		(exclude_from_sim no)
-		(at 174.244 53.594 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(uuid "f410ae8f-c134-4c8d-8bc0-a96695cdbe55")
+		(uuid "fb171560-6985-48d8-a414-b5f5cd409608")
 	)
 	(global_label "OUT_M2"
 		(shape output)
-		(at 234.95 162.56 0)
+		(at 210.82 181.61 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4876,7 +5207,7 @@
 		)
 		(uuid "0cb5f63f-b5da-4aa9-ac61-a3f8e9c468a2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 245.1923 162.56 0)
+			(at 221.0623 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4888,7 +5219,7 @@
 	)
 	(global_label "LOAD_M1_M2"
 		(shape output)
-		(at 234.95 160.02 0)
+		(at 210.82 179.07 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4898,7 +5229,7 @@
 		)
 		(uuid "2d7893ef-a1e1-4a12-a590-530f3a0b7c5e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 249.9094 160.02 0)
+			(at 225.7794 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4932,7 +5263,7 @@
 	)
 	(global_label "LOAD_M1_M2"
 		(shape input)
-		(at 158.75 76.2 180)
+		(at 144.78 76.2 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4942,7 +5273,7 @@
 		)
 		(uuid "6cc860de-6279-4d06-b0ee-de7979ffdb41")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 143.7906 76.2 0)
+			(at 129.8206 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4954,7 +5285,7 @@
 	)
 	(global_label "OUT_M1"
 		(shape output)
-		(at 234.95 149.86 0)
+		(at 210.82 168.91 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4964,7 +5295,7 @@
 		)
 		(uuid "81c98219-b12b-4e8a-83d0-ed44cac93159")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 245.1923 149.86 0)
+			(at 221.0623 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4976,7 +5307,7 @@
 	)
 	(global_label "H_Gate_Driver"
 		(shape input)
-		(at 121.92 154.94 180)
+		(at 97.79 173.99 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4986,7 +5317,7 @@
 		)
 		(uuid "a45fba91-4519-4067-b9ff-f920ee58b2ee")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 105.9324 154.94 0)
+			(at 81.8024 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4998,7 +5329,7 @@
 	)
 	(global_label "OUT_M1"
 		(shape input)
-		(at 158.75 64.77 180)
+		(at 144.78 52.07 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5008,7 +5339,7 @@
 		)
 		(uuid "b7512815-2f17-445f-801c-d69864a13fec")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.5077 64.77 0)
+			(at 134.5377 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5020,7 +5351,7 @@
 	)
 	(global_label "OUT_M2"
 		(shape input)
-		(at 158.75 83.82 180)
+		(at 144.78 93.98 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5030,7 +5361,7 @@
 		)
 		(uuid "c4e8f628-2b25-4b7f-8cdd-e8f9f690a02f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.5077 83.82 0)
+			(at 134.5377 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5042,7 +5373,7 @@
 	)
 	(global_label "PFC_VCC"
 		(shape input)
-		(at 114.3 57.15 180)
+		(at 101.6 43.18 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5052,7 +5383,7 @@
 		)
 		(uuid "d2b1c210-448d-445c-a61a-94b78e7d18ca")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.09 57.15 0)
+			(at 90.39 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5064,7 +5395,7 @@
 	)
 	(global_label "L_Gate_Driver"
 		(shape input)
-		(at 121.92 157.48 180)
+		(at 97.79 176.53 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5074,7 +5405,7 @@
 		)
 		(uuid "d5be9573-dde5-4382-98e2-a93b2cbe0a02")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 106.2348 157.48 0)
+			(at 82.1048 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5086,7 +5417,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 193.04 175.26 0)
+		(at 168.91 194.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5094,8 +5425,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "03bdb0f9-e7a6-47ca-9e06-998015bb9650")
-		(property "Reference" "#PWR022"
-			(at 193.04 181.61 0)
+		(property "Reference" "#PWR016"
+			(at 168.91 200.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5104,7 +5435,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 193.04 179.07 0)
+			(at 168.91 198.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5112,7 +5443,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 193.04 175.26 0)
+			(at 168.91 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5121,7 +5452,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 175.26 0)
+			(at 168.91 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5130,7 +5461,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 193.04 175.26 0)
+			(at 168.91 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5144,7 +5475,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "#PWR022")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -5159,7 +5490,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "05e959fb-de3b-4842-bc98-2275d469c068")
-		(property "Reference" "Q4"
+		(property "Reference" "Q2"
 			(at 196.342 60.706 0)
 			(effects
 				(font
@@ -5243,7 +5574,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "Q4")
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -5259,7 +5590,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0a5981f7-7b03-4ee9-8e98-c986ffbc53ef")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR020"
 			(at 322.58 111.76 0)
 			(effects
 				(font
@@ -5309,7 +5640,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "#PWR026")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -5317,7 +5648,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Res_10K_0603_1%")
-		(at 147.32 168.91 90)
+		(at 123.19 187.96 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5325,8 +5656,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0b33b58e-07d7-4702-ac4c-a04c284f0cd7")
-		(property "Reference" "R18"
-			(at 149.86 163.8299 90)
+		(property "Reference" "R14"
+			(at 125.73 182.8799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5335,7 +5666,7 @@
 			)
 		)
 		(property "Value" "10K/1%/1_10W"
-			(at 149.86 166.3699 90)
+			(at 125.73 185.4199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5344,7 +5675,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 135.89 129.032 90)
+			(at 111.76 148.082 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5353,7 +5684,7 @@
 			)
 		)
 		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
-			(at 146.558 129.286 90)
+			(at 122.428 148.336 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5362,7 +5693,7 @@
 			)
 		)
 		(property "Description" "Res 10 KOhm 0603 1%"
-			(at 140.462 128.524 90)
+			(at 116.332 147.574 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5371,7 +5702,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 134.874 128.778 90)
+			(at 110.744 147.828 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5380,7 +5711,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
-			(at 133.858 129.032 90)
+			(at 109.728 148.082 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5389,7 +5720,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
-			(at 126.746 127.762 90)
+			(at 102.616 146.812 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5406,7 +5737,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "R18")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -5414,7 +5745,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 127 143.51 0)
+		(at 102.87 162.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5422,8 +5753,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0cc8ccfa-9157-460b-937f-228ffa01f74b")
-		(property "Reference" "#PWR018"
-			(at 127 148.59 0)
+		(property "Reference" "#PWR011"
+			(at 102.87 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5432,7 +5763,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 126.873 147.32 0)
+			(at 102.743 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5440,7 +5771,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 127 144.78 0)
+			(at 102.87 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5449,7 +5780,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 144.78 0)
+			(at 102.87 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5458,7 +5789,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 127 143.51 0)
+			(at 102.87 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5472,7 +5803,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "#PWR018")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -5480,7 +5811,7 @@
 	)
 	(symbol
 		(lib_id "Device:NetTie_2")
-		(at 203.2 173.99 0)
+		(at 179.07 193.04 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -5488,8 +5819,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0d309932-79b6-4990-8d5b-520a3df1c692")
-		(property "Reference" "NT1"
-			(at 203.2 168.91 0)
+		(property "Reference" "NT2"
+			(at 179.07 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5497,7 +5828,7 @@
 			)
 		)
 		(property "Value" "GNDD_GNDPWR"
-			(at 203.2 171.45 0)
+			(at 179.07 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5505,7 +5836,7 @@
 			)
 		)
 		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
-			(at 203.2 173.99 0)
+			(at 179.07 193.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5514,7 +5845,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 203.2 173.99 0)
+			(at 179.07 193.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5523,7 +5854,7 @@
 			)
 		)
 		(property "Description" "Net tie, 2 pins"
-			(at 203.2 173.99 0)
+			(at 179.07 193.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5540,7 +5871,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "NT1")
+					(reference "NT2")
 					(unit 1)
 				)
 			)
@@ -5556,7 +5887,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1490609d-6d32-4369-90f2-d56d78df8fed")
-		(property "Reference" "C29"
+		(property "Reference" "C26"
 			(at 307.34 87.1981 90)
 			(effects
 				(font
@@ -5637,7 +5968,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "C29")
+					(reference "C26")
 					(unit 1)
 				)
 			)
@@ -5645,15 +5976,15 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Res_10R_0603_1%")
-		(at 172.72 83.82 0)
+		(at 156.21 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "18f777fc-412c-4f85-8064-a1c8df34f398")
-		(property "Reference" "R20"
-			(at 176.53 79.248 0)
+		(property "Reference" "R16"
+			(at 160.02 89.408 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5661,7 +5992,7 @@
 			)
 		)
 		(property "Value" "10R/1%/1_10W"
-			(at 176.022 81.534 0)
+			(at 159.512 91.694 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5669,7 +6000,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 191.008 99.314 0)
+			(at 174.498 109.474 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5678,7 +6009,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 180.34 99.06 0)
+			(at 163.83 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5687,7 +6018,7 @@
 			)
 		)
 		(property "Description" "Res 10 Ohm 0603 1%"
-			(at 186.436 99.822 0)
+			(at 169.926 109.982 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5696,7 +6027,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 192.024 99.568 0)
+			(at 175.514 109.728 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5705,7 +6036,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 10 Ohm 0603 1%"
-			(at 193.04 99.314 0)
+			(at 176.53 109.474 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5714,7 +6045,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-ohm-0603-1-"
-			(at 200.152 100.584 0)
+			(at 183.642 110.744 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5731,7 +6062,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "R20")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -5739,7 +6070,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 212.09 99.06 0)
+		(at 212.09 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5747,8 +6078,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "238aba7f-4f3f-4be2-9011-e5ffe45a043c")
-		(property "Reference" "#PWR023"
-			(at 212.09 104.14 0)
+		(property "Reference" "#PWR018"
+			(at 212.09 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5757,7 +6088,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 211.963 102.87 0)
+			(at 211.963 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5765,7 +6096,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 212.09 100.33 0)
+			(at 212.09 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5774,7 +6105,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 212.09 100.33 0)
+			(at 212.09 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5783,7 +6114,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 212.09 99.06 0)
+			(at 212.09 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5797,7 +6128,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "#PWR023")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -5805,15 +6136,15 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_22uF_16V")
-		(at 212.09 142.24 90)
+		(at 187.96 161.29 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "2bb985b4-4e3e-4b5a-883f-eef935d53df5")
-		(property "Reference" "C25"
-			(at 214.63 138.684 90)
+		(property "Reference" "C22"
+			(at 190.5 157.734 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5822,7 +6153,7 @@
 			)
 		)
 		(property "Value" "22uF/16V"
-			(at 214.63 140.97 90)
+			(at 190.5 160.02 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5831,7 +6162,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0805"
-			(at 207.01 142.494 0)
+			(at 182.88 161.544 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5840,7 +6171,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 207.01 141.986 0)
+			(at 182.88 161.036 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5849,7 +6180,7 @@
 			)
 		)
 		(property "Description" "10%, 0805 (2012 Metric)"
-			(at 206.502 141.224 0)
+			(at 182.372 160.274 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5858,7 +6189,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 207.01 140.97 0)
+			(at 182.88 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5867,7 +6198,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Gốm 0805 22uF 16V"
-			(at 206.502 140.97 0)
+			(at 182.372 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5876,7 +6207,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0805-22uf-16v"
-			(at 207.01 142.24 0)
+			(at 182.88 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5893,7 +6224,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "C25")
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -5909,7 +6240,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c1de5e0-5edb-450b-93e1-56ec46e4332b")
-		(property "Reference" "C26"
+		(property "Reference" "C23"
 			(at 219.71 67.31 0)
 			(effects
 				(font
@@ -5988,51 +6319,39 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "C26")
+					(reference "C23")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:Res_10K_0603_1%")
-		(at 127 168.91 90)
+		(lib_id "charge_battery_sym_lib:Res_2R_1206_1%")
+		(at 173.99 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2ee61eab-bc0e-4d67-9206-14431c3282e5")
-		(property "Reference" "R17"
-			(at 129.54 163.8299 90)
+		(uuid "2d521b9b-4483-4829-8b59-1d005fc7e21a")
+		(property "Reference" "R18"
+			(at 173.99 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "10K/1%/1_10W"
-			(at 129.54 166.3699 90)
+		(property "Value" "2R/5%/1_4W"
+			(at 173.99 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 115.57 129.032 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
-			(at 126.238 129.286 90)
+		(property "Footprint" "charge_battery_footprint_lib:Res_1206"
+			(at 173.99 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6040,8 +6359,44 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Res 10 KOhm 0603 1%"
-			(at 120.142 128.524 90)
+		(property "Datasheet" ""
+			(at 173.99 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor 2 Ohm 1206 5%"
+			(at 173.99 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "thegioiic"
+			(at 173.99 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "Điện Trở 2 Ohm 1206 5%"
+			(at 173.99 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/dien-tro-2-ohm-1206-5-"
+			(at 173.99 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6050,7 +6405,86 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 114.554 128.778 90)
+			(at 173.99 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "99647824-0c74-4906-9bda-95c390678399")
+		)
+		(pin "2"
+			(uuid "767ae271-6c7b-4152-b441-c307e623f9a2")
+		)
+		(instances
+			(project "PFC & LLC"
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
+					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_10K_0603_1%")
+		(at 102.87 187.96 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2ee61eab-bc0e-4d67-9206-14431c3282e5")
+		(property "Reference" "R13"
+			(at 105.41 182.8799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K/1%/1_10W"
+			(at 105.41 185.4199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
+			(at 91.44 148.082 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
+			(at 102.108 148.336 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Res 10 KOhm 0603 1%"
+			(at 96.012 147.574 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 90.424 147.828 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6059,7 +6493,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
-			(at 113.538 129.032 90)
+			(at 89.408 148.082 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6068,7 +6502,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
-			(at 106.426 127.762 90)
+			(at 82.296 146.812 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6085,7 +6519,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "R17")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -6093,15 +6527,15 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:IPP60R125CP")
-		(at 185.42 83.82 0)
+		(at 185.42 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "35624e4c-420a-4163-a589-0c21f4dbacab")
-		(property "Reference" "Q5"
-			(at 196.342 79.756 0)
+		(property "Reference" "Q3"
+			(at 196.342 89.916 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6110,7 +6544,7 @@
 			)
 		)
 		(property "Value" "IPP60R125CP"
-			(at 196.342 82.296 0)
+			(at 196.342 92.456 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6119,7 +6553,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:TO-220-3_PIN3"
-			(at 184.658 70.866 0)
+			(at 184.658 81.026 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6128,7 +6562,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-IPP60R125CP-DS-v02_02-en.pdf?fileId=db3a304412b407950112b42c0e59465d"
-			(at 184.912 71.12 0)
+			(at 184.912 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6137,7 +6571,7 @@
 			)
 		)
 		(property "Description" "MOSFETs N-Ch 600V 25A TO220-3 CoolMOS CP"
-			(at 183.388 71.628 0)
+			(at 183.388 81.788 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6146,7 +6580,7 @@
 			)
 		)
 		(property "Supply name" "Mouser"
-			(at 185.674 71.12 0)
+			(at 185.674 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6155,7 +6589,7 @@
 			)
 		)
 		(property "Supply part number" "726-IPP60R125CP"
-			(at 186.69 71.12 0)
+			(at 186.69 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6164,7 +6598,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/Infineon-Technologies/IPP60R125CP?qs=mzcOS1kGbgfOA5Mkagkt9Q%3D%3D"
-			(at 187.96 71.628 0)
+			(at 187.96 81.788 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6184,7 +6618,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "Q5")
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -6200,7 +6634,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3dfedf8b-27ae-4163-a599-d72ea08c7c08")
-		(property "Reference" "C30"
+		(property "Reference" "C27"
 			(at 325.12 87.1981 90)
 			(effects
 				(font
@@ -6281,7 +6715,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "C30")
+					(reference "C27")
 					(unit 1)
 				)
 			)
@@ -6289,7 +6723,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_1KV")
-		(at 120.65 76.2 90)
+		(at 111.76 80.01 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6297,8 +6731,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a4e8506-758a-44be-b7c4-a980d0c4db99")
-		(property "Reference" "C21"
-			(at 124.46 72.3899 90)
+		(property "Reference" "C19"
+			(at 115.57 76.1999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6307,7 +6741,7 @@
 			)
 		)
 		(property "Value" "100nF/1KV"
-			(at 124.46 74.9299 90)
+			(at 115.57 78.7399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6316,7 +6750,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_1812"
-			(at 115.57 76.454 0)
+			(at 106.68 80.264 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6325,7 +6759,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 115.57 75.946 0)
+			(at 106.68 79.756 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6334,7 +6768,7 @@
 			)
 		)
 		(property "Description" "10%, 1812"
-			(at 115.062 75.184 0)
+			(at 106.172 78.994 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6343,7 +6777,7 @@
 			)
 		)
 		(property "Supply name" "Mouser"
-			(at 115.57 74.93 0)
+			(at 106.68 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6352,7 +6786,7 @@
 			)
 		)
 		(property "Supply part number" "C1812C104KDRACTU"
-			(at 115.062 74.93 0)
+			(at 106.172 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6361,7 +6795,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.mouser.vn/ProductDetail/KEMET/C1812C104KDRACTU?qs=bKSwwZi%2FkPDxKxr8rInknw%3D%3D"
-			(at 115.57 76.2 0)
+			(at 106.68 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6378,7 +6812,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "C21")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -6386,7 +6820,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_10uF_16V")
-		(at 127 140.97 90)
+		(at 102.87 160.02 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6394,8 +6828,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "529efcc9-0e77-4d5a-bcc7-52136e4823fb")
-		(property "Reference" "C22"
-			(at 130.81 135.8899 90)
+		(property "Reference" "C18"
+			(at 106.68 154.9399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6404,7 +6838,7 @@
 			)
 		)
 		(property "Value" "10uF/16V"
-			(at 130.81 138.4299 90)
+			(at 106.68 157.4799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6413,7 +6847,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-			(at 121.92 141.224 0)
+			(at 97.79 160.274 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6422,7 +6856,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 121.92 140.716 0)
+			(at 97.79 159.766 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6431,7 +6865,7 @@
 			)
 		)
 		(property "Description" "10%, 0603 (1608 Metric)"
-			(at 121.412 139.954 0)
+			(at 97.282 159.004 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6440,7 +6874,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 121.92 139.7 0)
+			(at 97.79 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6449,7 +6883,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Gốm 0603 10uF 16V"
-			(at 121.412 139.7 0)
+			(at 97.282 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6458,7 +6892,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-10uf-16v"
-			(at 121.92 140.97 0)
+			(at 97.79 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6475,7 +6909,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "C22")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -6490,7 +6924,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "56c445bd-90b6-4dda-a7a9-6b5b11d1965a")
-		(property "Reference" "D7"
+		(property "Reference" "D8"
 			(at 266.7 68.326 0)
 			(effects
 				(font
@@ -6614,7 +7048,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "D7")
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -6622,7 +7056,7 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:IR2101")
-		(at 166.37 165.1 0)
+		(at 142.24 184.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6630,8 +7064,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5a854945-0b88-4aab-968b-34b4c851449c")
-		(property "Reference" "U4"
-			(at 173.6441 139.7 0)
+		(property "Reference" "U2"
+			(at 149.5141 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6640,7 +7074,7 @@
 			)
 		)
 		(property "Value" "IR2101"
-			(at 173.6441 142.24 0)
+			(at 149.5141 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6649,7 +7083,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:SOIC-8"
-			(at 175.26 140.97 0)
+			(at 151.13 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6659,7 +7093,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.infineon.com/dgdl/ir2101.pdf?fileId=5546d462533600a4015355c7a755166c"
-			(at 162.56 139.7 0)
+			(at 138.43 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6668,7 +7102,7 @@
 			)
 		)
 		(property "Description" "High and Low Side Driver, 600V, 210/360mA, PDIP-8/SOIC-8"
-			(at 162.56 139.7 0)
+			(at 138.43 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6677,7 +7111,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 171.45 154.94 0)
+			(at 147.32 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6686,7 +7120,7 @@
 			)
 		)
 		(property "Supply part number" "IR2101STRPBF MOSFET 2 Ngõ Ra, 360 mA, 20V 8-SOIC"
-			(at 167.64 139.7 0)
+			(at 143.51 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6695,7 +7129,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/ir2101strpbf-mosfet-2-ngo-ra-360-ma-20v-8-soic"
-			(at 167.64 139.7 0)
+			(at 143.51 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6730,7 +7164,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "U4")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -6746,7 +7180,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6136d97d-d309-400d-9a3a-ba4ad4883ed5")
-		(property "Reference" "C27"
+		(property "Reference" "C24"
 			(at 219.71 85.09 0)
 			(effects
 				(font
@@ -6754,7 +7188,7 @@
 				)
 			)
 		)
-		(property "Value" "33nF/630VDC"
+		(property "Value" "10nF/630VDC"
 			(at 219.71 82.55 0)
 			(effects
 				(font
@@ -6771,7 +7205,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
+		(property "Datasheet" ""
 			(at 216.154 83.82 0)
 			(effects
 				(font
@@ -6798,7 +7232,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Tụ Kẹo Nâu Polyester CBB22-333 33nF 630VDC"
+		(property "Supply part number" "Tụ Kẹo Nâu Polyester CBB22-103 10nF 630VDC"
 			(at 217.17 84.328 0)
 			(effects
 				(font
@@ -6807,7 +7241,7 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-keo-nau-polyester-cbb22-333-33nf-630vdc"
+		(property "Supply URL" "https://www.thegioiic.com/tu-keo-nau-polyester-cbb22-103-10nf-630vdc"
 			(at 215.9 83.82 0)
 			(effects
 				(font
@@ -6825,7 +7259,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "C27")
+					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -6840,7 +7274,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "65517b50-6e4a-4a39-8e62-3128f51a8c9f")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR019"
 			(at 265.43 80.01 0)
 			(effects
 				(font
@@ -6890,7 +7324,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "#PWR025")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -6906,7 +7340,7 @@
 		(dnp no)
 		(uuid "6eb09214-2138-42d3-8912-b7ab63caef8d")
 		(property "Reference" "L3"
-			(at 243.84 66.04 0)
+			(at 237.744 70.358 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6919,6 +7353,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Transformer_ER35_Horizontal"
@@ -6986,7 +7421,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 120.65 100.33 0)
+		(at 111.76 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6994,8 +7429,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "784472be-8cd7-4e64-aa01-3228f97c34ac")
-		(property "Reference" "#PWR016"
-			(at 120.65 105.41 0)
+		(property "Reference" "#PWR013"
+			(at 111.76 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7004,7 +7439,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 120.523 104.14 0)
+			(at 111.633 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7012,7 +7447,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 120.65 101.6 0)
+			(at 111.76 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7021,7 +7456,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 120.65 101.6 0)
+			(at 111.76 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7030,7 +7465,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 120.65 100.33 0)
+			(at 111.76 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7044,7 +7479,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "#PWR016")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -7052,15 +7487,15 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Res_10R_0603_1%")
-		(at 172.72 64.77 0)
+		(at 154.94 64.77 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "78478b38-0dd6-496e-8995-a68f4de40a91")
-		(property "Reference" "R19"
-			(at 176.53 60.198 0)
+		(property "Reference" "R15"
+			(at 158.75 60.198 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7068,7 +7503,7 @@
 			)
 		)
 		(property "Value" "10R/1%/1_10W"
-			(at 176.53 62.484 0)
+			(at 158.75 62.484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7076,7 +7511,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 191.008 80.264 0)
+			(at 173.228 80.264 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7085,7 +7520,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 180.34 80.01 0)
+			(at 162.56 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7094,7 +7529,7 @@
 			)
 		)
 		(property "Description" "Res 10 Ohm 0603 1%"
-			(at 186.436 80.772 0)
+			(at 168.656 80.772 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7103,7 +7538,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 192.024 80.518 0)
+			(at 174.244 80.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7112,7 +7547,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 10 Ohm 0603 1%"
-			(at 193.04 80.264 0)
+			(at 175.26 80.264 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7121,7 +7556,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-ohm-0603-1-"
-			(at 200.152 81.534 0)
+			(at 182.372 81.534 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7138,7 +7573,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "R19")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -7146,15 +7581,15 @@
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_4.7uF_25V")
-		(at 198.12 142.24 90)
+		(at 173.99 161.29 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "86fe4f81-cedf-454d-bed9-be1674b3ec72")
-		(property "Reference" "C24"
-			(at 200.66 138.684 90)
+		(property "Reference" "C21"
+			(at 176.53 157.734 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7163,7 +7598,7 @@
 			)
 		)
 		(property "Value" "4.7uF/25V"
-			(at 200.406 140.716 90)
+			(at 176.276 159.766 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7172,7 +7607,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-			(at 193.04 142.494 0)
+			(at 168.91 161.544 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7181,7 +7616,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 193.04 141.986 0)
+			(at 168.91 161.036 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7190,7 +7625,7 @@
 			)
 		)
 		(property "Description" "10%, 0603 (1608 Metric)"
-			(at 192.532 141.224 0)
+			(at 168.402 160.274 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7199,7 +7634,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 193.04 140.97 0)
+			(at 168.91 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7208,7 +7643,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Gốm 0603 4.7uF 25V"
-			(at 192.532 140.97 0)
+			(at 168.402 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7217,7 +7652,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-4-7uf-25v"
-			(at 193.04 142.24 0)
+			(at 168.91 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7234,101 +7669,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "C24")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:SS54")
-		(at 180.34 132.08 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "90c72bd2-cc4b-48fb-9887-d711f9b63f3e")
-		(property "Reference" "D6"
-			(at 182.626 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SS54"
-			(at 182.372 135.382 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:D_SMA"
-			(at 183.388 124.714 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.thegioiic.com/upload/documents/dc8a63b3eda4738bc390d9dc570a4e18.pdf"
-			(at 177.546 124.968 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Diode Shotky SS54 1N5824 5A 40V"
-			(at 182.372 124.968 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 186.436 124.968 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "SS54 SMA Diode Shotky 5A 40V"
-			(at 184.404 125.222 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/ss54-sma-diode-shotky-5a-40v"
-			(at 177.546 124.968 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fdbc9217-8716-4be7-a458-46d3bcee3a97")
-		)
-		(pin "2"
-			(uuid "a48abf85-30ec-44c2-b360-f3ccc3e67a1f")
-		)
-		(instances
-			(project "PFC & LLC"
-				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "D6")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -7337,15 +7678,15 @@
 	(symbol
 		(lib_name "Res_10K_0603_1%_1")
 		(lib_id "charge_battery_sym_lib:Res_10K_0603_1%")
-		(at 184.15 93.98 90)
+		(at 184.15 104.14 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "91c3978d-8166-48c5-a98b-ffcb22d36792")
-		(property "Reference" "R22"
-			(at 179.07 88.9 90)
+		(property "Reference" "R20"
+			(at 179.07 99.06 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7354,7 +7695,7 @@
 			)
 		)
 		(property "Value" "10K/1%/1_10W"
-			(at 167.132 91.44 90)
+			(at 167.132 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7363,7 +7704,7 @@
 			)
 		)
 		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 172.72 54.102 90)
+			(at 172.72 64.262 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7372,7 +7713,7 @@
 			)
 		)
 		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
-			(at 183.388 54.356 90)
+			(at 183.388 64.516 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7381,7 +7722,7 @@
 			)
 		)
 		(property "Description" "Res 10 KOhm 0603 1%"
-			(at 177.292 53.594 90)
+			(at 177.292 63.754 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7390,7 +7731,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 171.704 53.848 90)
+			(at 171.704 64.008 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7399,7 +7740,7 @@
 			)
 		)
 		(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
-			(at 170.688 54.102 90)
+			(at 170.688 64.262 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7408,7 +7749,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
-			(at 163.576 52.832 90)
+			(at 163.576 62.992 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7425,7 +7766,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "R22")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -7433,7 +7774,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 171.45 176.53 0)
+		(at 147.32 195.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7441,8 +7782,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "992dc6e7-867c-4201-a1a5-182692d3c4fb")
-		(property "Reference" "#PWR021"
-			(at 171.45 181.61 0)
+		(property "Reference" "#PWR015"
+			(at 147.32 200.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7451,7 +7792,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 171.323 180.34 0)
+			(at 147.193 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7459,7 +7800,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 171.45 177.8 0)
+			(at 147.32 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7468,7 +7809,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 177.8 0)
+			(at 147.32 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7477,7 +7818,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 171.45 176.53 0)
+			(at 147.32 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7491,7 +7832,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "#PWR021")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -7507,7 +7848,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "99a5d367-4eb0-4c7a-84ef-5d393e1b0e5b")
-		(property "Reference" "R21"
+		(property "Reference" "R19"
 			(at 179.07 68.58 90)
 			(effects
 				(font
@@ -7588,7 +7929,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "R21")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -7596,7 +7937,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 171.45 130.81 0)
+		(at 147.32 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7604,8 +7945,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9da595ca-485d-458a-8651-c0068be45d5b")
-		(property "Reference" "#PWR020"
-			(at 171.45 134.62 0)
+		(property "Reference" "#PWR014"
+			(at 147.32 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7614,7 +7955,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 171.45 125.73 0)
+			(at 147.32 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7622,7 +7963,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 171.45 130.81 0)
+			(at 147.32 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7631,7 +7972,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 130.81 0)
+			(at 147.32 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7640,7 +7981,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 171.45 130.81 0)
+			(at 147.32 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7654,51 +7995,39 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "#PWR020")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_16V")
-		(at 143.51 139.7 90)
+		(lib_id "charge_battery_sym_lib:Res_2R_1206_1%")
+		(at 172.72 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ab1c7dd1-ea60-4674-8ca3-05a8ab1e605b")
-		(property "Reference" "C23"
-			(at 147.32 135.8899 90)
+		(uuid "aaa203bd-22b9-4b81-91c2-2d72541ca256")
+		(property "Reference" "R17"
+			(at 172.72 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "100nF/16V"
-			(at 147.32 138.4299 90)
+		(property "Value" "2R/5%/1_4W"
+			(at 172.72 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-			(at 138.43 139.954 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 138.43 139.446 0)
+		(property "Footprint" "charge_battery_footprint_lib:Res_1206"
+			(at 172.72 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7706,8 +8035,44 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "10%, 0603 (1608 Metric)"
-			(at 137.922 138.684 0)
+		(property "Datasheet" ""
+			(at 172.72 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor 2 Ohm 1206 5%"
+			(at 172.72 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Name" "thegioiic"
+			(at 172.72 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply Part Number" "Điện Trở 2 Ohm 1206 5%"
+			(at 172.72 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/dien-tro-2-ohm-1206-5-"
+			(at 172.72 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7716,7 +8081,86 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 138.43 138.43 0)
+			(at 172.72 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f6df9d5f-8a81-4e4b-8575-6472cb3053a8")
+		)
+		(pin "2"
+			(uuid "2bf5f722-7b22-4b98-ac93-39cc1627fbc2")
+		)
+		(instances
+			(project "PFC & LLC"
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_16V")
+		(at 119.38 158.75 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab1c7dd1-ea60-4674-8ca3-05a8ab1e605b")
+		(property "Reference" "C20"
+			(at 123.19 154.9399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100nF/16V"
+			(at 123.19 157.4799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
+			(at 114.3 159.004 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
+			(at 114.3 158.496 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "10%, 0603 (1608 Metric)"
+			(at 113.792 157.734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 114.3 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7725,7 +8169,7 @@
 			)
 		)
 		(property "Supply part number" "Tụ Gốm 0603 100nF (0.1uF) 16V"
-			(at 137.922 138.43 0)
+			(at 113.792 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7734,7 +8178,7 @@
 			)
 		)
 		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-100nf-0-1uf-16v"
-			(at 138.43 139.7 0)
+			(at 114.3 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7751,7 +8195,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "C23")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -7759,7 +8203,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 213.36 175.26 0)
+		(at 189.23 194.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7767,8 +8211,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ab7a4eba-6af4-42df-b662-e7d2461608cc")
-		(property "Reference" "#PWR024"
-			(at 213.36 180.34 0)
+		(property "Reference" "#PWR017"
+			(at 189.23 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7777,7 +8221,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 213.233 179.07 0)
+			(at 189.103 198.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7785,7 +8229,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 213.36 176.53 0)
+			(at 189.23 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7794,7 +8238,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 213.36 176.53 0)
+			(at 189.23 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7803,7 +8247,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 213.36 175.26 0)
+			(at 189.23 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7817,7 +8261,195 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "#PWR024")
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:SS54")
+		(at 160.02 52.07 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b035e47e-6197-481f-a3a4-1ad2bd154a9d")
+		(property "Reference" "D6"
+			(at 157.734 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SS54"
+			(at 157.988 48.768 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:D_SMA"
+			(at 156.972 59.436 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.thegioiic.com/upload/documents/dc8a63b3eda4738bc390d9dc570a4e18.pdf"
+			(at 162.814 59.182 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode Shotky SS54 1N5824 5A 40V"
+			(at 157.988 59.182 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 153.924 59.182 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "SS54 SMA Diode Shotky 5A 40V"
+			(at 155.956 58.928 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/ss54-sma-diode-shotky-5a-40v"
+			(at 162.814 59.182 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "45b1197c-f8ba-4572-b3e6-88ba51b9e619")
+		)
+		(pin "2"
+			(uuid "b79fc6d2-c028-4e1f-b678-064153a246c5")
+		)
+		(instances
+			(project "PFC & LLC"
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:SS54")
+		(at 161.29 82.55 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b8cffd1d-7e94-4e21-98db-2188ca5cfa24")
+		(property "Reference" "D7"
+			(at 159.004 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SS54"
+			(at 159.258 79.248 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:D_SMA"
+			(at 158.242 89.916 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.thegioiic.com/upload/documents/dc8a63b3eda4738bc390d9dc570a4e18.pdf"
+			(at 164.084 89.662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode Shotky SS54 1N5824 5A 40V"
+			(at 159.258 89.662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 155.194 89.662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "SS54 SMA Diode Shotky 5A 40V"
+			(at 157.226 89.408 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/ss54-sma-diode-shotky-5a-40v"
+			(at 164.084 89.662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "23b90459-864b-4c20-b9ae-1605e7d9be83")
+		)
+		(pin "2"
+			(uuid "ed1089d5-9cbd-455f-bd85-e398c8589c4d")
+		)
+		(instances
+			(project "PFC & LLC"
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -7825,7 +8457,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 127 130.81 0)
+		(at 102.87 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7833,8 +8465,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dbf4db17-e8d3-4ee1-b722-e36b9bb80fa2")
-		(property "Reference" "#PWR017"
-			(at 127 134.62 0)
+		(property "Reference" "#PWR010"
+			(at 102.87 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7843,7 +8475,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 127 125.73 0)
+			(at 102.87 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7851,7 +8483,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 127 130.81 0)
+			(at 102.87 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7860,7 +8492,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 130.81 0)
+			(at 102.87 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7869,7 +8501,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 127 130.81 0)
+			(at 102.87 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7883,7 +8515,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "#PWR017")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -7898,7 +8530,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "de7c25a7-2dfa-4a93-8ba7-fd7f206e95d8")
-		(property "Reference" "D8"
+		(property "Reference" "D9"
 			(at 267.97 89.408 0)
 			(effects
 				(font
@@ -7977,7 +8609,101 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "D8")
+					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:SS54")
+		(at 156.21 151.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e0a8f6bf-663c-40b4-ba6d-28fc3a08e160")
+		(property "Reference" "D5"
+			(at 158.496 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SS54"
+			(at 158.242 154.432 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:D_SMA"
+			(at 159.258 143.764 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.thegioiic.com/upload/documents/dc8a63b3eda4738bc390d9dc570a4e18.pdf"
+			(at 153.416 144.018 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode Shotky SS54 1N5824 5A 40V"
+			(at 158.242 144.018 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 162.306 144.018 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "SS54 SMA Diode Shotky 5A 40V"
+			(at 160.274 144.272 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/ss54-sma-diode-shotky-5a-40v"
+			(at 153.416 144.018 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6e2436a1-9953-4f89-98cf-4294711d4a72")
+		)
+		(pin "2"
+			(uuid "5e1907f1-a163-4a30-b305-fa3e79e3d10c")
+		)
+		(instances
+			(project "PFC & LLC"
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -7993,7 +8719,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e635f4b9-d412-4243-ae22-502bbfb911cd")
-		(property "Reference" "C28"
+		(property "Reference" "C25"
 			(at 289.56 87.1981 90)
 			(effects
 				(font
@@ -8074,7 +8800,7 @@
 		(instances
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "C28")
+					(reference "C25")
 					(unit 1)
 				)
 			)
@@ -8082,7 +8808,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 127 176.53 0)
+		(at 102.87 195.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8090,8 +8816,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ed3f7b0d-8eae-4066-ab31-55e5e522b6db")
-		(property "Reference" "#PWR019"
-			(at 127 182.88 0)
+		(property "Reference" "#PWR012"
+			(at 102.87 201.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8100,7 +8826,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 127 180.34 0)
+			(at 102.87 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8108,7 +8834,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 127 176.53 0)
+			(at 102.87 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8117,7 +8843,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 176.53 0)
+			(at 102.87 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8126,7 +8852,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 127 176.53 0)
+			(at 102.87 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8140,7 +8866,7 @@
 		(instances
 			(project ""
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad/abcbd5bd-65ad-4ea5-8f4a-1a20491f89cb"
-					(reference "#PWR019")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
