@@ -167,7 +167,7 @@
 				)
 			)
 		)
-		(symbol "Connector:Conn_01x03_Socket"
+		(symbol "Connector:Conn_01x04_Pin"
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
@@ -181,8 +181,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x03_Socket"
-				(at 0 -5.08 0)
+			(property "Value" "Conn_01x04_Pin"
+				(at 0 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -207,7 +207,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x03, script generated"
+			(property "Description" "Generic connector, single row, 01x04, script generated"
 				(at 0 0 0)
 				(effects
 					(font
@@ -242,22 +242,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x03_Socket_1_1"
-				(arc
-					(start 0 -2.032)
-					(mid -0.5058 -2.54)
-					(end 0 -3.048)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "Conn_01x04_Pin_1_1"
 				(polyline
 					(pts
-						(xy -1.27 -2.54) (xy -0.508 -2.54)
+						(xy 1.27 -5.08) (xy 0.8636 -5.08)
 					)
 					(stroke
 						(width 0.1524)
@@ -269,7 +257,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 0) (xy -0.508 0)
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -281,7 +269,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 2.54) (xy -0.508 2.54)
+						(xy 1.27 0) (xy 0.8636 0)
 					)
 					(stroke
 						(width 0.1524)
@@ -291,10 +279,10 @@
 						(type none)
 					)
 				)
-				(arc
-					(start 0 0.508)
-					(mid -0.5058 0)
-					(end 0 -0.508)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 0.8636 2.54)
+					)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -303,20 +291,52 @@
 						(type none)
 					)
 				)
-				(arc
-					(start 0 3.048)
-					(mid -0.5058 2.54)
-					(end 0 2.032)
+				(rectangle
+					(start 0.8636 -4.953)
+					(end 0 -5.207)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at 5.08 2.54 180)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -334,7 +354,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at 5.08 0 180)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -352,7 +372,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at 5.08 -2.54 180)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -369,9 +389,129 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 5.08 -5.08 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 		)
-		(symbol "charge_battery_sym_lib:Cap_Polarized_SMD_47uF_16V"
+		(symbol "Connector:TestPoint"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "charge_battery_sym_lib:Cap_Polarized_SMD_10uF_25V"
 			(pin_numbers hide)
 			(pin_names
 				(offset 0.254)
@@ -388,7 +528,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "47uF/16V"
+			(property "Value" "10uF/35V"
 				(at 0.635 -2.54 0)
 				(effects
 					(font
@@ -397,7 +537,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "charge_battery_footprint_lib:Tan_Cap_C"
+			(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.4"
 				(at 3.302 12.7 0)
 				(effects
 					(font
@@ -406,7 +546,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.thegioiic.com/upload/documents/5121f69ada901167d040dfa7ca79f071.pdf"
+			(property "Datasheet" ""
 				(at 0.762 12.446 0)
 				(effects
 					(font
@@ -415,7 +555,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Polarized capacitor 47uF 16V, 20%"
+			(property "Description" "Polarized capacitor 10uF 25V, 20%"
 				(at -0.762 12.192 0)
 				(effects
 					(font
@@ -433,7 +573,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply part number" "SMD 47uF 16V 5x5.4mm"
+			(property "Supply part number" "Tụ Nhôm SMD 10uF 25V 4x5.4mm"
 				(at 1.27 12.446 0)
 				(effects
 					(font
@@ -442,7 +582,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply URL" "https://www.thegioiic.com/tu-nhom-smd-47uf-16v-5x5-4mm"
+			(property "Supply URL" "https://www.thegioiic.com/tu-nhom-smd-10uf-25v-4x5-4mm"
 				(at 2.032 12.7 0)
 				(effects
 					(font
@@ -460,7 +600,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Cap_Polarized_SMD_47uF_16V_0_1"
+			(symbol "Cap_Polarized_SMD_10uF_25V_0_1"
 				(polyline
 					(pts
 						(xy 1.016 -1.27) (xy 1.016 -0.762)
@@ -510,7 +650,7 @@
 					)
 				)
 			)
-			(symbol "Cap_Polarized_SMD_47uF_16V_1_1"
+			(symbol "Cap_Polarized_SMD_10uF_25V_1_1"
 				(pin passive line
 					(at 0 0 0)
 					(length 2.032)
@@ -549,7 +689,185 @@
 				)
 			)
 		)
-		(symbol "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_16V"
+		(symbol "charge_battery_sym_lib:Cap_Polarized_SMD_47uF_25V"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "47uF/25V"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:CP_Elec_6.3x5.4"
+				(at 3.302 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.thegioiic.com/upload/documents/5121f69ada901167d040dfa7ca79f071.pdf"
+				(at 0.762 12.446 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Polarized capacitor 47uF 25V, 20%"
+				(at -0.762 12.192 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply name" "Thegioiic"
+				(at 2.032 12.446 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply part number" "SMD 47uF 25V 6.3x5.4mm"
+				(at 1.27 12.446 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "https://www.thegioiic.com/tu-nhom-smd-47uf-25v-6-3x5-4mm"
+				(at 2.032 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Cap_Polarized_SMD_47uF_25V_0_1"
+				(polyline
+					(pts
+						(xy 1.016 -1.27) (xy 1.016 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.016) (xy 0.762 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.032 -1.524) (xy 2.032 1.524)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 3.302 1.524)
+					(mid 2.9134 0)
+					(end 3.302 -1.524)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Cap_Polarized_SMD_47uF_25V_1_1"
+				(pin passive line
+					(at 0 0 0)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_50V_1206"
 			(pin_numbers hide)
 			(pin_names hide)
 			(exclude_from_sim no)
@@ -563,7 +881,7 @@
 					)
 				)
 			)
-			(property "Value" "100nF/16V"
+			(property "Value" "100nF/50V"
 				(at 0.254 5.334 0)
 				(effects
 					(font
@@ -571,7 +889,7 @@
 					)
 				)
 			)
-			(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
+			(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_1206"
 				(at -0.254 5.08 0)
 				(effects
 					(font
@@ -580,7 +898,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
+			(property "Datasheet" ""
 				(at 0.254 5.08 0)
 				(effects
 					(font
@@ -589,7 +907,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "10%, 0603 (1608 Metric)"
+			(property "Description" "10%, 1206 (3216 Metric)"
 				(at 1.016 5.588 0)
 				(effects
 					(font
@@ -607,7 +925,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply part number" "Tụ Gốm 0603 100nF (0.1uF) 16V"
+			(property "Supply part number" "Tụ Gốm 1206 100nF (0.1uF) 50V"
 				(at 1.27 5.588 0)
 				(effects
 					(font
@@ -616,7 +934,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-100nf-0-1uf-16v"
+			(property "Supply URL" "https://www.thegioiic.com/tu-gom-0805-100nf-0-1uf-50v"
 				(at 0 5.08 0)
 				(effects
 					(font
@@ -625,7 +943,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Ceramic_Cap_SMD_100nF_16V_1_1"
+			(symbol "Ceramic_Cap_SMD_100nF_50V_1206_1_1"
 				(polyline
 					(pts
 						(xy 1.27 0) (xy 2.2098 0)
@@ -712,7 +1030,7 @@
 				)
 			)
 		)
-		(symbol "charge_battery_sym_lib:Ceramic_Cap_SMD_10uF_16V"
+		(symbol "charge_battery_sym_lib:Ceramic_Cap_SMD_4.7uF_50V_1206"
 			(pin_numbers hide)
 			(pin_names hide)
 			(exclude_from_sim no)
@@ -726,7 +1044,7 @@
 					)
 				)
 			)
-			(property "Value" "10uF/16V"
+			(property "Value" "4.7uF/50V"
 				(at 0.254 5.334 0)
 				(effects
 					(font
@@ -734,7 +1052,7 @@
 					)
 				)
 			)
-			(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
+			(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_1206"
 				(at -0.254 5.08 0)
 				(effects
 					(font
@@ -743,7 +1061,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
+			(property "Datasheet" ""
 				(at 0.254 5.08 0)
 				(effects
 					(font
@@ -752,7 +1070,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "10%, 0603 (1608 Metric)"
+			(property "Description" "10%, 1206 (3216 Metric)"
 				(at 1.016 5.588 0)
 				(effects
 					(font
@@ -770,7 +1088,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply part number" "Tụ Gốm 0603 10uF 16V"
+			(property "Supply part number" "Tụ Gốm 1206 4.7uF 50V"
 				(at 1.27 5.588 0)
 				(effects
 					(font
@@ -779,7 +1097,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-10uf-16v"
+			(property "Supply URL" "https://www.thegioiic.com/tu-gom-1206-4-7uf-50v"
 				(at 0 5.08 0)
 				(effects
 					(font
@@ -788,188 +1106,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "Ceramic_Cap_SMD_10uF_16V"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Ceramic_Cap_SMD_10uF_16V_1_1"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 3.4798 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.4798 -1.905) (xy 3.4798 1.905)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.1148 -1.905) (xy 4.1148 1.905)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.1148 0) (xy 5.08 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "charge_battery_sym_lib:Ceramic_Cap_SMD_4.7uF_25V"
-			(pin_numbers hide)
-			(pin_names hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 2.286 2.794 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "4.7uF/25V"
-				(at 0.254 5.334 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-				(at -0.254 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-				(at 0.254 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "10%, 0603 (1608 Metric)"
-				(at 1.016 5.588 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply name" "Thegioiic"
-				(at 1.27 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply part number" "Tụ Gốm 0603 4.7uF 25V"
-				(at 1.27 5.588 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-4-7uf-25v"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Ceramic_Cap_SMD_4.7uF_25V"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Ceramic_Cap_SMD_4.7uF_25V_1_1"
+			(symbol "Ceramic_Cap_SMD_4.7uF_50V_1206_1_1"
 				(polyline
 					(pts
 						(xy 2.54 0) (xy 3.4798 0)
@@ -1365,192 +1502,6 @@
 				)
 			)
 		)
-		(symbol "charge_battery_sym_lib:Res_10K_0603_1%"
-			(pin_numbers hide)
-			(pin_names hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 2.794 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "10K/1%/1_10W"
-				(at 4.064 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-				(at 39.878 11.43 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
-				(at 39.624 0.762 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Res 10 KOhm 0603 1%"
-				(at 40.386 6.858 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply name" "Thegioiic"
-				(at 40.132 12.446 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
-				(at 39.878 13.462 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
-				(at 41.148 20.574 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Res_10K_0603_1%"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Res_10K_0603_1%_0_1"
-				(polyline
-					(pts
-						(xy 1.524 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 6.096 0) (xy 6.35 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 0) (xy 1.905 1.016) (xy 2.286 0) (xy 2.667 -1.016) (xy 3.048 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.048 0) (xy 3.429 1.016) (xy 3.81 0) (xy 4.191 -1.016) (xy 4.572 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.572 0) (xy 4.953 1.016) (xy 5.334 0) (xy 5.715 -1.016) (xy 6.096 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Res_10K_0603_1%_1_1"
-				(pin passive line
-					(at 0 0 0)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "charge_battery_sym_lib:Res_10K_1206_1%"
 			(pin_numbers hide)
 			(pin_names hide)
@@ -1737,7 +1688,7 @@
 				)
 			)
 		)
-		(symbol "charge_battery_sym_lib:Res_10R_0603_1%"
+		(symbol "charge_battery_sym_lib:Res_5.1R_1206_1%"
 			(pin_numbers hide)
 			(pin_names hide)
 			(exclude_from_sim no)
@@ -1751,7 +1702,7 @@
 					)
 				)
 			)
-			(property "Value" "10R/1%/1_10W"
+			(property "Value" "5.1R/1%/1_4W"
 				(at 4.064 -2.54 0)
 				(effects
 					(font
@@ -1759,7 +1710,7 @@
 					)
 				)
 			)
-			(property "Footprint" "charge_battery_footprint_lib:Res_0603"
+			(property "Footprint" "charge_battery_footprint_lib:Res_1206"
 				(at 18.288 -15.494 0)
 				(effects
 					(font
@@ -1777,7 +1728,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Res 10 Ohm 0603 1%"
+			(property "Description" "Res 5.1 Ohm 1206 1%"
 				(at 13.716 -16.002 0)
 				(effects
 					(font
@@ -1786,7 +1737,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply name" "Thegioiic"
+			(property "Supply name" "Ban Linh Kien"
 				(at 19.304 -15.748 0)
 				(effects
 					(font
@@ -1795,7 +1746,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply part number" "Điện Trở 10 Ohm 0603 1%"
+			(property "Supply part number" "Trở 1206 1% 5.1R (50c)"
 				(at 20.32 -15.494 0)
 				(effects
 					(font
@@ -1804,7 +1755,7 @@
 					(hide yes)
 				)
 			)
-			(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-ohm-0603-1-"
+			(property "Supply URL" "https://banlinhkien.com/tro-1206-1-5.1r-50c-p12117405.html"
 				(at 27.432 -16.764 0)
 				(effects
 					(font
@@ -1813,16 +1764,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "Res_0_0603_1%"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Res_10R_0603_1%_0_1"
+			(symbol "Res_5.1R_1206_1%_0_1"
 				(polyline
 					(pts
 						(xy 1.524 0) (xy 1.27 0)
@@ -1884,7 +1826,7 @@
 					)
 				)
 			)
-			(symbol "Res_10R_0603_1%_1_1"
+			(symbol "Res_5.1R_1206_1%_1_1"
 				(pin passive line
 					(at 0 0 0)
 					(length 1.27)
@@ -2074,6 +2016,195 @@
 				)
 			)
 			(symbol "SS54_1_1"
+				(pin unspecified line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 6.35 0 180)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "charge_battery_sym_lib:SS54_SMC"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at -1.016 2.286 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SS54_SMC"
+				(at 2.54 -2.794 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "charge_battery_footprint_lib:D_SMC"
+				(at 3.048 7.366 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at -7.874 7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "5.0 A /40V Schottky Barrier Rectifiers"
+				(at -3.048 7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply name" "tme"
+				(at 1.016 7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply part number" "5A 40V Schottky Barrier Diode SMC"
+				(at -1.016 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Supply URL" "http://www.tme.vn/Product.aspx?id=2307#page=pro_info"
+				(at -7.874 7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SS54_SMC_0_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.127 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 0 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.81 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SS54_SMC_1_1"
 				(pin unspecified line
 					(at -3.81 0 0)
 					(length 2.54)
@@ -2678,22 +2809,10 @@
 		)
 	)
 	(junction
-		(at 127 139.7)
+		(at 149.86 127)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "36cbc60d-933e-4459-b11f-d709fdd243a0")
-	)
-	(junction
-		(at 140.97 127)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3de79e1d-da8b-4913-920c-b7571d929e4f")
-	)
-	(junction
-		(at 181.61 139.7)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "50709c32-1d34-43db-86cb-8123fe52b119")
+		(uuid "103e4a53-7a1d-4951-a6a6-dac4250b63e7")
 	)
 	(junction
 		(at 200.66 73.66)
@@ -2702,10 +2821,28 @@
 		(uuid "59d01146-8b83-4b30-af6e-e241060d7deb")
 	)
 	(junction
-		(at 181.61 127)
+		(at 114.3 127)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "75fbd641-57ca-40e6-a53a-463696a2eb59")
+		(uuid "5b6f99a2-c451-44a6-ab70-5c6cf358f65e")
+	)
+	(junction
+		(at 114.3 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5f632df4-a61a-49bc-a445-215aa5b52776")
+	)
+	(junction
+		(at 200.66 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8951e2cb-f435-4dcf-8603-2aff97c64b8e")
+	)
+	(junction
+		(at 149.86 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94a944a5-7401-49c6-b408-3e3dac1e610c")
 	)
 	(junction
 		(at 198.12 100.33)
@@ -2726,22 +2863,16 @@
 		(uuid "a681274e-7a96-44a3-8d9c-17d842ce0edc")
 	)
 	(junction
+		(at 200.66 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b89b5f86-82b0-47f4-ae77-7a7ca5d14882")
+	)
+	(junction
 		(at 168.91 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "be03a8f9-6965-4bb5-bb76-370ecd0c5015")
-	)
-	(junction
-		(at 127 127)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ca772742-1375-41f9-a306-ac440662498b")
-	)
-	(junction
-		(at 134.62 127)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d03cefca-12cf-4793-b2f6-67bd0fc29514")
 	)
 	(junction
 		(at 168.91 92.71)
@@ -2750,32 +2881,22 @@
 		(uuid "d8c3fa90-071d-4378-8ce0-a767084ecc4f")
 	)
 	(junction
+		(at 130.81 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "db3e089d-714d-4aeb-b3aa-1da8dbc168f4")
+	)
+	(junction
 		(at 198.12 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e0201aa3-9751-4812-a1a2-d6d1a9847215")
 	)
 	(junction
-		(at 134.62 139.7)
+		(at 220.98 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e6065f24-b6eb-4078-b963-f22b9507f930")
-	)
-	(junction
-		(at 140.97 139.7)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f372ae81-38f0-443a-81f7-7313407138d2")
-	)
-	(wire
-		(pts
-			(xy 153.67 127) (xy 153.67 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0060273f-b76d-476a-b378-11fa8de82c3f")
+		(uuid "f104050d-bb25-4f00-87da-5558e1c30107")
 	)
 	(wire
 		(pts
@@ -2799,13 +2920,23 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 127) (xy 140.97 127)
+			(xy 149.86 127) (xy 165.1 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "05b03d6d-735e-4453-8249-0f025acfbe31")
+		(uuid "0255bd11-28ae-4ba5-877a-3b0c169f4c74")
+	)
+	(wire
+		(pts
+			(xy 124.46 80.01) (xy 130.81 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05a64f77-dade-44fd-8d91-2fa680602177")
 	)
 	(wire
 		(pts
@@ -2819,27 +2950,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 127) (xy 181.61 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e0e13f3-fef4-48ea-96f5-b50c585ad99b")
-	)
-	(wire
-		(pts
-			(xy 114.3 129.54) (xy 114.3 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e74a394-e1d1-42a3-8884-fe28d1fc77a8")
-	)
-	(wire
-		(pts
-			(xy 200.66 85.09) (xy 200.66 87.63)
+			(xy 200.66 87.63) (xy 200.66 85.09)
 		)
 		(stroke
 			(width 0)
@@ -2849,7 +2960,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 114.3) (xy 200.66 111.76)
+			(xy 200.66 114.3) (xy 200.66 113.03)
 		)
 		(stroke
 			(width 0)
@@ -2879,46 +2990,6 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 137.16) (xy 114.3 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1795ef0d-598e-4f6f-876a-232f54ab75d1")
-	)
-	(wire
-		(pts
-			(xy 134.62 139.7) (xy 127 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c0300fe-525a-48c9-827c-59dea68ea54e")
-	)
-	(wire
-		(pts
-			(xy 140.97 137.16) (xy 140.97 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1e9b9629-ed4b-47a7-a09b-3e726921484e")
-	)
-	(wire
-		(pts
-			(xy 127 127) (xy 127 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "206f99dd-e701-468a-8213-d41364a11ebe")
-	)
-	(wire
-		(pts
 			(xy 130.81 76.2) (xy 130.81 80.01)
 		)
 		(stroke
@@ -2926,6 +2997,16 @@
 			(type default)
 		)
 		(uuid "2084f711-911a-491a-afe1-cb67e45e7f57")
+	)
+	(wire
+		(pts
+			(xy 222.25 92.71) (xy 220.98 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21fdf52f-c9be-44af-9390-d111191e5448")
 	)
 	(wire
 		(pts
@@ -2949,16 +3030,6 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 139.7) (xy 181.61 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2fbec6b0-0dbb-465c-9fe4-90d0aa90fea7")
-	)
-	(wire
-		(pts
 			(xy 246.38 119.38) (xy 246.38 120.65)
 		)
 		(stroke
@@ -2969,7 +3040,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 73.66) (xy 205.74 73.66)
+			(xy 200.66 73.66) (xy 222.25 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2979,23 +3050,33 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 127) (xy 153.67 127)
+			(xy 129.54 118.11) (xy 129.54 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3eddcac3-3df9-46fa-8e93-ca3d4842313c")
+		(uuid "34e50b42-673b-45b7-a6fb-92ae94ddac58")
 	)
 	(wire
 		(pts
-			(xy 187.96 135.89) (xy 187.96 139.7)
+			(xy 149.86 115.57) (xy 149.86 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "44f5bda5-f590-49d4-932e-94dddca1b3a3")
+		(uuid "38923a72-5773-4160-a802-53309c4874af")
+	)
+	(wire
+		(pts
+			(xy 107.95 82.55) (xy 124.46 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b8984b9-efd1-46e8-a62c-9ae7e27f783c")
 	)
 	(wire
 		(pts
@@ -3009,6 +3090,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 118.11) (xy 165.1 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48cfcf61-7705-4fcf-b8af-1ddbfa692148")
+	)
+	(wire
+		(pts
 			(xy 184.15 91.44) (xy 181.61 91.44)
 		)
 		(stroke
@@ -3016,6 +3107,16 @@
 			(type default)
 		)
 		(uuid "49c9a3dd-f035-4e89-94f9-d67f822fc7c8")
+	)
+	(wire
+		(pts
+			(xy 129.54 125.73) (xy 129.54 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4aa13c12-2de0-4af5-bd41-7f71c9d6feb4")
 	)
 	(wire
 		(pts
@@ -3039,13 +3140,13 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 127) (xy 187.96 130.81)
+			(xy 129.54 127) (xy 114.3 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5254620c-5eea-4a38-b27f-81085cccf776")
+		(uuid "4f10d5a6-9862-4b54-b2b9-c3ce70cd65d4")
 	)
 	(wire
 		(pts
@@ -3079,6 +3180,36 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 87.63) (xy 222.25 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "576f5049-0804-4949-99db-00f4231d7c6b")
+	)
+	(wire
+		(pts
+			(xy 149.86 116.84) (xy 165.1 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b83ed05-d348-455b-a6ab-3818187773a6")
+	)
+	(wire
+		(pts
+			(xy 124.46 82.55) (xy 124.46 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62ec993d-54c6-47f3-9ba1-0d3274785253")
+	)
+	(wire
+		(pts
 			(xy 168.91 77.47) (xy 157.48 77.47)
 		)
 		(stroke
@@ -3096,6 +3227,26 @@
 			(type default)
 		)
 		(uuid "64cd55e0-1938-40e7-9dda-418cf868d139")
+	)
+	(wire
+		(pts
+			(xy 220.98 87.63) (xy 220.98 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6817a0d2-96aa-4b37-9d62-8893d9b10299")
+	)
+	(wire
+		(pts
+			(xy 114.3 127) (xy 114.3 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bdbd81d-7332-4508-af44-62c2f8b3c59d")
 	)
 	(wire
 		(pts
@@ -3119,16 +3270,6 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 139.7) (xy 153.67 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "74ca62ac-f2e5-4b75-812c-71c6bb754221")
-	)
-	(wire
-		(pts
 			(xy 193.04 100.33) (xy 198.12 100.33)
 		)
 		(stroke
@@ -3139,16 +3280,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 140.97) (xy 134.62 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "805cebac-cb29-4951-a4da-0b0c6f806786")
-	)
-	(wire
-		(pts
 			(xy 198.12 100.33) (xy 200.66 100.33)
 		)
 		(stroke
@@ -3156,16 +3287,6 @@
 			(type default)
 		)
 		(uuid "815aa39f-01ed-44aa-8ed2-a2b47e463210")
-	)
-	(wire
-		(pts
-			(xy 181.61 140.97) (xy 181.61 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "85f4f3f2-031e-4d8c-8a4e-c88e233bbc9e")
 	)
 	(wire
 		(pts
@@ -3199,23 +3320,33 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 139.7) (xy 140.97 139.7)
+			(xy 149.86 124.46) (xy 149.86 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "920d0680-e5f5-46f0-8b78-21fc9dc70917")
+		(uuid "8cb4340a-5194-4e4b-baa0-0fb2ba6d7d04")
 	)
 	(wire
 		(pts
-			(xy 114.3 139.7) (xy 127 139.7)
+			(xy 149.86 127) (xy 149.86 129.54)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "95916895-cd81-4da6-9e14-6dbd0dd6e6a8")
+		(uuid "8edd7b06-050e-491d-a46e-f2d595c61803")
+	)
+	(wire
+		(pts
+			(xy 222.25 100.33) (xy 200.66 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9811af04-5451-4925-9e6a-5babb9146a00")
 	)
 	(wire
 		(pts
@@ -3229,6 +3360,16 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 116.84) (xy 114.3 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dba3c19-747a-4ef8-967f-0f2f663dadf9")
+	)
+	(wire
+		(pts
 			(xy 157.48 100.33) (xy 181.61 100.33)
 		)
 		(stroke
@@ -3239,33 +3380,23 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 129.54) (xy 140.97 127)
+			(xy 114.3 115.57) (xy 114.3 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a83e9ea1-dd20-4607-b4e2-9dc6afa86b46")
+		(uuid "a6df1bf0-74e5-4370-b16e-97a8bbdeff85")
 	)
 	(wire
 		(pts
-			(xy 114.3 127) (xy 127 127)
+			(xy 200.66 87.63) (xy 204.47 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a9f30f18-c3c8-4711-b007-9dd1876ad064")
-	)
-	(wire
-		(pts
-			(xy 153.67 139.7) (xy 153.67 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ab547228-31a4-42d1-a6aa-3a201a306d10")
+		(uuid "a8a110a6-c03a-47a7-8e98-8dc3779fb8e4")
 	)
 	(wire
 		(pts
@@ -3279,6 +3410,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 116.84) (xy 149.86 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0bfe10b-0684-4fd6-9f21-1584e1c47508")
+	)
+	(wire
+		(pts
 			(xy 158.75 81.28) (xy 157.48 81.28)
 		)
 		(stroke
@@ -3286,6 +3427,16 @@
 			(type default)
 		)
 		(uuid "b0e4c3b9-a07a-4c5a-9da7-8534d6345671")
+	)
+	(wire
+		(pts
+			(xy 114.3 116.84) (xy 129.54 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0f300bd-cc46-42d6-9084-01b7907dee7d")
 	)
 	(wire
 		(pts
@@ -3299,16 +3450,6 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 139.7) (xy 187.96 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bab91e78-30c8-4bc9-8f7e-4048b0ca26b0")
-	)
-	(wire
-		(pts
 			(xy 157.48 73.66) (xy 181.61 73.66)
 		)
 		(stroke
@@ -3319,13 +3460,13 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 127) (xy 187.96 127)
+			(xy 220.98 86.36) (xy 220.98 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bcccf023-aeec-462d-82ef-6dbe661a01de")
+		(uuid "bd96952d-57fd-474a-8a7c-8325c7e79b4b")
 	)
 	(wire
 		(pts
@@ -3349,23 +3490,13 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 129.54) (xy 175.26 127)
+			(xy 114.3 124.46) (xy 114.3 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cdc5d545-da33-42a2-8ba7-93b408eff8a9")
-	)
-	(wire
-		(pts
-			(xy 134.62 127) (xy 127 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0df3e0e-e066-49c3-8139-e00a27974e7a")
+		(uuid "d7c0bda9-73c4-4806-b992-14d34f37a5d6")
 	)
 	(wire
 		(pts
@@ -3376,6 +3507,26 @@
 			(type default)
 		)
 		(uuid "d87cfcdc-9e37-4bd2-9854-bd67a9498717")
+	)
+	(wire
+		(pts
+			(xy 200.66 113.03) (xy 200.66 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8804ff8-24aa-419a-9d52-78929d8e7183")
+	)
+	(wire
+		(pts
+			(xy 165.1 125.73) (xy 165.1 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc1329f9-a265-4559-b03e-eb388f0d9aaa")
 	)
 	(wire
 		(pts
@@ -3409,16 +3560,6 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 125.73) (xy 181.61 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f00bdb6e-b1ef-46e0-b45c-97b7f429aa09")
-	)
-	(wire
-		(pts
 			(xy 246.38 116.84) (xy 251.46 116.84)
 		)
 		(stroke
@@ -3429,16 +3570,6 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 137.16) (xy 175.26 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f698f494-dba1-4a40-b8a7-1c1d97475584")
-	)
-	(wire
-		(pts
 			(xy 168.91 77.47) (xy 168.91 80.01)
 		)
 		(stroke
@@ -3446,16 +3577,6 @@
 			(type default)
 		)
 		(uuid "f79f848f-78cc-4e70-bcd1-223bced920b9")
-	)
-	(wire
-		(pts
-			(xy 127 139.7) (xy 127 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f7a5bfb8-ed69-4766-b8bf-1456113beb27")
 	)
 	(wire
 		(pts
@@ -3479,79 +3600,13 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 125.73) (xy 134.62 127)
+			(xy 200.66 113.03) (xy 222.25 113.03)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ff694270-2c8c-4943-8cb7-9d9ced3d42cf")
-	)
-	(symbol
-		(lib_id "power:+12V")
-		(at 134.62 125.73 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "036121aa-400b-48e5-b1ac-dd66e5411fd4")
-		(property "Reference" "#PWR01"
-			(at 134.62 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 134.62 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 134.62 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 134.62 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 134.62 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ac936b23-3f24-48cf-a257-68cfc51f0b56")
-		)
-		(instances
-			(project ""
-				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "fed7d3fc-0ce3-470f-add5-0863a2dfdd54")
 	)
 	(symbol
 		(lib_id "charge_battery_sym_lib:IR2110STRPBF")
@@ -3695,7 +3750,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VD"
+		(property "Value" "VB"
 			(at 175.26 77.4699 90)
 			(effects
 				(font
@@ -3722,7 +3777,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VD\""
+		(property "Description" "Power symbol creates a global label with name \"VB\""
 			(at 171.45 77.47 0)
 			(effects
 				(font
@@ -3744,105 +3799,8 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:SS54")
-		(at 168.91 86.36 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "091763dd-fc55-41ec-84be-1db8ea8c255e")
-		(property "Reference" "D1"
-			(at 171.45 83.8199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SS54"
-			(at 171.45 86.3599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:D_SMA"
-			(at 161.544 83.312 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.thegioiic.com/upload/documents/dc8a63b3eda4738bc390d9dc570a4e18.pdf"
-			(at 161.798 94.234 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Diode Shotky SS54 1N5824 5A 40V"
-			(at 161.798 89.408 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 161.798 85.344 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "SS54 SMA Diode Shotky 5A 40V"
-			(at 162.052 87.376 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/ss54-sma-diode-shotky-5a-40v"
-			(at 161.798 94.234 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1d2ce884-729d-437f-b366-0be544dab11d")
-		)
-		(pin "2"
-			(uuid "aed09b0c-4192-4778-b0c7-71d6556a2a18")
-		)
-		(instances
-			(project ""
-				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VS")
-		(at 214.63 87.63 270)
+		(at 204.47 87.63 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3851,7 +3809,7 @@
 		(fields_autoplaced yes)
 		(uuid "0f361602-ecb2-4b5d-a8ce-be2498753fc9")
 		(property "Reference" "#PWR012"
-			(at 210.82 87.63 0)
+			(at 200.66 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3860,7 +3818,7 @@
 			)
 		)
 		(property "Value" "VS"
-			(at 218.44 87.6299 90)
+			(at 208.28 87.6299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3869,7 +3827,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 214.63 87.63 0)
+			(at 204.47 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3878,7 +3836,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 214.63 87.63 0)
+			(at 204.47 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3887,7 +3845,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VS\""
-			(at 214.63 87.63 0)
+			(at 204.47 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3902,6 +3860,72 @@
 			(project "Test_Gate_Driver"
 				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VS")
+		(at 149.86 129.54 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1295be1d-dbc5-436b-98c0-4da1da1ccf06")
+		(property "Reference" "#PWR08"
+			(at 149.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VS"
+			(at 149.86 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VS\""
+			(at 149.86 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8724b16-9dfe-4f3d-b53c-772afecc7318")
+		)
+		(instances
+			(project "Test_Gate_Driver"
+				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -3974,34 +3998,35 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_16V")
-		(at 153.67 135.89 90)
+		(lib_id "Connector:TestPoint")
+		(at 222.25 73.66 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "1bba45e1-81da-41a3-8636-2eb28ae947d3")
-		(property "Reference" "C4"
-			(at 156.21 132.08 90)
+		(uuid "1b6ba6f1-0105-4d3d-bd56-49ad148a7223")
+		(property "Reference" "TP1"
+			(at 227.33 72.3899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Value" "100nF/16V"
-			(at 154.432 135.382 90)
+		(property "Value" "G_HIGH"
+			(at 227.33 73.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-			(at 148.59 136.144 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_3.0x3.0mm"
+			(at 222.25 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4009,8 +4034,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 148.59 135.636 0)
+		(property "Datasheet" "~"
+			(at 222.25 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4018,35 +4043,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "10%, 0603 (1608 Metric)"
-			(at 148.082 134.874 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 148.59 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Tụ Gốm 0603 100nF (0.1uF) 16V"
-			(at 148.082 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-100nf-0-1uf-16v"
-			(at 148.59 135.89 0)
+		(property "Description" "test point"
+			(at 222.25 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4055,32 +4053,96 @@
 			)
 		)
 		(pin "1"
-			(uuid "406b227f-3c87-4cb0-a726-ff952cbf721c")
-		)
-		(pin "2"
-			(uuid "8a781b45-752e-4ae4-bb00-f2ba20049569")
+			(uuid "d490c153-b9f7-4003-a3be-6032996fef59")
 		)
 		(instances
-			(project "Test_Gate_Driver"
+			(project ""
 				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "C4")
+					(reference "TP1")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:Res_10K_0603_1%")
-		(at 200.66 111.76 90)
+		(lib_id "Connector:TestPoint")
+		(at 222.25 113.03 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2206bae2-b904-4bd6-b8fb-18943269969d")
+		(property "Reference" "TP4"
+			(at 227.33 111.7599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "S_LOW"
+			(at 227.33 113.03 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_3.0x3.0mm"
+			(at 222.25 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 222.25 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 222.25 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fcf52c98-035e-4338-addf-16bcbed6fc53")
+		)
+		(instances
+			(project "Test_Gate_Driver"
+				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
+					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:SS54_SMC")
+		(at 168.91 86.36 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "26d11486-2727-4dd6-bc53-756afba9effb")
-		(property "Reference" "R4"
-			(at 203.2 106.6799 90)
+		(uuid "2d307ea9-1885-496f-93b4-e9c941008084")
+		(property "Reference" "D1"
+			(at 171.8066 83.8199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4088,8 +4150,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10K/1%/1_10W"
-			(at 203.2 109.2199 90)
+		(property "Value" "SS54_SMC"
+			(at 171.8066 86.3599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4097,8 +4159,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 189.23 71.882 90)
+		(property "Footprint" "charge_battery_footprint_lib:D_SMC"
+			(at 161.544 83.312 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4106,8 +4168,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
-			(at 199.898 72.136 90)
+		(property "Datasheet" ""
+			(at 161.798 94.234 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4115,8 +4177,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Res 10 KOhm 0603 1%"
-			(at 193.802 71.374 90)
+		(property "Description" "5.0 A /40V Schottky Barrier Rectifiers"
+			(at 161.798 89.408 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4124,8 +4186,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name" "Thegioiic"
-			(at 188.214 71.628 90)
+		(property "Supply name" "tme"
+			(at 161.798 85.344 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4133,8 +4195,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Điện Trở 10 KOhm 0603 1%"
-			(at 187.198 71.882 90)
+		(property "Supply part number" "5A 40V Schottky Barrier Diode SMC"
+			(at 162.052 87.376 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4142,59 +4204,42 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-0603-1-"
-			(at 180.086 70.612 90)
+		(property "Supply URL" "http://www.tme.vn/Product.aspx?id=2307#page=pro_info"
+			(at 161.798 94.234 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "10ae1f63-808a-42f2-b77f-349a1afa56f1")
 		)
 		(pin "1"
-			(uuid "77082354-a29a-4ea2-bb96-abad9d010ce5")
+			(uuid "7f6e39c5-bdf0-4935-8845-b10b4769f54d")
+		)
+		(pin "2"
+			(uuid "7d35386e-0532-4bf2-a88c-f96fc5151cdc")
 		)
 		(instances
-			(project "Test_Gate_Driver"
+			(project ""
 				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "R4")
+					(reference "D1")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_10uF_16V")
-		(at 114.3 137.16 90)
+		(lib_id "power:GND")
+		(at 114.3 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "30bb9759-05df-4829-95cd-0a49c8ecbd3c")
-		(property "Reference" "C1"
-			(at 116.84 132.08 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10uF/16V"
-			(at 115.062 135.382 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-			(at 109.22 137.414 0)
+		(fields_autoplaced yes)
+		(uuid "36eb6114-08ac-4524-bb7e-8c1d7bc7748a")
+		(property "Reference" "#PWR02"
+			(at 114.3 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4202,8 +4247,16 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 109.22 136.906 0)
+		(property "Value" "GND"
+			(at 114.3 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4211,8 +4264,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "10%, 0603 (1608 Metric)"
-			(at 108.712 136.144 0)
+		(property "Datasheet" ""
+			(at 114.3 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4220,26 +4273,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name" "Thegioiic"
-			(at 109.22 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Tụ Gốm 0603 10uF 16V"
-			(at 108.712 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-10uf-16v"
-			(at 109.22 137.16 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 114.3 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4248,15 +4283,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "d0f07204-f62f-43b1-bd38-8a3a0b8c07dd")
-		)
-		(pin "2"
-			(uuid "7893a330-7a6e-4144-9272-1fe475cc488e")
+			(uuid "ad9ee620-a529-4218-9563-124c5c70f798")
 		)
 		(instances
-			(project ""
+			(project "Test_Gate_Driver"
 				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "C1")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -4360,6 +4392,103 @@
 		)
 	)
 	(symbol
+		(lib_id "charge_battery_sym_lib:Cap_Polarized_SMD_47uF_25V")
+		(at 149.86 119.38 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4a8948d6-1550-4691-b1b6-982abe5fc28f")
+		(property "Reference" "C3"
+			(at 152.4 120.2181 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47uF/25V"
+			(at 152.4 122.7581 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_6.3x5.4"
+			(at 162.56 122.682 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.thegioiic.com/upload/documents/5121f69ada901167d040dfa7ca79f071.pdf"
+			(at 162.306 120.142 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor 47uF 25V, 20%"
+			(at 162.052 118.618 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 162.306 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "SMD 47uF 25V 6.3x5.4mm"
+			(at 162.306 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/tu-nhom-smd-47uf-25v-6-3x5-4mm"
+			(at 162.56 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8c3c890c-9436-4bd7-b590-d497c1fe3ede")
+		)
+		(pin "2"
+			(uuid "c6345dc3-3cde-4d92-a9f8-b8ccbc9f0a18")
+		)
+		(instances
+			(project ""
+				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 200.66 114.3 0)
 		(unit 1)
@@ -4420,100 +4549,6 @@
 			(project "Test_Gate_Driver"
 				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
 					(reference "#PWR011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:Res_10R_0603_1%")
-		(at 185.42 73.66 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "536a2a01-e41c-43ea-86bb-74a5aa7491ab")
-		(property "Reference" "R1"
-			(at 189.484 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10R/1%/1_10W"
-			(at 189.992 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 203.708 89.154 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 193.04 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Res 10 Ohm 0603 1%"
-			(at 199.136 89.662 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 204.724 89.408 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Điện Trở 10 Ohm 0603 1%"
-			(at 205.74 89.154 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-ohm-0603-1-"
-			(at 212.852 90.424 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7dac5c27-4c89-425a-8a0e-d8d5cfd042a3")
-		)
-		(pin "2"
-			(uuid "ff0285f7-05cc-494f-847e-c3a90e17927a")
-		)
-		(instances
-			(project ""
-				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -4748,209 +4783,27 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_4.7uF_25V")
-		(at 175.26 137.16 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7cb22449-d5f8-405d-80a3-66cb4074f7cd")
-		(property "Reference" "C6"
-			(at 177.292 131.826 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "4.7uF/25V"
-			(at 176.022 135.89 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-			(at 170.18 137.414 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 170.18 136.906 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "10%, 0603 (1608 Metric)"
-			(at 169.672 136.144 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 170.18 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Tụ Gốm 0603 4.7uF 25V"
-			(at 169.672 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-4-7uf-25v"
-			(at 170.18 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3da88f30-37e9-4e4c-9c51-cf19ab2d5142")
-		)
-		(pin "2"
-			(uuid "26d2b28a-9954-44ec-b538-1e949da6d950")
-		)
-		(instances
-			(project ""
-				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_10uF_16V")
-		(at 140.97 137.16 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8c482006-0fac-4366-9776-f0bbcf85f106")
-		(property "Reference" "C3"
-			(at 143.51 132.08 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10uF/16V"
-			(at 141.732 135.382 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-			(at 135.89 137.414 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 135.89 136.906 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "10%, 0603 (1608 Metric)"
-			(at 135.382 136.144 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 135.89 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "Tụ Gốm 0603 10uF 16V"
-			(at 135.382 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-10uf-16v"
-			(at 135.89 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c388fae6-abe2-4a44-9f41-611eed0eadff")
-		)
-		(pin "2"
-			(uuid "ea08bd6f-fa27-452e-82c6-51106dbfffdd")
-		)
-		(instances
-			(project "Test_Gate_Driver"
-				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "charge_battery_sym_lib:Cap_Polarized_SMD_47uF_16V")
-		(at 187.96 130.81 270)
+		(lib_id "Connector:TestPoint")
+		(at 222.25 100.33 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "93f02fa7-0c7a-4ed7-be69-3abae23b3b0c")
-		(property "Reference" "C5"
-			(at 190.5 131.6481 90)
+		(uuid "76ea533e-b9ad-450e-8641-5a3c88f80d83")
+		(property "Reference" "TP3"
+			(at 227.33 99.0599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "G_LOW"
+			(at 227.33 100.3299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4958,17 +4811,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47uF/35V"
-			(at 190.5 134.1881 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 200.66 134.112 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_3.0x3.0mm"
+			(at 222.25 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4976,8 +4820,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 200.406 131.572 0)
+		(property "Datasheet" "~"
+			(at 222.25 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4985,35 +4829,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor 47uF 35V, 20%"
-			(at 200.152 130.048 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply name" "Thegioiic"
-			(at 200.406 132.842 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply part number" "SMD 47uF 35V 5x5.4mm"
-			(at 200.406 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-nhom-smd-47uf-35v-6-3x5-4mm"
-			(at 200.66 132.842 0)
+		(property "Description" "test point"
+			(at 222.25 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5022,15 +4839,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "7589320d-0ba8-4b97-b2b2-cb7880f232cc")
-		)
-		(pin "2"
-			(uuid "752350a5-7e56-42f5-aa25-54c8e75ee039")
+			(uuid "5d9c6a3b-ee82-4ffb-a8ac-e01a6cc67eb7")
 		)
 		(instances
-			(project ""
+			(project "Test_Gate_Driver"
 				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "C5")
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -5038,16 +4852,16 @@
 	)
 	(symbol
 		(lib_id "power:VS")
-		(at 181.61 140.97 180)
+		(at 220.98 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9750bd06-f832-4407-aec3-aa5edcd3d9b7")
-		(property "Reference" "#PWR07"
-			(at 181.61 137.16 0)
+		(uuid "7d7790f4-6aee-4b98-9b2c-40ee918ef4a7")
+		(property "Reference" "#PWR013"
+			(at 220.98 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5056,7 +4870,7 @@
 			)
 		)
 		(property "Value" "VS"
-			(at 181.61 146.05 0)
+			(at 220.98 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5064,7 +4878,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 140.97 0)
+			(at 220.98 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5073,7 +4887,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 140.97 0)
+			(at 220.98 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5082,7 +4896,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VS\""
-			(at 181.61 140.97 0)
+			(at 220.98 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5091,10 +4905,171 @@
 			)
 		)
 		(pin "1"
-			(uuid "35166dcc-38f8-4acc-ac1f-5a0b9f95166a")
+			(uuid "70ade4be-4601-4bbd-950b-bd5b03600eb7")
 		)
 		(instances
-			(project ""
+			(project "Test_Gate_Driver"
+				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_5.1R_1206_1%")
+		(at 185.42 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "87cc6173-bdb6-443d-b213-eb34e04eccb8")
+		(property "Reference" "R3"
+			(at 189.23 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1R/1%/1_4W"
+			(at 189.23 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_1206"
+			(at 203.708 115.824 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 193.04 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Res 5.1 Ohm 1206 1%"
+			(at 199.136 116.332 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Ban Linh Kien"
+			(at 204.724 116.078 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Trở 1206 1% 5.1R (50c)"
+			(at 205.74 115.824 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://banlinhkien.com/tro-1206-1-5.1r-50c-p12117405.html"
+			(at 212.852 117.094 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a97de1c3-6501-4965-b754-6d09fc0e4c60")
+		)
+		(pin "2"
+			(uuid "5e727736-9185-4045-9b8b-464ed053265e")
+		)
+		(instances
+			(project "Test_Gate_Driver"
+				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VD")
+		(at 149.86 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9b064dfa-bec5-4211-b037-97d0f7b94080")
+		(property "Reference" "#PWR07"
+			(at 149.86 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VB"
+			(at 149.86 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VB\""
+			(at 149.86 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "574b383c-9f78-47e2-a665-f51399268913")
+		)
+		(instances
+			(project "Test_Gate_Driver"
 				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
 					(reference "#PWR07")
 					(unit 1)
@@ -5103,43 +5078,33 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_16V")
-		(at 127 135.89 90)
+		(lib_id "Connector:Conn_01x04_Pin")
+		(at 102.87 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "9b3f9bf0-d716-42bb-870c-ebb4f1588514")
-		(property "Reference" "C2"
-			(at 129.54 132.08 90)
+		(fields_autoplaced yes)
+		(uuid "a1c8889e-db50-42d0-8eec-a7c59cdab116")
+		(property "Reference" "J1"
+			(at 103.505 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "100nF/16V"
-			(at 127.762 135.382 90)
+		(property "Value" "Conn_01x04_Pin"
+			(at 103.505 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_0603"
-			(at 121.92 136.144 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.vn/datasheet/2/40/KYOCERA_AutoMLCCKAM-3106308.pdf"
-			(at 121.92 135.636 0)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 102.87 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5147,8 +5112,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "10%, 0603 (1608 Metric)"
-			(at 121.412 134.874 0)
+		(property "Datasheet" "~"
+			(at 102.87 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5156,8 +5121,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply name" "Thegioiic"
-			(at 121.92 134.62 0)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 102.87 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5165,8 +5130,58 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Tụ Gốm 0603 100nF (0.1uF) 16V"
-			(at 121.412 134.62 0)
+		(pin "3"
+			(uuid "dc10b09d-d159-4c24-9a5c-c4098cbf1ac8")
+		)
+		(pin "2"
+			(uuid "c579f77c-6fa8-4e4b-b08e-af6b9b170b81")
+		)
+		(pin "1"
+			(uuid "67328cc1-27b3-48b5-8dc2-bb13968941c9")
+		)
+		(pin "4"
+			(uuid "1391a46a-5c11-45cc-8cf8-8df621aadabc")
+		)
+		(instances
+			(project ""
+				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 222.25 92.71 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1edb96b-8f7d-46f7-8c60-6fd403dc5e35")
+		(property "Reference" "TP5"
+			(at 227.33 91.4399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "D_LOW"
+			(at 227.33 92.7099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_3.0x3.0mm"
+			(at 222.25 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5174,8 +5189,17 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0603-100nf-0-1uf-16v"
-			(at 121.92 135.89 0)
+		(property "Datasheet" "~"
+			(at 222.25 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 222.25 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5184,15 +5208,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "ca77121f-d440-44c3-a5b0-c65310ce055f")
-		)
-		(pin "2"
-			(uuid "b357d158-324e-44aa-8fe9-ae6722fb7287")
+			(uuid "49f453b0-05c9-44b4-882b-740005eced40")
 		)
 		(instances
-			(project ""
+			(project "Test_Gate_Driver"
 				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "C2")
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -5360,34 +5381,132 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x03_Socket")
-		(at 102.87 87.63 0)
-		(mirror y)
+		(lib_id "charge_battery_sym_lib:Res_10K_1206_1%")
+		(at 200.66 111.76 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "bfc773d6-518a-4ca1-8b31-07084b434dd9")
-		(property "Reference" "J2"
-			(at 103.505 80.01 0)
+		(uuid "c0e85f65-c2b5-4f61-a24c-c07cc2004f68")
+		(property "Reference" "R2"
+			(at 203.2 106.6799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x03_Socket"
-			(at 103.505 82.55 0)
+		(property "Value" "10K/1%/1_4W"
+			(at 203.2 109.2199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 102.87 87.63 0)
+		(property "Footprint" "charge_battery_footprint_lib:Res_1206"
+			(at 189.23 71.882 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf"
+			(at 199.898 72.136 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Res 10 KOhm 1206 1%"
+			(at 193.802 71.374 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 188.214 71.628 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Điện Trở 10 KOhm 1206 1%"
+			(at 187.198 71.882 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-kohm-1206-1-"
+			(at 180.086 70.612 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ae2f5f7f-d475-4ba5-b13c-68a3bf6381ad")
+		)
+		(pin "1"
+			(uuid "a84bb723-0426-4fc6-bfaf-3a6b6b2ff1e8")
+		)
+		(instances
+			(project "Test_Gate_Driver"
+				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 222.25 87.63 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c1fb9df9-ce28-47cd-9f67-8d8d5b790dc9")
+		(property "Reference" "TP2"
+			(at 227.33 86.3599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "S_HIGH"
+			(at 227.33 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_3.0x3.0mm"
+			(at 222.25 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5396,7 +5515,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 102.87 87.63 0)
+			(at 222.25 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5404,28 +5523,22 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x03, script generated"
-			(at 102.87 87.63 0)
+		(property "Description" "test point"
+			(at 222.25 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "3"
-			(uuid "2d2c8708-9697-4acd-aa5b-80a6f620100c")
 		)
 		(pin "1"
-			(uuid "e033e6b2-1879-4515-921b-f1c4ba47893c")
-		)
-		(pin "2"
-			(uuid "eaf8bad6-424c-4d92-ba13-d8f29c8b7457")
+			(uuid "3135358d-2a68-4adc-b464-30fccb8a95d6")
 		)
 		(instances
-			(project ""
+			(project "Test_Gate_Driver"
 				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "J2")
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -5499,32 +5612,35 @@
 		)
 	)
 	(symbol
-		(lib_id "charge_battery_sym_lib:Res_10R_0603_1%")
-		(at 185.42 100.33 0)
+		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_4.7uF_50V_1206")
+		(at 165.1 118.11 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d7753e30-ad7e-485f-b327-8c42325ce22d")
-		(property "Reference" "R3"
-			(at 189.23 95.758 0)
+		(fields_autoplaced yes)
+		(uuid "cd365a02-237f-4f39-85d1-77e2b1530b1c")
+		(property "Reference" "C4"
+			(at 168.91 120.6499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "10R/1%/1_10W"
-			(at 189.992 97.79 0)
+		(property "Value" "4.7uF/50V"
+			(at 168.91 123.1899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "charge_battery_footprint_lib:Res_0603"
-			(at 203.708 115.824 0)
+		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_1206"
+			(at 170.18 117.856 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5533,7 +5649,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 115.57 0)
+			(at 170.18 118.364 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5541,8 +5657,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Res 10 Ohm 0603 1%"
-			(at 199.136 116.332 0)
+		(property "Description" "10%, 1206 (3216 Metric)"
+			(at 170.688 119.126 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5551,7 +5667,7 @@
 			)
 		)
 		(property "Supply name" "Thegioiic"
-			(at 204.724 116.078 0)
+			(at 170.18 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5559,8 +5675,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supply part number" "Điện Trở 10 Ohm 0603 1%"
-			(at 205.74 115.824 0)
+		(property "Supply part number" "Tụ Gốm 1206 4.7uF 50V"
+			(at 170.688 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5568,25 +5684,122 @@
 				(hide yes)
 			)
 		)
-		(property "Supply URL" "https://www.thegioiic.com/dien-tro-10-ohm-0603-1-"
-			(at 212.852 117.094 0)
+		(property "Supply URL" "https://www.thegioiic.com/tu-gom-1206-4-7uf-50v"
+			(at 170.18 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "1"
-			(uuid "563e1f93-7e13-41bb-b810-6ff43cf0785b")
 		)
 		(pin "2"
-			(uuid "e6ec5859-0a4d-4dc3-bcc4-c88e2fb9bc9d")
+			(uuid "ad62e323-facd-4679-8ee8-7cd8ba260b2f")
+		)
+		(pin "1"
+			(uuid "21e25518-cadb-4085-842a-dd01a547ac79")
 		)
 		(instances
-			(project "Test_Gate_Driver"
+			(project ""
 				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "R3")
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Cap_Polarized_SMD_10uF_25V")
+		(at 114.3 119.38 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d5dea068-8050-4c88-b58e-4d6f1a1fc058")
+		(property "Reference" "C1"
+			(at 116.84 120.2181 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF/25V"
+			(at 116.84 122.7581 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.4"
+			(at 127 122.682 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 126.746 120.142 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor 10uF 25V, 20%"
+			(at 126.492 118.618 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 126.746 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Tụ Nhôm SMD 10uF 25V 4x5.4mm"
+			(at 126.746 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/tu-nhom-smd-10uf-25v-4x5-4mm"
+			(at 127 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d9f7a11d-b2c9-4875-b699-e06700d3b539")
+		)
+		(pin "1"
+			(uuid "15ce3ce3-a1a2-4446-baa8-7df9253af2a7")
+		)
+		(instances
+			(project ""
+				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -5730,17 +5943,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VD")
-		(at 181.61 125.73 0)
+		(lib_id "power:+12V")
+		(at 114.3 115.57 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f8d8eb5b-b664-4efb-b964-f2541fee3d52")
-		(property "Reference" "#PWR08"
-			(at 181.61 129.54 0)
+		(uuid "f79b642c-d7fd-4d3c-82ce-27cfdfea978b")
+		(property "Reference" "#PWR01"
+			(at 114.3 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5748,8 +5961,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VD"
-			(at 181.61 120.65 0)
+		(property "Value" "+12V"
+			(at 114.3 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5757,7 +5970,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 125.73 0)
+			(at 114.3 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5766,7 +5979,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 125.73 0)
+			(at 114.3 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5774,8 +5987,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VD\""
-			(at 181.61 125.73 0)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 114.3 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5784,12 +5997,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "ffd53807-1747-4234-a47d-693bd76df788")
+			(uuid "44f2fbf1-6557-4a5b-858d-d64174457cbe")
 		)
 		(instances
-			(project ""
+			(project "Test_Gate_Driver"
 				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "#PWR08")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -5862,34 +6075,35 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 134.62 140.97 0)
+		(lib_id "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_50V_1206")
+		(at 129.54 124.46 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "fc079d34-ede3-4677-9d09-d9a7c1dbf496")
-		(property "Reference" "#PWR02"
-			(at 134.62 147.32 0)
+		(uuid "fcf4e657-4fbe-47b5-8deb-c009a37d2630")
+		(property "Reference" "C2"
+			(at 133.35 120.6499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify right)
 			)
 		)
-		(property "Value" "GND"
-			(at 134.62 146.05 0)
+		(property "Value" "100nF/50V"
+			(at 133.35 123.1899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 134.62 140.97 0)
+		(property "Footprint" "charge_battery_footprint_lib:Ceramic_Cap_1206"
+			(at 124.46 124.714 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5898,7 +6112,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 134.62 140.97 0)
+			(at 124.46 124.206 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5906,8 +6120,35 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 134.62 140.97 0)
+		(property "Description" "10%, 1206 (3216 Metric)"
+			(at 123.952 123.444 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Thegioiic"
+			(at 124.46 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Tụ Gốm 1206 100nF (0.1uF) 50V"
+			(at 123.952 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://www.thegioiic.com/tu-gom-0805-100nf-0-1uf-50v"
+			(at 124.46 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5916,12 +6157,110 @@
 			)
 		)
 		(pin "1"
-			(uuid "22952dca-b77b-45dd-80d8-cf47cf2bb851")
+			(uuid "902fc5e1-5699-4fd3-a63a-f822744faa67")
+		)
+		(pin "2"
+			(uuid "658d00e1-132d-4e8e-8a7b-59ebda4ded18")
 		)
 		(instances
 			(project ""
 				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
-					(reference "#PWR02")
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "charge_battery_sym_lib:Res_5.1R_1206_1%")
+		(at 185.42 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd3d2dcb-f87c-4c26-9d2d-46aa9e26cdbb")
+		(property "Reference" "R1"
+			(at 189.23 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5.1R/1%/1_4W"
+			(at 189.23 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "charge_battery_footprint_lib:Res_1206"
+			(at 203.708 89.154 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 193.04 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Res 5.1 Ohm 1206 1%"
+			(at 199.136 89.662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply name" "Ban Linh Kien"
+			(at 204.724 89.408 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply part number" "Trở 1206 1% 5.1R (50c)"
+			(at 205.74 89.154 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supply URL" "https://banlinhkien.com/tro-1206-1-5.1r-50c-p12117405.html"
+			(at 212.852 90.424 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3d250d64-de99-4c81-b1c8-260ca856b9b8")
+		)
+		(pin "2"
+			(uuid "a0c70239-045e-492b-ad15-af347a04d7dd")
+		)
+		(instances
+			(project ""
+				(path "/f877aced-cfa2-49b9-907f-fdda34a0fe2b"
+					(reference "R1")
 					(unit 1)
 				)
 			)
