@@ -1,7 +1,7 @@
 (footprint "TPCM-1.7-5"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(tags "SSRH24NH-45059")
 	(property "Reference" "REF**"
@@ -24,19 +24,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "93152f1c-c946-4c5c-9f20-f33346ddef1d")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -152,7 +139,8 @@
 		(remove_unused_layers no)
 		(uuid "856e3b1e-d5b6-4cc2-8266-0b296000a4ea")
 	)
-	(model "${CHARGEBATTERY}/ALFT-04-3.STEP"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/ALFT-04-3.STEP"
 		(offset
 			(xyz 10.16 -12.7 5.715)
 		)

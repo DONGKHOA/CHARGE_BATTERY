@@ -1,7 +1,7 @@
 (footprint "SOIC_8_DWV0008A"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(tags "AMC1351QDWVRQ1 ")
 	(property "Reference" "REF**"
@@ -24,18 +24,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "3eafa039-ad0a-44bb-ad8f-2b9462f606be")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -112,7 +100,7 @@
 			(width 0.2)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "cd91f3bf-57ac-4734-8b0c-b1afcf82447b")
 	)
@@ -622,65 +610,55 @@
 	(pad "1" smd rect
 		(at -5.3848 -1.905)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "bfd09cbf-d13b-4b72-b35f-3cc08d895e16")
 	)
 	(pad "2" smd rect
 		(at -5.3848 -0.635)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "6429660d-ace7-4a45-9e92-1d1f37b38f01")
 	)
 	(pad "3" smd rect
 		(at -5.3848 0.635)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "7f460e4a-d2b5-478a-bad7-8ae104b58afa")
 	)
 	(pad "4" smd rect
 		(at -5.3848 1.905)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "038a3df4-a803-4655-aa55-f2341a2784bb")
 	)
 	(pad "5" smd rect
 		(at 5.3848 1.905)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "6264a4d6-da44-484b-83cf-23aeeeb29612")
 	)
 	(pad "6" smd rect
 		(at 5.3848 0.635)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "930412ad-b039-4d5f-836b-fb51266066b8")
 	)
 	(pad "7" smd rect
 		(at 5.3848 -0.635)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "14ffac8e-42ce-49f5-a7a4-1befb2e629d9")
 	)
 	(pad "8" smd rect
 		(at 5.3848 -1.905)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "4ee51a04-83b1-4bd9-9cbb-66a778d891b3")
 	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/SOIC_8_DWV0008A.stp"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/SOIC_8_DWV0008A.stp"
 		(offset
 			(xyz 0 0 2)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz -90 0 -90)
-		)
-	)
-	(model "${CHARGEBATTERY}/SOIC_8_DWV0008A.stp"
-		(offset
-			(xyz 0 0 1.7)
 		)
 		(scale
 			(xyz 1 1 1)

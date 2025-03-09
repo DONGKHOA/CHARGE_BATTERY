@@ -1,7 +1,7 @@
 (footprint "TO-247"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(tags "MSC010SDA120B ")
 	(property "Reference" "REF**"
@@ -24,18 +24,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "1f8cc5a4-cf60-4c13-8865-39c38876ac58")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -173,29 +161,8 @@
 		(remove_unused_layers no)
 		(uuid "24dfb89f-7214-4b27-a189-3801b037edaa")
 	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/TO-247.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "${CHARGEBATTERY}/TO-247.step"
-		(offset
-			(xyz 0 0 1)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "D:/My Project/NCKH/CHARGE_BATTERY/Hardware/Library/3d_model/TO-247.step"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/TO-247.step"
 		(offset
 			(xyz 0 0 0)
 		)

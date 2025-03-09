@@ -1,7 +1,7 @@
 (footprint "DO-201AD-2"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 10.03 0 0)
@@ -24,18 +24,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "cc21e39a-ae2a-4163-8248-9774df398224")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -313,29 +301,8 @@
 		(remove_unused_layers no)
 		(uuid "d1994ec6-2841-4c47-a21e-22cbbd6e514c")
 	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/RGP25M-E354.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "D:/My Project/NCKH/CHARGE_BATTERY/Hardware/Library/3d_model/RGP25M-E354.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "${CHARGEBATTERY}/RGP25M-E354.step"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/RGP25M-E354.step"
 		(offset
 			(xyz 0 0 0)
 		)

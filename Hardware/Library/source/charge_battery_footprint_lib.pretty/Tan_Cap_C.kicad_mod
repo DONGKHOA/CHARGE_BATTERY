@@ -1,11 +1,11 @@
 (footprint "Tan_Cap_C"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(tags "TAJC476K010RNJ ")
 	(property "Reference" "REF**"
-		(at -2.3622 -3.1242 0)
+		(at 0 0.1 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "e68bf48a-7a84-4cf6-9c91-af2e717bf36e")
@@ -24,18 +24,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "ceda591f-3cc8-41ec-9cab-0ca21c26bba2")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -92,23 +80,13 @@
 			(width 0.2)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "bb36c8c5-24c9-4b4c-87b5-1c33bc63d861")
 	)
 	(fp_line
-		(start -3.5 1.8034)
-		(end -3.5 -1.8034)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "1660c72f-b7f5-47ab-aef9-a3c87261f132")
-	)
-	(fp_line
-		(start -3.4798 -1.8034)
-		(end 3.5052 -1.8034)
+		(start -3.8 -1.5)
+		(end 3.8 -1.5)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -117,8 +95,18 @@
 		(uuid "b2bb98ce-7982-490c-8924-65cc7be35f16")
 	)
 	(fp_line
-		(start 3.4798 1.8034)
-		(end -3.4798 1.8034)
+		(start -3.8 1.5)
+		(end -3.8 -1.5)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1660c72f-b7f5-47ab-aef9-a3c87261f132")
+	)
+	(fp_line
+		(start 3.7925 1.5)
+		(end -3.8 1.5)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -127,8 +115,8 @@
 		(uuid "e1e34995-747a-4b49-90e1-c7817710126e")
 	)
 	(fp_line
-		(start 3.5 -1.8034)
-		(end 3.5 1.8034)
+		(start 3.8 -1.5)
+		(end 3.7925 1.5)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -143,7 +131,7 @@
 			(width 0.0254)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.Fab")
 		(uuid "2de7ce90-d325-4ae6-aa60-df87d825dcab")
 	)
@@ -162,40 +150,19 @@
 	(pad "1" smd rect
 		(at -2.2352 0 90)
 		(size 2.4 2.5)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "31e0f07d-4a0e-452b-8b7f-4b9588d7f7e2")
 	)
 	(pad "2" smd rect
 		(at 2.2352 0 90)
 		(size 2.4 2.5)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "5314b3f1-e1ca-44ca-baa8-3f5a963abf3b")
 	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/Tan_Cap_C.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "${CHARGEBATTERY}/Tan_Cap_C.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "D:/My Project/NCKH/CHARGE_BATTERY/Hardware/Library/3d_model/Tan_Cap_C.step"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/Tan_Cap_C.step"
 		(offset
 			(xyz 0 0 0)
 		)

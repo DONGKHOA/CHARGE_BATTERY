@@ -1,7 +1,7 @@
 (footprint "Res_2512"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 -2.62 0)
@@ -22,19 +22,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "45ac47cd-8289-49f8-8e69-eac733bd8dd1")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -87,8 +74,8 @@
 		(uuid "44f2dac7-b936-4a39-bc0c-bffc0241dc5d")
 	)
 	(fp_line
-		(start -3.82 -1.92)
-		(end 3.82 -1.92)
+		(start -3.64 -1.71)
+		(end 3.63 -1.71)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -97,8 +84,8 @@
 		(uuid "c93ae89b-009b-4d4b-962b-ea9175e7263e")
 	)
 	(fp_line
-		(start -3.82 1.92)
-		(end -3.82 -1.92)
+		(start -3.64 1.72)
+		(end -3.64 -1.71)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -107,8 +94,8 @@
 		(uuid "4947eec6-325e-4c53-836c-65067cbcd911")
 	)
 	(fp_line
-		(start 3.82 -1.92)
-		(end 3.82 1.92)
+		(start 3.63 -1.71)
+		(end 3.63 1.72)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -117,8 +104,8 @@
 		(uuid "cd88ba40-69fd-4ad6-b340-508dacd3f0ef")
 	)
 	(fp_line
-		(start 3.82 1.92)
-		(end -3.82 1.92)
+		(start 3.63 1.72)
+		(end -3.64 1.72)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -180,17 +167,18 @@
 	(pad "1" smd roundrect
 		(at -2.9625 0)
 		(size 1.225 3.35)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.204082)
 		(uuid "85a182cd-6354-48c2-8a93-32f4a4e239aa")
 	)
 	(pad "2" smd roundrect
 		(at 2.9625 0)
 		(size 1.225 3.35)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.204082)
 		(uuid "5e98c8d6-3754-4467-901a-5d1d849a64da")
 	)
+	(embedded_fonts no)
 	(model "${KICAD8_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_2512_6332Metric.wrl"
 		(offset
 			(xyz 0 0 0)

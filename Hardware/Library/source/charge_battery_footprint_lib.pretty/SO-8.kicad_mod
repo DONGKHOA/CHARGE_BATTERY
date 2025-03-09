@@ -1,7 +1,7 @@
 (footprint "SO-8"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0.3815 4.98484 0)
@@ -15,24 +15,12 @@
 		)
 	)
 	(property "Value" "SO-8"
-		(at 16.353285 -4.984835 0)
+		(at -0.005 0.005 0)
 		(layer "F.Fab")
 		(uuid "2b599a64-6b90-45cc-aa38-84fe3f00e47a")
 		(effects
 			(font
 				(size 1.642118 1.642118)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "be67eceb-f3ea-4881-8044-7146f8cdadb2")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -132,6 +120,17 @@
 		)
 		(layer "F.SilkS")
 		(uuid "2dc663e3-d6f5-42e8-ac25-434d4f21225f")
+	)
+	(fp_rect
+		(start -6.43 -2.93)
+		(end 6.42 2.94)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "8c691dbf-2ab4-444c-9cc9-58ac0fac1209")
 	)
 	(fp_line
 		(start -5.8674 -2.159)
@@ -527,60 +526,61 @@
 	(pad "1" smd rect
 		(at -5.3848 -1.905)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "097f8dd5-96b9-4ee1-949b-f78ed9c5a8c6")
 	)
 	(pad "2" smd rect
 		(at -5.3848 -0.635)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "f46337fd-3b63-4b6c-acf3-ef1f2ddf0400")
 	)
 	(pad "3" smd rect
 		(at -5.3848 0.635)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "15dd83b7-be5e-4305-8711-6c5cdb80e90e")
 	)
 	(pad "4" smd rect
 		(at -5.3848 1.905)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "7f026e03-9bc4-4f2d-b414-5d00241ded08")
 	)
 	(pad "5" smd rect
 		(at 5.3848 1.905)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "d7467d9c-947e-4285-80f1-ff5861f081b1")
 	)
 	(pad "6" smd rect
 		(at 5.3848 0.635)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "8685de7f-f5ab-43c5-814f-56047c87ebfa")
 	)
 	(pad "7" smd rect
 		(at 5.3848 -0.635)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "97defdcf-0d12-4064-b427-2e0c0952f3ba")
 	)
 	(pad "8" smd rect
 		(at 5.3848 -1.905)
 		(size 1.7018 0.5588)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "810402a1-05b0-4b1d-8a6d-af34c977a2e6")
 	)
-	(model "${CHARGEBATTERY}/SO-8.step"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/SO-8.step"
 		(offset
 			(xyz 0 0 0)
 		)

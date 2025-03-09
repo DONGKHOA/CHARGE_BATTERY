@@ -1,7 +1,7 @@
 (footprint "Toroidal Inductor"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at -13.7414 -10.1854 0)
@@ -22,18 +22,6 @@
 		(effects
 			(font
 				(size 1.4 1.4)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "38ede5a2-7589-4303-a5df-379a11caa16b")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -201,29 +189,8 @@
 		(solder_mask_margin 0.102)
 		(uuid "7c8e3986-1fae-43b8-addb-a45fa1a40f38")
 	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/Toroidal Inductor.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz -90 0 0)
-		)
-	)
-	(model "${CHARGEBATTERY}/Toroidal Inductor.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz -90 0 0)
-		)
-	)
-	(model "D:/My Project/NCKH/CHARGE_BATTERY/Hardware/Library/3d_model/Toroidal Inductor.step"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/Toroidal Inductor.step"
 		(offset
 			(xyz 0 0 0)
 		)

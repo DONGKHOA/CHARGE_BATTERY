@@ -1,7 +1,7 @@
 (footprint "Big_Cap_330uF_450V"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "C, Radial series, Radial, pin pitch=7.50mm, diameter=16mm, height=31.5mm, Non-Polar Electrolytic Capacitor")
 	(tags "C Radial series Radial pin pitch 7.50mm diameter 16mm height 31.5mm Non-Polar Electrolytic Capacitor")
@@ -23,19 +23,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "9ef2f86e-392f-47c0-80e9-47ec653c2b41")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -94,7 +81,7 @@
 			(width 0.12)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "27ba9d96-6774-40b7-88f3-6a69553e9b98")
 	)
@@ -105,7 +92,7 @@
 			(width 0.05)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.CrtYd")
 		(uuid "c59f65df-3591-40e5-b167-0fc6bfbf6663")
 	)
@@ -116,7 +103,7 @@
 			(width 0.1)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.Fab")
 		(uuid "e14133ed-8665-43ac-90eb-d38a043b58cf")
 	)
@@ -147,40 +134,8 @@
 		(remove_unused_layers no)
 		(uuid "fd528566-096d-4d83-86b4-d01ae73301d8")
 	)
-	(model "C:/Users/ACER/OneDrive/Máy tính/NCKH/CHARGE_BATTERY/Hardware/Library/3d_model/CAP_B40_NCH.step"
-		(offset
-			(xyz -5 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "${CHARGEBATTERY}/CAP_B40_NCH.step"
-		(offset
-			(xyz -5 0 2)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/CAP_B40_NCH.step"
-		(offset
-			(xyz -5 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "D:/My Project/NCKH/CHARGE_BATTERY/Hardware/Library/3d_model/CAP_B40_NCH.step"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/CAP_B40_NCH.step"
 		(offset
 			(xyz -5 0 0)
 		)

@@ -1,7 +1,7 @@
 (footprint "SOP-16"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(tags "ds3231sn- ")
 	(property "Reference" "REF**"
@@ -24,18 +24,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "02105e46-a293-463b-a5be-cc25ae440a5b")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -132,7 +120,7 @@
 			(width 0.2)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "fa624a9f-cffb-4795-8b0a-a26b512db16f")
 	)
@@ -144,7 +132,7 @@
 			(width 0)
 			(type solid)
 		)
-		(fill solid)
+		(fill yes)
 		(layer "F.SilkS")
 		(uuid "cb73ca6f-f8a9-4568-a2a9-3294c39e30d6")
 	)
@@ -974,111 +962,101 @@
 	(pad "1" smd rect
 		(at -4.7371 -4.445)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "a5ae3622-6334-4017-b62d-25b99e05f5ea")
 	)
 	(pad "2" smd rect
 		(at -4.7371 -3.175)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "25367e3e-bcbe-4498-ad27-e539a6d717a4")
 	)
 	(pad "3" smd rect
 		(at -4.7371 -1.905)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "3cfb3233-09fe-4a36-8c98-a1cc8229cd3e")
 	)
 	(pad "4" smd rect
 		(at -4.7371 -0.635)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "a5f15473-d6fd-42d5-adda-8f9ee448352a")
 	)
 	(pad "5" smd rect
 		(at -4.7371 0.635)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "c6fa7fa6-254a-4b7f-8262-c4024beae832")
 	)
 	(pad "6" smd rect
 		(at -4.7371 1.905)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "f5b0aa85-ce37-427f-b63f-558dc4a557b8")
 	)
 	(pad "7" smd rect
 		(at -4.7371 3.175)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "af1b0d45-0caf-4112-8e5d-b7fd62af2721")
 	)
 	(pad "8" smd rect
 		(at -4.7371 4.445)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "0e5e45a5-cb2c-4c07-8d95-d9cf237b2f6e")
 	)
 	(pad "9" smd rect
 		(at 4.7371 4.445)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "516fbe22-803e-410b-8f4b-a92469c369a5")
 	)
 	(pad "10" smd rect
 		(at 4.7371 3.175)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "4bd816d9-90c7-4a2c-a13a-7599b24de982")
 	)
 	(pad "11" smd rect
 		(at 4.7371 1.905)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "e6993cda-b6b0-435f-9dc5-d5802dd8c90c")
 	)
 	(pad "12" smd rect
 		(at 4.7371 0.635)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "aa8a15f3-f93e-4c79-91dd-c4812b927da0")
 	)
 	(pad "13" smd rect
 		(at 4.7371 -0.635)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "efe31ee2-d775-419a-b135-7c4e2fc20d28")
 	)
 	(pad "14" smd rect
 		(at 4.7371 -1.905)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "0fd11d22-f195-41d3-8f52-33ab3f1de4db")
 	)
 	(pad "15" smd rect
 		(at 4.7371 -3.175)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "f85646be-674a-408d-9141-c827eb45e8cb")
 	)
 	(pad "16" smd rect
 		(at 4.7371 -4.445)
 		(size 1.8796 0.5334)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "616991a9-70a7-4e7e-bec5-482fe6c1a5cf")
 	)
-	(model "D:/Github/CHARGE_BATTERY/Hardware/Library/3d_model/SOP-16.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/SOP-16.step"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/SOP-16.step"
 		(offset
 			(xyz 0 0 0)
 		)

@@ -1,7 +1,7 @@
 (footprint "LCD 5“SSD1963 TFT Module"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 -3.048 0)
@@ -20,19 +20,6 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "81e4f2e9-0731-4192-bdc4-ed458d22f5f2")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 -2.548 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "657654c6-d0d8-4f32-81e2-d781a0bf7a77")
 		(effects
 			(font
 				(size 1 1)
@@ -74,7 +61,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "Cmts.User")
 		(uuid "d1e338ed-efc6-45b2-87ff-1bf84f03c113")
 	)
@@ -85,7 +72,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "Cmts.User")
 		(uuid "86ed082e-c684-4455-ba61-428d44474dc4")
 	)
@@ -96,7 +83,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "Cmts.User")
 		(uuid "ab159524-b339-403e-81e3-860f7cf6db76")
 	)
@@ -107,7 +94,7 @@
 			(width 0.15)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "Cmts.User")
 		(uuid "c20e78e4-5b6a-45d5-864d-fdff91f07e56")
 	)
@@ -118,7 +105,7 @@
 			(width 0.127)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.CrtYd")
 		(uuid "273ee3ae-c8b7-47be-a5a4-ce6a18850298")
 	)
@@ -129,7 +116,7 @@
 			(width 0.05)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.CrtYd")
 		(uuid "1c241aa2-b713-474e-b867-297f385550a0")
 	)
@@ -140,7 +127,7 @@
 			(width 0.05)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.CrtYd")
 		(uuid "b700e58c-5ba9-4535-870d-c0fafedb7cb5")
 	)
@@ -760,7 +747,8 @@
 			"e58acfb9-7b7b-4f22-9834-8eb9ca8d0783"
 		)
 	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/ER-TFTM050-5.step"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/ER-TFTM050-5.step"
 		(offset
 			(xyz 7.5 -11.5 8)
 		)
@@ -769,39 +757,6 @@
 		)
 		(rotate
 			(xyz 0 0 180)
-		)
-	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/PinSocket_2x20_P2.54mm_Vertical.step"
-		(offset
-			(xyz -55.5 7 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/PinSocket_2x04_P2.54mm_Vertical.step"
-		(offset
-			(xyz -55.5 19 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "${CHARGEBATTERY}/ER-TFTM050-5.step"
-		(offset
-			(xyz 7.1 -11.5 4.5)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 -180)
 		)
 	)
 )

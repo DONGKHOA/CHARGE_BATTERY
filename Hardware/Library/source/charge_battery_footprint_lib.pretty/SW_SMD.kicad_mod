@@ -1,7 +1,7 @@
 (footprint "SW_SMD"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at -0.5842 -2.2098 0)
@@ -22,19 +22,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 1.99 1.61 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "2f66c4df-5649-4902-a41f-b8bf8601d2d6")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -127,8 +114,8 @@
 		(uuid "c13fc7a3-9a8d-4ca4-a1ce-9106173ef738")
 	)
 	(fp_line
-		(start -2.5146 -1.649)
-		(end -2.5146 1.651)
+		(start -2.5146 -1.4)
+		(end -2.5146 1.41)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -137,8 +124,8 @@
 		(uuid "8a5f9f9d-0e80-4018-93e2-674761c80e38")
 	)
 	(fp_line
-		(start -2.5146 1.651)
-		(end 2.54 1.651)
+		(start -2.5146 1.41)
+		(end 2.54 1.41)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -147,8 +134,8 @@
 		(uuid "775edabc-3b37-40dd-bb12-fb4efe89a2db")
 	)
 	(fp_line
-		(start 2.54 -1.649)
-		(end -2.5146 -1.649)
+		(start 2.54 -1.4)
+		(end -2.5146 -1.4)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -157,8 +144,8 @@
 		(uuid "12b2190e-b959-4161-9aba-322c3c0f6895")
 	)
 	(fp_line
-		(start 2.54 1.65)
-		(end 2.54 -1.65)
+		(start 2.54 1.41)
+		(end 2.54 -1.4)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -213,7 +200,7 @@
 			(width 0.1)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.Fab")
 		(uuid "c2a58684-663d-4e1e-a695-33f4a9083767")
 	)
@@ -231,15 +218,16 @@
 	(pad "1" smd rect
 		(at -1.687 0.001)
 		(size 1.5 1.7)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "0f5a7e2a-5534-452a-9199-26285116e93a")
 	)
 	(pad "2" smd rect
 		(at 1.713 0.001)
 		(size 1.5 1.7)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "672dac8d-9293-40ed-b74d-63e232917307")
 	)
+	(embedded_fonts no)
 	(model "${KICAD8_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPST_B3U-1000P.wrl"
 		(offset
 			(xyz 0 0 0)

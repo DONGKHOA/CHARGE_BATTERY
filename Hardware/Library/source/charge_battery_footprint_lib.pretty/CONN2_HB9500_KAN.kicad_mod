@@ -1,7 +1,7 @@
 (footprint "CONN2_HB9500_KAN"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(tags "HB9500M-9.5-2P ")
 	(property "Reference" "REF**"
@@ -24,18 +24,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "6e945af2-d6ca-4f1b-bc31-5cfe753cbcbd")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -113,7 +101,7 @@
 			(width 0.1)
 			(type solid)
 		)
-		(fill solid)
+		(fill yes)
 		(layer "F.SilkS")
 		(uuid "244bece1-d659-48a5-b4bb-2a0826343d0e")
 	)
@@ -185,20 +173,10 @@
 		(remove_unused_layers no)
 		(uuid "34a76c16-0559-4530-ad7d-65f8917723b3")
 	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/HB9500_01x02_P9.50mm.step"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/HB9500_01x02_P9.50mm.step"
 		(offset
 			(xyz 0 -6 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "D:/My Project/NCKH/CHARGE_BATTERY/Hardware/Library/3d_model/HB9500_01x02_P9.50mm.step"
-		(offset
-			(xyz 0 -5 0)
 		)
 		(scale
 			(xyz 1 1 1)

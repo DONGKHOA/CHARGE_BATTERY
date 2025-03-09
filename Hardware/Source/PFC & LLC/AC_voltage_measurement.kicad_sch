@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "a8db3558-f091-4524-a267-483077478b53")
 	(paper "A4")
 	(title_block
@@ -14,8 +14,12 @@
 	)
 	(lib_symbols
 		(symbol "charge_battery_sym_lib:Ceramic_Cap_SMD_100nF_16V"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -116,7 +120,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.8448 -1.905) (xy 2.8448 1.905)
+						(xy 2.8448 0) (xy 3.81 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -128,7 +132,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.8448 0) (xy 3.81 0)
+						(xy 2.8448 -1.905) (xy 2.8448 1.905)
 					)
 					(stroke
 						(width 0.2032)
@@ -175,10 +179,15 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "charge_battery_sym_lib:Ceramic_Cap_SMD_10nF_50V"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -288,7 +297,7 @@
 				)
 				(polyline
 					(pts
-						(xy 4.1148 -1.905) (xy 4.1148 1.905)
+						(xy 4.1148 0) (xy 5.08 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -300,7 +309,7 @@
 				)
 				(polyline
 					(pts
-						(xy 4.1148 0) (xy 5.08 0)
+						(xy 4.1148 -1.905) (xy 4.1148 1.905)
 					)
 					(stroke
 						(width 0.2032)
@@ -347,10 +356,15 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "charge_battery_sym_lib:Ceramic_Cap_SMD_10uF_16V"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -460,7 +474,7 @@
 				)
 				(polyline
 					(pts
-						(xy 4.1148 -1.905) (xy 4.1148 1.905)
+						(xy 4.1148 0) (xy 5.08 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -472,7 +486,7 @@
 				)
 				(polyline
 					(pts
-						(xy 4.1148 0) (xy 5.08 0)
+						(xy 4.1148 -1.905) (xy 4.1148 1.905)
 					)
 					(stroke
 						(width 0.2032)
@@ -519,10 +533,15 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "charge_battery_sym_lib:Ceramic_Cap_SMD_1nF_50V"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -623,7 +642,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.8448 -1.905) (xy 2.8448 1.905)
+						(xy 2.8448 0) (xy 3.81 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -635,7 +654,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.8448 0) (xy 3.81 0)
+						(xy 2.8448 -1.905) (xy 2.8448 1.905)
 					)
 					(stroke
 						(width 0.2032)
@@ -682,10 +701,15 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "charge_battery_sym_lib:Ceramic_Cap_SMD_4.7nF_50V"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -786,7 +810,7 @@
 				)
 				(polyline
 					(pts
-						(xy 4.1148 -1.905) (xy 4.1148 1.905)
+						(xy 4.1148 0) (xy 5.08 0)
 					)
 					(stroke
 						(width 0.2032)
@@ -798,7 +822,7 @@
 				)
 				(polyline
 					(pts
-						(xy 4.1148 0) (xy 5.08 0)
+						(xy 4.1148 -1.905) (xy 4.1148 1.905)
 					)
 					(stroke
 						(width 0.2032)
@@ -845,10 +869,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "charge_battery_sym_lib:MCP1525T-I_TT"
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -953,24 +980,6 @@
 					)
 				)
 				(pin unspecified line
-					(at 7.62 1.27 180)
-					(length 3.81)
-					(name "VOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
 					(at 0 -6.35 90)
 					(length 3.81)
 					(name "VSS"
@@ -981,6 +990,24 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 1.27 180)
+					(length 3.81)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1029,6 +1056,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "charge_battery_sym_lib:OP07CSZ"
 			(pin_names
@@ -1143,16 +1171,16 @@
 			)
 			(symbol "OP07CSZ_1_1"
 				(pin input line
-					(at 5.08 -2.54 90)
-					(length 5.08)
-					(name "VOS"
+					(at -2.54 7.62 0)
+					(length 2.54)
+					(name "+"
 						(effects
 							(font
-								(size 0.508 0.508)
+								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1178,17 +1206,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at -2.54 7.62 0)
-					(length 2.54)
-					(name "+"
+				(pin power_in line
+					(at 2.54 12.7 270)
+					(length 3.81)
+					(name "V+"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1216,7 +1244,8 @@
 				)
 				(pin no_connect line
 					(at 5.08 7.62 270)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -1232,35 +1261,17 @@
 						)
 					)
 				)
-				(pin output line
-					(at 12.7 5.08 180)
-					(length 2.54)
-					(name "~"
+				(pin input line
+					(at 5.08 -2.54 90)
+					(length 5.08)
+					(name "VOS"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 0.508 0.508)
 							)
 						)
 					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 2.54 12.7 270)
-					(length 3.81)
-					(name "V+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1286,11 +1297,34 @@
 						)
 					)
 				)
+				(pin output line
+					(at 12.7 5.08 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "charge_battery_sym_lib:Res_100K_0603_1%"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1388,18 +1422,6 @@
 				)
 				(polyline
 					(pts
-						(xy 6.096 0) (xy 6.35 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 1.524 0) (xy 1.905 1.016) (xy 2.286 0) (xy 2.667 -1.016) (xy 3.048 0)
 					)
 					(stroke
@@ -1425,6 +1447,18 @@
 				(polyline
 					(pts
 						(xy 4.572 0) (xy 4.953 1.016) (xy 5.334 0) (xy 5.715 -1.016) (xy 6.096 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.096 0) (xy 6.35 0)
 					)
 					(stroke
 						(width 0)
@@ -1473,10 +1507,15 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "charge_battery_sym_lib:Res_1M_0603_1%"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1574,18 +1613,6 @@
 				)
 				(polyline
 					(pts
-						(xy 6.096 0) (xy 6.35 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 1.524 0) (xy 1.905 1.016) (xy 2.286 0) (xy 2.667 -1.016) (xy 3.048 0)
 					)
 					(stroke
@@ -1611,6 +1638,18 @@
 				(polyline
 					(pts
 						(xy 4.572 0) (xy 4.953 1.016) (xy 5.334 0) (xy 5.715 -1.016) (xy 6.096 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.096 0) (xy 6.35 0)
 					)
 					(stroke
 						(width 0)
@@ -1659,10 +1698,15 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "charge_battery_sym_lib:Res_5k1_0805_1%"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1751,18 +1795,6 @@
 				)
 				(polyline
 					(pts
-						(xy 2.286 -2.54) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy -2.286 -2.54) (xy -1.905 -1.524) (xy -1.524 -2.54) (xy -1.143 -3.556) (xy -0.762 -2.54)
 					)
 					(stroke
@@ -1776,6 +1808,18 @@
 				(polyline
 					(pts
 						(xy 0.762 -2.54) (xy 1.143 -1.524) (xy 1.524 -2.54) (xy 1.905 -3.556) (xy 2.286 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -2.54) (xy 2.54 -2.54)
 					)
 					(stroke
 						(width 0)
@@ -1836,12 +1880,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3V3"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1913,7 +1962,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1925,7 +1974,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1956,12 +2005,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+9V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2033,7 +2087,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -2045,7 +2099,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -2076,12 +2130,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:-9V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2184,12 +2243,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GNDA"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2280,6 +2344,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction

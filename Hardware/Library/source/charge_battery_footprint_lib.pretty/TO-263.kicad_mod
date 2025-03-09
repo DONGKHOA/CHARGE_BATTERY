@@ -1,7 +1,7 @@
 (footprint "TO-263"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 0 0)
@@ -23,18 +23,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "ca3e4565-d98f-4b86-b55d-3c667170a3c7")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -101,7 +89,7 @@
 			(width 0.25)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "3f96a398-8561-4d1d-94c9-696538556590")
 	)
@@ -220,52 +208,31 @@
 	(pad "1" smd rect
 		(at -6.2 -2.54 90)
 		(size 0.950001 3.85)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "12a6f4e7-640d-42ea-8650-a98943e6cba0")
 	)
 	(pad "2" smd rect
 		(at -6.2 0 90)
 		(size 0.950001 3.85)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "325f7d61-95a7-4c78-a46a-658a817df95d")
 	)
 	(pad "3" smd rect
 		(at -6.2 2.54 90)
 		(size 0.950001 3.85)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "292a4d6d-6e04-475d-b351-d4c4d27bbf62")
 	)
 	(pad "4" smd rect
 		(at 4.300002 0 90)
 		(size 10.699999 7.7)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "fa90a015-d7ce-4281-9628-2f4a92b969ee")
 	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/TO-263.stp"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/TO-263.stp"
 		(offset
 			(xyz 2 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 90)
-		)
-	)
-	(model "${CHARGEBATTERY}/TO-263.stp"
-		(offset
-			(xyz 2 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 90)
-		)
-	)
-	(model "D:/My Project/NCKH/CHARGE_BATTERY/Hardware/Library/3d_model/TO-263.stp"
-		(offset
-			(xyz 1.5 0 0)
 		)
 		(scale
 			(xyz 1 1 1)

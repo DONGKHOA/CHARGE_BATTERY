@@ -1,7 +1,7 @@
 (footprint "DIP-8"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 -1.6 0)
@@ -20,19 +20,6 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "2563d84d-757c-4759-89e9-06455cc03048")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 -1.1 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "f5de921b-ad69-4a2b-9a2e-5a405fee191a")
 		(effects
 			(font
 				(size 1 1)
@@ -306,29 +293,8 @@
 		(remove_unused_layers no)
 		(uuid "498cc1af-776f-48d9-b7ab-c1913f6d2a52")
 	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/DIP-8.step"
-		(offset
-			(xyz -4 4.5 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "${CHARGEBATTERY}/DIP-8.step"
-		(offset
-			(xyz -4 4.5 1)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "D:/My Project/NCKH/CHARGE_BATTERY/Hardware/Library/3d_model/DIP-8.step"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/DIP-8.step"
 		(offset
 			(xyz -4 4.5 0)
 		)

@@ -1,7 +1,7 @@
 (footprint "CDRH104"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 0 0)
@@ -23,18 +23,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "c3977b3d-848f-42d3-be74-9ee315ad25fd")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -291,7 +279,7 @@
 			(width 0.0254)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.Fab")
 		(uuid "059da3fd-7137-461a-b049-6f6bcd5e6a1d")
 	)
@@ -310,13 +298,13 @@
 	(pad "1" smd rect
 		(at -4.445 0)
 		(size 1.6002 3.2004)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "0db57b85-1251-4e83-86ec-d476f9585c3c")
 	)
 	(pad "2" smd rect
 		(at 4.445 0)
 		(size 1.6002 3.2004)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "c170c799-7f22-4718-b470-6407879b7f9c")
 	)
 	(zone
@@ -337,6 +325,10 @@
 			(copperpour not_allowed)
 			(footprints allowed)
 		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
 		(fill
 			(thermal_gap 0.508)
 			(thermal_bridge_width 0.508)
@@ -347,18 +339,8 @@
 			)
 		)
 	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/CDRH104.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
-	(model "D:/My Project/NCKH/CHARGE_BATTERY/Hardware/Library/3d_model/CDRH104.step"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/CDRH104.step"
 		(offset
 			(xyz 0 0 0)
 		)

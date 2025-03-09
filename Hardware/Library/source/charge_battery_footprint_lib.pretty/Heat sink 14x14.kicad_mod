@@ -1,7 +1,7 @@
 (footprint "Heat sink 14x14"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at -0.0508 -11.4822 0)
@@ -21,19 +21,6 @@
 		(layer "F.Fab")
 		(hide yes)
 		(uuid "d6db7885-e0f9-41c6-91ce-986b380e2c10")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at -0.0508 -10.9822 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "4383cc27-af47-4da5-a9a2-8e84f3e8e3e4")
 		(effects
 			(font
 				(size 1 1)
@@ -75,7 +62,7 @@
 			(width 0.1)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "82ee36f7-3504-4e94-9c26-048a668f28b1")
 	)
@@ -86,7 +73,7 @@
 			(width 0.05)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.CrtYd")
 		(uuid "6c653c9b-4a5c-491c-b57d-ea51b0390caa")
 	)
@@ -105,12 +92,13 @@
 	(pad "1" smd roundrect
 		(at 0 0)
 		(size 15 15)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.05)
 		(thermal_bridge_angle 45)
 		(uuid "5afba735-fe6e-421b-839b-923ccd545a6f")
 	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/14x14x7 Heatsink.STEP"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/14x14x7 Heatsink.STEP"
 		(offset
 			(xyz 0 0 0)
 		)

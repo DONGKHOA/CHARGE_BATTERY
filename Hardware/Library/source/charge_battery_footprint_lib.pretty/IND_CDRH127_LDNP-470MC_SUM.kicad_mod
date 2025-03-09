@@ -1,7 +1,7 @@
 (footprint "IND_CDRH127_LDNP-470MC_SUM"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at -0.1016 0 0)
@@ -22,18 +22,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "6bfb6336-5f42-43c1-a389-d4fb21d9ef84")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -258,29 +246,19 @@
 	(pad "1" smd rect
 		(at -4.953 0)
 		(size 2.8956 5.4102)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "d55e9d52-0bf1-40fe-a53b-611ba7c48134")
 	)
 	(pad "2" smd rect
 		(at 4.953 0)
 		(size 2.8956 5.4102)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
 		(uuid "5a631afd-5e96-4d40-9975-bde0d6e50c81")
 	)
-	(model "${CHARGEBATTERY}/CDRH127_LDNP-470MC.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz -90 0 0)
-		)
-	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/CDRH127_LDNP-470MC.step"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/CDRH127_LDNP-470MC.step"
 		(offset
 			(xyz 0 0 0)
 		)

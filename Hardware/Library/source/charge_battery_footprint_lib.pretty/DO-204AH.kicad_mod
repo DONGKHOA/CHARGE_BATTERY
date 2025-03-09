@@ -1,7 +1,7 @@
 (footprint "DO-204AH"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(tags "DO-204AH")
 	(property "Reference" "REF**"
@@ -25,18 +25,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "13e8e5dc-5b2b-4714-aa33-102468ffbf92")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -293,7 +281,7 @@
 			(width 0.0254)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.Fab")
 		(uuid "e9beba6b-6460-4ab6-ba47-b5999949766e")
 	)
@@ -325,7 +313,8 @@
 		(remove_unused_layers no)
 		(uuid "3f8a5515-4e23-457c-9144-62656d7af8a6")
 	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/1N914.step"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/1N914.step"
 		(offset
 			(xyz 0 0 0)
 		)
@@ -334,17 +323,6 @@
 		)
 		(rotate
 			(xyz 0 0 180)
-		)
-	)
-	(model "D:/My Project/NCKH/CHARGE_BATTERY/Hardware/Library/3d_model/1N914.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 -180)
 		)
 	)
 )

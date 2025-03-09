@@ -1,7 +1,7 @@
 (footprint "XH_2.54mm_2_SMD"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at -0.01 8.82 0)
@@ -24,18 +24,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "482a5460-1d7a-4d05-bea0-3d7456c23d2a")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -152,7 +140,7 @@
 			(width 0.1)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.CrtYd")
 		(uuid "1735b954-4d04-4b66-bd47-f001ca1af4e5")
 	)
@@ -171,28 +159,29 @@
 	(pad "" smd rect
 		(at -4.45 6.2)
 		(size 1.4 3)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "128231c9-9ee2-4b08-81c5-995a819d3cb9")
 	)
 	(pad "" smd rect
 		(at 4.45 6.2)
 		(size 1.4 3)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "660e2c58-fc87-43a4-9547-80822d6cc0f6")
 	)
 	(pad "1" smd rect
 		(at 1.27 -1.6)
 		(size 1.5 3)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "1b3f0e22-8e77-4b18-8e75-b87c7c19973c")
 	)
 	(pad "2" smd rect
 		(at -1.27 -1.6)
 		(size 1.5 3)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "b8cd03ac-2de2-4a3e-938f-cceb63b1a92d")
 	)
-	(model "D:/OneDrive/Disk_2/CHARGE_BATTERY/Hardware/Library/3d_model/JST - XH - SMD (R) - 2Pin - 2.54mm.stp"
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../Library/3d_model/JST - XH - SMD (R) - 2Pin - 2.54mm.stp"
 		(offset
 			(xyz 0 2.1 0)
 		)
