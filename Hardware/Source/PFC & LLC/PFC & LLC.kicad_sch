@@ -6,13 +6,97 @@
 	(paper "A4")
 	(title_block
 		(title "PFC & LLC")
-		(date "2024-11-03")
+		(date "2025-03-19")
 		(rev "Ver 2.0")
 		(company "Ho Chi Minh City University of Technology - HCMUT")
-		(comment 1 "Design: QUOC THANG - DONG KHOA")
-		(comment 2 "PROJECT 2: PFC & LLC - 350W")
+		(comment 1 "Design: QUOC THANG - DONG KHOA - GIANG PHAN - TUAN HO")
+		(comment 2 "PROJECT: PFC & LLC - 800W")
 	)
 	(lib_symbols)
+	(sheet
+		(at 220.98 30.48)
+		(size 39.37 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "416c022b-f107-4852-bf74-aeb83236af7c")
+		(property "Sheetname" "POWER SUPPLY"
+			(at 220.98 29.7684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power_supply.kicad_sch"
+			(at 220.98 52.6546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "PFC & LLC"
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 177.8 30.48)
+		(size 39.37 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4702eb92-4ad2-4ac7-81b0-3de9b59b072a")
+		(property "Sheetname" "CONTROL LLC&PFC"
+			(at 177.8 29.7684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "control_llc_pfc.kicad_sch"
+			(at 177.8 52.6546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "PFC & LLC"
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad"
+					(page "5")
+				)
+			)
+		)
+	)
 	(sheet
 		(at 41.91 30.48)
 		(size 39.37 21.59)
@@ -51,6 +135,48 @@
 			(project "PFC & LLC"
 				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad"
 					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 133.35 30.48)
+		(size 39.37 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "98721cbc-6742-4f95-bab8-ca2e3dbd7136")
+		(property "Sheetname" "MCU"
+			(at 133.35 29.7176 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu.kicad_sch"
+			(at 133.35 52.7054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "PFC & LLC"
+				(path "/97d1a1fe-d5a5-4da8-b78a-88a9132d14ad"
+					(page "4")
 				)
 			)
 		)
